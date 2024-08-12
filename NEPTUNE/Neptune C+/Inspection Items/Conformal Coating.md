@@ -1,0 +1,7 @@
+- Insufficient Coating (2D)
+- Bubble (2D)
+- Non-Coating (2D) (Opposite of Insufficient Coating)
+- 3D Thickness (3D)
+	- Must have 3 layer: Coating Material, Solder Resist and Copper
+- IC Component (3D)
+- Overcoating

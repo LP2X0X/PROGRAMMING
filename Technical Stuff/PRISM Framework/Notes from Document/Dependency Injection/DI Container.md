@@ -1,0 +1,13 @@
+- Dependency injection containers (or containers) reduce the dependency coupling between objects by providing a facility to instantiate instances of classes and manage their lifetime based on the configuration of the container.
+- During the objects creation, the container injects any dependencies that the object requires into it. If those dependencies have not yet been created, the container creates and resolves their dependencies first. In some cases, the container itself is resolved as a dependency. For example, when using the Unity Application Block (Unity) as the container, modules have the container injected, so they can register their views and services with that container.
+- Advantages:
+	- A container removes the need for a component to locate its dependencies or manage their lifetimes.
+	- A container allows swapping of implemented dependencies without affecting the component.
+	- A container facilitates testability by allowing dependencies to be mocked.
+	- A container increases maintainability by allowing new components to be easily added to the system.
+- In the context of an application based on the Prism Library, there are specific advantages to a container:
+    - A container injects module dependencies into the module when it is loaded.
+    - A container is used for registering and resolving view models and views.
+    - A container can create the view models and injects the view.
+    - A container injects the composition services, such as the region manager and the event aggregator.
+    - A container is used for registering module-specific services, which are services that have module-specific functionality.

@@ -1,0 +1,141 @@
+{
+  "main": {
+    "id": "13f1723722e797ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca420966c8dee260",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "869f2c35b23a0193",
+    "type": "split",
+    "children": [
+      {
+        "id": "5cbdcdd901d76793",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "93d85604355e1efd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ec5f975d48ca29f0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": true,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bd39f9a8aed4e9f3",
+            "type": "leaf",
+            "state": {
+              "type": "file-tree-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 423.5
+  },
+  "right": {
+    "id": "7491882444cf49f2",
+    "type": "split",
+    "children": [
+      {
+        "id": "10d7bac1804ebfe3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "08102b44aa32db76",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ed1ff0f745f98fae",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8c80c9397cc44481",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "8af6e88a03554aba",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "7b6ec4a0aa80d4ea",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "93d85604355e1efd",
+  "lastOpenFiles": [
+    "Definitions/Definitions.md",
+    "References/Interest Points.md",
+    "References/SIFT.md",
+    "References/Homogeneous Coordinates.md",
+    "References/Edge Detection using Laplacian.md",
+    "References/Introduction to SIFT (Scale-Invariant Feature Transform).md",
+    "References/Distinctive Image Features from Scale-Invariant Keypoints.md",
+    "References/References.md",
+    "Definitions/Blob.md",
+    "References/Untitled.md"
+  ]
+}

@@ -1,0 +1,2 @@
+- `Seekable` means you can manually set the position of the _cursor_ within the stream, i.e. you can read/write a byte at any location. You're not obliged to read a byte so the cursor position is incremented.
+- Seeking after the current stream length will basically expand the stream length (for example your file will grow for a FileStream).

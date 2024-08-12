@@ -1,0 +1,1 @@
+To prevent this type of mistake, add the static modifier to the local function. This prevents the local function from accessing the parent method variables directly, and this causes the compiler exception CS8421, “A static local function cannot contain a reference to ‘<variable name>.’”

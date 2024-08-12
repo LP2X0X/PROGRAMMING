@@ -1,0 +1,5 @@
+- The Prism Library provides an event mechanism that enables communications between loosely coupled components in the application. This mechanism, based on the event aggregator service, allows publishers and subscribers to communicate through events and still do not have a direct reference to each other.
+- The `EventAggregator` provides multicast publish/subscribe functionality. This means there can be multiple publishers that raise the same event and there can be multiple subscribers listening to the same event. Consider using the `EventAggregator` to publish an event across modules and when sending a message between business logic code, such as controllers and presenters.
+```ad-note
+The EventAggregator is often used to allow components defined in different modules to communicate with each other.
+```

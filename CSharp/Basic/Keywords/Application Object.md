@@ -1,0 +1,2 @@
+- The class that defines the Main() method is termed the application object.
+- It is possible for a single executable application to have more than one application object (which can be useful when performing unit tests), but then the compiler must know which Main() method should be used as the entry point. This can be done via the \<StartupObject\> element in the project file or via the Startup Object drop-down list box, located on the Application tab of the Visual Studio project properties window.

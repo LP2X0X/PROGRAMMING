@@ -1,0 +1,1 @@
+- The System.Exception.StackTrace property allows you to identify the series of calls that resulted in the exception. Be aware that you never set the value of StackTrace, as it is established automatically at the time the exception is created.

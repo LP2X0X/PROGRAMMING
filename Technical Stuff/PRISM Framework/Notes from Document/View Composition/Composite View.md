@@ -1,0 +1,1 @@
+- When you have a view that is not fully defined in a single view class, you can refer to that as a composite view. 

@@ -1,0 +1,1 @@
+- The FirstOrDefault(), SingleOrDefault(), and LastOrDefault() methods have been updated in .NET 6/C# 10 to allow specification of the default value when the query doesn’t return any elements. The base version of these methods automatically sets the default value (0 for a number, null for class, etc.). Now you can programmatically set the default when no record is returned.

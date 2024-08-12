@@ -1,0 +1,2 @@
+- Thread Local Storage (TLS) is the mechanism by which each thread in a given multithreaded process allocates storage for thread-specific data. In standard multithreaded programs, data is shared among all threads of a given process, whereas thread local storage is the mechanism for allocating per-thread data.
+- Reference: https://en.wikipedia.org/wiki/Thread-local_storage

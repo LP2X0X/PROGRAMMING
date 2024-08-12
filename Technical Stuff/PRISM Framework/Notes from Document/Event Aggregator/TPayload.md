@@ -1,0 +1,2 @@
+- [[Why Prism doesn't use generic T instead of TPayload|TPayload]] represents the generic type parameter used to define the type of the payload (data) that is sent or received in an event.
+- Prism's Event Aggregator is a communication mechanism that allows loosely coupled components in an application to communicate with each other. Events are defined with a specific payload type (`TPayload`), and publishers can send events with data of that type.

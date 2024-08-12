@@ -1,0 +1,2 @@
+• Output parameters do not need to be initialized before they are passed to the method. The reason for this is that the method must assign output parameters before exiting.  
+• Reference parameters must be initialized before they are passed to the method. The reason for this is that you are passing a reference to an existing variable. If you do not assign it to an initial value, that would be the equivalent of operating on an unassigned local variable

@@ -1,0 +1,3 @@
+- Here are two common situations where you might consider interacting with the collection process:  
+	- Your application is about to enter a block of code that you don’t want interrupted by a possible garbage collection.  
+	- Your application has just finished allocating an extremely large number of objects, and you want to remove as much of the acquired memory as soon as possible.

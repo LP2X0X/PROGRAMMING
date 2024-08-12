@@ -1,0 +1,1 @@
+- In addition to the Assembly token and the set of TypeDef and TypeRef blocks, .NET metadata also makes use of AssemblyRef \#n tokens to document each external assembly. Given that each .NET assembly references the System.Runtime base class library assembly, you will find an AssemblyRef for the System.Runtime assembly,

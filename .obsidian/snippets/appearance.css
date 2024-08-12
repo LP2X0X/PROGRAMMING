@@ -1,0 +1,79 @@
+/* Change font in editor */
+.markdown-source-view {
+    font-family: "Fira Code", monospace;
+}
+/* Change font in preview */
+/*.markdown-preview-view {
+    font-family: "Fira Code Regular", monospace;
+}*/
+.cm-s-obsidian, .markdown-preview-view {
+    content: '';
+    display: block;
+	text-align: justify;
+    hyphens: auto;
+    margin-top: 10px;
+}
+img[alt*="center"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.markdown-preview-view h1 {
+    font-size: 35px;
+	font-family: "Segoe UI";
+}
+
+.markdown-preview-view h2 {
+    font-size: 30px;
+	font-family: "Segoe UI";
+}
+
+.markdown-preview-view h3 {
+    font-size: 25px;
+	font-family: "Segoe UI";
+}
+
+.markdown-preview-view h4 {
+    font-size: 20px;
+	font-family: "Segoe UI";
+}
+
+.markdown-preview-view h5 {
+    font-size: 15px;
+	font-family: "Segoe UI";
+}
+
+.markdown-preview-view h6 {
+    font-size: 15px;
+	font-family: "Segoe UI";
+}
+
+.cm-header-1 {
+    font-size: 35pt;
+	font-family: "Segoe UI";
+}
+
+.cm-header-2 {
+    font-size: 30pt;
+	font-family: "Segoe UI";
+}
+
+.cm-header-3 {
+    font-size: 25pt;
+	font-family: "Segoe UI";
+}
+
+.cm-header-4 {
+    font-size: 20pt;
+	font-family: "Segoe UI";
+}
+
+.cm-header-5 {
+    font-size: 15pt;
+	font-family: "Segoe UI";
+}
+
+.cm-header-6 {
+    font-size: 15pt;
+	font-family: "Segoe UI";
+}

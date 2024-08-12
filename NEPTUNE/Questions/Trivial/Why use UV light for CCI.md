@@ -1,0 +1,3 @@
+- Coating agent contain fluorescent substance.
+- UV light can activate UV tracer in [[Conformal Coating (CC)]] and make it shine, reflect the light.
+- If there is dark/light spot on coated area -> Bubble or Crack.

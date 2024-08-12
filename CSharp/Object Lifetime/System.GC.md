@@ -1,0 +1,2 @@
+- The mscorlib.dll assembly provides a class type named System.GC that allows you to programmatically interact with the garbage collector using a set of static members. Now, do be aware that you will seldom (if ever) need to make use of this class directly in your code. Typically, the only time you will use the members of System.GC is when you are creating classes that make internal use of unmanaged resources.
+![[Pasted image 20240605143450.png|center|1000]]

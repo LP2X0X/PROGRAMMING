@@ -1,0 +1,1 @@
+- Unlike class types, an interface can extend multiple base interfaces, allowing you to design some powerful and flexible abstractions.

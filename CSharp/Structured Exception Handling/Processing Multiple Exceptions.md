@@ -1,0 +1,2 @@
+- When you are authoring multiple catch blocks, you must be aware that when an exception is thrown, it will be processed by the first appropriate catch.
+- The rule of thumb to keep in mind is to make sure your catch blocks are structured such that the first catch is the most specific exception (i.e., the most derived type in an exception-type inheritance chain), leaving the final catch for the most general (i.e., the base class of a given exception inheritance chain, in this case System.Exception).

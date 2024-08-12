@@ -1,0 +1,1 @@
+- In WPF, the ContentControl class is a fundamental control that can contain a single piece of content. The content can be any WPF UI element, such as a button, text box, image, or even a custom user control. The key feature of the ContentControl is its ability to dynamically switch and display different content based on application logic.

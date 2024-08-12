@@ -1,0 +1,544 @@
+{
+  "statusBarOrder": [],
+  "ribbonBarOrder": [],
+  "fileExplorerOrder": {
+    "The Fundamentals of Machine Learning/The Machine Learning Landscape": [
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/The Machine Learning Landscape.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/When to use Machine Learning.md"
+    ],
+    "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning": [
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Online vs Offline",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Based on level of human supervision",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Instance-based vs Model-based",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Types of Machine Learning.md"
+    ],
+    "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning": [
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Data",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Algorithm",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Main Challenges of Machine Learning.md"
+    ],
+    "/": [
+      "Naming and Coding Conventions.md",
+      "Code Snippet.md",
+      "INTRODUCING .NET",
+      "CORE CONSTRUCTS",
+      "OOP",
+      "ADVANCE CSHARP",
+      "Images and Files"
+    ],
+    "Definitions": [
+      "Definitions/Label.md",
+      "Definitions/Outlier.md",
+      "Definitions/Sample.md",
+      "Definitions/Feature.md",
+      "Definitions/Test Set.md",
+      "Definitions/Attribute.md",
+      "Definitions/Definitions.md",
+      "Definitions/Overfitting.md",
+      "Definitions/Noisy Data.md",
+      "Definitions/Regression.md",
+      "Definitions/Parameters.md",
+      "Definitions/Training Set.md",
+      "Definitions/Underfitting.md",
+      "Definitions/Cost  Function.md",
+      "Definitions/Sampling Bias.md",
+      "Definitions/Regularization.md",
+      "Definitions/Utility Function.md",
+      "Definitions/Sampling Noise.md",
+      "Definitions/Development Set.md",
+      "Definitions/Feature Selection.md",
+      "Definitions/Hyperparameters.md",
+      "Definitions/Machine Learning.md",
+      "Definitions/Holdout Validation.md",
+      "Definitions/Feature Extraction.md",
+      "Definitions/Generalization Error.md",
+      "Definitions/Feature Engineering.md"
+    ],
+    "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Data": [
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Data/Bad Data.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Data/Poor-Quality Data.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Data/Irrelevant Features.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Data/Insufficient Quantity of Training Data.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Data/Nonrepresentative Training Data.md"
+    ],
+    "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Algorithm": [
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Algorithm/Untitled.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Main Challenges of Machine Learning/Bad Algorithm/Overfitting the Training Data.md"
+    ],
+    "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Based on level of human supervision": [
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Based on level of human supervision/Based on level of human supervision.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Based on level of human supervision/Reinforcement Learning.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Based on level of human supervision/Semisupervised Learning.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Based on level of human supervision/Supervised Learning.md",
+      "The Fundamentals of Machine Learning/The Machine Learning Landscape/Types of Machine Learning/Based on level of human supervision/Unsupervised Learning.md"
+    ],
+    "References": [
+      "References/SIFT.md",
+      "References/Interest Points.md",
+      "References/Homogeneous Coordinates.md",
+      "References/Edge Detection using Laplacian.md",
+      "References/Introduction to SIFT (Scale-Invariant Feature Transform).md",
+      "References/References.md",
+      "References/Distinctive Image Features from Scale-Invariant Keypoints.md",
+      "References/Untitled.md",
+      "References/Untitled 1.md"
+    ],
+    "UML": [
+      "UML/UML.md",
+      "UML/UML - Definition.md",
+      "UML/UML Diagram Type",
+      "UML/Home.md"
+    ],
+    "UML/UML Diagram Type/Structural Diagrams": [
+      "UML/UML Diagram Type/Structural Diagrams/Composite Structure Diagram.md",
+      "UML/UML Diagram Type/Structural Diagrams/Deployment Diagram.md",
+      "UML/UML Diagram Type/Structural Diagrams/Package Diagram.md",
+      "UML/UML Diagram Type/Structural Diagrams/Profile Diagram.md",
+      "UML/UML Diagram Type/Structural Diagrams/Structural Diagrams.md"
+    ],
+    "UML/UML Diagram Type": [
+      "UML/UML Diagram Type/Structural Diagrams",
+      "UML/UML Diagram Type/Behaviorl Diagrams",
+      "UML/UML Diagram Type/UML Diagram Type.md"
+    ],
+    "UML/UML Diagram Type/Behaviorl Diagrams": [
+      "UML/UML Diagram Type/Behaviorl Diagrams/Activity Diagram.md",
+      "UML/UML Diagram Type/Behaviorl Diagrams/Behaviorl Diagrams.md",
+      "UML/UML Diagram Type/Behaviorl Diagrams/State Machine Diagram.md",
+      "UML/UML Diagram Type/Behaviorl Diagrams/Use Case Diagram.md",
+      "UML/UML Diagram Type/Behaviorl Diagrams/Interaction Diagrams",
+      "UML/UML Diagram Type/Behaviorl Diagrams/Sequence Diagram.md"
+    ],
+    "C Sharp": [
+      "C Sharp/C Sharp.md",
+      "C Sharp/C Sharp - Defenition.md",
+      "C Sharp/Read() vs ReadLine().md",
+      "C Sharp/Convert.md",
+      "C Sharp/Delegate.md",
+      "C Sharp/Foreach Loop.md",
+      "C Sharp/String Interpolation.md",
+      "C Sharp/Naming things and Assigning values.md",
+      "C Sharp/Basic Structure",
+      "C Sharp/Variables and Operators",
+      "C Sharp/Array, String and List",
+      "C Sharp/OOP - Part 1",
+      "C Sharp/OOP - Part 2",
+      "C Sharp/Enum and Struct",
+      "C Sharp/File Handling",
+      "C Sharp/LINQ",
+      "C Sharp/Q&A"
+    ],
+    "C Sharp/Array, String and List": [
+      "C Sharp/Array, String and List/Array, String and List.md",
+      "C Sharp/Array, String and List/Array.md",
+      "C Sharp/Array, String and List/String.md",
+      "C Sharp/Array, String and List/List.md",
+      "C Sharp/Array, String and List/Untitled.md"
+    ],
+    "WPF/XAML/The Syntax of XAML": [
+      "WPF/XAML/The Syntax of XAML/xName Attribute.md",
+      "WPF/XAML/The Syntax of XAML/Setting Properties That Aren’t Simple Types.md",
+      "WPF/XAML/The Syntax of XAML/The Syntax of XAML.md"
+    ],
+    "WPF/XAML": [
+      "WPF/XAML/Renaming a XAML File.md",
+      "WPF/XAML/XAML - Definition.md",
+      "WPF/XAML/XAML Namespaces.md",
+      "WPF/XAML/XAML Resources.md",
+      "WPF/XAML/Code-Behind File.md",
+      "WPF/XAML/The Syntax of XAML",
+      "WPF/XAML/XAML.md",
+      "WPF/XAML/Miscellaneous"
+    ],
+    "Glossary/Koh Young Glossary": [
+      "Glossary/Koh Young Glossary/AOI.md",
+      "Glossary/Koh Young Glossary/API.md",
+      "Glossary/Koh Young Glossary/Koh Young Glossary.md",
+      "Glossary/Koh Young Glossary/SPI.md",
+      "Glossary/Koh Young Glossary/Software Architecture.md"
+    ],
+    "WPF": [
+      "WPF/Alignment, Margins, and Padding Overview.md",
+      "WPF/WPF - Definition.md",
+      "WPF/Baisc WPF Class Hierarchy.md",
+      "WPF/The Pieces of .NET Framework.md",
+      "WPF/Features of WPF.md",
+      "WPF/FrameworkElement.md",
+      "WPF/WPF.md",
+      "WPF/References.md",
+      "WPF/Serialize and Deserialize.md",
+      "WPF/WPF Property System.md",
+      "WPF/Data Binding",
+      "WPF/Controls",
+      "WPF/Commands",
+      "WPF/Events",
+      "WPF/XAML",
+      "WPF/Trees",
+      "WPF/Q&A"
+    ],
+    "Glossary": [
+      "Glossary/C Sharp Glossary",
+      "Glossary/dot Net Glossary",
+      "Glossary/Glossary.md",
+      "Glossary/Koh Young Glossary",
+      "Glossary/MSA Glossary",
+      "Glossary/Neural Network Glossary",
+      "Glossary/System Architect Glossary",
+      "Glossary/Miscellaneous Glossary"
+    ],
+    "Glossary/Repeatability Tool Glossary": [
+      "Glossary/Repeatability Tool Glossary/OSAT Job",
+      "Glossary/Repeatability Tool Glossary/Normal Job",
+      "Glossary/Repeatability Tool Glossary/Repeatability Tool Glossary.md",
+      "Glossary/Repeatability Tool Glossary/SPI"
+    ],
+    "Glossary/Repeatability Tool Glossary/SPI/SPI JOB File/Normal Job": [
+      "Glossary/Repeatability Tool Glossary/SPI/SPI JOB File/Normal Job/Coplanarity - DataBase.md",
+      "Glossary/Repeatability Tool Glossary/SPI/SPI JOB File/Normal Job/FOV - DataBase.md",
+      "Glossary/Repeatability Tool Glossary/SPI/SPI JOB File/Normal Job/Fiducial - DataBase.md",
+      "Glossary/Repeatability Tool Glossary/SPI/SPI JOB File/Normal Job/JobFileInfo - DataBase.md",
+      "Glossary/Repeatability Tool Glossary/SPI/SPI JOB File/Normal Job/Land - DataBase.md",
+      "Glossary/Repeatability Tool Glossary/SPI/SPI JOB File/Normal Job/Normal Job.md",
+      "Glossary/Repeatability Tool Glossary/SPI/SPI JOB File/Normal Job/PCBInfo - DataBase.md",
+      "Glossary/Repeatability Tool Glossary/SPI/SPI JOB File/Normal Job/Shape - DataBase.md"
+    ],
+    "Git & GitHub/Git": [
+      "Git & GitHub/Git/Git - Definition.md",
+      "Git & GitHub/Git/Set up credential.md",
+      "Git & GitHub/Git/git init.md",
+      "Git & GitHub/Git/git add.md",
+      "Git & GitHub/Git/Git.md",
+      "Git & GitHub/Git/Git command.md",
+      "Git & GitHub/Git/git commit.md",
+      "Git & GitHub/Git/Git Repository.md",
+      "Git & GitHub/Git/The Three Stages of Git.md",
+      "Git & GitHub/Git/Type of File Stage",
+      "Git & GitHub/Git/Unmodified File.md"
+    ],
+    "Git & GitHub": [
+      "Git & GitHub/Git",
+      "Git & GitHub/GitHub",
+      "Git & GitHub/Questions",
+      "Git & GitHub/Extra Notes"
+    ],
+    "Repeatability Tool": [
+      "Repeatability Tool/Apache Parquet",
+      "Repeatability Tool/Formulas",
+      "Repeatability Tool/Array.md",
+      "Repeatability Tool/Body.md",
+      "Repeatability Tool/Component.md",
+      "Repeatability Tool/CRD.md",
+      "Repeatability Tool/Lead ID.md",
+      "Repeatability Tool/Lead.md",
+      "Repeatability Tool/Package.md",
+      "Repeatability Tool/Pad.md",
+      "Repeatability Tool/Polarity.md",
+      "Repeatability Tool/Panel.md",
+      "Repeatability Tool/Part.md",
+      "Repeatability Tool/Repeatability Tool.md"
+    ],
+    "Repeatability Tool/Formulas/Main Window": [
+      "Repeatability Tool/Formulas/Main Window/Sum.md",
+      "Repeatability Tool/Formulas/Main Window/(Sum Squared) divided by (Group Count).md",
+      "Repeatability Tool/Formulas/Main Window/Average.md",
+      "Repeatability Tool/Formulas/Main Window/3Sigma.md",
+      "Repeatability Tool/Formulas/Main Window/Squared Standard Deviation.md",
+      "Repeatability Tool/Formulas/Main Window/Variance.md",
+      "Repeatability Tool/Formulas/Main Window/Cm.md",
+      "Repeatability Tool/Formulas/Main Window/Summary",
+      "Repeatability Tool/Formulas/Main Window/Main Window.md"
+    ],
+    "Repeatability Tool/Formulas/Main Window/Summary Tab": [
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Avarage.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/DiffAvg.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Diff.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/3Sigma.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Min.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Max.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Max - Min.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Squared Std.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Variance.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Cm.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/(Groups)Sum.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Sum of Squares (S).md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Summary Tab.md",
+      "Repeatability Tool/Formulas/Main Window/Summary Tab/Squared ABSum Devided by n.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components",
+      "Repeatability Tool/Formulas/Sub Window/Sub Window.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations",
+      "Repeatability Tool/Formulas/Sub Window/Miscellaneous"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Gage R&R",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Repeatability",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Reproducibility",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator x Part",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to Part",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Variance and Standard Deviation Components.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Variation",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Number of Distinct Categories.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Process Tolerance.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Gage R&R": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Gage R&R/StdDev.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Gage R&R/VarComp.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Gage R&R/%Contribution.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Gage R&R/Total Gage R&R.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Repeatability": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Repeatability/Repeatability.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Repeatability/StdDev.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Repeatability/VarComp.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Repeatability/%Contribution.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Reproducibility": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Reproducibility/Reproducibility.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Reproducibility/StdDev.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Reproducibility/VarComp.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Reproducibility/%Contribution.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator/Operator.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator/StdDev.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator/VarComp.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator/%Contribution.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator x Part": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator x Part/Operator x Part.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator x Part/StdDev.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator x Part/VarComp.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator x Part/%Contribution.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator x Part/StdDev 1.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator x Part/%Contribution 1.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Operator x Part/VarComp 1.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to   Part": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to   Part/Part to   Part.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to   Part/StdDev.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to   Part/VarComp.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to   Part/%Contribution.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to Part": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to Part/Part to Part.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to Part/StdDev.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to Part/VarComp.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Part to Part/%Contribution.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total   Variation": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total   Variation/StdDev.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total   Variation/Total   Variation.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total   Variation/VarComp.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total   Variation/%Contribution.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Variation": [
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Variation/StdDev.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Variation/Total Variation.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Variation/VarComp.md",
+      "Repeatability Tool/Formulas/Sub Window/Variance and Standard Deviation Components/Total Variation/%Contribution.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard  Deviations": [
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard  Deviations/Gage R&R Using x Standard  Deviations.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard  Deviations/Total Gage R&R",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard  Deviations/Operator",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard  Deviations/Operator x Part",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard  Deviations/Part to Part",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard  Deviations/Repeatability",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard  Deviations/Reproducibility",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard  Deviations/Total Variation"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations": [
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Gage R&R Using x Standard Deviations.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Gage R&R",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Repeatability",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Reproducibility",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator x Part",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Part to Part",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Variation",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Study Variation.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Gage R&R": [
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Gage R&R/Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Gage R&R/%Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Gage R&R/%Tolerance.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Gage R&R/Total Gage R&R.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Repeatability": [
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Repeatability/Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Repeatability/%Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Repeatability/%Tolerance.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Repeatability/Repeatability.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Reproducibility": [
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Reproducibility/Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Reproducibility/%Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Reproducibility/%Tolerance.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Reproducibility/Reproducibility.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator": [
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator/Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator/%Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator/%Tolerance.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator/Operator.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator x Part": [
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator x Part/%Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator x Part/%Tolerance.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator x Part/Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Operator x Part/Operator x Part.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Part to Part": [
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Part to Part/%Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Part to Part/%Tolerance.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Part to Part/Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Part to Part/Part to Part.md"
+    ],
+    "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Variation": [
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Variation/Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Variation/%Study Var.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Variation/%Tolerance.md",
+      "Repeatability Tool/Formulas/Sub Window/Gage R&R Using x Standard Deviations/Total Variation/Total Variation.md"
+    ],
+    "SQL/SQL Statements": [
+      "SQL/SQL Statements/FROM.md",
+      "SQL/SQL Statements/SELECT.md",
+      "SQL/SQL Statements/SQL Statements.md",
+      "SQL/SQL Statements/WHERE.md",
+      "SQL/SQL Statements/AND.md",
+      "SQL/SQL Statements/CASE.md",
+      "SQL/SQL Statements/DISTINCT.md",
+      "SQL/SQL Statements/IN.md",
+      "SQL/SQL Statements/LIKE.md",
+      "SQL/SQL Statements/LIMIT.md",
+      "SQL/SQL Statements/NOT.md",
+      "SQL/SQL Statements/OR.md",
+      "SQL/SQL Statements/ORDER BY.md",
+      "SQL/SQL Statements/GROUP BY.md",
+      "SQL/SQL Statements/HAVING.md"
+    ],
+    "SQL": [
+      "SQL/SQL - Definition.md",
+      "SQL/SQL Statements",
+      "SQL/SQL.md",
+      "SQL/SQL Functions",
+      "SQL/Handling Dates.md",
+      "SQL/References.md",
+      "SQL/Functions.md",
+      "SQL/SQL Wildcard Characters.md"
+    ],
+    "SQL/SQL Functions": [
+      "SQL/SQL Functions/COUNT.md",
+      "SQL/SQL Functions/SUM.md",
+      "SQL/SQL Functions/AVG.md",
+      "SQL/SQL Functions/MAX.md",
+      "SQL/SQL Functions/MIN.md",
+      "SQL/SQL Functions/Untitled.md"
+    ],
+    "Glossary/System Design Glossary": [
+      "Glossary/System Design Glossary/Architectural Pattern.md",
+      "Glossary/System Design Glossary/Business Logic.md",
+      "Glossary/System Design Glossary/Data Mapping.md",
+      "Glossary/System Design Glossary/MVC.md",
+      "Glossary/System Design Glossary/Presentation Logic.md",
+      "Glossary/System Design Glossary/Software Architecture.md",
+      "Glossary/System Design Glossary/System Design Glossary.md",
+      "Glossary/System Design Glossary/Inversion of Control.md",
+      "Glossary/System Design Glossary/Loose Coupling.md",
+      "Glossary/System Design Glossary/Modular Programming.md",
+      "Glossary/System Design Glossary/MVVM",
+      "Glossary/System Design Glossary/Dependency Injection",
+      "Glossary/System Design Glossary/OOP",
+      "Glossary/System Design Glossary/Prism Framework",
+      "Glossary/System Design Glossary/S.O.L.I.D.md"
+    ],
+    "WPF/Controls/Layout": [
+      "WPF/Controls/Layout/Border.md",
+      "WPF/Controls/Layout/Viewbox.md",
+      "WPF/Controls/Layout/Decorators.md",
+      "WPF/Controls/Layout/Layout.md",
+      "WPF/Controls/Layout/Panels"
+    ],
+    "WPF/Controls": [
+      "WPF/Controls/Layout",
+      "WPF/Controls/Basic Controls",
+      "WPF/Controls/Control.md",
+      "WPF/Controls/Controls Structures.md",
+      "WPF/Controls/Controls.md",
+      "WPF/Controls/FocusManager.FocusedElement.md",
+      "WPF/Controls/ToolTip.md"
+    ],
+    "Dot Net": [
+      "Dot Net/Dot Net Core.md",
+      "Dot Net/Dot Net Standard.md",
+      "Dot Net/Dot Net.md",
+      "Dot Net/The Pieces of .NET Framework.md",
+      "Dot Net/What is a Framework.md",
+      "Dot Net/References.md"
+    ],
+    "CORE CONSTRUCTS": [
+      "CORE CONSTRUCTS/CORE CONSTRUCTS.md",
+      "CORE CONSTRUCTS/Naming and Coding Conventions.md",
+      "CORE CONSTRUCTS/Value Types vs Reference Types.md",
+      "CORE CONSTRUCTS/System Value Data Types.md",
+      "CORE CONSTRUCTS/System Reference Data Types.md",
+      "CORE CONSTRUCTS/enum Type.md",
+      "CORE CONSTRUCTS/Formatting String.md",
+      "CORE CONSTRUCTS/Function.md",
+      "CORE CONSTRUCTS/Nullable Types.md",
+      "CORE CONSTRUCTS/structs Type.md",
+      "CORE CONSTRUCTS/switch statement.md",
+      "CORE CONSTRUCTS/Miscellaneous.md"
+    ],
+    "CORE CONSTRUCTS/Basic Types": [
+      "CORE CONSTRUCTS/Basic Types/Basic Types.md",
+      "CORE CONSTRUCTS/Basic Types/System Value Data Types.md",
+      "CORE CONSTRUCTS/Basic Types/System Reference Data Types.md",
+      "CORE CONSTRUCTS/Basic Types/switch statement.md",
+      "CORE CONSTRUCTS/Basic Types/enum Type.md",
+      "CORE CONSTRUCTS/Basic Types/structs Type.md",
+      "CORE CONSTRUCTS/Basic Types/Nullable Types.md",
+      "CORE CONSTRUCTS/Basic Types/Function.md",
+      "CORE CONSTRUCTS/Basic Types/Formatting String.md",
+      "CORE CONSTRUCTS/Basic Types/Miscellaneous.md"
+    ],
+    "OOP": [
+      "OOP/OOP.md",
+      "OOP/Access Modifiers.md",
+      "OOP/System.Object.md",
+      "OOP/Pillars of OOP.md",
+      "OOP/Encapsulation.md",
+      "OOP/Inheritance.md",
+      "OOP/Polymorphic.md",
+      "OOP/Base Class - Derived Class Casting Rules.md",
+      "OOP/static Keyword.md",
+      "OOP/this Keyword.md",
+      "OOP/Errors vs Bugs vs Exceptions.md",
+      "OOP/Exception Handling.md",
+      "OOP/Interface",
+      "OOP/Object Lifetime",
+      "OOP/Miscellaneous.md"
+    ],
+    "OOP/Interface": [
+      "OOP/Interface/Interface.md",
+      "OOP/Interface/IEnumerable and IEnumerator.md",
+      "OOP/Interface/ICloneable.md",
+      "OOP/Interface/Interfaces.md"
+    ],
+    "OOP/Object Lifetime": [
+      "OOP/Object Lifetime/Class, Object and Reference.md",
+      "OOP/Object Lifetime/Memory Leak.md",
+      "OOP/Object Lifetime/Object Lifetime.md",
+      "OOP/Object Lifetime/The Basics of Object Lifetime.md",
+      "OOP/Object Lifetime/Miscellaneous.md"
+    ]
+  },
+  "actionBarOrder": {},
+  "autoHide": false,
+  "autoHideDelay": 2000,
+  "dragDelay": 200
+}

@@ -1,0 +1,7 @@
+- Structurally speaking, a .NET assembly (\*.dll or \*.exe) consists of the following elements:  
+	 - An operating system (e.g., Windows) file header  
+	 - A CLR file header  
+	 - CIL code  
+	 - Type metadata  
+	 - An assembly manifest  
+	 - Optional embedded resources

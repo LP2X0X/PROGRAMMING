@@ -1,0 +1,2 @@
+- When working with classes, it is important to understand the role of the C# partial keyword. The partial keyword allows for a single class to be partitioned across multiple code files.
+- The only requirement when defining partial types is that the type’s name is identical and defined within the same .NET Core namespace.

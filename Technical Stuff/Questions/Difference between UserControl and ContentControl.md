@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/18781679/whats-the-difference-betwen-a-usercontrol-and-a-contentcontrol

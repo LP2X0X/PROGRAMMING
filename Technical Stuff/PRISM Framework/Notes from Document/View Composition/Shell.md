@@ -1,0 +1,3 @@
+- The shell is the application root object that contains the primary UI content. In a Windows Presentation Foundation (WPF) application, the shell is the Window object.
+- The shell plays the role of a master page providing the layout structure for the application. The shell contains one or more named regions where modules can specify the views that will appear. It can also define certain top-level UI elements, such as the background, main menu, and toolbar.
+- The shell defines the overall appearance of the application. It might define styles and borders that are present and visible in the shell layout itself, and it might also define styles, templates, and themes that will be applied to the views that are plugged into the shell.

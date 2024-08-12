@@ -1,0 +1,1 @@
+- The ViewModelLocator is used to wire the DataContext of a view to an instance of a ViewModel **using a standard naming convention**.

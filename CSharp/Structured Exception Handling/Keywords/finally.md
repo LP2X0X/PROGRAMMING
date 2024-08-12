@@ -1,0 +1,2 @@
+- A try/catch scope may also define an optional finally block. The purpose of a finally block is to ensure that a set of code statements will always execute, exception (of any type) or not.
+- In a more real-world scenario, when you need to dispose of objects, close a file, or detach from a database (or whatever), a finally block ensures a location for proper cleanup.

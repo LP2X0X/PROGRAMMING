@@ -1,0 +1,2 @@
+- RID is short for _runtime identifier_. RID values are used to identify target platforms where the application runs. They're used by .NET packages to represent platform-specific assets in NuGet packages.
+- Reference: https://learn.microsoft.com/en-us/dotnet/core/rid-catalog

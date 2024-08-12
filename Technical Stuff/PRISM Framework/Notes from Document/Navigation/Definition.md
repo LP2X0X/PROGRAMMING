@@ -1,0 +1,2 @@
+- The process by which the application coordinates these UI changes is often referred to as navigation. 
+- Navigation accomplished via state changes to existing controls in the visual tree is referred to as state-based navigation. Navigation accomplished via the addition or removal of elements from the visual tree is referred to as view-based navigation.

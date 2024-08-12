@@ -1,0 +1,5 @@
+- In addition to this standard metadata contained within any assembly, the .NET platform provides a way for programmers to embed additional metadata into an assembly using attributes. In a nutshell, attributes are nothing more than code annotations that can be applied to a given type (class, interface, structure, etc.), member (property, method, etc.), assembly, or module.  
+- .NET attributes are class types that extend the abstract System.Attribute base class.
+</br>
+![[Pasted image 20240709150252.png|center|700]]
+- Understand that when you apply attributes in your code, the embedded metadata is essentially useless until another piece of software explicitly reflects over the information. If this is not the case, the blurb of metadata embedded within the assembly is ignored and completely harmless.

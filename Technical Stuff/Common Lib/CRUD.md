@@ -1,0 +1,1 @@
+- CRUD (Create, Read, Update, Delete) operations when interacting with DataBase.

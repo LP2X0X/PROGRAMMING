@@ -1,0 +1,2 @@
+- Update yesterday and today task: http://10.10.1.149:8090/pages/viewpage.action?pageId=147735856
+- Create weekly report every thursdays

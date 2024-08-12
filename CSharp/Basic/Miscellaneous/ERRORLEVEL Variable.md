@@ -1,0 +1,2 @@
+- On the Windows operating system, an application’s return value is stored within a system environment variable named %ERRORLEVEL%. If you were to create an application that programmatically launches another executable (a topic examined in Chapter 19), you can obtain the value of %ERRORLEVEL% using the ExitCode property of the launched process. 
+- Given that an application’s return value is passed to the system at the time the application terminates, it is obviously not possible for an application to obtain and display its final error code while running.

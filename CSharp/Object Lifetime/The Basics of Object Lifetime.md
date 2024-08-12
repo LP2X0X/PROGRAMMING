@@ -1,0 +1,2 @@
+- The short (i.e., incomplete) answer is that the garbage collector removes an object from the heap only if it is unreachable by any part of your code base.
+- The managed heap maintains a pointer (commonly referred to as **the next object pointer** or **new object pointer**) that identifies exactly where the next object will be located.

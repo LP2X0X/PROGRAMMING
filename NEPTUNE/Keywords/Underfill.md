@@ -1,0 +1,1 @@
+- By applying an epoxy resin uniformly between the semiconductor or the substrate and the chip, a method of preventing the detachment of the device and the chip and increasing the reliability of the package through protection from external impact.

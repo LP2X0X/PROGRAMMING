@@ -1,0 +1,1 @@
+Most of the time when designing a class, you define data as instance-level data or, said another way, as nonstatic data. When you define instance-level data, you know that every time you create a new object, the object maintains its own independent copy of the data. In contrast, when you define static data of a class, the memory is shared by all objects of that category

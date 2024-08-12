@@ -1,0 +1,2 @@
+- The `checked` and `unchecked` statements specify the overflow-checking context for integral-type arithmetic operations and conversions.
+https://stackoverflow.com/questions/20709495/what-is-the-c-sharp-checked-keyword-for

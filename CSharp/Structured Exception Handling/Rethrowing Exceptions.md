@@ -1,0 +1,1 @@
+- When you catch an exception, it is permissible for the logic in a try block to rethrow the exception up the call stack to the previous caller. To do so, simply use throw() within a catch block. This passes the exception up the chain of calling logic, which can be helpful if your catch block is only able to partially handle the error at hand.

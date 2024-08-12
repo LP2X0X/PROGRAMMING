@@ -1,0 +1,3 @@
+- It is used for efficient string manipulation, especially when dealing with large amounts of string concatenation or modification.
+- In C#, strings are immutable, meaning once a string is created, it cannot be changed. Each operation that appears to modify a string actually creates a new string object. This can be inefficient when performing many string operations, especially in loops or when concatenating many strings together.
+- `StringBuilder` provides a mutable buffer for building strings. It allows you to append, insert, replace, or remove characters from the buffer efficiently without creating new string objects each time. This can significantly improve performance when dealing with extensive string manipulation.
