@@ -16,7 +16,7 @@ type: folder_brief_live
 - **Method Parameter**
 	- [[Method Parameter Modifiers]]
 	- [[Named Arguments]]
-- **[[Operator]]**
+- **[[CSharp/Basic/Features/Operator/Operator]]**
 - [[Pattern Matching]]
 - [[switch Expressions]]
 - [[System.Text.StringBuilder]]

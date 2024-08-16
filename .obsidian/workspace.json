@@ -4,29 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "65fffa04db39d4c8",
+        "id": "e98ab6848849b84b",
         "type": "tabs",
         "children": [
           {
-            "id": "2a11304f28d0a66d",
+            "id": "dd276723dd418f02",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NEPTUNE/Questions/Trivial/What's the difference between Neptune C+ and others.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "2ad1f306b025eb3e",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2024-08-01 14.26.06.excalidraw.md"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -58,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "TryParse",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -79,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5026054382324
+    "width": 328.5026054382324
   },
   "right": {
     "id": "7491882444cf49f2",
@@ -90,12 +76,19 @@
         "type": "tabs",
         "children": [
           {
+            "id": "89c0773e96eb8817",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {}
+            }
+          },
+          {
             "id": "08102b44aa32db76",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NEPTUNE/Questions/Trivial/What's the difference between Neptune C+ and others.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,9 +115,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "NEPTUNE/Questions/Trivial/What's the difference between Neptune C+ and others.md"
-              }
+              "state": {}
             }
           },
           {
@@ -132,14 +123,6 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
-            "id": "f1da59f0c02e3c54",
-            "type": "leaf",
-            "state": {
-              "type": "reminder-list",
               "state": {}
             }
           },
@@ -158,14 +141,20 @@
               "type": "dictionary-view",
               "state": {}
             }
+          },
+          {
+            "id": "c7ae464c1932e8e6",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 386.5,
-    "collapsed": true
+    "width": 332.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,61 +165,63 @@
       "markdown-importer:Open format converter": false,
       "audio-recorder:Start/stop recording": false,
       "obsidian-day-planner:Week plan": false,
-      "obsidian42-brat:BRAT": false,
       "obsidian-rich-links:Rich Links": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-memos:Memos": false
+      "obsidian42-brat:BRAT": false,
+      "obsidian-memos:Memos": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "2a11304f28d0a66d",
+  "active": "89c0773e96eb8817",
   "lastOpenFiles": [
-    "NEPTUNE/Questions/Questions.md",
-    "NEPTUNE/Neptune C+/Core Technology of Neptune C+/Core Technology of Neptune C+.md",
-    "Technical Stuff/Common Lib/Common Lib.md",
-    "Technical Stuff/CSharp & .NET/CSharp & .NET.md",
+    "C++/Fundamental Data Types/Terms/Terms.md",
+    "C++/Fundamental Data Types/Terms/float.md",
+    "C++/Fundamental Data Types/Output manipulator.md",
+    "C++/Fundamental Data Types/Scientific Notation.md",
+    "C++/Fundamental Data Types/Terms/int.md",
+    "C++/Fundamental Data Types/Terms/Significant digits.md",
+    "C++/Fundamental Data Types/Terms/size_t.md",
+    "C++/Fundamental Data Types/Terms/Fixed-width integers.md",
+    "C++/Fundamental Data Types/Terms/Void.md",
+    "C++/Fundamental Data Types/Terms/Overflow.md",
+    "C++/Fundamental Data Types/Terms/Byte.md",
+    "C++/Fundamental Data Types/Terms/Memory addresses.md",
+    "C++/Fundamental Data Types/Terms/Fast and least integers.md",
+    "C++/Fundamental Data Types/Why you should avoid unsigned integer.md",
+    "C++/Fundamental Data Types/The sizeof operator.md",
+    "C++/Fundamental Data Types/Fundamental data type.md",
+    "Resources/MemoryAddresses.webp",
+    "C++/Fundamental Data Types/Terms/Bit.md",
+    "C++/Basic C++/Basic C++.md",
+    "C++/Fundamental Data Types/Terms",
+    "C++/Fundamental Data Types/Fundamental Data Types.md",
     "C++/C++.md",
-    "Excalidraw/Drawing 2024-08-01 14.26.06.excalidraw.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/Pretty-Print the JSON.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/Using JsonSerializer.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/Controlling the Generated JSON Data.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/XML/Using XmlSerializer.md",
-    "CSharp/CSharp.md",
-    "Design Patterns/Design Patterns.md",
+    "C++/Fundamental Data Types",
+    "C++/Untitled.canvas",
+    "C++/Basic C++/Terms/Terms.md",
+    "C++/Basic C++/Header guard.md",
+    "C++/Basic C++/Terms/Others/Others.md",
+    "C++/Basic C++/Terms/Core/Core.md",
+    "C++/Basic C++/Terms/Core/Scope.md",
+    "C++/Basic C++/Terms/Core/Lifetime.md",
+    "C++/Basic C++/Terms/Others",
+    "C++/Basic C++/Terms/Core",
+    "Resources/IncludeHeader 4.webp",
+    "Resources/IncludeHeader 2.webp",
+    "Resources/IncludeHeader 1.webp",
+    "Resources/IncludeHeader 5.webp",
+    "Resources/IncludeHeader 3.webp",
+    "Resources/IncludeHeader.webp",
+    "C++/Basic C++/Terms",
+    "C++/Basic C++",
     "Resources/Pasted Image 20240801144822_242.png",
     "Resources/Pasted Image 20240801143909_376.png",
     "Resources/Pasted Image 20240801143835_361.png",
-    "Resources/Pasted Image 20240801142636_252.png",
     "Excalidraw",
-    "CSharp/File I.O and Object Serialization/Object Serialization/XML/Why XML-Serializable class need a parameterless constructor.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/XML/Controlling the Generated XML Data.md",
-    "Resources/Pasted image 20240801095002.png",
-    "CSharp/File I.O and Object Serialization/Object Serialization/XML/DTD.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/JSON Structure.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/XML/XML Structure.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/JSON.md",
-    "CSharp/File I.O and Object Serialization/File I.O and Object Serialization.md",
-    "CSharp/Collections and Generics/Generic Collections T.md",
-    "CSharp/Collections and Generics/The Problems of Nongeneric Collections.md",
-    "CSharp/Collections and Generics/The System.Collections Namespace.md",
-    "CSharp/Collections and Generics/Note worthy Generic Collections/Note worthy Generic Collections.md",
-    "CSharp/Collections and Generics/Note worthy ObjectModel Collections/Note worthy ObjectModel Collections.md",
-    "CSharp/Collections and Generics/Features/Collection Initialization Syntax.md",
-    "CSharp/Collections and Generics/Features/Features.md",
-    "Resources/Pasted image 20240108104321.png",
-    "Resources/Pasted image 20240108134126.png",
     "CSharp/File I.O and Object Serialization/Object Serialization/JSON",
-    "Resources/Pasted image 20240724102805.png",
-    "Resources/Pasted image 20240724102801.png",
     "CSharp/File I.O and Object Serialization/Object Serialization/Keywords",
-    "Resources/Screenshot22.png",
     "CSharp/File I.O and Object Serialization/Object Serialization/XML",
-    "CSharp/File I.O and Object Serialization/Object Serialization",
-    "CSharp/File I.O and Object Serialization/System.IO Namespace/File related type/RW Binary Class",
-    "CSharp/File I.O and Object Serialization/System.IO Namespace/File related type/RW String Class",
-    "CSharp/File I.O and Object Serialization/System.IO Namespace/File related type/RW File Class",
-    "CSharp/File I.O and Object Serialization/System.IO Namespace/File related type/RW Stream Class",
-    "CSharp/File I.O and Object Serialization/System.IO Namespace/File related type/RW Text Class",
     "Untitled.canvas",
     "CSharp/Multithreaded, Parallel and Async Programming/Async Programming/Untitled.canvas",
     "RtoS/DCS/Untitled.canvas"

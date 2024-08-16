@@ -1,5 +1,6 @@
 {
   "pluginList": [
+    "tadashi-aikawa/obsidian-various-complements-plugin",
     "nothingislost/obsidian-bartender",
     "Trikzon/obsidian-web-browser"
   ],
@@ -13,5 +14,6 @@
   "loggingVerboseEnabled": false,
   "debuggingMode": true,
   "notificationsEnabled": true,
+  "personalAccessToken": "",
   "ribbonIconEnabled": true
 }

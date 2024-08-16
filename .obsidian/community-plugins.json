@@ -25,5 +25,9 @@
   "obsidian-vimrc-support",
   "waypoint",
   "web-browser",
-  "calendar"
+  "calendar",
+  "omnisearch",
+  "various-complements",
+  "obsidian-git",
+  "cmenu-plugin"
 ]
