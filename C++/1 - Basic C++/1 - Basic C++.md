@@ -10,6 +10,7 @@ type: folder_brief_live
 - [[Angled brackets vs double quotes]]
 - [[Declaration vs. Definition]]
 - [[Forward declarations and definitions]]
+- [[Header Files and Implementation Files]]
 - [[Header guard]]
 - [[Introduction to the preprocessor]]
 - [[main Function]]

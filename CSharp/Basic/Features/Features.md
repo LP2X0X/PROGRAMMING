@@ -6,7 +6,7 @@ type: folder_brief_live
  
 %% Begin Waypoint %%
 - [[Casting]]
-- [[Conditional Operator]]
+- [[CSharp/Basic/Features/Conditional Operator]]
 - [[Default Constructor]]
 - [[Discard]]
 - [[Format String]]

@@ -7,8 +7,10 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- [[Conditional operator]]
 - [[Constant expressions and compile-time optimization]]
 - [[Numeral systems]]
+- [[Performance overhead of function called]]
 - **[[Terms]]**
 
 %% End Waypoint %%
