@@ -46,7 +46,8 @@ std::cout << "Length of the string is: " << length << std::endl;
 ```
 
 ```ad-note
-The size of `std::size_t` imposes a strict mathematical upper limit to an object’s size.
+The size of `std::size_t` imposes a strict mathematical upper limit to an object’s size. In practice, the largest creatable object may be smaller than this amount (perhaps significantly so).
+For example, let’s assume that `std::size_t` has a size of 4 bytes on our system. An unsigned 4-byte integral type has range 0 to 4,294,967,295. Therefore, a 4-byte `std::size_t` object can hold any value from 0 to 4,294,967,295. Any object with a byte-size of 0 to 4,294,967,295 could have it’s size returned in a value of type `std::size_t`, so this is fine. However, if the byte-size of an object were larger than 4,294,967,295 bytes, then `sizeof` would not be able to return the size of that object accurately, as the value would be outside the range of a `std::size_t`. Therefore, no object larger than 4,294,967,295 bytes could be created on this system.
 ```
 
 In this example, `strlen` returns a `size_t` representing the length of the string. This ensures the program can handle strings of any length that can be stored on the system.

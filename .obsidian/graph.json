@@ -18,7 +18,7 @@
       "query": "path:RtoS  ",
       "color": {
         "a": 1,
-        "rgb": 1179392
+        "rgb": 15662848
       }
     },
     {
@@ -34,6 +34,13 @@
         "a": 1,
         "rgb": 14745855
       }
+    },
+    {
+      "query": "path:C++  ",
+      "color": {
+        "a": 1,
+        "rgb": 327424
+      }
     }
   ],
   "collapse-display": true,
@@ -46,6 +53,6 @@
   "repelStrength": 14.4524164072018,
   "linkStrength": 1,
   "linkDistance": 215,
-  "scale": 0.3213363860503588,
+  "scale": 0.08317427835927611,
   "close": true
 }

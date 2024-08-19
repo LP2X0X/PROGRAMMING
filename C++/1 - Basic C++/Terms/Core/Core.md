@@ -29,6 +29,7 @@ type: folder_brief_live
 - [[Statement]]
 - [[Status code]]
 - [[Temporary Object]]
+- [[Unnamed parameter]]
 - [[Variable]]
 
 %% End Waypoint %%

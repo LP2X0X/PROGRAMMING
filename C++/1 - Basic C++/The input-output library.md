@@ -8,7 +8,7 @@ The **input/output library** (io library) is part of the C++ standard library th
 - One way to output a newline is to output `std::endl` (which stands for “end line”).
 
 ```ad-tip
-Best practice: Prefer \n over str::endl
+Best practice: Prefer \n over str::endl because **std::cout << std::endl** inserts a new line and flushes the stream(output buffer), whereas **std::cout << “\n”** just inserts a new line.
 ```
 
 ### std::cin

@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/1 - Basic C++/Terms/Core/Comments.md",
-                "mode": "source",
+                "file": "C++/3 - Constants and Strings/Terms/Constexpr variables.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++/1 - Basic C++/Terms/Core/Comments.md",
+                "file": "C++/3 - Constants and Strings/Terms/Constexpr variables.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++/1 - Basic C++/Terms/Core/Comments.md"
+                "file": "C++/3 - Constants and Strings/Terms/Constexpr variables.md"
               }
             }
           },
@@ -157,12 +157,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 332.5
+    "width": 332.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,50 +183,50 @@
   },
   "active": "3c484820e7b9877b",
   "lastOpenFiles": [
-    "C++/1 - Basic C++/Terms/Core/Preprocessor Directive.md",
-    "C++/1 - Basic C++/Terms/Core/Identifier.md",
-    "C++/1 - Basic C++/Terms/Core/Function.md",
-    "C++/1 - Basic C++/Terms/Core/Statement.md",
-    "C++/1 - Basic C++/Terms/Core/Core.md",
-    "C++/1 - Basic C++/1 - Basic C++.md",
-    "C++/2 - Fundamental Data Types/Terms/Terms.md",
+    "C++/3 - Constants and Strings/Terms/Constant expression.md",
+    "C++/3 - Constants and Strings/Terms/Constexpr variables.md",
+    "C++/3 - Constants and Strings/Constant expressions and compile-time optimization.md",
     "C++/3 - Constants and Strings/Terms/Constant variables.md",
+    "C++/3 - Constants and Strings/Terms/Type qualifiers.md",
+    "C++/3 - Constants and Strings/Terms/Runtime expression.md",
     "C++/3 - Constants and Strings/Terms/Terms.md",
+    "C++/1 - Basic C++/Terms/Core/Expression.md",
+    "C++/3 - Constants and Strings/Numeral systems.md",
     "C++/3 - Constants and Strings/3 - Constants and Strings.md",
+    "C++/3 - Constants and Strings/Terms/Magic numbers.md",
+    "C++/Basic C++/Terms/Others/Data.md",
+    "C++/1 - Basic C++/1 - Basic C++.md",
+    "C++/1 - Basic C++/Terms/Terms.md",
+    "C++/1 - Basic C++/Terms/Core/Core.md",
+    "C++/Basic C++/Terms/Others",
+    "C++/Basic C++/Terms",
+    "C++/Basic C++",
+    "C++/1 - Basic C++/Terms/Core/Literal.md",
+    "CSharp/Collections and Generics/Features/Default Literal Expressions.md",
+    "C++/3 - Constants and Strings/Terms/Literals.md",
+    "C++/1 - Basic C++/Terms/Core/Operator.md",
     "C++/2 - Fundamental Data Types/2 - Fundamental Data Types.md",
-    "C++/C++.md",
-    "README.md",
-    "C++/Constants and Strings.md",
-    "C++/Constants and Strings 3.md",
-    "C++/Constants and Strings 2.md",
-    "C++/Constants and Strings 1.md",
-    "C++/3 - Constants and Strings/Terms",
-    "C++/Constants and Strings/Untitled.md",
-    "C++/Constants and Strings/Terms/Untitled.md",
-    "C++/Constants and Strings/Constant variable.md",
-    "Design Patterns/Design Patterns.md",
-    "C++/3 - Constants and Strings/Terms",
-    "C++/2 - Fundamental Data Types/Why you should avoid unsigned integer.md",
+    "C++/2 - Fundamental Data Types/Terms/Terms.md",
     "C++/2 - Fundamental Data Types/Type conversion.md",
-    "Untitled.md",
+    "C++/2 - Fundamental Data Types/if Statement.md",
+    "C++/2 - Fundamental Data Types/The sizeof operator.md",
+    "C++/2 - Fundamental Data Types/Why you should avoid unsigned integer.md",
+    "C++/2 - Fundamental Data Types/Output manipulator.md",
+    "C++/3 - Constants and Strings/Terms",
+    "C++/3 - Constants and Strings/Terms",
     "Tags",
     "C++/3 - Constants and Strings",
-    "C++/2 - Fundamental Data Types/Terms/Types/char.md",
-    "C++/2 - Fundamental Data Types/Terms/Types/Types.md",
     "C++/2 - Fundamental Data Types/Terms/Types",
     "Resources/MemoryAddresses.webp",
     "C++/2 - Fundamental Data Types/Terms",
     "C++/2 - Fundamental Data Types",
     "C++/Untitled.canvas",
-    "C++/1 - Basic C++/Terms/Others",
-    "C++/1 - Basic C++/Terms/Core",
     "Resources/IncludeHeader 4.webp",
     "Resources/IncludeHeader 2.webp",
     "Resources/IncludeHeader 1.webp",
     "Resources/IncludeHeader 5.webp",
     "Resources/IncludeHeader 3.webp",
     "Resources/IncludeHeader.webp",
-    "C++/1 - Basic C++/Terms",
     "Resources/Pasted Image 20240801144822_242.png",
     "Resources/Pasted Image 20240801143909_376.png",
     "Resources/Pasted Image 20240801143835_361.png",
