@@ -1,0 +1,4 @@
+- In programming, a **constant** is a value that may not be changed during the program’s execution.
+- C++ supports two different kinds of constants:
+	- **Named constants** are constant values that are associated with an identifier. These are also sometimes called **symbolic constants**, or occasionally just **constants**.
+	- **Literal constants** are constant values that are not associated with an identifier.

@@ -1,0 +1,1 @@
+- A **literal** (also known as a literal constant) is a fixed value that has been inserted directly into the source code.

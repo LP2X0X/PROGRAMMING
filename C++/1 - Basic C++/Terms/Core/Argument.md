@@ -1,0 +1,1 @@
+- An **argument** is a value that is passed _from_ the caller _to_ the function when a function call is made.

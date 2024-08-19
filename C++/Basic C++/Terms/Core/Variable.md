@@ -1,1 +1,0 @@
-- An [[Object|object]] with a name is called a **[[Variable|variable]]**.

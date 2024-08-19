@@ -1,0 +1,1 @@
+- A return statement that is not the last statement in a function is called an **early return**.
