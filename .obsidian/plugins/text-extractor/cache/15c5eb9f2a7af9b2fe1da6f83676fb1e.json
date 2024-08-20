@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted image 20240206095447.png","text":"using System.Configuration; using System.Data; using System.Windows; namespace CommonLibTest_NoPrism { \" /// <summary> /// Interaction logic for App.xaml /// </sunmary> s | public partial class App : Application 1{ } }","libVersion":"0.3.2","langs":"eng"}

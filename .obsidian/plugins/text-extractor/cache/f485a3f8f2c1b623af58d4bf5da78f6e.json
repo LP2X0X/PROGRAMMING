@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240131144144_003.png","text":"await control.TrendChartViewModel.SetChartDataAsync(control.BoardInformation, control.InspectionItem, control.InspectionItemResult);","libVersion":"0.3.2","langs":"eng"}

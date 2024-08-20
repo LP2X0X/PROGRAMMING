@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240131143135_504.png","text":"<ctl:TrendChartControlMain Grid.Row=\"1\" BoardInformation=\"{Binding BoardInfo}\" InspectionItem=\"{Binding InspectionItem}\" TtemChangedEventCommand=\"{Binding ItemChangedCommand}\" InspectionItemResult=\"{Binding ItemResult}\" />","libVersion":"0.3.2","langs":"eng"}

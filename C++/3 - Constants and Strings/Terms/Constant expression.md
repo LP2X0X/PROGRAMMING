@@ -2,7 +2,7 @@
 - A **compile-time constant** is a constant whose value _must be_ known at compile time. This includes:
 	- Literals (e.g. ‘5’, ‘1.2’)
 	- [[Constexpr variables]]
-	- Const integral variables with a constant expression initializer (e.g. `const int x { 5 };`). This is a historical exception -- in modern C++, constexpr variables are preferred.
+	- **Const integral variables** with a constant expression initializer (e.g. `const int x { 5 };`). This is a historical exception -- in modern C++, constexpr variables are preferred.
 	- Non-type template parameters
 	- Enumerators
 - Const variables that are not compile-time constants are sometimes called **runtime constants**. Runtime constants cannot be used in a constant expression.

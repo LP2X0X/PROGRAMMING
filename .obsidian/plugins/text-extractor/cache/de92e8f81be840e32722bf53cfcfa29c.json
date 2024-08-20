@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240202100302_040.png","text":"public class UnderfillHeightLineResult : TB_CCI_UF_HEIGHT_LINE, IUnderfillHeightlLineMeasureResult { o public MeasureType MeasureType => SideAreaType is 0 ? MeasureType.UnderfillHeightSideLine : MeasureType.UnderfillHeightCornerLine; }","libVersion":"0.3.2","langs":"eng"}

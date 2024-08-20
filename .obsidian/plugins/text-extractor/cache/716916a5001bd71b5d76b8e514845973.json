@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted image 20240723091024.png","text":"public enum FileShare { None, Read, Write, ReadWrite, Delete, Inheritable }","libVersion":"0.3.2","langs":"eng"}

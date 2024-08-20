@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240202095925_003.png","text":"public interface IUnderfillOffsetMeasureResult : IMeasureValue { BUET TN VS TG TE C Tha RectSizeF RectSize { get; } string SvgPath { get; } }","libVersion":"0.3.2","langs":"eng"}

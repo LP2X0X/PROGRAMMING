@@ -17,7 +17,8 @@ type: folder_brief_live
 - [[Literals]]
 - [[Magic numbers]]
 - [[Runtime expression]]
-- [[std string]]
+- [[string_view]]
+- [[string]]
 - [[Type qualifiers]]
 
 %% End Waypoint %%

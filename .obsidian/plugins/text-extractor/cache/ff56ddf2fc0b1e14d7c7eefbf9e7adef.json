@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240130092340_208.png","text":"<dxmvvm: Interaction.Behaviors> <dxmvvm:EventToCommand Command=\"{Binding ResultSelectionChangedCommand}\" CommandParameter=\"{Binding ElementName=resultGrid, Path=SelectedItem}\" EventName=\"SelectionChanged\" /> </dxmvvm: Interaction.Behaviors>","libVersion":"0.3.2","langs":"eng"}

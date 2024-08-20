@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240202100010_001.png","text":"gublic interface IUnderfillWidthLineMeasureResult : IMeasureValue bool? IsPassLine { get; } double? Length { get; } int LineID { get; } Line ResultLineValue { get; } int SideID { get; } int SideRegionType { get; } 3 references int? IndexRoiArea { get; } }","libVersion":"0.3.2","langs":"eng"}

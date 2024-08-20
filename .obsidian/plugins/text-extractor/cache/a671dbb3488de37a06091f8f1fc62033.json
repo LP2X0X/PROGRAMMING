@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240202095939_999.png","text":"public interface IUnderfillOverfillMeasureResult : IMeasureValue { 2reterences RectSizeF RectSize { get; } ros—. ImageInfo ImageUV { get; } 3 references ImageInfo ImageWhite { get; } 3references string SvgPath { get; } }","libVersion":"0.3.2","langs":"eng"}

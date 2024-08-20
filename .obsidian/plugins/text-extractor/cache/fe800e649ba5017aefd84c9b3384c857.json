@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240129141021_391.png","text":"private async Task RefreshQuery() { PCBItems?.Clear(); InpItems = new List<InspectionItem>(); boardInfos?.Clear(); if (IsConnected) { await ExecuteSelectPCBQuery(); } }","libVersion":"0.3.2","langs":"eng"}

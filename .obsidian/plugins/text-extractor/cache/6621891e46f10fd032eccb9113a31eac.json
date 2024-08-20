@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240205142523_991.png","text":"public async Task UpdateItemResultAsync(IInspectionItemResult itemResult) { this.itenResult = itemResult; SelectedArray = Arrays.FirstOrDefault(x => x.Arrayld == itemResult.GroupId); await Task.Delay(100); ResultSelectionChanged(this. itenResult); H","libVersion":"0.3.2","langs":"eng"}

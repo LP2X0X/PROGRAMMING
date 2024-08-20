@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240202094819_079.png","text":"public interface IThicknessExOffsetMeasureResult : IMeasureValue { 3 references BUET TN VS TG TE C Tha 2 references RectSizeF RectSize { get; } 3 references string SvgPath { get; } }","libVersion":"0.3.2","langs":"eng"}

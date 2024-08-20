@@ -6,7 +6,7 @@ type: folder_brief_live
  
 %% Begin Waypoint %%
 - [[Casting]]
-- [[CSharp/Basic/Features/Conditional Operator]]
+- [[Conditional Operator]]
 - [[Default Constructor]]
 - [[Discard]]
 - [[Format String]]
@@ -16,8 +16,9 @@ type: folder_brief_live
 - **Method Parameter**
 	- [[Method Parameter Modifiers]]
 	- [[Named Arguments]]
-- **[[CSharp/Basic/Features/Operator/Operator]]**
+- **[[Operator]]**
 - [[Pattern Matching]]
+- [[Post-build event]]
 - [[switch Expressions]]
 - [[System.Text.StringBuilder]]
 

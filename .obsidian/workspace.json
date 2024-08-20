@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/3 - Constants and Strings/Terms/std string.md",
+                "file": "C++/4 - Operators/Terms/Operator associativity.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++/3 - Constants and Strings/Terms/std string.md",
+                "file": "C++/4 - Operators/Terms/Operator associativity.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++/3 - Constants and Strings/Terms/std string.md"
+                "file": "C++/4 - Operators/Terms/Operator associativity.md"
               }
             }
           },
@@ -161,8 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332.5,
-    "collapsed": true
+    "width": 332.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,32 +182,35 @@
   },
   "active": "3c484820e7b9877b",
   "lastOpenFiles": [
-    "C++/3 - Constants and Strings/Terms/Terms.md",
-    "C++/3 - Constants and Strings/Terms/std string.md",
-    "C++/3 - Constants and Strings/Terms/Constexpr variables.md",
-    "C++/3 - Constants and Strings/Terms/Constant variables.md",
-    "C++/3 - Constants and Strings/Terms/Consteval.md",
-    "C++/3 - Constants and Strings/Terms/Constexpr functions.md",
-    "C++/3 - Constants and Strings/Constant expressions and compile-time optimization.md",
-    "C++/3 - Constants and Strings/Performance overhead of function called.md",
-    "C++/3 - Constants and Strings/Terms/Runtime expression.md",
-    "C++/3 - Constants and Strings/Terms/Compile - Runtime Constant - Expression.md",
-    "C++/3 - Constants and Strings/Terms/Constant expression.md",
-    "C++/3 - Constants and Strings/Terms/Inline function and variable.md",
-    "C++/2 - Fundamental Data Types/2 - Fundamental Data Types.md",
-    "C++/1 - Basic C++/1 - Basic C++.md",
+    "C++/4 - Operators/Terms/Terms.md",
+    "C++/4 - Operators/Terms/Operator associativity.md",
+    "C++/4 - Operators/Terms/Operator precedence.md",
+    "C++/4 - Operators/4 - Operators.md",
+    "C++/4 - Operators/Terms",
+    "C++/3 - Constants and Strings/3 - Constants and Strings.md",
     "C++/C++.md",
-    "C++/1 - Basic C++/Header Files and Implementation Files.md",
-    "C++/1 - Basic C++/Terms/Terms.md",
-    "C++/1 - Basic C++/Terms/Others/Others.md",
-    "C++/1 - Basic C++/Introduction to the preprocessor.md",
-    "C++/1 - Basic C++/Variable assignment and initialization.md",
-    "C++/1 - Basic C++/Terms/Core/Core.md",
-    "C++/1 - Basic C++/Declaration vs. Definition.md",
-    "C++/1 - Basic C++/Header guard.md",
-    "C++/1 - Basic C++/Forward declarations and definitions.md",
-    "C++/1 - Basic C++/Uninitialized variables and undefined behavior.md",
-    "C++/1 - Basic C++/main Function.md",
+    "C++/4 - Operators",
+    "C++/3 - Constants and Strings/Terms/string_view.md",
+    "C++/3 - Constants and Strings/Terms/Constant expression.md",
+    "C++/3 - Constants and Strings/Terms/Constexpr variables.md",
+    "C++/3 - Constants and Strings/Terms/string.md",
+    "C++/3 - Constants and Strings/Terms/Terms.md",
+    "C++/3 - Constants and Strings/C-Style String vs std String.md",
+    "C++/2 - Fundamental Data Types/Terms/size_t.md",
+    "C++/2 - Fundamental Data Types/Type conversion.md",
+    "Excalidraw/Drawing 2024-08-20 08.49.12.excalidraw.md",
+    "Excalidraw",
+    "C++/3 - Constants and Strings/Terms/Consteval.md",
+    "CSharp/Basic/Features/Format String.md",
+    "CSharp/Basic/Features/Post-build event.md",
+    "CSharp/Basic/Features/Features.md",
+    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/JsonSerializerOptions.md",
+    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/Using JsonSerializer.md",
+    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/JSON Structure.md",
+    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/JSON.md",
+    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/Controlling the Generated JSON Data.md",
+    "CSharp/File I.O and Object Serialization/Object Serialization/Object Serialization.md",
+    "CSharp/File I.O and Object Serialization/System.IO Namespace/System.IO Namespace.md",
     "C++/Basic C++/Terms/Others",
     "C++/Basic C++/Terms",
     "C++/Basic C++",
@@ -216,10 +218,7 @@
     "C++/3 - Constants and Strings/Terms",
     "Tags",
     "C++/3 - Constants and Strings",
-    "C++/2 - Fundamental Data Types/Terms/Types",
     "Resources/MemoryAddresses.webp",
-    "C++/2 - Fundamental Data Types/Terms",
-    "C++/2 - Fundamental Data Types",
     "C++/Untitled.canvas",
     "Resources/IncludeHeader 4.webp",
     "Resources/IncludeHeader 2.webp",

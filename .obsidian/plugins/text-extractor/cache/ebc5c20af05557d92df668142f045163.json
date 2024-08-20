@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240202095940_003.png","text":"public interface IUnderfillWidth3DLineMeasureResult : IMeasureValue { List<PointF> FilerProfileValue { get; } bool? IsPassLine { get; } int LineID { get; } int? SideID { get; } bool? SidePass { get; } int? SideRegionType { get; } dl;ub'l.e7 width { get; } 3","libVersion":"0.3.2","langs":"eng"}

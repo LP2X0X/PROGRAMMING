@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Controlling the Generated JSON Data]]
 - [[JSON Structure]]
-- [[Pretty-Print the JSON]]
+- [[JsonSerializerOptions]]
 - [[Using JsonSerializer]]
 
 %% End Waypoint %%

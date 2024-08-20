@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240130092434_219.png","text":"private void SelectedResultChanged(object selectedRow) ' jif (selectedRow is IInspectionItemResult selectedResult)EEs ! inspResultUpdater?.Invoke(this, new UpdateInspectionResultEventArgs(selectedResult, SelectedInspItem)); . }","libVersion":"0.3.2","langs":"eng"}
