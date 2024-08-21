@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/4 - Operators/Terms/Operator associativity.md",
-                "mode": "source",
+                "file": "C++/5 - Bit Manipulation/When are bit masks most uesful.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++/4 - Operators/Terms/Operator associativity.md",
+                "file": "C++/5 - Bit Manipulation/When are bit masks most uesful.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++/4 - Operators/Terms/Operator associativity.md"
+                "file": "C++/5 - Bit Manipulation/When are bit masks most uesful.md"
               }
             }
           },
@@ -161,7 +161,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332.5
+    "width": 332.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,42 +183,42 @@
   },
   "active": "3c484820e7b9877b",
   "lastOpenFiles": [
-    "C++/4 - Operators/Terms/Terms.md",
-    "C++/4 - Operators/Terms/Operator associativity.md",
-    "C++/4 - Operators/Terms/Operator precedence.md",
-    "C++/4 - Operators/4 - Operators.md",
-    "C++/4 - Operators/Terms",
-    "C++/3 - Constants and Strings/3 - Constants and Strings.md",
-    "C++/C++.md",
-    "C++/4 - Operators",
-    "C++/3 - Constants and Strings/Terms/string_view.md",
-    "C++/3 - Constants and Strings/Terms/Constant expression.md",
-    "C++/3 - Constants and Strings/Terms/Constexpr variables.md",
-    "C++/3 - Constants and Strings/Terms/string.md",
+    "C++/5 - Bit Manipulation/Terms/Terms.md",
+    "C++/5 - Bit Manipulation/When are bit masks most uesful.md",
+    "C++/5 - Bit Manipulation/Terms/Bit masks.md",
+    "C++/5 - Bit Manipulation/Manipulating bits via std bitset.md",
+    "C++/5 - Bit Manipulation/Terms/Bitwise operators.md",
+    "C++/5 - Bit Manipulation/Terms/Bit positions.md",
+    "C++/2 - Fundamental Data Types/Terms/Types/Boolean.md",
+    "C++/5 - Bit Manipulation/Terms/Bitwise assignment operators.md",
+    "CSharp/File I.O and Object Serialization/System.IO Namespace/File related type/RW Binary Class/BinaryWriter.md",
+    "C++/5 - Bit Manipulation/Querying bits via std bitset.md",
+    "C++/5 - Bit Manipulation/Terms/Bit manipulation.md",
+    "C++/5 - Bit Manipulation/Terms/Bit flags.md",
     "C++/3 - Constants and Strings/Terms/Terms.md",
-    "C++/3 - Constants and Strings/C-Style String vs std String.md",
-    "C++/2 - Fundamental Data Types/Terms/size_t.md",
-    "C++/2 - Fundamental Data Types/Type conversion.md",
-    "Excalidraw/Drawing 2024-08-20 08.49.12.excalidraw.md",
-    "Excalidraw",
+    "C++/3 - Constants and Strings/Terms/string.md",
+    "C++/3 - Constants and Strings/Terms/Constant expression.md",
     "C++/3 - Constants and Strings/Terms/Consteval.md",
-    "CSharp/Basic/Features/Format String.md",
-    "CSharp/Basic/Features/Post-build event.md",
-    "CSharp/Basic/Features/Features.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/JsonSerializerOptions.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/Using JsonSerializer.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/JSON Structure.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/JSON.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/JSON/Controlling the Generated JSON Data.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/Object Serialization.md",
-    "CSharp/File I.O and Object Serialization/System.IO Namespace/System.IO Namespace.md",
+    "C++/3 - Constants and Strings/Terms/Constexpr functions.md",
+    "Untitled.md",
+    "C++/3 - Constants and Strings/Numeral systems.md",
+    "C++/3 - Constants and Strings/Constant expressions and compile-time optimization.md",
+    "C++/3 - Constants and Strings/Conditional operator.md",
+    "C++/3 - Constants and Strings/Performance overhead of function called.md",
+    "C++/3 - Constants and Strings/C-Style String vs std String.md",
+    "C++/3 - Constants and Strings/3 - Constants and Strings.md",
+    "C++/4 - Operators/4 - Operators.md",
+    "C++/4 - Operators/Terms/Terms.md",
+    "C++/5 - Bit Manipulation/Terms",
+    "C++/5 - Bit Manipulation",
+    "C++/4 - Operators/Terms",
+    "C++/4 - Operators",
+    "Excalidraw",
     "C++/Basic C++/Terms/Others",
     "C++/Basic C++/Terms",
     "C++/Basic C++",
     "C++/3 - Constants and Strings/Terms",
     "C++/3 - Constants and Strings/Terms",
-    "Tags",
-    "C++/3 - Constants and Strings",
     "Resources/MemoryAddresses.webp",
     "C++/Untitled.canvas",
     "Resources/IncludeHeader 4.webp",

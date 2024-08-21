@@ -77,3 +77,9 @@ img[alt*="center"] {
     font-size: 15pt;
 	font-family: "Segoe UI";
 }
+
+/* Center tables on the page */
+.markdown-preview-view table {
+    margin-left: auto;
+    margin-right: auto;
+}

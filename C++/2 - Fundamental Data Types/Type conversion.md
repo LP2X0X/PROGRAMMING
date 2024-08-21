@@ -17,3 +17,29 @@ It’s worth noting that the argument to _static_cast_ evaluates as an expressio
 ```ad-important
 std::int8_t and std::uint8_t likely behave like chars instead of integers
 ```
+- We can use _static_cast<>_ to convert an integer to a floating point number so that we can do _floating point division_ instead of _integer division_:
+```cpp
+#include <iostream>
+
+int main()
+{
+    constexpr int x{ 7 };
+    constexpr int y{ 4 };
+
+    std::cout << "int / int = " << x / y << '\n';
+    std::cout << "double / int = " << static_cast<double>(x) / y << '\n';
+    std::cout << "int / double = " << x / static_cast<double>(y) << '\n';
+    std::cout << "double / double = " << static_cast<double>(x) / static_cast<double>(y) << '\n';
+
+    return 0;
+}
+```
+
+This produces the result:
+
+```
+int / int = 1
+double / int = 1.75
+int / double = 1.75
+double / double = 1.75
+```
