@@ -1,0 +1,1 @@
+- Spaghetti code is code that has a path of execution that resembles a bowl of spaghetti (all tangled and twisted), making it extremely difficult to follow the logic of such code.

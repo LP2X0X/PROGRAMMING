@@ -1,0 +1,2 @@
+- Statement label define the point where goto statement go to.
+- Statement labels utilize a third kind of scope: **function scope**, which means the label is visible throughout the function even before its point of declaration.

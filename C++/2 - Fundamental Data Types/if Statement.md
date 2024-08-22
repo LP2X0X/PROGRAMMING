@@ -1,4 +1,4 @@
-- An **if statement** allows us to execute one (or more) lines of code only if some condition is true.
+- An **if statement** allows us to execute one (or more) lines of code only if some condition is true. This is one [[Conditional statement|conditional statement]].
 
 ```cpp
 if (condition_1)

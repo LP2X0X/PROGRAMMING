@@ -1,0 +1,1 @@
+- A **conditional statement** is a statement that specifies whether some associated statement(s) should be executed or not.

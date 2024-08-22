@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[(Global Assembly Cache) GAC]]
-- **[[Attribute]]**
+- **[[CSharp/Type Reflection, Late Binding, Attribute, and Dynamic Types/Attribute/Attribute]]**
 - [[Building extendable application]]
 - [[Display Name]]
 - **[[dynamic Keyword]]**

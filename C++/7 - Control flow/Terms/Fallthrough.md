@@ -1,0 +1,5 @@
+ - When a switch expression matches a case label or optional default label, execution begins at the first statement following the matching label. Execution will then continue sequentially until one of the following termination conditions happens:
+	- The end of the switch block is reached.
+	- Another control flow statement (typically a `break` or `return`) causes the switch block or function to exit.
+	- Something else interrupts the normal flow of the program (e.g. the OS shuts the program down, the universe implodes, etc…)
+- Note that the presence of another case label is _not_ one of these terminating conditions -- thus, without a `break` or `return`, execution will overflow into subsequent cases.

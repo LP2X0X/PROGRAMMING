@@ -1,0 +1,1 @@
+- If the programmer does not declare a block in the statement portion of an `if statement` or `else statement`, the compiler will implicitly declare one.

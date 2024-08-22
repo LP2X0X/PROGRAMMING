@@ -1,0 +1,1 @@
+- The second kind of label is the **default label** (often called the **default case**), which is declared using the `default` keyword. If the conditional expression does not match any case label and a default label exists, execution begins at the first statement after the default label.

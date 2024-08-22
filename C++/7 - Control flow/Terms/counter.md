@@ -1,0 +1,1 @@
+- The most common type of [[loop variable]] is called a **counter**, which is a loop variable that counts how many times a loop has executed. In the examples above, the variable `count` is a counter.

@@ -1,0 +1,2 @@
+ - A **compound statements** (also called a **block**, or **block statements**) is  a group of  zero or more  statements that is treated by the compiler as if it were a single statement.
+ - Block begin with a \{ symbol, end with a \} symbol, with the statements to be executed being placed in between. No semicolon is needed at the end of a block.

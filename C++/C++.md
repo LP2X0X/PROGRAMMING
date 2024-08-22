@@ -16,5 +16,7 @@ type: folder_brief_live
 	- **[[Terms]]**
 	- [[The order of evaluation of operands and function arguments is mostly unspecified]]
 - **[[5 - Bit Manipulation]]**
+- **[[6 - Scope, Duration, and Linkage]]**
+- **[[7 - Control flow]]**
 
 %% End Waypoint %%

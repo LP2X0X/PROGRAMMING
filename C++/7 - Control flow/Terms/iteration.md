@@ -1,0 +1,1 @@
+- Each time a loop executes, it is called an **iteration**.

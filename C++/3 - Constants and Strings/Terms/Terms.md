@@ -13,12 +13,10 @@ type: folder_brief_live
 - [[Consteval]]
 - [[Constexpr functions]]
 - [[Constexpr variables]]
+- **[[Core]]**
 - [[Inline function and variable]]
-- [[Literals]]
 - [[Magic numbers]]
 - [[Runtime expression]]
-- [[string_view]]
-- [[string]]
 - [[Type qualifiers]]
 
 %% End Waypoint %%

@@ -17,7 +17,6 @@ type: folder_brief_live
 - [[NaN and Inf]]
 - [[Overflow]]
 - [[Significant digits]]
-- [[size_t]]
 - **[[Types]]**
 - [[Void]]
 

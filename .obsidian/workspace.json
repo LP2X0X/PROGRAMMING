@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/5 - Bit Manipulation/When are bit masks most uesful.md",
-                "mode": "preview",
+                "file": "C++/6 - Scope, Duration, and Linkage/Sharing global constants across multiple files.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "that",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C++/5 - Bit Manipulation/When are bit masks most uesful.md",
+                "file": "C++/6 - Scope, Duration, and Linkage/Sharing global constants across multiple files.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C++/5 - Bit Manipulation/When are bit masks most uesful.md"
+                "file": "C++/6 - Scope, Duration, and Linkage/Sharing global constants across multiple files.md"
               }
             }
           },
@@ -183,42 +183,43 @@
   },
   "active": "3c484820e7b9877b",
   "lastOpenFiles": [
+    "C++/6 - Scope, Duration, and Linkage/Why (non-const) global variables are evil.md",
+    "C++/6 - Scope, Duration, and Linkage/Sharing global constants across multiple files.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Inline namespace.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Unnamed (anonymous) namespaces.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/using directive.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/using declaration.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Qualified and unqualified names.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Variable shadowing.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Storage duration.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Global namespace scope.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Global variable.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Linkage.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Namespace aliases.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Scope resolution operator.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/User-defined namespaces.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Nesting level.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Compound statements.md",
+    "C++/6 - Scope, Duration, and Linkage/Terms/Terms.md",
+    "C++/6 - Scope, Duration, and Linkage/6 - Scope, Duration, and Linkage.md",
+    "C++/5 - Bit Manipulation/5 - Bit Manipulation.md",
     "C++/5 - Bit Manipulation/Terms/Terms.md",
-    "C++/5 - Bit Manipulation/When are bit masks most uesful.md",
-    "C++/5 - Bit Manipulation/Terms/Bit masks.md",
-    "C++/5 - Bit Manipulation/Manipulating bits via std bitset.md",
-    "C++/5 - Bit Manipulation/Terms/Bitwise operators.md",
-    "C++/5 - Bit Manipulation/Terms/Bit positions.md",
-    "C++/2 - Fundamental Data Types/Terms/Types/Boolean.md",
-    "C++/5 - Bit Manipulation/Terms/Bitwise assignment operators.md",
-    "CSharp/File I.O and Object Serialization/System.IO Namespace/File related type/RW Binary Class/BinaryWriter.md",
     "C++/5 - Bit Manipulation/Querying bits via std bitset.md",
-    "C++/5 - Bit Manipulation/Terms/Bit manipulation.md",
+    "C++/5 - Bit Manipulation/When are bit masks most uesful.md",
+    "C++/5 - Bit Manipulation/Manipulating bits via std bitset.md",
     "C++/5 - Bit Manipulation/Terms/Bit flags.md",
-    "C++/3 - Constants and Strings/Terms/Terms.md",
-    "C++/3 - Constants and Strings/Terms/string.md",
-    "C++/3 - Constants and Strings/Terms/Constant expression.md",
-    "C++/3 - Constants and Strings/Terms/Consteval.md",
-    "C++/3 - Constants and Strings/Terms/Constexpr functions.md",
-    "Untitled.md",
-    "C++/3 - Constants and Strings/Numeral systems.md",
-    "C++/3 - Constants and Strings/Constant expressions and compile-time optimization.md",
-    "C++/3 - Constants and Strings/Conditional operator.md",
-    "C++/3 - Constants and Strings/Performance overhead of function called.md",
-    "C++/3 - Constants and Strings/C-Style String vs std String.md",
-    "C++/3 - Constants and Strings/3 - Constants and Strings.md",
-    "C++/4 - Operators/4 - Operators.md",
-    "C++/4 - Operators/Terms/Terms.md",
+    "C++/5 - Bit Manipulation/Terms/Bit positions.md",
+    "C++/3 - Constants and Strings/Terms/Core",
+    "C++/7 - Control flow/Terms",
+    "C++/7 - Control flow/Untitled",
+    "C++/7 - Control flow",
+    "Resources/Pasted Image 20240202142727_976.png",
+    "C++/6 - Scope, Duration, and Linkage/Terms",
+    "C++/6 - Scope, Duration, and Linkage",
     "C++/5 - Bit Manipulation/Terms",
     "C++/5 - Bit Manipulation",
     "C++/4 - Operators/Terms",
     "C++/4 - Operators",
-    "Excalidraw",
-    "C++/Basic C++/Terms/Others",
-    "C++/Basic C++/Terms",
-    "C++/Basic C++",
-    "C++/3 - Constants and Strings/Terms",
-    "C++/3 - Constants and Strings/Terms",
     "Resources/MemoryAddresses.webp",
     "C++/Untitled.canvas",
     "Resources/IncludeHeader 4.webp",
@@ -229,7 +230,6 @@
     "Resources/IncludeHeader.webp",
     "Resources/Pasted Image 20240801144822_242.png",
     "Resources/Pasted Image 20240801143909_376.png",
-    "Resources/Pasted Image 20240801143835_361.png",
     "Untitled.canvas",
     "CSharp/Multithreaded, Parallel and Async Programming/Async Programming/Untitled.canvas",
     "RtoS/DCS/Untitled.canvas"
