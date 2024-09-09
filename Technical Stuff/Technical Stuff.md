@@ -11,7 +11,7 @@ type: folder_brief_live
 - **[[CSharp & .NET]]**
 - **[[PRISM Framework]]**
 - **Protobuf**
-- **[[Technical Stuff/Questions/Questions]]**
+- **[[Questions]]**
 - **[[TCP-IP]]**
 
 %% End Waypoint %%

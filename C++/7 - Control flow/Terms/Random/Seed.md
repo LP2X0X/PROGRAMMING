@@ -1,0 +1,1 @@
+- A "random seed" is an initial value used by a random number generator (RNG) to produce a sequence of pseudo-random numbers. The seed value is crucial because it determines the starting point of the sequence, making the output of the RNG predictable if the seed is known.

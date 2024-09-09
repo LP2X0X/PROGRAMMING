@@ -1,0 +1,2 @@
+- A **break statement** (declared using the `break` keyword) tells the compiler that we are done executing statements within the switch, and that execution should continue with the statement after the end of the switch block.
+- In the context of a loop, a `break` statement can be used to end the loop early. Execution continues with the next statement after the end of the loop.

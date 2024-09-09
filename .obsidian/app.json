@@ -13,5 +13,6 @@
   "newFileLocation": "current",
   "spellcheck": true,
   "showInlineTitle": false,
-  "promptDelete": false
+  "promptDelete": false,
+  "showRibbon": true
 }

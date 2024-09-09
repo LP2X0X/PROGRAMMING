@@ -1,0 +1,1 @@
+![[Comparison of serialization formats - Advance Solution Group - Confluence.pdf]]

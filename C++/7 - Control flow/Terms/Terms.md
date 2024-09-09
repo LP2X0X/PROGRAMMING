@@ -5,24 +5,20 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
+- [[Abnormal termination]]
 - [[Attribute]]
-- [[break statement]]
-- [[case label]]
-- [[Conditional statement]]
+- **[[Basic]]**
 - [[counter]]
-- [[default label]]
-- [[do while statement]]
 - [[fallthrough Attribute]]
-- [[Fallthrough]]
-- [[for statement]]
 - [[goto statement]]
+- **[[Halt]]**
 - [[Implicit blocks]]
 - [[iteration]]
-- [[loop variable]]
+- [[Memory leak]]
+- [[Normal termination]]
 - [[Null statement]]
+- **[[Random]]**
 - [[Spaghetti code]]
 - [[Statement label]]
-- [[switch statement]]
-- [[while statement]]
 
 %% End Waypoint %%

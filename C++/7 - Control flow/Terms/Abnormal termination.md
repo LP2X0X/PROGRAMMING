@@ -1,0 +1,1 @@
+- **Abnormal termination** means the program had some kind of unusual runtime error and the program couldn’t continue to run. For example, trying to divide by 0 will result in an abnormal termination. `std::abort()` does not do any cleanup.

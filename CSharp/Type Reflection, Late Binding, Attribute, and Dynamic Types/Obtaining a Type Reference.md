@@ -13,7 +13,7 @@ Type t = sc.GetType();
 // Get the type using typeof.  
 Type t = typeof(SportsCar);  
 ```
-- Unlike System.Object.GetType(), the typeof operator is helpful, in that you do not need to first create an object instance to extract type information. However, your code base must still have compiletime knowledge of the type you are interested in examining, as typeof expects the strongly typed name of the type.
+- Unlike System.Object.GetType(), the typeof operator is helpful, in that you do not need to first create an object instance to extract type information. However, your code base must still have compile time knowledge of the type you are interested in examining, as typeof expects the strongly typed name of the type.
 
 ### Obtaining a Type Reference Using System.Type.GetType()
 - To obtain type information in a more flexible manner, you may call the static GetType() member of the System.Type class and specify the fully qualified string name of the type you are interested in examining. Using this approach, you do not need to have compile-time knowledge of the type you are extracting metadata from, given that Type.GetType() takes an instance of the omnipresent System.String.

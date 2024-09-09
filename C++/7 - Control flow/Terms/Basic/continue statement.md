@@ -1,0 +1,1 @@
+- The **continue statement** provides a convenient way to end the current iteration of a loop without terminating the entire loop.

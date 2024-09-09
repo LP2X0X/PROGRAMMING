@@ -1,0 +1,1 @@
+- The `std::abort()` function causes your program to terminate abnormally.
