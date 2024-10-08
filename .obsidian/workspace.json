@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8af5ce860575c445",
+        "id": "b1869258d7914840",
         "type": "tabs",
         "children": [
           {
-            "id": "b09d462648c8f936",
+            "id": "2a8877320f62a151",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Others/Comparison of serialization formats.md",
-                "mode": "source",
+                "file": "Vim/Fold.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "that",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Others/Comparison of serialization formats.md",
+                "file": "Vim/Fold.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Others/Comparison of serialization formats.md"
+                "file": "Vim/Fold.md"
               }
             }
           },
@@ -158,7 +158,15 @@
             }
           },
           {
-            "id": "e45abf9818d22616",
+            "id": "1cb009a81c608e53",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "a1f91ed869639f68",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -166,7 +174,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -188,59 +196,60 @@
       "obsidian-day-planner:Timeline": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-memos:Thino": false,
-      "obsidian-kanban:Create new board": false
+      "obsidian-kanban:Create new board": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b09d462648c8f936",
+  "active": "2a8877320f62a151",
   "lastOpenFiles": [
-    "Resources/Comparison of serialization formats - Advance Solution Group - Confluence.pdf",
-    "Others/Others.md",
-    "Others/Comparison of serialization formats.md",
-    "Design Patterns/Design Patterns.md",
-    "Others",
-    "Technical Stuff/Technical Stuff.md",
-    "Technical Stuff/CSharp & .NET/CSharp & .NET.md",
-    "Daily Kanban.md",
-    "Excalidraw/Drawing 2024-09-05 09.04.16.excalidraw.md",
-    "Resources/Pasted Image 20240905092726_163.png",
-    "Resources/Pasted Image 20240905092409_328.png",
-    "Resources/Pasted Image 20240905090837_008.png",
-    "Resources/Pasted Image 20240905090633_940.png",
-    "Resources/Pasted Image 20240905090446_930.png",
-    "Resources/Pasted Image 20240905090431_928.png",
+    "Vim/Quickly switch back to Normal Mode.md",
+    "Vim/Fold.md",
+    "Vim/Vim Jump List.md",
+    "Vim/Avoid the Cursor Keys When Recalling Commands from History.md",
+    "Vim/Executing Programs in the Shell.md",
+    "Vim/Normal mode Command.md",
+    "Vim/Copy and move line.md",
+    "Vim/Ex Commands.md",
+    "Vim/Append After a Ragged Visual Block.md",
+    "Vim/Insert Normal mode.md",
+    "Vim/The expression register.md",
+    "Vim/Selection Tips.md",
+    "Vim/Cheat Sheet.md",
+    "CSharp/OOP/Features/Read-Only Fields.md",
+    "Vim/Vim.md",
+    "Resources/Pasted image 20240930155106.png",
+    "Resources/Pasted image 20240930154730.png",
+    "Excalidraw/Drawing 2024-09-28 08.16.24.excalidraw.md",
+    "Resources/Pasted Image 20240928084632_872.png",
+    "Resources/Pasted Image 20240928084606_913.png",
+    "Resources/Pasted Image 20240928084542_614.png",
+    "Resources/Pasted Image 20240928084505_140.png",
+    "Resources/Pasted Image 20240928084404_970.png",
+    "Resources/Pasted Image 20240928084128_209.png",
     "Excalidraw",
     "Untitled.canvas",
-    "CSharp/OOP/Keyword/as.md",
-    "CSharp/OOP/Pillars of OOP/Polymorphic/as Keyword.md",
-    "CSharp/Advanced CSharp Language Features/Custom Type Conversions.md",
-    "Untitled Kanban.md",
-    "Test.md",
-    "2024-08-29.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/Object Graphs.md",
-    "Untitled.md",
-    "C++/7 - Control flow/Terms/Random/Mersenne Twister PRNG.md",
-    "Excalidraw/Drawing 2024-08-27 09.52.24.excalidraw.md",
-    "C++/7 - Control flow/Terms/Random/Randomization in C++.md",
-    "C++/7 - Control flow/Terms/Random/Seed.md",
-    "C++/7 - Control flow/Terms/Random/Random.md",
-    "C++/7 - Control flow/Terms/Random/PRNGs.md",
-    "CSharp/Type Reflection, Late Binding, Attribute, and Dynamic Types/Obtaining a Type Reference.md",
-    "CSharp/Basic/Features/Pattern Matching.md",
-    "C++/7 - Control flow/Terms/Terms.md",
+    "README.md",
+    "Daily Kanban.md",
+    "Excalidraw/Drawing 2024-09-24 08.29.05.excalidraw.md",
+    "Resources/Pasted Image 20240925143901_483.png",
+    "Resources/Pasted Image 20240925143739_298.png",
+    "Vim/Operator + Motion = Action.md",
+    "Technical Stuff/Technical Stuff.md",
+    "CSharp/CSharp.md",
+    "CSharp/File I.O and Object Serialization/Object Serialization/XML/Why XML-Serializable class need a parameterless constructor.md",
+    "Vim/Untitled Kanban.md",
+    "CSharp/File I.O and Object Serialization/Object Serialization/XML/XML.md",
+    "CSharp/File I.O and Object Serialization/Object Serialization/XML/Controlling the Generated XML Data.md",
+    "Vim",
+    "Resources/Comparison of serialization formats - Advance Solution Group - Confluence.pdf",
+    "Others",
     "C++/7 - Control flow/Terms/Random",
-    "C++/7 - Control flow/Constexpr if statements.md",
     "C++/7 - Control flow/Terms/Halt",
     "C++/7 - Control flow/Terms/Basic",
     "C++/3 - Constants and Strings/Terms/Core",
     "C++/7 - Control flow/Terms",
     "C++/7 - Control flow/Untitled",
-    "C++/7 - Control flow",
-    "Resources/Pasted Image 20240202142727_976.png",
-    "C++/6 - Scope, Duration, and Linkage/Terms",
-    "Resources/MemoryAddresses.webp",
     "C++/Untitled.canvas",
-    "Resources/IncludeHeader 4.webp",
-    "Resources/IncludeHeader 2.webp",
     "CSharp/Multithreaded, Parallel and Async Programming/Async Programming/Untitled.canvas",
     "RtoS/DCS/Untitled.canvas"
   ]

@@ -1,0 +1,1 @@
+- The dot command lets us repeat the last change. It is the most powerful and versatile command in Vim.

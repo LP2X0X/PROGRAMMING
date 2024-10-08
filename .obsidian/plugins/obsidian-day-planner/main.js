@@ -33620,7 +33620,7 @@ __export(main_exports, {
   default: () => DayPlanner
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian13 = require("obsidian");
+var import_obsidian14 = require("obsidian");
 
 // node_modules/svelte/internal/index.mjs
 function noop() {
@@ -34908,7 +34908,8 @@ var defaultSettings = {
   showSubtasksInTaskBlocks: true,
   icals: [],
   colorOverrides: [],
-  releaseNotes: true
+  releaseNotes: true,
+  taskStatusOnCreation: " "
 };
 var defaultSettingsForTests = {
   ...defaultSettings,
@@ -34924,19 +34925,17 @@ var import_obsidian_dataview = __toESM(require_lib());
 var DataviewFacade = class {
   constructor(app) {
     this.app = app;
-    // todo: there is a separate store for that, remove this
-    this.dataviewLoaded = writable(false);
     this.getAllTasksFrom = (source) => {
-      if (!this.getDataview()) {
+      if (!(0, import_obsidian_dataview.getAPI)(this.app)) {
         return [];
       }
-      return this.getDataview().pages(source).file.tasks.array();
+      return (0, import_obsidian_dataview.getAPI)(this.app).pages(source).file.tasks.array();
     };
     this.getAllListsFrom = (source) => {
-      if (!this.getDataview()) {
+      if (!(0, import_obsidian_dataview.getAPI)(this.app)) {
         return [];
       }
-      return this.getDataview().pages(source).file.lists.array();
+      return (0, import_obsidian_dataview.getAPI)(this.app).pages(source).file.lists.array();
     };
     this.getTasksFromPath = (path) => {
       var _a, _b, _c;
@@ -34947,14 +34946,6 @@ var DataviewFacade = class {
     return this.getTasksFromPath(path).find(
       (sTask) => sTask.line === line
     );
-  }
-  getDataview() {
-    const dataview = (0, import_obsidian_dataview.getAPI)(this.app);
-    if (dataview) {
-      this.dataviewLoaded.set(true);
-      return dataview;
-    }
-    return void 0;
   }
 };
 
@@ -35029,8 +35020,8 @@ var ObsidianFacade = class {
 };
 
 // src/service/plan-editor.ts
-var import_fp3 = __toESM(require_fp());
-var import_obsidian_daily_notes_interface4 = __toESM(require_main());
+var import_fp4 = __toESM(require_fp());
+var import_obsidian_daily_notes_interface5 = __toESM(require_main());
 
 // node_modules/ts-dedent/esm/index.js
 function dedent(templ) {
@@ -35075,19 +35066,20 @@ function dedent(templ) {
 // src/regexp.ts
 var ulToken = `[-*+]`;
 var olToken = `\\d+\\.`;
-var listToken = `(${ulToken}|${olToken})\\s+`;
-var checkbox = `\\[(?<completion>[^\\]])]\\s+`;
-var checkboxOrNothing = `(${checkbox})?`;
+var listToken = `\\s*(${ulToken}|${olToken})\\s+`;
+var checkbox = `\\s*\\[(?<completion>[^\\]])]\\s+`;
 var durationSeparator = `\\s*-{1,2}\\s*`;
 var hours = `\\d{1,2}`;
 var minutes = `\\d{2}`;
 var hourMinuteSeparator = `[:. ]`;
 var date = "\\d{4}-\\d{2}-\\d{2}";
 var time = `(${hours})(?:${hourMinuteSeparator}?(${minutes}))?\\s*([apAP][mM](?!\\w))?`;
+var listTokenRegExp = new RegExp(listToken);
+var checkboxRegExp = new RegExp(checkbox);
 var timeRegExp = new RegExp(time);
 var timeFromStartRegExp = new RegExp(`^${time}`);
 var timestampRegExp = new RegExp(
-  `^(?<listTokens>${listToken}${checkboxOrNothing})(?<times>(?<start>${time})(?:${durationSeparator}(?<end>${time}))?)(?<text>.+)$`,
+  `^(?<times>(?<start>${time})(?:${durationSeparator}(?<end>${time}))?)(?<text>.+)$`,
   "im"
 );
 var sTaskTimestampRegExp = new RegExp(
@@ -35102,112 +35094,6 @@ var keylessScheduledPropRegExp = new RegExp(
 );
 var shortScheduledPropRegExp = new RegExp(`(\u23F3\\s*)${date}`);
 var propRegexp = /\[(.+)::(.*)]/g;
-
-// src/util/id.ts
-function getId() {
-  return String(Math.random());
-}
-
-// src/parser/timestamp/timestamp.ts
-function parseTimestamp(asText, day) {
-  if (!asText) {
-    return null;
-  }
-  const result = timeRegExp.exec(asText);
-  if (result === null) {
-    throw new Error(`${asText} is not a valid timestamp`);
-  }
-  const [, hours2, minutes2, ampm] = result;
-  let parsedHours = parseInt(hours2);
-  if (isNaN(parsedHours)) {
-    throw new Error(`${asText} is not a valid timestamp`);
-  }
-  const parsedMinutes = parseInt(minutes2) || 0;
-  if ((ampm == null ? void 0 : ampm.toLowerCase()) === "pm" && parsedHours < 12) {
-    parsedHours += 12;
-  }
-  const timeOfDay = window.moment.duration({
-    hours: parsedHours,
-    minutes: parsedMinutes
-  });
-  return day.clone().startOf("day").add(timeOfDay);
-}
-
-// src/parser/parser.ts
-function getListItemsUnderHeading(metadata, heading) {
-  var _a;
-  const { headings } = metadata;
-  if (!headings) {
-    return [];
-  }
-  const planHeadingIndex = headings.findIndex((h2) => h2.heading === heading);
-  if (planHeadingIndex < 0) {
-    return [];
-  }
-  const planHeading = headings[planHeadingIndex];
-  const nextHeadingOfSameLevel = headings.slice(planHeadingIndex + 1).find((heading2) => heading2.level <= planHeading.level);
-  return (_a = metadata.listItems) == null ? void 0 : _a.filter((li) => {
-    const isBelowPlan = li.position.start.line > planHeading.position.start.line;
-    const isAboveNextHeadingIfItExists = !nextHeadingOfSameLevel || li.position.start.line < nextHeadingOfSameLevel.position.start.line;
-    return isBelowPlan && isAboveNextHeadingIfItExists;
-  });
-}
-function getHeadingByText(metadata, text2) {
-  const { headings = [] } = metadata;
-  return headings == null ? void 0 : headings.find((h2) => h2.heading === text2);
-}
-function createTask({
-  line,
-  completeContent,
-  location,
-  day
-}) {
-  const match = timestampRegExp.exec(line.trim());
-  if (!match) {
-    return null;
-  }
-  const {
-    groups: { listTokens, start, end, text: text2 }
-  } = match;
-  const startTime = parseTimestamp(start, day);
-  return {
-    listTokens,
-    startTime,
-    endTime: parseTimestamp(end, day),
-    text: getDisplayedText(match, completeContent),
-    firstLineText: text2.trim(),
-    location,
-    id: getId()
-  };
-}
-function getDisplayedText({ groups: { text: text2, listTokens, completion } }, completeContent) {
-  const isTask = (completion == null ? void 0 : completion.length) > 0;
-  const indexOfFirstNewline = completeContent.indexOf("\n");
-  const indexAfterFirstNewline = indexOfFirstNewline + 1;
-  const linesAfterFirst = completeContent.substring(indexAfterFirstNewline);
-  if (indexOfFirstNewline < 0) {
-    if (isTask) {
-      return `${listTokens}${text2}`;
-    }
-    return text2;
-  }
-  if (isTask) {
-    return `${listTokens}${text2}
-${linesAfterFirst}`;
-  }
-  const formattedLinesAfterFirst = dedent(linesAfterFirst).trimStart();
-  return `${text2}
-${formattedLinesAfterFirst}`;
-}
-
-// src/util/daily-notes.ts
-var import_obsidian_daily_notes_interface3 = __toESM(require_main());
-async function createDailyNoteIfNeeded(moment3) {
-  return (0, import_obsidian_daily_notes_interface3.getDailyNote)(moment3, (0, import_obsidian_daily_notes_interface3.getAllDailyNotes)()) || (0, import_obsidian_daily_notes_interface3.createDailyNote)(moment3);
-}
-
-// src/util/task-utils.ts
-var import_fp2 = __toESM(require_fp());
 
 // src/util/moment.ts
 var import_fp = __toESM(require_fp());
@@ -35252,9 +35138,6 @@ function getRelationToNow(now2, start, end) {
   }
   return "present";
 }
-function isToday(moment3) {
-  return moment3.isSame(window.moment(), "day");
-}
 function getEarliestMoment(moments) {
   return moments.reduce((result, current2) => {
     if (current2.isBefore(result)) {
@@ -35265,211 +35148,13 @@ function getEarliestMoment(moments) {
 }
 
 // src/util/task-utils.ts
-function isEqualTask(a2, b2) {
-  return a2.id === b2.id && a2.startMinutes === b2.startMinutes && a2.durationMinutes === b2.durationMinutes;
-}
-function getEndMinutes(task) {
-  return task.startMinutes + task.durationMinutes;
-}
-function getEndTime(task) {
-  return task.startTime.clone().add(task.durationMinutes, "minutes");
-}
-function getRenderKey(task) {
-  var _a;
-  return `${task.startMinutes} ${getEndMinutes(task)} ${task.text} ${(_a = task.isGhost) != null ? _a : ""}`;
-}
-function getNotificationKey(task) {
-  var _a, _b;
-  return `${(_b = (_a = task.location) == null ? void 0 : _a.path) != null ? _b : "blank"}::${task.startMinutes}::${task.durationMinutes}::${task.text}`;
-}
-function copy(task) {
-  return {
-    ...task,
-    id: getId(),
-    isGhost: true,
-    // TODO: there should be a better way to track which tasks are new
-    location: { ...task.location, line: void 0 }
-  };
-}
-function createTimestamp(startMinutes, durationMinutes, format) {
-  const start = minutesToMoment(startMinutes);
-  const end = addMinutes(start, durationMinutes);
-  return `${start.format(format)} - ${end.format(format)}`;
-}
-function areValuesEmpty(record) {
-  return Object.values(record).every(import_fp2.isEmpty);
-}
-function taskLineToString(task) {
-  return `${task.listTokens}${createTimestamp(
-    task.startMinutes,
-    task.durationMinutes,
-    get_store_value(settings).timestampFormat
-  )} ${task.firstLineText}`;
-}
-function updateScheduledPropInText(text2, dayKey) {
-  const updated = text2.replace(shortScheduledPropRegExp, `$1${dayKey}`).replace(scheduledPropRegExp, `$1${dayKey}$2`).replace(keylessScheduledPropRegExp, `$1${dayKey}$2`);
-  if (updated !== text2) {
-    return updated;
-  }
-  return `${text2} \u23F3 ${dayKey}`;
-}
-function updateTaskText(task) {
-  return { ...task, firstLineText: taskLineToString(task) };
-}
-function updateTaskScheduledDay(task, dayKey) {
-  return {
-    ...task,
-    firstLineText: updateScheduledPropInText(task.firstLineText, dayKey)
-  };
-}
-function offsetYToMinutes(offsetY, zoomLevel, startHour) {
-  const hiddenHoursSize = startHour * 60 * zoomLevel;
-  return (offsetY + hiddenHoursSize) / zoomLevel;
-}
-function createTask2(day, startMinutes) {
-  return {
-    id: getId(),
-    startMinutes,
-    durationMinutes: defaultDurationMinutes,
-    firstLineText: "New item",
-    text: "New item",
-    startTime: minutesToMomentOfDay(startMinutes, day),
-    listTokens: "- [ ] ",
-    placing: {
-      widthPercent: 100,
-      xOffsetPercent: 0
-    }
-  };
-}
+var import_fp3 = __toESM(require_fp());
 
-// src/service/plan-editor.ts
-var PlanEditor = class {
-  constructor(settings2, obsidianFacade) {
-    this.settings = settings2;
-    this.obsidianFacade = obsidianFacade;
-    // todo: all except this can be re-written to use mdast
-    this.syncTasksWithFile = async ({
-      updated,
-      created,
-      moved
-    }) => {
-      if (created.length > 0) {
-        const [task] = await this.ensureFilesForTasks(created);
-        return this.obsidianFacade.editFile(task.location.path, (contents2) => {
-          return this.writeTaskToFileContents(task, contents2, task.location.path);
-        });
-      }
-      if (moved.length > 0) {
-        const [task] = await this.ensureFilesForTasks(
-          moved.map(({ task: task2 }) => task2)
-        );
-        const noteForFile = (0, import_obsidian_daily_notes_interface4.getDailyNote)(
-          window.moment(moved[0].dayKey),
-          (0, import_obsidian_daily_notes_interface4.getAllDailyNotes)()
-        );
-        const updated2 = updateTaskText(task);
-        return Promise.all([
-          this.obsidianFacade.editFile(noteForFile.path, (contents2) => {
-            return this.writeTaskToFileContents(
-              updated2,
-              contents2,
-              noteForFile.path
-            );
-          }),
-          this.obsidianFacade.editFile(task.location.path, (contents2) => {
-            return this.removeTaskFromFileContents(task, contents2);
-          })
-        ]);
-      }
-      const pathToEditedTasksLookup = (0, import_fp3.groupBy)(
-        (task) => task.location.path,
-        updated
-      );
-      const editPromises = Object.keys(pathToEditedTasksLookup).map(
-        async (path) => await this.obsidianFacade.editFile(
-          path,
-          (contents2) => pathToEditedTasksLookup[path].reduce(
-            (result, current2) => this.updateTaskInFileContents(result, current2),
-            contents2
-          )
-        )
-      );
-      return Promise.all(editPromises);
-    };
-  }
-  async ensureFilesForTasks(tasks2) {
-    return Promise.all(
-      tasks2.map(async (task) => {
-        var _a;
-        if ((_a = task.location) == null ? void 0 : _a.path) {
-          return task;
-        }
-        const { path } = await createDailyNoteIfNeeded(task.startTime);
-        return { ...task, location: { path } };
-      })
-    );
-  }
-  writeTaskToFileContents(task, contents2, path) {
-    const metadata = this.obsidianFacade.getMetadataForPath(path) || {};
-    const [planEndLine, splitContents] = this.getPlanEndLine(
-      contents2.split("\n"),
-      metadata
-    );
-    const result = [...splitContents];
-    const newTaskText = [
-      task.firstLineText,
-      ...task.text.split("\n").slice(1)
-    ].join("\n");
-    result.splice(planEndLine + 1, 0, newTaskText);
-    return result.join("\n");
-  }
-  removeTaskFromFileContents(task, contents2) {
-    const newContents = contents2.split("\n");
-    const taskLinesCount = task.text.split("\n").length - 1;
-    newContents.splice(task.location.position.start.line, taskLinesCount);
-    return newContents.join("\n");
-  }
-  createPlannerHeading() {
-    const { plannerHeading, plannerHeadingLevel } = this.settings();
-    const headingTokens = "#".repeat(plannerHeadingLevel);
-    return `${headingTokens} ${plannerHeading}`;
-  }
-  updateTaskInFileContents(contents2, task) {
-    return contents2.split("\n").map((line, index) => {
-      var _a;
-      if (index === ((_a = task.location) == null ? void 0 : _a.line)) {
-        return line.substring(0, task.location.position.start.col) + task.firstLineText;
-      }
-      return line;
-    }).join("\n");
-  }
-  getPlanEndLine(contents2, metadata) {
-    const planHeading = getHeadingByText(
-      metadata,
-      this.settings().plannerHeading
-    );
-    const planListItems = getListItemsUnderHeading(
-      metadata,
-      this.settings().plannerHeading
-    );
-    if ((planListItems == null ? void 0 : planListItems.length) > 0) {
-      const lastListItem = planListItems[planListItems.length - 1];
-      return [lastListItem.position.start.line, contents2];
-    }
-    if (planHeading) {
-      return [planHeading.position.start.line, contents2];
-    }
-    const withNewPlan = [...contents2, "", this.createPlannerHeading(), ""];
-    return [withNewPlan.length, withNewPlan];
-  }
-};
-
-// src/service/stask-editor.ts
-var import_fp5 = __toESM(require_fp());
-var import_typed_assert2 = __toESM(require_build());
+// src/util/dataview.ts
+var import_obsidian_daily_notes_interface3 = __toESM(require_main());
 
 // src/util/clock.ts
-var import_fp4 = __toESM(require_fp());
+var import_fp2 = __toESM(require_fp());
 
 // src/util/properties.ts
 function createProp(key, value) {
@@ -35522,7 +35207,7 @@ function withoutActiveClock(sTask) {
   return {
     ...sTask,
     text: lines(
-      (0, import_fp4.filter)((line) => !containsActiveClock(line)),
+      (0, import_fp2.filter)((line) => !containsActiveClock(line)),
       sTask.text
     )
   };
@@ -35534,7 +35219,7 @@ function withActiveClockCompleted(sTask) {
   return {
     ...sTask,
     text: lines(
-      (0, import_fp4.map)((line) => containsActiveClock(line) ? clockOut(line) : line),
+      (0, import_fp2.map)((line) => containsActiveClock(line) ? clockOut(line) : line),
       sTask.text
     )
   };
@@ -35552,8 +35237,12 @@ function assertNoActiveClock(sTask) {
   return sTask;
 }
 
+// src/util/id.ts
+function getId() {
+  return String(Math.random());
+}
+
 // src/util/dataview.ts
-var import_obsidian_daily_notes_interface5 = __toESM(require_main());
 function textToString(node) {
   const status = node.status ? `[${node.status}] ` : "";
   return `${node.symbol} ${status}${deleteProps(node.text)}
@@ -35571,9 +35260,8 @@ function toString(node, indentation = "") {
 function toUnscheduledTask(sTask, day) {
   return {
     durationMinutes: defaultDurationMinutes,
-    // todo: bad abstraction
-    listTokens: getListTokens(sTask),
-    firstLineText: sTask.text,
+    symbol: sTask.symbol,
+    status: sTask.status,
     text: toString(sTask),
     location: {
       path: sTask.path,
@@ -35584,27 +35272,20 @@ function toUnscheduledTask(sTask, day) {
   };
 }
 function toTask(sTask, day) {
-  const { startTime, endTime, firstLineText, text: text2 } = createTask({
-    line: textToString(sTask),
-    completeContent: toString(sTask),
-    day,
-    location: {
-      path: sTask.path,
-      line: sTask.line,
-      position: sTask.position
-    }
+  const { startTime, durationMinutes } = getTimeFromSTask({
+    line: sTask.text,
+    day
   });
-  const durationMinutes = (endTime == null ? void 0 : endTime.isAfter(startTime)) ? getDiffInMinutes(endTime, startTime) : void 0;
   return {
     startTime,
-    listTokens: getListTokens(sTask),
-    firstLineText,
-    text: text2,
+    symbol: sTask.symbol,
+    status: sTask.status,
+    text: toString(sTask),
     durationMinutes,
+    // todo: delete
     startMinutes: getMinutesSinceMidnight(startTime),
     location: {
       path: sTask.path,
-      line: sTask.line,
       position: sTask.position
     },
     id: getId()
@@ -35616,7 +35297,7 @@ function getScheduledDay(sTask) {
     _a,
     defaultDayFormatForLuxon
   );
-  const dailyNoteDay = (_c = (0, import_obsidian_daily_notes_interface5.getDateFromPath)(sTask.path, "day")) == null ? void 0 : _c.format(
+  const dailyNoteDay = (_c = (0, import_obsidian_daily_notes_interface3.getDateFromPath)(sTask.path, "day")) == null ? void 0 : _c.format(
     defaultDayFormat
   );
   return scheduledPropDay || dailyNoteDay;
@@ -35626,14 +35307,14 @@ function toMarkdown(sTask) {
   const extraIndent = " ".repeat(indentBeforeTaskParagraph);
   return sTask.text.split("\n").map((line, i2) => {
     if (i2 === 0) {
-      return `${baseIndent}${getListTokens(sTask)}${line}`;
+      return `${baseIndent}${getListTokens(sTask)} ${line}`;
     }
     return `${baseIndent}${extraIndent}${line}`;
   }).join("\n");
 }
-function getListTokens(sTask) {
-  const maybeCheckbox = sTask.status === void 0 ? "" : `[${sTask.status}] `;
-  return `${sTask.symbol} ${maybeCheckbox}`;
+function getListTokens(task) {
+  const maybeCheckbox = task.status === void 0 ? "" : `[${task.status}]`;
+  return `${task.symbol} ${maybeCheckbox}`.trim();
 }
 function replaceSTaskInFile(contents2, sTask, newText) {
   const lines2 = contents2.split("\n");
@@ -35641,6 +35322,309 @@ function replaceSTaskInFile(contents2, sTask, newText) {
   lines2.splice(sTask.position.start.line, deleteCount, newText);
   return lines2.join("\n");
 }
+
+// src/util/task-utils.ts
+function isEqualTask(a2, b2) {
+  return a2.id === b2.id && a2.startMinutes === b2.startMinutes && a2.durationMinutes === b2.durationMinutes;
+}
+function getEndMinutes(task) {
+  return task.startMinutes + task.durationMinutes;
+}
+function getEndTime(task) {
+  return task.startTime.clone().add(task.durationMinutes, "minutes");
+}
+function getRenderKey(task) {
+  var _a;
+  return `${task.startMinutes} ${getEndMinutes(task)} ${task.text} ${(_a = task.isGhost) != null ? _a : ""}`;
+}
+function getNotificationKey(task) {
+  var _a, _b;
+  return `${(_b = (_a = task.location) == null ? void 0 : _a.path) != null ? _b : "blank"}::${task.startMinutes}::${task.durationMinutes}::${task.text}`;
+}
+function copy(task) {
+  return {
+    ...task,
+    id: getId(),
+    isGhost: true,
+    location: { ...task.location }
+  };
+}
+function createTimestamp(startMinutes, durationMinutes, format) {
+  const start = minutesToMoment(startMinutes);
+  const end = addMinutes(start, durationMinutes);
+  return `${start.format(format)} - ${end.format(format)}`;
+}
+function areValuesEmpty(record) {
+  return Object.values(record).every(import_fp3.isEmpty);
+}
+function taskLineToString(task) {
+  const firstLineText = removeTimestamp(
+    removeListTokens(getFirstLine(task.text))
+  );
+  return `${getListTokens(task)} ${createTimestamp(
+    task.startMinutes,
+    task.durationMinutes,
+    get_store_value(settings).timestampFormat
+  )} ${firstLineText}
+${getLinesAfterFirst(task.text)}`;
+}
+function updateScheduledPropInText(text2, dayKey) {
+  const updated = text2.replace(shortScheduledPropRegExp, `$1${dayKey}`).replace(scheduledPropRegExp, `$1${dayKey}$2`).replace(keylessScheduledPropRegExp, `$1${dayKey}$2`);
+  if (updated !== text2) {
+    return updated;
+  }
+  return `${text2} \u23F3 ${dayKey}`;
+}
+function updateTaskText(task) {
+  return { ...task, text: taskLineToString(task) };
+}
+function updateTaskScheduledDay(task, dayKey) {
+  return {
+    ...task,
+    text: `${updateScheduledPropInText(getFirstLine(task.text), dayKey)}
+${getLinesAfterFirst(task.text)}`
+  };
+}
+function offsetYToMinutes(offsetY, zoomLevel, startHour) {
+  const hiddenHoursSize = startHour * 60 * zoomLevel;
+  return (offsetY + hiddenHoursSize) / zoomLevel;
+}
+function createTask(day, startMinutes, status) {
+  return {
+    id: getId(),
+    startMinutes,
+    durationMinutes: defaultDurationMinutes,
+    text: "New item",
+    startTime: minutesToMomentOfDay(startMinutes, day),
+    symbol: "-",
+    status,
+    placing: {
+      widthPercent: 100,
+      xOffsetPercent: 0
+    }
+  };
+}
+function getFirstLine(text2) {
+  return text2.split("\n")[0];
+}
+function getLinesAfterFirst(text2) {
+  return text2.split("\n").slice(1).join("\n");
+}
+function removeTimestamp(text2) {
+  const match = timestampRegExp.exec(text2.trim());
+  if (!match) {
+    return text2;
+  }
+  const {
+    groups: { text: textWithoutTimestamp }
+  } = match;
+  return textWithoutTimestamp;
+}
+function removeListTokens(text2) {
+  return text2.replace(listTokenRegExp, "").replace(checkboxRegExp, "");
+}
+
+// src/parser/timestamp/timestamp.ts
+function parseTimestamp(asText, day) {
+  if (!asText) {
+    return null;
+  }
+  const result = timeRegExp.exec(asText);
+  if (result === null) {
+    throw new Error(`${asText} is not a valid timestamp`);
+  }
+  const [, hours2, minutes2, ampm] = result;
+  let parsedHours = parseInt(hours2);
+  if (isNaN(parsedHours)) {
+    throw new Error(`${asText} is not a valid timestamp`);
+  }
+  const parsedMinutes = parseInt(minutes2) || 0;
+  if ((ampm == null ? void 0 : ampm.toLowerCase()) === "pm" && parsedHours < 12) {
+    parsedHours += 12;
+  }
+  const timeOfDay = window.moment.duration({
+    hours: parsedHours,
+    minutes: parsedMinutes
+  });
+  return day.clone().startOf("day").add(timeOfDay);
+}
+
+// src/parser/parser.ts
+function getListItemsUnderHeading(metadata, heading) {
+  var _a;
+  const { headings } = metadata;
+  if (!headings) {
+    return [];
+  }
+  const planHeadingIndex = headings.findIndex((h2) => h2.heading === heading);
+  if (planHeadingIndex < 0) {
+    return [];
+  }
+  const planHeading = headings[planHeadingIndex];
+  const nextHeadingOfSameLevel = headings.slice(planHeadingIndex + 1).find((heading2) => heading2.level <= planHeading.level);
+  return (_a = metadata.listItems) == null ? void 0 : _a.filter((li) => {
+    const isBelowPlan = li.position.start.line > planHeading.position.start.line;
+    const isAboveNextHeadingIfItExists = !nextHeadingOfSameLevel || li.position.start.line < nextHeadingOfSameLevel.position.start.line;
+    return isBelowPlan && isAboveNextHeadingIfItExists;
+  });
+}
+function getHeadingByText(metadata, text2) {
+  const { headings = [] } = metadata;
+  return headings == null ? void 0 : headings.find((h2) => h2.heading === text2);
+}
+function getTimeFromSTask({ line, day }) {
+  const match = timestampRegExp.exec(line.trim());
+  if (!match) {
+    return null;
+  }
+  const {
+    groups: { start, end }
+  } = match;
+  const startTime = parseTimestamp(start, day);
+  const endTime = parseTimestamp(end, day);
+  const durationMinutes = (endTime == null ? void 0 : endTime.isAfter(startTime)) ? getDiffInMinutes(endTime, startTime) : void 0;
+  return {
+    startTime,
+    durationMinutes
+  };
+}
+function getDisplayedText(task) {
+  if (task.status) {
+    return task.text;
+  }
+  return `${removeListTokens(getFirstLine(task.text))}
+${dedent(getLinesAfterFirst(task.text)).trimStart()}`;
+}
+
+// src/util/daily-notes.ts
+var import_obsidian_daily_notes_interface4 = __toESM(require_main());
+async function createDailyNoteIfNeeded(moment3) {
+  return (0, import_obsidian_daily_notes_interface4.getDailyNote)(moment3, (0, import_obsidian_daily_notes_interface4.getAllDailyNotes)()) || (0, import_obsidian_daily_notes_interface4.createDailyNote)(moment3);
+}
+
+// src/service/plan-editor.ts
+var PlanEditor = class {
+  constructor(settings2, obsidianFacade) {
+    this.settings = settings2;
+    this.obsidianFacade = obsidianFacade;
+    // todo: all except this can be re-written to use mdast
+    this.syncTasksWithFile = async ({
+      updated,
+      created,
+      moved
+    }) => {
+      if (created.length > 0) {
+        const [task] = await this.ensureFilesForTasks(created);
+        return this.obsidianFacade.editFile(task.location.path, (contents2) => {
+          return this.writeTaskToFileContents(task, contents2, task.location.path);
+        });
+      }
+      if (moved.length > 0) {
+        const movedTask = moved[0];
+        await this.obsidianFacade.editFile(
+          movedTask.task.location.path,
+          (contents2) => {
+            return this.removeTaskFromFileContents(movedTask.task, contents2);
+          }
+        );
+        const withNewDates = moved.map(({ dayKey, task: task2 }) => {
+          const parsedDay = window.moment(dayKey);
+          const newStartTime = task2.startTime.clone().year(parsedDay.year()).month(parsedDay.month()).date(parsedDay.date());
+          return { ...task2, startTime: newStartTime };
+        });
+        const [task] = await this.ensureFilesForTasks(withNewDates);
+        const noteForFile = (0, import_obsidian_daily_notes_interface5.getDailyNote)(
+          window.moment(task.startTime),
+          (0, import_obsidian_daily_notes_interface5.getAllDailyNotes)()
+        );
+        const updated2 = updateTaskText(task);
+        return this.obsidianFacade.editFile(noteForFile.path, (contents2) => {
+          return this.writeTaskToFileContents(
+            updated2,
+            contents2,
+            noteForFile.path
+          );
+        });
+      }
+      const pathToEditedTasksLookup = (0, import_fp4.groupBy)(
+        (task) => task.location.path,
+        updated
+      );
+      const editPromises = Object.keys(pathToEditedTasksLookup).map(
+        async (path) => await this.obsidianFacade.editFile(
+          path,
+          (contents2) => pathToEditedTasksLookup[path].reduce(
+            (result, current2) => this.updateTaskInFileContents(result, current2),
+            contents2
+          )
+        )
+      );
+      return Promise.all(editPromises);
+    };
+  }
+  // todo: rework to ensure files for dates
+  async ensureFilesForTasks(tasks2) {
+    return Promise.all(
+      tasks2.map(async (task) => {
+        const { path } = await createDailyNoteIfNeeded(task.startTime);
+        return { ...task, location: { ...task.location, path } };
+      })
+    );
+  }
+  writeTaskToFileContents(task, contents2, path) {
+    const metadata = this.obsidianFacade.getMetadataForPath(path) || {};
+    const [planEndLine, splitContents] = this.getPlanEndLine(
+      contents2.split("\n"),
+      metadata
+    );
+    const result = [...splitContents];
+    result.splice(planEndLine + 1, 0, task.text);
+    return result.join("\n");
+  }
+  removeTaskFromFileContents(task, contents2) {
+    const newContents = contents2.split("\n");
+    const taskLinesCount = task.text.split("\n").length - 1;
+    newContents.splice(task.location.position.start.line, taskLinesCount);
+    return newContents.join("\n");
+  }
+  createPlannerHeading() {
+    const { plannerHeading, plannerHeadingLevel } = this.settings();
+    const headingTokens = "#".repeat(plannerHeadingLevel);
+    return `${headingTokens} ${plannerHeading}`;
+  }
+  updateTaskInFileContents(contents2, task) {
+    return contents2.split("\n").map((line, index) => {
+      var _a, _b, _c;
+      if (index === ((_c = (_b = (_a = task.location) == null ? void 0 : _a.position) == null ? void 0 : _b.start) == null ? void 0 : _c.line)) {
+        return line.substring(0, task.location.position.start.col) + getFirstLine(task.text);
+      }
+      return line;
+    }).join("\n");
+  }
+  getPlanEndLine(contents2, metadata) {
+    const planHeading = getHeadingByText(
+      metadata,
+      this.settings().plannerHeading
+    );
+    const planListItems = getListItemsUnderHeading(
+      metadata,
+      this.settings().plannerHeading
+    );
+    if ((planListItems == null ? void 0 : planListItems.length) > 0) {
+      const lastListItem = planListItems[planListItems.length - 1];
+      return [lastListItem.position.start.line, contents2];
+    }
+    if (planHeading) {
+      return [planHeading.position.start.line, contents2];
+    }
+    const withNewPlan = [...contents2, "", this.createPlannerHeading(), ""];
+    return [withNewPlan.length, withNewPlan];
+  }
+};
+
+// src/service/stask-editor.ts
+var import_fp5 = __toESM(require_fp());
+var import_typed_assert2 = __toESM(require_build());
 
 // src/util/editor.ts
 function locToEditorPosition({ line, col }) {
@@ -35743,6 +35727,10 @@ var currentTime = readable(window.moment(), (set2) => {
     clearInterval(interval);
   };
 });
+var isToday = derived(
+  currentTime,
+  ($currentTime) => (day) => $currentTime.isSame(day, "day")
+);
 
 // src/util/ellipsis.ts
 function ellipsis(input, limit) {
@@ -35779,7 +35767,10 @@ function useStatusBarWidget({ tasksForToday }) {
           window.moment()
         );
         const timeLeft = minutesToTimestamp(minutesLeft);
-        const text2 = ellipsis(currentItem.firstLineText, statusBarTextLimit);
+        const text2 = ellipsis(
+          getFirstLine(currentItem.text),
+          statusBarTextLimit
+        );
         widget.current = {
           percentageComplete: percentageComplete.toFixed(0),
           timeLeft,
@@ -35792,7 +35783,7 @@ function useStatusBarWidget({ tasksForToday }) {
           nextItem.startTime
         );
         const timeToNext = minutesToTimestamp(minutesToNext);
-        const text2 = ellipsis(nextItem.firstLineText, statusBarTextLimit);
+        const text2 = ellipsis(getFirstLine(nextItem.text), statusBarTextLimit);
         widget.next = {
           timeToNext,
           text: text2
@@ -36297,7 +36288,7 @@ var ReleaseNotesModal = class extends import_obsidian4.Modal {
     this.contentEl.createDiv({ cls: "releases" }, async (el) => {
       await import_obsidian4.MarkdownRenderer.render(
         this.plugin.app,
-        "## 0.21.1\n\n### \u2728 New features\n\n- Drag-and-drop edits are now working on mobile: long-press on a task block to see the controls, tap on the control and start dragging to change task time\n- Added floating edit controls on top of task blocks. All the edit modes are now easily available\n- Now you can change task start time\n- There is now a new edit mode: move block and shrink neighboring blocks\n- Now you can manually adjust the height of the unscheduled tasks section through drag-and-drop\n\n### \u{1F41E} Fixed issues\n\n- Fixed empty remote event names breaking the plugin (#430)\n- Fixed advanced editing with Ctrl/Shift not working (#462). To do advanced edits, simply hover over the block, then over the edit controls\n\n## 0.20.1 - 0.20.4\n\n- \u{1F41E} add toggle to disable release notes (#399)\n- \u{1F41E} do not reset timeline position when it's already open (#289)\n- \u{1F41E} do not replace tab content when opening weekly view (#313)\n- \u{1F41E} fix status bar error breaking plugin\n- \u{1F41E} Move task on copy, instead of changing its size\n- \u{1F41E} Fix different hourglass emoji breaking task movement\n- \u{1F41E} Fix calendar events without a location crashes plugin (#438, thanks, @sepatel)\n- \u{1F41E} Do not print undefined inside checkbox when list item is not a task (#368, thanks, @Gelio)\n- \u{1F41E} AM/PM doesn't match unexpectedly anymore (#312, thanks, @teisermann)\n\n## 0.20.0\n\n### New features\n\n- \u2728 Color coding: you can define background color for blocks containing certain text in first line\n- \u2728 Weekly view now displays unscheduled tasks on top\n- \u2728 Advanced drag-and-drop editing does not require modifier keys any more, you pick current edit mode in timeline controls \n\n### Fixed issues\n\n- \u{1F41E} Fixed scheduling tasks for other days than today (by @Lunkle)\n- \u{1F41E} Pointer to current time is now more visible \n- \u{1F41E} Task summary in internet calendars is now displayed next to calendar name, to make it visible in short blocks\n\n## 0.19.1 - 0.19.6\n\n- \u{1F41E} Fix iOS crash\n- \u{1F41E} Fix performance on startup\n- \u{1F41E} Fix colorful timeline both for local & remote calendars\n- \u{1F41E} Fix planner not reacting to daily note creation\n- \u{1F41E} Fix displaying hover preview\n\n## 0.19.0\n\n### \u2728 New Feature: Internet Calendar Sync (Google, Outlook, iCloud)\n\n- This lets you display events from calendars like Google Calendar, iCloud Calendar, Outlook Calendar\n- You only need to add a link in the plugin settings to start displaying events from that calendar\n\nSee [README](https://github.com/ivan-lednev/obsidian-day-planner?tab=readme-ov-file#showing-internet-calendars) for details.\n\n## 0.18.0\n\n### \u2728 New features\n\n- Now hovering over a task with `Control` pressed will trigger a preview pop-up. This works great with the awesome [Hover Editor plugin](https://github.com/nothingislost/obsidian-hover-editor)\n- Now when you click on a task, if there is an open tab for that file, the plugin is going to reuse it\n\n## 0.17.2\n\n### \u{1F41E} Fixed issues\n\n- Fix creating tasks with drag-and-drop\n\n## 0.17.0\n\n### \u{1F4A5} Breaking changes\n\n- Now by default, if your Dataview souce filter is empty, tasks are pulled only from visible daily notes\n  - Most people never touch this field, so the plugin is going to be lightning-fast by default\n  - If you want to add other folders or tags as task sources, you can still do so by adding them explicitly\n\n### \u2728 New features\n\n- When dragging tasks from daily notes across days in the weekly view, they now get moved across files\n- There is now an option to hide completed tasks from timeline\n- There is now an option to hide subtasks from task blocks in the timeline\n\n### \u{1F41E} Fixed issues\n\n- New drag-and-drop operations can now be started immediately after previous ones\n- The plugin is much faster in the default use case (daily notes only)\n- You can use plain list items in daily notes again\n- Notifications work again\n- Unscheduled tasks now fit their contents\n\n### Acknowledgements\n\n- Big thanks to @weph for helping me figure out a good performance solution\n",
+        "## 0.22.0\n\n### \u2728 New features\n\n- Default task status on creation is now configurable\n\n### \u{1F41E} Fixed issues\n\n- Fixed load failure when unable to read daily notes\n- Fixed console error on plugin load\n- Fixed moving tasks to non-existent daily notes\n- Fixed active day in week not changing on next day\n- No more note switching when navigating between days from timeline view\n\n## 0.21.1\n\n### \u2728 New features\n\n- Drag-and-drop edits are now working on mobile: long-press on a task block to see the controls, tap on the control and start dragging to change task time\n- Added floating edit controls on top of task blocks. All the edit modes are now easily available\n- Now you can change task start time\n- There is now a new edit mode: move block and shrink neighboring blocks\n- Now you can manually adjust the height of the unscheduled tasks section through drag-and-drop\n\n### \u{1F41E} Fixed issues\n\n- Fixed empty remote event names breaking the plugin (#430)\n- Fixed advanced editing with Ctrl/Shift not working (#462). To do advanced edits, simply hover over the block, then over the edit controls\n\n## 0.20.1 - 0.20.4\n\n- \u{1F41E} add toggle to disable release notes (#399)\n- \u{1F41E} do not reset timeline position when it's already open (#289)\n- \u{1F41E} do not replace tab content when opening weekly view (#313)\n- \u{1F41E} fix status bar error breaking plugin\n- \u{1F41E} Move task on copy, instead of changing its size\n- \u{1F41E} Fix different hourglass emoji breaking task movement\n- \u{1F41E} Fix calendar events without a location crashes plugin (#438, thanks, @sepatel)\n- \u{1F41E} Do not print undefined inside checkbox when list item is not a task (#368, thanks, @Gelio)\n- \u{1F41E} AM/PM doesn't match unexpectedly anymore (#312, thanks, @teisermann)\n\n## 0.20.0\n\n### New features\n\n- \u2728 Color coding: you can define background color for blocks containing certain text in first line\n- \u2728 Weekly view now displays unscheduled tasks on top\n- \u2728 Advanced drag-and-drop editing does not require modifier keys any more, you pick current edit mode in timeline controls \n\n### Fixed issues\n\n- \u{1F41E} Fixed scheduling tasks for other days than today (by @Lunkle)\n- \u{1F41E} Pointer to current time is now more visible \n- \u{1F41E} Task summary in internet calendars is now displayed next to calendar name, to make it visible in short blocks\n\n## 0.19.1 - 0.19.6\n\n- \u{1F41E} Fix iOS crash\n- \u{1F41E} Fix performance on startup\n- \u{1F41E} Fix colorful timeline both for local & remote calendars\n- \u{1F41E} Fix planner not reacting to daily note creation\n- \u{1F41E} Fix displaying hover preview\n\n## 0.19.0\n\n### \u2728 New Feature: Internet Calendar Sync (Google, Outlook, iCloud)\n\n- This lets you display events from calendars like Google Calendar, iCloud Calendar, Outlook Calendar\n- You only need to add a link in the plugin settings to start displaying events from that calendar\n\nSee [README](https://github.com/ivan-lednev/obsidian-day-planner?tab=readme-ov-file#showing-internet-calendars) for details.\n\n## 0.18.0\n\n### \u2728 New features\n\n- Now hovering over a task with `Control` pressed will trigger a preview pop-up. This works great with the awesome [Hover Editor plugin](https://github.com/nothingislost/obsidian-hover-editor)\n- Now when you click on a task, if there is an open tab for that file, the plugin is going to reuse it\n\n## 0.17.2\n\n### \u{1F41E} Fixed issues\n\n- Fix creating tasks with drag-and-drop\n\n## 0.17.0\n\n### \u{1F4A5} Breaking changes\n\n- Now by default, if your Dataview souce filter is empty, tasks are pulled only from visible daily notes\n  - Most people never touch this field, so the plugin is going to be lightning-fast by default\n  - If you want to add other folders or tags as task sources, you can still do so by adding them explicitly\n\n### \u2728 New features\n\n- When dragging tasks from daily notes across days in the weekly view, they now get moved across files\n- There is now an option to hide completed tasks from timeline\n- There is now an option to hide subtasks from task blocks in the timeline\n\n### \u{1F41E} Fixed issues\n\n- New drag-and-drop operations can now be started immediately after previous ones\n- The plugin is much faster in the default use case (daily notes only)\n- You can use plain list items in daily notes again\n- Notifications work again\n- Unscheduled tasks now fit their contents\n\n### Acknowledgements\n\n- Big thanks to @weph for helping me figure out a good performance solution\n",
         el,
         "/",
         this.plugin
@@ -36320,6 +36311,19 @@ var DayPlannerSettingsTab = class extends import_obsidian5.PluginSettingTab {
     new import_obsidian5.Setting(containerEl).setName("Show release notes after update").addToggle(
       (toggle) => toggle.setValue(this.plugin.settings().releaseNotes).onChange((value) => {
         this.update({ releaseNotes: value });
+      })
+    );
+    new import_obsidian5.Setting(containerEl).setName("Default task status on creation").setDesc(
+      "You can use custom statuses for more advanced workflows. E.g.: '- [>] Task'"
+    ).addText(
+      (el) => el.setPlaceholder("Empty").setValue(this.plugin.settings().taskStatusOnCreation).onChange((value) => {
+        this.settingsStore.update((previous) => {
+          const newValue = value.length > 0 ? value.substring(0, 1) : " ";
+          return {
+            ...previous,
+            taskStatusOnCreation: newValue
+          };
+        });
       })
     );
     new import_obsidian5.Setting(containerEl).setName("Round time to minutes").setDesc("While editing, tasks are going to get rounded to this number").addSlider(
@@ -36683,7 +36687,7 @@ function handleActiveLeafChange(leaf, timelineDateRange) {
 }
 
 // src/ui/components/timeline-with-controls.svelte
-var import_moment13 = __toESM(require_moment());
+var import_moment12 = __toESM(require_moment());
 
 // src/global-store/derived-settings.ts
 function getHourSize(settings2) {
@@ -41040,7 +41044,7 @@ var X = class extends SvelteComponent {
 var X$1 = X;
 
 // src/ui/components/timeline-controls.svelte
-var import_moment6 = __toESM(require_moment());
+var import_moment7 = __toESM(require_moment());
 
 // src/ui/hooks/use-dataview-source.ts
 var import_obsidian7 = require("obsidian");
@@ -41990,7 +41994,7 @@ function create_else_block_1(ctx) {
     p(ctx2, dirty) {
       const controlbutton_changes = {};
       if (dirty[1] & /*$$scope*/
-      32) {
+      64) {
         controlbutton_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton.$set(controlbutton_changes);
@@ -42023,7 +42027,7 @@ function create_if_block_7(ctx) {
   controlbutton.$on(
     "click",
     /*reSync*/
-    ctx[13]
+    ctx[14]
   );
   return {
     c() {
@@ -42036,7 +42040,7 @@ function create_if_block_7(ctx) {
     p(ctx2, dirty) {
       const controlbutton_changes = {};
       if (dirty[1] & /*$$scope*/
-      32) {
+      64) {
         controlbutton_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton.$set(controlbutton_changes);
@@ -42269,7 +42273,7 @@ function create_default_slot_6(ctx) {
   function select_block_type_1(ctx2, dirty) {
     if (
       /*$sourceIsEmpty*/
-      ctx2[5]
+      ctx2[6]
     )
       return 0;
     return 1;
@@ -42409,11 +42413,11 @@ function create_if_block_22(ctx) {
   let dispose;
   let if_block0 = (
     /*$sourceIsEmpty*/
-    ctx[5] && create_if_block_42(ctx)
+    ctx[6] && create_if_block_42(ctx)
   );
   let if_block1 = (
     /*$dataviewErrorMessage*/
-    ctx[8].length > 0 && create_if_block_32(ctx)
+    ctx[9].length > 0 && create_if_block_32(ctx)
   );
   info = new Info$1({ props: { class: "svg-icon" } });
   return {
@@ -42448,7 +42452,7 @@ function create_if_block_22(ctx) {
       set_input_value(
         input,
         /*$dataviewSourceInput*/
-        ctx[7]
+        ctx[8]
       );
       append(div1, t1);
       if (if_block0)
@@ -42467,28 +42471,28 @@ function create_if_block_22(ctx) {
           input,
           "input",
           /*input_input_handler*/
-          ctx[29]
+          ctx[30]
         );
         mounted = true;
       }
     },
     p(ctx2, dirty) {
       if (dirty[0] & /*$dataviewSourceInput*/
-      128 && input.value !== /*$dataviewSourceInput*/
-      ctx2[7]) {
+      256 && input.value !== /*$dataviewSourceInput*/
+      ctx2[8]) {
         set_input_value(
           input,
           /*$dataviewSourceInput*/
-          ctx2[7]
+          ctx2[8]
         );
       }
       if (
         /*$sourceIsEmpty*/
-        ctx2[5]
+        ctx2[6]
       ) {
         if (if_block0) {
           if (dirty[0] & /*$sourceIsEmpty*/
-          32) {
+          64) {
             transition_in(if_block0, 1);
           }
         } else {
@@ -42506,7 +42510,7 @@ function create_if_block_22(ctx) {
       }
       if (
         /*$dataviewErrorMessage*/
-        ctx2[8].length > 0
+        ctx2[9].length > 0
       ) {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
@@ -42591,7 +42595,7 @@ function create_if_block_32(ctx) {
       pre = element("pre");
       t2 = text(
         /*$dataviewErrorMessage*/
-        ctx[8]
+        ctx[9]
       );
       attr(pre, "class", "error-message svelte-1llgdzz");
       attr(div, "class", "info-container svelte-1llgdzz");
@@ -42603,11 +42607,11 @@ function create_if_block_32(ctx) {
     },
     p(ctx2, dirty) {
       if (dirty[0] & /*$dataviewErrorMessage*/
-      256)
+      512)
         set_data(
           t2,
           /*$dataviewErrorMessage*/
-          ctx2[8]
+          ctx2[9]
         );
     },
     d(detaching) {
@@ -42748,7 +42752,7 @@ function create_if_block4(ctx) {
           button,
           "click",
           /*showReleaseNotes*/
-          ctx[12]
+          ctx[13]
         );
         mounted = true;
       }
@@ -42757,42 +42761,42 @@ function create_if_block4(ctx) {
       const settingitem0_changes = {};
       if (dirty[0] & /*$settings*/
       4 | dirty[1] & /*$$scope*/
-      32) {
+      64) {
         settingitem0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem0.$set(settingitem0_changes);
       const settingitem1_changes = {};
       if (dirty[0] & /*$settings*/
       4 | dirty[1] & /*$$scope*/
-      32) {
+      64) {
         settingitem1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem1.$set(settingitem1_changes);
       const settingitem2_changes = {};
       if (dirty[0] & /*$settings*/
       4 | dirty[1] & /*$$scope*/
-      32) {
+      64) {
         settingitem2_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem2.$set(settingitem2_changes);
       const settingitem3_changes = {};
       if (dirty[0] & /*$settings*/
       4 | dirty[1] & /*$$scope*/
-      32) {
+      64) {
         settingitem3_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem3.$set(settingitem3_changes);
       const settingitem4_changes = {};
       if (dirty[0] & /*$settings*/
       4 | dirty[1] & /*$$scope*/
-      32) {
+      64) {
         settingitem4_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem4.$set(settingitem4_changes);
       const settingitem5_changes = {};
       if (dirty[0] & /*$settings*/
       4 | dirty[1] & /*$$scope*/
-      32) {
+      64) {
         settingitem5_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem5.$set(settingitem5_changes);
@@ -42889,14 +42893,14 @@ function create_control_slot_6(ctx) {
       ),
       values: (
         /*startHourOptions*/
-        ctx[19]
+        ctx[20]
       )
     }
   });
   dropdown.$on(
     "input",
     /*handleStartHourInput*/
-    ctx[26]
+    ctx[27]
   );
   return {
     c() {
@@ -42958,14 +42962,14 @@ function create_control_slot_5(ctx) {
       ),
       values: (
         /*zoomLevelOptions*/
-        ctx[20]
+        ctx[21]
       )
     }
   });
   dropdown.$on(
     "input",
     /*handleZoomLevelInput*/
-    ctx[27]
+    ctx[28]
   );
   return {
     c() {
@@ -43039,7 +43043,7 @@ function create_control_slot_4(ctx) {
           div,
           "click",
           /*click_handler_1*/
-          ctx[30]
+          ctx[31]
         );
         mounted = true;
       }
@@ -43102,7 +43106,7 @@ function create_control_slot_3(ctx) {
           div,
           "click",
           /*click_handler_2*/
-          ctx[31]
+          ctx[32]
         );
         mounted = true;
       }
@@ -43165,7 +43169,7 @@ function create_control_slot_2(ctx) {
           div,
           "click",
           /*click_handler_3*/
-          ctx[32]
+          ctx[33]
         );
         mounted = true;
       }
@@ -43228,7 +43232,7 @@ function create_control_slot_1(ctx) {
           div,
           "click",
           /*click_handler_4*/
-          ctx[33]
+          ctx[34]
         );
         mounted = true;
       }
@@ -43276,7 +43280,7 @@ function create_if_block_12(ctx) {
       const settingitem_changes = {};
       if (dirty[0] & /*$settings*/
       4 | dirty[1] & /*$$scope*/
-      32) {
+      64) {
         settingitem_changes.$$scope = { dirty, ctx: ctx2 };
       }
       settingitem.$set(settingitem_changes);
@@ -43335,7 +43339,7 @@ function create_control_slot(ctx) {
           div,
           "click",
           /*click_handler_5*/
-          ctx[34]
+          ctx[35]
         );
         mounted = true;
       }
@@ -43403,7 +43407,7 @@ function create_fragment33(ctx) {
   controlbutton0.$on(
     "click",
     /*goToToday*/
-    ctx[25]
+    ctx[26]
   );
   controlbutton1 = new control_button_default({
     props: {
@@ -43415,7 +43419,7 @@ function create_fragment33(ctx) {
   controlbutton1.$on(
     "click",
     /*initWeeklyView*/
-    ctx[10]
+    ctx[11]
   );
   const if_block_creators = [create_if_block_7, create_else_block_1];
   const if_blocks = [];
@@ -43439,7 +43443,7 @@ function create_fragment33(ctx) {
   controlbutton2.$on(
     "click",
     /*goBack*/
-    ctx[23]
+    ctx[24]
   );
   controlbutton3 = new control_button_default({
     props: {
@@ -43451,7 +43455,7 @@ function create_fragment33(ctx) {
   controlbutton3.$on(
     "click",
     /*click_handler*/
-    ctx[28]
+    ctx[29]
   );
   controlbutton4 = new control_button_default({
     props: {
@@ -43463,7 +43467,7 @@ function create_fragment33(ctx) {
   controlbutton4.$on(
     "click",
     /*goForward*/
-    ctx[24]
+    ctx[25]
   );
   controlbutton5 = new control_button_default({
     props: {
@@ -43479,7 +43483,7 @@ function create_fragment33(ctx) {
   controlbutton5.$on(
     "click",
     /*toggleFilter*/
-    ctx[22]
+    ctx[23]
   );
   controlbutton6 = new control_button_default({
     props: {
@@ -43495,7 +43499,7 @@ function create_fragment33(ctx) {
   controlbutton6.$on(
     "click",
     /*toggleSettings*/
-    ctx[21]
+    ctx[22]
   );
   pill = new pill_default({
     props: {
@@ -43507,7 +43511,7 @@ function create_fragment33(ctx) {
     }
   });
   let if_block1 = !/*$dataviewLoaded*/
-  ctx[6] && create_if_block_52(ctx);
+  ctx[7] && create_if_block_52(ctx);
   let if_block2 = (
     /*filterVisible*/
     ctx[1] && create_if_block_22(ctx)
@@ -43556,7 +43560,8 @@ function create_fragment33(ctx) {
       set_style(div, "display", "contents");
       set_style(div, "--justify-self", "flex-end");
       set_style(div_1, "display", "contents");
-      set_style(div_1, "--control-button-border", __control_button_border_last = isToday(
+      set_style(div_1, "--control-button-border", __control_button_border_last = /*$isToday*/
+      ctx[5](
         /*$dateRange*/
         ctx[3][0]
       ) ? "1px solid var(--color-accent)" : "none");
@@ -43608,13 +43613,13 @@ function create_fragment33(ctx) {
     p(ctx2, dirty) {
       const controlbutton0_changes = {};
       if (dirty[1] & /*$$scope*/
-      32) {
+      64) {
         controlbutton0_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton0.$set(controlbutton0_changes);
       const controlbutton1_changes = {};
       if (dirty[1] & /*$$scope*/
-      32) {
+      64) {
         controlbutton1_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton1.$set(controlbutton1_changes);
@@ -43640,12 +43645,13 @@ function create_fragment33(ctx) {
       }
       const controlbutton2_changes = {};
       if (dirty[1] & /*$$scope*/
-      32) {
+      64) {
         controlbutton2_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton2.$set(controlbutton2_changes);
-      if (dirty[0] & /*$dateRange*/
-      8 && __control_button_border_last !== (__control_button_border_last = isToday(
+      if (dirty[0] & /*$isToday, $dateRange*/
+      40 && __control_button_border_last !== (__control_button_border_last = /*$isToday*/
+      ctx2[5](
         /*$dateRange*/
         ctx2[3][0]
       ) ? "1px solid var(--color-accent)" : "none")) {
@@ -43654,13 +43660,13 @@ function create_fragment33(ctx) {
       const controlbutton3_changes = {};
       if (dirty[0] & /*$dateRange, $settings*/
       12 | dirty[1] & /*$$scope*/
-      32) {
+      64) {
         controlbutton3_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton3.$set(controlbutton3_changes);
       const controlbutton4_changes = {};
       if (dirty[1] & /*$$scope*/
-      32) {
+      64) {
         controlbutton4_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton4.$set(controlbutton4_changes);
@@ -43670,8 +43676,8 @@ function create_fragment33(ctx) {
         controlbutton5_changes.isActive = /*filterVisible*/
         ctx2[1];
       if (dirty[0] & /*$sourceIsEmpty*/
-      32 | dirty[1] & /*$$scope*/
-      32) {
+      64 | dirty[1] & /*$$scope*/
+      64) {
         controlbutton5_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton5.$set(controlbutton5_changes);
@@ -43681,7 +43687,7 @@ function create_fragment33(ctx) {
         controlbutton6_changes.isActive = /*settingsVisible*/
         ctx2[0];
       if (dirty[1] & /*$$scope*/
-      32) {
+      64) {
         controlbutton6_changes.$$scope = { dirty, ctx: ctx2 };
       }
       controlbutton6.$set(controlbutton6_changes);
@@ -43692,10 +43698,10 @@ function create_fragment33(ctx) {
         ctx2[2].dataviewSource;
       pill.$set(pill_changes);
       if (!/*$dataviewLoaded*/
-      ctx2[6]) {
+      ctx2[7]) {
         if (if_block1) {
           if (dirty[0] & /*$dataviewLoaded*/
-          64) {
+          128) {
             transition_in(if_block1, 1);
           }
         } else {
@@ -43818,20 +43824,22 @@ function instance33($$self, $$props, $$invalidate) {
   let $settings;
   let $dateRange;
   let $isOnline;
+  let $isToday;
   let $sourceIsEmpty;
   let $dataviewLoaded;
   let $dataviewSourceInput;
   let $dataviewErrorMessage;
   component_subscribe($$self, settings, ($$value) => $$invalidate(2, $settings = $$value));
+  component_subscribe($$self, isToday, ($$value) => $$invalidate(5, $isToday = $$value));
   const { obsidianFacade, initWeeklyView, refreshTasks, dataviewLoaded, showReleaseNotes, reSync, isOnline } = getContext(obsidianContext);
-  component_subscribe($$self, dataviewLoaded, (value) => $$invalidate(6, $dataviewLoaded = value));
+  component_subscribe($$self, dataviewLoaded, (value) => $$invalidate(7, $dataviewLoaded = value));
   component_subscribe($$self, isOnline, (value) => $$invalidate(4, $isOnline = value));
   const dateRange = getContext(dateRangeContextKey);
   component_subscribe($$self, dateRange, (value) => $$invalidate(3, $dateRange = value));
   const { sourceIsEmpty, errorMessage: dataviewErrorMessage, dataviewSourceInput } = useDataviewSource({ refreshTasks });
-  component_subscribe($$self, sourceIsEmpty, (value) => $$invalidate(5, $sourceIsEmpty = value));
-  component_subscribe($$self, dataviewErrorMessage, (value) => $$invalidate(8, $dataviewErrorMessage = value));
-  component_subscribe($$self, dataviewSourceInput, (value) => $$invalidate(7, $dataviewSourceInput = value));
+  component_subscribe($$self, sourceIsEmpty, (value) => $$invalidate(6, $sourceIsEmpty = value));
+  component_subscribe($$self, dataviewErrorMessage, (value) => $$invalidate(9, $dataviewErrorMessage = value));
+  component_subscribe($$self, dataviewSourceInput, (value) => $$invalidate(8, $dataviewSourceInput = value));
   const startHourOptions = (0, import_fp7.range)(0, 13).map(String);
   const zoomLevelOptions = (0, import_fp7.range)(1, 9).map(String);
   let settingsVisible = false;
@@ -43845,16 +43853,12 @@ function instance33($$self, $$props, $$invalidate) {
   function goBack() {
     return __awaiter(this, void 0, void 0, function* () {
       const previousDay = $dateRange[0].clone().subtract(1, "day");
-      const previousNote = yield createDailyNoteIfNeeded(previousDay);
-      yield obsidianFacade.openFileInEditor(previousNote);
       set_store_value(dateRange, $dateRange = [previousDay], $dateRange);
     });
   }
   function goForward() {
     return __awaiter(this, void 0, void 0, function* () {
       const nextDay = $dateRange[0].clone().add(1, "day");
-      const nextNote = yield createDailyNoteIfNeeded(nextDay);
-      yield obsidianFacade.openFileInEditor(nextNote);
       set_store_value(dateRange, $dateRange = [nextDay], $dateRange);
     });
   }
@@ -43902,6 +43906,7 @@ function instance33($$self, $$props, $$invalidate) {
     $settings,
     $dateRange,
     $isOnline,
+    $isToday,
     $sourceIsEmpty,
     $dataviewLoaded,
     $dataviewSourceInput,
@@ -45095,305 +45100,6 @@ var computePosition2 = (reference, floating, options) => {
   });
 };
 
-// node_modules/tinygesture/dist/TinyGesture.js
-var TinyGesture = class _TinyGesture {
-  constructor(element2, options) {
-    this.element = element2;
-    this.touch1 = null;
-    this.touch2 = null;
-    this.touchStartX = null;
-    this.touchStartY = null;
-    this.touchEndX = null;
-    this.touchEndY = null;
-    this.touchMove1 = null;
-    this.touchMove2 = null;
-    this.touchMoveX = null;
-    this.touchMoveY = null;
-    this.velocityX = null;
-    this.velocityY = null;
-    this.longPressTimer = null;
-    this.doubleTapTimer = null;
-    this.doubleTapWaiting = false;
-    this.thresholdX = 0;
-    this.thresholdY = 0;
-    this.disregardVelocityThresholdX = 0;
-    this.disregardVelocityThresholdY = 0;
-    this.swipingHorizontal = false;
-    this.swipingVertical = false;
-    this.swipingDirection = null;
-    this.swipedHorizontal = false;
-    this.swipedVertical = false;
-    this.originalDistance = null;
-    this.newDistance = null;
-    this.scale = null;
-    this.originalAngle = null;
-    this.newAngle = null;
-    this.rotation = null;
-    this.handlers = {
-      panstart: [],
-      panmove: [],
-      panend: [],
-      swipeleft: [],
-      swiperight: [],
-      swipeup: [],
-      swipedown: [],
-      tap: [],
-      doubletap: [],
-      longpress: [],
-      pinch: [],
-      pinchend: [],
-      rotate: [],
-      rotateend: []
-    };
-    this._onTouchStart = this.onTouchStart.bind(this);
-    this._onTouchMove = this.onTouchMove.bind(this);
-    this._onTouchEnd = this.onTouchEnd.bind(this);
-    this.opts = Object.assign({}, _TinyGesture.defaults, options);
-    this.element.addEventListener("touchstart", this._onTouchStart, passiveIfSupported);
-    this.element.addEventListener("touchmove", this._onTouchMove, passiveIfSupported);
-    this.element.addEventListener("touchend", this._onTouchEnd, passiveIfSupported);
-    if (this.opts.mouseSupport && !("ontouchstart" in window)) {
-      this.element.addEventListener("mousedown", this._onTouchStart, passiveIfSupported);
-      document.addEventListener("mousemove", this._onTouchMove, passiveIfSupported);
-      document.addEventListener("mouseup", this._onTouchEnd, passiveIfSupported);
-    }
-  }
-  destroy() {
-    var _a, _b;
-    this.element.removeEventListener("touchstart", this._onTouchStart);
-    this.element.removeEventListener("touchmove", this._onTouchMove);
-    this.element.removeEventListener("touchend", this._onTouchEnd);
-    this.element.removeEventListener("mousedown", this._onTouchStart);
-    document.removeEventListener("mousemove", this._onTouchMove);
-    document.removeEventListener("mouseup", this._onTouchEnd);
-    clearTimeout((_a = this.longPressTimer) !== null && _a !== void 0 ? _a : void 0);
-    clearTimeout((_b = this.doubleTapTimer) !== null && _b !== void 0 ? _b : void 0);
-  }
-  on(type, fn) {
-    if (this.handlers[type]) {
-      this.handlers[type].push(fn);
-      return {
-        type,
-        fn,
-        cancel: () => this.off(type, fn)
-      };
-    }
-  }
-  off(type, fn) {
-    if (this.handlers[type]) {
-      const idx = this.handlers[type].indexOf(fn);
-      if (idx !== -1) {
-        this.handlers[type].splice(idx, 1);
-      }
-    }
-  }
-  fire(type, event) {
-    for (let i2 = 0; i2 < this.handlers[type].length; i2++) {
-      this.handlers[type][i2](event);
-    }
-  }
-  onTouchStart(event) {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t2, _u, _v, _w, _x, _y, _z, _0, _1;
-    let didTouch1 = false;
-    let didTouch2 = false;
-    if (event.type !== "mousedown") {
-      if (!this.touch1) {
-        this.touch1 = event.changedTouches[0];
-        didTouch1 = true;
-      }
-      if ((didTouch1 && event.changedTouches.length > 1 || !didTouch1) && !this.touch2) {
-        this.touch2 = [...event.changedTouches].find((touch) => {
-          var _a2;
-          return touch.identifier !== ((_a2 = this.touch1) === null || _a2 === void 0 ? void 0 : _a2.identifier);
-        }) || null;
-        this.originalDistance = Math.sqrt(Math.pow(((_b = (_a = this.touch2) === null || _a === void 0 ? void 0 : _a.screenX) !== null && _b !== void 0 ? _b : 0) - ((_f = (_d = (_c = this.touchMove1) === null || _c === void 0 ? void 0 : _c.screenX) !== null && _d !== void 0 ? _d : (_e = this.touch1) === null || _e === void 0 ? void 0 : _e.screenX) !== null && _f !== void 0 ? _f : 0), 2) + Math.pow(((_h = (_g = this.touch2) === null || _g === void 0 ? void 0 : _g.screenY) !== null && _h !== void 0 ? _h : 0) - ((_m = (_k = (_j = this.touchMove1) === null || _j === void 0 ? void 0 : _j.screenY) !== null && _k !== void 0 ? _k : (_l = this.touch1) === null || _l === void 0 ? void 0 : _l.screenY) !== null && _m !== void 0 ? _m : 0), 2));
-        this.originalAngle = Math.atan2(((_p = (_o = this.touch2) === null || _o === void 0 ? void 0 : _o.screenY) !== null && _p !== void 0 ? _p : 0) - ((_t2 = (_r = (_q = this.touchMove1) === null || _q === void 0 ? void 0 : _q.screenY) !== null && _r !== void 0 ? _r : (_s = this.touch1) === null || _s === void 0 ? void 0 : _s.screenY) !== null && _t2 !== void 0 ? _t2 : 0), ((_v = (_u = this.touch2) === null || _u === void 0 ? void 0 : _u.screenX) !== null && _v !== void 0 ? _v : 0) - ((_z = (_x = (_w = this.touchMove1) === null || _w === void 0 ? void 0 : _w.screenX) !== null && _x !== void 0 ? _x : (_y = this.touch1) === null || _y === void 0 ? void 0 : _y.screenX) !== null && _z !== void 0 ? _z : 0)) / (Math.PI / 180);
-        return;
-      }
-      if (!didTouch1 && !didTouch2) {
-        return;
-      }
-    }
-    if (didTouch1 || event.type === "mousedown") {
-      this.thresholdX = this.opts.threshold("x", this);
-      this.thresholdY = this.opts.threshold("y", this);
-      this.disregardVelocityThresholdX = this.opts.disregardVelocityThreshold("x", this);
-      this.disregardVelocityThresholdY = this.opts.disregardVelocityThreshold("y", this);
-      this.touchStartX = event.type === "mousedown" ? event.screenX : ((_0 = this.touch1) === null || _0 === void 0 ? void 0 : _0.screenX) || 0;
-      this.touchStartY = event.type === "mousedown" ? event.screenY : ((_1 = this.touch1) === null || _1 === void 0 ? void 0 : _1.screenY) || 0;
-      this.touchMoveX = null;
-      this.touchMoveY = null;
-      this.touchEndX = null;
-      this.touchEndY = null;
-      this.swipingDirection = null;
-      this.longPressTimer = setTimeout(() => this.fire("longpress", event), this.opts.longPressTime);
-      this.scale = 1;
-      this.rotation = 0;
-      this.fire("panstart", event);
-    }
-  }
-  onTouchMove(event) {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
-    if (event.type === "mousemove" && (!this.touchStartX || this.touchEndX !== null)) {
-      return;
-    }
-    let touch1 = void 0;
-    let touch2 = void 0;
-    if (event.type !== "mousemove") {
-      touch1 = [...event.changedTouches].find((touch) => {
-        var _a2;
-        return touch.identifier === ((_a2 = this.touch1) === null || _a2 === void 0 ? void 0 : _a2.identifier);
-      });
-      this.touchMove1 = touch1 || this.touchMove1;
-      touch2 = [...event.changedTouches].find((touch) => {
-        var _a2;
-        return touch.identifier === ((_a2 = this.touch2) === null || _a2 === void 0 ? void 0 : _a2.identifier);
-      });
-      this.touchMove2 = touch2 || this.touchMove2;
-    }
-    if (event.type === "mousemove" || touch1) {
-      const touchMoveX = (event.type === "mousemove" ? event.screenX : (_a = touch1 === null || touch1 === void 0 ? void 0 : touch1.screenX) !== null && _a !== void 0 ? _a : 0) - ((_b = this.touchStartX) !== null && _b !== void 0 ? _b : 0);
-      this.velocityX = touchMoveX - ((_c = this.touchMoveX) !== null && _c !== void 0 ? _c : 0);
-      this.touchMoveX = touchMoveX;
-      const touchMoveY = (event.type === "mousemove" ? event.screenY : (_d = touch1 === null || touch1 === void 0 ? void 0 : touch1.screenY) !== null && _d !== void 0 ? _d : 0) - ((_e = this.touchStartY) !== null && _e !== void 0 ? _e : 0);
-      this.velocityY = touchMoveY - ((_f = this.touchMoveY) !== null && _f !== void 0 ? _f : 0);
-      this.touchMoveY = touchMoveY;
-      const absTouchMoveX = Math.abs(this.touchMoveX);
-      const absTouchMoveY = Math.abs(this.touchMoveY);
-      this.swipingHorizontal = absTouchMoveX > this.thresholdX;
-      this.swipingVertical = absTouchMoveY > this.thresholdY;
-      this.swipingDirection = absTouchMoveX > absTouchMoveY ? this.swipingHorizontal ? "horizontal" : "pre-horizontal" : this.swipingVertical ? "vertical" : "pre-vertical";
-      if (Math.max(absTouchMoveX, absTouchMoveY) > this.opts.pressThreshold) {
-        clearTimeout((_g = this.longPressTimer) !== null && _g !== void 0 ? _g : void 0);
-      }
-      this.fire("panmove", event);
-    }
-    if (event.type !== "mousemove" && this.touchMove1 != null && this.touchMove2 != null) {
-      this.newDistance = Math.sqrt(Math.pow(this.touchMove2.screenX - this.touchMove1.screenX, 2) + Math.pow(this.touchMove2.screenY - this.touchMove1.screenY, 2));
-      this.scale = this.newDistance / ((_h = this.originalDistance) !== null && _h !== void 0 ? _h : 0);
-      this.fire("pinch", event);
-      this.newAngle = Math.atan2(((_j = this.touchMove2.screenY) !== null && _j !== void 0 ? _j : 0) - ((_k = this.touchMove1.screenY) !== null && _k !== void 0 ? _k : 0), ((_l = this.touchMove2.screenX) !== null && _l !== void 0 ? _l : 0) - ((_m = this.touchMove1.screenX) !== null && _m !== void 0 ? _m : 0)) / (Math.PI / 180);
-      this.rotation = this.newAngle - ((_o = this.originalAngle) !== null && _o !== void 0 ? _o : 0);
-      this.fire("rotate", event);
-    }
-  }
-  onTouchEnd(event) {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
-    let touch1 = void 0;
-    if (event.type !== "mouseup") {
-      touch1 = [...event.changedTouches].find((touch) => {
-        var _a2;
-        return touch.identifier === ((_a2 = this.touch1) === null || _a2 === void 0 ? void 0 : _a2.identifier);
-      });
-      if (![...event.touches].find((touch) => {
-        var _a2;
-        return touch.identifier === ((_a2 = this.touch1) === null || _a2 === void 0 ? void 0 : _a2.identifier);
-      })) {
-        this.touch1 = null;
-        this.touchMove1 = null;
-      }
-      if (![...event.touches].find((touch) => {
-        var _a2;
-        return touch.identifier === ((_a2 = this.touch2) === null || _a2 === void 0 ? void 0 : _a2.identifier);
-      })) {
-        this.touch2 = null;
-        this.touchMove2 = null;
-      }
-    }
-    if (event.type === "mouseup" && (!this.touchStartX || this.touchEndX !== null)) {
-      return;
-    }
-    if (event.type === "mouseup" || touch1) {
-      this.touchEndX = event.type === "mouseup" ? event.screenX : (_a = touch1 === null || touch1 === void 0 ? void 0 : touch1.screenX) !== null && _a !== void 0 ? _a : 0;
-      this.touchEndY = event.type === "mouseup" ? event.screenY : (_b = touch1 === null || touch1 === void 0 ? void 0 : touch1.screenY) !== null && _b !== void 0 ? _b : 0;
-      this.fire("panend", event);
-      clearTimeout((_c = this.longPressTimer) !== null && _c !== void 0 ? _c : void 0);
-      const x2 = this.touchEndX - ((_d = this.touchStartX) !== null && _d !== void 0 ? _d : 0);
-      const absX = Math.abs(x2);
-      const y2 = this.touchEndY - ((_e = this.touchStartY) !== null && _e !== void 0 ? _e : 0);
-      const absY = Math.abs(y2);
-      const distance = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2));
-      const absDistance = Math.abs(distance);
-      const diagonal = absY / absX;
-      if (absX > this.thresholdX || absY > this.thresholdY || this.opts.diagonalSwipes && (absDistance > this.thresholdX || absDistance > this.thresholdY)) {
-        this.swipedHorizontal = absX > this.thresholdX || this.opts.diagonalSwipes && absDistance > this.thresholdX;
-        this.swipedVertical = absY > this.thresholdY || this.opts.diagonalSwipes && absDistance > this.thresholdY;
-        if (!this.opts.diagonalSwipes || diagonal < Math.tan((45 - this.opts.diagonalLimit) * Math.PI / 180) || diagonal > Math.tan((45 + this.opts.diagonalLimit) * Math.PI / 180)) {
-          if (absX >= absY) {
-            this.swipedVertical = false;
-          }
-          if (absY > absX) {
-            this.swipedHorizontal = false;
-          }
-        }
-        if (this.swipedHorizontal) {
-          if (x2 < 0) {
-            if (((_f = this.velocityX) !== null && _f !== void 0 ? _f : 0) < -this.opts.velocityThreshold || distance < -this.disregardVelocityThresholdX) {
-              this.fire("swipeleft", event);
-            }
-          } else {
-            if (((_g = this.velocityX) !== null && _g !== void 0 ? _g : 0) > this.opts.velocityThreshold || distance > this.disregardVelocityThresholdX) {
-              this.fire("swiperight", event);
-            }
-          }
-        }
-        if (this.swipedVertical) {
-          if (y2 < 0) {
-            if (((_h = this.velocityY) !== null && _h !== void 0 ? _h : 0) < -this.opts.velocityThreshold || distance < -this.disregardVelocityThresholdY) {
-              this.fire("swipeup", event);
-            }
-          } else {
-            if (((_j = this.velocityY) !== null && _j !== void 0 ? _j : 0) > this.opts.velocityThreshold || distance > this.disregardVelocityThresholdY) {
-              this.fire("swipedown", event);
-            }
-          }
-        }
-      } else if (absX < this.opts.pressThreshold && absY < this.opts.pressThreshold) {
-        if (this.doubleTapWaiting) {
-          this.doubleTapWaiting = false;
-          clearTimeout((_k = this.doubleTapTimer) !== null && _k !== void 0 ? _k : void 0);
-          this.fire("doubletap", event);
-        } else {
-          this.doubleTapWaiting = true;
-          this.doubleTapTimer = setTimeout(() => this.doubleTapWaiting = false, this.opts.doubleTapTime);
-          this.fire("tap", event);
-        }
-      }
-    }
-    if (!this.touch1 && !this.touch2) {
-      this.fire("pinchend", event);
-      this.fire("rotateend", event);
-      this.originalDistance = null;
-      this.newDistance = null;
-      this.scale = null;
-      this.originalAngle = null;
-      this.newAngle = null;
-      this.rotation = null;
-    }
-  }
-};
-TinyGesture.defaults = {
-  threshold: (type, _self) => Math.max(25, Math.floor(0.15 * (type === "x" ? window.innerWidth || document.body.clientWidth : window.innerHeight || document.body.clientHeight))),
-  velocityThreshold: 10,
-  disregardVelocityThreshold: (type, self2) => Math.floor(0.5 * (type === "x" ? self2.element.clientWidth : self2.element.clientHeight)),
-  pressThreshold: 8,
-  diagonalSwipes: false,
-  diagonalLimit: 15,
-  longPressTime: 500,
-  doubleTapTime: 300,
-  mouseSupport: true
-};
-var TinyGesture_default = TinyGesture;
-var passiveIfSupported = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, "passive", {
-    get: function() {
-      passiveIfSupported = { passive: true };
-    }
-  }));
-} catch (err) {
-}
-
 // src/ui/hooks/use-edit/create-edit-handlers.ts
 var import_obsidian_daily_notes_interface7 = __toESM(require_main());
 function createEditHandlers({
@@ -45401,10 +45107,15 @@ function createEditHandlers({
   obsidianFacade,
   startEdit,
   cursorMinutes,
-  editOperation
+  editOperation,
+  settings: settings2
 }) {
   function handleContainerMouseDown() {
-    const newTask = createTask2(day, get_store_value(cursorMinutes));
+    const newTask = createTask(
+      day,
+      get_store_value(cursorMinutes),
+      get_store_value(settings2).taskStatusOnCreation
+    );
     startEdit({
       task: { ...newTask, isGhost: true },
       mode: "CREATE" /* CREATE */,
@@ -45415,11 +45126,12 @@ function createEditHandlers({
     startEdit({ task, mode, day });
   }
   async function handleTaskMouseUp(task) {
+    var _a;
     if (get_store_value(editOperation)) {
       return;
     }
-    const { path, line } = task.location;
-    await obsidianFacade.revealLineInFile(path, line);
+    const { path, position } = task.location;
+    await obsidianFacade.revealLineInFile(path, (_a = position == null ? void 0 : position.start) == null ? void 0 : _a.line);
   }
   function handleGripMouseDown(task, mode) {
     startEdit({ task, mode, day });
@@ -45674,7 +45386,7 @@ function fade(node, { delay = 0, duration = 400, easing = identity } = {}) {
   };
 }
 
-// src/ui/hooks/useHoverOrTap.ts
+// src/ui/hooks/use-hover-or-tap.ts
 function useHoverOrTap() {
   const isActive = writable(false);
   function handlePointerDown(event) {
@@ -46770,9 +46482,9 @@ function hoverPreview(el, task) {
     }
   );
   const unsubscribe = shouldShowPreview.subscribe((newValue) => {
-    var _a;
+    var _a, _b, _c;
     if (newValue && ((_a = task.location) == null ? void 0 : _a.path)) {
-      showPreview(el, task.location.path, task.location.line);
+      showPreview(el, task.location.path, (_c = (_b = task.location.position) == null ? void 0 : _b.start) == null ? void 0 : _c.line);
     }
   });
   return {
@@ -46904,7 +46616,9 @@ var import_fp8 = __toESM(require_fp());
 function createMemo(initialProps, identityGetters) {
   let previousProps = initialProps;
   function shouldUpdate(newProps) {
-    for (const [propKey, propValue] of Object.entries(newProps)) {
+    for (const [propKey, propValue] of Object.entries(
+      newProps
+    )) {
       const previousValue = previousProps[propKey];
       const identityFn = (identityGetters == null ? void 0 : identityGetters[propKey]) || import_fp8.identity;
       const propChanged = identityFn(propValue) !== identityFn(previousValue);
@@ -46919,23 +46633,6 @@ function createMemo(initialProps, identityGetters) {
 }
 
 // src/ui/actions/post-process-task-markdown.ts
-function decorate(el, task, settings2) {
-  const checkBox = el.querySelector('input[type="checkbox"]');
-  if (checkBox && settings2.showTimestampInTaskBlock && task.startMinutes) {
-    const timestamp = createTimestamp(
-      // @ts-expect-error
-      task.startMinutes,
-      task.durationMinutes,
-      settings2.timestampFormat
-    );
-    checkBox.after(
-      createSpan({
-        text: timestamp,
-        cls: "day-planner-task-decoration"
-      })
-    );
-  }
-}
 function disableCheckBoxes(el) {
   var _a;
   (_a = el.querySelectorAll(`input[type="checkbox"]`)) == null ? void 0 : _a.forEach((checkbox2) => checkbox2.setAttribute("disabled", "true"));
@@ -46949,10 +46646,10 @@ function renderTaskMarkdown(el, initial) {
   });
   function refresh({ task, settings: settings2, renderMarkdown }) {
     onDestroy2 == null ? void 0 : onDestroy2();
-    const text2 = settings2.showSubtasksInTaskBlocks ? task.text : task.text.split("\n")[0];
-    onDestroy2 = renderMarkdown(el, text2);
+    const displayedText = getDisplayedText(task);
+    const onlyFirstLineIfNeeded = settings2.showSubtasksInTaskBlocks ? displayedText : getFirstLine(displayedText);
+    onDestroy2 = renderMarkdown(el, onlyFirstLineIfNeeded);
     disableCheckBoxes(el);
-    decorate(el, task, settings2);
   }
   refresh(initial);
   return {
@@ -47415,12 +47112,339 @@ function useTaskVisuals(task, { settings: settings2, currentTime: currentTime2 }
   };
 }
 
+// node_modules/tinygesture/dist/TinyGesture.js
+var TinyGesture = class _TinyGesture {
+  constructor(element2, options) {
+    this.element = element2;
+    this.touch1 = null;
+    this.touch2 = null;
+    this.touchStartX = null;
+    this.touchStartY = null;
+    this.touchEndX = null;
+    this.touchEndY = null;
+    this.touchMove1 = null;
+    this.touchMove2 = null;
+    this.touchMoveX = null;
+    this.touchMoveY = null;
+    this.velocityX = null;
+    this.velocityY = null;
+    this.longPressTimer = null;
+    this.doubleTapTimer = null;
+    this.doubleTapWaiting = false;
+    this.thresholdX = 0;
+    this.thresholdY = 0;
+    this.disregardVelocityThresholdX = 0;
+    this.disregardVelocityThresholdY = 0;
+    this.swipingHorizontal = false;
+    this.swipingVertical = false;
+    this.swipingDirection = null;
+    this.swipedHorizontal = false;
+    this.swipedVertical = false;
+    this.originalDistance = null;
+    this.newDistance = null;
+    this.scale = null;
+    this.originalAngle = null;
+    this.newAngle = null;
+    this.rotation = null;
+    this.handlers = {
+      panstart: [],
+      panmove: [],
+      panend: [],
+      swipeleft: [],
+      swiperight: [],
+      swipeup: [],
+      swipedown: [],
+      tap: [],
+      doubletap: [],
+      longpress: [],
+      pinch: [],
+      pinchend: [],
+      rotate: [],
+      rotateend: []
+    };
+    this._onTouchStart = this.onTouchStart.bind(this);
+    this._onTouchMove = this.onTouchMove.bind(this);
+    this._onTouchEnd = this.onTouchEnd.bind(this);
+    this.opts = Object.assign({}, _TinyGesture.defaults, options);
+    this.element.addEventListener("touchstart", this._onTouchStart, passiveIfSupported);
+    this.element.addEventListener("touchmove", this._onTouchMove, passiveIfSupported);
+    this.element.addEventListener("touchend", this._onTouchEnd, passiveIfSupported);
+    if (this.opts.mouseSupport && !("ontouchstart" in window)) {
+      this.element.addEventListener("mousedown", this._onTouchStart, passiveIfSupported);
+      document.addEventListener("mousemove", this._onTouchMove, passiveIfSupported);
+      document.addEventListener("mouseup", this._onTouchEnd, passiveIfSupported);
+    }
+  }
+  destroy() {
+    var _a, _b;
+    this.element.removeEventListener("touchstart", this._onTouchStart);
+    this.element.removeEventListener("touchmove", this._onTouchMove);
+    this.element.removeEventListener("touchend", this._onTouchEnd);
+    this.element.removeEventListener("mousedown", this._onTouchStart);
+    document.removeEventListener("mousemove", this._onTouchMove);
+    document.removeEventListener("mouseup", this._onTouchEnd);
+    clearTimeout((_a = this.longPressTimer) !== null && _a !== void 0 ? _a : void 0);
+    clearTimeout((_b = this.doubleTapTimer) !== null && _b !== void 0 ? _b : void 0);
+  }
+  on(type, fn) {
+    if (this.handlers[type]) {
+      this.handlers[type].push(fn);
+      return {
+        type,
+        fn,
+        cancel: () => this.off(type, fn)
+      };
+    }
+  }
+  off(type, fn) {
+    if (this.handlers[type]) {
+      const idx = this.handlers[type].indexOf(fn);
+      if (idx !== -1) {
+        this.handlers[type].splice(idx, 1);
+      }
+    }
+  }
+  fire(type, event) {
+    for (let i2 = 0; i2 < this.handlers[type].length; i2++) {
+      this.handlers[type][i2](event);
+    }
+  }
+  onTouchStart(event) {
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t2, _u, _v, _w, _x, _y, _z, _0, _1;
+    let didTouch1 = false;
+    let didTouch2 = false;
+    if (event.type !== "mousedown") {
+      if (!this.touch1) {
+        this.touch1 = event.changedTouches[0];
+        didTouch1 = true;
+      }
+      if ((didTouch1 && event.changedTouches.length > 1 || !didTouch1) && !this.touch2) {
+        this.touch2 = [...event.changedTouches].find((touch) => {
+          var _a2;
+          return touch.identifier !== ((_a2 = this.touch1) === null || _a2 === void 0 ? void 0 : _a2.identifier);
+        }) || null;
+        this.originalDistance = Math.sqrt(Math.pow(((_b = (_a = this.touch2) === null || _a === void 0 ? void 0 : _a.screenX) !== null && _b !== void 0 ? _b : 0) - ((_f = (_d = (_c = this.touchMove1) === null || _c === void 0 ? void 0 : _c.screenX) !== null && _d !== void 0 ? _d : (_e = this.touch1) === null || _e === void 0 ? void 0 : _e.screenX) !== null && _f !== void 0 ? _f : 0), 2) + Math.pow(((_h = (_g = this.touch2) === null || _g === void 0 ? void 0 : _g.screenY) !== null && _h !== void 0 ? _h : 0) - ((_m = (_k = (_j = this.touchMove1) === null || _j === void 0 ? void 0 : _j.screenY) !== null && _k !== void 0 ? _k : (_l = this.touch1) === null || _l === void 0 ? void 0 : _l.screenY) !== null && _m !== void 0 ? _m : 0), 2));
+        this.originalAngle = Math.atan2(((_p = (_o = this.touch2) === null || _o === void 0 ? void 0 : _o.screenY) !== null && _p !== void 0 ? _p : 0) - ((_t2 = (_r = (_q = this.touchMove1) === null || _q === void 0 ? void 0 : _q.screenY) !== null && _r !== void 0 ? _r : (_s = this.touch1) === null || _s === void 0 ? void 0 : _s.screenY) !== null && _t2 !== void 0 ? _t2 : 0), ((_v = (_u = this.touch2) === null || _u === void 0 ? void 0 : _u.screenX) !== null && _v !== void 0 ? _v : 0) - ((_z = (_x = (_w = this.touchMove1) === null || _w === void 0 ? void 0 : _w.screenX) !== null && _x !== void 0 ? _x : (_y = this.touch1) === null || _y === void 0 ? void 0 : _y.screenX) !== null && _z !== void 0 ? _z : 0)) / (Math.PI / 180);
+        return;
+      }
+      if (!didTouch1 && !didTouch2) {
+        return;
+      }
+    }
+    if (didTouch1 || event.type === "mousedown") {
+      this.thresholdX = this.opts.threshold("x", this);
+      this.thresholdY = this.opts.threshold("y", this);
+      this.disregardVelocityThresholdX = this.opts.disregardVelocityThreshold("x", this);
+      this.disregardVelocityThresholdY = this.opts.disregardVelocityThreshold("y", this);
+      this.touchStartX = event.type === "mousedown" ? event.screenX : ((_0 = this.touch1) === null || _0 === void 0 ? void 0 : _0.screenX) || 0;
+      this.touchStartY = event.type === "mousedown" ? event.screenY : ((_1 = this.touch1) === null || _1 === void 0 ? void 0 : _1.screenY) || 0;
+      this.touchMoveX = null;
+      this.touchMoveY = null;
+      this.touchEndX = null;
+      this.touchEndY = null;
+      this.swipingDirection = null;
+      this.longPressTimer = setTimeout(() => this.fire("longpress", event), this.opts.longPressTime);
+      this.scale = 1;
+      this.rotation = 0;
+      this.fire("panstart", event);
+    }
+  }
+  onTouchMove(event) {
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
+    if (event.type === "mousemove" && (!this.touchStartX || this.touchEndX !== null)) {
+      return;
+    }
+    let touch1 = void 0;
+    let touch2 = void 0;
+    if (event.type !== "mousemove") {
+      touch1 = [...event.changedTouches].find((touch) => {
+        var _a2;
+        return touch.identifier === ((_a2 = this.touch1) === null || _a2 === void 0 ? void 0 : _a2.identifier);
+      });
+      this.touchMove1 = touch1 || this.touchMove1;
+      touch2 = [...event.changedTouches].find((touch) => {
+        var _a2;
+        return touch.identifier === ((_a2 = this.touch2) === null || _a2 === void 0 ? void 0 : _a2.identifier);
+      });
+      this.touchMove2 = touch2 || this.touchMove2;
+    }
+    if (event.type === "mousemove" || touch1) {
+      const touchMoveX = (event.type === "mousemove" ? event.screenX : (_a = touch1 === null || touch1 === void 0 ? void 0 : touch1.screenX) !== null && _a !== void 0 ? _a : 0) - ((_b = this.touchStartX) !== null && _b !== void 0 ? _b : 0);
+      this.velocityX = touchMoveX - ((_c = this.touchMoveX) !== null && _c !== void 0 ? _c : 0);
+      this.touchMoveX = touchMoveX;
+      const touchMoveY = (event.type === "mousemove" ? event.screenY : (_d = touch1 === null || touch1 === void 0 ? void 0 : touch1.screenY) !== null && _d !== void 0 ? _d : 0) - ((_e = this.touchStartY) !== null && _e !== void 0 ? _e : 0);
+      this.velocityY = touchMoveY - ((_f = this.touchMoveY) !== null && _f !== void 0 ? _f : 0);
+      this.touchMoveY = touchMoveY;
+      const absTouchMoveX = Math.abs(this.touchMoveX);
+      const absTouchMoveY = Math.abs(this.touchMoveY);
+      this.swipingHorizontal = absTouchMoveX > this.thresholdX;
+      this.swipingVertical = absTouchMoveY > this.thresholdY;
+      this.swipingDirection = absTouchMoveX > absTouchMoveY ? this.swipingHorizontal ? "horizontal" : "pre-horizontal" : this.swipingVertical ? "vertical" : "pre-vertical";
+      if (Math.max(absTouchMoveX, absTouchMoveY) > this.opts.pressThreshold) {
+        clearTimeout((_g = this.longPressTimer) !== null && _g !== void 0 ? _g : void 0);
+      }
+      this.fire("panmove", event);
+    }
+    if (event.type !== "mousemove" && this.touchMove1 != null && this.touchMove2 != null) {
+      this.newDistance = Math.sqrt(Math.pow(this.touchMove2.screenX - this.touchMove1.screenX, 2) + Math.pow(this.touchMove2.screenY - this.touchMove1.screenY, 2));
+      this.scale = this.newDistance / ((_h = this.originalDistance) !== null && _h !== void 0 ? _h : 0);
+      this.fire("pinch", event);
+      this.newAngle = Math.atan2(((_j = this.touchMove2.screenY) !== null && _j !== void 0 ? _j : 0) - ((_k = this.touchMove1.screenY) !== null && _k !== void 0 ? _k : 0), ((_l = this.touchMove2.screenX) !== null && _l !== void 0 ? _l : 0) - ((_m = this.touchMove1.screenX) !== null && _m !== void 0 ? _m : 0)) / (Math.PI / 180);
+      this.rotation = this.newAngle - ((_o = this.originalAngle) !== null && _o !== void 0 ? _o : 0);
+      this.fire("rotate", event);
+    }
+  }
+  onTouchEnd(event) {
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
+    let touch1 = void 0;
+    if (event.type !== "mouseup") {
+      touch1 = [...event.changedTouches].find((touch) => {
+        var _a2;
+        return touch.identifier === ((_a2 = this.touch1) === null || _a2 === void 0 ? void 0 : _a2.identifier);
+      });
+      if (![...event.touches].find((touch) => {
+        var _a2;
+        return touch.identifier === ((_a2 = this.touch1) === null || _a2 === void 0 ? void 0 : _a2.identifier);
+      })) {
+        this.touch1 = null;
+        this.touchMove1 = null;
+      }
+      if (![...event.touches].find((touch) => {
+        var _a2;
+        return touch.identifier === ((_a2 = this.touch2) === null || _a2 === void 0 ? void 0 : _a2.identifier);
+      })) {
+        this.touch2 = null;
+        this.touchMove2 = null;
+      }
+    }
+    if (event.type === "mouseup" && (!this.touchStartX || this.touchEndX !== null)) {
+      return;
+    }
+    if (event.type === "mouseup" || touch1) {
+      this.touchEndX = event.type === "mouseup" ? event.screenX : (_a = touch1 === null || touch1 === void 0 ? void 0 : touch1.screenX) !== null && _a !== void 0 ? _a : 0;
+      this.touchEndY = event.type === "mouseup" ? event.screenY : (_b = touch1 === null || touch1 === void 0 ? void 0 : touch1.screenY) !== null && _b !== void 0 ? _b : 0;
+      this.fire("panend", event);
+      clearTimeout((_c = this.longPressTimer) !== null && _c !== void 0 ? _c : void 0);
+      const x2 = this.touchEndX - ((_d = this.touchStartX) !== null && _d !== void 0 ? _d : 0);
+      const absX = Math.abs(x2);
+      const y2 = this.touchEndY - ((_e = this.touchStartY) !== null && _e !== void 0 ? _e : 0);
+      const absY = Math.abs(y2);
+      const distance = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2));
+      const absDistance = Math.abs(distance);
+      const diagonal = absY / absX;
+      if (absX > this.thresholdX || absY > this.thresholdY || this.opts.diagonalSwipes && (absDistance > this.thresholdX || absDistance > this.thresholdY)) {
+        this.swipedHorizontal = absX > this.thresholdX || this.opts.diagonalSwipes && absDistance > this.thresholdX;
+        this.swipedVertical = absY > this.thresholdY || this.opts.diagonalSwipes && absDistance > this.thresholdY;
+        if (!this.opts.diagonalSwipes || diagonal < Math.tan((45 - this.opts.diagonalLimit) * Math.PI / 180) || diagonal > Math.tan((45 + this.opts.diagonalLimit) * Math.PI / 180)) {
+          if (absX >= absY) {
+            this.swipedVertical = false;
+          }
+          if (absY > absX) {
+            this.swipedHorizontal = false;
+          }
+        }
+        if (this.swipedHorizontal) {
+          if (x2 < 0) {
+            if (((_f = this.velocityX) !== null && _f !== void 0 ? _f : 0) < -this.opts.velocityThreshold || distance < -this.disregardVelocityThresholdX) {
+              this.fire("swipeleft", event);
+            }
+          } else {
+            if (((_g = this.velocityX) !== null && _g !== void 0 ? _g : 0) > this.opts.velocityThreshold || distance > this.disregardVelocityThresholdX) {
+              this.fire("swiperight", event);
+            }
+          }
+        }
+        if (this.swipedVertical) {
+          if (y2 < 0) {
+            if (((_h = this.velocityY) !== null && _h !== void 0 ? _h : 0) < -this.opts.velocityThreshold || distance < -this.disregardVelocityThresholdY) {
+              this.fire("swipeup", event);
+            }
+          } else {
+            if (((_j = this.velocityY) !== null && _j !== void 0 ? _j : 0) > this.opts.velocityThreshold || distance > this.disregardVelocityThresholdY) {
+              this.fire("swipedown", event);
+            }
+          }
+        }
+      } else if (absX < this.opts.pressThreshold && absY < this.opts.pressThreshold) {
+        if (this.doubleTapWaiting) {
+          this.doubleTapWaiting = false;
+          clearTimeout((_k = this.doubleTapTimer) !== null && _k !== void 0 ? _k : void 0);
+          this.fire("doubletap", event);
+        } else {
+          this.doubleTapWaiting = true;
+          this.doubleTapTimer = setTimeout(() => this.doubleTapWaiting = false, this.opts.doubleTapTime);
+          this.fire("tap", event);
+        }
+      }
+    }
+    if (!this.touch1 && !this.touch2) {
+      this.fire("pinchend", event);
+      this.fire("rotateend", event);
+      this.originalDistance = null;
+      this.newDistance = null;
+      this.scale = null;
+      this.originalAngle = null;
+      this.newAngle = null;
+      this.rotation = null;
+    }
+  }
+};
+TinyGesture.defaults = {
+  threshold: (type, _self) => Math.max(25, Math.floor(0.15 * (type === "x" ? window.innerWidth || document.body.clientWidth : window.innerHeight || document.body.clientHeight))),
+  velocityThreshold: 10,
+  disregardVelocityThreshold: (type, self2) => Math.floor(0.5 * (type === "x" ? self2.element.clientWidth : self2.element.clientHeight)),
+  pressThreshold: 8,
+  diagonalSwipes: false,
+  diagonalLimit: 15,
+  longPressTime: 500,
+  doubleTapTime: 300,
+  mouseSupport: true
+};
+var TinyGesture_default = TinyGesture;
+var passiveIfSupported = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, "passive", {
+    get: function() {
+      passiveIfSupported = { passive: true };
+    }
+  }));
+} catch (err) {
+}
+
+// src/ui/actions/tappable.ts
+function tappable(el) {
+  const gesture = new TinyGesture_default(el);
+  let pressed = false;
+  gesture.on("tap", () => {
+    if (pressed) {
+      return;
+    }
+    el.dispatchEvent(new CustomEvent("tap"));
+  });
+  gesture.on("longpress", () => {
+    pressed = true;
+    el.dispatchEvent(new CustomEvent("longpress"));
+  });
+  gesture.on("panend", () => {
+    if (pressed) {
+      setTimeout(() => {
+        pressed = false;
+      }, 0);
+    }
+  });
+  return {
+    destroy() {
+      gesture.destroy();
+    }
+  };
+}
+
 // src/ui/hooks/use-color-override.ts
 function useColorOverride(task) {
   const { isDarkMode } = getContext(obsidianContext);
   return derived([settings, isDarkMode], ([$settings, $isDarkMode]) => {
     const colorOverride = $settings.colorOverrides.find(
-      (override) => task.firstLineText.includes(override.text)
+      (override) => getFirstLine(task.text).includes(override.text)
     );
     if (colorOverride) {
       return $isDarkMode ? colorOverride == null ? void 0 : colorOverride.darkModeColor : colorOverride == null ? void 0 : colorOverride.color;
@@ -47435,6 +47459,7 @@ function add_css16(target) {
 function create_fragment42(ctx) {
   let div1;
   let div0;
+  let tappable_action;
   let useActions_action;
   let current2;
   let mounted;
@@ -47476,22 +47501,35 @@ function create_fragment42(ctx) {
         dispose = [
           listen(
             div0,
+            "tap",
+            /*tap_handler*/
+            ctx[7]
+          ),
+          listen(
+            div0,
+            "longpress",
+            /*longpress_handler*/
+            ctx[8]
+          ),
+          listen(
+            div0,
             "pointerup",
             /*pointerup_handler*/
-            ctx[7]
+            ctx[9]
           ),
           listen(
             div0,
             "pointerenter",
             /*pointerenter_handler*/
-            ctx[8]
+            ctx[10]
           ),
           listen(
             div0,
             "pointerleave",
             /*pointerleave_handler*/
-            ctx[9]
+            ctx[11]
           ),
+          action_destroyer(tappable_action = tappable.call(null, div0)),
           action_destroyer(useActions_action = useActions.call(
             null,
             div0,
@@ -47571,6 +47609,12 @@ function instance42($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { task } = $$props;
   let { use = [] } = $$props;
+  function tap_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function longpress_handler(event) {
+    bubble.call(this, $$self, event);
+  }
   function pointerup_handler(event) {
     bubble.call(this, $$self, event);
   }
@@ -47608,6 +47652,8 @@ function instance42($$self, $$props, $$invalidate) {
     $override,
     $$scope,
     slots,
+    tap_handler,
+    longpress_handler,
     pointerup_handler,
     pointerenter_handler,
     pointerleave_handler
@@ -47632,7 +47678,7 @@ function create_default_slot24(ctx) {
     default_slot_template,
     ctx,
     /*$$scope*/
-    ctx[18],
+    ctx[20],
     null
   );
   return {
@@ -47649,20 +47695,20 @@ function create_default_slot24(ctx) {
     p(ctx2, dirty) {
       if (default_slot) {
         if (default_slot.p && (!current2 || dirty & /*$$scope*/
-        262144)) {
+        1048576)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
             /*$$scope*/
-            ctx2[18],
+            ctx2[20],
             !current2 ? get_all_dirty_from_scope(
               /*$$scope*/
-              ctx2[18]
+              ctx2[20]
             ) : get_slot_changes(
               default_slot_template,
               /*$$scope*/
-              ctx2[18],
+              ctx2[20],
               dirty,
               null
             ),
@@ -47709,19 +47755,29 @@ function create_fragment43(ctx) {
     }
   });
   timeblockbase.$on(
+    "tap",
+    /*tap_handler*/
+    ctx[15]
+  );
+  timeblockbase.$on(
+    "longpress",
+    /*longpress_handler*/
+    ctx[16]
+  );
+  timeblockbase.$on(
     "pointerup",
     /*pointerup_handler*/
-    ctx[15]
+    ctx[17]
   );
   timeblockbase.$on(
     "pointerenter",
     /*pointerenter_handler*/
-    ctx[16]
+    ctx[18]
   );
   timeblockbase.$on(
     "pointerleave",
     /*pointerleave_handler*/
-    ctx[17]
+    ctx[19]
   );
   return {
     c() {
@@ -47857,7 +47913,7 @@ function create_fragment43(ctx) {
         timeblockbase_changes.use = /*use*/
         ctx2[1];
       if (dirty & /*$$scope*/
-      262144) {
+      1048576) {
         timeblockbase_changes.$$scope = { dirty, ctx: ctx2 };
       }
       timeblockbase.$set(timeblockbase_changes);
@@ -47900,6 +47956,12 @@ function instance43($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
   let { task } = $$props;
   let { use = [] } = $$props;
+  function tap_handler(event) {
+    bubble.call(this, $$self, event);
+  }
+  function longpress_handler(event) {
+    bubble.call(this, $$self, event);
+  }
   function pointerup_handler(event) {
     bubble.call(this, $$self, event);
   }
@@ -47915,7 +47977,7 @@ function instance43($$self, $$props, $$invalidate) {
     if ("use" in $$props2)
       $$invalidate(1, use = $$props2.use);
     if ("$$scope" in $$props2)
-      $$invalidate(18, $$scope = $$props2.$$scope);
+      $$invalidate(20, $$scope = $$props2.$$scope);
   };
   $$self.$$.update = () => {
     if ($$self.$$.dirty & /*task*/
@@ -47940,6 +48002,8 @@ function instance43($$self, $$props, $$invalidate) {
     $height,
     $offset,
     slots,
+    tap_handler,
+    longpress_handler,
     pointerup_handler,
     pointerenter_handler,
     pointerleave_handler,
@@ -48563,14 +48627,24 @@ function create_fragment44(ctx) {
         /*resize*/
         ctx[12].anchorSetup,
         /*resizeFromTop*/
-        ctx[14].anchorSetup,
-        /*tap*/
-        ctx[16]
+        ctx[14].anchorSetup
       ],
       $$slots: { default: [create_default_slot_33] },
       $$scope: { ctx }
     }
   });
+  scheduledtimeblock.$on("tap", function() {
+    if (is_function(
+      /*onMouseUp*/
+      ctx[4]
+    ))
+      ctx[4].apply(this, arguments);
+  });
+  scheduledtimeblock.$on(
+    "longpress",
+    /*longpress_handler*/
+    ctx[16]
+  );
   scheduledtimeblock.$on(
     "pointerup",
     /*pointerup_handler*/
@@ -48604,27 +48678,28 @@ function create_fragment44(ctx) {
       insert(target, if_block_anchor, anchor);
       current2 = true;
     },
-    p(ctx2, [dirty]) {
+    p(new_ctx, [dirty]) {
+      ctx = new_ctx;
       const scheduledtimeblock_changes = {};
       if (dirty & /*task*/
       1)
         scheduledtimeblock_changes.task = /*task*/
-        ctx2[0];
+        ctx[0];
       if (dirty & /*$$scope, task*/
       1073741825) {
-        scheduledtimeblock_changes.$$scope = { dirty, ctx: ctx2 };
+        scheduledtimeblock_changes.$$scope = { dirty, ctx };
       }
       scheduledtimeblock.$set(scheduledtimeblock_changes);
       if (!/*$editOperation*/
-      ctx2[5]) {
+      ctx[5]) {
         if (if_block) {
-          if_block.p(ctx2, dirty);
+          if_block.p(ctx, dirty);
           if (dirty & /*$editOperation*/
           32) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block7(ctx2);
+          if_block = create_if_block7(ctx);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -48690,38 +48765,12 @@ function instance44($$self, $$props, $$invalidate) {
   });
   const { isActive: isResizeFromTopActive } = resizeFromTop2;
   component_subscribe($$self, isResizeFromTopActive, (value) => $$invalidate(8, $isResizeFromTopActive = value));
-  function tap(el) {
-    const gesture = new TinyGesture_default(el);
-    let pressed = false;
-    gesture.on("tap", () => {
-      if (pressed) {
-        return;
-      }
-      onMouseUp();
-    });
-    gesture.on("longpress", () => {
-      pressed = true;
-      navigator.vibrate(100);
-      isDragActive.set(true);
-      isResizeActive.set(true);
-      isResizeFromTopActive.set(true);
-    });
-    gesture.on("panend", () => {
-      if (pressed) {
-        setTimeout(
-          () => {
-            pressed = false;
-          },
-          0
-        );
-      }
-    });
-    return {
-      destroy() {
-        gesture.destroy();
-      }
-    };
-  }
+  const longpress_handler = () => {
+    navigator.vibrate(100);
+    isDragActive.set(true);
+    isResizeActive.set(true);
+    isResizeFromTopActive.set(true);
+  };
   const pointerup_handler = (event) => {
     if (!isTouchEvent(event)) {
       onMouseUp();
@@ -48794,7 +48843,7 @@ function instance44($$self, $$props, $$invalidate) {
     isResizeActive,
     resizeFromTop2,
     isResizeFromTopActive,
-    tap,
+    longpress_handler,
     pointerup_handler,
     pointerenter_handler,
     pointerleave_handler,
@@ -49070,7 +49119,7 @@ function add_css19(target) {
 }
 function get_each_context5(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[25] = list[i2];
+  child_ctx[26] = list[i2];
   return child_ctx;
 }
 function create_if_block_15(ctx) {
@@ -49121,9 +49170,9 @@ function create_else_block3(ctx) {
   function func() {
     return (
       /*func*/
-      ctx[20](
+      ctx[21](
         /*task*/
-        ctx[25]
+        ctx[26]
       )
     );
   }
@@ -49131,7 +49180,7 @@ function create_else_block3(ctx) {
     props: {
       onFloatingUiPointerDown: (
         /*updatePointerOffsetY*/
-        ctx[16]
+        ctx[17]
       ),
       onGripMouseDown: (
         /*handleGripMouseDown*/
@@ -49144,7 +49193,7 @@ function create_else_block3(ctx) {
       ),
       task: (
         /*task*/
-        ctx[25]
+        ctx[26]
       )
     }
   });
@@ -49164,16 +49213,16 @@ function create_else_block3(ctx) {
         localtimeblock_changes.onGripMouseDown = /*handleGripMouseDown*/
         ctx[5];
       if (dirty & /*handleTaskMouseUp, $displayedTasks*/
-      8256)
+      16448)
         localtimeblock_changes.onMouseUp = func;
       if (dirty & /*handleResizerMouseDown*/
       128)
         localtimeblock_changes.onResizerMouseDown = /*handleResizerMouseDown*/
         ctx[7];
       if (dirty & /*$displayedTasks*/
-      8192)
+      16384)
         localtimeblock_changes.task = /*task*/
-        ctx[25];
+        ctx[26];
       localtimeblock.$set(localtimeblock_changes);
     },
     i(local) {
@@ -49196,7 +49245,7 @@ function create_if_block8(ctx) {
   let current2;
   remotetimeblock = new remote_time_block_default({ props: { task: (
     /*task*/
-    ctx[25]
+    ctx[26]
   ) } });
   return {
     c() {
@@ -49209,9 +49258,9 @@ function create_if_block8(ctx) {
     p(ctx2, dirty) {
       const remotetimeblock_changes = {};
       if (dirty & /*$displayedTasks*/
-      8192)
+      16384)
         remotetimeblock_changes.task = /*task*/
-        ctx2[25];
+        ctx2[26];
       remotetimeblock.$set(remotetimeblock_changes);
     },
     i(local) {
@@ -49240,7 +49289,7 @@ function create_each_block5(key_1, ctx) {
   function select_block_type(ctx2, dirty) {
     if (
       /*task*/
-      ctx2[25].calendar
+      ctx2[26].calendar
     )
       return 0;
     return 1;
@@ -49305,9 +49354,12 @@ function create_each_block5(key_1, ctx) {
   };
 }
 function create_default_slot27(ctx) {
-  let show_if = isToday(
-    /*actualDay*/
-    ctx[1]
+  let show_if = (
+    /*$isToday*/
+    ctx[13](
+      /*actualDay*/
+      ctx[1]
+    )
   );
   let t2;
   let div;
@@ -49319,11 +49371,11 @@ function create_default_slot27(ctx) {
   let if_block = show_if && create_if_block_15(ctx);
   let each_value = (
     /*$displayedTasks*/
-    ctx[13].withTime
+    ctx[14].withTime
   );
   const get_key = (ctx2) => getRenderKey(
     /*task*/
-    ctx2[25]
+    ctx2[26]
   );
   for (let i2 = 0; i2 < each_value.length; i2 += 1) {
     let child_ctx = get_each_context5(ctx, each_value, i2);
@@ -49351,7 +49403,7 @@ function create_default_slot27(ctx) {
           each_blocks[i2].m(div, null);
         }
       }
-      ctx[21](div);
+      ctx[22](div);
       current2 = true;
       if (!mounted) {
         dispose = [
@@ -49366,23 +49418,23 @@ function create_default_slot27(ctx) {
             div,
             "pointerdown",
             /*pointerdown_handler*/
-            ctx[22]
+            ctx[23]
           ),
           listen(
             div,
             "pointermove",
             /*updatePointerOffsetY*/
-            ctx[16]
+            ctx[17]
           ),
           listen(
             div,
             "pointerup",
             /*confirmEdit*/
-            ctx[14]
+            ctx[15]
           ),
           listen(div, "pointerup", stop_propagation(
             /*pointerup_handler*/
-            ctx[19]
+            ctx[20]
           ))
         ];
         mounted = true;
@@ -49390,17 +49442,18 @@ function create_default_slot27(ctx) {
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
-      if (dirty & /*actualDay*/
-      2)
-        show_if = isToday(
+      if (dirty & /*$isToday, actualDay*/
+      8194)
+        show_if = /*$isToday*/
+        ctx[13](
           /*actualDay*/
           ctx[1]
         );
       if (show_if) {
         if (if_block) {
           if_block.p(ctx, dirty);
-          if (dirty & /*actualDay*/
-          2) {
+          if (dirty & /*$isToday, actualDay*/
+          8194) {
             transition_in(if_block, 1);
           }
         } else {
@@ -49417,9 +49470,9 @@ function create_default_slot27(ctx) {
         check_outros();
       }
       if (dirty & /*$displayedTasks, updatePointerOffsetY, handleGripMouseDown, handleTaskMouseUp, handleResizerMouseDown*/
-      73952) {
+      147680) {
         each_value = /*$displayedTasks*/
-        ctx[13].withTime;
+        ctx[14].withTime;
         group_outros();
         each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, div, outro_and_destroy_block, create_each_block5, null, get_each_context5);
         check_outros();
@@ -49451,7 +49504,7 @@ function create_default_slot27(ctx) {
       for (let i2 = 0; i2 < each_blocks.length; i2 += 1) {
         each_blocks[i2].d();
       }
-      ctx[21](null);
+      ctx[22](null);
       mounted = false;
       run_all(dispose);
     }
@@ -49528,8 +49581,8 @@ function create_fragment47(ctx) {
           /*$settings*/
           ctx[11]
         );
-      if (dirty & /*$$scope, el, handleMouseEnter, handleContainerMouseDown, $displayedTasks, handleGripMouseDown, handleTaskMouseUp, handleResizerMouseDown, isUnderCursor, actualDay*/
-      268444151) {
+      if (dirty & /*$$scope, el, handleMouseEnter, handleContainerMouseDown, $displayedTasks, handleGripMouseDown, handleTaskMouseUp, handleResizerMouseDown, isUnderCursor, $isToday, actualDay*/
+      536895991) {
         column_changes.$$scope = { dirty, ctx };
       }
       column.$set(column_changes);
@@ -49569,15 +49622,17 @@ function instance47($$self, $$props, $$invalidate) {
   let $settings;
   let $dateRange;
   let $cursor, $$unsubscribe_cursor = noop, $$subscribe_cursor = () => ($$unsubscribe_cursor(), $$unsubscribe_cursor = subscribe(cursor, ($$value) => $$invalidate(12, $cursor = $$value)), cursor);
-  let $displayedTasks, $$unsubscribe_displayedTasks = noop, $$subscribe_displayedTasks = () => ($$unsubscribe_displayedTasks(), $$unsubscribe_displayedTasks = subscribe(displayedTasks, ($$value) => $$invalidate(13, $displayedTasks = $$value)), displayedTasks);
+  let $isToday;
+  let $displayedTasks, $$unsubscribe_displayedTasks = noop, $$subscribe_displayedTasks = () => ($$unsubscribe_displayedTasks(), $$unsubscribe_displayedTasks = subscribe(displayedTasks, ($$value) => $$invalidate(14, $displayedTasks = $$value)), displayedTasks);
   component_subscribe($$self, settings, ($$value) => $$invalidate(11, $settings = $$value));
+  component_subscribe($$self, isToday, ($$value) => $$invalidate(13, $isToday = $$value));
   $$self.$$.on_destroy.push(() => $$unsubscribe_cursor());
   $$self.$$.on_destroy.push(() => $$unsubscribe_displayedTasks());
   let { day = void 0 } = $$props;
   let { isUnderCursor = false } = $$props;
   const { editContext: { confirmEdit, getEditHandlers } } = getContext(obsidianContext);
   const dateRange = getContext(dateRangeContextKey);
-  component_subscribe($$self, dateRange, (value) => $$invalidate(18, $dateRange = value));
+  component_subscribe($$self, dateRange, (value) => $$invalidate(19, $dateRange = value));
   let el;
   function updatePointerOffsetY(event) {
     const viewportToElOffsetY = el.getBoundingClientRect().top;
@@ -49604,20 +49659,20 @@ function instance47($$self, $$props, $$invalidate) {
   };
   $$self.$$set = ($$props2) => {
     if ("day" in $$props2)
-      $$invalidate(17, day = $$props2.day);
+      $$invalidate(18, day = $$props2.day);
     if ("isUnderCursor" in $$props2)
       $$invalidate(0, isUnderCursor = $$props2.isUnderCursor);
   };
   $$self.$$.update = () => {
     if ($$self.$$.dirty & /*day, $dateRange*/
-    393216) {
+    786432) {
       $:
         $$invalidate(1, actualDay = day || $dateRange[0]);
     }
     if ($$self.$$.dirty & /*actualDay*/
     2) {
       $:
-        $$subscribe_displayedTasks($$invalidate(10, { displayedTasks, cancelEdit, handleContainerMouseDown, handleResizerMouseDown, handleTaskMouseUp, handleGripMouseDown, handleMouseEnter, pointerOffsetY, cursor } = getEditHandlers(actualDay), displayedTasks, ($$invalidate(9, cancelEdit), $$invalidate(1, actualDay), $$invalidate(17, day), $$invalidate(18, $dateRange)), ($$invalidate(8, handleContainerMouseDown), $$invalidate(1, actualDay), $$invalidate(17, day), $$invalidate(18, $dateRange)), ($$invalidate(7, handleResizerMouseDown), $$invalidate(1, actualDay), $$invalidate(17, day), $$invalidate(18, $dateRange)), ($$invalidate(6, handleTaskMouseUp), $$invalidate(1, actualDay), $$invalidate(17, day), $$invalidate(18, $dateRange)), ($$invalidate(5, handleGripMouseDown), $$invalidate(1, actualDay), $$invalidate(17, day), $$invalidate(18, $dateRange)), ($$invalidate(4, handleMouseEnter), $$invalidate(1, actualDay), $$invalidate(17, day), $$invalidate(18, $dateRange)), $$subscribe_cursor($$invalidate(3, cursor))));
+        $$subscribe_displayedTasks($$invalidate(10, { displayedTasks, cancelEdit, handleContainerMouseDown, handleResizerMouseDown, handleTaskMouseUp, handleGripMouseDown, handleMouseEnter, pointerOffsetY, cursor } = getEditHandlers(actualDay), displayedTasks, ($$invalidate(9, cancelEdit), $$invalidate(1, actualDay), $$invalidate(18, day), $$invalidate(19, $dateRange)), ($$invalidate(8, handleContainerMouseDown), $$invalidate(1, actualDay), $$invalidate(18, day), $$invalidate(19, $dateRange)), ($$invalidate(7, handleResizerMouseDown), $$invalidate(1, actualDay), $$invalidate(18, day), $$invalidate(19, $dateRange)), ($$invalidate(6, handleTaskMouseUp), $$invalidate(1, actualDay), $$invalidate(18, day), $$invalidate(19, $dateRange)), ($$invalidate(5, handleGripMouseDown), $$invalidate(1, actualDay), $$invalidate(18, day), $$invalidate(19, $dateRange)), ($$invalidate(4, handleMouseEnter), $$invalidate(1, actualDay), $$invalidate(18, day), $$invalidate(19, $dateRange)), $$subscribe_cursor($$invalidate(3, cursor))));
     }
   };
   return [
@@ -49634,6 +49689,7 @@ function instance47($$self, $$props, $$invalidate) {
     displayedTasks,
     $settings,
     $cursor,
+    $isToday,
     $displayedTasks,
     confirmEdit,
     dateRange,
@@ -49649,13 +49705,13 @@ function instance47($$self, $$props, $$invalidate) {
 var Timeline = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance47, create_fragment47, safe_not_equal, { day: 17, isUnderCursor: 0 }, add_css19);
+    init(this, options, instance47, create_fragment47, safe_not_equal, { day: 18, isUnderCursor: 0 }, add_css19);
   }
 };
 var timeline_default = Timeline;
 
 // src/ui/components/unscheduled-task-container.svelte
-var import_moment12 = __toESM(require_moment());
+var import_moment11 = __toESM(require_moment());
 
 // node_modules/overlayscrollbars/overlayscrollbars.mjs
 var createCache = (t2, n2) => {
@@ -52749,14 +52805,24 @@ function create_fragment49(ctx) {
       ),
       use: [
         /*drag*/
-        ctx[6].anchorSetup,
-        /*tap*/
-        ctx[8]
+        ctx[6].anchorSetup
       ],
       $$slots: { default: [create_default_slot_16] },
       $$scope: { ctx }
     }
   });
+  timeblockbase.$on("tap", function() {
+    if (is_function(
+      /*onMouseUp*/
+      ctx[2]
+    ))
+      ctx[2].apply(this, arguments);
+  });
+  timeblockbase.$on(
+    "longpress",
+    /*longpress_handler*/
+    ctx[8]
+  );
   timeblockbase.$on(
     "pointerup",
     /*pointerup_handler*/
@@ -52790,27 +52856,28 @@ function create_fragment49(ctx) {
       insert(target, if_block_anchor, anchor);
       current2 = true;
     },
-    p(ctx2, [dirty]) {
+    p(new_ctx, [dirty]) {
+      ctx = new_ctx;
       const timeblockbase_changes = {};
       if (dirty & /*task*/
       1)
         timeblockbase_changes.task = /*task*/
-        ctx2[0];
+        ctx[0];
       if (dirty & /*$$scope, task*/
       2049) {
-        timeblockbase_changes.$$scope = { dirty, ctx: ctx2 };
+        timeblockbase_changes.$$scope = { dirty, ctx };
       }
       timeblockbase.$set(timeblockbase_changes);
       if (!/*$editOperation*/
-      ctx2[3]) {
+      ctx[3]) {
         if (if_block) {
-          if_block.p(ctx2, dirty);
+          if_block.p(ctx, dirty);
           if (dirty & /*$editOperation*/
           8) {
             transition_in(if_block, 1);
           }
         } else {
-          if_block = create_if_block10(ctx2);
+          if_block = create_if_block10(ctx);
           if_block.c();
           transition_in(if_block, 1);
           if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -52860,36 +52927,10 @@ function instance48($$self, $$props, $$invalidate) {
   });
   const { isActive } = drag2;
   component_subscribe($$self, isActive, (value) => $$invalidate(4, $isActive = value));
-  function tap(el) {
-    const gesture = new TinyGesture_default(el);
-    let pressed = false;
-    gesture.on("tap", () => {
-      if (pressed) {
-        return;
-      }
-      onMouseUp();
-    });
-    gesture.on("longpress", () => {
-      pressed = true;
-      navigator.vibrate(100);
-      isActive.set(true);
-    });
-    gesture.on("panend", () => {
-      if (pressed) {
-        setTimeout(
-          () => {
-            pressed = false;
-          },
-          0
-        );
-      }
-    });
-    return {
-      destroy() {
-        gesture.destroy();
-      }
-    };
-  }
+  const longpress_handler = () => {
+    navigator.vibrate(100);
+    isActive.set(true);
+  };
   const pointerup_handler = (event) => {
     if (!isTouchEvent(event)) {
       onMouseUp();
@@ -52913,7 +52954,7 @@ function instance48($$self, $$props, $$invalidate) {
     editOperation,
     drag2,
     isActive,
-    tap,
+    longpress_handler,
     pointerup_handler,
     func
   ];
@@ -53547,7 +53588,7 @@ var TimelineView = class extends import_obsidian8.ItemView {
 var import_obsidian9 = require("obsidian");
 
 // src/ui/components/week/header-actions.svelte
-var import_moment14 = __toESM(require_moment());
+var import_moment13 = __toESM(require_moment());
 function add_css22(target) {
   append_styles(target, "svelte-1qypoka", ".view-header-nav-buttons.svelte-1qypoka{display:flex;gap:var(--size-4-1)}.range.svelte-1qypoka{flex:1 0 0;margin-right:10px;white-space:nowrap}");
 }
@@ -53861,31 +53902,31 @@ var Header_actions = class extends SvelteComponent {
 var header_actions_default = Header_actions;
 
 // src/ui/components/week/week.svelte
-var import_moment16 = __toESM(require_moment());
+var import_moment15 = __toESM(require_moment());
 function add_css23(target) {
   append_styles(target, "svelte-1komws1", ".header-row{position:relative;display:flex}.day-buttons.svelte-1komws1{font-size:var(--font-ui-small)}.corner.svelte-1komws1{position:sticky;z-index:100;top:0;left:0;flex:0 0 var(--time-ruler-width);background-color:var(--background-primary);border:1px solid var(--background-modifier-border);border-top:none;border-left:none}.day-column.svelte-1komws1{display:flex;flex:1 0 200px;flex-direction:column;background-color:var(--background-secondary);border-right:1px solid var(--background-modifier-border)}.day-column.svelte-1komws1:last-child{border-right:none}.week-header.svelte-1komws1{position:relative;z-index:1000;overflow-x:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-bottom)}.header-cell.svelte-1komws1{overflow-x:hidden;flex:1 0 200px;background-color:var(--background-primary);border-right:1px solid var(--background-modifier-border);border-bottom:1px solid var(--background-modifier-border)}.header-cell.svelte-1komws1:last-of-type{flex:1 0 calc(200px + var(--scrollbar-width));border-right:none}.today.svelte-1komws1{color:white;background-color:var(--color-accent)}");
 }
 function get_each_context7(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[8] = list[i2];
+  child_ctx[9] = list[i2];
   return child_ctx;
 }
 function get_each_context_1(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[8] = list[i2];
+  child_ctx[9] = list[i2];
   return child_ctx;
 }
 function get_each_context_2(ctx, list, i2) {
   const child_ctx = ctx.slice();
-  child_ctx[8] = list[i2];
+  child_ctx[9] = list[i2];
   return child_ctx;
 }
 function create_default_slot_26(ctx) {
   let t_value = (
     /*day*/
-    ctx[8].format(
+    ctx[9].format(
       /*$settings*/
-      ctx[2].timelineDateFormat
+      ctx[3].timelineDateFormat
     ) + ""
   );
   let t2;
@@ -53898,10 +53939,10 @@ function create_default_slot_26(ctx) {
     },
     p(ctx2, dirty) {
       if (dirty & /*$dateRange, $settings*/
-      6 && t_value !== (t_value = /*day*/
-      ctx2[8].format(
+      10 && t_value !== (t_value = /*day*/
+      ctx2[9].format(
         /*$settings*/
-        ctx2[2].timelineDateFormat
+        ctx2[3].timelineDateFormat
       ) + ""))
         set_data(t2, t_value);
     },
@@ -53921,9 +53962,9 @@ function create_each_block_2(ctx) {
   function click_handler() {
     return (
       /*click_handler*/
-      ctx[6](
+      ctx[7](
         /*day*/
-        ctx[8]
+        ctx[9]
       )
     );
   }
@@ -53942,15 +53983,21 @@ function create_each_block_2(ctx) {
       create_component(controlbutton.$$.fragment);
       t2 = space();
       set_style(div_1, "display", "contents");
-      set_style(div_1, "--color", __color_last = isToday(
+      set_style(div_1, "--color", __color_last = /*$isToday*/
+      ctx[2](
         /*day*/
-        ctx[8]
+        ctx[9]
       ) ? "white" : "var(--icon-color)");
       attr(div, "class", "header-cell svelte-1komws1");
-      toggle_class(div, "today", isToday(
-        /*day*/
-        ctx[8]
-      ));
+      toggle_class(
+        div,
+        "today",
+        /*$isToday*/
+        ctx[2](
+          /*day*/
+          ctx[9]
+        )
+      );
     },
     m(target, anchor) {
       insert(target, div, anchor);
@@ -53961,25 +54008,31 @@ function create_each_block_2(ctx) {
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
-      if (dirty & /*$dateRange*/
-      2 && __color_last !== (__color_last = isToday(
+      if (dirty & /*$isToday, $dateRange*/
+      6 && __color_last !== (__color_last = /*$isToday*/
+      ctx[2](
         /*day*/
-        ctx[8]
+        ctx[9]
       ) ? "white" : "var(--icon-color)")) {
         set_style(div_1, "--color", __color_last);
       }
       const controlbutton_changes = {};
       if (dirty & /*$$scope, $dateRange, $settings*/
-      65542) {
+      131082) {
         controlbutton_changes.$$scope = { dirty, ctx };
       }
       controlbutton.$set(controlbutton_changes);
-      if (!current2 || dirty & /*isToday, $dateRange*/
-      2) {
-        toggle_class(div, "today", isToday(
-          /*day*/
-          ctx[8]
-        ));
+      if (!current2 || dirty & /*$isToday, $dateRange*/
+      6) {
+        toggle_class(
+          div,
+          "today",
+          /*$isToday*/
+          ctx[2](
+            /*day*/
+            ctx[9]
+          )
+        );
       }
     },
     i(local) {
@@ -54005,7 +54058,7 @@ function create_each_block_1(ctx) {
   let current2;
   unscheduledtaskcontainer = new unscheduled_task_container_default({ props: { day: (
     /*day*/
-    ctx[8]
+    ctx[9]
   ) } });
   return {
     c() {
@@ -54023,7 +54076,7 @@ function create_each_block_1(ctx) {
       if (dirty & /*$dateRange*/
       2)
         unscheduledtaskcontainer_changes.day = /*day*/
-        ctx2[8];
+        ctx2[9];
       unscheduledtaskcontainer.$set(unscheduledtaskcontainer_changes);
     },
     i(local) {
@@ -54064,9 +54117,9 @@ function create_default_slot_19(ctx) {
   resizehandle.$on("mousedown", function() {
     if (is_function(
       /*startEdit*/
-      ctx[11]
+      ctx[12]
     ))
-      ctx[11].apply(this, arguments);
+      ctx[12].apply(this, arguments);
   });
   return {
     c() {
@@ -54154,7 +54207,7 @@ function create_each_block7(ctx) {
   timeline = new timeline_default({
     props: { day: (
       /*day*/
-      ctx[8]
+      ctx[9]
     ), isUnderCursor: true }
   });
   return {
@@ -54175,7 +54228,7 @@ function create_each_block7(ctx) {
       if (dirty & /*$dateRange*/
       2)
         timeline_changes.day = /*day*/
-        ctx2[8];
+        ctx2[9];
       timeline.$set(timeline_changes);
     },
     i(local) {
@@ -54205,7 +54258,7 @@ function create_default_slot32(ctx) {
     props: {
       visibleHours: getVisibleHours(
         /*$settings*/
-        ctx[2]
+        ctx[3]
       )
     }
   });
@@ -54247,10 +54300,10 @@ function create_default_slot32(ctx) {
     p(ctx2, dirty) {
       const ruler_changes = {};
       if (dirty & /*$settings*/
-      4)
+      8)
         ruler_changes.visibleHours = getVisibleHours(
           /*$settings*/
-          ctx2[2]
+          ctx2[3]
         );
       ruler.$set(ruler_changes);
       if (dirty & /*$dateRange*/
@@ -54336,8 +54389,8 @@ function create_fragment53(ctx) {
       $$slots: {
         default: [
           create_default_slot_19,
-          ({ startEdit }) => ({ 11: startEdit }),
-          ({ startEdit }) => startEdit ? 2048 : 0
+          ({ startEdit }) => ({ 12: startEdit }),
+          ({ startEdit }) => startEdit ? 4096 : 0
         ]
       },
       $$scope: { ctx }
@@ -54352,7 +54405,7 @@ function create_fragment53(ctx) {
   scroller.$on(
     "scroll",
     /*handleScroll*/
-    ctx[5]
+    ctx[6]
   );
   return {
     c() {
@@ -54387,14 +54440,14 @@ function create_fragment53(ctx) {
       }
       append(div2, t2);
       mount_component(resizeablebox, div2, null);
-      ctx[7](div2);
+      ctx[8](div2);
       insert(target, t3, anchor);
       mount_component(scroller, target, anchor);
       current2 = true;
     },
     p(ctx2, [dirty]) {
-      if (dirty & /*isToday, $dateRange, obsidianFacade, $settings*/
-      14) {
+      if (dirty & /*$isToday, $dateRange, obsidianFacade, $settings*/
+      30) {
         each_value_2 = /*$dateRange*/
         ctx2[1];
         let i2;
@@ -54418,13 +54471,13 @@ function create_fragment53(ctx) {
       }
       const resizeablebox_changes = {};
       if (dirty & /*$$scope, startEdit, $dateRange*/
-      67586) {
+      135170) {
         resizeablebox_changes.$$scope = { dirty, ctx: ctx2 };
       }
       resizeablebox.$set(resizeablebox_changes);
       const scroller_changes = {};
       if (dirty & /*$$scope, $dateRange, $settings*/
-      65542) {
+      131082) {
         scroller_changes.$$scope = { dirty, ctx: ctx2 };
       }
       scroller.$set(scroller_changes);
@@ -54458,7 +54511,7 @@ function create_fragment53(ctx) {
         detach(div2);
       destroy_each(each_blocks, detaching);
       destroy_component(resizeablebox);
-      ctx[7](null);
+      ctx[8](null);
       if (detaching)
         detach(t3);
       destroy_component(scroller, detaching);
@@ -54467,8 +54520,10 @@ function create_fragment53(ctx) {
 }
 function instance52($$self, $$props, $$invalidate) {
   let $dateRange;
+  let $isToday;
   let $settings;
-  component_subscribe($$self, settings, ($$value) => $$invalidate(2, $settings = $$value));
+  component_subscribe($$self, isToday, ($$value) => $$invalidate(2, $isToday = $$value));
+  component_subscribe($$self, settings, ($$value) => $$invalidate(3, $settings = $$value));
   const { obsidianFacade } = getContext(obsidianContext);
   const dateRange = getContext(dateRangeContextKey);
   component_subscribe($$self, dateRange, (value) => $$invalidate(1, $dateRange = value));
@@ -54493,6 +54548,7 @@ function instance52($$self, $$props, $$invalidate) {
   return [
     weekHeaderRef,
     $dateRange,
+    $isToday,
     $settings,
     obsidianFacade,
     dateRange,
@@ -55441,7 +55497,7 @@ function moveTaskToColumn(day, task, baseline) {
   }
   return moveTaskToDay(baseline, task, day);
 }
-function getTasksWithUpdatedDay(tasks2) {
+function getTasksWithUpdatedDayProp(tasks2) {
   return Object.entries(tasks2).flatMap(
     ([dayKey, tasks3]) => tasks3.withTime.map((task) => ({ dayKey, task }))
   ).filter(({ dayKey, task }) => {
@@ -55477,7 +55533,7 @@ function getDiff(base, next) {
       getTasksWithTime(base),
       getTasksWithTime(next)
     ),
-    updatedDay: getTasksWithUpdatedDay(next),
+    updatedDay: getTasksWithUpdatedDayProp(next),
     moved: getTasksInDailyNotesWithUpdatedDay(next),
     created: getCreatedTasks(getFlatTasks(base), getFlatTasks(next))
   };
@@ -56025,7 +56081,8 @@ function useEditContext({
       obsidianFacade,
       startEdit,
       cursorMinutes,
-      editOperation
+      editOperation,
+      settings: settings2
     });
     return {
       ...handlers,
@@ -56128,11 +56185,9 @@ function useNewlyStartedTasks(props) {
     if (!$settings.showTaskNotification) {
       return [];
     }
-    const tasksInProgress = get_store_value(tasksForToday).withTime.filter(
-      (task) => {
-        return task.startTime.isBefore($currentTime) && getEndTime(task).isAfter($currentTime);
-      }
-    );
+    const tasksInProgress = get_store_value(tasksForToday).withTime.filter((task) => {
+      return task.startTime.isBefore($currentTime) && getEndTime(task).isAfter($currentTime);
+    });
     const newlyStarted = (0, import_fp14.differenceBy)(
       getNotificationKey,
       tasksInProgress,
@@ -56167,7 +56222,19 @@ function useTasksFromExtraSources({
 }
 
 // src/ui/hooks/use-visible-daily-notes.ts
+var import_obsidian11 = require("obsidian");
 var import_obsidian_daily_notes_interface9 = __toESM(require_main());
+function getAllDailyNotesSafely() {
+  try {
+    return (0, import_obsidian_daily_notes_interface9.getAllDailyNotes)();
+  } catch (error) {
+    console.error(error);
+    new import_obsidian11.Notice(
+      `Could not read daily notes. Reason: ${(error == null ? void 0 : error.message) || error}`
+    );
+    return {};
+  }
+}
 function useVisibleDailyNotes(layoutReady, debouncedTaskUpdateTrigger, visibleDays) {
   return derived(
     [layoutReady, visibleDays, debouncedTaskUpdateTrigger],
@@ -56175,8 +56242,7 @@ function useVisibleDailyNotes(layoutReady, debouncedTaskUpdateTrigger, visibleDa
       if (!$layoutReady) {
         return [];
       }
-      const allDailyNotes = (0, import_obsidian_daily_notes_interface9.getAllDailyNotes)();
-      return $visibleDays.map((day) => (0, import_obsidian_daily_notes_interface9.getDailyNote)(day, allDailyNotes)).filter(Boolean);
+      return $visibleDays.map((day) => (0, import_obsidian_daily_notes_interface9.getDailyNote)(day, getAllDailyNotesSafely())).filter(Boolean);
     }
   );
 }
@@ -56279,7 +56345,7 @@ function useVisibleDays(ranges) {
 }
 
 // src/util/ical.ts
-var import_moment19 = __toESM(require_moment());
+var import_moment17 = __toESM(require_moment());
 var import_moment_timezone = __toESM(require_moment_timezone2());
 function canHappenAfter(icalEvent, date2) {
   if (!icalEvent.rrule) {
@@ -56291,7 +56357,7 @@ function hasRecurrenceOverride(icalEvent, date2) {
   if (!icalEvent.recurrences) {
     return false;
   }
-  const dateKey = (0, import_moment19.default)(date2).format(originalRecurrenceDayKeyFormat);
+  const dateKey = (0, import_moment17.default)(date2).format(originalRecurrenceDayKeyFormat);
   return Object.hasOwn(icalEvent.recurrences, dateKey);
 }
 function icalEventToTasks(icalEvent, day) {
@@ -56327,10 +56393,9 @@ function icalEventToTask(icalEvent, date2) {
     calendar: icalEvent.calendar,
     id: getId(),
     text: icalEvent.summary || noTitle,
-    firstLineText: icalEvent.summary || noTitle,
     startTime: startTimeAdjusted,
     readonly: true,
-    listTokens: "- "
+    symbol: "-"
   };
   if (isAllDayEvent) {
     return {
@@ -56347,23 +56412,23 @@ function icalEventToTask(icalEvent, date2) {
 function adjustForOtherZones(tzid, currentDate) {
   const localTzid = import_moment_timezone.tz.guess();
   if (tzid === localTzid) {
-    return (0, import_moment19.default)(currentDate);
+    return (0, import_moment17.default)(currentDate);
   }
   const localTimezone = import_moment_timezone.tz.zone(localTzid);
   const originalTimezone = import_moment_timezone.tz.zone(tzid);
   if (!localTimezone || !originalTimezone) {
-    return (0, import_moment19.default)(currentDate);
+    return (0, import_moment17.default)(currentDate);
   }
   const offset3 = localTimezone.utcOffset(currentDate.getTime()) - originalTimezone.utcOffset(currentDate.getTime());
-  return (0, import_moment19.default)(currentDate).add(offset3, "minutes");
+  return (0, import_moment17.default)(currentDate).add(offset3, "minutes");
 }
 function adjustForDst(tzid, originalDate, currentDate) {
   const timezone = import_moment_timezone.tz.zone(tzid);
   if (!timezone) {
-    return (0, import_moment19.default)(currentDate);
+    return (0, import_moment17.default)(currentDate);
   }
   const offset3 = timezone.utcOffset(currentDate.getTime()) - timezone.utcOffset(originalDate.getTime());
-  return (0, import_moment19.default)(currentDate).add(offset3, "minutes");
+  return (0, import_moment17.default)(currentDate).add(offset3, "minutes");
 }
 
 // src/util/scheduler.ts
@@ -56421,7 +56486,7 @@ function createBackgroundBatchScheduler(onFinish) {
 
 // src/util/use-ical-events.ts
 var import_node_ical = __toESM(require_node_ical());
-var import_obsidian11 = require("obsidian");
+var import_obsidian12 = require("obsidian");
 function isVEvent(event) {
   return event.type === "VEVENT";
 }
@@ -56434,7 +56499,7 @@ function useIcalEvents(settings2, syncTrigger, isOnline) {
         return;
       }
       const calendarPromises = $settings.icals.filter((ical2) => ical2.url.trim().length > 0).map(
-        (calendar) => (0, import_obsidian11.request)({
+        (calendar) => (0, import_obsidian12.request)({
           url: calendar.url
         }).then((response) => {
           const parsed = import_node_ical.default.parseICS(response);
@@ -56620,11 +56685,11 @@ function createHooks({
 }
 
 // src/util/create-render-markdown.ts
-var import_obsidian12 = require("obsidian");
+var import_obsidian13 = require("obsidian");
 var createRenderMarkdown = (app) => (el, markdown) => {
-  const loader = new import_obsidian12.Component();
+  const loader = new import_obsidian13.Component();
   el.empty();
-  import_obsidian12.MarkdownRenderer.render(app, markdown, el, "", loader);
+  import_obsidian13.MarkdownRenderer.render(app, markdown, el, "", loader);
   loader.load();
   return () => loader.unload();
 };
@@ -56645,11 +56710,12 @@ function notifyAboutStartedTasks(tasks2) {
   if (tasks2.length === 0) {
     return;
   }
-  new Notification(`Task started: ${tasks2[0].firstLineText}`);
+  const firstTask = tasks2[0];
+  new Notification(`Task started: ${getFirstLine(firstTask.text)}`);
 }
 
 // src/main.ts
-var DayPlanner = class extends import_obsidian13.Plugin {
+var DayPlanner = class extends import_obsidian14.Plugin {
   constructor() {
     super(...arguments);
     this.initWeeklyLeaf = async () => {
@@ -56659,9 +56725,11 @@ var DayPlanner = class extends import_obsidian13.Plugin {
       });
     };
     this.initTimelineLeafSilently = async () => {
-      await this.detachLeavesOfType(viewTypeTimeline);
-      await this.app.workspace.getRightLeaf(false).setViewState({
-        type: viewTypeTimeline
+      this.app.workspace.onLayoutReady(async () => {
+        await this.detachLeavesOfType(viewTypeTimeline);
+        await this.app.workspace.getRightLeaf(false).setViewState({
+          type: viewTypeTimeline
+        });
       });
     };
     this.initTimelineLeaf = async () => {
@@ -56705,12 +56773,12 @@ var DayPlanner = class extends import_obsidian13.Plugin {
     ]);
   }
   handleNewPluginVersion() {
-    if (this.settings().pluginVersion === "0.21.1") {
+    if (this.settings().pluginVersion === "0.22.1") {
       return;
     }
     this.settingsStore.update((previous) => ({
       ...previous,
-      pluginVersion: "0.21.1"
+      pluginVersion: "0.22.1"
     }));
     if (this.settings().releaseNotes) {
       this.showReleaseNotes();

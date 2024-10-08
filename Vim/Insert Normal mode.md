@@ -1,0 +1,1 @@
+Insert Normal mode is a special version of Normal mode, which gives us one bullet. We can fire off a single command, after which we’ll be returned to Insert mode immediately. From Insert mode, we can switch to Insert Normal mode by pressing \<C-o>

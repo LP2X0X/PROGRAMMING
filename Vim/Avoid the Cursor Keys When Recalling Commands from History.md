@@ -1,0 +1,1 @@
+In addition to the \<Up> and \<Down> keys, we can also use the \<C-p> and \<C-n> chords to go backward and forward through our command history. The advantage of using  \these mappings is that we don’t need to move our hands from the home row to use them. But there’s a disadvantage to the \<C-p> and \<C-n> commands: unlike \<Up> and  \<Down>, they don’t filter the command history.

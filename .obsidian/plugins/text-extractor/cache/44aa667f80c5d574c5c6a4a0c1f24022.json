@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20240919143424_956.png","text":"[MethodImpl(MethodImplOptions.AggressiveInlining)] G public ManagedMap SetValue(string key, NVector2 value) i | vmapFloat[$\"{key}\"] = new float[] { value.X, value.v }; | return this; ¥","libVersion":"0.3.2","langs":"eng"}

@@ -1,0 +1,1 @@
+The classic way of getting back to Normal mode is with the \<Esc> key, but on many keyboards that can seem like a long reach. Alternatively, we can press \<C-[\>.

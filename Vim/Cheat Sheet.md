@@ -1,0 +1,3 @@
+ - \* search for the word under the cursor.
+ - The \<C-a> and \<C-x> commands perform addition and subtraction on numbers. If the cursor is not already positioned on a number, then the command will look ahead for a digit on the current line.
+ - Use @: to repeat an Ex Command.

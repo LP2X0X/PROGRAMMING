@@ -24,12 +24,14 @@
   "obsidian-underline",
   "obsidian-vimrc-support",
   "waypoint",
-  "web-browser",
   "calendar",
   "omnisearch",
   "various-complements",
   "obsidian-git",
   "cmenu-plugin",
   "text-extractor",
-  "obsidian-kanban"
+  "obsidian-kanban",
+  "obsidian-icon-folder",
+  "surfing",
+  "web-browser"
 ]

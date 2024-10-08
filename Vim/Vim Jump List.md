@@ -1,0 +1,3 @@
+One trick which will certainly power-up your Vim proficiency is to make use of the Vim jump list. Jumps are cursor movements stored in a list called the jumplist. When making certain movements, such as jumping to line 42 with `42G`, Vim will save it as a “jump” in the jumplist. You can list jumps using the `:jumps` command.
+- To move backwards through the jump list to an older jump use `<ctrl-o>`.
+- To move to a newer jump use `<ctrl-i>`. You can also press `<tab>`.

@@ -1,0 +1,1 @@
+The expression register is addressed by the = symbol. From **Insert mode** we can access it by typing \<C-r>=. This opens a prompt at the bottom of the screen where we can type the expression that we want to evaluate. When done, we hit \<CR>, and Vim inserts the result at our current position in the document.
