@@ -1,0 +1,1 @@
+A word consists of a sequence of letters, digits, and underscores, or as a sequence of other nonblank characters separated with whitespace (see :h word ). The definition of a WORD is simpler: it consists of a sequence of nonblank characters separated with whitespace (see :h WORD ).

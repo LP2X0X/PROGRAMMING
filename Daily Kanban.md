@@ -10,15 +10,13 @@ kanban-plugin: board
 
 ## IN PROGRESS
 
-- [ ] Check badmark
-- [ ] Money from Phoebe
+- [ ] Port Unit Test
 
 
 ## DONE
 
-- [x] Find real pad feature RtoS
-- [x] Code review RPT 3.0 RtoS SPI Feature
-- [x] Day off tomorrow morning
+- [x] Seperate Flatness to Hole, Peak, Scratch
+- [x] Add code for Blob
 
 
 

@@ -1,0 +1,3 @@
+- In programming, a **precondition** is any condition that must be true prior to the execution of some section of code (typically the body of a function).
+- An **invariant** is a condition that must be true while some section of code is executing. This is often used with loops, where the loop body will only execute so long as the invariant is true.
+- Similarly, a **postcondition** is something that must be true after the execution of some section of code. Our function doesn’t have any postconditions.

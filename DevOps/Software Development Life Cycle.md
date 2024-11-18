@@ -1,0 +1,1 @@
+![[Pasted image 20241106150017.png|center]]

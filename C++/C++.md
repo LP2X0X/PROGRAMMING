@@ -18,5 +18,8 @@ type: folder_brief_live
 - **[[5 - Bit Manipulation]]**
 - **[[6 - Scope, Duration, and Linkage]]**
 - **[[7 - Control flow]]**
+- **[[8 - Error Detection and Handling]]**
+- **[[9 - Type Conversion, Type Aliases, and Type Deduction]]**
+- **[[10 - Function Overloading and Function Templates]]**
 
 %% End Waypoint %%

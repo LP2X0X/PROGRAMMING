@@ -1,0 +1,2 @@
+- The value of an object is stored as a sequence of bits, and the data type of the object tells the compiler how to interpret those bits into meaningful values.
+- The process of producing a new value of some type from a value of a different type is called a **conversion**.

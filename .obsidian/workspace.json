@@ -4,19 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "b1869258d7914840",
+        "id": "683ec5664d5334b8",
         "type": "tabs",
         "children": [
           {
-            "id": "2a8877320f62a151",
+            "id": "245a186b44b5170b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Vim/Fold.md",
-                "mode": "preview",
-                "source": true
-              }
+                "file": "Excalidraw/Drawing 2024-11-07 14.16.02.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2024-11-07 14.16.02.excalidraw"
+            }
+          },
+          {
+            "id": "d8f002c47fe9cd41",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2024-11-12 07.52.37.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2024-11-12 07.52.37.excalidraw"
             }
           }
         ]
@@ -39,7 +51,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "byCreatedTimeReverse"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +68,9 @@
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "byModifiedTimeReverse"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,14 +78,16 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 328.5026054382324
+    "width": 393.5026054382324
   },
   "right": {
     "id": "7491882444cf49f2",
@@ -84,7 +102,9 @@
             "type": "leaf",
             "state": {
               "type": "git-history-view",
-              "state": {}
+              "state": {},
+              "icon": "history",
+              "title": "History"
             }
           },
           {
@@ -93,7 +113,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Vim/Fold.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +120,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
             }
           },
           {
@@ -112,7 +133,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -120,9 +143,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Vim/Fold.md"
-              }
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
             }
           },
           {
@@ -130,7 +153,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           },
           {
@@ -138,7 +163,9 @@
             "type": "leaf",
             "state": {
               "type": "calendar",
-              "state": {}
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           },
           {
@@ -146,7 +173,9 @@
             "type": "leaf",
             "state": {
               "type": "dictionary-view",
-              "state": {}
+              "state": {},
+              "icon": "quote-glyph",
+              "title": "Dictionary"
             }
           },
           {
@@ -154,7 +183,9 @@
             "type": "leaf",
             "state": {
               "type": "reminder-list",
-              "state": {}
+              "state": {},
+              "icon": "clock",
+              "title": "Reminders"
             }
           },
           {
@@ -162,19 +193,22 @@
             "type": "leaf",
             "state": {
               "type": "git-view",
-              "state": {}
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
-            "id": "a1f91ed869639f68",
+            "id": "7b3adc6048ac45ca",
             "type": "leaf",
             "state": {
               "type": "timeline",
-              "state": {}
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Timeline"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "horizontal",
@@ -200,55 +234,55 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2a8877320f62a151",
+  "active": "245a186b44b5170b",
   "lastOpenFiles": [
-    "Vim/Quickly switch back to Normal Mode.md",
-    "Vim/Fold.md",
-    "Vim/Vim Jump List.md",
-    "Vim/Avoid the Cursor Keys When Recalling Commands from History.md",
-    "Vim/Executing Programs in the Shell.md",
-    "Vim/Normal mode Command.md",
-    "Vim/Copy and move line.md",
-    "Vim/Ex Commands.md",
-    "Vim/Append After a Ragged Visual Block.md",
-    "Vim/Insert Normal mode.md",
-    "Vim/The expression register.md",
-    "Vim/Selection Tips.md",
+    "Excalidraw/Drawing 2024-11-14 11.13.55.excalidraw.md",
+    "Excalidraw/Drawing 2024-11-12 07.52.37.excalidraw.md",
+    "Excalidraw/Drawing 2024-11-07 14.16.02.excalidraw.md",
+    "Excalidraw/Drawing 2024-10-23 09.34.55.excalidraw.md",
+    "Excalidraw/Image Planes + Normal Flow.md",
+    "Excalidraw/Flows.md",
+    "Excalidraw/Problems.md",
+    "Excalidraw/Drawing 2024-11-07 14.16.02.excalidraw.png",
+    "C++/10 - Function Overloading and Function Templates/Function templates.md",
+    "C++/10 - Function Overloading and Function Templates/10 - Function Overloading and Function Templates.md",
+    "C++/9 - Type Conversion, Type Aliases, and Type Deduction/9 - Type Conversion, Type Aliases, and Type Deduction.md",
+    "C++/10 - Function Overloading and Function Templates/Default arguments.md",
+    "C++/10 - Function Overloading and Function Templates/Deleting functions.md",
+    "C++/10 - Function Overloading and Function Templates/The argument matching sequence.md",
+    "C++/10 - Function Overloading and Function Templates/Untitled",
+    "Jenkins/Jenkins.md",
+    "C++/9 - Type Conversion, Type Aliases, and Type Deduction/Numeric conversions.md",
+    "C++/10 - Function Overloading and Function Templates/Overload Resolution.md",
+    "C++/10 - Function Overloading and Function Templates/Type signature.md",
+    "C++/10 - Function Overloading and Function Templates/Function Overloading.md",
+    "DevOps/DevOps.md",
+    "DevOps/Software Development Life Cycle.md",
+    "DevOps/What is DevOps.md",
+    "DevOps/DevOps Lifecycle.md",
+    "Jenkins/What is Jenkins.md",
+    "Daily Kanban.md",
+    "Resources/Pasted Image 20241107143734_113.png",
+    "Resources/Pasted Image 20241107142420_532.png",
+    "Resources/Pasted Image 20241107142352_312.png",
+    "Resources/Pasted Image 20241107141925_157.png",
+    "Resources/Comparison of serialization formats - Advance Solution Group - Confluence.pdf.fsb",
+    "Resources/Pasted image 20241106150017.png",
     "Vim/Cheat Sheet.md",
-    "CSharp/OOP/Features/Read-Only Fields.md",
-    "Vim/Vim.md",
-    "Resources/Pasted image 20240930155106.png",
-    "Resources/Pasted image 20240930154730.png",
-    "Excalidraw/Drawing 2024-09-28 08.16.24.excalidraw.md",
-    "Resources/Pasted Image 20240928084632_872.png",
-    "Resources/Pasted Image 20240928084606_913.png",
-    "Resources/Pasted Image 20240928084542_614.png",
-    "Resources/Pasted Image 20240928084505_140.png",
-    "Resources/Pasted Image 20240928084404_970.png",
-    "Resources/Pasted Image 20240928084128_209.png",
+    "Vim/Tips and Tricks/Copy and paste to Ex Command.md",
+    "DevOps",
+    "Jenkins",
+    "C++/10 - Function Overloading and Function Templates",
+    "Resources/Pasted Image 20241023104634_624.png",
+    "Resources/Pasted Image 20241023103320_906.png",
+    "Resources/Pasted Image 20241023102829_143.png",
+    "Resources/Pasted Image 20241023102118_267.png",
+    "C++/9 - Type Conversion, Type Aliases, and Type Deduction",
+    "C++/8 - Error Detection and Handling",
+    "Vim/Tips and Tricks",
+    "Vim/Core",
     "Excalidraw",
     "Untitled.canvas",
-    "README.md",
-    "Daily Kanban.md",
-    "Excalidraw/Drawing 2024-09-24 08.29.05.excalidraw.md",
-    "Resources/Pasted Image 20240925143901_483.png",
-    "Resources/Pasted Image 20240925143739_298.png",
-    "Vim/Operator + Motion = Action.md",
-    "Technical Stuff/Technical Stuff.md",
-    "CSharp/CSharp.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/XML/Why XML-Serializable class need a parameterless constructor.md",
-    "Vim/Untitled Kanban.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/XML/XML.md",
-    "CSharp/File I.O and Object Serialization/Object Serialization/XML/Controlling the Generated XML Data.md",
-    "Vim",
-    "Resources/Comparison of serialization formats - Advance Solution Group - Confluence.pdf",
-    "Others",
-    "C++/7 - Control flow/Terms/Random",
-    "C++/7 - Control flow/Terms/Halt",
-    "C++/7 - Control flow/Terms/Basic",
-    "C++/3 - Constants and Strings/Terms/Core",
-    "C++/7 - Control flow/Terms",
-    "C++/7 - Control flow/Untitled",
     "C++/Untitled.canvas",
     "CSharp/Multithreaded, Parallel and Async Programming/Async Programming/Untitled.canvas",
     "RtoS/DCS/Untitled.canvas"

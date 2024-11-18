@@ -1,3 +1,5 @@
  - \* search for the word under the cursor.
+ - Quickly go to the beginning and the end of a parenthesis pair using %.
  - The \<C-a> and \<C-x> commands perform addition and subtraction on numbers. If the cursor is not already positioned on a number, then the command will look ahead for a digit on the current line.
- - Use @: to repeat an Ex Command.
+ - Use @: to repeat an Ex Command. And @. to repeat the last Macro.
+ - In INSERT MODE, you can use \<C-r>{register} to insert the content of said register.

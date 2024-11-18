@@ -1,0 +1,1 @@
+- The command `:Explore` opens the file explorer window or `:Ex` for short.

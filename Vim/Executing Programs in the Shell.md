@@ -1,1 +1,0 @@
-From Vim’s Command-Line mode, we can invoke external programs in the shell by prefixing them with a bang symbol.

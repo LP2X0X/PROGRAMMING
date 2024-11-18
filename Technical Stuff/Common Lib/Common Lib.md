@@ -12,7 +12,7 @@ type: folder_brief_live
 - [[CRUD]]
 - [[Dapper]]
 - [[DTO]]
-- **[[Flows]]**
+- **[[Technical Stuff/Common Lib/Flows/Flows]]**
 - **[[Model]]**
 - [[ORM - DTO Flow]]
 - [[ORM]]

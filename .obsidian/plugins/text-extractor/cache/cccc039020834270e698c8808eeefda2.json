@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20241107142420_532.png","text":"void SetBlobFeature(SurfaceBlobFeature* pSurfaceBlobFeature) { m_pSurfaceBlobFeature = pSurfaceBlobFeature; };","libVersion":"0.3.2","langs":"eng"}
