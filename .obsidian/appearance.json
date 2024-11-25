@@ -1,14 +1,14 @@
 {
   "cssTheme": "",
   "translucency": true,
-  "textFontFamily": "Cambria,Microsoft Sans Serif,Calibri,Cascadia Mono,Segoe UI,Courier New",
+  "textFontFamily": "Segoe UI,Cascadia Mono,Cambria,Microsoft Sans Serif,Calibri,Courier New",
   "enabledCssSnippets": [
     "appearance"
   ],
   "accentColor": "#89cff0",
   "nativeMenus": false,
   "showViewHeader": true,
-  "baseFontSize": 16,
+  "baseFontSize": 14,
   "interfaceFontFamily": "",
-  "monospaceFontFamily": "Segoe UI"
+  "monospaceFontFamily": "Cascadia Code,Segoe UI"
 }

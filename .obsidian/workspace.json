@@ -4,31 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "683ec5664d5334b8",
+        "id": "012443988d7ed489",
         "type": "tabs",
         "children": [
           {
-            "id": "245a186b44b5170b",
+            "id": "219db976edd50ad0",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Drawing 2024-11-07 14.16.02.excalidraw.md"
+                "file": "C++/12 - Enums and Structs/Structs/Default member initializer.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2024-11-07 14.16.02.excalidraw"
-            }
-          },
-          {
-            "id": "d8f002c47fe9cd41",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2024-11-12 07.52.37.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2024-11-12 07.52.37.excalidraw"
+              "icon": "lucide-file",
+              "title": "Default member initializer"
             }
           }
         ]
@@ -63,11 +53,11 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
-                "explainSearch": true,
+                "matchingCase": false,
+                "explainSearch": false,
                 "collapseAll": false,
-                "extraContext": true,
-                "sortOrder": "byModifiedTimeReverse"
+                "extraContext": false,
+                "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
               "title": "Search"
@@ -87,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 393.5026054382324
+    "width": 311.5026054382324
   },
   "right": {
     "id": "7491882444cf49f2",
@@ -234,54 +224,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "245a186b44b5170b",
+  "active": "219db976edd50ad0",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2024-11-14 11.13.55.excalidraw.md",
-    "Excalidraw/Drawing 2024-11-12 07.52.37.excalidraw.md",
-    "Excalidraw/Drawing 2024-11-07 14.16.02.excalidraw.md",
-    "Excalidraw/Drawing 2024-10-23 09.34.55.excalidraw.md",
-    "Excalidraw/Image Planes + Normal Flow.md",
-    "Excalidraw/Flows.md",
-    "Excalidraw/Problems.md",
-    "Excalidraw/Drawing 2024-11-07 14.16.02.excalidraw.png",
-    "C++/10 - Function Overloading and Function Templates/Function templates.md",
-    "C++/10 - Function Overloading and Function Templates/10 - Function Overloading and Function Templates.md",
-    "C++/9 - Type Conversion, Type Aliases, and Type Deduction/9 - Type Conversion, Type Aliases, and Type Deduction.md",
-    "C++/10 - Function Overloading and Function Templates/Default arguments.md",
-    "C++/10 - Function Overloading and Function Templates/Deleting functions.md",
-    "C++/10 - Function Overloading and Function Templates/The argument matching sequence.md",
-    "C++/10 - Function Overloading and Function Templates/Untitled",
+    "C++/12 - Enums and Structs/Structs/Designated Initializers.md",
+    "C++/12 - Enums and Structs/Structs/Struct.md",
+    "C++/12 - Enums and Structs/Structs/Default member initializer.md",
+    "C++/12 - Enums and Structs/12 - Enums and Structs.md",
+    "C++/C++.md",
     "Jenkins/Jenkins.md",
-    "C++/9 - Type Conversion, Type Aliases, and Type Deduction/Numeric conversions.md",
-    "C++/10 - Function Overloading and Function Templates/Overload Resolution.md",
-    "C++/10 - Function Overloading and Function Templates/Type signature.md",
-    "C++/10 - Function Overloading and Function Templates/Function Overloading.md",
-    "DevOps/DevOps.md",
-    "DevOps/Software Development Life Cycle.md",
-    "DevOps/What is DevOps.md",
-    "DevOps/DevOps Lifecycle.md",
     "Jenkins/What is Jenkins.md",
-    "Daily Kanban.md",
+    "CSharp/Type Reflection, Late Binding, Attribute, and Dynamic Types/Type Reflection, Late Binding, Attribute, and Dynamic Types.md",
+    "C++/12 - Enums and Structs/Structs/Structs.md",
+    "C++/12 - Enums and Structs/Aaggregate initialization.md",
+    "C++/12 - Enums and Structs/Member.md",
+    "C++/12 - Enums and Structs/Aggregate data type.md",
+    "C++/11 - Compound Types/11 - Compound Types.md",
+    "C++/12 - Enums and Structs/Enums/Enums.md",
+    "C++/10 - Function Overloading and Function Templates/10 - Function Overloading and Function Templates.md",
+    "C++/10 - Function Overloading and Function Templates/Function Overload/Function Overload.md",
+    "C++/11 - Compound Types/Compound data types.md",
+    "C++/12 - Enums and Structs/Structs",
+    "C++/12 - Enums and Structs/Enums/Enumerations.md",
+    "C++/12 - Enums and Structs/Enums/Integer to unscoped enumerator conversion.md",
+    "C++/12 - Enums and Structs/Enums",
+    "C++/12 - Enums and Structs/Enums/Enumeration’s underlying type.md",
+    "C++/12 - Enums and Structs/Enums/Scoped Enum.md",
+    "C++/12 - Enums and Structs/Enums/Unscoped Enum.md",
+    "C++/11 - Compound Types/Untitled",
+    "C++/11 - Compound Types/Overloading the IO operators.md",
+    "C++/11 - Compound Types/References/References.md",
+    "C++/11 - Compound Types/Pointers/Pointers.md",
+    "C++/9 - Type Conversion, Type Aliases, and Type Deduction/9 - Type Conversion, Type Aliases, and Type Deduction.md",
+    "C++/12 - Enums and Structs",
+    "C++/11 - Compound Types/Pointers",
+    "C++/11 - Compound Types/References",
+    "C++/11 - Compound Types",
+    "Untitled",
+    "C++/10 - Function Overloading and Function Templates/Function Template",
+    "C++/10 - Function Overloading and Function Templates/Function Overload/Untitled",
+    "Excalidraw/Drawing 2024-11-07 14.16.02.excalidraw.png",
     "Resources/Pasted Image 20241107143734_113.png",
     "Resources/Pasted Image 20241107142420_532.png",
     "Resources/Pasted Image 20241107142352_312.png",
     "Resources/Pasted Image 20241107141925_157.png",
-    "Resources/Comparison of serialization formats - Advance Solution Group - Confluence.pdf.fsb",
     "Resources/Pasted image 20241106150017.png",
-    "Vim/Cheat Sheet.md",
-    "Vim/Tips and Tricks/Copy and paste to Ex Command.md",
-    "DevOps",
-    "Jenkins",
-    "C++/10 - Function Overloading and Function Templates",
     "Resources/Pasted Image 20241023104634_624.png",
     "Resources/Pasted Image 20241023103320_906.png",
     "Resources/Pasted Image 20241023102829_143.png",
     "Resources/Pasted Image 20241023102118_267.png",
-    "C++/9 - Type Conversion, Type Aliases, and Type Deduction",
-    "C++/8 - Error Detection and Handling",
-    "Vim/Tips and Tricks",
-    "Vim/Core",
-    "Excalidraw",
     "Untitled.canvas",
     "C++/Untitled.canvas",
     "CSharp/Multithreaded, Parallel and Async Programming/Async Programming/Untitled.canvas",

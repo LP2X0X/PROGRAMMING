@@ -1,0 +1,1 @@
+- In C++, a **member** is a variable, function, or type that belongs to a struct (or class). All members must be declared within the struct (or class) definition.

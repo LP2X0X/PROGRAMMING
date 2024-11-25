@@ -7,12 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Default arguments]]
-- [[Deleting functions]]
-- [[Function Overloading]]
-- [[Function templates]]
-- [[Overload Resolution]]
-- [[The argument matching sequence]]
-- [[Type signature]]
+- **[[Function Overload]]**
+- **[[Function Template]]**
 
 %% End Waypoint %%

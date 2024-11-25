@@ -6,6 +6,8 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "SiBlackmagicdesign",
+      "#️⃣",
       "🏗",
       "LiCode2",
       "LiCode"
@@ -32,5 +34,6 @@
     "debugMode": false
   },
   "C++": "LiCode2",
-  "Jenkins": "🏗"
+  "Jenkins": "🏗",
+  "CSharp": "#️⃣"
 }

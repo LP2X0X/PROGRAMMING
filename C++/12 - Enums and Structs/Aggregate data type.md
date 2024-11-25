@@ -1,0 +1,1 @@
+- In general programming, an **aggregate data type** (also called an **aggregate**) is any type that can contain **multiple data members**. Some types of aggregates allow members to have different types (e.g. structs), while others require that all members must be of a single type (e.g. arrays).

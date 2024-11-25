@@ -1,0 +1,1 @@
+- When we define a struct (or class) type, we can provide a default initialization value for each member as part of the type definition. For members not marked as `static`, this process is sometimes called **non-static member initialization**. The initialization value is called a **default member initializer**.

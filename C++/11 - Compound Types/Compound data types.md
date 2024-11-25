@@ -1,0 +1,1 @@
+- **Compound data types** (also sometimes called **composite data types**) are data types that can be constructed from fundamental data types (or other compound data types).
