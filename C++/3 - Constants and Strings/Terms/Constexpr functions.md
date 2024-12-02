@@ -2,7 +2,7 @@
 Remember that function call to a normal function are not allowed in constant expressions.
 ```
 - A **constexpr function** is a function that is allowed to be called in a constant expression. If a required constant expression contains a constexpr function call, that constexpr function call must evaluate at compile-time.
-- Constexpr functions can also be evaluated at runtime! In which case they will return a non-constexpr result.
+- **Constexpr functions can also be evaluated at runtime! In which case they will return a non-constexpr result.**
 
 ```ad-info
 To evaluate at compile-time, two other things must also be true:

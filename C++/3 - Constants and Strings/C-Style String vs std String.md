@@ -3,6 +3,10 @@ In C++, strings can be represented in two primary ways: using C-style string lit
 ### **C-Style String Literals**
 C-style string literals are character arrays that are null-terminated. They are inherited from C and are represented as arrays of `char`.
 
+```ad-important
+Because C-style string literals exist for the entire program, it’s okay to return a `std::string_view` that is viewing a C-style string literal. When the `std::string_view` is copied back to the caller, the C-style string literal being viewed will still exist.
+```
+
 #### **Characteristics:**
 1. **Declaration**:
    ```cpp

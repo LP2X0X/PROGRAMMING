@@ -23,5 +23,6 @@ type: folder_brief_live
 - **[[10 - Function Overloading and Function Templates]]**
 - **[[11 - Compound Types]]**
 - **[[12 - Enums and Structs]]**
+- **[[13 - Introduction to Classes]]**
 
 %% End Waypoint %%

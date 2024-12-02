@@ -11,6 +11,7 @@ type: folder_brief_live
 - [[Aggregate data type]]
 - **[[Enums]]**
 - [[Member]]
+- [[Overloading the IO operators]]
 - **[[Structs]]**
 
 %% End Waypoint %%

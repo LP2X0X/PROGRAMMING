@@ -1,0 +1,1 @@
+- A **member variable** is a variable (an object) that is part of a class.

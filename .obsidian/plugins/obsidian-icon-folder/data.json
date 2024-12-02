@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "SiCplusplus",
       "SiBlackmagicdesign",
       "#️⃣",
       "🏗",
-      "LiCode2",
-      "LiCode"
+      "LiCode2"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -33,7 +33,7 @@
     "lucideIconPackType": "native",
     "debugMode": false
   },
-  "C++": "LiCode2",
+  "C++": "SiCplusplus",
   "Jenkins": "🏗",
   "CSharp": "#️⃣"
 }

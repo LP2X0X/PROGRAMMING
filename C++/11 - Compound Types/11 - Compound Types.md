@@ -10,7 +10,6 @@ type: folder_brief_live
 - [[Compound data types]]
 - [[In and out parameters]]
 - [[Lvalue and rvalue expressions]]
-- [[Overloading the IO operators]]
 - **[[Pointers]]**
 - **[[References]]**
 - [[std optional]]

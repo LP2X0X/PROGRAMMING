@@ -10,13 +10,10 @@ kanban-plugin: board
 
 ## IN PROGRESS
 
-- [ ] Port Unit Test
 
 
 ## DONE
 
-- [x] Seperate Flatness to Hole, Peak, Scratch
-- [x] Add code for Blob
 
 
 

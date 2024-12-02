@@ -5,7 +5,7 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
-- **[[Class]]**
+- **[[CSharp/OOP/Class/Class]]**
 - **[[Features]]**
 - **[[Keyword]]**
 - **[[Pillars of OOP]]**
