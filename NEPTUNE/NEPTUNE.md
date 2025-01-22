@@ -11,6 +11,8 @@ type: folder_brief_live
 - **[[Keywords]]**
 - **[[Neptune C+]]**
 - **[[Questions]]**
+- **[[Technical Keyword]]**
+- **[[Technical Stuff]]**
 - [[Workflow]]
 
 %% End Waypoint %%

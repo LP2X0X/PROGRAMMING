@@ -7,13 +7,18 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Access functions]]
+- [[Class Invariant]]
 - [[Class]]
+- [[Classes and header files]]
 - [[Const class objects and const member functions]]
-- [[Const member functions]]
-- [[Member access]]
-- [[Member functions]]
-- [[Member variables]]
+- **[[Ctor]]**
+- **[[Dtor]]**
+- [[Literal Type]]
+- **[[Member related concepts]]**
+- **[[Nested stuff]]**
+- [[Resetting a class back to default state]]
 - [[Rvalue implicit objects and return by reference]]
+- [[Temporary class objects]]
+- **[[this Pointer]]**
 
 %% End Waypoint %%

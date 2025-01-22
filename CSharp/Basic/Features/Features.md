@@ -8,7 +8,7 @@ type: folder_brief_live
 - [[Casting]]
 - [[Conditional Operator]]
 - [[Default Constructor]]
-- [[Discard]]
+- [[CSharp/Basic/Features/Discard]]
 - [[Format String]]
 - [[global Keyword]]
 - [[Indices and Ranges]]

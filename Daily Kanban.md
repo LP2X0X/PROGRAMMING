@@ -6,6 +6,7 @@ kanban-plugin: board
 
 ## TODO
 
+- [x] Voucher Got It
 
 
 ## IN PROGRESS

@@ -1,0 +1,1 @@
+- An _enumerator_ is a specific named integral constants inside an [[Enumerations|enum]].

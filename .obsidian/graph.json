@@ -39,7 +39,7 @@
       "query": "path:C++  ",
       "color": {
         "a": 1,
-        "rgb": 327424
+        "rgb": 16774912
       }
     }
   ],
@@ -50,9 +50,9 @@
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
   "centerStrength": 0.495813074014046,
-  "repelStrength": 14.4524164072018,
-  "linkStrength": 1,
+  "repelStrength": 14.365777717612,
+  "linkStrength": 0,
   "linkDistance": 215,
-  "scale": 0.08317427835927611,
-  "close": true
+  "scale": 0.06276296468143648,
+  "close": false
 }

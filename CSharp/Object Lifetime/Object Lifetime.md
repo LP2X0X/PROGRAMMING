@@ -16,7 +16,7 @@ type: folder_brief_live
 - [[Marshal class]]
 - [[Object Generations]]
 - [[Order of Actions when Dispose is called]]
-- **[[Questions]]**
+- **[[CSharp/Object Lifetime/Questions/Questions]]**
 	- [[Are both dispose and finalization wait for the garbage collector]]
 	- [[Can you still access member of an object after it has been dispose]]
 	- [[Why Compacting]]

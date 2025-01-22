@@ -18,7 +18,7 @@ type: folder_brief_live
 - [[sealed]]
 - [[static]]
 - [[System.Object]]
-- [[this]]
+- [[CSharp/OOP/Keyword/this]]
 - [[when]]
 - [[with]]
 

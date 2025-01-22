@@ -4,24 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "86b2d2f8e2dbf0a1",
+        "id": "da6a02125373c7ab",
         "type": "tabs",
         "children": [
           {
-            "id": "3c947a96e57ccb75",
+            "id": "6bff2a77ba316011",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "surfing-view",
+              "state": {
+                "url": "https://calendar.google.com/calendar/u/0/r/week"
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Google Calendar - Week of January 20, 2025"
+            }
+          },
+          {
+            "id": "9f5088d580aab352",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/C++.md",
+                "file": "C++/2 - Fundamental Data Types/Terms/Types/size_t.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "C++"
+              "title": "size_t"
+            }
+          },
+          {
+            "id": "ee858fd107120f23",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++/4 - Operators/Terms/Increment, decrement operators, and side effects.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Increment, decrement operators, and side effects"
+            }
+          },
+          {
+            "id": "13217d648d8636e6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++/9 - Type Conversion, Type Aliases, and Type Deduction/Type aliases.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Type aliases"
+            }
+          },
+          {
+            "id": "ae36fba799ba9d56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++/3 - Constants and Strings/Constant expressions and compile-time optimization.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Constant expressions and compile-time optimization"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -52,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "excalidraw",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 312.5026054382324
+    "width": 245.50260543823242
   },
   "right": {
     "id": "7491882444cf49f2",
@@ -189,7 +246,7 @@
             }
           },
           {
-            "id": "b6043fb2aaf56089",
+            "id": "46f6f997b4aa4e71",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -224,54 +281,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3c947a96e57ccb75",
+  "active": "ae36fba799ba9d56",
   "lastOpenFiles": [
-    "Technical Stuff/Technical Stuff.md",
-    "Technical Stuff/Common Lib/Flows/Special - Db to Controls.md",
-    "Technical Stuff/Common Lib/Flows/1 - Connect DB.md",
-    "Technical Stuff/Common Lib/Flows/3 - Selected PCBItem changed.md",
-    "Technical Stuff/Common Lib/Flows/6.1 - ResultParser.md",
-    "Others/Others.md",
-    "CSharp/CSharp.md",
-    "DevOps/DevOps.md",
-    "Excalidraw/Flows.md",
-    "Excalidraw/Problems.md",
-    "NEPTUNE/NEPTUNE.md",
-    "NEPTUNE/Workflow.md",
-    "NEPTUNE/Neptune C+/Neptune C+.md",
-    "NEPTUNE/Questions/Questions.md",
-    "NEPTUNE/Coating Methods/Machine.md",
-    "NEPTUNE/Coating Methods/Manual.md",
-    "NEPTUNE/Coating Methods/Coating Methods.md",
-    "NEPTUNE/Dashboard Design/Draft.md",
-    "NEPTUNE/Dashboard Design/How to design a great user experience for desktop applications.md",
-    "NEPTUNE/Dashboard Design/Dashboard Design.md",
-    "NEPTUNE/Dashboard Design/Final Design.md",
-    "NEPTUNE/Dashboard Design/Overview Architecture.md",
-    "NEPTUNE/Dashboard Design/UX checklist for desktop applications.md",
-    "NEPTUNE/Dashboard Design/Design Flow.md",
-    "NEPTUNE/Defect Types/Defect Types.md",
-    "NEPTUNE/Neptune C+/Core Technology of Neptune C+/Core Technology of Neptune C+.md",
-    "Resources/Pasted Image 20241127080541_747.png",
-    "Resources/Pasted Image 20241127080501_298.png",
-    "Resources/Comparison of serialization formats - Advance Solution Group - Confluence.pdf",
-    "Resources/Pasted Image 20241126135010_825.png",
-    "Resources/Pasted Image 20241126133339_052.png",
-    "Resources/Pasted Image 20241126133256_501.png",
-    "Resources/Pasted Image 20241126132916_614.png",
-    "C++/13 - Introduction to Classes",
-    "C++/12 - Enums and Structs/Structs",
-    "C++/12 - Enums and Structs/Enums",
-    "C++/11 - Compound Types/Untitled",
-    "C++/12 - Enums and Structs",
-    "C++/11 - Compound Types/Pointers",
-    "C++/11 - Compound Types/References",
-    "C++/11 - Compound Types",
-    "Untitled",
-    "Excalidraw/Drawing 2024-11-07 14.16.02.excalidraw.png",
-    "Resources/Pasted Image 20241107143734_113.png",
-    "Resources/Pasted Image 20241107142420_532.png",
-    "Resources/Pasted Image 20241107142352_312.png",
+    "C++/3 - Constants and Strings/The as-if rule.md",
+    "C++/3 - Constants and Strings/Constant expressions and compile-time optimization.md",
+    "C++/3 - Constants and Strings/Numeral systems.md",
+    "C++/3 - Constants and Strings/Conditional operator.md",
+    "C++/3 - Constants and Strings/Performance overhead of function called.md",
+    "C++/3 - Constants and Strings/C-Style String vs std String.md",
+    "C++/2 - Fundamental Data Types/Type conversion.md",
+    "C++/2 - Fundamental Data Types/Output manipulator.md",
+    "C++/2 - Fundamental Data Types/The sizeof operator.md",
+    "C++/2 - Fundamental Data Types/Fundamental data type.md",
+    "C++/2 - Fundamental Data Types/Terms/Terms.md",
+    "C++/2 - Fundamental Data Types/Terms/Types/size_t.md",
+    "C++/2 - Fundamental Data Types/Terms/Types/Types.md",
+    "C++/2 - Fundamental Data Types/Terms/Memory addresses.md",
+    "C++/2 - Fundamental Data Types/Terms/Byte.md",
+    "C++/2 - Fundamental Data Types/Terms/Void.md",
+    "C++/2 - Fundamental Data Types/Terms/Overflow.md",
+    "C++/2 - Fundamental Data Types/Terms/Fixed-width integers.md",
+    "C++/2 - Fundamental Data Types/Terms/Fast and least integers.md",
+    "C++/2 - Fundamental Data Types/Terms/Bit.md",
+    "C++/2 - Fundamental Data Types/2 - Fundamental Data Types.md",
+    "C++/2 - Fundamental Data Types/Why you should avoid unsigned integer.md",
+    "C++/2 - Fundamental Data Types/Scientific Notation.md",
+    "C++/2 - Fundamental Data Types/if Statement.md",
+    "C++/1 - Basic C++/Terms/Core/Expression.md",
+    "C++/1 - Basic C++/Terms/Others/Others.md",
+    "C++/13 - Introduction to Classes/Dtor/Untitled",
+    "C++/13 - Introduction to Classes/Dtor",
+    "C++/13 - Introduction to Classes/Nested stuff",
+    "C++/13 - Introduction to Classes/this Pointer",
+    "C++/13 - Introduction to Classes/Member related concepts",
+    "Resources/Pasted Image 20241223164559_443.png",
+    "Resources/Pasted Image 20241223164530_588.png",
+    "Resources/Pasted Image 20241223164440_360.png",
+    "Resources/Pasted Image 20241219152740_743.png",
+    "Resources/Pasted Image 20241219152559_749.png",
+    "Resources/Pasted Image 20241219152444_153.png",
+    "Resources/Pasted Image 20241219152427_118.png",
+    "Resources/Pasted Image 20241219152317_062.png",
+    "Resources/Pasted Image 20241219152251_476.png",
+    "Resources/Pasted Image 20241219082323_839.png",
+    "MySettings.vssettings",
+    "C++/13 - Introduction to Classes/Ctor",
+    "Git/prepare-commit-msg.txt",
+    "Git/prepare-commit-msg",
+    "Git",
     "Untitled.canvas",
     "C++/Untitled.canvas",
     "CSharp/Multithreaded, Parallel and Async Programming/Async Programming/Untitled.canvas",

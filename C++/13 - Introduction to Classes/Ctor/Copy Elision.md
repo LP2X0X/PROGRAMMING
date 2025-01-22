@@ -1,0 +1,2 @@
+- **Copy elision** is a compiler optimization technique that allows the compiler to remove unnecessary copying of objects.
+- Unlike other types of optimization, copy elision is exempt from the “as-if” rule. That is, copy elision is allowed to elide the copy constructor even if the copy constructor has side effects (such as printing text to the console)! This is why copy constructors should not have side effects other than copying -- if the compiler elides the call to the copy constructor, the side effects won’t execute, and the observable behavior of the program will change!

@@ -11,7 +11,7 @@ static_cast<new_type>(expression)
 ```
 
 ```ad-note
-It’s worth noting that the argument to _static_cast_ evaluates as an expression. When we pass in a variable, that variable is evaluated to produce its value, and that value is then converted to the new type. The variable itself is _not_ affected by casting its value to a new type.
+It’s worth noting that the argument to _static_cast_ evaluates as an [[Expression|expression]]. When we pass in a variable, that variable is evaluated to produce its value, and that value is then converted to the new type. The variable itself is _not_ affected by casting its value to a new type.
 ```
 
 ```ad-important

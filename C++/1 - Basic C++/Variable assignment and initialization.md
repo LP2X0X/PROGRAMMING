@@ -41,5 +41,5 @@ int f {};      // initializer is empty braces (value initialization)
 	- It supports initialization with lists of values.
 
 ```ad-tip
-Best practice: Initialize your variables upin creation.
+Best practice: Initialize your variables upon creation.
 ```

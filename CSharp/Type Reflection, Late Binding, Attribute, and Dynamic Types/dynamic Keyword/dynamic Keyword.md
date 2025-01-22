@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[Dynamic Language Runtime]]
 - [[Expression Trees]]
 - [[Limitation]]
-- [[Overview]]
+- [[CSharp/Type Reflection, Late Binding, Attribute, and Dynamic Types/dynamic Keyword/Overview]]
 - [[Simplifying Late-Bound Calls Using Dynamic Types]]
 
 %% End Waypoint %%

@@ -1,6 +1,3 @@
-### The as-if rule
-- The **as-if rule** says that the compiler can modify a program however it likes in order to produce more optimized code, so long as those modifications do not affect a program’s “observable behavior”.
-
 ### Compile-time evaluation of expressions
 Compile-time evaluation of expressions in C++ refers to the ability of the compiler to evaluate certain expressions during the compilation process rather than at runtime. This can lead to performance improvements and allows for more efficient and safer code. C++ provides several mechanisms to enable compile-time evaluation, primarily through `constexpr`, `const`, and template metaprogramming.
 
