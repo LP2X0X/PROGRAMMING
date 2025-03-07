@@ -16,7 +16,7 @@ type: folder_brief_live
 - [[protected]]
 - [[root Namespace]]
 - [[sealed]]
-- [[static]]
+- [[CSharp/OOP/Keyword/static]]
 - [[System.Object]]
 - [[CSharp/OOP/Keyword/this]]
 - [[when]]

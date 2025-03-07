@@ -1,0 +1,1 @@
+- Next.js is a React **framework** that gives you building blocks to create web applications.

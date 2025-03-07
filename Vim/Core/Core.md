@@ -16,6 +16,7 @@ type: folder_brief_live
 - [[Motion]]
 - [[Operator + Motion = Action]]
 - [[Registers]]
+- [[Tabs]]
 - [[The dot command]]
 - [[The expression register]]
 - [[Vim Jump List]]

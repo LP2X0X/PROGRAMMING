@@ -8,77 +8,47 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6bff2a77ba316011",
+            "id": "a63a85c28acf39dc",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "surfing-view",
               "state": {
                 "url": "https://calendar.google.com/calendar/u/0/r/week"
               },
+              "icon": "lucide-file",
+              "title": "Google Calendar - Week of March 3, 2025"
+            }
+          },
+          {
+            "id": "5c5846633ebb56e2",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "surfing-view",
+              "state": {
+                "url": "https://jira.kohyoung.com/secure/Tempo.jspa#/my-work/week?type=LIST"
+              },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "Google Calendar - Week of January 20, 2025"
+              "title": "Tempo - Jira"
             }
           },
           {
-            "id": "9f5088d580aab352",
+            "id": "0dda5a9625ba9955",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C++/2 - Fundamental Data Types/Terms/Types/size_t.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "size_t"
-            }
-          },
-          {
-            "id": "ee858fd107120f23",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C++/4 - Operators/Terms/Increment, decrement operators, and side effects.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Increment, decrement operators, and side effects"
-            }
-          },
-          {
-            "id": "13217d648d8636e6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C++/9 - Type Conversion, Type Aliases, and Type Deduction/Type aliases.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Type aliases"
-            }
-          },
-          {
-            "id": "ae36fba799ba9d56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C++/3 - Constants and Strings/Constant expressions and compile-time optimization.md",
+                "file": "Web Dev/CSS/CSS.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Constant expressions and compile-time optimization"
+              "title": "CSS"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -97,7 +67,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byCreatedTimeReverse"
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -134,7 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245.50260543823242
+    "width": 277.5026054382324
   },
   "right": {
     "id": "7491882444cf49f2",
@@ -246,16 +217,27 @@
             }
           },
           {
-            "id": "46f6f997b4aa4e71",
+            "id": "e9d6547128099ef8",
             "type": "leaf",
             "state": {
-              "type": "timeline",
+              "type": "planner-timeline",
               "state": {},
               "icon": "calendar-with-checkmark",
               "title": "Timeline"
             }
+          },
+          {
+            "id": "148e77c04c65830f",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {},
+              "icon": "checkmark",
+              "title": "Todo List"
+            }
           }
-        ]
+        ],
+        "currentTab": 10
       }
     ],
     "direction": "horizontal",
@@ -274,61 +256,63 @@
       "obsidian42-brat:BRAT": false,
       "omnisearch:Omnisearch": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-day-planner:Timeline": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-memos:Thino": false,
       "obsidian-kanban:Create new board": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "random-note:Open random note": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "ae36fba799ba9d56",
+  "active": "0dda5a9625ba9955",
   "lastOpenFiles": [
-    "C++/3 - Constants and Strings/The as-if rule.md",
-    "C++/3 - Constants and Strings/Constant expressions and compile-time optimization.md",
-    "C++/3 - Constants and Strings/Numeral systems.md",
-    "C++/3 - Constants and Strings/Conditional operator.md",
-    "C++/3 - Constants and Strings/Performance overhead of function called.md",
-    "C++/3 - Constants and Strings/C-Style String vs std String.md",
-    "C++/2 - Fundamental Data Types/Type conversion.md",
-    "C++/2 - Fundamental Data Types/Output manipulator.md",
-    "C++/2 - Fundamental Data Types/The sizeof operator.md",
-    "C++/2 - Fundamental Data Types/Fundamental data type.md",
-    "C++/2 - Fundamental Data Types/Terms/Terms.md",
-    "C++/2 - Fundamental Data Types/Terms/Types/size_t.md",
-    "C++/2 - Fundamental Data Types/Terms/Types/Types.md",
-    "C++/2 - Fundamental Data Types/Terms/Memory addresses.md",
-    "C++/2 - Fundamental Data Types/Terms/Byte.md",
-    "C++/2 - Fundamental Data Types/Terms/Void.md",
-    "C++/2 - Fundamental Data Types/Terms/Overflow.md",
-    "C++/2 - Fundamental Data Types/Terms/Fixed-width integers.md",
-    "C++/2 - Fundamental Data Types/Terms/Fast and least integers.md",
-    "C++/2 - Fundamental Data Types/Terms/Bit.md",
-    "C++/2 - Fundamental Data Types/2 - Fundamental Data Types.md",
-    "C++/2 - Fundamental Data Types/Why you should avoid unsigned integer.md",
-    "C++/2 - Fundamental Data Types/Scientific Notation.md",
-    "C++/2 - Fundamental Data Types/if Statement.md",
-    "C++/1 - Basic C++/Terms/Core/Expression.md",
-    "C++/1 - Basic C++/Terms/Others/Others.md",
-    "C++/13 - Introduction to Classes/Dtor/Untitled",
-    "C++/13 - Introduction to Classes/Dtor",
-    "C++/13 - Introduction to Classes/Nested stuff",
-    "C++/13 - Introduction to Classes/this Pointer",
-    "C++/13 - Introduction to Classes/Member related concepts",
-    "Resources/Pasted Image 20241223164559_443.png",
-    "Resources/Pasted Image 20241223164530_588.png",
-    "Resources/Pasted Image 20241223164440_360.png",
-    "Resources/Pasted Image 20241219152740_743.png",
-    "Resources/Pasted Image 20241219152559_749.png",
-    "Resources/Pasted Image 20241219152444_153.png",
-    "Resources/Pasted Image 20241219152427_118.png",
-    "Resources/Pasted Image 20241219152317_062.png",
-    "Resources/Pasted Image 20241219152251_476.png",
-    "Resources/Pasted Image 20241219082323_839.png",
-    "MySettings.vssettings",
-    "C++/13 - Introduction to Classes/Ctor",
-    "Git/prepare-commit-msg.txt",
-    "Git/prepare-commit-msg",
-    "Git",
+    "Web Dev/Web Dev.md",
+    "Web Dev/CSS/CSS.md",
+    "Web Dev/CSS",
+    "Web Dev/HTML/HTML.md",
+    "Web Dev/HTML",
+    "Web Dev/JavaScript/Destructuring Assignment/Destructuring Assignment Overview.md",
+    "Web Dev/JavaScript/Destructuring Assignment/Destructuring Assignment.md",
+    "Web Dev/General/General.md",
+    "Web Dev/JavaScript/JavaScript.md",
+    "Web Dev/JavaScript/Destructuring Assignment",
+    "Web Dev/Next.js/Next.js.md",
+    "Design Patterns/Design Patterns.md",
+    "Web Dev/JavaScript/Arrays/Arrays.md",
+    "Web Dev/JavaScript/Arrays/Array methods.md",
+    "Web Dev/JavaScript/Arrays/Array-like Objects.md",
+    "Web Dev/JavaScript/Arrays/length property.md",
+    "Web Dev/JavaScript/Arrays/Array related methods.md",
+    "Web Dev/JavaScript/Arrays/Array Overview.md",
+    "Web Dev/JavaScript/Arrays/Array indices.md",
+    "Web Dev/JavaScript/Object/Object.md",
+    "Web Dev/JavaScript/Arrays",
+    "Web Dev/JavaScript/Object/Object overview.md",
+    "Web Dev/JavaScript/Object/Object coercion.md",
+    "Web Dev/JavaScript/Object/null-prototype Object.md",
+    "Web Dev/JavaScript/Object/Object prototype.md",
+    "Web Dev/JavaScript/Functions/Arrow functions.md",
+    "Web Dev/JavaScript/Object",
+    "Web Dev/JavaScript/Functions/Name conflicts.md",
+    "Web Dev/JavaScript/Functions/Parameters/Parameters.md",
+    "Web Dev/JavaScript/Functions/Immediately Invoked Function Expression (IIFE).md",
+    "Web Dev/JavaScript/Functions/Functions Expression.md",
+    "Web Dev/JavaScript/Functions/Parameters",
+    "_vimrc",
+    "Web Dev/JavaScript/Functions",
+    "Computer Science",
+    "Web Dev/JavaScript",
+    "Resources/learn-html-and-dom 3.avif",
+    "Resources/learn-html-and-dom 2.avif",
+    "Resources/learn-html-and-dom 1.avif",
+    "Resources/learn-html-and-dom.avif",
+    "Resources/Pasted Image 20250219150631_308.png",
+    "Resources/Pasted Image 20250219150559_217.png",
+    "Resources/Pasted Image 20250219150512_198.png",
+    "Resources/Pasted Image 20250219150434_334.png",
+    "Resources/Pasted Image 20250219150301_620.png",
+    "Resources/Pasted Image 20250219150241_890.png",
     "Untitled.canvas",
     "C++/Untitled.canvas",
     "CSharp/Multithreaded, Parallel and Async Programming/Async Programming/Untitled.canvas",

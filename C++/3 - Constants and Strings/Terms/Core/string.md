@@ -66,7 +66,7 @@ int main()
 }
 ```
 
-### Initialing a std::string is expensive
+### Initializing a std::string is expensive
 - **Whenever a std::string is initialized, a copy of the string used to initialize it is made.** Making copies of strings is expensive, so care should be taken to minimize the number of copies made.
 
 ### Literals for std::string

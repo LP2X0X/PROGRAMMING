@@ -1,4 +1,4 @@
-- Much like a [[Function Template|function template]] is a template definition for instantiating functions, a **class template** is a template definition for instantiating class types.
+- Much like a [[Function templates| function template]] is a template definition for instantiating functions, a **class template** is a template definition for instantiating class types.
 
 ```ad-note
 A “class type” is a struct, class, or union type.

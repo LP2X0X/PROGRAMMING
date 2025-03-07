@@ -22,7 +22,6 @@
   "obsidian-rich-links",
   "obsidian-text-format",
   "obsidian-underline",
-  "obsidian-vimrc-support",
   "waypoint",
   "calendar",
   "omnisearch",
@@ -32,6 +31,9 @@
   "text-extractor",
   "obsidian-kanban",
   "obsidian-icon-folder",
-  "surfing",
-  "web-browser"
+  "web-browser",
+  "dataview",
+  "obsidian-vimrc-support",
+  "obsidian-checklist-plugin",
+  "surfing"
 ]

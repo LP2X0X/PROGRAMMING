@@ -8,16 +8,19 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Class Invariant]]
+- [[Class templates with member functions]]
 - [[Class]]
 - [[Classes and header files]]
 - [[Const class objects and const member functions]]
 - **[[Ctor]]**
 - **[[Dtor]]**
+- **[[Friend]]**
 - [[Literal Type]]
 - **[[Member related concepts]]**
 - **[[Nested stuff]]**
 - [[Resetting a class back to default state]]
 - [[Rvalue implicit objects and return by reference]]
+- **[[Static stuff]]**
 - [[Temporary class objects]]
 - **[[this Pointer]]**
 

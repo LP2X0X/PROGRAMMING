@@ -10,5 +10,6 @@
   "showViewHeader": true,
   "baseFontSize": 14,
   "interfaceFontFamily": "",
-  "monospaceFontFamily": "Cascadia Code,Segoe UI"
+  "monospaceFontFamily": "Cascadia Code,Segoe UI",
+  "showRibbon": true
 }
