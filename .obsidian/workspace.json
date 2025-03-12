@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a63a85c28acf39dc",
+            "id": "9a9036aa10000132",
             "type": "leaf",
             "state": {
               "type": "surfing-view",
@@ -16,39 +16,25 @@
                 "url": "https://calendar.google.com/calendar/u/0/r/week"
               },
               "icon": "lucide-file",
-              "title": "Google Calendar - Week of March 3, 2025"
+              "title": "Google Calendar - Week of March 10, 2025"
             }
           },
           {
-            "id": "5c5846633ebb56e2",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "surfing-view",
-              "state": {
-                "url": "https://jira.kohyoung.com/secure/Tempo.jspa#/my-work/week?type=LIST"
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Tempo - Jira"
-            }
-          },
-          {
-            "id": "0dda5a9625ba9955",
+            "id": "ed5e658daf033322",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Dev/CSS/CSS.md",
-                "mode": "source",
+                "file": "Design Patterns/Design Patterns.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "CSS"
+              "title": "Design Patterns"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -237,7 +223,7 @@
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -265,44 +251,46 @@
       "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "0dda5a9625ba9955",
+  "active": "93d85604355e1efd",
   "lastOpenFiles": [
-    "Web Dev/Web Dev.md",
+    "Setting Files/Setting Files.md",
+    "Web Dev/CSS/Basic/CSS Selector Types.md",
+    "RtoS/RtoS.md",
+    "Resources/efdc766a3226f0ce38f86c5242294bf41acce78e-2048x1536.jpg",
+    "Web Dev/CSS/Basic/Basic.md",
+    "Web Dev/CSS/Basic/The purpose of CSS.md",
     "Web Dev/CSS/CSS.md",
-    "Web Dev/CSS",
-    "Web Dev/HTML/HTML.md",
-    "Web Dev/HTML",
-    "Web Dev/JavaScript/Destructuring Assignment/Destructuring Assignment Overview.md",
     "Web Dev/JavaScript/Destructuring Assignment/Destructuring Assignment.md",
     "Web Dev/General/General.md",
-    "Web Dev/JavaScript/JavaScript.md",
+    "Untitled.md",
+    "Web Dev/CSS/Basic",
+    "Web Dev/HTML/Basic/HTML.md",
+    "Web Dev/HTML/Basic/Basic.md",
+    "Web Dev/HTML/Basic/Attributes.md",
+    "Web Dev/HTML/Basic",
+    "Web Dev/HTML/Basic/Tags.md",
+    "Web Dev/HTML/Basic/Basic Structure of an HTML document.md",
+    "Web Dev/HTML/Basic/Common HTML Tags.md",
+    "Computer Science/CPU architectures.md",
+    "Web Dev/React/React.md",
+    "Computer Science/Computer Science.md",
+    "Vim/Tips and Tricks/Executing Programs in the Shell.md",
+    "Vim/Tips and Tricks/Normal mode Command.md",
+    "Vim/Tips and Tricks/Copy and move line.md",
+    "Vim/Tips and Tricks/Append After a Ragged Visual Block.md",
+    "Vim/Tips and Tricks/Quickly switch back to Normal Mode.md",
+    "Vim/Tips and Tricks/Tips and Tricks.md",
+    "Vim/Vim.md",
+    "Others/Comparison of serialization formats.md",
+    "Resources/Pasted Image 20250310103120_360.png",
+    "Web Dev/CSS",
+    "Web Dev/HTML",
     "Web Dev/JavaScript/Destructuring Assignment",
-    "Web Dev/Next.js/Next.js.md",
-    "Design Patterns/Design Patterns.md",
-    "Web Dev/JavaScript/Arrays/Arrays.md",
-    "Web Dev/JavaScript/Arrays/Array methods.md",
-    "Web Dev/JavaScript/Arrays/Array-like Objects.md",
-    "Web Dev/JavaScript/Arrays/length property.md",
-    "Web Dev/JavaScript/Arrays/Array related methods.md",
-    "Web Dev/JavaScript/Arrays/Array Overview.md",
-    "Web Dev/JavaScript/Arrays/Array indices.md",
-    "Web Dev/JavaScript/Object/Object.md",
     "Web Dev/JavaScript/Arrays",
-    "Web Dev/JavaScript/Object/Object overview.md",
-    "Web Dev/JavaScript/Object/Object coercion.md",
-    "Web Dev/JavaScript/Object/null-prototype Object.md",
-    "Web Dev/JavaScript/Object/Object prototype.md",
-    "Web Dev/JavaScript/Functions/Arrow functions.md",
     "Web Dev/JavaScript/Object",
-    "Web Dev/JavaScript/Functions/Name conflicts.md",
-    "Web Dev/JavaScript/Functions/Parameters/Parameters.md",
-    "Web Dev/JavaScript/Functions/Immediately Invoked Function Expression (IIFE).md",
-    "Web Dev/JavaScript/Functions/Functions Expression.md",
     "Web Dev/JavaScript/Functions/Parameters",
     "_vimrc",
     "Web Dev/JavaScript/Functions",
-    "Computer Science",
-    "Web Dev/JavaScript",
     "Resources/learn-html-and-dom 3.avif",
     "Resources/learn-html-and-dom 2.avif",
     "Resources/learn-html-and-dom 1.avif",
@@ -311,8 +299,6 @@
     "Resources/Pasted Image 20250219150559_217.png",
     "Resources/Pasted Image 20250219150512_198.png",
     "Resources/Pasted Image 20250219150434_334.png",
-    "Resources/Pasted Image 20250219150301_620.png",
-    "Resources/Pasted Image 20250219150241_890.png",
     "Untitled.canvas",
     "C++/Untitled.canvas",
     "CSharp/Multithreaded, Parallel and Async Programming/Async Programming/Untitled.canvas",
