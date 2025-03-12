@@ -9,8 +9,7 @@
   "nativeMenus": false,
   "showViewHeader": true,
   "baseFontSize": 14,
-  "interfaceFontFamily": "Lato",
-  "monospaceFontFamily": "Cascadia Code,Segoe UI",
-  "showRibbon": true,
-  "baseFontSizeAction": true
+  "interfaceFontFamily": "",
+  "monospaceFontFamily": "Segoe UI,Cascadia Code",
+  "showRibbon": true
 }
