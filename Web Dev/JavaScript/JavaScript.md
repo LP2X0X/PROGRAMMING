@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[Arrays]]**
-- **[[Destructuring Assignment]]**
+- **[[Destructuring]]**
 - **[[Functions]]**
 - **[[Object]]**
 
