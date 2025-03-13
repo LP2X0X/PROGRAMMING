@@ -11,5 +11,6 @@ type: folder_brief_live
 - **[[Destructuring]]**
 - **[[Functions]]**
 - **[[Object]]**
+- **[[Template Literals]]**
 
 %% End Waypoint %%
