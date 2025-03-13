@@ -2,3 +2,8 @@
 .obsidian/appearance.json
 .obsidian/workspace.json
 .obsidian/app.json
+.obsidian/plugins/various-complements/histories.json
+.obsidian/hotkeys.json
+.DS_Store
+*.swp
+*.un~
