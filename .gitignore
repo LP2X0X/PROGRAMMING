@@ -1,3 +1,4 @@
 # Ignore specific Obsidian files
 .obsidian/appearance.json
 .obsidian/workspace.json
+.obsidian/app.json
