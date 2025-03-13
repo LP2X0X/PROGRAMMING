@@ -120,3 +120,36 @@ h1 ~ p {
 |**Adjacent**|`+`|First immediate sibling.|
 |**General**|`~`|All siblings after the element.|
 
+---
+
+## Selecting multiple HTML elements with CSS
+- Let's say you had the following HTML.
+```html
+<div class="box-1">
+  <p>Box 1</p>
+</div>
+<div class="box-2">
+  <p>Box 2</p>
+</div>
+```
+- Wouldn't it be nice if we could assign the `width` and `height` properties one time rather than writing for each element? Good news, we can! Here's how I would write this CSS.
+
+```css
+.box-1,
+.box-2 {
+  width: 200px;
+  height: 200px;
+}
+
+.box-1 {
+  border: 1px solid green;
+  color: green;
+}
+
+.box-2 {
+  border: 1px solid blue;
+  color: blue;
+}
+```
+
+- By separating each selector using a comma, we can select **multiple HTML "groups"** at the same time. In the example above, we are applying the `width` and `height` properties to _both_ selectors and then individually applying `border` and `color` (text color) styles to each.
