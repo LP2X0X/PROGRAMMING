@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20250318094234_178.png","text":"cv: :threshold(matFilterHeight, matSolderfask, m_pParam->nShapeHeightTH, 255, cv::THRESH_BINARY);","libVersion":"0.3.2","langs":"eng"}

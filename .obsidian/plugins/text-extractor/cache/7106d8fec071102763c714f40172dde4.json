@@ -1,0 +1,1 @@
+{"path":"Resources/Pasted Image 20250318085900_446.png","text":"int numComponents = cv::connectedComponentsWithStats(matSolderMask, labels, stats, centroids);","libVersion":"0.3.2","langs":"eng"}
