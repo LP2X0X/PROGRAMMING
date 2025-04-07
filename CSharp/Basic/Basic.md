@@ -12,7 +12,7 @@ type: folder_brief_live
 - **Types**
 	- [[array]]
 	- [[enum]]
-	- **[[Notes]]**
+	- **[[CSharp/Basic/Types/Notes/Notes]]**
 	- **[[null]]**
 	- [[CSharp/Basic/Types/struct]]
 	- [[tuple]]

@@ -10,6 +10,6 @@ type: folder_brief_live
 - [[IComparable]]
 - [[IComparer]]
 - **[[IEnumerable and IEnumerator]]**
-- **[[Notes]]**
+- **[[CSharp/Interfaces/Notes/Notes]]**
 
 %% End Waypoint %%

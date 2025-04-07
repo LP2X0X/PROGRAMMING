@@ -1,3 +1,7 @@
+- Tag is the individual components inside angle brackets (<>).
+
+---
+
 ```html
 <p></p>
 ```

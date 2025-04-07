@@ -48,3 +48,4 @@
 	- `<meta>` - Nope, not `<meta></meta>`. Some HTML tags are "self closing". This just defines useful information for the browser and search engines to use when viewing the webpage.
 	- `<link>` - This allows you to connect your CSS stylesheet. We will be talking more about this in a future lesson.
 	- `<script>` - This allows you to connect JavaScript code to your HTML document. We will cover this later in the post when we talk about the document object model (DOM).
+	- \<body>\</body> - Contains all visible elements.

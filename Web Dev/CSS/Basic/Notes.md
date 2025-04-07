@@ -1,0 +1,2 @@
+- A good transition time is about 0.15s.
+- Using padding is better than width and height for "box" component. It helps keep the spacing even if the content inside the "box" change.

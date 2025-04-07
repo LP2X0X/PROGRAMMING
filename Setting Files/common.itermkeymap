@@ -1,0 +1,58 @@
+{
+  "Key Mappings": {
+    "0xf702-0x300000-0x7b": {
+      "Label": "Cursor Start ⌘←",
+      "Action": 11,
+      "Text": "0x01"
+    },
+    "0xf703-0x300000-0x7c": {
+      "Label": "Cursor End ⌘→",
+      "Action": 11,
+      "Text": "0x05"
+    },
+
+    "0xf702-0x280000-0x7b": {
+      "Label": "Cursor Word Left ⌥←",
+      "Action": 11,
+      "Text": "0x1b 0x62"
+    },
+    "0xf703-0x280000-0x7c": {
+      "Label": "Cursor Word Right ⌥→",
+      "Action": 11,
+      "Text": "0x1b 0x66"
+    },
+
+    "0xf702-0x220000-0x7b": {
+      "Label": "Select Word Left ⇧←",
+      "Action": 45,
+      "Text": "0"
+    },
+    "0xf703-0x220000-0x7c": {
+      "Label": "Select Word Right ⇧→",
+      "Action": 46,
+      "Text": "0"
+    },
+
+    "0x7f-0x100000-0x33": {
+      "Label": "Delete All ⌘⌫",
+      "Action": 11,
+      "Text": "0x15"
+    },
+    "0x7f-0x80000-0x33": {
+      "Label": "Delete Word Left ⌥⌫",
+      "Action": 11,
+      "Text": "0x01b 0x08"
+    },
+
+    "0x7a-0x100000-0x6": {
+      "Label": "Undo ⌘Z",
+      "Action": 11,
+      "Text": "0x1f"
+    },
+    "0x5a-0x120000-0x6": {
+      "Label": "Redo ⌘⇧Z",
+      "Action": 11,
+      "Text": "0x18 0x1f"
+    }
+  }
+}
