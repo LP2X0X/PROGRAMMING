@@ -5,7 +5,7 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
-- [[Vim/Cheat Sheet]]
+- [[Cheat Sheet]]
 - **[[Core]]**
 - **[[Tips and Tricks]]**
 
