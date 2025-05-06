@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240129155139_993.png","text":"public static class QueryExtension { = public static string GetBoardCondtionQuery(this Board boardModel) => $\"SELECT CONDITIONDATA FROM TB_CCICONDITION WHERE CONDITIONGUID = '{boardModel.ConditionGuid}' \";","libVersion":"0.3.2","langs":"eng"}

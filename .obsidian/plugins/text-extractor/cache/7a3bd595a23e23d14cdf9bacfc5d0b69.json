@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202081930_990.png","text":"public interface IGeneralMeasureResult : IMeasureValue { fen— RectSizeF RectSize { get; } Breferences ImageInfo ImageUV { get; } Brefeences ImageInfo ImageWhite { get; } Brefeences string SvgPath { get; } 7references double? Area { get; } }","libVersion":"0.3.2","langs":"eng"}

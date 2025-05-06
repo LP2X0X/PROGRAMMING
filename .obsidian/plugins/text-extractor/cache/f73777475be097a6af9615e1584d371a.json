@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202094819_076.png","text":"public interface IThicknessExInsufficientMeasureResult : IMeasureValue { RectSizeF RectSize { get; } ImageInfo ImageUV { get; } ImageInfo ImageWhite { get; } string SvgPath { get; } 1 reference double AreaPercentageValue { get; } 3","libVersion":"0.3.2","langs":"eng"}

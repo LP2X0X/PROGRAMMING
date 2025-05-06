@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240201094604_441.png","text":"var itemResults = item?.Result?.Where(x => x.MeasureType == itemResult.MeasureType)?.ToList();","libVersion":"0.3.2","langs":"eng"}

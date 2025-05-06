@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202094124_017.png","text":"public interface IOverCoatingHeightMeasureResult : IMeasureValue { RectSizeF RectSize { get; } ImageInfo ThicknessImage3D { get; } double MinValue { get; } L CTCY R ETEY ITOR T | e double Avgvalue { get; } }","libVersion":"0.3.2","langs":"eng"}

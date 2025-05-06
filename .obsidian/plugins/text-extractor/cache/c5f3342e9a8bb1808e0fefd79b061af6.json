@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240130101905_019.png","text":"public void UpdateBoard(BoardInfo board) { this.board = board; Arrays = this.board?.ArraysInfor; ArraySelectionChanged(Arrays?.FirstOrDefault()); }","libVersion":"0.3.2","langs":"eng"}

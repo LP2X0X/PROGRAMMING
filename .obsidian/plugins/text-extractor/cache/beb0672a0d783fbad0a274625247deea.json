@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240205094425_015.png","text":"public bool ConnectionTest() => connection?.0OpenConnection(KohyoungDbName) ?? false;","libVersion":"0.3.2","langs":"eng"}

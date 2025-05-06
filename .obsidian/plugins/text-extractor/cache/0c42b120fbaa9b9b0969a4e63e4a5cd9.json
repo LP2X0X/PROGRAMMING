@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20250318100130_027.png","text":"if (m_pParam->nShapeHeightTH > 1)[{ ... 1| else f 1 : GetFlatnessInspectionAreaPtr(1, m_pParam->nHeightRoi, m_pParam->nWidthRoi, pbInspectRegion, pbTopAreaMask, pbFittingRect, imgInspectionArea.ptr<sYTE>()) ¥","libVersion":"0.3.2","langs":"eng"}

@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240201085703_316.png","text":"<DataTemplate DataType=\"{x:Type viewModel:HistogramTrendViewModel}\"> <view:HistogramTrend /> </DataTemplate>","libVersion":"0.3.2","langs":"eng"}

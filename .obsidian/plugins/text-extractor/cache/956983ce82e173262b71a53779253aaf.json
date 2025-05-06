@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202094804_075.png","text":"public interface IThicknessExHeightMeasureResult : IMeasureValue { 1 reference RectSizeF RectSize { get; } 3 references ImageInfo ThicknessImage3D { get; } 1 reference double MinValue { get; } 1 reference double MaxValue { get; } 1 reference double AvgValue { get; } 1","libVersion":"0.3.2","langs":"eng"}
