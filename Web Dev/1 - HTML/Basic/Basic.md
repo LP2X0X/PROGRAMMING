@@ -12,7 +12,7 @@ type: folder_brief_live
 - **[[Elements]]**
 - [[HTML]]
 - [[Nested Layout Technique]]
-- [[Notes]]
+- [[Web Dev/1 - HTML/Basic/Notes]]
 - **Terms**
 	- [[Attributes]]
 	- [[Elements]]

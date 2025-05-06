@@ -7,10 +7,12 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[CSS]]**
-- **[[General]]**
-- **HTML**
+- **[[0 - General]]**
+- **1 - HTML**
 	- **[[Basic]]**
+- **2 - CSS**
+	- **[[Basic]]**
+	- [[CSS]]
 - **[[JavaScript]]**
 - **[[Next.js]]**
 - **[[React]]**

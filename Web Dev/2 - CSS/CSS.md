@@ -7,6 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Basic]]**
+- **[[Web Dev/2 - CSS/Basic/Basic]]**
 
 %% End Waypoint %%
