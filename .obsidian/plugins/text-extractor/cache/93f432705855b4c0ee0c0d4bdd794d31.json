@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202094749_073.png","text":"public interface IThicknessExBubbleMeasureResult : IMeasureValue { 2reterences RectSizeF RectSize { get; } ros—. ImageInfo ImageUV { get; } 3 references ImageInfo ImageWhite { get; } 3references string SvgPath { get; } 1 reference double AreaValue { get; } 3","libVersion":"0.3.2","langs":"eng"}

@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted image 20240206103903.png","text":"/// <summary> /// Register view with viewmodel /// </summary> e~ protected override void ConfigureViewModellLocator() 1{ base.ConfigureViewModelLocator(); ViewModelLocationProvider.Register<MainWindow.Views.MainWindow, MainWindow.Viewlodels.MainWindowViewModel>(); }","libVersion":"0.3.2","langs":"eng"}

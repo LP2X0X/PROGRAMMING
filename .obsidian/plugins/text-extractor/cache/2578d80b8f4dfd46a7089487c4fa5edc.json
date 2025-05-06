@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240129144433_990.png","text":"<dxmvvm: Interaction.Behaviors> <dxmvvm: EventToCommand Command=\"{Binding PCBSelectionChangedCommand}\" CommandParameter=\"{Binding ElementName=pcbDataGrid, Path=SelectedItem}\" EventName=\"SelectionChanged\" /> </dxmvvm: Interaction.Behaviors>","libVersion":"0.3.2","langs":"eng"}

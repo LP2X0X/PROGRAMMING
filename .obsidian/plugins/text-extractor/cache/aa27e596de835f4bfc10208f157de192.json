@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202095955_000.png","text":"gublic interface IUnderfillWidth3DMeasureResult : IMeasureValue List<float> ResultLengthValue { get; } int? SideID { get; } int? SideRegionType { get; } bool? SidePass { get; } ) List<IMeasureValue> Width3dLineMeasureValue { get; }","libVersion":"0.3.2","langs":"eng"}

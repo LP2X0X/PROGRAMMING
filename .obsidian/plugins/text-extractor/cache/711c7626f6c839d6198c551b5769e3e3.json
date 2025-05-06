@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202084812_495.png","text":"public interface IInspectionItemResult { 9references int GroupId { get; } 8 references int Index { get; } pre. bool? IsFailure { get; } pree. bool? IsPass { get; } 2references MeasureType MeasureType { get; } [Browsable(false)] 76 references o CECTLLATEY I EEETRE Y TN S }","libVersion":"0.3.2","langs":"eng"}

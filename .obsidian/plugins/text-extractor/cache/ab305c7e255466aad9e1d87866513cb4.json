@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202092526_338.png","text":"public interface IOverCoatingInsufficientMeasureResult : IMeasureValue { are— RectSizeF RectSize { get; } e BLECTS GV D EVTTIVAR S 3 e FUERTS QYIS D EV T B R TR § S string SvgPath { get; } e double AreaPercentageValue { get; } }","libVersion":"0.3.2","langs":"eng"}

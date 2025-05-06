@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240201094842_486.png","text":"private void UpdateChartLabels(MeasureType measureType) { this.LabelX = measureType == MeasureType.Bubble ? \"Length\" : \"Area”; this.UnitX = measureType == MeasureType.Bubble ? \"( pm )\" : \"( mm)\"; }","libVersion":"0.3.2","langs":"eng"}

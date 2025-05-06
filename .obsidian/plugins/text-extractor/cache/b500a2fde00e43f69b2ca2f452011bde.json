@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202081844_991.png","text":"public interface IMeasureValue { 99 eferences MeasureType MeasureType { get; } }","libVersion":"0.3.2","langs":"eng"}

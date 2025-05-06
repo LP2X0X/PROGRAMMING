@@ -1,1 +1,0 @@
-{"path":"Resources/ModularityAppArchitecture.png","text":"Modular Application Hosts all the visual components. Shell Provides the glue Prism between the Application modules and the ModuleManager Infrastructure shell. Provides views, Module Module Module services, and other rcioayame | [—X application.","libVersion":"0.3.2","langs":"eng"}

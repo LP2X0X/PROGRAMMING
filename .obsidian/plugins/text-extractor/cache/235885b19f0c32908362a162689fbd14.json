@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted image 20240617093629.png","text":"Table 10-6. Members of the Queue<T> Type Select Member of Queue<T> MeaninginLife Dequeue() Removes and returns the object at the beginning of the Queue<T> Enqueue() Adds an object to the end of the Queue<T> Peek() Returns the object at the beginning of the Queue<T> without removing it","libVersion":"0.3.2","langs":"eng"}

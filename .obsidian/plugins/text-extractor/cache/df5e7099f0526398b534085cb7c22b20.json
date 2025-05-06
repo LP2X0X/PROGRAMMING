@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240202092240_323.png","text":"public interface IThicknessMeasureResult : IMeasureValue L 3 references. ImageInfo ThicknessImage3D { get; } Sreece double? ValueAvg { get; } }","libVersion":"0.3.2","langs":"eng"}

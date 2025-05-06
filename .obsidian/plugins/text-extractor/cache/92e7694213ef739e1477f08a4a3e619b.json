@@ -1,1 +1,0 @@
-{"path":"Resources/Pasted Image 20240919143509_439.png","text":"SetValue(string key, NRectangleInt value) { mapRECT[key] = Tuple.Create(value.xMin, value.yMin, value.xMax, value.yMax); return this; }","libVersion":"0.3.2","langs":"eng"}
