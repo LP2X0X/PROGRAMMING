@@ -14,6 +14,7 @@ type: folder_brief_live
 - [[Macros]]
 - [[Mark Your Place and Snap Back to It]]
 - [[Motion]]
+- [[Move windows in buffer around]]
 - [[Operator + Motion = Action]]
 - [[Registers]]
 - [[Tabs]]
