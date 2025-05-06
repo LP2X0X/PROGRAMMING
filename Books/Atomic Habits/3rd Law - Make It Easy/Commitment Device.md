@@ -1,0 +1,2 @@
+- A commitment device is a choice you make in the present that controls your actions in the future. It is a way to lock in future behavior, bind you to good habits, and restrict you from bad ones.
+- Commitment devices increase the odds that you’ll do the right thing in the future by making bad habits difficult in the present.

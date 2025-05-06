@@ -1,0 +1,4 @@
+- We are more likely to repeat a behavior when the experience is satisfying.
+- The human brain evolved to prioritize immediate rewards over delayed rewards.
+- The Cardinal Rule of Behavior Change: What is immediately rewarded is repeated. What is immediately punished is avoided.
+- To get a habit to stick you need to feel immediately successful—even if it’s in a small way.

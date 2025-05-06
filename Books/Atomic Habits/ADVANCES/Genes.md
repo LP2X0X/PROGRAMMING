@@ -1,0 +1,6 @@
+- The secret to maximizing your odds of success is to choose the right field of competition.
+- Pick the right habit and progress is easy. Pick the wrong habit and life is a struggle.
+- Genes cannot be easily changed, which means they provide a powerful advantage in favorable circumstances and a serious disadvantage in unfavorable circumstances.
+- Habits are easier when they align with your natural abilities. Choose the habits that best suit you. 
+- Play a game that favors your strengths. If you can’t find a game that favors you, create one. 
+- Genes do not eliminate the need for hard work. They clarify it. They tell us what to work hard on.

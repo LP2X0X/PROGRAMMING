@@ -308,6 +308,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Common Psuedo Class]]
+- [[CSS Grid Technique]]
 - [[Default text alignment]]
 - [[Multiple Classes on a Single HTML Element]]
 - [[Notes]]

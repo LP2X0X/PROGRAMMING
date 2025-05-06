@@ -1,4 +1,4 @@
-# Elements Overview
+# Books Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,8 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[div]]
-- [[img]]
-- [[input]]
+- **[[Atomic Habits]]**
 
 %% End Waypoint %%

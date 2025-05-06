@@ -11,6 +11,7 @@ type: folder_brief_live
 - [[Common HTML Tags]]
 - **[[Elements]]**
 - [[HTML]]
+- [[Nested Layout Technique]]
 - [[Notes]]
 - **Terms**
 	- [[Attributes]]

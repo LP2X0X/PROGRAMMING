@@ -1,4 +1,4 @@
-**1. <b> (Bold)**
+**1. \<b> (Bold)**
 
 • Renders text in **bold**, but **without semantic importance**.
 
@@ -8,7 +8,7 @@
 
 **Example:**
 
-```
+```html
 <p>This is a <b>bold</b> word.</p>
 ```
 
@@ -16,7 +16,7 @@
 
 ---
 
-**2. <em> (Emphasis - Italics)**
+**2. \<em> (Emphasis - Italics)**
 
 • Used to **emphasize** text, typically displayed in _italics_.
 
@@ -26,7 +26,7 @@
 
 **Example:**
 
-```
+```html
 <p>This is an <em>important</em> word.</p>
 ```
 
@@ -34,7 +34,7 @@
 
 ---
 
-**3. <i> (Italic)**
+**3. \<i> (Italic)**
 
 • Renders text in _italics_ but **without emphasis or importance**.
 
@@ -44,7 +44,7 @@
 
 **Example:**
 
-```
+```html
 <p>The word <i>schadenfreude</i> is German.</p>
 ```
 
@@ -52,7 +52,7 @@
 
 ---
 
-**4. <mark> (Highlighted Text)**
+**4. \<mark> (Highlighted Text)**
 
 • Highlights text, typically with a **yellow background**.
 
@@ -62,7 +62,7 @@
 
 **Example:**
 
-```
+```html
 <p>Please read the <mark>important</mark> details.</p>
 ```
 
@@ -70,7 +70,7 @@
 
 ---
 
-**5. <u> (Underlined)**
+**5. \<u> (Underlined)**
 
 • Underlines text **without additional meaning**.
 
@@ -80,7 +80,7 @@
 
 **Example:**
 
-```
+```html
 <p>This is an <u>underlined</u> word.</p>
 ```
 
@@ -88,7 +88,7 @@
 
 ---
 
-**6. <small> (Smaller Text)**
+**6. \<small> (Smaller Text)**
 
 • Displays text in a **smaller font size**.
 
@@ -98,7 +98,7 @@
 
 **Example:**
 
-```
+```html
 <p><small>Terms and conditions apply.</small></p>
 ```
 
@@ -106,7 +106,7 @@
 
 ---
 
-**7. <del> (Deleted Text)**
+**7. \<del> (Deleted Text)**
 
 • Shows **strikethrough** text, indicating **removal or edits**.
 
@@ -114,7 +114,7 @@
 
 **Example:**
 
-```
+```html
 <p>The price was <del>$50</del> now it's $30.</p>
 ```
 
@@ -122,7 +122,7 @@
 
 ---
 
-**8. <ins> (Inserted Text)**
+**8. \<ins> (Inserted Text)**
 
 • Underlines text to indicate an **addition** or change.
 
@@ -130,7 +130,7 @@
 
 **Example:**
 
-```
+```html
 <p>The correct price is <ins>$30</ins>.</p>
 ```
 
@@ -138,7 +138,7 @@
 
 ---
 
-**9. <sup> (Superscript) & <sub> (Subscript)**
+**9. \<sup> (Superscript) & \<sub> (Subscript)**
 
 • <sup> raises text (e.g., exponents, footnotes).
 
@@ -148,7 +148,7 @@
 
 **Example:**
 
-```
+```html
 <p>Water formula: H<sub>2</sub>O</p>
 <p>Square: x<sup>2</sup></p>
 ```
@@ -158,7 +158,7 @@
 ---
 
 
-**10. <span> 
+**10. \<span> 
 
 
 • The most generic text's element. It doesn't mean anything on its own, but can be used together with the global attributes, e.g. class, lang,...
@@ -166,7 +166,7 @@
 
 **Example:**
 
-```
+```html
 <p>This is a <span style="color: red;">highlighted</span> word.</p>
 ```
 

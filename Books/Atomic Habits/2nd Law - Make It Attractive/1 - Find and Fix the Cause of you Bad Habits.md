@@ -1,0 +1,2 @@
+- The key to finding and fixing the causes of your bad habits is to reframe the associations you have about them. It’s not easy, but if you can reprogram your predictions, you can transform a hard habit into an attractive one.
+- Reframe your mind-set. Highlight the benefits of avoiding your bad habits.

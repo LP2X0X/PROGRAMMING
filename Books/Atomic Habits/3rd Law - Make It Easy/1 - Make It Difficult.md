@@ -1,0 +1,4 @@
+- A commitment device is a choice you make in the present that locks in better behavior in the future. 
+- The ultimate way to lock in future behavior is to automate your habits.
+- Onetime choices—like buying a better mattress or enrolling in an automatic savings plan—are single actions that automate your future habits and deliver increasing returns over time.
+- Using technology to automate your habits is the most reliable and effective way to guarantee the right behavior.

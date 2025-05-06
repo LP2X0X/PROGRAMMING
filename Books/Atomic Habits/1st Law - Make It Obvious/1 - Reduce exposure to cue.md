@@ -1,0 +1,4 @@
+- Once a habit is formed, it is unlikely to be forgotten.
+- The people with the best self-control are typically the ones who need to use it the least. It’s easier to practice self-restraint when you don’t have to use it very often.
+- One of the most practical ways to eliminate a bad habit is to reduce exposure to the cue that causes it.
+- Self-control is a short-term strategy, not a long-term one.

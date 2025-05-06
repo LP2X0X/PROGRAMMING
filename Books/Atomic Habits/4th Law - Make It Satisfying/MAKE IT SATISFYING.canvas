@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"c948e4adbdc7d2d6","type":"text","text":"MAKE IT SATISFYING","x":-542,"y":-330,"width":189,"height":50,"color":"1"},
+		{"id":"7c601873ada90710","type":"file","file":"Books/Atomic Habits/4th Law - Make It Satisfying/1 + The Cardinal Rule of Bahavior Change.md","x":-1040,"y":-720,"width":400,"height":240},
+		{"id":"bb5608859a09325a","type":"file","file":"Books/Atomic Habits/4th Law - Make It Satisfying/2 + Habit Tracker.md","x":-248,"y":-720,"width":400,"height":280},
+		{"id":"8468dd823e87a532","type":"file","file":"Books/Atomic Habits/4th Law - Make It Satisfying/Recover When Habits Break Down.md","x":-1040,"y":-180,"width":400,"height":280},
+		{"id":"4de91f7b1b658a6c","type":"file","file":"Books/Atomic Habits/4th Law - Make It Satisfying/Time Consistency.md","x":-1040,"y":160,"width":400,"height":474},
+		{"id":"e23963c3b402f640","type":"file","file":"Books/Atomic Habits/4th Law - Make It Satisfying/When and When Not to Track a Habit.md","x":-248,"y":-180,"width":400,"height":370},
+		{"id":"b46822598df49004","type":"text","text":"MAKE IT UNSATISFYING","x":346,"y":-330,"width":214,"height":50,"color":"1"},
+		{"id":"33366066341b3208","type":"file","file":"Books/Atomic Habits/4th Law - Make It Satisfying/1 - Accountability Partner.md","x":700,"y":-445,"width":400,"height":280}
+	],
+	"edges":[
+		{"id":"bbe8bc256eb02243","fromNode":"c948e4adbdc7d2d6","fromSide":"top","toNode":"7c601873ada90710","toSide":"right"},
+		{"id":"8d589c9dd174453a","fromNode":"c948e4adbdc7d2d6","fromSide":"top","toNode":"bb5608859a09325a","toSide":"left"},
+		{"id":"294826efc362da37","fromNode":"b46822598df49004","fromSide":"right","toNode":"33366066341b3208","toSide":"left"}
+	]
+}

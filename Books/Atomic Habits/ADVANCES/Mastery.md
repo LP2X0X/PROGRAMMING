@@ -1,0 +1,2 @@
+- Mastery is the process of narrowing your focus to a tiny element of success, repeating it until you have internalized the skill, and then using this new habit as the foundation to advance to the next frontier of your development. Old tasks become easier the second time around, but it doesn’t get easier overall because now you’re pouring your energy into the next challenge. Each habit unlocks the next level of performance. It’s an endless cycle.
+![[Pasted image 20250413211213.png|center]]

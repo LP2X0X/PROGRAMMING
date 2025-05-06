@@ -15,7 +15,7 @@ type: folder_brief_live
 - [[Memory addresses]]
 - [[Multi-character literal]]
 - [[NaN and Inf]]
-- [[Overflow]]
+- [[C++/2 - Fundamental Data Types/Terms/Overflow]]
 - [[Significant digits]]
 - **[[Types]]**
 - [[Void]]

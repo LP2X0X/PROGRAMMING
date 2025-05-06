@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"f0950e4dcc4b90fb","type":"text","text":"MAKE IT OBVIOUS","x":52,"y":-300,"width":168,"height":60,"color":"1"},
+		{"id":"fca04189707ff549","type":"file","file":"Books/Atomic Habits/1st Law - Make It Obvious/1 + The Habits Scorecard.md","x":-520,"y":-720,"width":400,"height":294},
+		{"id":"e6412a16412cb5bc","type":"file","file":"Books/Atomic Habits/1st Law - Make It Obvious/2 + Implementation Intention.md","x":380,"y":-699,"width":400,"height":253},
+		{"id":"c05df1e806d9398b","type":"file","file":"Books/Atomic Habits/1st Law - Make It Obvious/4 + Design your environment.md","x":380,"y":43,"width":400,"height":358},
+		{"id":"fe39b180651d103c","type":"text","text":"The Diderot Effect states that obtaining a new possession often creates a spiral of consumption that leads to additional purchases.","x":-640,"y":566,"width":640,"height":94},
+		{"id":"51cd391b6a7509be","type":"text","text":"Many human behaviors follow this cycle. You often decide what to do next based on what you have just finished doing. Going to the bathroom leads to washing and drying your hands, which reminds you that you need to put the dirty towels in the laundry, so you add laundry detergent to the shopping list, and so on. No behavior happens in isolation. Each action becomes a cue that triggers the next behavior.","x":-640,"y":720,"width":640,"height":140},
+		{"id":"eb2161ec0182db37","type":"file","file":"Books/Atomic Habits/1st Law - Make It Obvious/3 + Habit Stacking.md","x":-520,"y":-80,"width":400,"height":600},
+		{"id":"b350457af0480875","type":"text","text":"\"Until you make the unconscious conscious, it will direct your life and you will call it fate\"\n- Carl Jung","x":-166,"y":-1120,"width":605,"height":90},
+		{"id":"7839f24d2dfc2ed4","type":"text","text":"There are no good habits or bad habits. There are only effective habits. That is, effective at solving problems. All habits serve you in some way—even the bad ones—which is why you repeat them.","x":-166,"y":-973,"width":605,"height":100},
+		{"id":"2cda4d406e3aac54","type":"text","text":"MAKE IT INVISIBLE","x":1080,"y":-300,"width":168,"height":60,"color":"1"},
+		{"id":"7bf2f421f9d58124","type":"file","file":"Books/Atomic Habits/1st Law - Make It Obvious/1 - Reduce exposure to cue.md","x":1440,"y":-470,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"6a5a44a91030feed","fromNode":"f0950e4dcc4b90fb","fromSide":"top","toNode":"fca04189707ff549","toSide":"right"},
+		{"id":"5ec0564c45db6df1","fromNode":"f0950e4dcc4b90fb","fromSide":"top","toNode":"e6412a16412cb5bc","toSide":"left"},
+		{"id":"c624e70a38be24d4","fromNode":"f0950e4dcc4b90fb","fromSide":"bottom","toNode":"eb2161ec0182db37","toSide":"top"},
+		{"id":"0da63159673abf8e","fromNode":"f0950e4dcc4b90fb","fromSide":"bottom","toNode":"c05df1e806d9398b","toSide":"top"},
+		{"id":"f7a33e72cb8f3d66","fromNode":"eb2161ec0182db37","fromSide":"bottom","toNode":"fe39b180651d103c","toSide":"top"},
+		{"id":"eaaf3e04912aeb9e","fromNode":"fe39b180651d103c","fromSide":"bottom","toNode":"51cd391b6a7509be","toSide":"top"},
+		{"id":"9d64ab443a824e50","fromNode":"2cda4d406e3aac54","fromSide":"right","toNode":"7bf2f421f9d58124","toSide":"left"}
+	]
+}

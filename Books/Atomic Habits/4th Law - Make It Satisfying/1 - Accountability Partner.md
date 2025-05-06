@@ -1,0 +1,4 @@
+- We are less likely to repeat a bad habit if it is painful or unsatisfying.
+- An accountability partner can create an immediate cost to inaction. We care deeply about what others think of us, and we do not want others to have a lesser opinion of us. 
+- A habit contract can be used to add a social cost to any behavior. It makes the costs of violating your promises public and painful. 
+- Knowing that someone else is watching you can be a powerful motivator.

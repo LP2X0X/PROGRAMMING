@@ -1,0 +1,3 @@
+- We mentally assign our habits to the locations in which they occur: the home, the office, the gym. Each location develops a connection to certain habits and routines. You establish a particular relationship with the objects on your desk, the items on your kitchen counter, the things in your bedroom.
+- By sprinkling triggers throughout your surroundings, you increase the odds that you’ll think about your habit throughout the day. Make sure the best choice is the most obvious one. Making a better decision is easy and natural when the cues for good habits are right in front of you.
+- Environment design is powerful not only because it influences how we engage with the world but also because we rarely do it.

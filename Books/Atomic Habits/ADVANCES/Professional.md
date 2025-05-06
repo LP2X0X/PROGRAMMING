@@ -1,0 +1,4 @@
+- The greatest threat to success is not failure but boredom.
+- As habits become routine, they become less interesting and less satisfying. We get bored.
+- Anyone can work hard when they feel motivated. It’s the ability to keep going when work isn’t exciting that makes the difference.
+- Professionals stick to the schedule; amateurs let life get in the way.

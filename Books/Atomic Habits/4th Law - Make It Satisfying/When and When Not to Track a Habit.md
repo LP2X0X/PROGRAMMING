@@ -1,0 +1,3 @@
+- The dark side of tracking a particular behavior is that we become driven by the number rather than the purpose behind it. This pitfall is evident in many areas of life. We focus on working long hours instead of getting meaningful work done.
+- Goodhart's Law: "When a measure becomes a target, it ceases to be a good measure.” Measurement is only useful when it guides you and adds context to a larger picture, not when it consumes you. Each number is simply one piece of feedback in the overall system.
+- Just because you can measure something doesn’t mean it’s the most important thing. And just because you can’t measure something doesn’t mean it’s not important at all.

@@ -11,6 +11,7 @@ type: folder_brief_live
 - [[CSS Selector Types]]
 - [[CSS Specificity]]
 - [[Entity]]
+- [[Flexbox]]
 - [[Psuedo Class]]
 - [[Text's Element]]
 

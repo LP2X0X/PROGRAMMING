@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"ef7f5c976e00d3d4","type":"text","text":"MAKE IT ATTRACTIVE","x":-360,"y":-242,"width":190,"height":70,"color":"1"},
+		{"id":"ba03fd3c2a2317be","type":"file","file":"Books/Atomic Habits/2nd Law - Make It Attractive/1 + Temptation Bundling.md","x":-865,"y":-534,"width":400,"height":240},
+		{"id":"540a25e9c69cb442","type":"text","text":"We have the brains of our ancestors but temptations they never had to face.","x":-457,"y":-884,"width":385,"height":70},
+		{"id":"c31e0d98aee51487","type":"text","text":"Behaviors are attractive when they help us fit in.","x":-463,"y":-774,"width":397,"height":60},
+		{"id":"6ad883c82067f8a9","type":"file","file":"Books/Atomic Habits/2nd Law - Make It Attractive/2 + The Role of Family and Friends in Shaping Your Habits.md","x":-40,"y":-801,"width":400,"height":774},
+		{"id":"e315943d78545139","type":"file","file":"Books/Atomic Habits/2nd Law - Make It Attractive/3 + Motivation Ritual.md","x":-857,"y":-27,"width":400,"height":827},
+		{"id":"62aa3ec6c3727770","type":"text","text":"MAKE IT UNATTRACTIVE","x":788,"y":-242,"width":205,"height":70,"color":"1"},
+		{"id":"2dc949cfd1a8e545","type":"file","file":"Books/Atomic Habits/2nd Law - Make It Attractive/1 - Find and Fix the Cause of you Bad Habits.md","x":1120,"y":-309,"width":400,"height":205},
+		{"id":"5cc2e3bc9c8bad22","type":"file","file":"Books/Atomic Habits/2nd Law - Make It Attractive/The Dopamine-Driven Feedback Loop.md","x":-1400,"y":-774,"width":400,"height":252},
+		{"id":"a5f3032702b2739c","type":"file","file":"Books/Atomic Habits/2nd Law - Make It Attractive/The Dopamine Spike.md","x":-1400,"y":-395,"width":400,"height":935},
+		{"id":"67d9e787d38abb6a","type":"file","file":"Books/Atomic Habits/2nd Law - Make It Attractive/The Seductive Pull of Social Norms.md","x":440,"y":-480,"width":400,"height":132}
+	],
+	"edges":[
+		{"id":"bde40ca33c4ef2f4","fromNode":"ef7f5c976e00d3d4","fromSide":"top","toNode":"ba03fd3c2a2317be","toSide":"right"},
+		{"id":"75f2e2538a3c2be4","fromNode":"ef7f5c976e00d3d4","fromSide":"top","toNode":"6ad883c82067f8a9","toSide":"left"},
+		{"id":"c034411b3a4747c0","fromNode":"ef7f5c976e00d3d4","fromSide":"bottom","toNode":"e315943d78545139","toSide":"right"},
+		{"id":"2f80c5c390a24d73","fromNode":"62aa3ec6c3727770","fromSide":"right","toNode":"2dc949cfd1a8e545","toSide":"left"},
+		{"id":"925e928501b73024","fromNode":"5cc2e3bc9c8bad22","fromSide":"right","toNode":"ba03fd3c2a2317be","toSide":"left"},
+		{"id":"7197f00598ea02bc","fromNode":"a5f3032702b2739c","fromSide":"right","toNode":"ba03fd3c2a2317be","toSide":"left"},
+		{"id":"15eb75caefb9da24","fromNode":"67d9e787d38abb6a","fromSide":"left","toNode":"6ad883c82067f8a9","toSide":"right"}
+	]
+}

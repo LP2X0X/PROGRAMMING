@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"id":"d366a1d6371a7fc4","type":"text","text":"MAKE IT EASY","x":-390,"y":-400,"width":159,"height":50,"color":"1"},
+		{"id":"785756ea6a3d2999","type":"file","file":"Books/Atomic Habits/3rd Law - Make It Easy/1 + The Law of Least Effort.md","x":-960,"y":-960,"width":400,"height":483},
+		{"id":"b7eddfca620d8aea","type":"file","file":"Books/Atomic Habits/3rd Law - Make It Easy/2 + The Two Minutes Rule.md","x":-114,"y":-960,"width":400,"height":441},
+		{"id":"22bec54eb3185f92","type":"text","text":"Business is a never-ending quest to deliver the same result in an easier fashion.","x":86,"y":-400,"width":545,"height":60},
+		{"id":"13af9261da99293f","type":"file","file":"Books/Atomic Habits/3rd Law - Make It Easy/Walk Slowly, but Never Backward.md","x":-510,"y":-1560,"width":400,"height":460},
+		{"id":"310ac83ad51c9bc9","type":"file","file":"Books/Atomic Habits/3rd Law - Make It Easy/Habits form based on frequency.md","x":-114,"y":-200,"width":400,"height":441},
+		{"id":"8d8cf09f5b16ed38","type":"file","file":"Books/Atomic Habits/3rd Law - Make It Easy/Decisive Moment.md","x":-960,"y":-200,"width":400,"height":760},
+		{"id":"db773e77cadf15cf","x":867,"y":-400,"width":173,"height":50,"color":"1","type":"text","text":"MAKE IT DIFFICULT"},
+		{"id":"09171671dcb6d6f7","type":"file","file":"Books/Atomic Habits/3rd Law - Make It Easy/1 - Make It Difficult.md","x":1160,"y":-514,"width":400,"height":279},
+		{"id":"e9d557f99ad11939","type":"file","file":"Books/Atomic Habits/3rd Law - Make It Easy/Commitment Device.md","x":1800,"y":-574,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"ce995ebb1b288a45","fromNode":"d366a1d6371a7fc4","fromSide":"top","toNode":"785756ea6a3d2999","toSide":"right"},
+		{"id":"0b006ec54c31cd6a","fromNode":"d366a1d6371a7fc4","fromSide":"top","toNode":"b7eddfca620d8aea","toSide":"left"},
+		{"id":"2129ed88b7484c02","fromNode":"e9d557f99ad11939","fromSide":"left","toNode":"09171671dcb6d6f7","toSide":"right"},
+		{"id":"55bb2f96e13baba5","fromNode":"09171671dcb6d6f7","fromSide":"left","toNode":"db773e77cadf15cf","toSide":"right"}
+	]
+}

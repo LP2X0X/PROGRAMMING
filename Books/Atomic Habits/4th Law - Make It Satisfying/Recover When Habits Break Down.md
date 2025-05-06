@@ -1,0 +1,4 @@
+- Whenever this happens to me, I try to remind myself of a simple rule: never miss twice.
+- The first mistake is never the one that ruins you. It is the spiral of repeated mistakes that follows. Missing once is an accident. Missing twice is the start of a new habit.
+- The all-or-nothing cycle of behavior change is just one pitfall that can derail your habits.
+- The problem is not slipping up; the problem is thinking that if you can’t do something perfectly, then you shouldn’t do it at all.

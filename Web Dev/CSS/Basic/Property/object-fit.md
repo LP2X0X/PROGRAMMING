@@ -1,6 +1,8 @@
 The object-fit CSS property is used to control **how media elements** like images or videos are **resized to fit their container**.
 
-  
+```ad-note
+For object-fit to work, the element itself needs a width and height.
+```
 
 It’s especially useful when you’re working with responsive designs or fixed-size containers and want to make sure the image/video looks good without distortion.
 
