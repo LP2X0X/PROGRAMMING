@@ -12,3 +12,5 @@ In case the error "Could not resolve host: https" appear, remove the https from 
 #### To exclude file from being track with git
 1 - Add file path to `.git/info/exclude`
 2 - git update-index --skip-worktree \<file-list>
+
+--- 

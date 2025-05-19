@@ -310,8 +310,10 @@ type: folder_brief_live
 - [[Common Psuedo Class]]
 - [[CSS Grid Technique]]
 - [[Default text alignment]]
+- [[Different between align-items and justify-content]]
 - [[Multiple Classes on a Single HTML Element]]
 - [[Notes]]
+- [[position fixed vs position absolute]]
 - **[[Property]]**
 - [[Pseudo Elements and Classes]]
 - **[[Terms]]**
