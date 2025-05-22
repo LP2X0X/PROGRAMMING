@@ -1,15 +1,18 @@
-**Conditional compilation** in C++ is a feature provided by the preprocessor that allows you to compile certain parts of your code based on specific conditions. This is particularly useful for platform-specific code, debugging, or including/excluding features based on defined conditions.
+**Conditional compilation** in C++ is a feature provided by the preprocessor that **allows you to compile certain parts of your code based on specific conditions**. This is particularly useful for platform-specific code, debugging, or including/excluding features based on defined conditions.
+
+---
 
 ### Basic Syntax
 
-Conditional compilation is achieved using preprocessor directives like `#if`, `#ifdef`, `#ifndef`, `#else`, `#elif`, and `#endif`. Here's how they work:
+- Conditional compilation is achieved using preprocessor directives like `#if`, `#ifdef`, `#ifndef`, `#else`, `#elif`, and `#endif`. Here's how they work:
+	- **`#if`**: Tests a compile-time condition.
+	- **`#ifdef`**: Checks if a macro is defined.
+	- **`#ifndef`**: Checks if a macro is not defined.
+	- **`#else`**: Provides an alternative block if the previous condition is false.
+	- **`#elif`**: Else-if, combines `#else` and `#if`.
+	- **`#endif`**: Ends the conditional block.
 
-- **`#if`**: Tests a compile-time condition.
-- **`#ifdef`**: Checks if a macro is defined.
-- **`#ifndef`**: Checks if a macro is not defined.
-- **`#else`**: Provides an alternative block if the previous condition is false.
-- **`#elif`**: Else-if, combines `#else` and `#if`.
-- **`#endif`**: Ends the conditional block.
+--- 
 
 ### Example 1: Platform-Specific Code
 
@@ -36,6 +39,8 @@ int main() {
 - **`#else`**: If neither `WINDOWS` nor `LINUX` is defined, this block will be compiled.
 - **`#endif`**: Ends the conditional compilation block.
 
+---
+
 ### Example 2: Debugging
 
 ```cpp
@@ -56,13 +61,39 @@ int main() {
 - **`#ifdef DEBUG`**: If `DEBUG` is defined, the debugging message will be printed.
 - **`#endif`**: Ends the conditional block.
 
+--- 
+
+### Example 3: Compile code based on a version number
+
+```cpp
+#define VERSION 2
+
+#if VERSION == 1
+    std::cout << "Version 1\n";
+#elif VERSION == 2
+    std::cout << "Version 2\n";
+#else
+    std::cout << "Unknown version\n";
+#endif
+```
+
+### Explanation:
+- **`#if VERSION == 1`**: If `VERSION` is equal 1, then print to screen Version 1. The same goes for other version.
+- **`#endif`**: Ends the conditional block.
+
+--- 
+
 ### Use Cases:
 - **Platform-specific code:** To compile code differently depending on the operating system or hardware.
 - **Debugging:** To include/exclude debug code.
 - **Feature toggles:** To include/exclude features based on configuration.
 
+---
+
 ### Tips:
 - **Avoid excessive use:** Overuse of conditional compilation can make the code hard to read and maintain.
 - **Consider alternatives:** Sometimes runtime checks or polymorphism can be used instead of conditional compilation.
 
+```ad-warning
 Conditional compilation is a powerful tool in C++, but it should be used judiciously to keep code maintainable and clear.
+```

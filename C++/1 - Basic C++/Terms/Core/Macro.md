@@ -1,6 +1,20 @@
-In C++, a macro is a fragment of code that is given a name. Whenever the name is used, it is replaced by the contents of the macro. Macros are handled by the preprocessor, which is a step that occurs before the actual compilation of the code. 
+---
+tags: cpp, term, fundamental
+---
+ A **macro** is a label defined in the source code that is replaced by its value by the [[Preprocessor|preprocessor]] before compilation.
+- There are two basic types of macros: _object-like macros_, and _function-like macros_.
+	- _Function-like macros_ act like functions, and serve a similar purpose. Their use is generally considered unsafe, and almost anything they can do can be done by a normal function.
+	- _Object-like macros_ can be defined in one of two ways:
 
-Macros in C++ are defined using the `#define` directive. Here is an example:
+```cpp
+#define IDENTIFIER
+#define IDENTIFIER substitution_text
+// The top definition has no substitution text, whereas the bottom one does. Because these are preprocessor directives (not statements), note that neither form ends with a semicolon.
+```
+
+---
+
+### Examples
 
 ```cpp
 #include <iostream>
@@ -32,19 +46,25 @@ int main() {
 }
 ```
 
-### Explanation:
+#### Explanation:
 1. **`#define PI 3.14159`**: This defines a macro named `PI` which will be replaced by `3.14159` wherever `PI` appears in the code.
 
 2. **`#define CIRCLE_AREA(radius) (PI * (radius) * (radius))`**: This defines a macro that takes a parameter `radius`. When `CIRCLE_AREA(r)` is used, it is replaced by the expression `(PI * (r) * (r))`.
+
+---
 
 ### Key Points:
 - **No type checking:** Macros do not perform type checking. They simply replace text during the preprocessing step.
 - **Can cause issues:** If not used carefully, macros can lead to hard-to-debug code due to unexpected behavior, especially with expressions. For example, using `#define SQUARE(x) x*x` can give unexpected results if used like `SQUARE(1+2)`, because it will expand to `1+2*1+2`.
 - **Better alternatives:** In many cases, inline functions or `const` variables are preferable to macros in C++ because they offer type safety and better debugging.
 
+---
+
 ### Macro vs. Inline Functions:
 - **Macros** are expanded by the preprocessor, while **inline functions** are expanded by the compiler. 
 - **Inline functions** have the advantage of type checking, which macros do not provide.
+
+---
 
 ### Predefined Macros
 - C++ has a number of predefined macros, including the following:
@@ -52,6 +72,8 @@ int main() {
 	- `__TIME__`: Current time formatted as `HH:MM:SS`.
 	- `__FILE__`: Current filename.
 	- `__LINE__`: Current line number.
+
+---
 
 ### Undefining a Macro
 - Once defined, a macro can be undefined with the `#undef` command. Using the macro after that point will result in a compile error.
@@ -90,4 +112,4 @@ int main() {
 }
 ```
 
-For complex operations or when dealing with data types, consider using `const`, `constexpr`, or inline functions instead of macros to avoid potential pitfalls.
+- For complex operations or when dealing with data types, consider using `const`, `constexpr`, or inline functions instead of macros to avoid potential pitfalls.
