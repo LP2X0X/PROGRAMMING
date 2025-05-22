@@ -312,11 +312,11 @@ type: folder_brief_live
 - [[Default text alignment]]
 - [[Different between align-items and justify-content]]
 - [[Multiple Classes on a Single HTML Element]]
-- [[Notes]]
+- [[Web Dev/2 - CSS/Basic/Notes]]
 - [[position fixed vs position absolute]]
 - **[[Property]]**
 - [[Pseudo Elements and Classes]]
-- **[[Terms]]**
+- **[[Web Dev/2 - CSS/Basic/Terms/Terms]]**
 - [[The !important keyword]]
 - [[The purpose of CSS]]
 

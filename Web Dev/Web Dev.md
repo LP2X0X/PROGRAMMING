@@ -13,6 +13,7 @@ type: folder_brief_live
 - **2 - CSS**
 	- **[[Basic]]**
 	- [[CSS]]
+- **[[3 - JavaScript Crash Course]]**
 - **[[JavaScript]]**
 - **[[Next.js]]**
 - **[[React]]**

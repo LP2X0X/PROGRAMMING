@@ -1,4 +1,4 @@
-# Terms Overview
+# 1 - Basic Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Web Dev/React/Terms/Basic/Basic]]**
+- **[[1 - Terms]]**
+- **[[2 - Keywords]]**
+- [[Notes]]
 
 %% End Waypoint %%
