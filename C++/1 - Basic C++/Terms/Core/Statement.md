@@ -1,3 +1,7 @@
+---
+tags: cpp, term, fundamental
+---
+
 - A **statement** is a type of instruction that causes the program to perform some action. They are the smallest independent unit of computation in the C++ language.
 
 ```ad-note

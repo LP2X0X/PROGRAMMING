@@ -1,3 +1,7 @@
+---
+tags: cpp, term, fundamental
+---
+
 - A function is a collection of [[Statement|statements]] that get executed sequentially. Functions are typically written to do a specific job or perform some useful action. It provides a way for us to split our program into small, modular chunks that are easier to organize, test and use.
 - A function can return void (nothing) or value.
 

@@ -1,9 +1,14 @@
-### Define
+---
+tags: cpp, term, fundamental
+---
+### Define - Declare
 - When you gave an [[Object|object]] a name and a [[Data type|data type]], you **defined** it.
 
 ```cpp
 int x; // define an integer variable named x
 ```
+
+---
 
 ### Assignment
 - After a variable has been defined, you can give it a value using the = operator. This process is called **assignment**.
@@ -12,6 +17,8 @@ int x; // define an integer variable named x
 int x;
 x = 5; // assignment of value 5 into variable x
 ```
+
+---
 
 ### Initialization
 - When an object is defined, you can optionally give it an initial value. The process of specifying an initial value for an object is called **initialization**, and the syntax used to initialize an object is called an **initializer**.

@@ -9,6 +9,7 @@ type: folder_brief_live
 - **[[Basic]]**
 - **[[Building and Configuring Class Libraries]]**
 - **[[Collections and Generics]]**
+- **[[CSharp to C++]]**
 - **[[Delegates, Events and Lambda Expressions]]**
 - **[[File I.O and Object Serialization]]**
 - **[[Interfaces]]**
