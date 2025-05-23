@@ -11,5 +11,6 @@ type: folder_brief_live
 - [[Default-initialization]]
 - [[Direct-initialization]]
 - [[List-initialization]]
+- [[Value-initialization]]
 
 %% End Waypoint %%
