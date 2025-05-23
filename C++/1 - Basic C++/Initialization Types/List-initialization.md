@@ -2,11 +2,11 @@
 tags: cpp, term, fundamental
 ---
 
-- The modern way to initialize objects in C++ is to use a form of initialization that makes use of curly braces. This is called **list-initialization** (or **uniform initialization** or **brace initialization**).
+- Initializes an object from a brace-enclosed initializer list. 
 - List-initialization comes in two forms:
 	```cpp
-	int width { 5 };    // direct-list-initialization of initial value 5 into variable width (preferred)
-	int height = { 6 }; // copy-list-initialization of initial value 6 into variable height (rarely used)
+	int width { 5 };    // direct-list-initialization of initial value 5 into variable width (preferred) // both explicit and non-explicit constructors are considered
+	int height = { 6 }; // copy-list-initialization of initial value 6 into variable height (rarely used) // both explicit and non-explicit constructors are considered, but only non-explicit constructors may be called
 	```
 - Additionally, list-initialization also provides a way to initialize objects with a list of values rather than a single value (which is why it is called “list-initialization”).
 

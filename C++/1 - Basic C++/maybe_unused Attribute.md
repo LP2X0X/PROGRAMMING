@@ -1,1 +1,0 @@
-- C++17 introduced the \[\[maybe_unused\]\] attribute, which allows us to tell the compiler that we’re okay with a variable being unused. The compiler will not generate unused variable warnings for such variables.
