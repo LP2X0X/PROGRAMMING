@@ -1,3 +1,7 @@
+---
+tags: js, term, fundamental
+---
+
 - A template literal **is a special kind of string** that can evaluate any expressions embedded within it.
 - This gives you the flexibility to dynamically populate a string with the values of variables, the results of calculations, or other code, instead of having to type out every character of the string exactly or combine several variables into a string with the + operator.
   

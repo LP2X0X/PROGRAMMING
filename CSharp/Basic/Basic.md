@@ -10,7 +10,7 @@ type: folder_brief_live
 - **[[Miscellaneous]]**
 - **[[Other notes]]**
 - **Types**
-	- [[array]]
+	- [[CSharp/Basic/Types/array]]
 	- [[enum]]
 	- **[[CSharp/Basic/Types/Notes/Notes]]**
 	- **[[null]]**

@@ -10,13 +10,9 @@ type: folder_brief_live
 - [[Basic Structure of an HTML document]]
 - [[Common HTML Tags]]
 - **[[Elements]]**
-- [[HTML]]
 - [[Nested Layout Technique]]
-- [[Web Dev/1 - HTML/Basic/Notes]]
-- **Terms**
-	- [[Attributes]]
-	- [[Elements]]
-	- [[Tags]]
-	- [[Void Element]]
+- [[Notes]]
+- **[[Terms]]**
+- [[XHTML]]
 
 %% End Waypoint %%

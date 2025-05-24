@@ -10,7 +10,7 @@ type: folder_brief_live
 - **[[Arrays]]**
 - **[[Destructuring]]**
 - **[[Functions]]**
-- **[[Object]]**
+- **[[Web Dev/JavaScript/Object/Object]]**
 - **[[Template Literals]]**
 
 %% End Waypoint %%
