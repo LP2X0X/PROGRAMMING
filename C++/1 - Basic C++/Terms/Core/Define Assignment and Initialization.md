@@ -3,6 +3,9 @@ tags: cpp, term, fundamental
 ---
 ### Define - Declare
 - When you gave an [[Object|object]] a name and a [[Data type|data type]], you **defined** it.
+```ad-note
+These terms does not apply to function.
+```
 
 ```cpp
 int x; // define an integer variable named x

@@ -14,7 +14,7 @@ type: folder_brief_live
 - [[Nested Layout Technique]]
 - [[Web Dev/1 - HTML/Basic/Notes]]
 - **Terms**
-	- [[Attributes]]
+	- [[Web Dev/1 - HTML/Basic/Terms/Attributes]]
 	- [[Elements]]
 	- [[Tags]]
 	- [[Void Element]]

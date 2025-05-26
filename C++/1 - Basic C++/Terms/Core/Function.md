@@ -17,7 +17,7 @@ returnType functionName() // This is the function header (tells the compiler abo
 - The curly braces and statements in-between are called the **function body**.
 ---
 
-```ad-note
+```ad-warning
 Nested functions are not supported.
 ```
 
