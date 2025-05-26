@@ -14,7 +14,7 @@ type: folder_brief_live
 - [[Data type]]
 - [[Define Assignment and Initialization]]
 - [[Expression]]
-- [[Function]]
+- [[C++/1 - Basic C++/Terms/Core/Function]]
 - [[Header file]]
 - [[Identifier]]
 - [[Initializer]]

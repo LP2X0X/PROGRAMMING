@@ -1,1 +1,1 @@
-- Every C++ program must have a special [[Function|function]] named **main** (all lower case letters). When the program is run, the statements inside of `main` are executed in sequential order.
+- Every C++ program must have a special [[C++/1 - Basic C++/Terms/Core/Function|function]] named **main** (all lower case letters). When the program is run, the statements inside of `main` are executed in sequential order.

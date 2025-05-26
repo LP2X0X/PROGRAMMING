@@ -1,4 +1,4 @@
-- [[Variable]] defined inside the body of a [[Function|function]] are called **local variable**. [[Parameter]] is also generally considered to be a local variable.
+- [[Variable]] defined inside the body of a [[C++/1 - Basic C++/Terms/Core/Function|function]] are called **local variable**. [[Parameter]] is also generally considered to be a local variable.
 
 ### Local variable lifetime
 - A local variable’s scope begins at the point of variable definition, and stops at the end of the set of curly braces in which it is defined (or for function parameters, at the end of the function).

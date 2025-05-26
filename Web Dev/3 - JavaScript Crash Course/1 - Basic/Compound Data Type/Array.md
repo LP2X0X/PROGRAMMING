@@ -86,9 +86,16 @@ Here’s a **summary of commonly used JavaScript array methods**—organized by 
 
 ### **🆕 ES2023+**
 
-|**Method**|**Description**|
-|---|---|
-|toReversed()|Returns a reversed copy (non-mutating).|
-|toSorted()|Returns a sorted copy (non-mutating).|
-|toSpliced()|Returns spliced copy (non-mutating).|
-|with(index, value)|Returns new array with replaced value.|
+| **Method**         | **Description**                         |
+| ------------------ | --------------------------------------- |
+| toReversed()       | Returns a reversed copy (non-mutating). |
+| toSorted()         | Returns a sorted copy (non-mutating).   |
+| toSpliced()        | Returns spliced copy (non-mutating).    |
+| with(index, value) | Returns new array with replaced value.  |
+
+---
+
+### Others
+```ad-note
+If you use entries() method of an array, it will return an array of arrays where each inner array contains the index as key and the item as value.
+```

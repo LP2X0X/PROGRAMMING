@@ -1,8 +1,12 @@
- ## Why let is preferred over var:
+---
+tags: js, keyword, fundamental
+---
+ 
+ ### Why let is preferred over var:
 
 ---
 
-### **1. Block Scope (✅ Better scoping rules)**
+#### **1. Block Scope (✅ Better scoping rules)**
 
 - var is **function-scoped** — it ignores blocks like if, for, etc.
     
@@ -23,12 +27,10 @@ console.log(b); // ❌ ReferenceError
 
 ---
 
-### **2. No Hoisting Surprises**
+#### **2. No Hoisting Surprises**
 
-- Both var and let are hoisted, but:
-    
+- Both var and let are [[Hoist|hoisted]], but:
     - var is initialized as undefined.
-        
     - let is not initialized, and using it before declaration gives a **ReferenceError**.
 
 **Example:**
@@ -43,7 +45,7 @@ let b = 20;
 
 ---
 
-### **3. No Redeclaration in the Same Scope**
+#### **3. No Redeclaration in the Same Scope**
 
 - var allows you to declare the same variable more than once in the same scope (which can cause bugs).
     
@@ -62,7 +64,7 @@ let y = 10; // ❌ SyntaxError
 
 ---
 
-### **4. Cleaner Code in Loops**
+#### **4. Cleaner Code in Loops**
 
 When using loops like for, let gives each iteration its own scope, which prevents issues with closures.
 
@@ -82,7 +84,7 @@ for (let i = 0; i < 3; i++) {
 
 ---
 
-### **✅ Summary: Use let (or const) Instead of var**
+#### **✅ Summary: Use let (or const) Instead of var**
 
 |**Feature**|var|let|
 |---|---|---|
@@ -93,9 +95,6 @@ for (let i = 0; i < 3; i++) {
 
 ---
 
-In modern JavaScript, let and const have mostly replaced var. Use:
-
-- let for variables that will change
-    
-- const for variables that won’t change
-    
+- In modern JavaScript, let and const have mostly replaced var. Use:
+	- let for variables that will change
+	- const for variables that won’t change

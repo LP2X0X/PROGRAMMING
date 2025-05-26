@@ -7,9 +7,13 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- [[Call back]]
 - [[Compound Data Types]]
+- [[Function]]
+- [[Hoist]]
 - [[Object Literal]]
 - [[Primitive]]
+- [[Side effect]]
 - [[Template Literal]]
 - [[Truthiness]]
 - [[Type Coercion]]
