@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[main Function]]
+- [[DRY]]
 - [[The input-output library]]
 
 %% End Waypoint %%

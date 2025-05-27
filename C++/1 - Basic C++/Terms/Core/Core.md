@@ -14,7 +14,6 @@ type: folder_brief_live
 - [[Conditional compilation]]
 - [[Data type]]
 - [[Define Assignment and Initialization]]
-- [[Function]]
 - [[Header file]]
 - [[Identifier]]
 - [[Initializer]]
