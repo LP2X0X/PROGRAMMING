@@ -1,8 +1,13 @@
 The **input/output library** (io library) is part of the C++ standard library that deals with basic input and output. The _io_ part of _iostream_ stands for _input/output_.
+
+---
+
 ### std::cout
-- The cout variable allows us to send the data to the console to be printed as text. We use _std::cout_, along with the **insertion operator (`<<`)**, to send the text _Hello world!_ to the console to be printed.
+- The cout ***variable*** allows us to send the data to the console to be printed as text. We use _std::cout_, along with the **insertion operator (`<<`)**, to send the text _Hello world!_ to the console to be printed.
 - Statements in our program request the output be sent to the console. However, that output is typically not sent to the console immediately. Instead, the requested output “gets in line”, and is stored in a region of memory set aside to collect such requests (called a **buffer**). 
 - Periodically, the buffer is **flushed**, meaning all of the data collected in the buffer is transferred to its destination (in this case, the console).
+
+---
 
 ### std::endl
 - If we want to print separate lines of output to the console, we need to tell the console to move the cursor to the next line. We can do that by outputting a newline. A **newline** is an OS-specific character or sequence of characters that moves the cursor to the start of the next line.
@@ -12,8 +17,10 @@ The **input/output library** (io library) is part of the C++ standard library th
 Best practice: Prefer \n over str::endl because **std::cout << std::endl** inserts a new line **and flushes the stream(output buffer)**, whereas **std::cout << “\n”** just inserts a new line.
 ```
 
+---
+
 ### std::cin
-- This variable read input from the keyboard. We typically use the extraction operator `>>` to put the input data in a variable (which can then be used in subsequent statements).
+- This ***variable*** read input from the keyboard. We typically use the extraction operator `>>` to put the input data in a variable (which can then be used in subsequent statements).
 - Inputting data is also a two stage process:
 	- The individual characters you enter as input are added to the end of an input buffer (inside `std::cin`). The enter key (pressed to submit the data) is also stored as a `'\n'` character.
 	- The extraction operator ‘>>’ removes characters from the front of the input buffer and converts them into a value that is assigned to the associated variable. This variable can then be used in subsequent statements.

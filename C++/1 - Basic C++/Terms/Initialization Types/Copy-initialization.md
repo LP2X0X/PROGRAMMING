@@ -10,7 +10,7 @@ int width = 5; // copy-initialization of value 5 into variable width
 - May involve creating a temporary and then copying or moving it into the variable on the left-hand side.
 
 ```ad-note
-Copy-initialization is also used whenever values are **implicitly copied**, such as when passing arguments to a function by value, returning from a function by value, or catching exceptions by value.
+Copy-initialization is also used whenever values are **implicitly copied**, such as when *passing arguments to a function by value*, *returning from a function by value*, or catching exceptions by value.
 ```
 
 ---

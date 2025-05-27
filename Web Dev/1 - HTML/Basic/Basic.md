@@ -10,6 +10,7 @@ type: folder_brief_live
 - [[Basic Structure of an HTML document]]
 - [[Common HTML Tags]]
 - **[[Elements]]**
+- [[HTML]]
 - [[Nested Layout Technique]]
 - [[Notes]]
 - **[[Terms]]**
