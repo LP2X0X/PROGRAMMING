@@ -7,9 +7,15 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- [[Argument]]
+- [[Function Prototype]]
 - [[Function]]
+- [[Local variable]]
 - [[main Function]]
+- [[Parameter]]
 - [[return statement]]
+- [[Unnamed parameter]]
+- [[Value Parameter]]
 - [[value returning function]]
 - [[void function]]
 

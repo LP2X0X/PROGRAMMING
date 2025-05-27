@@ -1,4 +1,20 @@
-In C++, unnamed parameters (also called **anonymous parameters**) are used in function or method declarations and definitions when the parameter is not needed within the function body. This can occur in several contexts, each serving a particular purpose:
+---
+tags: cpp, term, fundamental
+---
+
+In C++, unnamed parameters (also called **anonymous parameters**) are used in function or method declarations and definitions when the parameter is not needed within the function body.
+
+````ad-note
+
+The Google C++ style guide recommends using a comment to document what the unnamed parameter was:
+
+```cpp
+void doSomething(int /*count*/)
+{
+}
+````
+
+This can occur in several contexts, each serving a particular purpose:
 
 ### 1. **To Satisfy an Interface or Function Signature**
    - If you're implementing a function that needs to match a specific interface or virtual function signature, but you don't need to use one or more of the parameters, you can omit the parameter name.

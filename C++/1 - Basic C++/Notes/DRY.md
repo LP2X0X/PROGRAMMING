@@ -1,5 +1,5 @@
 ---
-tags: cpp, tenet
+tags: cpp, rule
 ---
 
 - Don't Repeat Yourself.
