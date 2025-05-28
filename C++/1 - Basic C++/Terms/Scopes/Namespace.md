@@ -1,4 +1,12 @@
+---
+tags: cpp, term, fundamental
+---
+
 A **namespace** provides another type of [[Scope region]] (called **namespace scope**) that allows you to declare names inside of it for the purpose of disambiguation. Any names declared inside the namespace won’t be mistaken for identical names in other scopes.
+
+```ad-note
+A namespace may only contain declarations and definitions. Executable statements are only allowed as part of a definition (e.g. of a function).
+```
 
 Here's a basic example of how namespaces work in C++:
 
@@ -14,7 +22,7 @@ namespace MyNamespace {
 ```
 
 ### Accessing Members of a Namespace
-To access the members of a namespace, you typically use the scope resolution operator `::`.
+To access the members of a namespace, you typically use the [[C++/1 - Basic C++/Terms/Operators/Scope resolution operator|scope resolution operator]].
 
 ```cpp
 int main() {

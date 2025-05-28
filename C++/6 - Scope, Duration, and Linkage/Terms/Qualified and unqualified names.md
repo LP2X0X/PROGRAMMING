@@ -1,2 +1,1 @@
-- A **qualified name** is a name that includes an associated scope. Most often, names are qualified with a namespace using the scope resolution operator (::).
 - An **unqualified name** is a name that does not include a scoping qualifier. For example, `cout` and `x` are unqualified names, as they do not include an associated scope.

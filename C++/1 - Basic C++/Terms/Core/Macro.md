@@ -7,9 +7,17 @@ tags: cpp, term, fundamental
 	- _Object-like macros_ can be defined in one of two ways:
 
 ```cpp
-#define IDENTIFIER
+#define IDENTIFIER // Most further occurrences of the identifier is removed and replaced by nothing!
 #define IDENTIFIER substitution_text
 // The top definition has no substitution text, whereas the bottom one does. Because these are preprocessor directives (not statements), note that neither form ends with a semicolon.
+```
+
+```ad-tip
+By convention, macro names are typically all uppercase, separated by underscores.
+```
+
+```ad-note
+In most cases, macro substitution does not occur when a macro identifier is used within another preprocessor command, except for `#if` and `#elif` mostly.
 ```
 
 ---
