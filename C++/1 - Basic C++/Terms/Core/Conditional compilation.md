@@ -1,10 +1,10 @@
-**Conditional compilation** in C++ is a feature provided by the preprocessor that **allows you to compile certain parts of your code based on specific conditions**. This is particularly useful for platform-specific code, debugging, or including/excluding features based on defined conditions.
+**Conditional compilation** in C++ is a feature provided by the [[Preprocessor|preprocessor]] that **allows you to compile certain parts of your code based on specific conditions**. This is particularly useful for platform-specific code, debugging, or including/excluding features based on defined conditions.
 
 ---
 
 ### Basic Syntax
 
-- Conditional compilation is achieved using preprocessor directives like `#if`, `#ifdef`, `#ifndef`, `#else`, `#elif`, and `#endif`. Here's how they work:
+- Conditional compilation is achieved using [[Preprocessor Directive|preprocessor directives]] like `#if`, `#ifdef`, `#ifndef`, `#else`, `#elif`, and `#endif`. Here's how they work:
 	- **`#if`**: Tests a compile-time condition.
 	- **`#ifdef`**: Checks if a macro is defined.
 	- **`#ifndef`**: Checks if a macro is not defined.

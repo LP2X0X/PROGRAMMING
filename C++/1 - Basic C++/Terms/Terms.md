@@ -8,6 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[Core]]**
+- **[[Errors]]**
 - **[[Expressions]]**
 - **[[Functions]]**
 - **[[Initialization Types]]**

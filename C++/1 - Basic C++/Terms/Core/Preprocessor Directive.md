@@ -66,7 +66,15 @@ Includes the contents of another file (usually a header).
 ```
 
 ```ad-note
-Because an #include directive replaces the #include directive with the content of the included file, an #include can copy directives from the included file into the current file.
+Because an \#include directive replaces the \#include directive with the content of the included file, an \#include can copy directives from the included file into the current file.
+```
+
+```ad-tip
+ - Do not \#include .cpp file. There are number of reasons for this:
+	- Doing so can cause naming collisions between source files.
+	- In a large project it can be hard to avoid one **definition** rules (ODR) issues.
+	- Any change to such a .cpp file will cause both the .cpp file and any other .cpp file that includes it to recompile, which can take a long time. Headers tend to change less often than source files.
+	- It is non-conventional to do so.
 ```
 
 ---
