@@ -1,11 +1,18 @@
-### Unsigned Integers in C++
+---
+tags: cpp, datatype, fundamental
+---
 
-**Unsigned integers** are a type of integer in C++ that can only represent non-negative values (0 and positive numbers). They are defined using keywords like `unsigned`, `unsigned int`, `unsigned char`, etc. For example:
+- **Unsigned integers** are [[Integer|integers]] that can only hold non-negative whole numbers.
+- To define an unsigned integer, we use the _unsigned_ keyword. By convention, this is placed before the type:
+	```cpp
+	unsigned short us;
+	unsigned int ui;
+	unsigned long ul;
+	unsigned long long ull;
+	```
+- If an unsigned value is out of range, it is **divided by one greater than the largest number of the type, and only the remainder kept**.
 
-- `unsigned int` typically represents an integer that can range from `0` to `4294967295` (if it's 32-bit).
-- `unsigned char` typically represents an integer that can range from `0` to `255`.
-
-The main advantage of using unsigned integers is that they can represent a larger positive range than their signed counterparts using the same number of bits. However, there are several reasons why you might want to avoid using them, especially in certain contexts.
+---
 
 ### Why You Might Want to Avoid Unsigned Integers
 
@@ -30,7 +37,7 @@ The main advantage of using unsigned integers is that they can represent a large
      ```
 
 3. **Comparisons with Signed Integers**:
-   - Comparing signed and unsigned integers can lead to unexpected results because of implicit type conversions. When you compare a signed integer with an unsigned integer, the signed integer is often converted to an unsigned type, which can lead to incorrect comparisons.
+   - Comparing signed and unsigned integers can lead to unexpected results because of implicit type conversions. When you compare a signed integer with an unsigned integer, **the signed integer is often converted to an unsigned type**, which can lead to incorrect comparisons.
    - Example:
      ```cpp
      int a = -1;

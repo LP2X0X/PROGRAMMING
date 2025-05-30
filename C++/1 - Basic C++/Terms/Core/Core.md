@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[Asignment]]
 - [[Comment]]
 - [[Conditional compilation]]
-- [[Data type]]
+- [[C++/1 - Basic C++/Terms/Core/Data type]]
 - [[Define Assignment and Initialization]]
 - [[Forward declaration]]
 - [[Header file]]

@@ -12,7 +12,7 @@ type: folder_brief_live
 - [[justify-content]]
 - [[line-height]]
 - [[object-fit]]
-- [[overflow]]
+- [[Web Dev/2 - CSS/Basic/Property/overflow]]
 - [[vertical-align]]
 
 %% End Waypoint %%

@@ -5,13 +5,13 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
+- **[[Data Types]]**
 - [[Fundamental data type]]
 - [[if Statement]]
+- **[[Notes]]**
 - [[Output manipulator]]
 - [[Scientific Notation]]
 - **[[Terms]]**
-- [[The sizeof operator]]
 - [[Type conversion]]
-- [[Why you should avoid unsigned integer]]
 
 %% End Waypoint %%

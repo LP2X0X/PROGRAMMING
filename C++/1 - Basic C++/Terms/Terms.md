@@ -8,15 +8,12 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[Core]]**
+- **[[Debug]]**
 - **[[Errors]]**
 - **[[Expressions]]**
 - **[[Functions]]**
 - **[[Initialization Types]]**
 - **[[Operators]]**
-	- [[Arity]]
-	- [[Operator]]
-	- [[Scope resolution operator]]
-	- [[Side Effect]]
 - **[[Others]]**
 - **[[Scopes]]**
 

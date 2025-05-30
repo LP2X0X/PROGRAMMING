@@ -5,9 +5,9 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
-- [[Bit]]
 - [[Byte]]
 - [[Conditional expression]]
+- **[[Core]]**
 - [[Early return]]
 - [[Escape sequences]]
 - [[Fast and least integers]]
@@ -15,9 +15,7 @@ type: folder_brief_live
 - [[Memory addresses]]
 - [[Multi-character literal]]
 - [[NaN and Inf]]
-- [[C++/2 - Fundamental Data Types/Terms/Overflow]]
+- [[Overflow]]
 - [[Significant digits]]
-- **[[Types]]**
-- [[Void]]
 
 %% End Waypoint %%

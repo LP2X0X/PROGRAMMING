@@ -1,4 +1,4 @@
-# Types Overview
+# Data Types Overview
  
 ```ccard
 type: folder_brief_live
@@ -11,6 +11,9 @@ type: folder_brief_live
 - [[char]]
 - [[float]]
 - [[int]]
+- [[signed integers]]
 - [[size_t]]
+- [[unsigned integer]]
+- [[void]]
 
 %% End Waypoint %%

@@ -1,4 +1,8 @@
-The `sizeof` operator in C++ is a compile-time operator that returns the size, in bytes, of a given type or object. It is widely used to determine the memory footprint of variables, data types, or even objects. Here’s a detailed explanation of how the `sizeof` operator works and its common use cases:
+---
+tags: cpp, operator, fundamental
+---
+
+The `sizeof` operator in C++ is a **compile-time** [[Arity|unary]] [[C++/1 - Basic C++/Terms/Operators/Operator|operator]] that returns the size, in bytes, of a given type or object. It is widely used to determine the memory footprint of variables, data types, or even objects. Here’s a detailed explanation of how the `sizeof` operator works and its common use cases:
 
 ### Syntax
 
