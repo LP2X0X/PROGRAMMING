@@ -8,7 +8,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[DOM]]
+- [[Web Dev/React/Terms/Basic/DOM]]
 - [[JSX]]
 
 %% End Waypoint %%

@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Arrow functions]]
+- [[Web Dev/JavaScript/Functions/Arrow functions]]
 - [[Closures]]
 - [[Functions Expression]]
 - [[Functions overview]]

@@ -14,7 +14,7 @@ type: folder_brief_live
 - **[[Operators]]**
 	- [[Arity]]
 	- [[Operator]]
-	- [[Side Effect]]
+	- [[C++/1 - Basic C++/Terms/Operators/Side Effect]]
 - **[[Others]]**
 
 %% End Waypoint %%

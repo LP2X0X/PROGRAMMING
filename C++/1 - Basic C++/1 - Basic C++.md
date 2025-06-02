@@ -11,7 +11,7 @@ type: folder_brief_live
 - **[[Attributes]]**
 - [[Header Files and Implementation Files]]
 - [[Header guard]]
-- **[[Notes]]**
+- **[[C++/1 - Basic C++/Notes/Notes]]**
 - **[[Terms]]**
 - [[The basic extraction process from cin buffer]]
 

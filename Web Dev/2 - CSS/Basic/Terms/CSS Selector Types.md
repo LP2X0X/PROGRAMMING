@@ -1,3 +1,7 @@
+---
+tags: css, term, fundamental
+---
+
 - There are three primary ways you can "select" an HTML element in order to style it.
 	1. By tag
 	2. By class

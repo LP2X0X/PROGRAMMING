@@ -7,13 +7,9 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Basic Structure of an HTML document]]
-- [[Common HTML Tags]]
+- **[[Attributes]]**
 - **[[Elements]]**
-- [[HTML]]
-- [[Nested Layout Technique]]
-- [[Notes]]
+- **[[Notes]]**
 - **[[Terms]]**
-- [[XHTML]]
 
 %% End Waypoint %%

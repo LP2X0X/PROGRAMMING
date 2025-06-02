@@ -1,3 +1,7 @@
+---
+tags: html, element, fundamental
+---
+
 The \<input> element in HTML is used to **create interactive form controls** that accept user input. It’s super versatile and used in forms for everything from text fields to checkboxes.
 
 ---
@@ -51,11 +55,5 @@ The \<input> element in HTML is used to **create interactive form controls** tha
 **💡 Tips:**
 
 • Always use label elements for accessibility.
-
-• Use name attributes when inputs are inside a /<form> to make sure data gets submitted.
-
+• Use name attributes when inputs are inside a \<form> to make sure data gets submitted.
 • Combine with pattern attribute for custom validation (e.g., regex).
-
-  
-
-Want a breakdown of specific input types or how to style inputs with CSS?

@@ -7,11 +7,14 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[1 - Terms]]**
-- **[[2 - Keywords]]**
+- **[[Classes]]**
 - **[[Compound Data Type]]**
+- **[[Functions]]**
+- **[[Keywords]]**
 - **[[Methods]]**
-- [[Notes]]
+- **[[Notes]]**
 - **[[Operators]]**
+- **[[Properties]]**
+- **[[Terms]]**
 
 %% End Waypoint %%

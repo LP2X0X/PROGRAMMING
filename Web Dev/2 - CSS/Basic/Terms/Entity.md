@@ -1,3 +1,7 @@
+---
+tags: css, term, fundamental
+---
+
 An **HTML entity** is a special code used to display reserved characters, symbols, or characters that are difficult to type directly in HTML. They start with `&` and end with `;`.
 
 ### **Common HTML Entities**

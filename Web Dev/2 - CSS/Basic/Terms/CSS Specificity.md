@@ -1,3 +1,7 @@
+---
+tags: css, term, fundamental
+---
+
 ### 🎯 **CSS Specificity**
 
 CSS specificity determines **which rule is applied** when multiple rules target the same element. It is a scoring system where different types of selectors are given different weights.
