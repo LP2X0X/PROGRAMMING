@@ -20,6 +20,12 @@ In case the error "Could not resolve host: https" appear, remove the https from 
 1 - Add file path to `.git/info/exclude`
 2 - git update-index --skip-worktree \<file-list>
 
+--- 
+
+#### To soft reset a commit (delete the commit but keep the local changes) use 
+```bash
+git reset --soft HEAD~
+```
 ---
 
 #### To create a patch

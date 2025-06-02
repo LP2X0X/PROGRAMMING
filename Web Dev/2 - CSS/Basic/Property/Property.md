@@ -8,11 +8,18 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[align-items]]
+- [[box-shadow]]
 - [[display]]
+- [[flex-shrink]]
 - [[justify-content]]
 - [[line-height]]
+- [[media query]]
 - [[object-fit]]
-- [[Web Dev/2 - CSS/Basic/Property/overflow]]
+- [[offset Properties]]
+- [[overflow]]
+- [[pointer-events]]
+- [[position]]
 - [[vertical-align]]
+- [[white-space]]
 
 %% End Waypoint %%

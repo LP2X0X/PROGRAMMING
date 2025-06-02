@@ -1,4 +1,4 @@
-# Terms Overview
+# 3 - JavaScript Crash Course Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Web Dev/React/Terms/Basic/Basic]]**
+- **[[1 - Basic]]**
 
 %% End Waypoint %%

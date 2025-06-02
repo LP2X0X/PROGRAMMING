@@ -1,4 +1,4 @@
-# CSS Overview
+# Compound Data Type Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Web Dev/2 - CSS/Basic/Basic]]**
+- [[Array]]
+- [[Object]]
 
 %% End Waypoint %%

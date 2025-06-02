@@ -2,7 +2,7 @@
 tags: cpp, term, fundamental
 ---
 
-- A [[Function|function]]'s **parameter** is a variable used in the header of a function. It works almost identically to variable defined inside the function but with one difference: they are initialized with a value provided by the caller of the function.
+- A [[C++/1 - Basic C++/Terms/Core/Function||function]]'s **parameter** is a variable used in the header of a function. It works almost identically to variable defined inside the function but with one difference: they are initialized with a value provided by the caller of the function.
 - **Unreferenced parameter** is parameter that are not used in the body of a function.
 
 ---

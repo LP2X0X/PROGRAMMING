@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Compound data types]]
+- [[C++/11 - Compound Types/Compound data types]]
 - [[In and out parameters]]
 - [[Lvalue and rvalue expressions]]
 - **[[Pointers]]**

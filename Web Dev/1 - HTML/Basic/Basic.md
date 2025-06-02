@@ -12,11 +12,8 @@ type: folder_brief_live
 - **[[Elements]]**
 - [[HTML]]
 - [[Nested Layout Technique]]
-- [[Web Dev/1 - HTML/Basic/Notes]]
-- **Terms**
-	- [[Web Dev/1 - HTML/Basic/Terms/Attributes]]
-	- [[Elements]]
-	- [[Tags]]
-	- [[Void Element]]
+- [[Notes]]
+- **[[Terms]]**
+- [[XHTML]]
 
 %% End Waypoint %%
