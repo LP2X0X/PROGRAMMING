@@ -1,7 +1,7 @@
 ---
 tags: cpp, distinguish, fundamental
 ---
-- 
+
 - In mathematics, an “integer” is a number with no decimal or fractional part, including negative and positive numbers and zero. The term “integral” has several different meanings, but in the context of C++ is used to mean “like an integer”.
 
 - The C++ standard defines the following terms:

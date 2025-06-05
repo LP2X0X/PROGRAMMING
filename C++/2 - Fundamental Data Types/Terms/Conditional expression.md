@@ -1,1 +1,0 @@
-- A **condition** (also called a **conditional expression**) is an expression that evaluates to a Boolean value.

@@ -203,3 +203,14 @@ git config --system --unset credential.helper
 ```bash
 git config --system credential.helper <copied value>
 ```
+
+---
+
+#### To earch commits that touched the submodule
+- You can filter commits that affected the submodule path:
+
+```cpp
+git log -- <submodule-path>
+```
+
+- This lists only the commits where the submodule path (`CppLib/`) was updated in the main repo.

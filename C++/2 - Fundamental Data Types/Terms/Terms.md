@@ -5,17 +5,13 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
-- [[Byte]]
-- [[Conditional expression]]
 - **[[Core]]**
-- [[Early return]]
-- [[Escape sequences]]
-- [[Fast and least integers]]
-- [[Fixed-width integers]]
-- [[Memory addresses]]
-- [[Multi-character literal]]
-- [[NaN and Inf]]
-- [[Overflow]]
-- [[Significant digits]]
+- **[[Others]]**
+	- [[Multi-character literal]]
+	- [[Output manipulator]]
+	- [[Precision]]
+	- [[Rounding Error]]
+	- [[Scientific Notation]]
+	- [[Significant digits]]
 
 %% End Waypoint %%

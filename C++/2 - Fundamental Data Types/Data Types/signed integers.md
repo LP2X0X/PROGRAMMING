@@ -12,7 +12,7 @@ tags: cpp, datatype, fundamental
 |long long int|64 bits||
 
 - For signed integers, integer overflow will result in **undefined behavior**.
-- 
+
 ---
 
 ### Defining signed integers

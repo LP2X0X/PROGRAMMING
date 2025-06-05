@@ -1,5 +1,8 @@
+---
+tags: cpp, term, fundamental
+---
+
 - The process of converting a value from one type to another type is called **type conversion**.
-- When the compiler does type conversion on our behalf without us explicitly asking, we call this **implicit type conversion**.
 
 ---
 

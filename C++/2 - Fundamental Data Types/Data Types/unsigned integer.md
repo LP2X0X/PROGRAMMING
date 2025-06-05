@@ -18,7 +18,6 @@ tags: cpp, datatype, fundamental
 
 1. **Unintended Bugs from Overflow**:
    - Unsigned integers can wrap around when they overflow. For example, subtracting a larger unsigned integer from a smaller one can result in a very large number instead of a negative number. This can lead to subtle bugs that are difficult to detect.
-   - Example:
      ```cpp
      unsigned int a = 1;
      unsigned int b = 2;
@@ -27,7 +26,6 @@ tags: cpp, datatype, fundamental
 
 2. **Unexpected Behavior in Loops**:
    - When using unsigned integers in loops, you can accidentally create infinite loops or miss terminating conditions if the loop index goes below zero, as it will wrap around to the maximum value.
-   - Example:
      ```cpp
      for (unsigned int i = 10; i >= 0; --i) {
          std::cout << i << std::endl;
@@ -38,7 +36,6 @@ tags: cpp, datatype, fundamental
 
 3. **Comparisons with Signed Integers**:
    - Comparing signed and unsigned integers can lead to unexpected results because of implicit type conversions. When you compare a signed integer with an unsigned integer, **the signed integer is often converted to an unsigned type**, which can lead to incorrect comparisons.
-   - Example:
      ```cpp
      int a = -1;
      unsigned int b = 1;

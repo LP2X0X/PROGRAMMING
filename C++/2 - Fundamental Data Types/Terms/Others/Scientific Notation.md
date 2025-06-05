@@ -1,4 +1,9 @@
+---
+tags: cpp, term, fundamental
+---
+
 - **Scientific notation** is a useful shorthand for writing lengthy numbers in a concise manner.
+- Because it can be hard to type or display exponents in C++, we use the letter ‘e’ (or sometimes ‘E’) to represent the “times 10 to the power of” part of the equation. For example, `1.2 x 10⁴` would be written as `1.2e4`, and `5.9722 x 10²⁴` would be written as `5.9722e24`.
 
 ### Using `std::scientific` with `std::cout`:
 

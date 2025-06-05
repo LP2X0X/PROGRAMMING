@@ -7,12 +7,16 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Boolean]]
+- [[bool]]
 - [[char]]
+- [[fast integral types]]
+- [[Fixed-width integer]]
 - [[float]]
-- [[int]]
+- [[least inegral type]]
+- [[Other char type]]
 - [[signed integers]]
 - [[size_t]]
+- **[[Special Values]]**
 - [[unsigned integer]]
 - [[void]]
 

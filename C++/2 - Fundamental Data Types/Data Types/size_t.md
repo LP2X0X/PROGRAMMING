@@ -1,4 +1,12 @@
-`size_t` is an unsigned integer type in C and C++ that is used to represent the size of objects in memory. It is defined in the `<cstddef>` or `<stddef.h>` header and is typically used to express sizes and counts (e.g., the size of an array or the result of the `sizeof` operator).
+---
+tags: cpp, datatype, fundamental
+---
+
+`size_t` is an unsigned integer type in C and C++ that is used to represent the **byte** size of objects in memory. It is defined in the `<cstddef>` or `<stddef.h>` header and is typically used to express sizes and counts (e.g., the size of an array or the result of the `sizeof` operator).
+
+```ad-note
+**std::size_t** is an alias for an implementation-defined unsigned integral type.
+```
 
 ### Key Points About `size_t`:
 - **Unsigned Type**: `size_t` is always unsigned, meaning it can only represent non-negative values.
@@ -45,9 +53,10 @@ size_t length = strlen("Hello, World!");
 std::cout << "Length of the string is: " << length << std::endl;
 ```
 
-```ad-note
+In this example, `strlen` returns a `size_t` representing the length of the string. This ensures the program can handle strings of any length that can be stored on the system.
+
+```ad-important
 The size of `std::size_t` imposes a strict mathematical upper limit to an object’s size. In practice, the largest creatable object may be smaller than this amount (perhaps significantly so).
+</br>
 For example, let’s assume that `std::size_t` has a size of 4 bytes on our system. An unsigned 4-byte integral type has range 0 to 4,294,967,295. Therefore, a 4-byte `std::size_t` object can hold any value from 0 to 4,294,967,295. Any object with a byte-size of 0 to 4,294,967,295 could have it’s size returned in a value of type `std::size_t`, so this is fine. However, if the byte-size of an object were larger than 4,294,967,295 bytes, then `sizeof` would not be able to return the size of that object accurately, as the value would be outside the range of a `std::size_t`. Therefore, no object larger than 4,294,967,295 bytes could be created on this system.
 ```
-
-In this example, `strlen` returns a `size_t` representing the length of the string. This ensures the program can handle strings of any length that can be stored on the system.
