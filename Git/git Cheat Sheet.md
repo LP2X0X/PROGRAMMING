@@ -179,3 +179,38 @@ if printf "%s\n" "$MSG" | grep -iqx "auto"; then
   echo "vault backup: $DATE" > "$MSG_FILE"
 fi
 ```
+
+---
+
+#### To force Git to show login prompt for re-authentication
+
+**Step 1**: Use this command and note down the resulting output value somewhere for use later.
+
+```bash
+git config --system credential.helper
+```
+
+**Step 2**: Now run the below command which will unset the existing credentials.
+
+```bash
+git config --system --unset credential.helper
+```
+
+**Step 3**: If you now run `git fetch`, Git should show you the login prompt. Enter the new token and you should be good.
+
+**Step 4**: We'll now restore the value we had copied earlier in Step 1.
+
+```bash
+git config --system credential.helper <copied value>
+```
+
+---
+
+#### To earch commits that touched the submodule
+- You can filter commits that affected the submodule path:
+
+```cpp
+git log -- <submodule-path>
+```
+
+- This lists only the commits where the submodule path (`CppLib/`) was updated in the main repo.

@@ -1,5 +1,13 @@
-- C++ code files (with a .cpp extension) are not the only files commonly seen in C++ programs. The other type of file is called a **header file**. Header files usually have a .h extension, but you will occasionally see them with a .hpp extension or no extension at all.
-- Example flow:
+---
+tags: cpp, term, fundamental
+---
+
+- Conventionally, **header files** are used to propagate a bunch of related [[Forward declaration|forward declarations]] into a code file.
+
+```ad-tip
+Source files should include their paired header.
+```
+
 ![[IncludeHeader.webp|center]]
 
 - Source files should include their paired header, this allows the compiler to catch certain kinds of errors at compile time instead of link time.

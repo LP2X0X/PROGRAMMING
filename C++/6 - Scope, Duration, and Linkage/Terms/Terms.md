@@ -15,12 +15,12 @@ type: folder_brief_live
 - [[Namespace aliases]]
 - [[Nesting level]]
 - [[Qualified and unqualified names]]
-- [[Scope resolution operator]]
+- [[C++/6 - Scope, Duration, and Linkage/Terms/Scope resolution operator]]
 - [[Storage duration]]
 - [[Unnamed (anonymous) namespaces]]
 - [[User-defined namespaces]]
 - [[using declaration]]
-- [[using directive]]
+- [[C++/6 - Scope, Duration, and Linkage/Terms/using directive]]
 - [[Variable shadowing]]
 
 %% End Waypoint %%

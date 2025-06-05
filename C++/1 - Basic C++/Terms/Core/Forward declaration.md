@@ -17,6 +17,6 @@ int add(int x, int y); // function declaration includes return type, name, param
 ---
 
 #### Some reasons why we need forward declaration
-- Most often, forward declarations are used to tell the compiler about the existence of some function that has been defined in a different code file.
+- Most often, forward declarations are used to tell the compiler about the existence of some function **that has been defined in a different code file**.
 - Forward declarations can also be used to define our functions in an order-agnostic manner. This allows us to define functions in whatever order maximizes organization (e.g. by clustering related functions together) or reader understanding.
 - Less often, there are times when we have two functions that call each other. Reordering isn’t possible in this case either, as there is no way to reorder the functions such that each is before the other. Forward declarations give us a way to resolve such circular dependencies.

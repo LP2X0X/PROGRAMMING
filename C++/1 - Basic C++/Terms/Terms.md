@@ -8,13 +8,13 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[Core]]**
+- **[[Debug]]**
+- **[[Errors]]**
 - **[[Expressions]]**
 - **[[Functions]]**
 - **[[Initialization Types]]**
 - **[[Operators]]**
-	- [[Arity]]
-	- [[Operator]]
-	- [[C++/1 - Basic C++/Terms/Operators/Side Effect]]
 - **[[Others]]**
+- **[[Scopes]]**
 
 %% End Waypoint %%
