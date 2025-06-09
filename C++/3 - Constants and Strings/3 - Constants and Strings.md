@@ -10,9 +10,9 @@ type: folder_brief_live
 - [[C-Style String vs std String]]
 - [[Conditional operator]]
 - [[Constant expressions and compile-time optimization]]
+- **[[Notes]]**
 - [[Numeral systems]]
 - [[Performance overhead of function called]]
 - **[[Terms]]**
-- [[The as-if rule]]
 
 %% End Waypoint %%

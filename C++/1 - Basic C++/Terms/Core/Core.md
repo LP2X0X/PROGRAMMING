@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[Asignment]]
 - [[Comment]]
 - [[Conditional compilation]]
-- [[C++/1 - Basic C++/Terms/Core/Data type]]
+- [[Data type]]
 - [[Define Assignment and Initialization]]
 - [[Forward declaration]]
 - [[Header file]]
@@ -27,7 +27,6 @@ type: folder_brief_live
 - [[Statement]]
 - [[Status code]]
 - [[Temporary Object]]
-- [[Transitive includes]]
 - [[Variable]]
 
 %% End Waypoint %%

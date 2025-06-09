@@ -1,12 +1,13 @@
-# Core Overview
+# Notes Overview
  
 ```ccard
 type: folder_brief_live
 ```
  
+---
+
 %% Begin Waypoint %%
-- **[[Constants]]**
-- [[string_view]]
-- [[string]]
+- [[Digit separators]]
+- [[Numeral systems]]
 
 %% End Waypoint %%

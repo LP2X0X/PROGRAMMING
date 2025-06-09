@@ -21,6 +21,5 @@ type: folder_brief_live
 - [[Non-Boolean conditionals]]
 - [[Overflow]]
 - [[Sign]]
-- [[Type conversion]]
 
 %% End Waypoint %%

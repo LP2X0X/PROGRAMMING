@@ -4,11 +4,12 @@
 type: folder_brief_live
 ```
  
+---
+
 %% Begin Waypoint %%
-- [[Data]]
-- [[Implementation-defined]]
-- [[Log]]
-- [[RAM]]
-- [[Value]]
+- **[[Optimizations]]**
+- [[Profiler]]
+- [[The as-if rule]]
+- [[Type qualifiers]]
 
 %% End Waypoint %%

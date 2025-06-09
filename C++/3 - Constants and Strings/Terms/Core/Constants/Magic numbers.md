@@ -1,4 +1,8 @@
-- In C++, a "magic number" is a hard-coded value that appears directly in the code without explanation, making the code less readable and maintainable. These values are often arbitrary constants, and their purpose isn't immediately clear to someone reading the code.
+---
+tags: cpp, term, fundamental
+---
+
+In C++, a "magic number" is a hard-coded value that appears directly in the code (which is a [[Literals|literal]]) without explanation, making the code less readable and maintainable. These values are often arbitrary constants, and their purpose isn't immediately clear to someone reading the code.
 
 ### Example of Magic Numbers
 ```cpp
