@@ -22,7 +22,7 @@ In case the error "Could not resolve host: https" appear, remove the https from 
 
 --- 
 
-#### To soft reset a commit (delete the commit but keep the local changes) use 
+#### To soft reset a commit (delete the commit but keep the local changes)
 ```bash
 git reset --soft HEAD~
 ```
@@ -206,7 +206,7 @@ git config --system credential.helper <copied value>
 
 ---
 
-#### To earch commits that touched the submodule
+#### To search commits that touched the submodule
 - You can filter commits that affected the submodule path:
 
 ```cpp

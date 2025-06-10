@@ -7,11 +7,13 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Constant Variable]]
+- [[Constant expression]]
+- [[Constant variable]]
 - [[Constant]]
+- [[Constexpr functions]]
+- [[Constexpr variable]]
 - [[Literals]]
-- [[Magic numbers]]
 - [[Named constants]]
-- [[String literals]]
+- **[[Others]]**
 
 %% End Waypoint %%

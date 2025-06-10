@@ -5,6 +5,6 @@ tags: cpp, term, fundamental
 
 ### Types of named constants
 - There are three ways to define a named constant in C++:
-	- [[Constant Variable|Constant variables]].
+	- [[Constant variable|Constant variables]].
 	- Object-like [[Macro|macros]] with substitution text.
 	- Enumerated constants.

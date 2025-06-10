@@ -2,8 +2,9 @@
 tags: cpp, distinguish, fundamental
 ---
 
-- In mathematics, an “integer” is a number with no decimal or fractional part, including negative and positive numbers and zero. The term “integral” has several different meanings, but in the context of C++ is used to mean “like an integer”.
-
+- In mathematics, an “integer” is a number with no decimal or fractional part, including negative and positive numbers and zero. 
+- The term “integral” has several different meanings, but in the context of C++ is used to mean “like an integer”.
+</br>
 - The C++ standard defines the following terms:
 	- The **standard integer types** are `short`, `int`, `long`, `long long` (including their signed and unsigned variants).
 	- The **integral types** are `bool`, the various char types, and the standard integer types.

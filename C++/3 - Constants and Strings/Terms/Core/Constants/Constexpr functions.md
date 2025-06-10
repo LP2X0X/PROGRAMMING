@@ -1,8 +1,47 @@
+---
+tags: cpp, term, fundamental
+---
+
+- A **constexpr function** is a function that is allowed to be called in a [[Constant expression|constant expression]]. If a required constant expression contains a constexpr function call, that constexpr function call must evaluate at compile-time.
+
+```cpp
+#include <iostream>
+
+int max(int x, int y) // this is a non-constexpr function
+{
+    if (x > y)
+        return x;
+    else
+        return y;
+}
+
+constexpr int cmax(int x, int y) // this is a constexpr function
+{
+    if (x > y)
+        return x;
+    else
+        return y;
+}
+
+int main()
+{
+    int m1 { max(5, 6) };            // ok
+    const int m2 { max(5, 6) };      // ok
+    constexpr int m3 { max(5, 6) };  // compile error: max(5, 6) not a constant expression
+
+    int m4 { cmax(5, 6) };           // ok: may evaluate at compile-time or runtime
+    const int m5 { cmax(5, 6) };     // ok: may evaluate at compile-time or runtime
+    constexpr int m6 { cmax(5, 6) }; // okay: must evaluate at compile-time
+
+    return 0;
+}
+```
+
+- Constexpr functions can also be evaluated at runtime! In which case they will return a non-constexpr result (DUH!).
+  
 ```ad-note
 Remember that function call to a normal function are not allowed in constant expressions.
 ```
-- A **constexpr function** is a function that is allowed to be called in a constant expression. If a required constant expression contains a constexpr function call, that constexpr function call must evaluate at compile-time.
-- **Constexpr functions can also be evaluated at runtime! In which case they will return a non-constexpr result.**
 
 ```ad-info
 To evaluate at compile-time, two other things must also be true:

@@ -1,7 +1,13 @@
+---
+tags: cpp, distinguish, fundamental
+---
+
 In C++, strings can be represented in two primary ways: using C-style string literals and `std::string` literals. Both have their use cases, but they come with different features, memory management, and ease of use. Understanding the differences between these two types of string literals is important for writing effective C++ code.
 
-### **C-Style String Literals**
-C-style string literals are character arrays that are null-terminated. They are inherited from C and are represented as arrays of `char`.
+---
+
+### **C-style string**
+C-style string are character arrays that are null-terminated. They are inherited from C and are represented as arrays of `char`.
 
 ```ad-important
 Because C-style string literals exist for the entire program, it’s okay to return a `std::string_view` that is viewing a C-style string literal. When the `std::string_view` is copied back to the caller, the C-style string literal being viewed will still exist.
@@ -44,7 +50,7 @@ int main() {
 }
 ```
 
-### **`std::string` Literals**
+### **`std::string`**
 `std::string` is a class in the C++ Standard Library that represents a sequence of characters as a managed object.
 
 #### **Characteristics:**
@@ -91,7 +97,7 @@ int main() {
 }
 ```
 
-### **Key Differences Between C-Style String Literals and `std::string` Literals:**
+### **Key Differences Between C-Style String and `std::string`:**
 
 1. **Ease of Use**:
    - `std::string` is easier to use with modern C++ because it abstracts away memory management, offers safer operations, and comes with a rich API.

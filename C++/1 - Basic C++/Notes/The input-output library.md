@@ -22,8 +22,16 @@ Best practice: Prefer \n over str::endl because **std::cout << std::endl** inser
 ### std::cin
 - This ***variable*** read input from the keyboard. We typically use the extraction operator `>>` to put the input data in a variable (which can then be used in subsequent statements).
 - Inputting data is also a two stage process:
-	- The individual characters you enter as input are added to the end of an input buffer (inside `std::cin`). The enter key (pressed to submit the data) is also stored as a `'\n'` character.
+	- The individual characters you enter as input are added to the end of an input buffer (inside `std::cin`). 
+		- ***The enter key (pressed to submit the data) is also stored as a `'\n'` character.***
 	- The extraction operator ‘>>’ removes characters from the front of the input buffer and converts them into a value that is assigned to the associated variable. This variable can then be used in subsequent statements.
+
+```ad-note
+- By default, `cin >>` **skips leading whitespace** and reads until it finds **more whitespace**. This includes:
+	- **Space `' '`**
+	- **Tab `'\t'`**
+	- **Newline `'\n'`**
+```
 
 ````ad-example
 ```ad-cpp
@@ -72,21 +80,3 @@ Each line of input data in the input buffer is terminated by a `'\n'` character.
 
 ### Extracting whitespace characters
 - Because extracting input ignores leading whitespace, this can lead to unexpected results when trying to extract whitespace characters to a char variable. One simple way to address this is to use the `std::cin.get()` function to perform the extraction instead, as this function does not ignore leading whitespace.
-
-```cpp
-#include <iostream>
-
-int main()
-{
-    std::cout << "Input a keyboard character: "; // assume the user enters "a b" (without quotes)
-
-    char ch{};
-    std::cin >> ch; // extracts a, leaves " b\n" in stream
-    std::cout << "You entered: " << ch << '\n';
-
-    std::cin >> ch; // skips leading whitespace (the space), extracts b, leaves "\n" in stream
-    std::cout << "You entered: " << ch << '\n';
-
-    return 0;
-}
-```

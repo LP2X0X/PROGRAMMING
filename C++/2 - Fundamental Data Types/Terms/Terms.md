@@ -7,6 +7,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Core]]**
 - **[[Others]]**
+	- [[Input manipulator]]
 	- [[Modulo Wrap]]
 	- [[Multi-character literal]]
 	- [[Output manipulator]]
@@ -14,7 +15,5 @@ type: folder_brief_live
 	- [[Rounding Error]]
 	- [[Scientific Notation]]
 	- [[Significant digits]]
-- [[Significant digits]]
-- **[[Types]]**
 
 %% End Waypoint %%
