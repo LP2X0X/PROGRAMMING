@@ -15,6 +15,7 @@ type: folder_brief_live
 - [[let]]
 - [[new]]
 - [[null vs undefined]]
+- [[static]]
 - [[super]]
 
 %% End Waypoint %%

@@ -1,4 +1,4 @@
-# Properties Overview
+# SVG XMLs Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[canvas Properties]]
-- [[innerText]]
+- [[group tag]]
+- [[path]]
+- [[SVG XML]]
 
 %% End Waypoint %%

@@ -51,8 +51,6 @@ The event starts at the child and bubbles to the parent.
 
 ## **✋ Preventing Bubbling**
 
-  
-
 You can stop an event from bubbling using:
 
 ```js

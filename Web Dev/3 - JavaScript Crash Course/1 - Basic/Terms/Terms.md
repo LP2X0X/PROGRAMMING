@@ -7,17 +7,9 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Call back]]
-- [[Compound Data Types]]
-- [[document Object]]
+- **[[Core]]**
 - **[[Events]]**
-- [[Hoist]]
-- [[Object Literal]]
-- [[Primitive]]
-- [[Side effect]]
-- [[Template Literal]]
-- [[Truthiness]]
-- [[Type Coercion]]
-- [[Valid Identifier]]
+- **[[Others]]**
+- **[[Web Audio APIs]]**
 
 %% End Waypoint %%

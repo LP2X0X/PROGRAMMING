@@ -13,5 +13,7 @@ type: folder_brief_live
 - [[input]]
 - [[label]]
 - [[script]]
+- **[[SVG XMLs]]**
+- [[svg]]
 
 %% End Waypoint %%

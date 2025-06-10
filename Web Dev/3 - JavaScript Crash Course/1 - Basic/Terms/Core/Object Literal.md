@@ -1,6 +1,7 @@
 ---
 tags: js, term, fundamental
 ---
+
 - An object literal consists of a pair of braces ({ and }) enclosing a series of key-value pairs, separated by commas.
 - Each key-value pair must have a colon between the key and the value.
 

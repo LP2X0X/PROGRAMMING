@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Classes]]**
 - **[[Compound Data Type]]**
-- **[[Functions]]**
+- **[[Web Dev/3 - JavaScript Crash Course/1 - Basic/Functions/Functions]]**
 - **[[Keywords]]**
 - **[[Methods]]**
 - **[[Notes]]**
