@@ -11,5 +11,6 @@ type: folder_brief_live
 - [[const vs constexpr]]
 - [[Digit separators]]
 - [[Numeral systems]]
+- [[Why string get copied when initialize with literal]]
 
 %% End Waypoint %%

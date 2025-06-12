@@ -1,4 +1,4 @@
-# Others Overview
+# Strings Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Magic numbers]]
+- **[[Literals]]**
+- [[std string_view]]
+- [[std string]]
 
 %% End Waypoint %%

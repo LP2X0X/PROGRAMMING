@@ -2,7 +2,7 @@
 tags: cpp, distinguish, fundamental
 ---
 
-In C++, strings can be represented in two primary ways: using C-style string literals and `std::string` literals. Both have their use cases, but they come with different features, memory management, and ease of use. Understanding the differences between these two types of string literals is important for writing effective C++ code.
+In C++, strings can be represented in two primary ways: using C-style string literals and `std::string`. Both have their use cases, but they come with different features, memory management, and ease of use. Understanding the differences between these two types of string literals is important for writing effective C++ code.
 
 ---
 

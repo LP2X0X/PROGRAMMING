@@ -1,71 +1,8 @@
-To address the issue with `std::string` being expensive to initialize (or copy), C++17 introduced `std::string_view` (which lives in the <string_view> header). `std::string_view` provides read-only access to an *existing* string (a C-style string, a `std::string`, or another `std::string_view`) without making a copy. **Read-only** means that we can access and use the value being viewed, but we can not modify it.
+---
+tags: cpp, term, fundamental
+---
 
-```ad-note
-A `std::string_view` that is viewing a string that has been destroyed is sometimes called a **dangling** view.
-```
-
-```ad-note
-When a `std::string` is modified, all views into that `std::string` are **invalidated**, meaning those views are now invalid.
-```
-
-```ad-warning
-A view is dependent on the object being viewed. If the object being viewed is modified or destroyed while the view is still being used, unexpected or undefined behavior will result.
-```
-
-#### Example
-```cpp
-#include <iostream>
-#include <string_view> // C++17
-
-// str provides read-only access to whatever argument is passed in
-void printSV(std::string_view str) // now a std::string_view
-{
-    std::cout << str << '\n';
-}
-
-int main()
-{
-    std::string_view s{ "Hello, world!" }; // now a std::string_view
-    printSV(s);
-
-    return 0;
-}
-```
-
-#### `std::string_view` will not implicitly convert to `std::string`
-- Because `std::string` makes a copy of its initializer (which is expensive), C++ won’t allow implicit conversion of a `std::string_view` to a `std::string`. This is to prevent accidentally passing a `std::string_view` argument to a `std::string` parameter, and inadvertently making an expensive copy where such a copy may not be required.
-- However, if this is desired, we have two options:
-	1. Explicitly create a `std::string` with a `std::string_view` initializer (which is allowed, since this will rarely be done unintentionally)
-	2. Convert an existing `std::string_view` to a `std::string` using `static_cast`
-
-```cpp
-#include <iostream>
-#include <string>
-#include <string_view>
-
-void printString(std::string str)
-{
-	std::cout << str << '\n';
-}
-
-int main()
-{
-	std::string_view sv{ "Hello, world!" };
-
-	// printString(sv);   // compile error: won't implicitly convert std::string_view to a std::string
-
-	std::string s{ sv }; // okay: we can create std::string using std::string_view initializer
-	printString(s);      // and call the function with the std::string
-
-	printString(static_cast<std::string>(sv)); // okay: we can explicitly cast a std::string_view to a std::string
-
-	return 0;
-}
-```
-
-#### Assignment changes what the std::string_view is viewing
-- Assigning a new string to a `std::string_view` causes the `std::string_view` to view the new string. It does not modify the prior string being viewed in any way.
-- The following example illustrates this:
+- To address the issue with `std::string` being expensive to initialize (or copy), C++17 introduced `std::string_view` (which lives in the <string_view> header). `std::string_view` provides read-only access to an *existing* string (a C-style string, a `std::string`, or another `std::string_view`) without making a copy. 
 
 ```cpp
 #include <iostream>
@@ -74,21 +11,27 @@ int main()
 
 int main()
 {
-    std::string name { "Alex" };
-    std::string_view sv { name }; // sv is now viewing name
-    std::cout << sv << '\n'; // prints Alex
+    std::string_view s1 { "Hello, world!" }; // initialize with C-style string literal
+    std::cout << s1 << '\n';
 
-    sv = "John"; // sv is now viewing "John" (does not change name)
-    std::cout << sv << '\n'; // prints John
+    std::string s{ "Hello, world!" };
+    std::string_view s2 { s };  // initialize with std::string
+    std::cout << s2 << '\n';
 
-    std::cout << name << '\n'; // prints Alex
+    std::string_view s3 { s2 }; // initialize with std::string_view
+    std::cout << s3 << '\n';
 
     return 0;
 }
 ```
 
-#### constexpr `std::string_view`
-- Unlike `std::string`, `std::string_view` has full support for constexpr:
+- `std::string_view` will not implicitly convert to `std::string`. This is to prevent accidentally passing a `std::string_view` argument to a `std::string` parameter, and inadvertently making an expensive copy where such a copy may not be required.
+
+---
+
+### constexpr std::string_view
+
+- `std::string_view` has full support for constexpr:
 
 ```cpp
 #include <iostream>
@@ -102,7 +45,16 @@ int main()
     return 0;
 }
 ```
-- This makes `constexpr std::string_view` the preferred choice when string symbolic constants are needed.
+
+---
+
+### Cautions
+
+- A `std::string_view` that is viewing a string that has been destroyed is sometimes called a **dangling** view.
+- When a `std::string` is modified, all views into that `std::string` are **invalidated**, meaning those views are now invalid.
+- Do not initialize a `std::string_view` with a `std::string` <u>literal</u>, as this will leave the `std::string_view` dangling.
+
+---
 
 #### Literals for std::string_view
 - Double-quoted string literals are C-style string literals by default. We can create string literals with type `std::string_view` by using a `sv` suffix after the double-quoted string literal. The `sv` must be lower case.
@@ -125,10 +77,10 @@ int main()
 }
 ```
 
-The `std::string_view` literal is useful because it provides a way to create a non-owning, efficient reference to a string literal or any other character sequence without the overhead of copying the string data into a `std::string` object. This is particularly advantageous in scenarios where performance and memory efficiency are critical.
+---
 
 #### Return std::string_view
-- There are two main cases where a `std::string_view` can be returned safely. First, because C-style string literals exist for the entire program, it’s fine (and useful) to return C-style string literals from a function that has a return type of `std::string_view`.
+- There are two main cases where a `std::string_view` can be returned safely. First, because [[C-style string literal|C-style string literals]] exist for the entire program, it’s fine (and useful) to return C-style string literals from a function that has a return type of `std::string_view`.
 
 ```cpp
 #include <iostream>
