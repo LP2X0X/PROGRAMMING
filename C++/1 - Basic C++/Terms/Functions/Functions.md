@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Argument]]
 - [[Function Prototype]]
-- [[Function]]
+- [[C++/1 - Basic C++/Terms/Functions/Function]]
 - [[Local variable]]
 - [[main Function]]
 - [[Parameter]]

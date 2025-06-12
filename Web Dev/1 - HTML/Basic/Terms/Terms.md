@@ -7,9 +7,9 @@ type: folder_brief_live
 --- 
 
 %% Begin Waypoint %%
-- [[Attributes]]
 - [[Elements]]
 - [[Tags]]
 - [[Void Element]]
+- [[XHTML]]
 
 %% End Waypoint %%

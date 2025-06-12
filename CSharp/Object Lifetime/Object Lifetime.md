@@ -12,7 +12,7 @@ type: folder_brief_live
 - **[[Features]]**
 - [[Forcing a Garbage Collection]]
 - [[Garbage Collection Types]]
-- **[[Keywords]]**
+- **[[CSharp/Object Lifetime/Keywords/Keywords]]**
 - [[Marshal class]]
 - [[Object Generations]]
 - [[Order of Actions when Dispose is called]]

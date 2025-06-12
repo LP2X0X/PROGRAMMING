@@ -1,3 +1,7 @@
+---
+tags: css, term, fundamental
+---
+
 The **CSS Box Model** is a fundamental concept in web development that describes how elements are structured and spaced on a webpage. It consists of four main parts:
 
 1. **Content** – The actual text, images, or other elements inside the box.

@@ -1,3 +1,7 @@
+---
+tags: css, term, fundamental
+---
+
 **1. \<b> (Bold)**
 
 • Renders text in **bold**, but **without semantic importance**.

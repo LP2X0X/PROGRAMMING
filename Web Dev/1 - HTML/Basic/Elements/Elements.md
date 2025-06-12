@@ -10,5 +10,6 @@ type: folder_brief_live
 - [[div]]
 - [[img]]
 - [[input]]
+- **[[SVG XMLs]]**
 
 %% End Waypoint %%

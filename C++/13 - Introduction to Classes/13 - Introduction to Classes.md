@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Class Invariant]]
 - [[Class templates with member functions]]
-- [[Class]]
+- [[C++/13 - Introduction to Classes/Class]]
 - [[Classes and header files]]
 - [[Const class objects and const member functions]]
 - **[[Ctor]]**

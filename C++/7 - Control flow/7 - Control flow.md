@@ -10,6 +10,6 @@ type: folder_brief_live
 - [[Mersenne Twister and underseeding issues]]
 - [[Only seed once]]
 - [[Random seeding methods]]
-- **[[Terms]]**
+- **[[C++/7 - Control flow/Terms/Terms]]**
 
 %% End Waypoint %%

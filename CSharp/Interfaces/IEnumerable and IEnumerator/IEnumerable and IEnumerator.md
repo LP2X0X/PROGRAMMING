@@ -6,7 +6,7 @@ type: folder_brief_live
  
 %% Begin Waypoint %%
 - [[IEnumerable and IEnumerator Interfaces]]
-- **[[Keywords]]**
+- **[[CSharp/Interfaces/IEnumerable and IEnumerator/Keywords/Keywords]]**
 - [[Named Iterator]]
 
 %% End Waypoint %%

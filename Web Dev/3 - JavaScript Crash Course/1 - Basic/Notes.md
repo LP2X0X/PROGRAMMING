@@ -1,4 +1,0 @@
-- snake_case and camelCase.
-- There are two kind of constant:
-	- true constant which have values that will never change whenever you run the program. It's customary to use all-caps snake_case like HOUR_IN_A_DAY.
-	- Value you've made constant because you don't want to accidentally change them in your code. For this type, you should use the same convention as for variables.

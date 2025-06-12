@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[Blackbox programming]]
 - [[Contextual keywords]]
 - [[is]]
-- [[new]]
+- [[CSharp/OOP/Keyword/new]]
 - [[Object Identity vs Object Equality]]
 - [[protected]]
 - [[root Namespace]]

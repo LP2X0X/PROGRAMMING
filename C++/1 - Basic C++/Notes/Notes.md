@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Angled brackets vs double quotes]]
-- [[Compilation Process]]
+- [[Compilation process]]
 - [[Declare vs Define]]
 - [[DRY]]
 - [[ODR]]

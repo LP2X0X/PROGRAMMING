@@ -1,3 +1,7 @@
+---
+tags: html, element, fundamental
+---
+
 The \<img> element in HTML is used to **embed images** into a webpage. It is an **empty tag**, meaning it doesn’t have a closing tag, and it relies on attributes to define its content and behavior.
 
 ---
