@@ -12,7 +12,7 @@ type: folder_brief_live
 - [[Constant expressions and compile-time optimization]]
 - [[Numeral systems]]
 - [[Performance overhead of function called]]
-- **[[Terms]]**
+- **[[C++/3 - Constants and Strings/Terms/Terms]]**
 - [[The as-if rule]]
 
 %% End Waypoint %%

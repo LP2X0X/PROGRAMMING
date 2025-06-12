@@ -16,6 +16,10 @@ tags: js, fundamental
 <script src="/path/to/script.js"></script>
 ```
 
+```ad-warning
+If `src` is set, the script content is ignored.
+```
+
 
 ```ad-note
 As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.

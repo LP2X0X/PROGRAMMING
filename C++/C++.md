@@ -13,7 +13,7 @@ type: folder_brief_live
 - **[[4 - Operators]]**
 	- [[Comparing floating point numbers]]
 	- [[Table of operator precedence and associativity]]
-	- **[[Terms]]**
+	- **[[C++/1 - Basic C++/Terms/Terms]]**
 	- [[The order of evaluation of operands and function arguments is mostly unspecified]]
 - **[[5 - Bit Manipulation]]**
 - **[[6 - Scope, Duration, and Linkage]]**

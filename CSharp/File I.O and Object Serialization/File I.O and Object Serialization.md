@@ -17,7 +17,7 @@ type: folder_brief_live
 	- **[[File related type]]**
 	- [[FileSystemWatcher]]
 	- [[Key Members]]
-	- **[[Keywords]]**
+	- **[[CSharp/File I.O and Object Serialization/System.IO Namespace/Keywords/Keywords]]**
 	- [[The Abstract FileSystemInfo Base Class]]
 	- [[The Directory(Info) and File(Info) Types]]
 

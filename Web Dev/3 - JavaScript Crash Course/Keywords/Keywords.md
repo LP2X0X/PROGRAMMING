@@ -12,9 +12,7 @@ type: folder_brief_live
 - [[for of]]
 - [[for]]
 - [[instaceof]]
-- [[let]]
 - [[new]]
-- [[null vs undefined]]
 - [[static]]
 - [[super]]
 

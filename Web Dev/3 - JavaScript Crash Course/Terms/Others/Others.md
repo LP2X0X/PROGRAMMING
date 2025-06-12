@@ -10,7 +10,6 @@ type: folder_brief_live
 - [[CDN]]
 - [[Compound Data Types]]
 - [[Side effect]]
-- [[Template Literal]]
 - [[Type Coercion]]
 - [[Valid Identifier]]
 

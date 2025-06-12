@@ -13,7 +13,7 @@ type: folder_brief_live
 - [[Consteval]]
 - [[Constexpr functions]]
 - [[Constexpr variables]]
-- **[[Core]]**
+- **[[C++/3 - Constants and Strings/Terms/Core/Core]]**
 - [[Inline function and variable]]
 - [[Magic numbers]]
 - [[Runtime expression]]

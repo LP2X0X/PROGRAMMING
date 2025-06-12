@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Configuration Files]]**
 - **[[Elements of .NET Assembly]]**
-- **[[Keywords]]**
+- **[[CSharp/Building and Configuring Class Libraries/Keywords/Keywords]]**
 - [[Nested Namespace]]
 - [[PDB Files - What Every Developer Must Know]]
 - [[Runtime Identifier]]

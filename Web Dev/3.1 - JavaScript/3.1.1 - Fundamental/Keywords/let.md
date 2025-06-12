@@ -1,10 +1,12 @@
 ---
 tags: js, keyword, fundamental
 ---
- 
- ### Why let is preferred over var:
+
+- **let** is a keyword which help create a [[Web Dev/3.1 - JavaScript/3.1.1 - Fundamental/Variable|variable]] in JavaScript.
 
 ---
+ 
+ ### Why let is preferred over var:
 
 #### **1. Block Scope (✅ Better scoping rules)**
 

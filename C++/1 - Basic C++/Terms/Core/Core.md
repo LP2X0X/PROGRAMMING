@@ -24,10 +24,10 @@ type: folder_brief_live
 - [[Pass by value]]
 - [[Preprocessor Directive]]
 - [[Preprocessor]]
-- [[Statement]]
+- [[C++/1 - Basic C++/Terms/Core/Statement]]
 - [[Status code]]
 - [[Temporary Object]]
 - [[Transitive includes]]
-- [[Variable]]
+- [[C++/1 - Basic C++/Terms/Core/Variable]]
 
 %% End Waypoint %%

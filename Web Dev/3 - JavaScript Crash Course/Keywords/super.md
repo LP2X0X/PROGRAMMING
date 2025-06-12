@@ -2,7 +2,7 @@
 tags: js, keyword, fundamental
 ---
 
-In JavaScript, the `super` keyword is used in [[Web Dev/3 - JavaScript Crash Course/1 - Basic/Classes/Class|classes]] to refer to the parent class. It allows you to access and call functions (including the constructor) of a parent class from a subclass.
+In JavaScript, the `super` keyword is used in [[Web Dev/3 - JavaScript Crash Course/Classes/Class|classes]] to refer to the parent class. It allows you to access and call functions (including the constructor) of a parent class from a subclass.
 
 ---
 

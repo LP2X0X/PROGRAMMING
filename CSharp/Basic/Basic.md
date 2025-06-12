@@ -6,7 +6,7 @@ type: folder_brief_live
  
 %% Begin Waypoint %%
 - **[[Features]]**
-- **[[Keywords]]**
+- **[[CSharp/Basic/Keywords/Keywords]]**
 - **[[CSharp/Basic/Miscellaneous/Miscellaneous]]**
 - **[[Other notes]]**
 - **Types**

@@ -1,5 +1,5 @@
-Here’s a clear comparison between null and undefined in JavaScript:
-
+---
+tags: js, datatype, fundamental
 ---
 
 ### **🔍 What They Are**

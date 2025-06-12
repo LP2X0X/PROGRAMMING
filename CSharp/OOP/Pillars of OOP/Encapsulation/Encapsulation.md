@@ -5,6 +5,6 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
-- **[[Properties]]**
+- **[[CSharp/OOP/Pillars of OOP/Encapsulation/Properties/Properties]]**
 
 %% End Waypoint %%

@@ -7,6 +7,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Literals]]
 - [[string_view]]
-- [[string]]
+- [[C++/3 - Constants and Strings/Terms/Core/string]]
 
 %% End Waypoint %%
