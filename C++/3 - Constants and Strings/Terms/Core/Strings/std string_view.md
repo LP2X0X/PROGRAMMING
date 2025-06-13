@@ -4,6 +4,10 @@ tags: cpp, term, fundamental
 
 - To address the issue with `std::string` being expensive to initialize (or copy), C++17 introduced `std::string_view` (which lives in the <string_view> header). `std::string_view` provides read-only access to an *existing* string (a C-style string, a `std::string`, or another `std::string_view`) without making a copy. 
 
+```ad-note
+A `std::string_view` may or may not be null-terminated.
+```
+
 ```cpp
 #include <iostream>
 #include <string>
@@ -26,6 +30,37 @@ int main()
 ```
 
 - `std::string_view` will not implicitly convert to `std::string`. This is to prevent accidentally passing a `std::string_view` argument to a `std::string` parameter, and inadvertently making an expensive copy where such a copy may not be required.
+
+---
+
+### View modification functions
+- Because `std::string_view` is a view, it contains functions that let us <u>permanently</u> modify our view. This does not modify the string being viewed in any way, just the view itself:
+	- The `remove_prefix()` *member function* removes characters from the left side of the view.
+	- The `remove_suffix()` *member function* removes characters from the right side of the view.
+
+```cpp
+#include <iostream>
+#include <string_view>
+
+int main()
+{
+	std::string_view str{ "Peach" };
+	std::cout << str << '\n';
+
+	// Remove 1 character from the left side of the view
+	str.remove_prefix(1);
+	std::cout << str << '\n';
+
+	// Remove 2 characters from the right side of the view
+	str.remove_suffix(2);
+	std::cout << str << '\n';
+
+	str = "Peach"; // reset the view
+	std::cout << str << '\n';
+
+	return 0;
+}
+```
 
 ---
 
@@ -52,30 +87,7 @@ int main()
 
 - A `std::string_view` that is viewing a string that has been destroyed is sometimes called a **dangling** view.
 - When a `std::string` is modified, all views into that `std::string` are **invalidated**, meaning those views are now invalid.
-- Do not initialize a `std::string_view` with a `std::string` <u>literal</u>, as this will leave the `std::string_view` dangling.
-
----
-
-#### Literals for std::string_view
-- Double-quoted string literals are C-style string literals by default. We can create string literals with type `std::string_view` by using a `sv` suffix after the double-quoted string literal. The `sv` must be lower case.
-
-```cpp
-#include <iostream>
-#include <string>      // for std::string
-#include <string_view> // for std::string_view
-
-int main()
-{
-    using namespace std::string_literals;      // access the s suffix
-    using namespace std::string_view_literals; // access the sv suffix
-
-    std::cout << "foo\n";   // no suffix is a C-style string literal
-    std::cout << "goo\n"s;  // s suffix is a std::string literal
-    std::cout << "moo\n"sv; // sv suffix is a std::string_view literal
-
-    return 0;
-}
-```
+- Do not initialize a `std::string_view` with a [[std string literal|`std::string` literal]], as this will leave the `std::string_view` dangling.
 
 ---
 
@@ -101,6 +113,7 @@ int main()
     return 0;
 }
 ```
+
 - Second, it is generally okay to return a function parameter of type `std::string_view`:
 
 ```cpp

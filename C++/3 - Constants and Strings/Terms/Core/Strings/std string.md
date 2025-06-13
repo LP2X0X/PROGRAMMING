@@ -5,6 +5,10 @@ tags: cpp, term, fundamental
 - The easiest way to work with strings and string objects in C++ is via the `std::string` type, which lives in the \<string> header.
 - A `std::string` object can store strings of different lengths.
 
+```ad-note
+C-style string literal is always [[null-terminated string|null-terminated]].
+```
+
 ```cpp
 #include <string> // allows use of std::string
 

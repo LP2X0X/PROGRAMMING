@@ -21,7 +21,7 @@ tags: cpp, datatype, fundamental
 Pay attention to the [[The _t suffix|`_t`]] suffix.
 ```
 
-```ad-warning
+```ad-important
 Due to an oversight in the C++ specification, modern compilers typically treat `std::int8_t` and `std::uint8_t` the same as `signed char` and `unsigned char` respectively.
-When they are treated as a char, the input routines interpret our input as a sequence of characters, not as an integer.
+When they are treated as a char, **the input routines interpret our input as a sequence of characters**, not as an integer.
 ```
