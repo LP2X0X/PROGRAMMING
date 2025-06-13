@@ -19,7 +19,6 @@ type: folder_brief_live
 	- **[[Functions]]**
 	- [[JavaScript]]
 	- **[[Object]]**
-	- **[[Template Literals]]**
 - **[[Next.js]]**
 - **[[React]]**
 

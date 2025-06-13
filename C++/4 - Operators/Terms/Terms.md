@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[Increment, decrement operators, and side effects]]
 - [[Logical operators]]
 - [[Operator associativity]]
-- [[Operator precedence]]
+- [[C++/4 - Operators/Terms/Operator precedence]]
 - [[Relational operators and floating point comparisons]]
 - [[Remainder and Exponentiation]]
 - [[The comma operator]]
