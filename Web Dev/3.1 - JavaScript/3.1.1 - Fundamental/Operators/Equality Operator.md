@@ -9,9 +9,16 @@ tags: js, term, fundamental
 
 **Example:**
 ```js
-5 == "5"   // true, because "5" (string) is converted to 5 (number)
-0 == false // true, because false is converted to 0
-null == undefined // true, special case
+'5' == 5       // true      → string '5' converted to number 5
+false == 0     // true      → false becomes 0
+null == undefined // true  → special rule
+'0' == false   // true      → '0' → 0, false → 0
+[] == ''       // true      → [] → '', then both are ""
+[] == 0        // true      → [] → '', then → 0
+```
+
+```ad-important
+null only equal undefined and vice versa.
 ```
 
 ---

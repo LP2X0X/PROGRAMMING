@@ -13,7 +13,6 @@ type: folder_brief_live
 - **[[Keywords]]**
 - **[[Methods]]**
 - **[[Notes]]**
-- **[[Operators]]**
 - **[[Properties]]**
 - **[[Terms]]**
 

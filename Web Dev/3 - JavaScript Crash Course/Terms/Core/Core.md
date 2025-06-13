@@ -12,6 +12,5 @@ type: folder_brief_live
 - [[Hoist]]
 - [[Object Literal]]
 - [[SVG]]
-- [[Truthiness]]
 
 %% End Waypoint %%

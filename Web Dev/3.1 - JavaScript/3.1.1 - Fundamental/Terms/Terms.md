@@ -1,4 +1,4 @@
-# Template Literals Overview
+# Terms Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,9 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Tagged Template]]
-- [[Template Literals Overview]]
+- [[Statement]]
+- [[The script tag]]
+- [[Truthiness]]
+- [[Variable]]
 
 %% End Waypoint %%

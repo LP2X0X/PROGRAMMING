@@ -7,6 +7,11 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[typepf]]
+- [[Comma]]
+- [[Equality Operator]]
+- [[Math operators]]
+- [[Operator Precedence]]
+- [[Strict Equality Operator]]
+- [[typeof]]
 
 %% End Waypoint %%
