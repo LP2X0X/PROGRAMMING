@@ -1,4 +1,4 @@
-# Algorithms Overview
+# Logical Operators Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Grokking Algorithms - Book]]**
+- [[AND]]
+- [[NOT]]
+- [[OR]]
 
 %% End Waypoint %%

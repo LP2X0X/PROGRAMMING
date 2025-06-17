@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Constant expression]]
-- [[Constant variable]]
+- [[Constant Variable]]
 - [[Constant]]
 - [[Constexpr functions]]
 - [[Constexpr variable]]

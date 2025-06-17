@@ -9,9 +9,9 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Conditional operator]]
 - [[Constant expressions and compile-time optimization]]
-- **[[Notes]]**
+- **[[C++/3 - Constants and Strings/Notes/Notes]]**
 - [[Numeral systems]]
 - [[Performance overhead of function called]]
-- **[[Terms]]**
+- **[[C++/3 - Constants and Strings/Terms/Terms]]**
 
 %% End Waypoint %%

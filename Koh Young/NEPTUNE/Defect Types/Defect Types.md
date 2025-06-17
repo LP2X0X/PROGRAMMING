@@ -1,12 +1,11 @@
-# Algorithms Overview
+# Defect Types Overview
  
 ```ccard
 type: folder_brief_live
 ```
  
 ---
-
 %% Begin Waypoint %%
-- **[[Grokking Algorithms - Book]]**
+- [[Summary]]
 
 %% End Waypoint %%

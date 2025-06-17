@@ -7,10 +7,10 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Call back]]
+- [[Callback]]
 - [[document Object]]
 - [[Hoist]]
 - [[Object Literal]]
-- [[SVG]]
+- [[Web Dev/3 - JavaScript Crash Course/Terms/Core/SVG]]
 
 %% End Waypoint %%

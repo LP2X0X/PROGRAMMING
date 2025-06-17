@@ -10,7 +10,7 @@ It’s similar to an array, but not exactly the same.
 
 ## **📦 What is a NodeList?**
 
-A NodeList is an array-like object that represents a collection of [[Web Dev/1 - HTML/Basic/Terms/DOM|DOM]] nodes (elements, text, comments, etc.).
+A NodeList is an array-like object that represents a collection of [[Web Dev/1 - HTML/Terms/DOM|DOM]] nodes (elements, text, comments, etc.).
 
 ### **Common ways you get a NodeList:**
 

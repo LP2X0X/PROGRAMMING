@@ -2,7 +2,7 @@
 tags: js, term, fundamental
 ---
 
-In JavaScript, event types refer to the different kinds of interactions or occurrences that can be detected and responded to in the [[Web Dev/1 - HTML/Basic/Terms/DOM|DOM]]. These include user actions like clicks, keyboard input, page loads, and more.
+In JavaScript, event types refer to the different kinds of interactions or occurrences that can be detected and responded to in the [[Web Dev/1 - HTML/Terms/DOM|DOM]]. These include user actions like clicks, keyboard input, page loads, and more.
 
 ---
 

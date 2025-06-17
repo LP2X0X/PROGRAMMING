@@ -1,4 +1,4 @@
-# Algorithms Overview
+# Grokking Algorithms - Book Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Grokking Algorithms - Book]]**
+
 
 %% End Waypoint %%

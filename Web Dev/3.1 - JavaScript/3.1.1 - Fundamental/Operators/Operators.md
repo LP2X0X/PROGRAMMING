@@ -8,10 +8,10 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Comma]]
-- [[Equality Operator]]
+- **[[Equality Comparison]]**
+- **[[Logical Operators]]**
 - [[Math operators]]
 - [[Operator Precedence]]
-- [[Strict Equality Operator]]
 - [[typeof]]
 
 %% End Waypoint %%

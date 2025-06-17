@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Action Delegate]]
-- [[Callback]]
+- [[CSharp/Delegates, Events and Lambda Expressions/Delegates/Callback]]
 - [[Delegate Type]]
 - [[Func Delegate]]
 - [[Generic Delegates]]
