@@ -7,9 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Arrow Function]]
-- [[Higher-Order Function]]
-- [[Method Override]]
-- [[Rest Parameters]]
+- [[Function Expression]]
+- [[Function]]
+- **[[Interaction Functions]]**
 
 %% End Waypoint %%

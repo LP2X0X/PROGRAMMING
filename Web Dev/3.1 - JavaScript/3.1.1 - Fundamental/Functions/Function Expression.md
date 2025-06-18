@@ -2,7 +2,7 @@
 tags: js, term, fundamental
 ---
 
-- A function expression, also known as a function literal, is a code literal whose value is a function.
+- A **function expression**, also known as a *function literal*, is a code literal whose value is a function.
 - Whereas a function declaration creates a function and binds it to a name, a function expression is an expression that evaluates to (returns) a function, for you to do with what you will.
 - A function expression looks very similar to a function declaration, with two main differences:
 	- First, a function expression doesn’t have to include a name, although you can include one if you want.

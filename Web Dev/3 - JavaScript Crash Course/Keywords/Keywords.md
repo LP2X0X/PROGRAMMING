@@ -7,10 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[const]]
 - [[for in]]
 - [[for of]]
-- [[for]]
 - [[instaceof]]
 - [[new]]
 - [[static]]
