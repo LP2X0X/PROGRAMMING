@@ -10,6 +10,7 @@ type: folder_brief_live
 - [[Building blocks of a web application]]
 - [[React definition]]
 - [[Rendering User Interfaces (UI)]]
-- **[[Web Dev/React/Terms/Terms]]**
+- **[[Terms]]**
+- **[[Unsorted]]**
 
 %% End Waypoint %%
