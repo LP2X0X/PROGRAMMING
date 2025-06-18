@@ -11,6 +11,6 @@ type: folder_brief_live
 - [[document Object]]
 - [[Hoist]]
 - [[Object Literal]]
-- [[Web Dev/3 - JavaScript Crash Course/Terms/Core/SVG]]
+- [[SVG]]
 
 %% End Waypoint %%

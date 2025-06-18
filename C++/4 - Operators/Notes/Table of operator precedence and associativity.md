@@ -1,3 +1,11 @@
+---
+tags: cpp, note
+---
+
+```ad-tip
+Use parentheses to make it clear how a non-trivial compound expression should evaluate (even if they are technically unnecessary).
+```
+
 |Prec/Ass|Operator|Description|Pattern|
 |---|---|---|---|
 |1 L->R|::  <br>::|Global scope (unary)  <br>Namespace scope (binary)|::name  <br>class_name::member_name|

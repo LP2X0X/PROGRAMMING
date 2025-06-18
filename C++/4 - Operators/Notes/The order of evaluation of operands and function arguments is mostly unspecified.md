@@ -1,3 +1,7 @@
+---
+tags: cpp, note
+---
+
 - In most cases, the order of evaluation for operands and function arguments is unspecified, meaning they may be evaluated in any order.
 ```ad-note
 The Clang compiler evaluates arguments in left-to-right order. The GCC compiler evaluates arguments in right-to-left order.
@@ -13,7 +17,7 @@ a * b + c * d
 ```
 
 - If `a` is `1`, `b` is `2`, `c` is `3`, and `d` is `4`, this expression will always compute the value `14`.
-- However, the precedence and associativity rules only tell us how operators and operands are grouped and the order in which value computation will occur. They do not tell us the order in which the operands or subexpressions are evaluated. The compiler is free to evaluate operands `a`, `b`, `c`, or `d` in any order. The compiler is also free to calculate `a * b` or `c * d` first.
+- However, the precedence and associativity rules only tell us **how operators and operands are grouped and the order in which value computation will occur**. They do not tell us the order in which the operands or subexpressions are evaluated. The compiler is free to evaluate operands `a`, `b`, `c`, or `d` in any order. The compiler is also free to calculate `a * b` or `c * d` first.
 - For most expressions, this is irrelevant. In our sample expression above, it doesn’t matter whether in which order variables `a`, `b`, `c`, or `d` are evaluated for their values: the value calculated will always be `14`. There is no ambiguity here.
 - But it is possible to write expressions where the order of evaluation does matter. Consider this program, which contains a mistake often made by new C++ programmers:
 ```cpp
