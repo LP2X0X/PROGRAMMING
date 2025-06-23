@@ -39,7 +39,7 @@ static_cast<new_type>(expression)
 It’s worth noting that the argument to _static_cast_ evaluates as an [[Expression|expression]]. When we pass in a variable, that variable is evaluated to produce its value, and that value is then converted to the new type. The variable itself is _not_ affected by casting its value to a new type.
 ```
 
-- We can use _static_cast<>_ to convert an integer to a floating point number so that we can do _floating point division_ instead of _integer division_:
+- We can use _static_cast<>_ to convert an integer to a floating point number so that we can do [[Integer and floating point division|floating point division instead of integer division]]:
 ```cpp
 #include <iostream>
 

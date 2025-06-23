@@ -1,3 +1,7 @@
+---
+tags: cpp, operators, fundamental
+---
+
 Arithmetic operators in C++ are used to perform basic mathematical operations like addition, subtraction, multiplication, division, and more. These operators can be used with built-in data types such as integers and floating-point numbers, as well as with user-defined types if overloaded appropriately.
 
 ### **List of Arithmetic Operators**
@@ -26,7 +30,7 @@ Arithmetic operators in C++ are used to perform basic mathematical operations li
      int result = a * b; // result is 15
      ```
 
-4. **Division (`/`)**:
+4. **Division (`/`)**: ^2747fe
    - **Usage**: Divides the first operand by the second.
    - **Note**: When both operands are integers, the result is an integer (integer division), and any fractional part is discarded.
    - **Example**:
@@ -38,13 +42,16 @@ Arithmetic operators in C++ are used to perform basic mathematical operations li
      double result2 = c / d; // result2 is 2.5 (floating-point division)
      ```
 
-5. **Modulus (`%`)**:
+1. **Modulus (`%`)**:
    - **Usage**: Returns the remainder of the division of the first operand by the second. It is only valid for integer operands.
+	```ad-note
+	The remainder operator can also work with negative operands. `x % y` always returns results with the sign of _x_.
+	```
    - **Example**:
-     ```cpp
-     int a = 5, b = 3;
-     int result = a % b; // result is 2
-     ```
+    ```cpp
+    int a = 5, b = 3;
+    int result = a % b; // result is 2
+    ```
 
 6. **Unary Minus (`-`)**:
    - **Usage**: Negates the value of the operand.

@@ -1,10 +1,3 @@
-#### To do a soft reset (keep the changes but delete the commit on local)
-```bash
-git reset --soft head~1
-```
-
----
-
 #### To clone with another user name and password, use:
 ```bash
 git clone https://user.name:pass.word@git/repo/link
@@ -24,7 +17,7 @@ In case the error "Could not resolve host: https" appear, remove the https from 
 
 #### To soft reset a commit (delete the commit but keep the local changes)
 ```bash
-git reset --soft HEAD~
+git reset --soft HEAD~1
 ```
 ---
 
