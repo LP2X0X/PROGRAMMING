@@ -7,8 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[alert]]
-- [[confirm]]
-- [[prompt]]
+- [[alert()]]
+- [[confirm()]]
+- [[prompt()]]
 
 %% End Waypoint %%

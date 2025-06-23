@@ -1,9 +1,8 @@
 ---
 tags: js, keyword, fundamental
 ---
-### **🔁 for...in in JavaScript**
 
-The for...in loop is used to **iterate over the **enumerable property keys** of an object.
+The for...in loop is used to **iterate over the enumerable *property keys*** of an object.
 
 ---
 

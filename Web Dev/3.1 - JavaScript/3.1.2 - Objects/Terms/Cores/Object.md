@@ -31,6 +31,10 @@ All object keys are strings, but if your key is a [[Valid Identifier|valid ident
 
 ### **🛠 Accessing Properties**
 
+```ad-warning
+A notable feature of objects in JavaScript, compared to many other languages, is that it’s possible to access any property. There will be no error if the property doesn’t exist!
+```
+
 - **Dot notation**:
     - For keys that are [[Valid Identifier|valid identifiers]], you can use dot notation instead of square brackets, with the key name coming after the dot.
 
@@ -70,6 +74,16 @@ person["name"] = "Bob";
 
 ```js
 person.country = "USA";
+```
+
+- Or we can use [[Computed Property|computed property]]:
+
+```js
+let fruit = "Apple";
+
+let bag = {
+	[fruit]: 1,
+};
 ```
 
 ---

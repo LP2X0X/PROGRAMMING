@@ -11,6 +11,5 @@ type: folder_brief_live
 - [[Compound Data Types]]
 - [[Side effect]]
 - [[Type Coercion]]
-- [[Valid Identifier]]
 
 %% End Waypoint %%

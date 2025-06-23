@@ -7,10 +7,10 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Web Dev/2 - CSS/Basic/Keywords/Keywords]]**
+- **[[Keywords]]**
 	- [[!important]]
-- **[[Web Dev/2 - CSS/Basic/Notes/Notes]]**
+- **[[Notes]]**
 - **[[Properties]]**
-- **[[Web Dev/2 - CSS/Basic/Terms/Terms]]**
+- **[[Terms]]**
 
 %% End Waypoint %%

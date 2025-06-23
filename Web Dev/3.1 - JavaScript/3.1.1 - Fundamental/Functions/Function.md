@@ -2,6 +2,10 @@
 tags: js, term, fundamental
 ---
 
+```ad-note
+Think of function as a value representing an “action”.
+```
+
 ### **🧠 Function Overview in JavaScript**
 
 JavaScript functions are **blocks of reusable code** designed to perform a task.
@@ -21,6 +25,9 @@ function greet(name) {
 ```
 
 - ✅ Can be **hoisted** (used before defined)
+```ad-note
+In [[use strict|strict mode]], when a Function Declaration is within a code block, it’s visible everywhere inside that block. But not outside of it.
+```
 
 ---
 
