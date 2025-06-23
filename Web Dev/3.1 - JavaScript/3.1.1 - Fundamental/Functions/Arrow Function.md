@@ -1,16 +1,28 @@
-- Arrow functions in **JavaScript** are a concise syntax for writing functions. They were introduced in **ES6 (ECMAScript 2015)** and are especially useful for short and anonymous functions.
+---
+tags: js, term, fundamental
+---
 
-### ✅ **Basic Syntax**
-```javascript
-const add = (a, b) => a + b;
-console.log(add(2, 3)); // 5
+- An **arrow function** is a more compact version of a [[Function Expression|function expression]]. They were introduced in **ES6 (ECMAScript 2015)** and are especially useful for short and anonymous functions.
+- An arrow function doesn’t use the function keyword. Instead, it begins with the arguments list—in this case, (x, y)—followed by an arrow (=>) and the function body.
+- 📌 Key Features:
+	1. **Shorter syntax**: No need to write `function` keyword.
+	2. **Implicit return**: If the function body has only one expression, the value is automatically returned (no `return` keyword needed).
+	3. **No `this` binding**: Arrow functions do not have their own `this` context. They inherit `this` from the surrounding scope.
+	4. **Always anonymous**: They don’t have a name by default.
+
+---
+
+- If the body consists of the arrow function is just a single statement there’s an even simpler syntax, called ***concise body***.
+
+```js
+const greet = (name) => `Hello, ${name}!`;
 ```
 
-### 📌 **Key Features**
-1. **Shorter syntax**: No need to write `function` keyword.
-2. **Implicit return**: If the function body has only one expression, the value is automatically returned (no `return` keyword needed).
-3. **No `this` binding**: Arrow functions do not have their own `this` context. They inherit `this` from the surrounding scope.
-4. **Always anonymous**: They don’t have a name by default.
+- If the arrow function has exactly one parameter, you can further simplify the syntax by omitting the parentheses around the parameter name:
+  
+```js
+let squared = x => x * x;
+```
 
 ---
 

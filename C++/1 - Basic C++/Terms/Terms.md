@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Core]]**
+- **[[C++/1 - Basic C++/Terms/Core/Core]]**
 - **[[Debug]]**
 - **[[Errors]]**
 - **[[Expressions]]**

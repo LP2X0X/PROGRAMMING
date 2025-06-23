@@ -5,7 +5,7 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
-- **[[Core]]**
+- **[[C++/2 - Fundamental Data Types/Terms/Core/Core]]**
 - **[[Others]]**
 	- [[Input manipulator]]
 	- [[Modulo Wrap]]

@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Arrow functions]]
 - [[Closures]]
 - [[Functions Expression]]
 - [[Functions overview]]

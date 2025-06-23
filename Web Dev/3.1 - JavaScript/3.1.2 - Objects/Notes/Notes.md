@@ -1,4 +1,4 @@
-# Core Overview
+# Notes Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,8 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[document Object]]
-- [[Hoist]]
-- [[SVG]]
+- [[Object comparison]]
 
 %% End Waypoint %%
