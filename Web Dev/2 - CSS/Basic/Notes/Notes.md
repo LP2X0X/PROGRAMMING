@@ -14,6 +14,8 @@ type: folder_brief_live
 - [[Miscellaneous]]
 - [[Multiple Classes on a Single HTML Element]]
 - [[position fixed vs position absolute]]
+- [[Rem and em]]
+- [[Should everything be in rem]]
 - [[The purpose of CSS]]
 
 %% End Waypoint %%

@@ -12,7 +12,7 @@ type: folder_brief_live
 - [[head]]
 - [[img]]
 - [[input]]
-- [[Web Dev/1 - HTML/Elements/label]]
+- [[label]]
 - [[script]]
 - **[[SVG XMLs]]**
 - [[svg]]

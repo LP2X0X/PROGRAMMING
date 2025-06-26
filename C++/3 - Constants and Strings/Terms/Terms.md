@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Consteval]]
-- **[[C++/3 - Constants and Strings/Terms/Core/Core]]**
+- **[[Core]]**
 - [[Inline function and variable]]
 - **[[Others]]**
 

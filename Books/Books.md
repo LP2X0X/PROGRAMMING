@@ -11,5 +11,6 @@ type: folder_brief_live
 - [[Become A Better Programmer]]
 - [[Learn How To Learn]]
 - [[Learning As A Programmer]]
+- [[The Art of Learning – Josh Waitzkin]]
 
 %% End Waypoint %%

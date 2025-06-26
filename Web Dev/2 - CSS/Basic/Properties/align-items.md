@@ -2,8 +2,6 @@
 tags: css, property, fundamental
 ---
 
-### **🎯 align-items in CSS Flexbox**
-
 The align-items property controls how **flex items are aligned on the cross axis** (perpendicular to the flex-direction).
 
 ---

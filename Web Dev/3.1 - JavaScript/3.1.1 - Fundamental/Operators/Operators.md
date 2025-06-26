@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Comma]]
 - **[[Equality Comparison]]**
 - **[[Logical Operators]]**
 - [[Math operators]]
