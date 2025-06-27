@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Cargo Commands]]
 - [[Cargo]]
-- **[[Notes]]**
+- **[[RUST/0 - General/Notes/Notes]]**
 - [[toml File Extension]]
 
 %% End Waypoint %%

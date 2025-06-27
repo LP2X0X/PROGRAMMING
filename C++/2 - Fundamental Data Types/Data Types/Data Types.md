@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[bool]]
+- [[C++/2 - Fundamental Data Types/Data Types/bool]]
 - [[char]]
 - [[fast integral types]]
 - [[Fixed-width integer]]

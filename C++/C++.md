@@ -12,8 +12,8 @@ type: folder_brief_live
 - **[[3 - Constants and Strings]]**
 - **[[4 - Operators]]**
 	- [[Comparing floating point numbers]]
-	- **[[Notes]]**
-	- **[[Terms]]**
+	- **[[C++/1 - Basic C++/Notes/Notes]]**
+	- **[[C++/1 - Basic C++/Terms/Terms]]**
 - **[[5 - Bit Manipulation]]**
 - **[[6 - Scope, Duration, and Linkage]]**
 - **[[7 - Control flow]]**

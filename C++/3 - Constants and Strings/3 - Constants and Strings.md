@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Notes]]**
-- **[[Terms]]**
+- **[[C++/3 - Constants and Strings/Notes/Notes]]**
+- **[[C++/3 - Constants and Strings/Terms/Terms]]**
 
 %% End Waypoint %%

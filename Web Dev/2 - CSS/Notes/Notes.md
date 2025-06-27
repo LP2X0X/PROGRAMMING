@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[CSS Units Overview]]
 - [[Default text alignment]]
 - [[Different between align-items and justify-content]]
-- [[Web Dev/2 - CSS/Basic/Notes/Miscellaneous]]
+- [[Miscellaneous]]
 - [[Multiple Classes on a Single HTML Element]]
 - [[position fixed vs position absolute]]
 - [[Rem and em]]

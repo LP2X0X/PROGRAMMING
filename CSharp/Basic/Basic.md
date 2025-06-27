@@ -15,6 +15,6 @@ type: folder_brief_live
 	- **[[CSharp/Basic/Types/Notes/Notes]]**
 	- **[[null]]**
 	- [[CSharp/Basic/Types/struct]]
-	- [[tuple]]
+	- [[CSharp/Basic/Types/tuple]]
 
 %% End Waypoint %%

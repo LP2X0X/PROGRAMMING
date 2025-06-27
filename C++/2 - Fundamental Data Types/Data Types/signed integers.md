@@ -2,7 +2,7 @@
 tags: cpp, datatype, fundamental
 ---
 
-- By default, integers in C++ are **signed**, which means the number’s sign is stored as part of the value. So a **signed [[Integer|integer]]** can hold both positive and negative numbers (and 0).
+- By default, integers in C++ are **signed**, which means the number’s sign is stored as part of the value. So a **signed [[C++/2 - Fundamental Data Types/Terms/Core/Integer|integer]]** can hold both positive and negative numbers (and 0).
 
 |Type|Minimum Size|Note|
 |---|---|---|

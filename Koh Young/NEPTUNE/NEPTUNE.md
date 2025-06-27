@@ -8,7 +8,7 @@ type: folder_brief_live
 - **[[Coating Methods]]**
 - **[[Dashboard Design]]**
 - **[[Defect Types]]**
-- **[[Keywords]]**
+- **[[Koh Young/NEPTUNE/Keywords/Keywords]]**
 - **[[Neptune C+]]**
 - **[[Questions]]**
 - **[[Technical Keyword]]**

@@ -16,10 +16,10 @@ type: folder_brief_live
 - [[if Statement]]
 - [[Implicit type conversion]]
 - [[Incomplete Type]]
-- [[Integer]]
+- [[C++/2 - Fundamental Data Types/Terms/Core/Integer]]
 - [[Memory Address]]
 - [[Non-Boolean conditionals]]
-- [[Overflow]]
+- [[C++/2 - Fundamental Data Types/Terms/Core/Overflow]]
 - [[Sign]]
 
 %% End Waypoint %%

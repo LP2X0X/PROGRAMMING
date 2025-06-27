@@ -2,7 +2,7 @@
 tags: cpp, term, fundamental
 ---
 
-- A **constant expression** is an [[Expression|expression]] that contains only compile-time constants and operators/functions that support compile-time evaluation (which means it must be evaluatable at compile-time).
+- A **constant expression** is an [[C++/1 - Basic C++/Terms/Expressions/Expression|expression]] that contains only compile-time constants and operators/functions that support compile-time evaluation (which means it must be evaluatable at compile-time).
 - Most commonly, constant expressions contain the following:
 	- Literals (e.g. ‘5’, ‘1.2’)
 	- Most operators with constant expression operands (e.g. `3 + 4`, `2 * sizeof(int)`).

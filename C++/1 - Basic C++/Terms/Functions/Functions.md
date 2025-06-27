@@ -12,7 +12,7 @@ type: folder_brief_live
 - [[C++/1 - Basic C++/Terms/Functions/Function]]
 - [[Local variable]]
 - [[main Function]]
-- [[Parameter]]
+- [[C++/1 - Basic C++/Terms/Functions/Parameter]]
 - [[return statement]]
 - [[Unnamed parameter]]
 - [[Value Parameter]]

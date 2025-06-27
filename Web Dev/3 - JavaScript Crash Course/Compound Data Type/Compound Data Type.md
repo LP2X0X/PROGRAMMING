@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Array]]
+- [[Web Dev/3 - JavaScript Crash Course/Compound Data Type/Array]]
 - [[NodeList]]
 
 %% End Waypoint %%
