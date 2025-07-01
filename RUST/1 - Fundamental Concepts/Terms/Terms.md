@@ -11,5 +11,6 @@ type: folder_brief_live
 - [[Shadowing]]
 - [[Statement]]
 - [[Type Annotation]]
+- [[Variable Scope]]
 
 %% End Waypoint %%

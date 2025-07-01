@@ -7,7 +7,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Abnormal termination]]
 - [[C++/7 - Control flow/Terms/Attribute]]
-- **[[Basic]]**
+- **[[C++/7 - Control flow/Terms/Basic/Basic]]**
 - [[counter]]
 - [[fallthrough Attribute]]
 - [[goto statement]]

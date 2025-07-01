@@ -1,4 +1,4 @@
-# Data Types Overview
+# AFTER Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,8 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Compounds]]**
-- **[[Scalars]]**
-- [[String]]
+- **[[0 - React First Look]]**
 
 %% End Waypoint %%

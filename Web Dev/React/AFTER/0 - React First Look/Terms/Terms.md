@@ -1,4 +1,4 @@
-# Data Types Overview
+# Terms Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,8 +7,9 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Compounds]]**
-- **[[Scalars]]**
-- [[String]]
+- [[JSX]]
+- [[React]]
+- [[Single Page Application]]
+- [[Vite]]
 
 %% End Waypoint %%
