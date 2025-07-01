@@ -16,3 +16,7 @@ tags: rust, datatype, fundamental
 	
 	    println!("{s}"); // This will print `hello, world!`
 	```
+
+```ad-warning
+Clearing a string in Rust **is a mutable action** — because it **modifies the content** of the string.
+```

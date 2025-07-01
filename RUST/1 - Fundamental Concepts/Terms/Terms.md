@@ -8,6 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Expression]]
+- [[Reference]]
 - [[Shadowing]]
 - [[Statement]]
 - [[Type Annotation]]

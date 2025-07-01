@@ -13,6 +13,7 @@ type: folder_brief_live
 - **[[Keywords]]**
 - **[[Notes]]**
 - **[[Ownerships]]**
+- **[[Syntaxes]]**
 - **[[Terms]]**
 - [[Variables and Mutability]]
 

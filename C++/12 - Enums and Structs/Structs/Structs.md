@@ -16,6 +16,6 @@ type: folder_brief_live
 - [[Member selection for pointers to structs]]
 - [[Padding]]
 - [[Passing and returning structs]]
-- [[Struct]]
+- [[C++/12 - Enums and Structs/Structs/Struct]]
 
 %% End Waypoint %%

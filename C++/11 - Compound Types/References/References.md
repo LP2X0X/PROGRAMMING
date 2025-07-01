@@ -10,7 +10,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Dangling references]]
 - [[Pass by lvalue reference]]
-- [[Reference]]
+- [[C++/11 - Compound Types/References/Reference]]
 - [[The address-of operator]]
 - [[The dereference operator]]
 

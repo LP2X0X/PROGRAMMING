@@ -9,6 +9,8 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Compounds]]**
 - **[[Scalars]]**
-- [[String]]
+- **[[Strings]]**
+- **[[Structs]]**
+- [[Unit]]
 
 %% End Waypoint %%
