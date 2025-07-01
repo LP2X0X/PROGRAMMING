@@ -5,7 +5,7 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
-- **[[Basic]]**
+- **[[CSharp/Interfaces/Basic/Basic]]**
 - [[ICloneable]]
 - [[IComparable]]
 - [[IComparer]]

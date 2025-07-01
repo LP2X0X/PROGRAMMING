@@ -13,7 +13,7 @@ C-style string literal is always [[null-terminated string|null-terminated]].
 
 int main()
 {
-	char greeting[] = "Hello"; // greeting is a c-style string variable with a si
+	char greeting[] = "Hello"; // greeting is a c-style string variable
     std::cout << "Hello, world!"; // "Hello, world!" is a string literal (or C-style string literal).
     return 0;
 }

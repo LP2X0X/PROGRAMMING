@@ -1,4 +1,4 @@
-# Data Types Overview
+# Templates Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,8 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Compounds]]**
-- **[[Scalars]]**
-- [[String]]
+- [[tag-from-folder-name.md]]
 
 %% End Waypoint %%

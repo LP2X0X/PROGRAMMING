@@ -207,3 +207,12 @@ git log -- <submodule-path>
 ```
 
 - This lists only the commits where the submodule path (`CppLib/`) was updated in the main repo.
+
+---
+
+#### To use GitHub command on CLI
+- Install [GitHub CLI](https://cli.github.com/).
+- Using this to create and push to newly created repo:
+	```bash
+	gh repo create your-repo-name --public --source=. --push
+	```
