@@ -1,5 +1,5 @@
 ---
-tags: css, note, fundamental
+tags: css, note, summary
 ---
 
 1. **:hover** – Styles an element when the user hovers over it.

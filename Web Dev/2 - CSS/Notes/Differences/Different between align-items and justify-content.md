@@ -2,7 +2,7 @@
 tags: css, note, distinguish
 ---
 
-Great question! align-items and justify-content are **CSS Flexbox (and Grid)** properties used to align child items inside a container — but they control **different directions**.
+align-items and justify-content are **CSS Flexbox (and Grid)** properties used to align child items inside a container — but they control **different directions**.
 
 ---
 

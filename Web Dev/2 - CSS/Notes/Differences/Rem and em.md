@@ -1,10 +1,10 @@
 ---
-tags: css, note, fundamental
+tags: css, note, distinguish
 ---
 
 ## ✅ 1. **Does the root font size vary?**
 
-### Yes, the `root` font size (`html { font-size: ... }`) can **vary depending on:**
+Yes, the `root` font size (`html { font-size: ... }`) can **vary depending on:**
 
 |Source of variation|Description|
 |---|---|
@@ -19,7 +19,7 @@ So yes, **`rem` units depend on the root font-size**, and it **can be variable**
 
 ## ✅ 2. **Can I only estimate font size when using `rem` or `em`?**
 
-### Not quite — you **can still calculate it precisely**, _if_ you know the base:
+Not quite — you **can still calculate it precisely**, _if_ you know the base:
 
 ---
 
