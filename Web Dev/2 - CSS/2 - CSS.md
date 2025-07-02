@@ -13,6 +13,6 @@ type: folder_brief_live
 - **[[Notes]]**
 - **[[Properties]]**
 - **[[Responsive Design]]**
-- **[[Web Dev/2 - CSS/Terms/Terms]]**
+- **[[Terms]]**
 
 %% End Waypoint %%

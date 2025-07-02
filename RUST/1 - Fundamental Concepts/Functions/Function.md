@@ -1,5 +1,5 @@
 ---
-tags: rust, fundamental
+tags: rust, function, fundamental
 ---
 
 - We define a function in Rust by entering `fn` followed by a function name and a set of parentheses. The curly brackets tell the compiler where the function body begins and ends.

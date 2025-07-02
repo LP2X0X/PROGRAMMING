@@ -22,7 +22,7 @@ fn main() {
 	}
 	```
 
-- We can also access a tuple element directly by using a period (`.`) followed by the index of the value we want to access. For example:
+- We can also **access** a tuple element directly by using a period (`.`) followed by the index of the value we want to access. For example:
 	```rust
 	fn main() {
 	    let x: (i32, f64, u8) = (500, 6.4, 1);
@@ -34,8 +34,3 @@ fn main() {
 	    let one = x.2;
 	}
 	```
-
----
-
-- The tuple without any values has a special name, _unit_. This value and its corresponding type are both written `()` and represent an empty value or an empty return type.
-	- Expressions implicitly return the unit value if they don’t return any other value.

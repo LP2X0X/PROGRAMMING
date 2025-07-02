@@ -12,7 +12,7 @@ type: folder_brief_live
 - [[Format String]]
 - [[global Keyword]]
 - [[Indices and Ranges]]
-- **[[Method]]**
+- **[[CSharp/Basic/Features/Method/Method]]**
 - **Method Parameter**
 	- [[Method Parameter Modifiers]]
 	- [[Named Arguments]]
