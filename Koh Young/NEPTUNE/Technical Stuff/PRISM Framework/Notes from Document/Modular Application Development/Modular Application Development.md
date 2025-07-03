@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[Example]]
 - [[IModule]]
 - [[Modular Application]]
-- [[Module]]
+- [[Koh Young/NEPTUNE/Technical Stuff/PRISM Framework/Notes from Document/Modular Application Development/Module]]
 - [[ModuleCatalog]]
 - [[ModuleInfo]]
 - [[Partition application into module]]

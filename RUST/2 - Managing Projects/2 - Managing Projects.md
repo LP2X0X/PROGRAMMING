@@ -1,4 +1,4 @@
-# 0 - General Overview
+# 2 - Managing Projects Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,10 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Cargo Commands]]
-- [[Cargo]]
+- **[[Keywords]]**
 - **[[Notes]]**
-- [[The Prelude]]
-- [[toml File Extension]]
+- **[[Terms]]**
 
 %% End Waypoint %%

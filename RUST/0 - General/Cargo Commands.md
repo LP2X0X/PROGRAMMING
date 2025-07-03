@@ -6,9 +6,7 @@ In Rust, [[Cargo|cargo]] is the official package manager and build system. Here�
 
 ---
 
-### **📦** 
-
-### **Project Management**
+### **📦 Project Management**
 
 - cargo new my_project – Create a new Rust project (with Cargo.toml)
     
@@ -17,9 +15,7 @@ In Rust, [[Cargo|cargo]] is the official package manager and build system. Here�
 
 ---
 
-### **🛠️** 
-
-### **Build & Run**
+### **🛠️ Build & Run**
 
 - cargo build – Compile the current project (debug mode)
     
@@ -32,9 +28,7 @@ In Rust, [[Cargo|cargo]] is the official package manager and build system. Here�
 
 ---
 
-### **🧪** 
-
-### **Testing**
+### **🧪 Testing**
 
 - cargo test – Run unit and integration tests
     
@@ -43,9 +37,7 @@ In Rust, [[Cargo|cargo]] is the official package manager and build system. Here�
 
 ---
 
-### **📚** 
-
-### **Documentation**
+### **📚 Documentation**
 
 - cargo doc – Generate documentation for your crate
     
@@ -54,9 +46,7 @@ In Rust, [[Cargo|cargo]] is the official package manager and build system. Here�
 
 ---
 
-### **📦** 
-
-### **Dependencies**
+### **📦 Dependencies**
 
 - cargo update – Update dependencies listed in Cargo.lock
     
@@ -67,9 +57,7 @@ In Rust, [[Cargo|cargo]] is the official package manager and build system. Here�
 
 ---
 
-### **🔍** 
-
-### **Information**
+### **🔍 Information**
 
 - cargo tree – Shows dependency tree (requires cargo-tree)
     
@@ -78,9 +66,7 @@ In Rust, [[Cargo|cargo]] is the official package manager and build system. Here�
 
 ---
 
-### **📤** 
-
-### **Publishing**
+### **📤 Publishing**
 
 - cargo publish – Publish your crate to [crates.io](https://crates.io)
     

@@ -6,7 +6,7 @@ type: folder_brief_live
  
 %% Begin Waypoint %%
 - [[Access Modifier]]
-- [[as]]
+- [[CSharp/OOP/Keyword/as]]
 - [[base]]
 - [[Blackbox programming]]
 - [[Contextual keywords]]

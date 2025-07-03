@@ -11,6 +11,6 @@ type: folder_brief_live
 - [[instaceof]]
 - [[new]]
 - [[static]]
-- [[super]]
+- [[Web Dev/3 - JavaScript Crash Course/Keywords/super]]
 
 %% End Waypoint %%

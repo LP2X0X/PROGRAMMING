@@ -52,7 +52,7 @@ let x: () = ();  // Valid: x is of unit type, and its value is ()
 
 ```rust
 let result = match 5 {
-    1 => "one",
+    1 => println!("one"),
     _ => {
         println!("not one");
         ()
