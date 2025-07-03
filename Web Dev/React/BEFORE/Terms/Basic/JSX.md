@@ -1,2 +1,0 @@
-- **JSX is a syntax extension** for JavaScript that allows you to describe your UI in a familiar _HTML-like_ syntax.
-- Browsers don't understand JSX out of the box, so you'll need a JavaScript compiler, such as a Babel, to transform your JSX code into regular JavaScript.

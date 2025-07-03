@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[JSX]]
+- [[Web Dev/React/AFTER/0 - React First Look/Terms/JSX]]
 - [[React]]
 - [[Single Page Application]]
 - [[Vite]]

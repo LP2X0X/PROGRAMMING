@@ -1,4 +1,4 @@
-# Notes Overview
+# Terms Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Miscellaneous]]
-- [[Project Structure]]
+- [[Component]]
+- [[JSX]]
 
 %% End Waypoint %%

@@ -1,4 +1,4 @@
-# Notes Overview
+# 1 - Components, Props and JSX Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Miscellaneous]]
-- [[Project Structure]]
+- **[[Terms]]**
 
 %% End Waypoint %%
