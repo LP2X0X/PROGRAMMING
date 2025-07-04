@@ -12,7 +12,8 @@ type: folder_brief_live
 - [[null vs undefined]]
 - [[Number]]
 - [[Primitive]]
-- [[Web Dev/3.1 - JavaScript/3.1.1 - Fundamental/Data Types/Primitives/String]]
+- [[String]]
+- [[Symbol]]
 - [[Template Literal]]
 
 %% End Waypoint %%
