@@ -2,7 +2,7 @@
 tags: rust, datatype, fundamental
 ---
 
-- Another way to have a collection of multiple values is with an _array_. Unlike a tuple, every element of an array must have the same type.
+- Another way to have a collection of multiple values is with an _array_. Unlike a tuple, every element of an array **must have the same type**.
 	- Unlike arrays in some other languages, arrays in Rust *have a fixed length*.
 	
 - You write an array’s type using square brackets with the type of each element, a semicolon, and then the number of elements in the array, like so:
