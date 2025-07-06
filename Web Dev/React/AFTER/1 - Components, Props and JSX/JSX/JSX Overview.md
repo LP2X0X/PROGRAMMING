@@ -1,5 +1,5 @@
 ---
-tags: react, term, fundamental
+tags: react, summary, fundamental
 ---
 
 ### **🔷 What is JSX in React?**
@@ -14,13 +14,13 @@ tags: react, term, fundamental
 
 ### **✅ Basic Example**
 
-```js
+```jsx
 const element = <h1>Hello, world!</h1>;
 ```
 
 This looks like HTML, but it’s actually JavaScript! React transforms it under the hood into:
 
-```js
+```jsx
 const element = React.createElement('h1', null, 'Hello, world!');
 ```
 
@@ -28,7 +28,9 @@ const element = React.createElement('h1', null, 'Hello, world!');
 
 ### **✅ JSX in a Component**
 
-```js
+- JSX works essentially like HTML, but we can enter "JavaScript mode" by using { }. We can place JavaScript **expressions** in side the { }.
+
+```jsx
 function Welcome(props) {
   return <h1>Hello, {props.name}!</h1>;
 }
@@ -36,7 +38,7 @@ function Welcome(props) {
 
 Used like this:
 
-```js
+```jsx
 <Welcome name="Long" />
 ```
 
@@ -57,7 +59,7 @@ Used like this:
 
 ### **✅ Embedding Expressions**
 
-```js
+```jsx
 const name = "Long";
 const element = <h1>Hello, {name}</h1>;
 ```
@@ -68,7 +70,7 @@ const element = <h1>Hello, {name}</h1>;
 
 Inline styles use an object:
 
-```js
+```jsx
 const style = {
   color: 'blue',
   fontSize: '20px',
@@ -83,7 +85,7 @@ const element = <h1 style={style}>Hello!</h1>;
 
 1. **Return one root element**
 
-```js
+```jsx
 return (
   <div>
     <h1>Hello</h1>
@@ -94,7 +96,7 @@ return (
 
 2. **Use className instead of class**
 
-```js
+```jsx
 <div className="box">Hello</div>
 ```
 

@@ -8,6 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Component]]
-- [[JSX]]
+- [[Inline Style]]
+- [[Prop]]
 
 %% End Waypoint %%
