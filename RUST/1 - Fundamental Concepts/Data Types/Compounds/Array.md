@@ -2,9 +2,8 @@
 tags: rust, datatype, fundamental
 ---
 
-- Another way to have a collection of multiple values is with an _array_. Unlike a tuple, every element of an array must have the same type.
-	- Unlike arrays in some other languages, arrays in Rust *have a fixed length*.
-	
+- Another way to have a collection of multiple values is with an _array_. Unlike a tuple, every element of an array **must have the same type**.
+	- Unlike arrays in some other languages, arrays in Rust *have a fixed length known at compile time*.
 - You write an array’s type using square brackets with the type of each element, a semicolon, and then the number of elements in the array, like so:
 	```rust
 	let a: [i32; 5] = [1, 2, 3, 4, 5];
@@ -30,3 +29,7 @@ tags: rust, datatype, fundamental
 	    let second = a[1];
 	}
 	```
+
+```ad-warning
+You **cannot index an array or vector with a negative number** in Rust because Rust arrays and slices use **unsigned integer indexing**.
+```

@@ -12,6 +12,7 @@ type: folder_brief_live
 - **Others**
 	- [[Computed Property]]
 	- [[integer Property]]
+	- [[Optional Chaining]]
 	- [[Valid Identifier]]
 
 %% End Waypoint %%

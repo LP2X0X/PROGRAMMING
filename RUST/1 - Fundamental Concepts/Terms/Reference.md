@@ -21,6 +21,10 @@ println!("Value of x is: {}", r);
 - `x` is not moved — you can still use it
 - `r` just **borrows** `x` temporarily
 
+```ad-note
+You can **read** through a reference as is, but to **write** (i.e., mutate), you must **dereference** it.
+```
+
 ---
 
 ## ✅ Types of References
@@ -45,6 +49,13 @@ println!("{ref1} and {ref2}"); // ✅ You can have many immutable refs
 ---
 
 ### 🔸 Mutable Reference (`&mut T`)
+
+````ad-question
+Why do you need mutable reference, can't you just modify it directly?
+```ad-Answer
+You **can** — but only **inside the same scope** where you own the value. The moment you need to modify it **from another function or context**, you **must use a mutable reference**.
+```
+````
 
 ```rust
 let mut value = 5;
