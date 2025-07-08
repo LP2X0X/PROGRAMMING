@@ -4,7 +4,7 @@ tags: rust, control, flow, fundamental
 
 ### if ... let syntax
 
-- The `if let` syntax lets you combine `if` and `let` into a less verbose way to handle values that [[match#^4a7317|match one pattern while ignoring the rest]].
+- The `if let` syntax lets you combine `if` and `let` into a less verbose way to handle values that [[match Expression#^4a7317|match one pattern while ignoring the rest]].
 	```rust
 	    let config_max = Some(3u8);
 	    if let Some(max) = config_max {

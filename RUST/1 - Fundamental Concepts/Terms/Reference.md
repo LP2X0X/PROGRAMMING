@@ -21,6 +21,10 @@ println!("Value of x is: {}", r);
 - `x` is not moved — you can still use it
 - `r` just **borrows** `x` temporarily
 
+```ad-note
+You can **read** through a reference as is, but to **write** (i.e., mutate), you must **dereference** it.
+```
+
 ---
 
 ## ✅ Types of References
