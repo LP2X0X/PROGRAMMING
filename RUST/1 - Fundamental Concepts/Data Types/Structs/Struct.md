@@ -1,5 +1,5 @@
 ---
-tags: rust, datatype, fundamental
+tags: rust, datatype, struct, fundamental
 ---
 
 In Rust, a `struct` (short for **structure**) is a custom data type that **groups related values** together into a single type — like classes or records in other languages.

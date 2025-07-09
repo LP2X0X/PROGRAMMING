@@ -10,6 +10,5 @@ type: folder_brief_live
 - **[[0 - General]]**
 - **[[1 - Fundamental Concepts]]**
 - **[[2 - Managing Projects]]**
-- **[[3 - Collections]]**
 
 %% End Waypoint %%

@@ -1,5 +1,5 @@
 ---
-tags: rust, datatype, fundamental
+tags: rust, datatype, string, fundamental
 ---
 
 - A _string slice_ is a [[RUST/1 - Fundamental Concepts/Terms/Reference|reference]] to part of a `String`, the type that signifies “string slice” is written as `&str`, and it looks like this:

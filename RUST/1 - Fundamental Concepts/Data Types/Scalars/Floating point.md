@@ -1,5 +1,5 @@
 ---
-tags: rust, datatype, fundamental
+tags: rust, datatype, scalar, fundamental
 ---
 
 - Rust also has two primitive types for _floating-point numbers_, which are numbers with decimal points. 

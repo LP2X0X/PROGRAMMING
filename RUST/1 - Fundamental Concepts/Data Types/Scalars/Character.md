@@ -1,5 +1,5 @@
 ---
-tags: rust, datatype, fundamental
+tags: rust, datatype, scalar, fundamental
 ---
 
 - Rust’s `char` type is the language’s most primitive alphabetic type.

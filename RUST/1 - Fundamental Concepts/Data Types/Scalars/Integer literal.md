@@ -1,5 +1,5 @@
 ---
-tags: rust, literal, fundamental
+tags: rust, datatype, scalar, fundamental
 ---
 
 - You can write integer literals in any of the forms shown in the table below. 
