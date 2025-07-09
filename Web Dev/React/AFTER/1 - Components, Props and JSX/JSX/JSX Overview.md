@@ -1,5 +1,5 @@
 ---
-tags: react, summary, fundamental
+tags: react, jsx, summary, fundamental
 ---
 
 ### **🔷 What is JSX in React?**
@@ -49,7 +49,7 @@ Used like this:
 |**Feature**|**Example**|
 |---|---|
 |Embed JavaScript|{} inside JSX|
-|Self-closing Tags|<img />, <input />|
+|Self-closing Tags|\<img />, \<input />|
 |Props|\<Component name="value" />|
 |Children|\<Component>Some content\</Component>|
 |Conditional Render|{isLoggedIn ? <User /> : <Guest />}|
@@ -81,26 +81,118 @@ const element = <h1 style={style}>Hello!</h1>;
 
 ---
 
-### **✅ JSX Rules**
+## **✅ JSX Rules**
 
-1. **Return one root element**
+### ✅ **1. Return One Root Element**
+
+### 🔸 What it means:
+
+Every JSX component must return a **single parent/root element**.
+
+### 🔸 Why:
+
+Because JSX compiles to `React.createElement(...)`, which expects **one root node**. Returning multiple root elements causes a syntax error.
+
+#### ✅ Correct:
+
+```jsx
+function App() {
+  return (
+    <div>
+      <h1>Hello</h1>
+      <p>World</p>
+    </div>
+  );
+}
+```
+
+#### ❌ Incorrect:
+
+```jsx
+function App() {
+  return (
+    <h1>Hello</h1>
+    <p>World</p>   // ❌ Cannot return two siblings at top-level
+  );
+}
+```
+
+#### 🛠 Solution:
+
+* Wrap everything in a `<div>` or `<section>`
+* Or use **[[Fragment|React Fragment]]**: `<></>`
 
 ```jsx
 return (
-  <div>
+  <>
     <h1>Hello</h1>
     <p>World</p>
-  </div>
+  </>
 );
 ```
 
-2. **Use className instead of class**
+---
+
+### ✅ **2. Use `className` Instead of `class`**
+
+#### 🔸 What it means:
+
+In JSX, you must use `className` (not `class`) to apply CSS classes.
+
+#### 🔸 Why:
+
+* `class` is a **reserved keyword in JavaScript** (used for class declarations).
+* React uses `className` to avoid confusion and errors during compilation.
+
+#### ✅ Correct:
 
 ```jsx
-<div className="box">Hello</div>
+<div className="header">Welcome</div>
 ```
 
-3. **Use camelCase for attributes**
-    
-    Like onClick, htmlFor, tabIndex, etc.
-    
+#### ❌ Incorrect:
+
+```jsx
+<div class="header">Welcome</div>  // ❌ JSX parser will complain
+```
+
+> Behind the scenes, React sets `class` on the DOM element, but you must write `className` in JSX.
+
+---
+
+### ✅ **3. Use camelCase for Attributes**
+
+#### 🔸 What it means:
+
+Use **camelCase** instead of lowercase for most JSX HTML attributes.
+
+| HTML       | JSX        |
+| ---------- | ---------- |
+| `onclick`  | `onClick`  |
+| `tabindex` | `tabIndex` |
+| `for`      | `htmlFor`  |
+| `readonly` | `readOnly` |
+
+#### 🔸 Why:
+
+JSX is **JavaScript**, and in JavaScript we use **camelCase** for properties and event handlers.
+
+#### ✅ Examples:
+
+```jsx
+<button onClick={handleClick}>Click me</button>
+<label htmlFor="email">Email</label>
+<input type="text" readOnly />
+```
+
+> These camelCase props are transformed by React into the correct DOM attributes.
+
+---
+
+### ✅ Summary
+
+| Rule                           | Why It Matters                                                 |
+| ------------------------------ | -------------------------------------------------------------- |
+| One root element               | JSX compiles to a single function call (`React.createElement`) |
+| `className` instead of `class` | Avoids conflict with JS `class` keyword                        |
+| camelCase attributes           | Follows JS conventions; avoids syntax errors                   |

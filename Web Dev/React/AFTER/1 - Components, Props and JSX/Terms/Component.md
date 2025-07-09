@@ -64,7 +64,7 @@ class Welcome extends Component {
 
 ### **✅ 5. JSX Inside Components**
 
-React components return JSX (a syntax extension of JavaScript that looks like HTML):
+React components return [[JSX Overview|JSX]] (a syntax extension of JavaScript that looks like HTML):
 
 ```js
 function Header() {
@@ -74,6 +74,10 @@ function Header() {
     </header>
   );
 }
+```
+
+```ad-note
+The return value **must be a valid JavaScript <u>expression</u>** (usually JSX itself).
 ```
 
 ---

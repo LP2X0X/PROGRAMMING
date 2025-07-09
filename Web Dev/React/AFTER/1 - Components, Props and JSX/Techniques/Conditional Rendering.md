@@ -12,6 +12,8 @@ Here are the most common patterns:
 
 ### ✅ 1. **Using `if` (outside JSX)**
 
+- Use this when you want to return an entirely different component.
+
 ```jsx
 function Greeting({ isLoggedIn }) {
   if (isLoggedIn) {
