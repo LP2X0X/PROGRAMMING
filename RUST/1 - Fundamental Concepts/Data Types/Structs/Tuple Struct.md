@@ -1,5 +1,5 @@
 ---
-tags: rust, datatype, fundamental
+tags: rust, datatype, struct, fundamental
 ---
 
 - Rust also supports structs that look similar to tuples, called _tuple structs_.

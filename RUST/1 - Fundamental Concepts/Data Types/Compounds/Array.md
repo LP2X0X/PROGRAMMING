@@ -1,5 +1,5 @@
 ---
-tags: rust, datatype, fundamental
+tags: rust, datatype, compound, fundamental
 ---
 
 - Another way to have a collection of multiple values is with an _array_. Unlike a tuple, every element of an array **must have the same type**.

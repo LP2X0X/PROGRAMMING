@@ -1,5 +1,5 @@
 ---
-tags: rust, enum, fundamental
+tags: rust, datatype, enum, fundamental
 ---
 
 ## 🧱 What is `Option<T>`?
@@ -98,6 +98,13 @@ let len = opt.map(|s| s.len());  // Some(5)
 
 ```rust
 option.or(Some("default".to_string()));
+```
+
+### 🔄 Convert  from reference to value
+
+```rust
+let a: Option<&i32> = Some(&10);
+let b: Option<i32> = a.copied(); // now it's Some(10)
 ```
 
 ---

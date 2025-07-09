@@ -1,5 +1,5 @@
 ---
-tags: rust, datatype, fundamental
+tags: rust, datatype, enum, fundamental
 ---
 
 In Rust, `enum` (short for **enumeration**) is a powerful type that lets you define a value that can be **one of several possible variants**, each possibly with associated data.

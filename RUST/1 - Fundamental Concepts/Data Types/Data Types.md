@@ -7,10 +7,10 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- **[[Collections]]**
 - **[[Compounds]]**
 - **[[Enums]]**
 - **[[Scalars]]**
-- **[[Strings]]**
 - **[[Structs]]**
 - [[Unit]]
 

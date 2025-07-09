@@ -19,7 +19,7 @@ let phrase = `can embed another ${str}`;
 
 ---
 
-### ## Accessing characters
+###  Accessing characters
 
 - To get a character at position `pos`, use square brackets `[pos]` or call the method. The first character starts from the zero position:
 
