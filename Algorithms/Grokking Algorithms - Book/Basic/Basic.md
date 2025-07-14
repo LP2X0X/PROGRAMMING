@@ -1,4 +1,4 @@
-# Grokking Algorithms - Book Overview
+# Basic Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Basic]]**
+- [[Binary Search]]
 
 %% End Waypoint %%
