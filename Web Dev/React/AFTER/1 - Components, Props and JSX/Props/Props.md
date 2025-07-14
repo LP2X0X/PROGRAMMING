@@ -1,4 +1,4 @@
-# Terms Overview
+# Props Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,8 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Component]]
-- [[Inline Style]]
-- [[React Fragment]]
+- [[Event Prop]]
+- [[Prop]]
 
 %% End Waypoint %%

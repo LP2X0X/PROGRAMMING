@@ -120,7 +120,7 @@ function App() {
 #### 🛠 Solution:
 
 * Wrap everything in a `<div>` or `<section>`
-* Or use **[[Fragment|React Fragment]]**: `<></>`
+* Or use **[[React Fragment|React Fragment]]**: `<></>`
 
 ```jsx
 return (

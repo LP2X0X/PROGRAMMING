@@ -1,4 +1,4 @@
-# Terms Overview
+# 2 - State, Event and Forms Interactive Components Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,8 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Component]]
-- [[Inline Style]]
-- [[React Fragment]]
+- **[[Terms]]**
 
 %% End Waypoint %%
