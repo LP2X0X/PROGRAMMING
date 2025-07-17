@@ -1,4 +1,4 @@
-# Basic Overview
+# Data Structures Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Binary Search]]
+- [[Array and Linked List]]
+- [[Stack]]
 
 %% End Waypoint %%

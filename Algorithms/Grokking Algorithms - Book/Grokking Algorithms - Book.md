@@ -7,6 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Basic]]**
+- **[[Algo]]**
+- **[[Data Structures]]**
+- **[[Terms]]**
 
 %% End Waypoint %%

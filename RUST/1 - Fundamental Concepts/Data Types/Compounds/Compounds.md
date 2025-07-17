@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Array]]
+- [[RUST/1 - Fundamental Concepts/Data Types/Compounds/Array]]
 - [[Compound]]
 - [[Tuple]]
 
