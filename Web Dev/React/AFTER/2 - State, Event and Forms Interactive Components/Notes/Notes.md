@@ -1,12 +1,12 @@
-# Vim Overview
+# Notes Overview
  
 ```ccard
 type: folder_brief_live
 ```
  
+---
+
 %% Begin Waypoint %%
-- [[Cheat Sheet]]
-- **[[Core]]**
-- **[[Tips and Tricks]]**
+- [[Practical Guidelines About State]]
 
 %% End Waypoint %%

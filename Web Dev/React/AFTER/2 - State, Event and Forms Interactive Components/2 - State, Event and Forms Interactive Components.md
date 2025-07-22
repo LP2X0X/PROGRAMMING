@@ -1,4 +1,4 @@
-# 2 - CSS Overview
+# 2 - State, Event and Forms Interactive Components Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,11 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Keywords]]**
-	- [[!important]]
 - **[[Notes]]**
-- **[[Properties]]**
-- **[[Responsive Design]]**
 - **[[Terms]]**
 
 %% End Waypoint %%

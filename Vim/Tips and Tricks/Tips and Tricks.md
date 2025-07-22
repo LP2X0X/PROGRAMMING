@@ -15,6 +15,7 @@ type: folder_brief_live
 - [[Insert Normal mode]]
 - [[Navigate Real Line and Display Line]]
 - [[Normal mode Command]]
+- [[Paste the word under the cursor into command mode]]
 - [[Quickly switch back to Normal Mode]]
 - [[Selection Tips]]
 - [[Two for the price of One]]

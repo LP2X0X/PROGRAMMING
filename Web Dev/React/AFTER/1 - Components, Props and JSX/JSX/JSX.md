@@ -1,12 +1,13 @@
-# Vim Overview
+# JSX Overview
  
 ```ccard
 type: folder_brief_live
 ```
  
+---
+
 %% Begin Waypoint %%
-- [[Cheat Sheet]]
-- **[[Core]]**
-- **[[Tips and Tricks]]**
+- [[JSX Overview]]
+- [[JSX Style Object]]
 
 %% End Waypoint %%

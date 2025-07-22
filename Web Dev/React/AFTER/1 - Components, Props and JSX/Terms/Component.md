@@ -4,8 +4,8 @@ tags: react, term, fundamental
 
 - React application are entirely made out of **components**. It is the building block of user interface.
 	![[Pasted image 20250703191853.png|center|500]]
-- Component has its own data, logic and appearance. It can then be reused, nested inside each other, and pass data between them.
-	![[Pasted image 20250703192016.png|center|500]]
+- Component has its own data (which made out of [[Prop|props]] and state), logic and appearance. It can then be reused, nested inside each other, and pass data between them.
+	![[Pasted image 20250704205115.png|center|500]]
 
 ---
 
@@ -64,7 +64,7 @@ class Welcome extends Component {
 
 ### **✅ 5. JSX Inside Components**
 
-React components return JSX (a syntax extension of JavaScript that looks like HTML):
+React components return [[JSX Overview|JSX]] (a syntax extension of JavaScript that looks like HTML):
 
 ```js
 function Header() {
@@ -74,6 +74,10 @@ function Header() {
     </header>
   );
 }
+```
+
+```ad-note
+The return value **must be a valid JavaScript <u>expression</u>** (usually JSX itself).
 ```
 
 ---

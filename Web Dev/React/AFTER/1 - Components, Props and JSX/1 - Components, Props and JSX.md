@@ -7,6 +7,9 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- **[[JSX]]**
+- **[[Props]]**
+- **[[Techniques]]**
 - **[[Terms]]**
 
 %% End Waypoint %%
