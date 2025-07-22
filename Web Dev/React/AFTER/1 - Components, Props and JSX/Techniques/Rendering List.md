@@ -4,6 +4,10 @@ tags: react, technique, fundamental
 
 In React, rendering a **list** means displaying multiple items dynamically from an **array** using `.map()`.
 
+```ad-important
+Each item created using this technique must has an unique **key** (which is set through key attribute).
+```
+
 ---
 
 ### ✅ Basic Example

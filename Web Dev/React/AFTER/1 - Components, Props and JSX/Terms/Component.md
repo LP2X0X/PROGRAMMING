@@ -6,6 +6,7 @@ tags: react, term, fundamental
 	![[Pasted image 20250703191853.png|center|500]]
 - Component has its own data (which made out of [[Prop|props]] and state), logic and appearance. It can then be reused, nested inside each other, and pass data between them.
 	![[Pasted image 20250704205115.png|center|500]]
+- React component names must always start with a capital letter, while HTML tags must be lowercase.
 
 ---
 
