@@ -7,6 +7,8 @@ tags: react, term, fundamental
 - In React, **state** is a **built-in object** that stores data **specific to a component** and controls how that component **behaves or appears**.
 - When state changes, React automatically **re-renders** the component to reflect the new data.
 
+![[Screenshot 2025-07-14 at 19.30.24.png|center|500]]
+
 ---
 
 ### ✅ Example: A Counter Using State
@@ -145,6 +147,11 @@ setCount(count + 1);
 
 ```jsx
 setCount(prevCount => prevCount + 1);
+```
+
+```ad-note
+Use the above solution when you needed to update state based on the current state.
+The reason is because React batches updates to improve performance and avoid unnecessary re-renders. But batching also means **you can’t rely on immediate state changes in the same function scope**.
 ```
 
 ---

@@ -1,4 +1,4 @@
-# Algorithms Overview
+# Notes Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Grokking Algorithms - Book]]**
-- **[[LeetCode]]**
+- [[Practical Guidelines About State]]
 
 %% End Waypoint %%
