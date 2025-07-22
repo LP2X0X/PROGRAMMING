@@ -6,7 +6,7 @@ type: folder_brief_live
  
 %% Begin Waypoint %%
 - **[[Advanced CSharp Language Features]]**
-- **[[CSharp/Basic/Basic]]**
+- **[[Basic]]**
 - **[[Building and Configuring Class Libraries]]**
 - **[[Collections and Generics]]**
 - [[Core Concepts]]
@@ -15,7 +15,7 @@ type: folder_brief_live
 - **[[File I.O and Object Serialization]]**
 - **[[Interfaces]]**
 - **[[LINQ to Objects]]**
-- **[[CSharp/Miscellaneous/Miscellaneous]]**
+- **[[Miscellaneous]]**
 - **[[Multithreaded, Parallel and Async Programming]]**
 - **[[Object Lifetime]]**
 - **[[OOP]]**
