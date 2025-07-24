@@ -12,17 +12,23 @@ In JavaScript, a **method** is simply a **function that is a property of an obje
 const person = {
   name: "Alice",
   greet() {
-    console.log(`Hello, I'm ${this.name}`);
+    console.log(`Hello, I'm ${this.name}`); // First way
   },
 
-  bow: function() {
-	console.log("Bowing!");
+  bow: function() { 
+	console.log("Bowing!"); // Second way
   }
 };
 
-person.goodbye = function() {
+person.goodbye = function() { // Third way
 	alert("Bye!");
 };
+
+function doSmt() {
+	console.log('Smt');
+}
+
+person.doSmt = doSmt; // Fourth way
 
 person.greet(); // Hello, I'm Alice
 ```
@@ -69,6 +75,10 @@ In this case `this` is `undefined` in strict mode. If we try to access `this.nam
 In non-strict mode the value of `this` in such case will be the _global object_ (`window` in a browser). This is a historical behavior that `"use strict"` fixes.
 ````
 
+- In summary, The value of `this` is defined at run-time:
+	- When a function is declared, it may use `this`, but that `this` has no value until the function is called.
+	- A function can be copied between objects.
+	- When a function is called in the “method” syntax: `object.method()`, the value of `this` during the call is `object`.
 
 ---
 

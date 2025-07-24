@@ -1,4 +1,4 @@
-# Keywords Overview
+# Compound Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,9 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[instaceof]]
-- [[new]]
-- [[static]]
-- [[super]]
+- [[Array]]
 
 %% End Waypoint %%

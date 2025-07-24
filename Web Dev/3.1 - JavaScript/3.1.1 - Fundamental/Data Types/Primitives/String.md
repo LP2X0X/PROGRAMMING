@@ -15,7 +15,7 @@ let phrase = `can embed another ${str}`;
 	2. Single quotes: `'Hello'`.
 	3. Backticks: `` `Hello` ``. This is also called a [[Template Literal|template literal]]. Another advantage of using backticks is that they allow a string to span multiple lines.
 
-- Strings can’t be changed in JavaScript. The usual workaround is to create a whole new string and assign it to `str` instead of the old one.
+- Strings are **immutable**. The usual workaround is to create a whole new string and assign it to `str` instead of the old one.
 
 ---
 
@@ -51,3 +51,66 @@ for (let char of "Hello") {
   alert(char); // H,e,l,l,o (char becomes "H", then "e", then "l" etc)
 }
 ```
+
+---
+
+### Getting a substring
+
+#### 🔪 `slice(start, end)`
+
+- Returns characters **from `start` up to but not including `end`**
+    
+- **Supports negative indices** (count from end)
+    
+
+```js
+"hello".slice(1, 4);       // "ell"
+"hello".slice(-3);         // "llo"
+"hello".slice(-3, -1);     // "ll"
+```
+
+#### 🧩 `substring(start, end)`
+
+- Returns characters **between `start` and `end`** (like `slice`)
+    
+- **Negative values are treated as 0**
+    
+- **Automatically swaps start and end if start > end**
+    
+
+```js
+"hello".substring(1, 4);   // "ell"
+"hello".substring(-2, 4);  // "hell" (because -2 becomes 0)
+"hello".substring(4, 1);   // "ell" (swaps 1 and 4)
+```
+
+#### 📏 `substr(start, length)` **(Deprecated)**
+
+- Returns **`length` characters starting from `start`**
+    
+- Allows **negative `start`** (counts from end)
+    
+- ❗ Deprecated in modern JavaScript (not recommended for new code)
+    
+
+```js
+"hello".substr(1, 3);      // "ell"
+"hello".substr(-3, 2);     // "ll"
+```
+
+---
+
+### ✅ Summary Table
+
+|Method|Syntax|Supports Negative?|Notes|
+|---|---|---|---|
+|`slice`|`slice(start, end)`|✅ Yes|Most flexible and commonly used|
+|`substring`|`substring(start, end)`|❌ No (negatives become 0)|Swaps args if start > end|
+|`substr`|`substr(start, length)`|✅ `start` only|Deprecated, avoid using it|
+
+---
+
+### ✅ Recommendation:
+
+- Use **`slice()`** in modern JavaScript — it's consistent, powerful, and supports negative indices.
+    

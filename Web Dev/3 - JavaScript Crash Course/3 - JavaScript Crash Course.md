@@ -10,10 +10,10 @@ type: folder_brief_live
 - **[[Classes]]**
 - **[[Compound Data Type]]**
 - **[[Functions]]**
-- **[[Web Dev/3 - JavaScript Crash Course/Keywords/Keywords]]**
+- **[[Keywords]]**
 - **[[Methods]]**
-- **[[Web Dev/3 - JavaScript Crash Course/Notes/Notes]]**
-- **[[Web Dev/3 - JavaScript Crash Course/Properties/Properties]]**
-- **[[Web Dev/3 - JavaScript Crash Course/Terms/Terms]]**
+- **[[Notes]]**
+- **[[Properties]]**
+- **[[Terms]]**
 
 %% End Waypoint %%
