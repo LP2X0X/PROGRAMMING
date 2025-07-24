@@ -10,5 +10,6 @@ type: folder_brief_live
 - **[[0 - React First Look]]**
 - **[[1 - Components, Props and JSX]]**
 - **[[2 - State, Event and Forms Interactive Components]]**
+- **[[3 - Thinking in React]]**
 
 %% End Waypoint %%

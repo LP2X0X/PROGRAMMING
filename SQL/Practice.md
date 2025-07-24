@@ -89,9 +89,6 @@ Yes — **SQL is a standardized language**, so the **core syntax** (like `SELECT
 |Limit/offset (`LIMIT` vs `TOP`)|✅|
 |Tools & GUI|✅|
 
-So:
-
-- **Learning standard SQL gives you a strong foundation**
-    
-- You’ll just need to adjust **specific syntax** when switching databases
-    
+- So:
+	- **Learning standard SQL gives you a strong foundation**
+	- You’ll just need to adjust **specific syntax** when switching databases

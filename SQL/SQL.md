@@ -7,6 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- [[Learn]]
 - [[LINQPad]]
 - [[Practice]]
 
