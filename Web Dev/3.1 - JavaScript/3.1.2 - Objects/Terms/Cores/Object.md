@@ -94,6 +94,11 @@ let bag = {
 delete person.isStudent;
 ```
 
+- `delete obj.prop` removes the property from the object.
+- Returns `true` if successful.
+- Does **not** affect prototype properties.
+- Slower than setting `prop = undefined`, but actually **removes the key**.
+
 ---
 
 ### **🔁 Looping Through Properties**

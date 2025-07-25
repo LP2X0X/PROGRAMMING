@@ -34,6 +34,16 @@ Symbol's description (also called a symbol name), mostly useful for debugging pu
 
 ---
 
+### 💡 Why use Symbols?
+
+1. **Avoid name clashes** — if many people add stuff to the same object, Symbols prevent stepping on each other's toes.
+    
+2. **Hide things** — Symbols are **not shown in for...in loops** or `Object.keys()`.
+    
+3. **Special behaviors** — JavaScript uses built-in Symbols for special things (like `Symbol.iterator` to make objects iterable).
+
+---
+
 ### 📦 Use Case: Unique Object Keys
 
 ```js
@@ -49,6 +59,10 @@ console.log(user[id]); // 123
 
 - The `id` property is **hidden from loops** and won't show up in `Object.keys()` or `for...in`.
     
+
+```ad-note
+You **must use bracket notation** to assign/read a symbol-keyed property.
+```
 
 ---
 

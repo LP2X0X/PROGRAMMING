@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Array Methods]]
+- **[[Array Methods]]**
 - [[Array]]
 
 %% End Waypoint %%

@@ -12,7 +12,11 @@ let fruits = ["apple", "banana", "cherry"];
 
 - Arrays are **ordered** (elements have indexes).
 - Elements can be **any type**: strings, numbers, booleans, objects, even other arrays!
-- Array can contain mixed type elements.
+- Array **can contain mixed type elements**.
+
+```ad-important
+Negative indexes **don’t work with bracket access** (`arr[-1]` gives `undefined`), but **do work in some [[Array Methods|array methods]]**.
+```
 
 ---
 
