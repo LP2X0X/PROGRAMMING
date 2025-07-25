@@ -12,6 +12,21 @@ let fruits = ["apple", "banana", "cherry"];
 
 - Arrays are **ordered** (elements have indexes).
 - Elements can be **any type**: strings, numbers, booleans, objects, even other arrays!
+- Array can contain mixed type elements.
+
+---
+
+### ⚠️ Arrays Are Objects!
+
+```js
+typeof [1, 2, 3]; // "object"
+```
+
+So arrays **inherit** from `Array.prototype` and get many built-in methods.
+
+```ad-important
+This mean that it is a reference type.
+```
 
 ---
 
@@ -127,16 +142,6 @@ a.slice(1);      // ["b", "c"]
 a.splice(1, 1);  // ["a", "c"]
 a.join("-");     // "a-b-c"
 ```
-
----
-
-### ⚠️ Arrays Are Objects!
-
-```js
-typeof [1, 2, 3]; // "object"
-```
-
-So arrays **inherit** from `Array.prototype` and get many built-in methods.
 
 ---
 

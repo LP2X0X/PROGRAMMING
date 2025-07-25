@@ -1,4 +1,4 @@
-# Compound Overview
+# Arrays Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Arrays]]**
-- [[Untitled]]
+- [[Array Methods]]
+- [[Array]]
 
 %% End Waypoint %%
