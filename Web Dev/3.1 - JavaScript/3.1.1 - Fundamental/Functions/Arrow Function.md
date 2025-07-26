@@ -55,6 +55,15 @@ const sum = (a, b) => {
 console.log(sum(10, 20)); // 30
 ```
 
+5. **Return object**:
+```javascript
+(user) => ({ name: "John" })
+```
+
+```ad-note
+You need to wrap the object literal in **parentheses `()`** when using arrow functions because without the parentheses, JavaScript thinks the curly braces `{}` mean a **function body**, not an object.
+```
+
 ---
 
 ### 🔥 **Arrow Functions and `this`**

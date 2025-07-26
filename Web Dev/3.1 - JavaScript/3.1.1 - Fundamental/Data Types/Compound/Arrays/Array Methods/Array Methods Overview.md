@@ -15,10 +15,11 @@ function callback(item, index, array) { ... }
 
 1. **Add/Remove Elements**: `push()`, `pop()`, `shift()`, `unshift()`
 2. **Transform**: `map()`, `filter()`, `reduce()`
-3. **Search**: `find()`, `indexOf()`, `includes()`
-4. **Sort/Reverse**: `sort()`, `reverse()`
-5. **Check Conditions**: `every()`, `some()`
-6. **Iterate**: `forEach()`
+3. **Modifying/Extract**: `splice()`, `slice()`
+4. **Search**: `find()`, `indexOf()`, `includes()`
+5. **Sort/Reverse**: `sort()`, `reverse()`
+6. **Check Conditions**: `every()`, `some()`
+7. **Iterate**: `forEach()`
 
 ----
 
