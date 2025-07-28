@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[Expression]]
 - [[Reference]]
 - [[Shadowing]]
-- [[Statement]]
+- [[RUST/1 - Fundamental Concepts/Terms/Statement]]
 - [[Type Annotation]]
 - [[Variable Scope]]
 

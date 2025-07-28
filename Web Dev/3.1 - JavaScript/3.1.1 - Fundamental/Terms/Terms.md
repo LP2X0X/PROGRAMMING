@@ -7,13 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Iterables]]
-- [[label]]
-- [[Polyfills]]
-- [[Statement]]
-- [[The script tag]]
-- [[Transpilers]]
-- [[Truthiness]]
-- [[Variable]]
+- **[[Important]]**
+- **[[Miscellaneous]]**
 
 %% End Waypoint %%

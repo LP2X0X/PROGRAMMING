@@ -1,3 +1,7 @@
+---
+tags: js, term, fundamental
+---
+
 An **array-like object** in JavaScript is an object that **resembles an array** but **does not inherit** from the `Array.prototype`. These objects have indexed elements and a `length` property but lack array methods like `.push()`, `.pop()`, etc.
 
 ---
@@ -119,5 +123,3 @@ Use `Array.from()` or `Array.prototype.slice.call()` when you need to:
 
 - Use array methods like `map()`, `filter()`, etc.
 - Perform more complex operations on the collection.
-
-Would you like to dive deeper into specific array-like cases or conversion tricks?
