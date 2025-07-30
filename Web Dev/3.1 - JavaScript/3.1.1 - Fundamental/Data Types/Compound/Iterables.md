@@ -33,6 +33,21 @@ const obj = {
 
 ---
 
+### ✅ Common Iterable Types:
+
+- **Array**
+- **String**
+- **Map**
+- **Set**
+- **TypedArray** (e.g. `Uint8Array`)
+- **arguments** object
+- **DOM collections** (like `NodeList`)
+- **Custom objects with `[Symbol.iterator]()`**
+
+> ❌ `Object` (plain `{}`) is **not** iterable by default.
+
+---
+
 ### ✅ Basic Custom Iterable Example
 
 ```js
@@ -167,3 +182,7 @@ for (let val of myIterable) {
 	
 	alert(arr); // 1,4,9,16,25
 	```
+
+---
+
+### Iterables know about multip

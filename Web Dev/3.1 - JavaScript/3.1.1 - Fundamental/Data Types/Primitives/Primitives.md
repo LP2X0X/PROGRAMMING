@@ -12,7 +12,7 @@ type: folder_brief_live
 - [[null vs undefined]]
 - **[[Numbers]]**
 - [[Primitive]]
-- [[String]]
+- **[[Strings]]**
 - [[Symbol]]
 - [[Template Literal]]
 
