@@ -70,7 +70,7 @@ let {height, width, title} = { title: "Menu", height: 200, width: 100 }
 	alert(width);  // 100
 	alert(height); // 200
 	```
-- Just like with arrays or function parameters, default values can be any expressions or even function calls. They will be evaluated if the value is not provided.
+- Just like with arrays or function parameters, default values can be any expressions or even function calls. They will be evaluated **if the value is not provided**.
 - In the code below `prompt` asks for `width`, but not for `title`:
 	```js
 	let options = {

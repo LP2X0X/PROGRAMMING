@@ -15,7 +15,6 @@ type: folder_brief_live
 	- **[[3.1.0 - General]]**
 	- **[[3.1.1 - Fundamental]]**
 	- **[[3.1.2 - Objects]]**
-	- **[[Destructuring]]**
 	- **[[Functions]]**
 	- [[JavaScript]]
 	- **[[Object]]**

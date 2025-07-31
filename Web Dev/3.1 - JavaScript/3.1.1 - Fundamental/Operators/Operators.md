@@ -7,11 +7,13 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- [[Comma]]
 - **[[Equality Comparison]]**
 - **[[Logical Operators]]**
 - [[Math operators]]
 - [[null coalescing operator]]
 - [[Operator Precedence]]
+- [[Spread Operator]]
 - [[typeof]]
 
 %% End Waypoint %%

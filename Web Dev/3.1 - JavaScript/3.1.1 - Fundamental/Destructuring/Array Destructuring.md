@@ -32,7 +32,7 @@ tags: js, destructuring, array, fundamental
 
 ---
 
-#### Swap variables trick
+#### Swap variables trick (*only for array destructuring*)
 
 - There’s a well-known trick for swapping values of two variables using a destructuring assignment:
 	```javascript
@@ -48,7 +48,7 @@ tags: js, destructuring, array, fundamental
 
 ---
 
-#### Default values
+#### Absent values
 
 - If the array is shorter than the list of variables on the left, there will be no errors. Absent values are considered undefined:
 	```js
@@ -57,6 +57,11 @@ tags: js, destructuring, array, fundamental
 	alert(firstName); // undefined
 	alert(surname); // undefined
 	```
+
+---
+
+#### Default values
+
 - If we want a “default” value to replace the missing one, we can provide it using `=`:
 	```js
 	// default values
