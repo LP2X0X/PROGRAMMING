@@ -5,7 +5,8 @@ tags: react, term, fundamental
 ### 🔷 What Is **State** in React?
 
 - In React, **state** is a **built-in object** that stores data **specific to a component** and controls how that component **behaves or appears**.
-- When state changes, React automatically **re-renders** the component to reflect the new data.
+- When state changes (useState), React **re-render** the component that owns that state.
+- If that state is passed as a prop to child components, those children are **also re-rendered**.
 
 ![[Screenshot 2025-07-14 at 19.30.24.png|center|500]]
 

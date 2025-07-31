@@ -95,9 +95,28 @@ If you want to change values, use **state** instead.
 
 ---
 
-### **✅ Passing Children with** 
+### **✅ Passing function as prop**
 
-### **props.children**
+You usually do this when you want to pass some set state method:
+
+```jsx
+export default function BillInput({ bill, setBill }) {
+  return (
+    <div className="billInput">
+      <p>How much was the bill?</p>
+      <input
+        type="number"
+        value={bill}
+        onChange={(e) => setBill(e.target.value)} // Pass in the value of the target of event
+      ></input>
+    </div>
+  );
+}
+```
+
+---
+
+### **✅ Passing Children with props.children**
 
 ```jsx
 function Card({ children }) {
