@@ -13,7 +13,7 @@ type: folder_brief_live
 - [[Finding and Searching]]
 - [[Iterating, Filtering and Transforming]]
 - [[Joining and Splitting]]
-- [[Modifying]]
+- [[Modifying in place and Extract]]
 - [[Sorting and Reversing]]
 
 %% End Waypoint %%

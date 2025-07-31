@@ -8,9 +8,9 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[do while]]
+- [[for in]]
 - [[for of]]
 - [[for]]
-- [[Untitled]]
 - [[while]]
 
 %% End Waypoint %%

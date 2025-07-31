@@ -9,5 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Method]]
 - [[Object.assign()]]
+- [[Object.keys() - Object.values() - Object.entries()]]
 
 %% End Waypoint %%

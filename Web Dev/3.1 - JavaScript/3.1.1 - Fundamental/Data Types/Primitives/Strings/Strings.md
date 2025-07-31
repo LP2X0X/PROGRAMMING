@@ -1,4 +1,4 @@
-# Keywords Overview
+# Strings Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[for in]]
+- [[String Methods]]
+- [[String]]
 
 %% End Waypoint %%

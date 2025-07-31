@@ -1,4 +1,4 @@
-# Terms Overview
+# Important Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Important]]**
-- **[[Miscellaneous]]**
+- [[label]]
+- [[thisArg]]
+- [[Truthiness]]
 
 %% End Waypoint %%

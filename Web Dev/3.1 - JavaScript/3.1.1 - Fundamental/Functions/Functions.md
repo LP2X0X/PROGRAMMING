@@ -10,7 +10,8 @@ type: folder_brief_live
 - [[Arrow Function]]
 - [[Callback]]
 - [[Function Expression]]
-- [[Web Dev/3.1 - JavaScript/3.1.1 - Fundamental/Functions/Function]]
+- [[Function]]
+- [[Immediately Invoked Function Expression (IIFE)]]
 - **[[Interaction Functions]]**
 
 %% End Waypoint %%
