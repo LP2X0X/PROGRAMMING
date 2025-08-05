@@ -7,6 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Attribute]]
+- [[Web Dev/1 - HTML/Attributes/Attribute]]
 
 %% End Waypoint %%

@@ -4,10 +4,12 @@ tags: html, term, fundamental
 
 # **🔍 What is the DOM?**
 
-The DOM (Document Object Model) is a programming interface provided by browsers that represents an HTML (or XML) document as a structured tree of objects.
-
+- The DOM (Document Object Model) is a programming interface provided by browsers that represents an HTML (or XML) document as a structured tree of objects.
+</br>
 - Think of it as a live representation of your webpage.
 - It lets programming languages like JavaScript interact with and manipulate the document’s content, structure, and styling.
+</br>
+- As the browser parses HTML, it creates a JavaScript object for every element and section of text encountered. These objects are called nodes—element nodes and text nodes, respectively.
 
 ---
 

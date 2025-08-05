@@ -7,10 +7,11 @@ type: folder_brief_live
 --- 
 
 %% Begin Waypoint %%
-- [[Web Dev/1 - HTML/Terms/DOM]]
-- [[Elements]]
-- [[Tags]]
-- [[Void Element]]
+- [[Attribute]]
+- [[DOM]]
+- [[Element]]
+- [[Semantic]]
+- [[Tag]]
 - [[XHTML]]
 
 %% End Waypoint %%

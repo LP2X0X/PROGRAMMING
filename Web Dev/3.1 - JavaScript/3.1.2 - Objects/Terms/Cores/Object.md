@@ -86,6 +86,21 @@ let bag = {
 };
 ```
 
+- Also, here's **object property shorthand**:
+
+```js
+const name = "Alice";
+const age = 25;
+
+const person = {
+  name,
+  age,
+};
+
+console.log(person);
+// Output: { name: "Alice", age: 25 }
+```
+
 ---
 
 ### **❌ Deleting Properties**
