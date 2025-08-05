@@ -8,7 +8,7 @@ In JavaScript, **"the rest"** typically refers to the **rest syntax** (`...`) us
 
 ### ✅ 1. **Rest Parameters (Functions)**
 
-Used to gather **remaining arguments** into an array:
+Used to gather **remaining arguments** into an **array**:
 
 ```js
 function sum(...numbers) {
@@ -18,7 +18,7 @@ function sum(...numbers) {
 sum(1, 2, 3); // 6
 ```
 
-Here, `...numbers` is the rest parameter.
+Here, `...numbers` is the rest parameter. It **must be at the end**.
 
 ---
 

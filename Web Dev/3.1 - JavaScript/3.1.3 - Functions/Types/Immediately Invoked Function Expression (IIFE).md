@@ -1,3 +1,7 @@
+---
+tags: js, term, fundamental
+---
+
 - An [Immediately Invoked Function Expression (IIFE)](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) is a code pattern that directly calls a function defined as an expression. It’s commonly used to create a local scope and avoid polluting the global namespace.
 
 ---

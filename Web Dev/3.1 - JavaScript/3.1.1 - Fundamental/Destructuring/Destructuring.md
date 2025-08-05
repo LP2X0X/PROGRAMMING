@@ -12,6 +12,5 @@ type: folder_brief_live
 - [[Destructuring with loop]]
 - [[Nested Destructuring]]
 - [[Object Destructuring]]
-- [[The rest `...`]]
 
 %% End Waypoint %%

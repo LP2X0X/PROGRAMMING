@@ -1,4 +1,4 @@
-# Functions Overview
+# Types Overview
  
 ```ccard
 type: folder_brief_live
@@ -10,8 +10,8 @@ type: folder_brief_live
 - [[Arrow Function]]
 - [[Callback]]
 - [[Function Expression]]
-- [[Function]]
+- [[Function Object]]
 - [[Immediately Invoked Function Expression (IIFE)]]
-- **[[Interaction Functions]]**
+- [[Named Function Expression]]
 
 %% End Waypoint %%

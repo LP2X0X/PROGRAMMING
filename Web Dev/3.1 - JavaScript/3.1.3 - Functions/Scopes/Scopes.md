@@ -1,4 +1,4 @@
-# Functions Overview
+# Scopes Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,10 +7,12 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Closures]]
-- [[Functions overview]]
+- [[Closure]]
+- [[Code block]]
 - [[Functions scopes]]
-- [[Name conflicts]]
+- [[Lexical Environment]]
+- [[Name Conflicts]]
+- [[Nested functions]]
 - [[Scope chaining]]
 
 %% End Waypoint %%
