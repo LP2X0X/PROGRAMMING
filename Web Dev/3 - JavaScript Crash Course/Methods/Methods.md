@@ -11,8 +11,6 @@ type: folder_brief_live
 - [[Arrays Methods]]
 - [[canvas Methods]]
 - **[[document]]**
-- [[JSON.parse]]
-- [[JSON.stringify]]
 - [[Objects Methods]]
 
 %% End Waypoint %%

@@ -11,10 +11,10 @@ type: folder_brief_live
 - **[[Debug]]**
 - **[[Errors]]**
 - **[[Expressions]]**
-- **[[Functions]]**
+- **[[C++/1 - Basic C++/Terms/Functions/Functions]]**
 - **[[Initialization Types]]**
 - **[[Operators]]**
 - **[[Others]]**
-- **[[Scopes]]**
+- **[[C++/1 - Basic C++/Terms/Scopes/Scopes]]**
 
 %% End Waypoint %%

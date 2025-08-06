@@ -1,5 +1,5 @@
 ---
-tags: js, term, fundamental
+tags: js, function, fundamental
 ---
 
 - An **arrow function** is a more compact version of a [[Function Expression|function expression]]. They were introduced in **ES6 (ECMAScript 2015)** and are especially useful for short and anonymous functions.

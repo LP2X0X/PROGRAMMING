@@ -8,6 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Array-like Objects]]
+- [[Global Object]]
 - [[Object Literal]]
 - [[Object]]
 

@@ -7,6 +7,14 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Web Dev/1 - HTML/Attributes/Attribute]]
+- [[Attribute Overview]]
+- [[class]]
+- [[contenteditable]]
+- [[Custom Attribute]]
+- [[for]]
+- [[id]]
+- [[role]]
+- [[style]]
+- [[tabindex]]
 
 %% End Waypoint %%

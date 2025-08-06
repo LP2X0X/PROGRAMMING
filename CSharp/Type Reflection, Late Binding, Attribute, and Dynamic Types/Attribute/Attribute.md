@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[AllowMultiple]]
 - **[[Assembly-Level Attributes]]**
-- [[Attribute Overview]]
+- [[CSharp/Type Reflection, Late Binding, Attribute, and Dynamic Types/Attribute/Attribute Overview]]
 - [[AttributeUsage]]
 - [[Built-in Attributes]]
 - [[Custom Attributes]]

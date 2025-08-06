@@ -13,7 +13,7 @@ type: folder_brief_live
 - [[Math operators]]
 - [[null coalescing operator]]
 - [[Operator Precedence]]
-- [[Spread Operator]]
+- **[[Spread and Rest]]**
 - [[typeof]]
 
 %% End Waypoint %%
