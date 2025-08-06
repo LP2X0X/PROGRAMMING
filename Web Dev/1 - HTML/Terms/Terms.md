@@ -7,8 +7,9 @@ type: folder_brief_live
 --- 
 
 %% Begin Waypoint %%
-- [[Web Dev/1 - HTML/Terms/DOM]]
+- [[DOM]]
 - [[Elements]]
+- [[Link Fragment Identifier]]
 - [[Tags]]
 - [[Void Element]]
 - [[XHTML]]

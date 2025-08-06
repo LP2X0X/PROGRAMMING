@@ -10,6 +10,7 @@ type: folder_brief_live
 - **[[Attributes]]**
 - **[[Elements]]**
 - **[[Notes]]**
+- [[Semantic HTML]]
 - **[[Terms]]**
 
 %% End Waypoint %%

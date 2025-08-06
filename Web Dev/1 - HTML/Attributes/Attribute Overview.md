@@ -1,5 +1,9 @@
 ---
-tags: html, term, fundamental
+tags:
+  - html
+  - term
+  - fundamental
+  - summary
 ---
 
 - HTML tags often come with **attributes** that provide additional information or functionality. HTML attributes are very similar to these object methods. Each HTML tag (`p`, `div`, `img`, etc.) has a set of element attributes that can be used on them to modify their behavior and styling. There are also a set of global attributes that can be used on ALL HTML tags.

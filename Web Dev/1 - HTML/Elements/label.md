@@ -14,7 +14,7 @@ In HTML and JavaScript, a label is used to provide a user-friendly description 
 ```
 
 - The for attribute in label must match the id of the input element.
-- Clicking the label will focus the associated input field — very useful for UX.
+- Clicking the label **will focus the associated** input field — very useful for UX.
 
 ---
 

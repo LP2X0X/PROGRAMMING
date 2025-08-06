@@ -12,6 +12,5 @@ type: folder_brief_live
 - [[Element vs Tag]]
 - [[Miscellaneous]]
 - [[Nested Layout Technique]]
-- [[Semantic HTML]]
 
 %% End Waypoint %%
