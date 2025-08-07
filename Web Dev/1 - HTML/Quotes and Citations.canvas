@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"d0e2e7ddb6431212","type":"text","text":"### 1. ✅ **Inline Quotes: `<q>`**\n\nUse for short, inline quotations.\n\n```html\n<p>She said, <q>HTML is awesome!</q></p>\n```\n\n* Automatically adds quotation marks (\"\"), depending on browser and locale.","x":833,"y":-202,"width":687,"height":202},
+		{"id":"5450da7d90c54e2e","type":"text","text":"### 2. ✅ **Block Quotes: `<blockquote>`**\n\nUse for longer or multi-line quotes.\n\n```html\n<blockquote cite=\"https://developer.mozilla.org\">\n  HTML (HyperText Markup Language) is the standard language for documents designed to be displayed in a web browser.\n</blockquote>\n```\n\n* Can use the `cite` attribute to specify the source URL (optional, not visible).\n","x":833,"y":97,"width":687,"height":280},
+		{"id":"1f2dd2c5bcbf55bf","type":"text","text":"\n### 3. ✅ **Citation: `<cite>`**\n\nUse to cite the **title of a work** (e.g., books, articles, websites, songs).\n\n```html\n<p>Read <cite>Understanding HTML</cite> by Jane Doe.</p>\n```\n\n* *Do not* use `<cite>` for the person’s name — it's for **works**, not **authors**.","x":833,"y":480,"width":687,"height":200},
+		{"id":"23a2960b91623dff","type":"text","text":"### 4. ✅ **Source URL: `cite` Attribute**\n\nUsed on `<blockquote>`, `<q>`, or `<del>` to provide the source of the quote.\n\n```html\n<q cite=\"https://w3.org\">The web is for everyone.</q>\n```","x":833,"y":804,"width":687,"height":196},
+		{"id":"62d125b22dbb1f08","type":"text","text":"\n### 5. ✅ **Abbreviations (Optional but related): `<abbr>`**\n\nNot a quote, but often used with citations for clarity.\n\n```html\n<abbr title=\"World Health Organization\">WHO</abbr>\n```","x":833,"y":1120,"width":687,"height":233},
+		{"id":"2431184a93ffb4d6","type":"text","text":"### 📝 Quotes and Citations in HTML — Quick Guide\n\nHTML provides specific elements for marking up **quotations** and **citations** to improve semantic meaning and accessibility.\n\n### Summary Table\n\n| Element        | Purpose                        |\n| -------------- | ------------------------------ |\n| `<q>`          | Inline quotation               |\n| `<blockquote>` | Block-level quotation          |\n| `<cite>`       | Cited title of a creative work |\n| `cite=\"\"`      | Source URL of a quote          |\n| `<abbr>`       | Abbreviation with a tooltip    |\n","x":-240,"y":377,"width":840,"height":407}
+	],
+	"edges":[
+		{"id":"69a105d7f50c5700","fromNode":"2431184a93ffb4d6","fromSide":"right","toNode":"d0e2e7ddb6431212","toSide":"left"},
+		{"id":"3ac9912f0810eac7","fromNode":"2431184a93ffb4d6","fromSide":"right","toNode":"5450da7d90c54e2e","toSide":"left"},
+		{"id":"c489d55a9c19ae88","fromNode":"2431184a93ffb4d6","fromSide":"right","toNode":"1f2dd2c5bcbf55bf","toSide":"left"},
+		{"id":"2a9a6635b4534fbd","fromNode":"2431184a93ffb4d6","fromSide":"right","toNode":"23a2960b91623dff","toSide":"left"},
+		{"id":"08cf892e687dc2c0","fromNode":"2431184a93ffb4d6","fromSide":"right","toNode":"62d125b22dbb1f08","toSide":"left"}
+	]
+}

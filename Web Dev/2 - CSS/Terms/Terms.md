@@ -11,7 +11,6 @@ type: folder_brief_live
 - [[CSS Grid Technique]]
 - [[CSS Selector Types]]
 - [[CSS Specificity]]
-- [[Entity]]
 - [[Flexbox]]
 - [[Pseudo Elements and Classes]]
 - [[Psuedo Class]]
