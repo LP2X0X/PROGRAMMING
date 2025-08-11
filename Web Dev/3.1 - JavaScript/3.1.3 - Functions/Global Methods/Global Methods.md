@@ -1,4 +1,4 @@
-# Functions Overview
+# Global Methods Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Constructor Function]]
-- [[structuredClone()]]
+- [[setInterval]]
+- [[setTimeout]]
 
 %% End Waypoint %%

@@ -126,7 +126,7 @@ If a variable is not found anywhere, that’s an error in strict mode (without `
 ### Garbage collection
 
 - Usually, a Lexical Environment is removed from memory with all the variables after the function call finishes. That’s because there are no references to it. As any JavaScript object, it’s only kept in memory while it’s reachable.
-- However, if there’s a nested function that is still reachable after the end of a function, then it has `[[Environment]]` property that references the lexical environment.
+- **However, if there’s a nested function that is still reachable after the end of a function, then it has `[[Environment]]` property that references the lexical environment.**
 - In that case the Lexical Environment is still reachable even after the completion of the function, so it stays alive.
 
 </br>

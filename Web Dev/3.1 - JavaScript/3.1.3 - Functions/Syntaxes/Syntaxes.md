@@ -1,4 +1,4 @@
-# Functions Overview
+# Syntaxes Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Constructor Function]]
-- [[structuredClone()]]
+- [[new Function]]
 
 %% End Waypoint %%

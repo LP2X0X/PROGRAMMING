@@ -67,7 +67,7 @@ You need to wrap the object literal in **parentheses `()`** when using arrow fun
 ---
 
 ### 🔥 **Arrow Functions and `this`**
-Arrow functions do **not** bind their own `this`. Instead, they capture the `this` value from their surrounding lexical scope.
+Arrow functions do **not** bind their own `this`. Instead, they capture the `this` value from their surrounding [[Lexical Environment|lexical scope]].
 
 Example:
 
