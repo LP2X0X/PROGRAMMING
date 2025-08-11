@@ -6,7 +6,7 @@ type: folder_brief_live
  
 %% Begin Waypoint %%
 - **[[Encapsulation]]**
-- **[[Inheritance]]**
+- **[[CSharp/OOP/Pillars of OOP/Inheritance/Inheritance]]**
 - **[[Polymorphic]]**
 - [[Role of Encapsulation]]
 - [[Role of Inheritance]]

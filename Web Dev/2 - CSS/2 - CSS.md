@@ -7,6 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- **[[1 - Fundamentals]]**
+- **[[File name]]**
 - **[[Keywords]]**
 	- [[!important]]
 - **[[Notes]]**

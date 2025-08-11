@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[AFTER]]**
-- **[[BEFORE]]**
+- **[[Web Dev/React/AFTER/AFTER]]**
+- **[[Web Dev/React/BEFORE/BEFORE]]**
 
 %% End Waypoint %%

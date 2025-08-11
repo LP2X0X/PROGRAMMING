@@ -9,6 +9,6 @@ type: folder_brief_live
 - [[Implementation-defined]]
 - [[Log]]
 - [[RAM]]
-- [[Value]]
+- [[C++/1 - Basic C++/Terms/Others/Value]]
 
 %% End Waypoint %%

@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Box Model]]
 - [[CSS Grid Technique]]
 - [[CSS Selector Types]]
 - [[CSS Specificity]]
