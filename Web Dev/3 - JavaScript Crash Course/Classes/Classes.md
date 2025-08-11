@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Class]]
+- [[Web Dev/3 - JavaScript Crash Course/Classes/Class]]
 - [[Object.prototype]]
 - [[Prototype chain]]
 - [[Prototype-Based Inheritance]]

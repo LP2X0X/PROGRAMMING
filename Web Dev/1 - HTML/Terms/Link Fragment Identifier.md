@@ -37,8 +37,9 @@ Clicking this link scrolls the page to the element with `id="contact"`.
 ```
 
 - The fragment (`#team`) scrolls to `id="team"` on `about.html`.
-    
-- The browser gives us a free "top of page" link. Setting `href="#top"`, case-insensitive, or simply `href="#"`, will scroll the user to the top of the page.
+```ad-note
+The browser gives us a free "top of page" link. Setting `href="#top"`, case-insensitive, or simply `href="#"`, will scroll the user to the top of the page.
+```
 
 ---
 

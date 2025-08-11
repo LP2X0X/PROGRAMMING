@@ -9,7 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[align-items]]
 - [[box-shadow]]
-- [[box-sizing]]
 - [[display]]
 - [[flex-shrink]]
 - [[justify-content]]

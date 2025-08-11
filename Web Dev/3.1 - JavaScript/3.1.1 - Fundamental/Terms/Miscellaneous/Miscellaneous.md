@@ -7,6 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- [[Minifier]]
 - [[Polyfills]]
 - [[Statement]]
 - [[The script tag]]
