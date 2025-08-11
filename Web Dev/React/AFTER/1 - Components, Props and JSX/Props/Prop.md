@@ -57,14 +57,15 @@ function Info({ name, age }) {
 
 ### **✅ Props Can Be Any Type**
 
-|**Type**|**Example**|
-|---|---|
-|String|\<Card title="Hello" />|
-|Number|\<Counter value={5} />|
-|Boolean|\<Modal isOpen={true} />|
-|Array|\<List items={[1, 2, 3]} />|
-|Object|\<User data={{ id: 1, name: "A" }} />|
-|Function|\<Button onClick={handleClick} />|
+| **Type** | **Example**                           |
+| -------- | ------------------------------------- |
+| String   | \<Card title="Hello" />               |
+| Number   | \<Counter value={5} />                |
+| Boolean  | \<Modal isOpen={true} />              |
+| Array    | \<List items={[1, 2, 3]} />           |
+| Object   | \<User data={{ id: 1, name: "A" }} /> |
+| Function | \<Button onClick={handleClick} />     |
+| Jsx      |\<Card content={\<strong>This is bold text\</strong>} />|
 
 ---
 
@@ -129,3 +130,22 @@ function Card({ children }) {
   <p>Content here</p>
 </Card>
 ```
+
+--- 
+
+### **✅ Explicitly defined props**
+```jsx
+function Card({ content }) {
+  return <div className="card">{content}</div>;
+}
+
+function App() {
+  return (
+    <Card content={<strong>This is bold text</strong>} />
+  );
+}
+```
+- Here:
+	- content is a **prop**.
+	- The value \<strong>This is bold text\</strong> is **JSX** that gets passed as that prop’s value.
+	- Inside Card, that JSX is rendered exactly where {content} appears.

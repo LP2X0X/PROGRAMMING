@@ -1,4 +1,4 @@
-# Terms Overview
+# 4 - How React Works Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Basic]]**
+- [[Component vs Instance vs Element]]
 
 %% End Waypoint %%

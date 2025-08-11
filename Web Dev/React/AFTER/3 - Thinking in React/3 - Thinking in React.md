@@ -7,8 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Derived State]]
-- [[State Management]]
+- [[Component Categories]]
+- [[Components, Composition and Reusability]]
 - [[Thinking in React]]
 
 %% End Waypoint %%

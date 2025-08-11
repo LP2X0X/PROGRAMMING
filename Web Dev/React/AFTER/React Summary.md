@@ -175,7 +175,3 @@ npm run dev
 🧠 In One Sentence:
 
 React is a powerful, declarative JavaScript library for building modern, fast, dynamic user interfaces—based around reusable components and scalable state management.
-
-—
-
-Let me know if you'd like a full cheat sheet, advanced topics (like memoization, concurrency, custom hooks), or help learning through projects!
