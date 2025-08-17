@@ -10,5 +10,6 @@ type: folder_brief_live
 - [[Borrowing Methods]]
 - [[Function]]
 - [[The `arguments` variable]]
+- [[Transparent Caching]]
 
 %% End Waypoint %%

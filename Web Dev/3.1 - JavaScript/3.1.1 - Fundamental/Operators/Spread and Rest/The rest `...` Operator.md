@@ -34,11 +34,28 @@ console.log(rest);  // [2, 3, 4]
 
 ### ✅ 3. **Rest with Objects (Destructuring)**
 
-```js
-const { name, ...info } = { name: "Alice", age: 25, city: "Seoul" };
-console.log(name); // "Alice"
-console.log(info); // { age: 25, city: "Seoul" }
-```
+- When destructuring **objects**, the variable names on the left **must match the property keys** exactly (unless you use aliasing with `:`).
+	```js
+	const obj = { foo: 1, bar: 2 };
+	
+	// Must match keys exactly
+	const { foo } = obj; // ✅ works
+	const { Foo } = obj; // ❌ undefined (case-sensitive)
+	
+	// You can alias
+	const { foo: myVar } = obj; // ✅ myVar = 1
+	```
+
+- When destructuring **arrays**, you don’t match by name — you match **by position**:
+	```js
+	const arr = [10, 20];
+	const [a] = arr;   // a = 10
+	const [, b] = arr; // b = 20
+	```
+
+- So:
+	- **Objects → match by property name** (case-sensitive).
+	- **Arrays → match by index position**.
 
 ---
 
