@@ -27,14 +27,26 @@ tags: js, datatype, fundamental
 	alert( map.size ); // 3
 	```
 
-```js
-const map = new Map([
-  ["key1", "value1"],
-  ["key2", "value2"],
-]);
+	```js
+	const map = new Map([
+	  ["key1", "value1"],
+	  ["key2", "value2"],
+	]);
+	
+	console.log(map.get("key1")); // "value1"
+	```
 
-console.log(map.get("key1")); // "value1"
+----
+
+### Gotcha: How `Map` compares keys
+
+- To test keys for equivalence, `Map` uses the algorithm [SameValueZero](https://tc39.github.io/ecma262/#sec-samevaluezero). **It is roughly the same as strict equality `===`**, but the difference is that `NaN` is considered equal to `NaN`. So `NaN` can be used as the key as well.
+
+```ad-important
+When you store **non-primitive values** (objects, arrays, functions) as `Map` keys, JavaScript compares them **by reference**, not by content.
 ```
+
+- This algorithm can’t be changed or customized.
 
 ----
 

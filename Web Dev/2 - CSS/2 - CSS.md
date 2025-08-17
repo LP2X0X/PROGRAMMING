@@ -14,6 +14,7 @@ type: folder_brief_live
 - **[[Notes]]**
 - **[[Properties]]**
 - **[[Responsive Design]]**
+- **[[Selectors]]**
 - **[[Terms]]**
 
 %% End Waypoint %%
