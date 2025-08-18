@@ -2,7 +2,7 @@
 tags: html, term, fundamental
 ---
 
-- An element is a complete structure consisting of an opening tag, content, and a closing tag. You use element to enclose, or wrap, different parts of the content to make it appear or act in a certain way.
+- An **element** is a complete structure consisting of an opening tag, content, and a closing tag. You use element to enclose, or wrap, different parts of the content to make it appear or act in a certain way.
 ![[Pasted image 20250804200322.png|500|center]]
 
 ---
@@ -53,6 +53,8 @@ Non-replaced elements **render exactly as defined in HTML** — their content co
 ```
 
 > These elements are *not* replaced by external data. They contain and render their own child elements or text.
+
+---
 
 ### 🧠 Summary Table
 

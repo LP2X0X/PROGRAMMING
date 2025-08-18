@@ -9,6 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Notes]]**
 - **[[Techniques]]**
-- **[[Web Dev/React/2 - State, Event and Forms Interactive Components/Terms/Terms]]**
+- **[[Terms]]**
 
 %% End Waypoint %%

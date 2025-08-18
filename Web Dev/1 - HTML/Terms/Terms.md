@@ -10,6 +10,7 @@ type: folder_brief_live
 - [[Attribute]]
 - [[DOM]]
 - [[Element]]
+- [[HTML]]
 - [[HTML's Entity]]
 - [[Link Fragment Identifier]]
 - [[Semantic]]

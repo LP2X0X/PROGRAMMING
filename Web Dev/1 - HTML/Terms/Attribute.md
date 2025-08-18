@@ -9,7 +9,7 @@ In HTML, an **attribute** provides **additional information** about an element. 
 
 ### **✅ Basic Structure**
 
-```
+```html
 <tagname attributeName="value">Content</tagname>
 ```
 
@@ -17,7 +17,7 @@ In HTML, an **attribute** provides **additional information** about an element. 
 
 ### **✅ Examples**
 
-```
+```html
 <a href="https://example.com">Visit site</a>  <!-- href is the attribute -->
 <img src="image.jpg" alt="An image">         <!-- src and alt are attributes -->
 <input type="text" placeholder="Enter name"> <!-- type and placeholder -->
@@ -39,7 +39,7 @@ In HTML, an **attribute** provides **additional information** about an element. 
 
 ### **🧠 Example with Multiple Attributes**
 
-```
+```html
 <input type="email" id="user-email" placeholder="Enter your email" required>
 ```
 

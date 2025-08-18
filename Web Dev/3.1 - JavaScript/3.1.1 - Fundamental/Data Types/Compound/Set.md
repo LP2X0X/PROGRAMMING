@@ -4,6 +4,10 @@ tags: js, datatype, fundamental
 
 In JavaScript, a **`Set`** is a built-in object that lets you store **unique values** of any type — primitive or object references.
 
+```ad-important
+A value cannot be added to a set if it is [[Strict Equality Operator|strictly equal]] to any of the set's elements.
+```
+
 ---
 
 ### 🔹 Key Features of `Set`

@@ -11,6 +11,6 @@ type: folder_brief_live
 - [[2 - Why write Single-Page Application with Vanilla JS so hard]]
 - [[3 - Why we need front-end frameworks]]
 - [[4 - Create-react-app vs Vite]]
-- **[[Web Dev/React/0 - React First Look/Terms/Terms]]**
+- **[[Terms]]**
 
 %% End Waypoint %%
