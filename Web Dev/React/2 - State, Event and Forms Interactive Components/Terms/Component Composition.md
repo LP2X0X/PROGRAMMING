@@ -6,4 +6,4 @@ tags: react, term, fundamental
 
 - **Component composition** means combining different components using the [[The Children Prop|the children prop]] (or [[Prop#**✅ Explicitly defined props**|expliexplicitly defined props]]).
 	- This helps create highly reusable and flexible components.
-	- Also, it fix drop drilling.
+	- Also, it fix [[Prop Drilling|prop drilling]].
