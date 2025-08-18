@@ -117,6 +117,34 @@ const [items, setItems] = useState([]); // array
 
 > The initial value determines the state’s data type.
 
+```jsx
+function MyComponent() {
+  const [count, setCount] = React.useState(); // no default
+  return <p>{count}</p>;
+}
+```
+
+- Here, `count` starts as **`undefined`**.
+- Rendering works fine (React can render `undefined` → it just shows nothing).
+- But if you try `count + 1`, you’ll get **NaN**.
+- If you expect a string or object, operations on it may fail.
+
+✅ Best practice: Always provide a sensible default value in `useState`.
+
+```jsx
+const [count, setCount] = React.useState(0); // number
+const [text, setText] = React.useState("");  // string
+const [items, setItems] = React.useState([]); // array
+const [user, setUser] = React.useState(null); // object that may be absent
+```
+
+```ad-note
+- Why it matters:
+	- Prevents runtime errors (accessing properties of `undefined`).
+	- Makes the component predictable.
+	- Improves readability → you can see expected data types at a glance.
+```
+
 ---
 
 ### 4. **Never Mutate State Directly**

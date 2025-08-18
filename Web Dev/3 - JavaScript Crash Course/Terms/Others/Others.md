@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[CDN]]
 - [[Compound Data Types]]
-- [[Side effect]]
+- [[Web Dev/3 - JavaScript Crash Course/Terms/Others/Side effect]]
 - [[Type Coercion]]
 
 %% End Waypoint %%

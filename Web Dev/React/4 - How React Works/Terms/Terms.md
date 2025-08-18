@@ -14,6 +14,7 @@ type: folder_brief_live
 - [[Render Logic]]
 - [[Render]]
 - [[Renderer]]
+- [[Side Effect]]
 - [[Synthetic Event]]
 - [[Virtual Dom]]
 

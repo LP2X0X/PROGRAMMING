@@ -13,7 +13,7 @@ tags: react, term, advance
 ### Rule
 
 ```ad-important
-- Components (function) must not have any [[Web Dev/3 - JavaScript Crash Course/Terms/Others/Side effect|side effect]] (impure). Given the same props, a component instance should always return the same JSX.
+- Components (function) must not have any [[Web Dev/React/4 - How React Works/Terms/Side Effect|side effect]] (impure). Given the same props, a component instance should always return the same JSX.
 👉 Do **NOT** perform **network requests** (API calls)
 👉 Do **NOT** start **timers**
 👉 Do **NOT** directly **use the DOM API**

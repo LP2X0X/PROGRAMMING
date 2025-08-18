@@ -10,7 +10,7 @@ tags: react, internal, advance
 
 ### Component Instance
 👉 Instances are created when we “use” components
-👉 React internally calls Tab()
+👉 React internally calls component functions.
 👉 Actual **“physical” manifestation** of a component
 👉 Has its own state and props
 👉 Has a **lifecycle** (can “be born”, “live”, and “die”)
@@ -73,7 +73,7 @@ function NavBar() {
 }
 ```
 
-Each instances have their own **state** and **props**, which are properties passed down from parent components. These state and props determine the appearance and behaviour of the instance.
+Each instances have their own **states** and **props**, which are properties passed down from parent components. These state and props determine the appearance and behaviour of the instance.
 
 Unlike components, instances have **lifecycles** representing different stages such as **creation, updating, and destruction**. Instances can be created when needed and destroyed when they are no longer required, helping to manage memory and resources efficiently.
 
