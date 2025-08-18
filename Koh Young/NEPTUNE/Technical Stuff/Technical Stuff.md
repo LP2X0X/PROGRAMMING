@@ -10,7 +10,7 @@ type: folder_brief_live
 - **[[Common Lib]]**
 - **[[CSharp & .NET]]**
 - **[[PRISM Framework]]**
-- **[[Questions]]**
+- **[[Koh Young/NEPTUNE/Technical Stuff/Questions/Questions]]**
 - **[[TCP-IP]]**
 
 %% End Waypoint %%

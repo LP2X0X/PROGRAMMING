@@ -11,10 +11,10 @@ type: folder_brief_live
 - **[[File name]]**
 - **[[Keywords]]**
 	- [[!important]]
-- **[[Notes]]**
+- **[[Web Dev/2 - CSS/Notes/Notes]]**
 - **[[Properties]]**
 - **[[Responsive Design]]**
 - **[[Selectors]]**
-- **[[Terms]]**
+- **[[Web Dev/2 - CSS/Terms/Terms]]**
 
 %% End Waypoint %%

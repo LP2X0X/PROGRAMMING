@@ -6,6 +6,6 @@ type: folder_brief_live
  
 ---
 %% Begin Waypoint %%
-- [[Summary]]
+- [[Koh Young/NEPTUNE/Defect Types/Summary]]
 
 %% End Waypoint %%

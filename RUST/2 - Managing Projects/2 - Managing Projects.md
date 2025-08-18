@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[Keywords]]**
-- **[[Notes]]**
-- **[[Terms]]**
+- **[[RUST/2 - Managing Projects/Notes/Notes]]**
+- **[[RUST/2 - Managing Projects/Terms/Terms]]**
 
 %% End Waypoint %%

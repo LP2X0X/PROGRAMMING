@@ -1,0 +1,74 @@
+{
+	"nodes":[
+		{"id":"3af03471c9650561","type":"text","text":"Updated React Elements","x":560,"y":-28,"width":220,"height":66},
+		{"id":"3c70b3d24e5897f7","type":"text","text":"New [[Virtual Dom]]","x":587,"y":180,"width":167,"height":75},
+		{"id":"6c2ae22d965f02a8","type":"text","text":"Component instances that triggered [[Re-render]]","x":-60,"y":-30,"width":345,"height":70},
+		{
+			"id":"f67aa31e7ed9df9c",
+			"type":"text",
+			"text":"Reconciliation + Diffing",
+			"styleAttributes":{"shape":"diamond"},
+			"x":567,
+			"y":320,
+			"width":207,
+			"height":80
+		},
+		{"id":"461f8440c2a075a5","type":"text","text":"Current [[Fiber Tree]]","x":25,"y":324,"width":175,"height":73},
+		{
+			"id":"c571461ebe10cc1c",
+			"type":"text",
+			"text":"Updated Fiber tree",
+			"styleAttributes":{},
+			"x":1000,
+			"y":325,
+			"width":180,
+			"height":70
+		},
+		{
+			"id":"c4580d500449c2f7",
+			"type":"text",
+			"text":"List of DOM updates",
+			"styleAttributes":{},
+			"x":1360,
+			"y":320,
+			"width":180,
+			"height":80
+		}
+	],
+	"edges":[
+		{"id":"52ffa599d7770188","fromNode":"6c2ae22d965f02a8","fromSide":"right","toNode":"3af03471c9650561","toSide":"left","label":"Creates"},
+		{"id":"dfee09f8b86aba5b","fromNode":"3af03471c9650561","fromSide":"bottom","toNode":"3c70b3d24e5897f7","toSide":"top","label":"Make up"},
+		{"id":"f45a4ed56949e05d","fromNode":"3c70b3d24e5897f7","fromSide":"bottom","toNode":"f67aa31e7ed9df9c","toSide":"top"},
+		{
+			"id":"c22cfb811dc9f6b5",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"461f8440c2a075a5",
+			"fromSide":"right",
+			"toNode":"f67aa31e7ed9df9c",
+			"toSide":"left"
+		},
+		{
+			"id":"410f2156a5583d46",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"f67aa31e7ed9df9c",
+			"fromSide":"right",
+			"toNode":"c571461ebe10cc1c",
+			"toSide":"left"
+		},
+		{
+			"id":"32e3510bc230accf",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"c571461ebe10cc1c",
+			"fromSide":"right",
+			"toNode":"c4580d500449c2f7",
+			"toSide":"left"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}

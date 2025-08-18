@@ -10,7 +10,7 @@ type: folder_brief_live
 - **[[Defect Types]]**
 - **[[Koh Young/NEPTUNE/Keywords/Keywords]]**
 - **[[Neptune C+]]**
-- **[[Questions]]**
+- **[[Koh Young/NEPTUNE/Questions/Questions]]**
 - **[[Technical Keyword]]**
 - **[[Technical Stuff]]**
 - [[Workflow]]

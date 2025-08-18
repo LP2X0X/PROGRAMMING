@@ -11,10 +11,10 @@ type: folder_brief_live
 - **[[Data Types]]**
 - **[[RUST/1 - Fundamental Concepts/Functions/Functions]]**
 - **[[Keywords]]**
-- **[[Notes]]**
+- **[[RUST/1 - Fundamental Concepts/Notes/Notes]]**
 - **[[Ownerships]]**
 - **[[Syntaxes]]**
-- **[[Terms]]**
+- **[[RUST/1 - Fundamental Concepts/Terms/Terms]]**
 - [[Variables and Mutability]]
 
 %% End Waypoint %%

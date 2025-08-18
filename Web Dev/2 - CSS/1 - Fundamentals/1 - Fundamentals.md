@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Properties]]**
 - **[[Pseudo Elements]]**
-- **[[Terms]]**
+- **[[Web Dev/2 - CSS/1 - Fundamentals/Terms/Terms]]**
 - **[[Values]]**
 
 %% End Waypoint %%
