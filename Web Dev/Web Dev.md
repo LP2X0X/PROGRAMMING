@@ -16,6 +16,7 @@ type: folder_brief_live
 	- **[[3.1.1 - Fundamental]]**
 	- **[[3.1.2 - Objects]]**
 	- **[[3.1.3 - Functions]]**
+	- **[[3.1.4 - Promises, Async and Await]]**
 	- [[JavaScript]]
 	- **[[Object]]**
 - **[[Next.js]]**

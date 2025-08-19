@@ -182,7 +182,3 @@ for (let val of myIterable) {
 	
 	alert(arr); // 1,4,9,16,25
 	```
-
----
-
-### Iterables know about multip
