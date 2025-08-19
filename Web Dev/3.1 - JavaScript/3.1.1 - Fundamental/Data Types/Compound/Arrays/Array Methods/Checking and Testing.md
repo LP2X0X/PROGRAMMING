@@ -1,5 +1,8 @@
 ---
-tags: js, array, methods
+tags:
+  - js
+  - array
+  - methods
 ---
 
 ### 🔘 **`every()`** – Check if **all** elements match a condition.

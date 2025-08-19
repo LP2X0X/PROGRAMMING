@@ -1,5 +1,8 @@
 ---
-tags: cpp, operators, fundamental
+tags:
+  - cpp
+  - operators
+  - fundamental
 ---
 
 Arithmetic operators in C++ are used to perform basic mathematical operations like addition, subtraction, multiplication, division, and more. These operators can be used with built-in data types such as integers and floating-point numbers, as well as with user-defined types if overloaded appropriately.

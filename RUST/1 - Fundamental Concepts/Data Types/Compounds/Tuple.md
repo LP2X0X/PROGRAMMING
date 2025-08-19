@@ -1,5 +1,9 @@
 ---
-tags: rust, datatype, compound, fundamental
+tags:
+  - rust
+  - datatype
+  - compound
+  - fundamental
 ---
 
 - A _tuple_ is a general way of grouping together a number of values with a variety of types into one compound type.

@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - **Header guards** are [[Conditional compilation|conditional compilation directives]] that take the following form:

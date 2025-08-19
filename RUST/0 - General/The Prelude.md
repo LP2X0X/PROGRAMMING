@@ -1,5 +1,7 @@
 ---
-tags: rust, term
+tags:
+  - rust
+  - term
 ---
 
 The **prelude** in Rust is a collection of **commonly used items** (traits, types, macros) that are **automatically imported** into every Rust file — so you can use them **without needing to explicitly `use` them**.

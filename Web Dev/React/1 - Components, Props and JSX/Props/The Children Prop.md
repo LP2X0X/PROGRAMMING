@@ -1,5 +1,9 @@
 ---
-tags: react, term, prop, fundamental
+tags:
+  - react
+  - term
+  - prop
+  - fundamental
 ---
 
 In React, **the children prop** is a special built-in prop that represents **whatever you put between a component’s opening and closing tags**.

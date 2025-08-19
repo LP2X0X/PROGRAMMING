@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 - This is the initialization performed when an object is constructed with **an empty** [[Initializer|initializer]].
 

@@ -1,5 +1,8 @@
 ---
-tags: css, note, distinguish
+tags:
+  - css
+  - note
+  - distinguish
 ---
 
 ## ✅ 1. **Does the root font size vary?**

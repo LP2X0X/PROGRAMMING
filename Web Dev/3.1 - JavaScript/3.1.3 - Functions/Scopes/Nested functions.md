@@ -1,5 +1,8 @@
 ---
-tags: js, scope, fundamental
+tags:
+  - js
+  - scope
+  - fundamental
 ---
 
 ### 🔹 What is a Nested Function?

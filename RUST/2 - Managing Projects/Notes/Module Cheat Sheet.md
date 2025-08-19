@@ -1,5 +1,7 @@
 ---
-tags: rust, summary
+tags:
+  - rust
+  - summary
 ---
 
 - This is a great place to refer to as a reminder of how modules work.

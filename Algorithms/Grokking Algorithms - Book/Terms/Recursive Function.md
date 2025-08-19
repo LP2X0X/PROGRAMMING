@@ -1,5 +1,8 @@
 ---
-tags: algorithms, term, fundamental
+tags:
+  - algorithms
+  - term
+  - fundamental
 ---
 
 Here's a clear and comprehensive overview of **recursive functions**, how they work, and when and how to use them effectively.

@@ -1,5 +1,8 @@
 ---
-tags: html, attribute, global
+tags:
+  - html
+  - attribute
+  - global
 ---
 
 The `contenteditable` attribute makes **any HTML element editable** directly by the user — like a mini text editor in the browser.

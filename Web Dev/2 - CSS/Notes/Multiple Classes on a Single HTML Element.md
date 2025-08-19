@@ -1,5 +1,8 @@
 ---
-tags: css, note, fundamental
+tags:
+  - css
+  - note
+  - fundamental
 ---
 
 - In HTML, you can apply multiple CSS classes to a single HTML element by listing them within the class attribute, separated by spaces. This allows you to combine styles from different classes.

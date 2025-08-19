@@ -1,5 +1,9 @@
 ---
-tags: rust, ownership, term, fundamental
+tags:
+  - rust
+  - ownership
+  - term
+  - fundamental
 ---
 
 In Rust, **move** refers to how **ownership** of a value is **transferred** from one variable to another. It’s a core concept of Rust’s memory safety model.

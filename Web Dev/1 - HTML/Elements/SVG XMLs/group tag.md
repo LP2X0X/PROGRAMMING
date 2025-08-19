@@ -1,5 +1,8 @@
 ---
-tags: html, tag, fundamental
+tags:
+  - html
+  - tag
+  - fundamental
 ---
 
 The \<g> tag in **SVG XML** is used to **group multiple elements** together so you can apply transformations, styles, or interactions to them **as a unit**.

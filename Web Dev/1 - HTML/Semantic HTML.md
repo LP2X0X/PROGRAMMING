@@ -1,5 +1,8 @@
 ---
-tags: html, note, summary
+tags:
+  - html
+  - note
+  - summary
 ---
 
 ## 🔹 What is Semantic HTML?

@@ -1,5 +1,8 @@
 ---
-tags: cpp, datatype, fundamental
+tags:
+  - cpp
+  - datatype
+  - fundamental
 ---
 
 - Since if you use a fixed-width integer, it may be slower than a wider type on some architectures, the fast types (std::int_fast#\_t and std::uint_fast#\_t) provide the fastest signed/unsigned integer type with a width of at least ***# bits*** (where # = 8, 16, 32, or 64).

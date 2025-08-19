@@ -1,5 +1,8 @@
 ---
-tags: js, datatype, fundamental
+tags:
+  - js
+  - datatype
+  - fundamental
 ---
 
 - A JavaScript array is a compound data type that holds an ordered list of values.

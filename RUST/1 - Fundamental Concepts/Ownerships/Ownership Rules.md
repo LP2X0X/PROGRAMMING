@@ -1,5 +1,8 @@
 ---
-tags: rust, ownership, fundamental
+tags:
+  - rust
+  - ownership
+  - fundamental
 ---
 
 - Let’s take a look at the ownership rules. Keep these rules in mind as we work through the examples that illustrate them:

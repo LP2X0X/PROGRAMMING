@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - The easiest way to work with strings and string objects in C++ is via the `std::string` type, which lives in the \<string> header.

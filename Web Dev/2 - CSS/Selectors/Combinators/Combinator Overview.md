@@ -1,5 +1,8 @@
 ---
-tags: css, selector, overview
+tags:
+  - css
+  - selector
+  - overview
 ---
 
 ### 📌 Description

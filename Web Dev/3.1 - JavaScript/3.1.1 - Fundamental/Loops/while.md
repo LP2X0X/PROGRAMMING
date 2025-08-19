@@ -1,5 +1,8 @@
 ---
-tags: js, loop, fundamental
+tags:
+  - js
+  - loop
+  - fundamental
 ---
 
 ```js

@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 - **Named constants** are constant values that are associated with an identifier. These are also sometimes called **symbolic constants**, or occasionally just **constants**.
 

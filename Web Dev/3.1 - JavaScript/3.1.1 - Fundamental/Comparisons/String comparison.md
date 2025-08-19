@@ -1,5 +1,8 @@
 ---
-tags: js, comparison, fundamental
+tags:
+  - js
+  - comparison
+  - fundamental
 ---
 
 - Strings are compared letter-by-letter. 

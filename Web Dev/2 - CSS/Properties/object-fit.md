@@ -1,5 +1,8 @@
 ---
-tags: css, property, fundamental
+tags:
+  - css
+  - property
+  - fundamental
 ---
 
 The object-fit CSS property is used to control **how media elements** like images or videos are **resized to fit their container**.

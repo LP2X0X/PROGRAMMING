@@ -1,5 +1,7 @@
 ---
-tags: js, note
+tags:
+  - js
+  - note
 ---
 
 - When a function is passed in `setInterval/setTimeout`, an internal reference is created to it and saved in the scheduler. It prevents the function from being garbage collected, even if there are no other references to it.

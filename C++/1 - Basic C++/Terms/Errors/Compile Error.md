@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 A **compile error** in C++ occurs during [[Compilation Process#2. **Compilation**|the compilation phase]], where the compiler translates your source code into machine-readable object code. Compile errors usually stem from syntax mistakes, missing declarations, type mismatches, or other violations of the C++ language rules.

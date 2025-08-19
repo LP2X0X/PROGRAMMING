@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - There is also a special [[Array-like Objects|array-like object]] named `arguments` that **contains all arguments** by their index. For instance:

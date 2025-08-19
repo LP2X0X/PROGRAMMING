@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 - In React, **Fiber node** (or Fiber for short) is the smallest building block of React’s Fiber architecture — it’s a plain JavaScript object that stores everything React needs to know about a component or element in your UI.

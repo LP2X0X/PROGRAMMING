@@ -1,5 +1,9 @@
 ---
-tags: js, global, method, fundamental
+tags:
+  - js
+  - global
+  - method
+  - fundamental
 ---
 
 `setTimeout()` is a **built-in JavaScript function** that schedules code to run **once after a specified delay** (in milliseconds).

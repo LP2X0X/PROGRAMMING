@@ -1,5 +1,7 @@
 ---
-tags: cpp, question
+tags:
+  - cpp
+  - question
 ---
 
 ### 🔚 Summary:

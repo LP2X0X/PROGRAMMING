@@ -1,5 +1,8 @@
 ---
-tags: css, term, fundamental
+tags:
+  - css
+  - term
+  - fundamental
 ---
 
 - There are three primary ways you can "select" an HTML element in order to style it.

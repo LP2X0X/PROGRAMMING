@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 A "semantic error" in C++ means that your code compiles successfully and may even run, but it does not behave the way you intended. In other words, the syntax is correct, but the logic or meaning (semantics) is incorrect.

@@ -1,5 +1,8 @@
 ---
-tags: css, term, fundamental
+tags:
+  - css
+  - term
+  - fundamental
 ---
 
 ## **1. What is the viewport?**

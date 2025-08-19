@@ -1,5 +1,8 @@
 ---
-tags: js, array, methods
+tags:
+  - js
+  - array
+  - methods
 ---
 
 ### 🔤 **`sort()`** – Sort alphabetically by default (The items are sorted as strings by default.)

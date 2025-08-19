@@ -1,5 +1,8 @@
 ---
-tags: css, property, fundamental
+tags:
+  - css
+  - property
+  - fundamental
 ---
 
 The align-items property controls how **flex items are aligned on the cross axis** (perpendicular to the flex-direction).

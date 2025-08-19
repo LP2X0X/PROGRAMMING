@@ -1,5 +1,8 @@
 ---
-tags: js, term, advance
+tags:
+  - js
+  - term
+  - advance
 ---
 
 - Before JavaScript is published to production, it’s compressed using a _minifier_ – a special program that shrinks code by removing extra comments, spaces and – what’s important, renames local variables into shorter ones.

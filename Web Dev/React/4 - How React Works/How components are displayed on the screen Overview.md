@@ -1,5 +1,8 @@
 ---
-tags: react, internal, advance
+tags:
+  - react
+  - internal
+  - advance
 ---
 
 ![[Pasted image 20250811191454.png|center|700]]

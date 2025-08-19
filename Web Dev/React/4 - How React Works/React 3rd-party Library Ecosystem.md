@@ -1,5 +1,7 @@
 ---
-tags: react, general
+tags:
+  - react
+  - general
 ---
 
 ![[Pasted image 20250817200922.png|center]]

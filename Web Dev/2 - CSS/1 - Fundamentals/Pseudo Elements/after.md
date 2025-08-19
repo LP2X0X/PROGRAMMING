@@ -1,5 +1,9 @@
 ---
-tags: css, pseudo, element, fundamental
+tags:
+  - css
+  - pseudo
+  - element
+  - fundamental
 ---
 
 - **What it is:** A pseudo-element inserted **after** the content of an element, as its last child. Usually used for cosmetic purpose.

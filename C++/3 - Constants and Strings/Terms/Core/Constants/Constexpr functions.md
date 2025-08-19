@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - A **constexpr function** is a function that is allowed to be called in a [[Constant expression|constant expression]]. If a required constant expression contains a constexpr function call, that constexpr function call must evaluate at compile-time.

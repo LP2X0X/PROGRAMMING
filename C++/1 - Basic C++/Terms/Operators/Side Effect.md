@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 - An [[C++/1 - Basic C++/Terms/Operators/Operator|operator]] (or function) that has some observable effect **beyond producing a return value** is said to have a **side effect**.
 	- For example, when `x = 5` is evaluated, the assignment operator has the side effect of assigning the value `5` to variable `x`. The changed value of `x` is observable (e.g. by printing the value of `x`) even after the operator has finished executing.

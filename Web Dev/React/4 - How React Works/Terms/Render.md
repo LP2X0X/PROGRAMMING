@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 - In React, **rendering** at its core means _calling your component functions_ (for function components) or _calling the_ _render()_ _method_ (for class components) to produce React elements.

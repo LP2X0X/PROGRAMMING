@@ -1,5 +1,8 @@
 ---
-tags: js, date, set
+tags:
+  - js
+  - date
+  - set
 ---
 
 - The following methods allow to set date/time components:

@@ -1,5 +1,8 @@
 ---
-tags: js, operator, fundamental
+tags:
+  - js
+  - operator
+  - fundamental
 ---
 
 - The nullish coalescing operator `??` returns the first argument if it’s not `null/undefined`.

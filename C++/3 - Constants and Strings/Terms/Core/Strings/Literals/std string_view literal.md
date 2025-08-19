@@ -1,5 +1,9 @@
 ---
-tags: cpp, string, literal, fundamental
+tags:
+  - cpp
+  - string
+  - literal
+  - fundamental
 ---
 
 - We can create string literals with type `std::string_view` by using a `sv` suffix after the double-quoted string literal.

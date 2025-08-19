@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
  A **macro** is a label defined in the source code that is replaced by its value by the [[Preprocessor|preprocessor]] before compilation.
 - There are two basic types of macros: _object-like macros_, and _function-like macros_.

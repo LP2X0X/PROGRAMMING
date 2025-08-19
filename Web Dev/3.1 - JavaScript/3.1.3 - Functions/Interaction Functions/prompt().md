@@ -1,5 +1,9 @@
 ---
-tags: js, function, interactive, fundamental
+tags:
+  - js
+  - function
+  - interactive
+  - fundamental
 ---
 
 - The function `prompt` accepts two arguments:

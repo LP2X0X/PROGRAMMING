@@ -1,5 +1,8 @@
 ---
-tags: js, method, fundamental
+tags:
+  - js
+  - method
+  - fundamental
 ---
 
 The addEventListener() method in JavaScript is used to attach event handlers to DOM elements — meaning you can make elements respond to user actions like clicks, typing, hovering, and more.

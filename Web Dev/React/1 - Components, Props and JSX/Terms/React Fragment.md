@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 ### 🔷 React Fragment – What It Is & Why Use It

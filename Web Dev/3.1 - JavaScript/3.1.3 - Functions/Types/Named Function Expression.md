@@ -1,5 +1,9 @@
 ---
-tags: js, term, function, advanced
+tags:
+  - js
+  - term
+  - function
+  - advanced
 ---
 
 ### 🔠 Named Function Expression (NFE) in JavaScript

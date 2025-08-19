@@ -1,5 +1,8 @@
 ---
-tags: cpp, note, fundamental
+tags:
+  - cpp
+  - note
+  - fundamental
 ---
 
 

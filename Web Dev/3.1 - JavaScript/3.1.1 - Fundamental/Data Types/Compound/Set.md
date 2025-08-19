@@ -1,5 +1,8 @@
 ---
-tags: js, datatype, fundamental
+tags:
+  - js
+  - datatype
+  - fundamental
 ---
 
 In JavaScript, a **`Set`** is a built-in object that lets you store **unique values** of any type — primitive or object references.

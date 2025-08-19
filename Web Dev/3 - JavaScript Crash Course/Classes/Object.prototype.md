@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - Any object that isn’t created with an explicit constructor function is instead implicitly created with JavaScript’s built-in Object constructor function.

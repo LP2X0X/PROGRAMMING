@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - A template literal **is a special kind of string** that can **evaluate any expressions** embedded within it.

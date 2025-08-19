@@ -1,5 +1,8 @@
 ---
-tags: cpp, datatype, fundamental
+tags:
+  - cpp
+  - datatype
+  - fundamental
 ---
 
 `size_t` is an unsigned integer type in C and C++ that is used to represent the **byte** size of objects in memory. It is defined in the `<cstddef>` or `<stddef.h>` header and is typically used to express sizes and counts (e.g., the size of an array or the result of the `sizeof` operator).

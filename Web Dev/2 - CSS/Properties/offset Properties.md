@@ -1,5 +1,8 @@
 ---
-tags: css, property, fundamental
+tags:
+  - css
+  - property
+  - fundamental
 ---
 
 In CSS, top, left, right, and bottom are **offset properties** used **with positioned elements** — they tell the browser **how far to move the element** from its reference edge.

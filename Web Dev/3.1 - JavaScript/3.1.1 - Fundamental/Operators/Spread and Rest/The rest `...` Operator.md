@@ -1,5 +1,9 @@
 ---
-tags: js, destructuring, term, fundamental
+tags:
+  - js
+  - destructuring
+  - term
+  - fundamental
 ---
 
 In JavaScript, **"the rest"** typically refers to the **rest syntax** (`...`) used in functions, arrays, or objects to collect remaining values.

@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - An object literal consists of a pair of braces ({ and }) enclosing a series of key-value pairs, separated by commas.

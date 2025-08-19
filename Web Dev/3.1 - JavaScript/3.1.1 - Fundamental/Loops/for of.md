@@ -1,5 +1,8 @@
 ---
-tags: js, keyword, fundamental
+tags:
+  - js
+  - keyword
+  - fundamental
 ---
 
 ### **🔁 for...of in JavaScript**

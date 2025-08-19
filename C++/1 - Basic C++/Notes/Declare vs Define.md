@@ -1,5 +1,8 @@
 ---
-tags: cpp, distinguish, fundamental
+tags:
+  - cpp
+  - distinguish
+  - fundamental
 ---
 
 - A **declaration** tells the _compiler_ about the _existence_ of an identifier and its associated type information.

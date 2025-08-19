@@ -1,5 +1,8 @@
 ---
-tags: html, term, technique
+tags:
+  - html
+  - term
+  - technique
 ---
 
 A **fragment identifier** is the part of a URL that starts with `#`, used to **jump to a specific element** on the page by its [[id]].

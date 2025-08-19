@@ -1,5 +1,9 @@
 ---
-tags: js, comparison, fundamental, summary
+tags:
+  - js
+  - comparison
+  - fundamental
+  - summary
 ---
 
 ### 📌 Equality Comparison (== vs \=\==)

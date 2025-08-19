@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 ```ad-important

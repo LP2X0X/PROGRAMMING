@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 The **Web Audio API** is a powerful JavaScript API for creating, processing, and controlling audio directly in the browser. It’s widely used in games, music apps, and sound visualizations.

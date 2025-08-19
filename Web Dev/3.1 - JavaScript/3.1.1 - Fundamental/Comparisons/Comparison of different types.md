@@ -1,5 +1,8 @@
 ---
-tags: js, comparison, fundamental
+tags:
+  - js
+  - comparison
+  - fundamental
 ---
 
 - **When comparing values of different types using comparison operators (`<`, `>`, etc.), JavaScript usually converts both operands to numbers**. But there’s one big exception: **if both are strings**, then it performs a **string (lexicographical) comparison** instead.

@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 A **primitive** is a basic data type that is **not an object** and has no methods. Primitives are immutable, meaning their values cannot be changed once created.

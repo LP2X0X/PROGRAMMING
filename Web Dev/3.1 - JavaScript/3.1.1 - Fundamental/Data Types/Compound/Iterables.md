@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 In JavaScript, an **iterable** is any object that implements the `@@iterator` **method** (i.e., has a method with the key `[Symbol.iterator]`), which returns an **iterator**.
@@ -36,7 +39,7 @@ const obj = {
 ### ✅ Common Iterable Types:
 
 - **Array**
-- **String**
+- **[[Web Dev/3.1 - JavaScript/3.1.1 - Fundamental/Data Types/Primitives/Strings/String|String]]**
 - **Map**
 - **Set**
 - **TypedArray** (e.g. `Uint8Array`)
@@ -181,4 +184,12 @@ for (let val of myIterable) {
 	let arr = Array.from(range, num => num * num);
 	
 	alert(arr); // 1,4,9,16,25
+	```
+- This is a great way to create array with a specific number of items:
+	```js
+	const arr = Array.from({ length: 5 }); 
+	console.log(arr); // [ undefined, undefined, undefined, undefined, undefined ]
+	
+	const arr = Array.from({ length: 5 }, () => 0); 
+	console.log(arr); // [ 0, 0, 0, 0, 0]
 	```

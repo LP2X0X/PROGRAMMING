@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - Rest parameter is a special type of parameter that collects a variable number of arguments into an array.

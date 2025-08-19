@@ -1,5 +1,9 @@
 ---
-tags: rust, control, flow, fundamental
+tags:
+  - rust
+  - control
+  - flow
+  - fundamental
 ---
 
 ### if ... let syntax

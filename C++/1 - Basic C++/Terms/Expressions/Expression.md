@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - An **expression** is a non-empty sequence of literals, variables, operators, and function calls that **calculates a value**. The process of executing an expression is called **evaluation**, and the resulting value produced is called the **result** of the expression.

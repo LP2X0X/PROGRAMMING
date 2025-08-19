@@ -1,5 +1,8 @@
 ---
-tags: css, term, fundamental
+tags:
+  - css
+  - term
+  - fundamental
 ---
 
 Here’s a clear breakdown of **inheritance in CSS** with definitions, examples, tips, and best practices:

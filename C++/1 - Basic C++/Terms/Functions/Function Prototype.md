@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - A **function declaration** statement (also called a **function prototype**) is a [[Forward declaration| forward declaration]] of a function.

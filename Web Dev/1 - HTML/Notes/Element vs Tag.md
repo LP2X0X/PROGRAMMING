@@ -1,5 +1,8 @@
 ---
-tags: html, distinguish, fundamental
+tags:
+  - html
+  - distinguish
+  - fundamental
 ---
 
 - different between a "[[Tag|tag]]" and an "[[Element|element]]": The terms are often used interchangeably, but I generally view an "element" as a complete unit while I think of a "tag" as a symbol.

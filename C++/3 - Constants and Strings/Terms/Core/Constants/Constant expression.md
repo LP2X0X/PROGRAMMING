@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - A **constant expression** is an [[C++/1 - Basic C++/Terms/Expressions/Expression|expression]] that contains only compile-time constants and operators/functions that support compile-time evaluation (which means it must be evaluatable at compile-time).

@@ -1,5 +1,8 @@
 ---
-tags: css, property, fundamental
+tags:
+  - css
+  - property
+  - fundamental
 ---
 
 ### **📱 CSS Media Queries — Overview & Usage**

@@ -1,5 +1,8 @@
 ---
-tags: css, property, fundamental
+tags:
+  - css
+  - property
+  - fundamental
 ---
 
 In CSS, the position property defines how an element is positioned in the document. There are **five main values**:

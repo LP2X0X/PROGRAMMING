@@ -1,5 +1,8 @@
 ---
-tags: cpp ,term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 - Inside the function that will return a value, we use a **return statement** to indicate the specific value being returned to the caller.
 - The return statement consists of the `return` keyword, followed by an expression (sometimes called the **return expression**), ending with a semicolon.

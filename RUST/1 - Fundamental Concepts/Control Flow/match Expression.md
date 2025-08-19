@@ -1,5 +1,9 @@
 ---
-tags: rust, control, flow, fundamental
+tags:
+  - rust
+  - control
+  - flow
+  - fundamental
 ---
 
 The `match` statement in Rust is a **powerful control flow construct** that lets you compare a value against multiple patterns and execute code based on which pattern matches — similar to `switch` in other languages, but **much safer and more expressive**.

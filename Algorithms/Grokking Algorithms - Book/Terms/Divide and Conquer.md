@@ -1,5 +1,7 @@
 ---
-tags: algorithms, technique
+tags:
+  - algorithms
+  - technique
 ---
 
 ### 🧠 Divide and Conquer – Overview

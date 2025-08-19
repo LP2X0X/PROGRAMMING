@@ -1,5 +1,8 @@
 ---
-tags: react, technique, fundamental
+tags:
+  - react
+  - technique
+  - fundamental
 ---
 
 A **controlled component** in React is a form element (like `<input>`, `<textarea>`, or `<select>`) whose **value is controlled by React state** — not by the DOM.

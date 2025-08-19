@@ -1,5 +1,8 @@
 ---
-tags: js, date, access
+tags:
+  - js
+  - date
+  - access
 ---
 
 - There are methods to access the year, month and so on from the `Date` object:

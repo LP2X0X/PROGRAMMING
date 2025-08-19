@@ -1,5 +1,9 @@
 ---
-tags: cpp, note, term, fundamental
+tags:
+  - cpp
+  - note
+  - term
+  - fundamental
 ---
 
 - Because long literals can be hard to read, C++14 also adds the ability to use a quotation mark (‘) as a digit separator.

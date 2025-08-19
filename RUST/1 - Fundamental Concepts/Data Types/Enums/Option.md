@@ -1,5 +1,9 @@
 ---
-tags: rust, datatype, enum, fundamental
+tags:
+  - rust
+  - datatype
+  - enum
+  - fundamental
 ---
 
 ## 🧱 What is `Option<T>`?

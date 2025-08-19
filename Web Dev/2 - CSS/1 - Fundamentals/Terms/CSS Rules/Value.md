@@ -1,5 +1,8 @@
 ---
-tags: css, term, fundamental
+tags:
+  - css
+  - term
+  - fundamental
 ---
 
 - **What it is:** The setting you assign to the property.

@@ -1,5 +1,7 @@
 ---
-tags: js, miscellaneous
+tags:
+  - js
+  - miscellaneous
 ---
 
 - snake_case and camelCase.

@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 ### Define - Declare
 - When you gave an [[C++/1 - Basic C++/Terms/Core/Object|object]] a name and a [[C++/1 - Basic C++/Terms/Core/Data type|data type]], you **defined** it.

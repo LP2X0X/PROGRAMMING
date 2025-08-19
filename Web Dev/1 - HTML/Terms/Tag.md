@@ -1,5 +1,8 @@
 ---
-tags: html, term, fundamental
+tags:
+  - html
+  - term
+  - fundamental
 ---
 
 - Tag is the individual components inside angle brackets (<>).

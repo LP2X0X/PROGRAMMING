@@ -1,5 +1,7 @@
 ---
-tags: react, summary
+tags:
+  - react
+  - summary
 ---
 
 🔷 What is React?

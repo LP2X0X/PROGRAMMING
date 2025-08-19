@@ -1,5 +1,8 @@
 ---
-tags: css, term, fundamental
+tags:
+  - css
+  - term
+  - fundamental
 ---
 
 ### **🧱 CSS Grid Overview**

@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - The **precision** of a floating point type defines how many [[Significant digits|significant digits]] it can represent without information loss. This means that the output value of a float type will only be accurate up to the number of significant digits.

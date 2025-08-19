@@ -1,5 +1,8 @@
 ---
-tags: html, note, fundamental
+tags:
+  - html
+  - note
+  - fundamental
 ---
 
 - Here are some common **HTML** tags:

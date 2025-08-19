@@ -1,5 +1,9 @@
 ---
-tags: rust, term, project_management, fundamental
+tags:
+  - rust
+  - term
+  - project_management
+  - fundamental
 ---
 
 ## 🌳 What Is a Module Tree?

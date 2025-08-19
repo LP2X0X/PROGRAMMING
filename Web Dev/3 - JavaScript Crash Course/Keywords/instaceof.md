@@ -1,5 +1,8 @@
 ---
-tags: js, keyword, fundamental
+tags:
+  - js
+  - keyword
+  - fundamental
 ---
 
 - The **instanceof** keword helps test whether an object is an instance of a particular [[Web Dev/3 - JavaScript Crash Course/Classes/Class|class]].

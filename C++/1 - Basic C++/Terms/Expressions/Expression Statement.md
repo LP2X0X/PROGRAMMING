@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - An **Expression statement** is a statement that consists of ***only*** an expression followed by a semicolon. When the expression statement is executed, the expression will be evaluated.

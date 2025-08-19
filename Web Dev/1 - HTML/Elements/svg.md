@@ -1,5 +1,8 @@
 ---
-tags: html, element, fundamental
+tags:
+  - html
+  - element
+  - fundamental
 ---
 
 Including **SVG in HTML** is straightforward and very powerful for scalable, interactive graphics. Here’s how you can use SVG directly in your HTML pages:

@@ -1,5 +1,7 @@
 ---
-tags: algorithms, leetcode
+tags:
+  - algorithms
+  - leetcode
 ---
 
 ```csharp

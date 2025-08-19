@@ -1,5 +1,7 @@
 ---
-tags: rust, syntax
+tags:
+  - rust
+  - syntax
 ---
 
 In Rust, **field init shorthand** lets you **avoid repeating field names** when initializing a struct — if your variable names match the field names.

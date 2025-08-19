@@ -1,5 +1,7 @@
 ---
-tags: js, method
+tags:
+  - js
+  - method
 ---
 
 - To decode a JSON-string, we need another method named JSON.parse:

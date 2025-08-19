@@ -1,5 +1,8 @@
 ---
-tags: cpp, note, fundamental
+tags:
+  - cpp
+  - note
+  - fundamental
 ---
 
 - The process of converting a value from one type to another type is called **type conversion**.

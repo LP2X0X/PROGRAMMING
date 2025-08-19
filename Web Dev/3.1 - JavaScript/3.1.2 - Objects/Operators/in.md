@@ -1,5 +1,8 @@
 ---
-tags: js, operator, fundamental
+tags:
+  - js
+  - operator
+  - fundamental
 ---
 
 - Reading a non-existing property just returns `undefined`. So we can easily test whether the property exists using the `in` operator:

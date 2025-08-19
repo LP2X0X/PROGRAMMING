@@ -1,5 +1,7 @@
 ---
-tags: react, question
+tags:
+  - react
+  - question
 ---
 
 In **React Fiber**, the term _“fiber”_ doesn’t just mean the tree itself, but each **fiber node** represents a **unit of work**. Let me break down why:

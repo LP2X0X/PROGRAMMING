@@ -1,5 +1,8 @@
 ---
-tags: js, array, methods
+tags:
+  - js
+  - array
+  - methods
 ---
 
 ### 🔤 **`join()`** – Combine elements into a **string**.

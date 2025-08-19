@@ -1,5 +1,8 @@
 ---
-tags: css, property, fundamental
+tags:
+  - css
+  - property
+  - fundamental
 ---
 
 The `box-sizing` property controls **how the size of an element is calculated**: whether padding and border are included **inside** the width/height or **outside** it.

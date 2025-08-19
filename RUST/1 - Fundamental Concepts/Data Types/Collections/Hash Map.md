@@ -1,5 +1,9 @@
 ---
-tags: rust, datatype, collection, fundamental
+tags:
+  - rust
+  - datatype
+  - collection
+  - fundamental
 ---
 
 - The type `HashMap<K, V>` stores a mapping of keys of type `K` to values of type `V` using a _hashing function_, which determines how it places these keys and values into memory.

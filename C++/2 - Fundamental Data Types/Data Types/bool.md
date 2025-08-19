@@ -1,5 +1,8 @@
 ---
-tags: cpp, datatype, fundamental
+tags:
+  - cpp
+  - datatype
+  - fundamental
 ---
 
 - **Boolean** (or *bool* for short) variables are variables that can have only two possible values: `true`, and `false`.

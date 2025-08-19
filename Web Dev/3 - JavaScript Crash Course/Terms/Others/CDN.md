@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 In web development, a **CDN (Content Delivery Network)** is a network of servers distributed globally that delivers web content (like JavaScript libraries, images, CSS, fonts, videos, etc.) to users **quickly and efficiently**.

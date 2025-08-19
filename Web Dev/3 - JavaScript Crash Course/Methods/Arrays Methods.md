@@ -1,5 +1,7 @@
 ---
-tags: js, method
+tags:
+  - js
+  - method
 ---
 
 Here’s a **summary of commonly used JavaScript array methods**—organized by purpose:

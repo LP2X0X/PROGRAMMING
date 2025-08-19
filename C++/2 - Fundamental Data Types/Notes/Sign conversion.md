@@ -1,5 +1,8 @@
 ---
-tags: cpp, note, fundamental
+tags:
+  - cpp
+  - note
+  - fundamental
 ---
 
 - Signed **integral** values can be converted to unsigned integral values, and vice-versa, using a static cast.

@@ -1,5 +1,8 @@
 ---
-tags: react, technique, fundamental
+tags:
+  - react
+  - technique
+  - fundamental
 ---
 
 To **conditionally set a class and text in React**, you can use **ternary operators**, **logical operators**, or **template strings** inside JSX.

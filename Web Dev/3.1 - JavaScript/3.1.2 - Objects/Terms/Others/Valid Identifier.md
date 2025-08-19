@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - A valid identifier is any series of characters that can be used as a JavaScript variable name.

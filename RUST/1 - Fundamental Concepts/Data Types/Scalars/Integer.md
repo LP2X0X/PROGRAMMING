@@ -1,5 +1,9 @@
 ---
-tags: rust, datatype, scalar, fundamental
+tags:
+  - rust
+  - datatype
+  - scalar
+  - fundamental
 ---
 
 - An _integer_ is a number without a fractional component. 

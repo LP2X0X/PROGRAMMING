@@ -1,5 +1,9 @@
 ---
-tags: rust, ownership, term, fundamental
+tags:
+  - rust
+  - ownership
+  - term
+  - fundamental
 ---
 
 - _Ownership_ is a set of rules that govern how a Rust program manages memory.

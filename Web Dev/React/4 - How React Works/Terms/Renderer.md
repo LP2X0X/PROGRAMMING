@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 In React’s architecture, a **renderer** is a library that connects React’s core (the reconciler) to a specific platform. React itself doesn’t know about the DOM, iOS views, or Android views—it just figures out what the UI _should_ look like. The renderer is what takes that description and turns it into actual UI.

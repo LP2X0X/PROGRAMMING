@@ -1,5 +1,7 @@
 ---
-tags: rust, command
+tags:
+  - rust
+  - command
 ---
 
 In Rust, [[Cargo|cargo]] is the official package manager and build system. Here’s a **summary of the most commonly used cargo commands** and what they do:

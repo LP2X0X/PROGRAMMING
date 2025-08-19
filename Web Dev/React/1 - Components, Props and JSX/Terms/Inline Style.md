@@ -1,5 +1,7 @@
 ---
-tags: react, fundamental
+tags:
+  - react
+  - fundamental
 ---
 
 In **JSX**, you can apply **inline styles** using a **JavaScript object**. This is often used for quick styling or dynamic styles in React components.

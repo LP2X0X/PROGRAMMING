@@ -1,5 +1,9 @@
 ---
-tags: rust, term, project_management, fundamental
+tags:
+  - rust
+  - term
+  - project_management
+  - fundamental
 ---
 
 - _Modules_ let us organize code within a crate for readability and easy reuse.

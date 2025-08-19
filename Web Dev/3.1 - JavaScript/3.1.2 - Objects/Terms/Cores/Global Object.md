@@ -1,5 +1,8 @@
 ---
-tags: js, object, fundamental
+tags:
+  - js
+  - object
+  - fundamental
 ---
 
 - In JavaScript, the **global object** is a special object that is automatically created by the environment and serves as the top-level container for all global variables, functions, and built-in objects.

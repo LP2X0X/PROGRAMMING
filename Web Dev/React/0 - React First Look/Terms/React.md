@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 - React is a declarative, component-based, state-driven Javascript library for building user interface.

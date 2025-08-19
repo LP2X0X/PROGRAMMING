@@ -1,5 +1,7 @@
 ---
-tags: js, destructuring
+tags:
+  - js
+  - destructuring
 ---
 
 ```js

@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 **Event delegation** in JavaScript is a technique where you add a single event listener to a **parent element**, and use it to handle events triggered by its **child elements**. It relies on **[[Event Bubbling|event bubbling]]**, where events bubble up from the target element to the ancestors.

@@ -1,5 +1,9 @@
 ---
-tags: rust, control, flow, fundamental
+tags:
+  - rust
+  - control
+  - flow
+  - fundamental
 ---
 
 - The `loop` keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop.

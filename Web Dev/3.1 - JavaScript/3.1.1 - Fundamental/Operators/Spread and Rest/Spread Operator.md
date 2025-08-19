@@ -1,5 +1,8 @@
 ---
-tags: js, operator, fundamental
+tags:
+  - js
+  - operator
+  - fundamental
 ---
 
 ### ✨ Spread Syntax in JavaScript (`...`)

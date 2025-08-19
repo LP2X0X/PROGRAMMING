@@ -1,5 +1,9 @@
 ---
-tags: js, global, method, fundamental
+tags:
+  - js
+  - global
+  - method
+  - fundamental
 ---
 
 `setInterval()` is a built-in JavaScript method that **repeatedly runs a function** with a fixed **time delay** between each call.

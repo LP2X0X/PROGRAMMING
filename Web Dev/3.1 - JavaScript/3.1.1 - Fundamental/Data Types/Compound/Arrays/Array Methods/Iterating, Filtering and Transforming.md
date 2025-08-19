@@ -1,5 +1,8 @@
 ---
-tags: js, array, methods
+tags:
+  - js
+  - array
+  - methods
 ---
 
 ### 🔁 **`forEach()`** – Loop through the array (no return).

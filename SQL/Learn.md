@@ -1,5 +1,6 @@
 ---
-tags: sql
+tags:
+  - sql
 ---
 
 To learn SQL quickly and efficiently, focus on **active, practical learning**, using real databases and real problems. Here’s a step-by-step plan that balances speed and depth:

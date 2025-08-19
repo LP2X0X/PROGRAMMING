@@ -1,5 +1,8 @@
 ---
-tags: rust, function, fundamental
+tags:
+  - rust
+  - function
+  - fundamental
 ---
 
 In Rust, a **method** is a function **associated with a struct, enum, or trait**, and is called using **dot notation** (like `obj.method()`).

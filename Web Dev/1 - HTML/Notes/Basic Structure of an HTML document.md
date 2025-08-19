@@ -1,5 +1,8 @@
 ---
-tags: html, note, fundamental
+tags:
+  - html
+  - note
+  - fundamental
 ---
 
 - This is what we call "HTML boilerplate", which just means that no matter what type of webpage you are creating, it will ALWAYS follow this structure.

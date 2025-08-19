@@ -1,5 +1,8 @@
 ---
-tags: js, array, methods
+tags:
+  - js
+  - array
+  - methods
 ---
 
 ### ➕ **`push()`** – Add to the **end** of an array.

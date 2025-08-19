@@ -1,5 +1,8 @@
 ---
-tags: js, keyword, fundamental
+tags:
+  - js
+  - keyword
+  - fundamental
 ---
 
 - **let** is a keyword which help create a [[Web Dev/3.1 - JavaScript/3.1.1 - Fundamental/Terms/Miscellaneous/Variable|variable]] in JavaScript.

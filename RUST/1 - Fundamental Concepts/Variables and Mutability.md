@@ -1,5 +1,7 @@
 ---
-tags: rust, fundamental
+tags:
+  - rust
+  - fundamental
 ---
 
 - By default, variables in Rust are immutable. 

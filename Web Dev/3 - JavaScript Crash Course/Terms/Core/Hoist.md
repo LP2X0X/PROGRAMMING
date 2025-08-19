@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 ### **📚 What Does “Hoisting” Mean in JavaScript?**

@@ -1,5 +1,8 @@
 ---
-tags: function, syntax, advance
+tags:
+  - function
+  - syntax
+  - advance
 ---
 
 - The syntax for creating a function:

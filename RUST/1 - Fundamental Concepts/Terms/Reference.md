@@ -1,5 +1,8 @@
 ---
-tags: rust, term, fundamental
+tags:
+  - rust
+  - term
+  - fundamental
 ---
 
 In Rust, a **reference** lets you **borrow** a value instead of taking ownership of it. It’s one of the most important features in Rust’s safety system.

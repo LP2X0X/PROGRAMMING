@@ -1,5 +1,8 @@
 ---
-tags: cpp, distinguish, fundamental
+tags:
+  - cpp
+  - distinguish
+  - fundamental
 ---
 
 ### The meaning of const vs constexpr for variables

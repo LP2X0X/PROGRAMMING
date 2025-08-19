@@ -1,5 +1,8 @@
 ---
-tags: css, keyword, fundamental
+tags:
+  - css
+  - keyword
+  - fundamental
 ---
 
 - If you write `!important` at the end of a CSS property, it will take precedence over every other rule. Here's an example.

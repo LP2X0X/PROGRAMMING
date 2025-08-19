@@ -1,5 +1,8 @@
 ---
-tags: rust, term, fundamental
+tags:
+  - rust
+  - term
+  - fundamental
 ---
 
 In Rust, **type annotations** are how you explicitly specify the type of a variable, function parameter, or return value. Although Rust has powerful **type inference**, sometimes you must (or should) annotate the type — especially when the compiler can’t guess it or to improve code clarity.

@@ -1,5 +1,9 @@
 ---
-tags: cpp, term, fundamental, universal
+tags:
+  - cpp
+  - term
+  - fundamental
+  - universal
 ---
 - The number of operands that an [[C++/1 - Basic C++/Terms/Operators/Operator|operator]] takes as input is called the operator’s **arity**. Operators in C++ come in four different arities:
 	- **Unary** operators act on one operand.

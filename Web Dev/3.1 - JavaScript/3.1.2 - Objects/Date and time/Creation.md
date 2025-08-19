@@ -1,5 +1,8 @@
 ---
-tags: js, date, create
+tags:
+  - js
+  - date
+  - create
 ---
 
 - To create a new `Date` object call `new Date()` with one of the following arguments:

@@ -1,5 +1,8 @@
 ---
-tags: html, attribute, fundamental
+tags:
+  - html
+  - attribute
+  - fundamental
 ---
 
 The **`name` attribute** is crucial in HTML—especially in **forms**—because it **defines how data is labeled and sent when a form is submitted**.

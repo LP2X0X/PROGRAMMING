@@ -1,5 +1,8 @@
 ---
-tags: cpp, distinguish, fundamental
+tags:
+  - cpp
+  - distinguish
+  - fundamental
 ---
 
 - When we use **angled brackets**, we’re telling the preprocessor that this is a header file we didn’t write ourselves. The preprocessor will search for the header only in the directories specified by the `include directories`.

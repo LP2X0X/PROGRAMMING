@@ -1,5 +1,8 @@
 ---
-tags: js, method, fundamental
+tags:
+  - js
+  - method
+  - fundamental
 ---
 
 - The **`CanvasRenderingContext2D`** object in JavaScript provides the 2D rendering context for the `<canvas>` element. This context contains a rich set of **properties** and **methods** for drawing shapes, text, images, and more.

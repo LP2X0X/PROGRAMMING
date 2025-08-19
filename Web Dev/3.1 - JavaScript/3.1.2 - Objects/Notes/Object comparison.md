@@ -1,5 +1,7 @@
 ---
-tags: js, note
+tags:
+  - js
+  - note
 ---
 
 - Two objects are equal only if they are the same object:

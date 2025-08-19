@@ -1,5 +1,7 @@
 ---
-tags: rust, note
+tags:
+  - rust
+  - note
 ---
 
 - With a [[Module Tree|module tree]] like this:

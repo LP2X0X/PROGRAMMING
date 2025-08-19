@@ -1,5 +1,7 @@
 ---
-tags: js, fundamental
+tags:
+  - js
+  - fundamental
 ---
 
 

@@ -1,5 +1,8 @@
 ---
-tags: js, datatype, fundamental
+tags:
+  - js
+  - datatype
+  - fundamental
 ---
 
 - The _number_ type represents both integer and floating point numbers.

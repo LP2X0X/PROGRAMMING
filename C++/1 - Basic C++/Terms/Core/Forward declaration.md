@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - A **forward declaration** allows us to tell the compiler about the existence of an identifier before actually <u>defining</u> the identifier ([[Declare vs Define]]).

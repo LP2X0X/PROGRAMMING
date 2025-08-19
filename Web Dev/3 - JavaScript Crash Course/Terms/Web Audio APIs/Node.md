@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 In the **Web Audio API**, a **node** is a building block of the **[[Audio Processing Graph|audio processing graph]]**. Each node represents an audio processing module (like a source, effect, or destination), and nodes are connected together to route and transform audio.

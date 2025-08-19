@@ -1,5 +1,8 @@
 ---
-tags: rust, keyword, fundamental
+tags:
+  - rust
+  - keyword
+  - fundamental
 ---
 
 In Rust, the `super` keyword refers to the **parent module** — it lets you access items from one level up in the module hierarchy.

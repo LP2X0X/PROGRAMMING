@@ -1,5 +1,8 @@
 ---
-tags: html, element, fundamental
+tags:
+  - html
+  - element
+  - fundamental
 ---
 
 Here’s a solid overview of the \<div> element — one of the most important building blocks in HTML

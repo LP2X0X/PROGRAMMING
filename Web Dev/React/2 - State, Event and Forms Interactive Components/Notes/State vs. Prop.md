@@ -1,5 +1,8 @@
 ---
-tags: react, distinguish, fundamental
+tags:
+  - react
+  - distinguish
+  - fundamental
 ---
 
 ![[Pasted image 20250722195150.png|center]]

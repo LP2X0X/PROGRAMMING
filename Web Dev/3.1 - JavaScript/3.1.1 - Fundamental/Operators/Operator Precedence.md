@@ -1,5 +1,8 @@
 ---
-tags: js, summary, fundamental
+tags:
+  - js
+  - summary
+  - fundamental
 ---
 
 Here's a clear summary of **JavaScript operator precedence**, from **highest (evaluated first)** to **lowest (evaluated last)**:

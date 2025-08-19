@@ -1,5 +1,8 @@
 ---
-tags: html, custom, attribute
+tags:
+  - html
+  - custom
+  - attribute
 ---
 
 **Custom attributes** in HTML are attributes **you define yourself**, usually using the `data-` prefix, and are commonly called **data attributes**.

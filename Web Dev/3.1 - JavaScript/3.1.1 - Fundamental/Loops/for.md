@@ -1,5 +1,8 @@
 ---
-tags: js, loop, fundamental
+tags:
+  - js
+  - loop
+  - fundamental
 ---
 
 A **for** loop in JavaScript is a control structure used to repeat a block of code a certain number of times. It’s commonly used when you know how many times you want to loop.

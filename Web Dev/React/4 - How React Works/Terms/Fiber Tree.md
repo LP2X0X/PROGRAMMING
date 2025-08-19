@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 - The **Fiber tree** is React’s internal data structure that represents your UI, one [[Fiber]] for each *React component* or *DOM element*.

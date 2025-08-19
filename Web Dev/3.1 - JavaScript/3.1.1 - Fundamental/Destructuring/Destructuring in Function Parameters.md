@@ -1,5 +1,8 @@
 ---
-tags: js, parameters, destructuring
+tags:
+  - js
+  - parameters
+  - destructuring
 ---
 
 - The full syntax is the same as for a destructuring assignment:

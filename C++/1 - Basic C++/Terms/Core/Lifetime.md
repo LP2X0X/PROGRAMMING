@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - An object's **lifetime **  is defined to be the time between its creation and destruction. Since variable create and destruction happen when the program is running therefore lifetime is a runtime property.

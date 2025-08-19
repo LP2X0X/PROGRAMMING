@@ -1,5 +1,7 @@
 ---
-tags: cpp, rule
+tags:
+  - cpp
+  - rule
 ---
 
 

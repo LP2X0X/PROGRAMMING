@@ -1,5 +1,9 @@
 ---
-tags: cpp, special, value, fundamental
+tags:
+  - cpp
+  - special
+  - value
+  - fundamental
 ---
 
 - In C++, **NaN (Not a Number)** represents undefined or unrepresentable floating-point values (like the result of `0.0 / 0.0`).

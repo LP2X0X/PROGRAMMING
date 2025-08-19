@@ -1,5 +1,8 @@
 ---
-tags: algorithms, term, fundamental
+tags:
+  - algorithms
+  - term
+  - fundamental
 ---
 
 ### Context

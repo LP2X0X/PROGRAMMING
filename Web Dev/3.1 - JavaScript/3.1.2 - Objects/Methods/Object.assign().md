@@ -1,5 +1,8 @@
 ---
-tags: js, method, fundamental
+tags:
+  - js
+  - method
+  - fundamental
 ---
 
 ## **🧾 Object.assign() - What it does **

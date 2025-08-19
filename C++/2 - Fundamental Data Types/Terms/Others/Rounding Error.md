@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - When [[Precision|precision]] is lost because a number can’t be stored precisely, this is called a **rounding error**.

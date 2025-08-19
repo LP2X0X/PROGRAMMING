@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 - **React reconciliation** is the process React uses to figure out _how to update the actual DOM_ when your application’s state or props change. In another term, it means deciding which DOM elements actually need to be inserted, deleted or updated in order to reflect the latest state change.

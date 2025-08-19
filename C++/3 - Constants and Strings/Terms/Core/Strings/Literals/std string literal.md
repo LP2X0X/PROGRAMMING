@@ -1,5 +1,9 @@
 ---
-tags: cpp, string, literal, fundamental
+tags:
+  - cpp
+  - string
+  - literal
+  - fundamental
 ---
 
 - We can create string literals with type `std::string` by using a `s` suffix after the double-quoted string literal. The `s` must be lower case.

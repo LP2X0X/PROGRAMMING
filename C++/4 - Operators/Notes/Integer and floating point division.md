@@ -1,5 +1,7 @@
 ---
-tags: cpp, note
+tags:
+  - cpp
+  - note
 ---
 
 - It is easiest to think of the [[Arithmetic operators#^2747fe|division operator]] as having two different “modes”.

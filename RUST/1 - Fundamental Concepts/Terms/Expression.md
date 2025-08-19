@@ -1,5 +1,8 @@
 ---
-tags: rust, term, fundamental
+tags:
+  - rust
+  - term
+  - fundamental
 ---
 
 - **Expressions** evaluate to a resultant value. 

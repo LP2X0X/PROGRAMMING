@@ -1,5 +1,9 @@
 ---
-tags: js, constructor, function, fundamental
+tags:
+  - js
+  - constructor
+  - function
+  - fundamental
 ---
 
 - **Constructor functions** technically are regular functions. There are two conventions though:

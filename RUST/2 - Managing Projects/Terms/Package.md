@@ -1,5 +1,9 @@
 ---
-tags: rust, term, project_management, fundamental
+tags:
+  - rust
+  - term
+  - project_management
+  - fundamental
 ---
 
 - A _package_ is a bundle of one or more [[Crate|crates]] that provides a set of functionality. A package contains a _Cargo.toml_ file that describes how to build those crates.

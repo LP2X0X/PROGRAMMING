@@ -1,5 +1,8 @@
 ---
-tags: js, json, method
+tags:
+  - js
+  - json
+  - method
 ---
 
 - The JSON.stringify method converts a JavaScript object into a JSON string. The resulting `json` string is called a _JSON-encoded_ or _serialized_ or _stringified_ or _marshalled_ object.

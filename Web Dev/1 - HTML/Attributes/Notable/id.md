@@ -1,5 +1,9 @@
 ---
-tags: html, attribute, global, fundamental
+tags:
+  - html
+  - attribute
+  - global
+  - fundamental
 ---
 
 ### id

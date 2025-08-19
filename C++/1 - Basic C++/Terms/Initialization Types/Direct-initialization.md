@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 - Initializes an object from explicit set of constructor arguments.
 - The term **direct** is used because:

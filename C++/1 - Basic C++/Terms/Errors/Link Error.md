@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 A **link error** in C++ typically refers to issues that arise during the linking stage of [[Compilation Process#4. **Linking**|the compilation process]]. After your source code is compiled into object files, the linker combines those object files and resolves references between them. If something goes wrong at this stage, you get a link error.

@@ -1,5 +1,9 @@
 ---
-tags: js, function, interactive, fundamental
+tags:
+  - js
+  - function
+  - interactive
+  - fundamental
 ---
 
 - The function `confirm` shows a modal window with a `question` and two buttons: OK and Cancel.

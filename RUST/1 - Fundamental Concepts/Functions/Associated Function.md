@@ -1,5 +1,8 @@
 ---
-tags: rust, function, fundamental
+tags:
+  - rust
+  - function
+  - fundamental
 ---
 
 In Rust, an **associated function** is a function defined in an `impl` block **without** taking `self`, `&self`, or `&mut self` as its first parameter.

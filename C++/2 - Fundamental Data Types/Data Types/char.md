@@ -1,5 +1,8 @@
 ---
-tags: cpp, datatype, fundamental
+tags:
+  - cpp
+  - datatype
+  - fundamental
 ---
 
 - The **char** data type was designed to hold a single `character`. A **character** can be a single letter, number, symbol, or whitespace.

@@ -1,5 +1,7 @@
 ---
-tags: js, fundamental
+tags:
+  - js
+  - fundamental
 ---
 
 - JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.

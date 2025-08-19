@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 The **`useEffect` hook** in React lets you run **side effects** in function components. Side effects are things React components can’t do during rendering, such as:

@@ -1,5 +1,9 @@
 ---
-tags: js, term, scope, fundamental
+tags:
+  - js
+  - term
+  - scope
+  - fundamental
 ---
 
 - If a variable is declared inside a code block `{...}`, it’s only visible inside that block.

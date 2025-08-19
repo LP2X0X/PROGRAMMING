@@ -1,5 +1,7 @@
 ---
-tags: rust, distinguish
+tags:
+  - rust
+  - distinguish
 ---
 
 In Rust, `chars()` and `bytes()` are methods on `&str` (string slices), and they represent **two different ways to iterate** over the contents of a string:

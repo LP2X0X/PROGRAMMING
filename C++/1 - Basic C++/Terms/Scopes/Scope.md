@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - An [[Identifier|identifier]]’s **scope** determines where the identifier can be seen and used within the source code. 

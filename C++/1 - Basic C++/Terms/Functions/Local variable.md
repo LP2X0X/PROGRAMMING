@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - [[C++/1 - Basic C++/Terms/Core/Variable]] defined inside the body of a [[C++/1 - Basic C++/Terms/Core/Function|function]] are called **local variable**. [[C++/1 - Basic C++/Terms/Functions/Parameter]] is also generally considered to be a local variable. The identifier of a local variable has local [[Scope|scope]].

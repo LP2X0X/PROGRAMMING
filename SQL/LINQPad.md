@@ -1,5 +1,6 @@
 ---
-tags: sql
+tags:
+  - sql
 ---
 
 **LINQPad** is one of the **best tools** for practicing and learning **LINQ**, **C#**, and **SQL** (especially LINQ to SQL and Entity Framework). Many developers (including interviewers!) use it daily to test queries and snippets.

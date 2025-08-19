@@ -1,5 +1,9 @@
 ---
-tags: rust, datatype, string, fundamental
+tags:
+  - rust
+  - datatype
+  - string
+  - fundamental
 ---
 
 

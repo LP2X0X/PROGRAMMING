@@ -1,5 +1,8 @@
 ---
-tags: react, term, advance
+tags:
+  - react
+  - term
+  - advance
 ---
 
 - **Render logic** is the code that lives at the top level of component function.

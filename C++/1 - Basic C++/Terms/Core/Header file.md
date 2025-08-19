@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - Conventionally, **header files** are used to propagate a bunch of related [[Forward declaration|forward declarations]] into a code file.

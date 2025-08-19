@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 - A **data type** determines what kind of value the [[C++/1 - Basic C++/Terms/Core/Object|object]] will store.
 ```ad-note

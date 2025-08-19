@@ -1,5 +1,8 @@
 ---
-tags: js, datatype, fundamental
+tags:
+  - js
+  - datatype
+  - fundamental
 ---
 
 - A string in JavaScript must be surrounded by quotes.

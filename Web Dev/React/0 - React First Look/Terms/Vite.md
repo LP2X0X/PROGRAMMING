@@ -1,5 +1,7 @@
 ---
-tags: react, term
+tags:
+  - react
+  - term
 ---
 
 **Vite** (pronounced like “veet”) is a modern build tool for front-end development. It was created by **Evan You** (the creator of Vue.js) and is designed to be **faster and more efficient** than older tools like Webpack.

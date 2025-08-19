@@ -1,5 +1,8 @@
 ---
-tags: js, note, fundamental
+tags:
+  - js
+  - note
+  - fundamental
 ---
 
 - The important difference between [[OR| OR operator]] and [[null coalescing operator]]  is that:

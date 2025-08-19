@@ -1,5 +1,8 @@
 ---
-tags: js, nested, destructuring
+tags:
+  - js
+  - nested
+  - destructuring
 ---
 
 - If an object or an array contains other nested objects and arrays, we can use more complex left-side patterns to extract deeper portions:

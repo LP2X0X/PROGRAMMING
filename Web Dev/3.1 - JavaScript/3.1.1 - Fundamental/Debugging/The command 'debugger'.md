@@ -1,5 +1,8 @@
 ---
-tags: js, debug, fundamental
+tags:
+  - js
+  - debug
+  - fundamental
 ---
 
 - We can also pause the code by using the `debugger` command in it, like this:

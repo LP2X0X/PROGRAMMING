@@ -1,5 +1,8 @@
 ---
-tags: css, selector, fundamental
+tags:
+  - css
+  - selector
+  - fundamental
 ---
 
 ## 🔹 Listing Selector

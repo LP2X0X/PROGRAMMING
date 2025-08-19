@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - When JavaScript was first created, there were no classes, but it was still possible to share behaviors between objects using **prototype-based inheritance**.

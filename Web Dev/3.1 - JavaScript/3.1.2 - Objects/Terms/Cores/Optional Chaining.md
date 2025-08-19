@@ -1,5 +1,8 @@
 ---
-tags: js, syntax, fundamental
+tags:
+  - js
+  - syntax
+  - fundamental
 ---
 
 ### 🔍 Optional Chaining (`?.`) in JavaScript

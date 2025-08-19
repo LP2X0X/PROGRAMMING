@@ -1,5 +1,8 @@
 ---
-tags: rust, keyword, fundamental
+tags:
+  - rust
+  - keyword
+  - fundamental
 ---
 
 - Constants aren’t just immutable by default—they’re always immutable. You declare constants using the `const` keyword instead of the `let` keyword, and the type of the value _must_ be annotated.

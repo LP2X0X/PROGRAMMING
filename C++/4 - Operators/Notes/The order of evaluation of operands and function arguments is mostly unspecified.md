@@ -1,5 +1,7 @@
 ---
-tags: cpp, note
+tags:
+  - cpp
+  - note
 ---
 
 ---

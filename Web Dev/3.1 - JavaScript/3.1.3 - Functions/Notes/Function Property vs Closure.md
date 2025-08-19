@@ -1,5 +1,7 @@
 ---
-tags: js, distinguish
+tags:
+  - js
+  - distinguish
 ---
 
 ## 🧠 **Closures vs Function Properties** in JavaScript

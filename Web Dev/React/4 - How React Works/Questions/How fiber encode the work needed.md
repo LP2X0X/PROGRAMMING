@@ -1,5 +1,7 @@
 ---
-tags: react, question
+tags:
+  - react
+  - question
 ---
 
 A **fiber node** is not just a snapshot of a component. It _encodes the work React still needs to do_ for that part of the tree. Here’s how:

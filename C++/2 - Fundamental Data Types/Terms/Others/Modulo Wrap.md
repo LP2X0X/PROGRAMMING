@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - Any number bigger than the largest number representable by the type simply “wraps around” (sometimes called “**modulo wrapping**”).

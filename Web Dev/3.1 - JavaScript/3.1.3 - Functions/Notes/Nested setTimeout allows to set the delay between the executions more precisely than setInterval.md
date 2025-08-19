@@ -1,5 +1,7 @@
 ---
-tags: js, note
+tags:
+  - js
+  - note
 ---
 
 - Let’s compare two code fragments. The first one uses `setInterval`:

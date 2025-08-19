@@ -1,5 +1,8 @@
 ---
-tags: js, keyword, fundamental
+tags:
+  - js
+  - keyword
+  - fundamental
 ---
 
 In JavaScript, the static keyword is used inside classes to define **static methods** or **static properties**. These belong to the **class itself**, **not to instances** of the class.

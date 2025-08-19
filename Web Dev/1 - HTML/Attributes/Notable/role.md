@@ -1,5 +1,8 @@
 ---
-tags: html, attribute, global
+tags:
+  - html
+  - attribute
+  - global
 ---
 
 The `role` attribute is used to define the **purpose** or **semantic meaning** of an HTML element, especially for **assistive technologies** like screen readers.

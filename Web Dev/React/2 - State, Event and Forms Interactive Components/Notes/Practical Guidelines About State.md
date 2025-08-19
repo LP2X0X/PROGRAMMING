@@ -1,5 +1,8 @@
 ---
-tags: react, state, guideline
+tags:
+  - react
+  - state
+  - guideline
 ---
 
 👉 **Use a state variable for any data that the component should keep track of (“remember”) over time.** This is data that will change at some point. In Vanilla JS, that’s a let variable, or an [] or {}.

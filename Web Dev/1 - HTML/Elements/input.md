@@ -1,5 +1,8 @@
 ---
-tags: html, element, fundamental
+tags:
+  - html
+  - element
+  - fundamental
 ---
 
 The \<input> element in HTML is used to **create interactive form controls** that accept user input. It’s super versatile and used in forms for everything from text fields to checkboxes.

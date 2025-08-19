@@ -1,5 +1,8 @@
 ---
-tags: rust, keyword, fundamental
+tags:
+  - rust
+  - keyword
+  - fundamental
 ---
 
 - The primary use for the `let` keyword is in `let` statements, which are used to introduce a new set of variables into the current scope, as given by a pattern.

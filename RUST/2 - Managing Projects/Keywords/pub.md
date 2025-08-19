@@ -1,5 +1,8 @@
 ---
-tags: rust, keyword, fundamental
+tags:
+  - rust
+  - keyword
+  - fundamental
 ---
 
 The `pub` keyword in Rust is used to make **items accessible outside their current module** — it controls **visibility**.

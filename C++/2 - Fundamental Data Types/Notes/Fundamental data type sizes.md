@@ -1,5 +1,8 @@
 ---
-tags: cpp, note, fundamental
+tags:
+  - cpp
+  - note
+  - fundamental
 ---
 
 - The C++ standard does not define the exact size (in bits) of any of the fundamental types. Instead, the standard says the following:

@@ -1,5 +1,8 @@
 ---
-tags: js, operator, fundamental
+tags:
+  - js
+  - operator
+  - fundamental
 ---
 
 - In classical programming, the logical OR is meant to manipulate boolean values only. If any of its arguments are `true`, it returns `true`, otherwise it returns `false`.

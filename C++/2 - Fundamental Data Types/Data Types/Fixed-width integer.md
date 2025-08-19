@@ -1,5 +1,8 @@
 ---
-tags: cpp, datatype, fundamental
+tags:
+  - cpp
+  - datatype
+  - fundamental
 ---
 
 - Since [[C++/2 - Fundamental Data Types/Terms/Core/Integer#Why isn’t the size of the integer types fixed?|normal integer types does not have fixed memory]], C++11 provides an alternate set of integer types that are guaranteed to be the same size on any architecture. Because the size of these integers is fixed, they are called **fixed-width integers**.

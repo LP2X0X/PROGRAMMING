@@ -1,5 +1,8 @@
 ---
-tags: html, element, fundamental
+tags:
+  - html
+  - element
+  - fundamental
 ---
 
 In HTML and JavaScript, a label is used to provide a user-friendly description for form controls (like inputs, checkboxes, radios, etc.). It improves usability and accessibility, especially for screen readers.

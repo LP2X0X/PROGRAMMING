@@ -1,5 +1,8 @@
 ---
-tags: rust, file_extension, fundamental
+tags:
+  - rust
+  - file_extension
+  - fundamental
 ---
 
 ## **📄 What is Cargo.toml ?**

@@ -1,5 +1,9 @@
 ---
-tags: js, string, methods, fundamental
+tags:
+  - js
+  - string
+  - methods
+  - fundamental
 ---
 
 Here's a **list of frequently used `String` methods** in JavaScript, grouped by purpose, with examples:

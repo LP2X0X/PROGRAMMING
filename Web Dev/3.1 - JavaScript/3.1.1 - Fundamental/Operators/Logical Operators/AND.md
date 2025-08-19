@@ -1,5 +1,8 @@
 ---
-tags: js, operator, fundamental
+tags:
+  - js
+  - operator
+  - fundamental
 ---
 
 - In classical programming, AND returns `true` if both operands are truthy and `false` otherwise.

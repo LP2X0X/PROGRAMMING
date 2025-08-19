@@ -1,5 +1,7 @@
 ---
-tags: js, note
+tags:
+  - js
+  - note
 ---
 
 - String concatenation in js work similarly to other languages:

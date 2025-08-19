@@ -1,5 +1,8 @@
 ---
-tags: css, note, convention
+tags:
+  - css
+  - note
+  - convention
 ---
 
 ## 💡 What is BEM?

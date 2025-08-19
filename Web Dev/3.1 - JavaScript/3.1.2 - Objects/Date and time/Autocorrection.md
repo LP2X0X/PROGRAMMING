@@ -1,5 +1,7 @@
 ---
-tags: js, date
+tags:
+  - js
+  - date
 ---
 
 - The _autocorrection_ is a very handy feature of `Date` objects. We can set out-of-range values, and it will auto-adjust itself.

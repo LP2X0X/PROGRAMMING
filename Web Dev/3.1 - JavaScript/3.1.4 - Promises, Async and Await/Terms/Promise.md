@@ -1,5 +1,8 @@
 ---
-tags: react, term, advance
+tags:
+  - react
+  - term
+  - advance
 ---
 
 - A _promise_ is a special JavaScript object that links the “producing code” and the “consuming code” together. In terms of our analogy: this is the “subscription list”. The “producing code” takes whatever time it needs to produce the promised result, and the “promise” makes that result available to all of the subscribed code when it’s ready.
@@ -50,3 +53,109 @@ tags: react, term, advance
 
 #### Reject with `Error` objects 
 - In case something goes wrong, the executor should call `reject`. That can be done with any type of argument (just like `resolve`). But it is recommended to use `Error` objects (or objects that inherit from `Error`).
+
+#### The `state` and `result` are internal
+- The properties `state` and `result` of the Promise object are internal. We can’t directly access them. We can use the methods `.then`/`.catch`/`.finally` for that.
+
+---
+
+### Consumers
+
+- A Promise object serves as a link between the executor and the consuming functions, which will receive the result or error. Consuming functions can be registered (subscribed) using the methods `.then` and `.catch`.
+
+#### then
+
+- The most important, fundamental one is `.then`. 
+	- The first argument of `.then` is a function that runs when the promise is resolved and receives the result.
+	- The second argument of `.then` is a function that runs when the promise is rejected and receives the error.
+	```js
+	promise.then(
+	  function(result) { /* handle a successful result */ },
+	  function(error) { /* handle an error */ }
+	);
+	```
+
+- For instance, here’s a reaction to a successfully resolved promise:
+	```js
+	let promise = new Promise(function(resolve, reject) {
+	  setTimeout(() => resolve("done!"), 1000);
+	});
+	
+	// resolve runs the first function in .then
+	promise.then(
+	  result => alert(result), // shows "done!" after 1 second
+	  error => alert(error) // doesn't run
+	);
+	```
+
+- And in the case of a rejection, the second one:
+	```js
+	let promise = new Promise(function(resolve, reject) {
+	  setTimeout(() => reject(new Error("Whoops!")), 1000);
+	});
+	
+	// reject runs the second function in .then
+	promise.then(
+	  result => alert(result), // doesn't run
+	  error => alert(error) // shows "Error: Whoops!" after 1 second
+	);
+	```
+
+```ad-note
+If we’re interested only in successful completions, then we can provide only one function argument to `.then`:
+```
+
+#### catch
+
+- If we’re interested only in errors, then we can use `null` as the first argument: `.then(null, errorHandlingFunction)`. Or we can use `.catch(errorHandlingFunction)`, which is exactly the same:
+	```js
+	let promise = new Promise((resolve, reject) => {
+	  setTimeout(() => reject(new Error("Whoops!")), 1000);
+	});
+	
+	// .catch(f) is the same as promise.then(null, f)
+	promise.catch(alert); // shows "Error: Whoops!" after 1 second
+	```
+- The call `.catch(f)` is a complete analog of `.then(null, f)`, it’s just a shorthand.
+
+#### finally
+
+- The call `.finally(f)` is similar to `.then(f, f)` in the sense that `f` runs always, when the promise is settled: be it resolve or reject.
+- The idea of `finally` is to set up a handler for performing cleanup/finalizing after the previous operations are complete. E.g. stopping loading indicators, closing no longer needed connections, etc.
+```js
+new Promise((resolve, reject) => {
+  /* do something that takes time, and then call resolve or maybe reject */
+})
+  // runs when the promise is settled, doesn't matter successfully or not
+  .finally(() => stop loading indicator)
+  // so the loading indicator is always stopped before we go on
+  .then(result => show result, err => show error)
+```
+
+</br>
+
+- There are important differences:
+	1. A `finally` handler has no arguments. In `finally` we don’t know whether the promise is successful or not. That’s all right, as our task is usually to perform “general” finalizing procedures.
+	    
+	2. A `finally` handler “passes through” the result or error to the next suitable handler. For instance, here the result is passed through `finally` to `then`:
+		```js
+		new Promise((resolve, reject) => {
+		  setTimeout(() => resolve("value"), 2000);
+		})
+		  .finally(() => alert("Promise ready")) // triggers first
+		  .then(result => alert(result)); // <-- .then shows "value"
+		  
+		new Promise((resolve, reject) => {
+		  throw new Error("error");
+		})
+		  .finally(() => alert("Promise ready")) // triggers first
+		  .catch(err => alert(err));  // <-- .catch shows the error
+		```
+		
+	1. A `finally` handler also shouldn’t return anything. If it does, the returned value is silently ignored. The only exception to this rule is when a `finally` handler throws an error. Then this error goes to the next handler, instead of any previous outcome.
+
+```ad-summary
+A `finally` handler doesn’t get the outcome of the previous handler (it has no arguments). This outcome is passed through instead, to the next suitable handler.
+If a `finally` handler returns something, it’s ignored.
+When `finally` throws an error, then the execution goes to the nearest error handler.
+```

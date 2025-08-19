@@ -1,5 +1,7 @@
 ---
-tags: algorithms, data_structure
+tags:
+  - algorithms
+  - data_structure
 ---
 
 ### Array

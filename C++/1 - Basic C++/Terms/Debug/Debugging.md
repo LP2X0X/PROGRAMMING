@@ -1,5 +1,7 @@
 ---
-tags: cpp, tip
+tags:
+  - cpp
+  - tip
 ---
 
 Debugging involves identifying, analyzing, and fixing bugs or errors in software. Here are some common debugging terms you might encounter:

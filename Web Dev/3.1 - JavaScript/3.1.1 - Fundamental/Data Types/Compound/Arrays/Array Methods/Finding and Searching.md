@@ -1,5 +1,8 @@
 ---
-tags: js, array, methods
+tags:
+  - js
+  - array
+  - methods
 ---
 
 ### 🔢 **`indexOf()`** – Find the **first** index of a value.

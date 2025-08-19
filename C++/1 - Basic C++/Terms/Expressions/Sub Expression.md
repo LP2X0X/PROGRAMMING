@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - A **sub expression** is an [[C++/1 - Basic C++/Terms/Expressions/Expression|expression]] used as an operand. 

@@ -1,5 +1,9 @@
 ---
-tags: js, destructuring, object, fundamental
+tags:
+  - js
+  - destructuring
+  - object
+  - fundamental
 ---
 
 - The basic syntax is:

@@ -1,5 +1,8 @@
 ---
-tags: react, prop, fundamental
+tags:
+  - react
+  - prop
+  - fundamental
 ---
 
 In React, **event-related props** are props that handle user interactions — like clicks, key presses, form submissions, and more. These are passed to JSX elements (or custom components) to define behavior when events happen.

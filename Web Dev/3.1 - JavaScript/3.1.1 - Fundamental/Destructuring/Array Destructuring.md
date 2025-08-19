@@ -1,5 +1,9 @@
 ---
-tags: js, destructuring, array, fundamental
+tags:
+  - js
+  - destructuring
+  - array
+  - fundamental
 ---
 
 - Here’s an example of how an array is destructured into variables:

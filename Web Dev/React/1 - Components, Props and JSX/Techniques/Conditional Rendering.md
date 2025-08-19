@@ -1,5 +1,8 @@
 ---
-tags: react, technique, fundamental
+tags:
+  - react
+  - technique
+  - fundamental
 ---
 
 ### 🔷 Conditional Rendering in React

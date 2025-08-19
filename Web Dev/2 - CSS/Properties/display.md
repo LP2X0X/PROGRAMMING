@@ -1,5 +1,8 @@
 ---
-tags: css, property, fundamental
+tags:
+  - css
+  - property
+  - fundamental
 ---
 
 The display property in CSS controls how an HTML element is displayed on the page. It’s one of the most fundamental properties in layout design.

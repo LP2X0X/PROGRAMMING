@@ -1,5 +1,8 @@
 ---
-tags: rust, string, fundamental
+tags:
+  - rust
+  - string
+  - fundamental
 ---
 
 - Another point about UTF-8 is that there are actually three relevant ways to look at strings from Rust’s perspective: as **bytes**, **scalar values**, and **grapheme clusters** (the closest thing to what we would call _letters_).

@@ -1,5 +1,8 @@
 ---
-tags: js, operator, fundamental
+tags:
+  - js
+  - operator
+  - fundamental
 ---
 
 - The `typeof` operator returns the type of the operand. It’s useful when we want to process values of different types differently or just want to do a quick check.

@@ -1,5 +1,8 @@
 ---
-tags: js, conversion, fundamental
+tags:
+  - js
+  - conversion
+  - fundamental
 ---
 
 - Numeric conversion in mathematical functions and expressions happens automatically. For example, when division `/` is applied to non-numbers:

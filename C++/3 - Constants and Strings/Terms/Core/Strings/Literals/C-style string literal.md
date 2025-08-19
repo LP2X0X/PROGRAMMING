@@ -1,5 +1,9 @@
 ---
-tags: cpp, string, literal, fundamental
+tags:
+  - cpp
+  - string
+  - literal
+  - fundamental
 ---
 
 - In programming, a **string** is a collection of sequential characters used to represent text (such as names, words, and sentences). Such strings are often called **C strings** or **C-style strings**, as they are inherited from the C-language.

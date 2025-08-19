@@ -1,5 +1,8 @@
 ---
-tags: cpp, distinguish, fundamental
+tags:
+  - cpp
+  - distinguish
+  - fundamental
 ---
 
 - In mathematics, an “integer” is a number with no decimal or fractional part, including negative and positive numbers and zero. 

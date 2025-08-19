@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - In JavaScript, a **label** is a named identifier followed by a colon (:) that can be used with **break** or **continue** to control flow in **nested loops**.

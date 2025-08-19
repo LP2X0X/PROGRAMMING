@@ -1,5 +1,8 @@
 ---
-tags: js, array, overview
+tags:
+  - js
+  - array
+  - overview
 ---
 
 In JavaScript, arrays come with many powerful and frequently used methods.

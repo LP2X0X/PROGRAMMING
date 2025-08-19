@@ -1,5 +1,7 @@
 ---
-tags: algorithms, data_structure
+tags:
+  - algorithms
+  - data_structure
 ---
 
 A **stack** is a fundamental data structure that follows the **LIFO (Last In, First Out)** principle. That means the **last element added** to the stack is the **first one removed**.

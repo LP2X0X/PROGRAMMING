@@ -1,5 +1,8 @@
 ---
-tags: html, element, fundamental
+tags:
+  - html
+  - element
+  - fundamental
 ---
 
 The \<path> element in SVG is one of the **most powerful and flexible** elements — it lets you draw **complex shapes** using a set of **drawing commands** (like move, line, curve, arc).

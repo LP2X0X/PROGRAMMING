@@ -1,5 +1,7 @@
 ---
-tags: cpp, fundamental
+tags:
+  - cpp
+  - fundamental
 ---
 
 ```ad-note

@@ -1,5 +1,8 @@
 ---
-tags: css, note, question
+tags:
+  - css
+  - note
+  - question
 ---
 
 ## ✅ Should everything be in `rem`?

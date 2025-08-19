@@ -1,5 +1,8 @@
 ---
-tags: react, prop, fundamental
+tags:
+  - react
+  - prop
+  - fundamental
 ---
 
 ## **🔹 What is the key prop?**

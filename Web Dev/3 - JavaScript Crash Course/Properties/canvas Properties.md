@@ -1,5 +1,8 @@
 ---
-tags: js, property, fundamental
+tags:
+  - js
+  - property
+  - fundamental
 ---
 
 - Here’s a detailed overview of its most important **properties**:

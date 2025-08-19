@@ -1,5 +1,8 @@
 ---
-tags: rust, keyword, fundamental
+tags:
+  - rust
+  - keyword
+  - fundamental
 ---
 
 - There’s another solution to the problem of bringing two types of the same name into the same scope with `use`: after the path, we can specify `as` and a new local name, or _alias_, for the type.

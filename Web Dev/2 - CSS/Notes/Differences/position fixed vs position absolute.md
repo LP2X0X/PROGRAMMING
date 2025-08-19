@@ -1,5 +1,8 @@
 ---
-tags: css, note, distinguish
+tags:
+  - css
+  - note
+  - distinguish
 ---
 
 The position: fixed and position: absolute CSS properties are both used to remove an element from the normal document flow and position it relative to something — but **what they’re relative to** is the key difference:

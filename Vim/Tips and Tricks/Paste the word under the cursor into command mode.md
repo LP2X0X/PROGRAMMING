@@ -1,5 +1,7 @@
 ---
-tags: vim, trick
+tags:
+  - vim
+  - trick
 ---
 
 In **Vim**, you can **quickly paste the word under the cursor into command mode** using the following trick:

@@ -1,5 +1,8 @@
 ---
-tags: js, datatype, fundamental
+tags:
+  - js
+  - datatype
+  - fundamental
 ---
 
 - `BigInt` type was recently added to the language to represent integers of arbitrary length. This datatype helps remove the limitation of fundamental [[Number|number]] type.

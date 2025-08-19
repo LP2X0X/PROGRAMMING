@@ -1,5 +1,8 @@
 ---
-tags: react, technique, fundamental
+tags:
+  - react
+  - technique
+  - fundamental
 ---
 
 In React, rendering a **list** means displaying multiple items dynamically from an **array** using `.map()`.

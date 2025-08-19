@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - A **higher-order function** is a function that takes another function as an argument, or that outputs another function as its return value.

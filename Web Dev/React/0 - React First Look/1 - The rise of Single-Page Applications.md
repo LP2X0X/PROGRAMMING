@@ -1,5 +1,7 @@
 ---
-tags: react, introduction
+tags:
+  - react
+  - introduction
 ---
 ![[Pasted image 20250628133321.png|center]]
 - Web used to be assembled in back end and the result html, css and javascript code is send to client for browser to render.

@@ -1,5 +1,9 @@
 ---
-tags: cpp, special, value, fundamental
+tags:
+  - cpp
+  - special
+  - value
+  - fundamental
 ---
 
 - **Signed zero**, meaning there are separate representations for “positive zero” (+0.0) and “negative zero” (-0.0).

@@ -1,5 +1,8 @@
 ---
-tags: react, note, advance
+tags:
+  - react
+  - note
+  - advance
 ---
 
 - When you call multiple setState (or useState setters) **inside the same function execution context**, React **groups them into one render** instead of re-rendering for each call.

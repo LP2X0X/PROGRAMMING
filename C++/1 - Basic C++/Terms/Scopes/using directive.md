@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 `using` is a **C++ language keyword**, specifically part of the **declarative syntax** used during the **compilation phase**, not preprocessing.

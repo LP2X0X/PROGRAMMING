@@ -1,5 +1,8 @@
 ---
-tags: web dev, tip
+tags:
+  - web
+  - dev
+  - tip
 ---
 
 Since you’re trying to learn **React, HTML, CSS, JavaScript, TypeScript, and DSA** at 30–35 hrs/week, the main challenge isn’t _finding_ time — it’s **organizing** it so your brain retains it all without burning out.

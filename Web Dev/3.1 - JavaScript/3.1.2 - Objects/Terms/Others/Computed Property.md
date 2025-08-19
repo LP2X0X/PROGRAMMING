@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - We can use square brackets in an object literal, when creating an object. That’s called _computed properties_.

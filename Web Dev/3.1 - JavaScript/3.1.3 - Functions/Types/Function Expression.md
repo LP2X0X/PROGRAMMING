@@ -1,5 +1,9 @@
 ---
-tags: js, function, term, fundamental
+tags:
+  - js
+  - function
+  - term
+  - fundamental
 ---
 
 - A **function expression**, also known as a *function literal*, is a code literal whose value is a function.

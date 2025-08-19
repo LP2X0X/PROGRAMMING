@@ -1,5 +1,9 @@
 ---
-tags: js, method, object, fundamental
+tags:
+  - js
+  - method
+  - object
+  - fundamental
 ---
 
 In JavaScript, a **method** is simply a **function that is a property of an object**. It's how you define behavior for objects.

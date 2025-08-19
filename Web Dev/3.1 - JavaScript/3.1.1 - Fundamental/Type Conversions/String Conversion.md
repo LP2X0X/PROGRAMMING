@@ -1,5 +1,8 @@
 ---
-tags: js, conversion, fundamental
+tags:
+  - js
+  - conversion
+  - fundamental
 ---
 
 - String conversion happens when we need the string form of a value. For example, `alert(value)` does it to show the value.

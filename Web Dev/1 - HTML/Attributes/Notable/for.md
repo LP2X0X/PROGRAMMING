@@ -1,5 +1,7 @@
 ---
-tags: html, attribute
+tags:
+  - html
+  - attribute
 ---
 
 The `for` attribute is used in **label elements** to bind a label to a specific **form control** by its `id`.

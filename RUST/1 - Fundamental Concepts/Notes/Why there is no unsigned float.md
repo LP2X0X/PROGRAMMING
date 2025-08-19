@@ -1,5 +1,8 @@
 ---
-tags: rust, cpp, question
+tags:
+  - rust
+  - cpp
+  - question
 ---
 
 ### ✅ 1. **The Sign Bit is Built-In**

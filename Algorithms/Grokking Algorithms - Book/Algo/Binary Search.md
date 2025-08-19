@@ -1,5 +1,8 @@
 ---
-tags: algorithms, grokking, basic
+tags:
+  - algorithms
+  - grokking
+  - basic
 ---
 
 ### Summary

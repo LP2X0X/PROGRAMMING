@@ -1,5 +1,8 @@
 ---
-tags: js, distinguish, fundamental
+tags:
+  - js
+  - distinguish
+  - fundamental
 ---
 
 ## **📄 1. Definitions**

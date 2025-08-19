@@ -1,5 +1,7 @@
 ---
-tags: cpp, term
+tags:
+  - cpp
+  - term
 ---
 - The main memory in a computer is called **Random Access Memory** or RAM for short.
 ```ad-note

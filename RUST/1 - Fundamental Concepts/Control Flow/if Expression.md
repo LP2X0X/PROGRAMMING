@@ -1,5 +1,9 @@
 ---
-tags: rust, control, flow, fundamental
+tags:
+  - rust
+  - control
+  - flow
+  - fundamental
 ---
 
 - All `if` expressions start with the keyword `if`, followed by a condition.

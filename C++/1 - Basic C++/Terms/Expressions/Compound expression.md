@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - In casual language, a **compound expression** is an expression that contains two or more uses of operators. 

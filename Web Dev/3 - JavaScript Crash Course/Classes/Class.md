@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 In JavaScript, a class is a blueprint for creating objects with pre-defined properties and methods. Classes were introduced in ECMAScript 2015 (also known as ES6) and provide a cleaner and more intuitive syntax for creating constructor functions and inheritance compared to the older prototype-based approach.

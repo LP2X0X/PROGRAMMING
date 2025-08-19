@@ -1,5 +1,8 @@
 ---
-tags: html, note, fundamental
+tags:
+  - html
+  - note
+  - fundamental
 ---
 
 A **nested layout technique** in HTML/CSS means placing layout containers inside each other to build more complex, responsive structures. Think of it like boxes inside boxes—each controlling part of the layout.

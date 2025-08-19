@@ -1,5 +1,8 @@
 ---
-tags: react, term, advance
+tags:
+  - react
+  - term
+  - advance
 ---
 
 ## **🔹 What is a Synthetic Event?**

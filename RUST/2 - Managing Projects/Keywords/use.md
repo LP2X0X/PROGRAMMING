@@ -1,5 +1,8 @@
 ---
-tags: rust, keyword, fundamental
+tags:
+  - rust
+  - keyword
+  - fundamental
 ---
 
 In Rust, the `use` keyword is used to **bring items (functions, structs, modules, traits, etc.) into scope** — kind of like `import` in other languages, but with more precise control.

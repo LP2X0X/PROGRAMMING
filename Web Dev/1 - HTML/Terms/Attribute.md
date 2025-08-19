@@ -1,5 +1,8 @@
 ---
-tags: html, term, fundamental
+tags:
+  - html
+  - term
+  - fundamental
 ---
 
 In HTML, an **attribute** provides **additional information** about an element. It always appears **in the opening tag**, and it’s written as a key-value pair.

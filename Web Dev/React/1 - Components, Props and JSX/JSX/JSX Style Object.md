@@ -1,5 +1,8 @@
 ---
-tags: react, jsx, fundamental
+tags:
+  - react
+  - jsx
+  - fundamental
 ---
 
 In **JSX**, CSS styles are written as **JavaScript objects**, not strings. This is because JSX is JavaScript — not HTML.

@@ -1,5 +1,8 @@
 ---
-tags: html, term, fundamental
+tags:
+  - html
+  - term
+  - fundamental
 ---
 
 - HTML or **HyperText Markup Language** is a markup language that web developers use to **structure and describe the content** of a webpage _(not a programming language)_

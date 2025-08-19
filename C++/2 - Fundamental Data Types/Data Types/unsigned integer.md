@@ -1,5 +1,8 @@
 ---
-tags: cpp, datatype, fundamental
+tags:
+  - cpp
+  - datatype
+  - fundamental
 ---
 
 - **Unsigned integers** are [[C++/2 - Fundamental Data Types/Terms/Core/Integer|integers]] that can only hold non-negative whole numbers.

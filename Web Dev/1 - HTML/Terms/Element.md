@@ -1,5 +1,8 @@
 ---
-tags: html, term, fundamental
+tags:
+  - html
+  - term
+  - fundamental
 ---
 
 - An **element** is a complete structure consisting of an opening tag, content, and a closing tag. You use element to enclose, or wrap, different parts of the content to make it appear or act in a certain way.

@@ -1,5 +1,7 @@
 ---
-tags: rust, distinguish
+tags:
+  - rust
+  - distinguish
 ---
 
 ## 🧱 1. Unicode Scalar Values

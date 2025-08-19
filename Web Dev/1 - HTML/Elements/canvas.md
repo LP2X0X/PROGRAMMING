@@ -1,5 +1,8 @@
 ---
-tags: html, element, fundamental
+tags:
+  - html
+  - element
+  - fundamental
 ---
 
 - In JavaScript, the **canvas** element is used to draw graphics on the fly — from simple shapes to interactive games, charts, or image processing. It’s part of the HTML5 spec and is controlled via JavaScript.

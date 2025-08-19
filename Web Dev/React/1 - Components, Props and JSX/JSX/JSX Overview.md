@@ -1,5 +1,9 @@
 ---
-tags: react, jsx, summary, fundamental
+tags:
+  - react
+  - jsx
+  - summary
+  - fundamental
 ---
 
 ### **🔷 What is JSX in React?**

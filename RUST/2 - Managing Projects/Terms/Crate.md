@@ -1,5 +1,9 @@
 ---
-tags: rust, term, project_management, fundamental
+tags:
+  - rust
+  - term
+  - project_management
+  - fundamental
 ---
 
 - A _crate_ is the smallest amount of code that the Rust compiler considers at a time.

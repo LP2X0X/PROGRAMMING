@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 - On the initial render, React processes the entire component tree and converts it into a single large React element tree. This structure, known as the **virtual DOM**, is simply a hierarchy of React elements generated from all component instances in the tree.

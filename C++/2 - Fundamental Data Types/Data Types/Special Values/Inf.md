@@ -1,5 +1,9 @@
 ---
-tags: cpp, special, value, fundamental
+tags:
+  - cpp
+  - special
+  - value
+  - fundamental
 ---
 
 - **Inf**, which represents infinity. Inf is signed, and can be positive (+Inf) or negative (-Inf).

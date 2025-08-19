@@ -1,5 +1,7 @@
 ---
-tags: js, note
+tags:
+  - js
+  - note
 ---
 
 - JavaScript doesn’t allow you to customize how operators work on objects. Unlike some other programming languages, such as Ruby or C++, we can’t implement a special object method to handle addition (or other operators).

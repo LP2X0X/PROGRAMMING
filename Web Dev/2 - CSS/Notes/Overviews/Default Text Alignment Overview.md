@@ -1,5 +1,8 @@
 ---
-tags: css, note, summary
+tags:
+  - css
+  - note
+  - summary
 ---
 
 By default, CSS aligns inline and inline-block elements based on text alignment and the **baseline** of text content. Here’s how it works:

@@ -1,5 +1,9 @@
 ---
-tags: rust, control, flow, fundamental
+tags:
+  - rust
+  - control
+  - flow
+  - fundamental
 ---
 
 In Rust, the `for` loop is a powerful and safe way to **iterate over values** — especially ranges, collections like vectors, or iterators.

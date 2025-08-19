@@ -1,5 +1,7 @@
 ---
-tags: rust, fundamental
+tags:
+  - rust
+  - fundamental
 ---
 
 - We can define functions to have _parameters_, which are special variables that are part of a function’s signature.

@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - We can override [[float#Outputting|the default precision of float]] by using an `output manipulator` function named `std::setprecision()`.

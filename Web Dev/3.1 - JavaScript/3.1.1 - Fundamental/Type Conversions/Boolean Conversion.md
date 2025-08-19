@@ -1,5 +1,8 @@
 ---
-tags: js, conversion, fundamental
+tags:
+  - js
+  - conversion
+  - fundamental
 ---
 
 - Boolean conversion is the simplest one. It happens in logical operations (later we’ll meet condition tests and other similar things) but can also be performed explicitly with a call to `Boolean(value)`.

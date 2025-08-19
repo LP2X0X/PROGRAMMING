@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 - **SVG** (or Scalable Vector Graphic) is a way of defining images using points, lines, and curves, rather than pixels. These images are known as vector graphics.

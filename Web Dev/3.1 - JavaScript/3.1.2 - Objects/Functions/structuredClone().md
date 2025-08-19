@@ -1,5 +1,8 @@
 ---
-tags: js, function, fundamental
+tags:
+  - js
+  - function
+  - fundamental
 ---
 
 - The call `structuredClone(object)` clones the `object` with all nested properties.

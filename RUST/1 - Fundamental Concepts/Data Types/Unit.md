@@ -1,5 +1,8 @@
 ---
-tags: rust, datatype, fundamental
+tags:
+  - rust
+  - datatype
+  - fundamental
 ---
 
 - In Rust, **`unit`** refers to the **unit type**, written as `()` — a type that represents "nothing" or "no meaningful value".

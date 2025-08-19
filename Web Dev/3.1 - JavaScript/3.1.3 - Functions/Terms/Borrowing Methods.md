@@ -1,5 +1,8 @@
 ---
-tags: js, term, advance
+tags:
+  - js
+  - term
+  - advance
 ---
 
 ### 🔄 **Borrowing Methods in JavaScript — In Detail**

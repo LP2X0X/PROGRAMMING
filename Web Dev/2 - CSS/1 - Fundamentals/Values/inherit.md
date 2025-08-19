@@ -1,5 +1,8 @@
 ---
-tags: css, value, fundamental
+tags:
+  - css
+  - value
+  - fundamental
 ---
 
 The **`inherit`** value in CSS is a special keyword you can use to make an element explicitly take a property’s computed value from its parent element, even if that property does not normally inherit by default.

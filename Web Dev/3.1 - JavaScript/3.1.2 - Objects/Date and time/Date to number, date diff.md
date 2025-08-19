@@ -1,5 +1,8 @@
 ---
-tags: js, date, feature
+tags:
+  - js
+  - date
+  - feature
 ---
 
 - When a `Date` object is converted to number, it becomes the timestamp same as [[Access Components#^11faa2|date.getTime()]]:

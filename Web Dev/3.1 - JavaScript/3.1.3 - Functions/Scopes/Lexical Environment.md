@@ -1,5 +1,8 @@
 ---
-tags: js, term, advanced
+tags:
+  - js
+  - term
+  - advanced
 ---
 
 ### Step 1. Variables

@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - An **operator** in C++ is a **syntactic element** that performs an operation such as arithmetic, logical comparison, type conversion, or memory access. Operators may be **built-in** or **overloaded** by the user.

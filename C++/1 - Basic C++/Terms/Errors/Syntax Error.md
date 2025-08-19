@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 A "syntax error" in C++ means there's something wrong with how your source code is written—it's not following the rules of the C++ language grammar. This prevents the compiler from understanding or translating your code.

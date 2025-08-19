@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 ```cpp
 int width = 5; // copy-initialization of value 5 into variable width

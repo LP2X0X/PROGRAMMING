@@ -1,5 +1,8 @@
 ---
-tags: react, term, fundamental
+tags:
+  - react
+  - term
+  - fundamental
 ---
 
 - **Prop drilling** is the term used in React (and other component-based frameworks) to describe the process of passing data or functions through multiple layers of components — even if some of those intermediate components don’t actually need them — just to get the values to a deeply nested child.

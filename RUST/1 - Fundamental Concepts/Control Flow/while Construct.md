@@ -1,5 +1,9 @@
 ---
-tags: rust, control, flow, fundamental
+tags:
+  - rust
+  - control
+  - flow
+  - fundamental
 ---
 
 - The while keyword helps evaluate a condition within a loop. While a condition evaluates to `true`, the code runs; otherwise, it exits the loop.

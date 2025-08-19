@@ -1,5 +1,8 @@
 ---
-tags: rust, term, fundamental
+tags:
+  - rust
+  - term
+  - fundamental
 ---
 
 In Rust, **shadowing** is a technique that lets you **declare a new variable with the same name** as a previous one, effectively **replacing it in the current scope**.

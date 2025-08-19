@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - While the [[The as-if rule|as-if rule]] is great for improving performance, it leaves us reliant on the sophistication of the compiler to actually determine what can evaluate at compile-time.

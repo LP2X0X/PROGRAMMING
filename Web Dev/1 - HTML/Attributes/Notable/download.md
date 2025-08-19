@@ -1,5 +1,7 @@
 ---
-tags: html, attribute
+tags:
+  - html
+  - attribute
 ---
 
 The `download` attribute on an `<a>` tag tells the browser to **download** the linked file instead of navigating to it.

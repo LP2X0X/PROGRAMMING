@@ -1,5 +1,7 @@
 ---
-tags: js, json
+tags:
+  - js
+  - json
 ---
 
 In JavaScript, the `toJSON()` method is **automatically called** when you use `JSON.stringify()` on an object.

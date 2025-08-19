@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - In C++, an **incomplete type** is a type that has been declared but not yet fully defined. You can declare pointers or references to it, but you **cannot create instances** or access members until the type is complete.

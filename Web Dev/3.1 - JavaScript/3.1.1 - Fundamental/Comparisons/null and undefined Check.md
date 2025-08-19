@@ -1,5 +1,7 @@
 ---
-tags: js, comparison
+tags:
+  - js
+  - comparison
 ---
 
 In JavaScript, `null` and `undefined` are two distinct types that both represent "no value", but they behave differently. Here's a **clear comparison and checklist**:

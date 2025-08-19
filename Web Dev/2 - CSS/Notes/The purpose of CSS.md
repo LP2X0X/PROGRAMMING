@@ -1,5 +1,8 @@
 ---
-tags: css, note, fundamental
+tags:
+  - css
+  - note
+  - fundamental
 ---
 
 - The **purpose of CSS** is to "select" an HTML element and apply some type of style to that HTML element. Here are the two things that CSS can do for you:

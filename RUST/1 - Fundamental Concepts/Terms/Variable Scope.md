@@ -1,5 +1,7 @@
 ---
-tags: rust, fundamental
+tags:
+  - rust
+  - fundamental
 ---
 
 - A scope is the range within a program for which an item is valid.

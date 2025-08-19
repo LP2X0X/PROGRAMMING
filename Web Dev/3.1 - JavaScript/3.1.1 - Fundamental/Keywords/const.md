@@ -1,5 +1,8 @@
 ---
-tags: js, keyword, fundamental
+tags:
+  - js
+  - keyword
+  - fundamental
 ---
 - In JavaScript, `const` is a keyword used to declare **block-scoped constants**. Here's what you need to know:
 

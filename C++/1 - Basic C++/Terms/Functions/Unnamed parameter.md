@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 In C++, unnamed parameters (also called **anonymous parameters**) are used in function or method declarations and definitions when the parameter is not needed within the function body.

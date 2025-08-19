@@ -1,5 +1,9 @@
 ---
-tags: css, pseudo, element, fundamental
+tags:
+  - css
+  - pseudo
+  - element
+  - fundamental
 ---
 
 

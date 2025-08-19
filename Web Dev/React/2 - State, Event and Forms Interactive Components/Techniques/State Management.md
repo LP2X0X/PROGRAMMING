@@ -1,5 +1,8 @@
 ---
-tags: react, note, fundamental
+tags:
+  - react
+  - note
+  - fundamental
 ---
 
 - State management includes:

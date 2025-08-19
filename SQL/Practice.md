@@ -1,5 +1,6 @@
 ---
-tags: sql
+tags:
+  - sql
 ---
 
 ## ✅ **Best Ways to Practice SQL**

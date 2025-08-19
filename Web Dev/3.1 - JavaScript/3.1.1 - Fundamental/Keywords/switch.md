@@ -1,5 +1,8 @@
 ---
-tags: js, keyword, fundamental
+tags:
+  - js
+  - keyword
+  - fundamental
 ---
 
 The switch statement in JavaScript is a **control flow structure** used to compare a value against multiple possible cases and execute corresponding code.

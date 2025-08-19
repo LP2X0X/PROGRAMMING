@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - **Scientific notation** is a useful shorthand for writing lengthy numbers in a concise manner.

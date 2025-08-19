@@ -1,5 +1,7 @@
 ---
-tags: css, responsive
+tags:
+  - css
+  - responsive
 ---
 
 - Transitioning to using less absolute units like percentages and viewport units (`vw`/`vh`) is key for a flexible design.

@@ -1,5 +1,9 @@
 ---
-tags: rust, term, project_management, fundamental
+tags:
+  - rust
+  - term
+  - project_management
+  - fundamental
 ---
 - The _crate root_ is a source file that the Rust compiler starts from and makes up the root module of your crate.
 

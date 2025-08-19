@@ -1,5 +1,7 @@
 ---
-tags: rust, syntax
+tags:
+  - rust
+  - syntax
 ---
 
 In Rust, **struct update syntax** lets you create a new instance of a struct by specifying new values for some fields and copying the rest from an existing instance.

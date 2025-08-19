@@ -1,5 +1,9 @@
 ---
-tags: rust, datatype, collection, fundamental
+tags:
+  - rust
+  - datatype
+  - collection
+  - fundamental
 ---
 
 - Vectors (`Vec<T>`) allow you to store more than one value in a single data structure that puts all the values next to each other in memory. Vectors can only store values of the same type.

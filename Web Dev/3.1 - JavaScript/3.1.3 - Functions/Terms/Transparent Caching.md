@@ -1,3 +1,6 @@
 ---
-tags: js, term, advance
+tags:
+  - js
+  - term
+  - advance
 ---

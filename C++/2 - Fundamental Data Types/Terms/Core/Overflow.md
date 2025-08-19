@@ -1,5 +1,8 @@
 ---
-tags: cpp ,term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 In programming, **overflow** refers to a situation where a calculation exceeds the storage capacity of the variable type intended to hold the result. This can happen with both integer and floating-point operations.

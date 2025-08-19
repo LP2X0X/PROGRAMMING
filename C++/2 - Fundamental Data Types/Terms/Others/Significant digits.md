@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - The digits in the significand (the part before the ‘e’) are called the **significant digits** (or **significant figures**). The more significant digits, the more precise a number is.

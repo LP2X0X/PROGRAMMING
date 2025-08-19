@@ -1,5 +1,7 @@
 ---
-tags: js, summary
+tags:
+  - js
+  - summary
 ---
 
 - There are 8 basic data types in JavaScript.

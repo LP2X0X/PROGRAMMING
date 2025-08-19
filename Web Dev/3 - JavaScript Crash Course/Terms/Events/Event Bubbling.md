@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 🧠 Event bubbling is a core concept in the JavaScript event model. It describes how events move (or “bubble”) through the DOM tree when a user interacts with a webpage — especially when clicking, typing, or interacting with elements.

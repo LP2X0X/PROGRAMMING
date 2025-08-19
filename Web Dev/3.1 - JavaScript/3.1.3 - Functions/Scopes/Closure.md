@@ -1,5 +1,7 @@
 ---
-tags: js, term
+tags:
+  - js
+  - term
 ---
 
 ### 🔒 What is a **Closure** in JavaScript?

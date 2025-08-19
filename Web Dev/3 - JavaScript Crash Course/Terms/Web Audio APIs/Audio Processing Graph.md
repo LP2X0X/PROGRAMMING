@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 The **audio processing graph** in the **Web Audio API** is a **modular system** where individual audio units—called **AudioNodes**—are connected together to create complex audio processing workflows. Think of it like a **flowchart for sound**, where sound flows from sources, through processors, and finally to your speakers.

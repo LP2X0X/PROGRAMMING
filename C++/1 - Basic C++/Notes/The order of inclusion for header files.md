@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - To maximize the chance that missing includes will be flagged by compiler, order your \#includes as follows (skipping any that are not relevant):

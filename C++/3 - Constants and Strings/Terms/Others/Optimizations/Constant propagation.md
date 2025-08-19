@@ -1,5 +1,9 @@
 ---
-tags: cpp, compiler, optimization, fundamental
+tags:
+  - cpp
+  - compiler
+  - optimization
+  - fundamental
 ---
 
 - **Constant propagation** is an optimization technique where the compiler replaces variables known to have constant values with their values.

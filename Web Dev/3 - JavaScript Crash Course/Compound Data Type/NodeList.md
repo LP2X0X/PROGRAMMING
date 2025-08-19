@@ -1,5 +1,8 @@
 ---
-tags: js, datatype, fundamental
+tags:
+  - js
+  - datatype
+  - fundamental
 ---
 
 In the DOM, a NodeList is a collection (or list) of nodes — typically returned by DOM querying methods like document.querySelectorAll().

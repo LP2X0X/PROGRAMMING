@@ -1,5 +1,8 @@
 ---
-tags: js, function, method
+tags:
+  - js
+  - function
+  - method
 ---
 
 ## 🔧 What Are `call()` and `apply()`?

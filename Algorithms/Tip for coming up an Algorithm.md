@@ -1,5 +1,7 @@
 ---
-tags: algorithms, tip
+tags:
+  - algorithms
+  - tip
 ---
 
 One of the most **common and powerful ways** people come up with algorithms is:

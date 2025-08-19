@@ -1,5 +1,9 @@
 ---
-tags: js, function, interactive, fundamental
+tags:
+  - js
+  - function
+  - interactive
+  - fundamental
 ---
 
 -  **alert** shows a message and waits for the user to press “OK”. For example:

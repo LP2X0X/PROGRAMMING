@@ -1,5 +1,8 @@
 ---
-tags: react, note, advance
+tags:
+  - react
+  - note
+  - advance
 ---
 
 ![[Pasted image 20250818183604.png|center]]

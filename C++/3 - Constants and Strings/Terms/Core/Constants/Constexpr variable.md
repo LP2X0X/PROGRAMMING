@@ -1,5 +1,8 @@
 ---
-tags: cpp, term, fundamental
+tags:
+  - cpp
+  - term
+  - fundamental
 ---
 
 - The `constexpr` keyword (which is shorthand for “constant expression”) can enlist the compiler’s help to ensure we get a compile-time constant variable where we desire one. A **constexpr variable** is always a compile-time constant. As a result, a constexpr variable must be initialized with a [[Constant expression|constant expression]], otherwise a compilation error will result.

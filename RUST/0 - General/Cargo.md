@@ -1,5 +1,7 @@
 ---
-tags: rust, fundamental
+tags:
+  - rust
+  - fundamental
 ---
 
 **Cargo** is the **official build system and package manager** for Rust. Think of it as a combination of tools like:

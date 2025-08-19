@@ -1,5 +1,8 @@
 ---
-tags: js, term, fundamental
+tags:
+  - js
+  - term
+  - fundamental
 ---
 
 In JavaScript, method override and method shadowing both refer to how methods can be redefined in derived or child objects/classes, but they happen in slightly different contexts.

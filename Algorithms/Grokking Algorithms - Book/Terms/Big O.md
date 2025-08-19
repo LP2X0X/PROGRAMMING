@@ -1,5 +1,8 @@
 ---
-tags: algorithms, term, fundamental
+tags:
+  - algorithms
+  - term
+  - fundamental
 ---
 
 Here’s an **exhaustive overview of Big O notation**, including **what it is, why it matters, common classes**, and **how to analyze it**, with **practical examples**.

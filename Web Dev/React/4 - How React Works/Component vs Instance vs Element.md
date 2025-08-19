@@ -1,5 +1,8 @@
 ---
-tags: react, internal, advance
+tags:
+  - react
+  - internal
+  - advance
 ---
 
 ### Component

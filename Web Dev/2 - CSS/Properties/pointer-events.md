@@ -1,5 +1,8 @@
 ---
-tags: css, property, fundamental
+tags:
+  - css
+  - property
+  - fundamental
 ---
 
 The pointer-events CSS property controls how HTML elements respond to **mouse, touch, and pen interactions**. It’s especially useful when you want to:

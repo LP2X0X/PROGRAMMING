@@ -1,5 +1,8 @@
 ---
-tags: js, datatype, fundamental
+tags:
+  - js
+  - datatype
+  - fundamental
 ---
 
 ## 📦 What is an Array?
@@ -153,6 +156,76 @@ a.join("-");     // "a-b-c"
 
 - The `length` property automatically updates when we modify the array. To be precise, it is actually not the count of values in the array, but the greatest numeric index plus one.
 - Another interesting thing about the `length` property is that it’s writable. If we increase it manually, nothing interesting happens. But if we decrease it, the array is truncated. The process is irreversible. So, the simplest way to clear the array is: `arr.length = 0;`.
+
+---
+
+### ❗Assign a value at an "invalid" (non-contiguous) index
+
+#### ✅ Example: Adding at an index beyond current length
+```js
+const arr = [1, 2, 3];
+arr[10] = 99;
+
+console.log(arr);
+console.log(arr.length);
+```
+
+**Output:**
+
+```js
+[ 1, 2, 3, <7 empty items>, 99 ]
+11
+```
+
+- The array now has length **11** (last index `10` + 1).
+- Indices `3–9` are **holes** (not `undefined`, but "empty slots").
+- Accessing `arr[5]` gives `undefined`, but it’s not the same as explicitly setting `arr[5] = undefined`.
+
+#### ✅ Example: Adding at a negative index
+
+```js
+const arr = [1, 2, 3];
+arr[-1] = 99;
+
+console.log(arr);
+console.log(arr.length);
+```
+
+**Output:**
+
+```js
+[ 1, 2, 3, -1: 99 ]
+3
+```
+
+- Negative indices don’t count as array elements.
+- They’re treated like **object properties** with key `"-1"`.
+- Length is unaffected.
+
+#### ✅ Example: Adding at a non-integer key
+
+```js
+const arr = [1, 2, 3];
+arr["foo"] = 42;
+
+console.log(arr);
+console.log(arr.length);
+```
+
+**Output:**
+
+```js
+[ 1, 2, 3, foo: 42 ]
+3
+```
+- `"foo"` becomes just another object property.
+- Doesn’t affect `length`.
+
+
+#### ⚡ Summary:
+- **Index > length** → fills array with empty slots, updates length.
+- **Negative index** → treated as object property, not an array index.
+- **Non-integer key** → also just an object property.
 
 ---
 

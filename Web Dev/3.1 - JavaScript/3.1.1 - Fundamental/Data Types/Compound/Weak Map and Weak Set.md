@@ -1,5 +1,8 @@
 ---
-tags: js, datatype, fundamental
+tags:
+  - js
+  - datatype
+  - fundamental
 ---
 
 Absolutely! Let's explore **`WeakMap`** and **`WeakSet`** in **more technical depth**, including internal mechanics, use cases, and how they differ from their non-weak counterparts (`Map` and `Set`).

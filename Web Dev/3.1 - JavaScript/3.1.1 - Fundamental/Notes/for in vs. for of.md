@@ -1,5 +1,7 @@
 ---
-tags: js, distinguish
+tags:
+  - js
+  - distinguish
 ---
 
 ### **✅ for (let item of arr)**
