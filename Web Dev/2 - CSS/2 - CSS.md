@@ -7,14 +7,13 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[1 - Fundamentals]]**
-- **[[File name]]**
+- **[[Fundamentals]]**
 - **[[Keywords]]**
 	- [[!important]]
-- **[[Web Dev/2 - CSS/Notes/Notes]]**
+- **[[Notes]]**
 - **[[Properties]]**
 - **[[Responsive Design]]**
 - **[[Selectors]]**
-- **[[Web Dev/2 - CSS/Terms/Terms]]**
+- **[[Terms]]**
 
 %% End Waypoint %%

@@ -28,6 +28,21 @@ const person = { name: "Alice" };
 greet.call(person, "Hello", "!"); // Hello, Alice!
 ```
 
+Another example:
+
+```js
+function sayHi() {
+  alert(this.name);
+}
+
+let user = { name: "John" };
+let admin = { name: "Admin" };
+
+// use call to pass different objects as "this"
+sayHi.call( user ); // John
+sayHi.call( admin ); // Admin
+```
+
 ---
 
 ### `apply(thisArg, [argsArray])`

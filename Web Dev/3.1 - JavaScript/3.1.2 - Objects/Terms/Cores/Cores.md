@@ -12,5 +12,6 @@ type: folder_brief_live
 - [[Object Literal]]
 - [[Object]]
 - [[Optional Chaining]]
+- [[this]]
 
 %% End Waypoint %%

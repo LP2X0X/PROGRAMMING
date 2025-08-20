@@ -23,6 +23,10 @@ tags:
 	showName("Ilya");
 	```
 
+```ad-tip
+In mordern code, [[The rest `...` Operator#✅ 1. **Rest Parameters (Functions)**|rest parameters]] should be preferred.
+```
+
 ````ad-note
 - Arrow functions do not have `"arguments"`
 - If we access the `arguments` object from an arrow function, it takes them from the outer “normal” function.
