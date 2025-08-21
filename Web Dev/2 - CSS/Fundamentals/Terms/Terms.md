@@ -10,7 +10,6 @@ type: folder_brief_live
 - [[Box Model]]
 - **[[CSS Rules]]**
 - **[[Important]]**
-- [[Inheritance]]
 - [[Viewport]]
 
 %% End Waypoint %%

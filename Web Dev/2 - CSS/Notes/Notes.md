@@ -12,7 +12,6 @@ type: folder_brief_live
 - [[Miscellaneous]]
 - [[Multiple Classes on a Single HTML Element]]
 - **[[Overviews]]**
-- **[[Web Dev/2 - CSS/Notes/Questions/Questions]]**
 - [[The purpose of CSS]]
 
 %% End Waypoint %%

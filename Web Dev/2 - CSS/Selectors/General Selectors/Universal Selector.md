@@ -43,7 +43,5 @@ CSS:
 ### 📝 Tips & Best Practices
 
 - Useful for **CSS resets** and **global styling**.
-    
 - Be careful—overusing it can impact **performance** on large pages.
-    
 - Combine with attribute selectors or pseudo-classes for **more targeted resets**.

@@ -13,15 +13,20 @@ CSS specificity determines **which rule is applied** when multiple rules target 
 
 ### 📊 **Specificity Calculation Rules**
 
-Specificity is calculated using a **four-part value**:  
-`(A, B, C, D)`
+Specificity is calculated using a **four-part value** `(A, B, C, D)`:
 
-|Selector Type|Score Contribution|
-|---|---|
-|Inline styles|**A = 1** (Highest)|
-|IDs (`#id`)|**B = Number of IDs**|
-|Classes (`.class`), pseudo-classes (`:hover`), attributes (`[attr]`)|**C = Number of these selectors**|
-|Elements (`div`, `p`, etc.) and pseudo-elements (`::before`)|**D = Number of these selectors**|
+| Selector Type                                                        | Score Contribution                |
+| -------------------------------------------------------------------- | --------------------------------- |
+| Inline styles                                                        | **A = 1** (Highest)               |
+| IDs (`#id`)                                                          | **B = Number of IDs**             |
+| Classes (`.class`), pseudo-classes (`:hover`), attributes (`[attr]`) | **C = Number of these selectors** |
+| Elements (`div`, `p`, etc.) and pseudo-elements (`::before`)         | **D = Number of these selectors** |
+| Universal selector (\*), Inheritance                                 | **Lowest**                                  |
+| !important                                                           | **Override everything**                                  |
+
+```ad-important
+If there are multiple of the same types, then the last of them will be applied.
+```
 
 ---
 

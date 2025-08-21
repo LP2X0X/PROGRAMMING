@@ -5,10 +5,6 @@ tags:
   - fundamental
 ---
 
-Here’s a clear breakdown of **inheritance in CSS** with definitions, examples, tips, and best practices:
-
----
-
 ### 🔹 **Definition**  
 **Inheritance** in CSS is the mechanism where certain property values are **passed down** from a parent element to its child elements.
 
