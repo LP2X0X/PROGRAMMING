@@ -10,7 +10,6 @@ type: folder_brief_live
 - [[CSS Grid Technique]]
 - [[CSS Selector Types]]
 - [[Flexbox]]
-- [[Pseudo Elements and Classes]]
 - [[Psuedo Class]]
 - [[Text's Element]]
 

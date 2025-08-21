@@ -15,6 +15,7 @@ type: folder_brief_live
 - **[[Questions]]**
 - **[[Responsive Design]]**
 - **[[Selectors]]**
+- **[[Techniques]]**
 - **[[Terms]]**
 
 %% End Waypoint %%

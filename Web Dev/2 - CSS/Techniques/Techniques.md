@@ -3,11 +3,10 @@
 ```ccard
 type: folder_brief_live
 ```
-
- ---
  
+---
+
 %% Begin Waypoint %%
-- [[Debounce decorator]]
-- [[Throttle decorator]]
+- [[Styling List]]
 
 %% End Waypoint %%

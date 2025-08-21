@@ -1,13 +1,12 @@
-# Techniques Overview
+# List Overview
  
 ```ccard
 type: folder_brief_live
 ```
-
- ---
  
+---
+
 %% Begin Waypoint %%
-- [[Debounce decorator]]
-- [[Throttle decorator]]
+- [[marker]]
 
 %% End Waypoint %%

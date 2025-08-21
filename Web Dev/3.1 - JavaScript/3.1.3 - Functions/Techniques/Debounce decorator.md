@@ -21,5 +21,8 @@ function debounce(f, ms) {
 		clearTimeout(timeoutId);                               // clearTimeout can be called on null
 		timeoutId = setTimeout(() => f.apply(this, args), ms); // setTimeout with new call to reset the timer
 	}
+	// Since the return function was a normal function, so its `this` is set by _how you call it_:
+	//	- If you call `debounced()` plain → `this` is `undefined` (in strict mode) or `window` (non-strict).
+	//	- If you call `user.debounced()` → then `this` inside is `user`.
 }
 ```

@@ -73,6 +73,7 @@ selector {
     
 - Use `box-sizing: border-box` so that padding and border are included in the height calculation.
     
+- With images, when height is set with auto, the image size will be calculated by its width and keep its original ratio.
 
 ---
 
