@@ -44,7 +44,7 @@ Here's a **list of frequently used `String` methods** in JavaScript, grouped by 
 |`toLowerCase()`|Converts to lowercase|`"HELLO".toLowerCase() → "hello"`|
 |`replace()`|Replace first match or regex|`"aabb".replace("a", "z") → "zabb"`|
 |`replaceAll()`|Replace all matches|`"aabb".replaceAll("a", "z") → "zzbb"`|
-|`trim()`|Removes whitespace from both ends|`" hi ".trim() → "hi"`|
+|`trim()`|Removes anything that counts as "whitespace" from both ends|`" hi ".trim() → "hi"`|
 |`trimStart()` / `trimEnd()`|Leading/trailing trim|`" hi ".trimStart() → "hi "`|
 |`repeat(n)`|Repeats string n times|`"ab".repeat(3) → "ababab"`|
 |`padStart(len, str)`|Pads at start|`"5".padStart(3, "0") → "005"`|
