@@ -40,6 +40,25 @@ function Counter() {
 
 ---
 
+### ⏰ State updates are asynchronous
+
+- When you call a state setter like setCount(count + 1), React:
+	- **Does not update count immediately in the same function call**.
+	- Instead, it **schedules** the update.
+
+```js
+function Example() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+    console.log(count); // still the old value!
+  }
+}
+```
+
+---
+
 ### 📦 `useState()` Hook
 
 * `useState()` is a **hook** that lets you use state in **function components**.

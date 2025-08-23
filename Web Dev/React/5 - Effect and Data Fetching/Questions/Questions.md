@@ -1,4 +1,4 @@
-# 5 - Effect and Data Fetching Overview
+# Questions Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Questions]]**
-- **[[Terms]]**
+- [[Why useEffect callbacks must be synchronous]]
 
 %% End Waypoint %%
