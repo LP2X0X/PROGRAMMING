@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[Combinators]]**
-	- [[Adjacent Combinator]]
+	- [[Adjacent Sibling Combinator]]
 	- [[Child Combinator]]
 	- [[Combinator Overview]]
 	- [[Descendant Combinator]]

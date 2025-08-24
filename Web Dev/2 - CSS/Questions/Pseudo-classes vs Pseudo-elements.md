@@ -36,6 +36,10 @@ a:visited { color: purple; }
 - They let you target _portions_ of content (first line, first letter, before/after, etc.).
 - Syntax: **two colons `::`** (though older CSS allowed `:` for backward compatibility).
 
+```ad-note
+Any pseudo-elements are technically an [[Inline Element|inline element]].
+```
+
 ### Examples:
 
 ```css

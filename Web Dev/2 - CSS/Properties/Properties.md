@@ -18,7 +18,6 @@ type: folder_brief_live
 - [[offset Properties]]
 - [[overflow]]
 - [[pointer-events]]
-- [[position]]
 - [[vertical-align]]
 - [[white-space]]
 
