@@ -7,9 +7,9 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Box Model]]
+- **[[Advance]]**
 - **[[CSS Rules]]**
+- **[[Display-based Elements]]**
 - **[[Important]]**
-- [[Viewport]]
 
 %% End Waypoint %%

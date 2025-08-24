@@ -60,7 +60,15 @@ const key = "isStudent";
 console.log(person[key]); // false
 ```
 
-  
+ - Access a **non-existent property** of an object return undefined.
+    
+
+```js
+const obj = { a: 1 };
+
+console.log(obj.a);   // 1
+console.log(obj.b);   // undefined (since "b" does not exist)
+```
 
 ---
 

@@ -1,6 +1,8 @@
 ---
 tags: 
  - css
+ - technique
+ - list
 ---
 
 ## 1. 🔹 Custom Bullets / Icons

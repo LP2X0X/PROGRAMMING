@@ -101,33 +101,7 @@ Tips:
 
 ---
 
-## 5. 🔹 Auto Margins (Magic Centering)
-
-### Horizontal Centering
-
-```css
-.block {
-  width: 200px;
-  margin: 0 auto; /* centers horizontally */
-}
-```
-
-Works only for **block elements with a defined width**.
-
-### Flexbox Centering
-
-```css
-.parent {
-  display: flex;
-}
-.child {
-  margin: auto; /* centers both vertically & horizontally */
-}
-```
-
----
-
-## 6. 🔹 Negative Margins
+## 5. 🔹 Negative Margins
 
 Yes, allowed! Can pull elements closer or overlap.
 
@@ -150,7 +124,7 @@ Uses:
 
 ---
 
-## 7. 🔹 Logical Properties (writing-mode friendly)
+## 6. 🔹 Logical Properties (writing-mode friendly)
 
 Instead of `margin-top/left`, use **logical properties**:
 
@@ -165,7 +139,7 @@ margin-inline-end: 1em;    /* opposite */
 
 ---
 
-## 8. 🔹 Margins in Different Contexts
+## 7. 🔹 Margins in Different Contexts
 
 ### Inline Elements
 
@@ -193,60 +167,7 @@ margin-inline-end: 1em;    /* opposite */
 
 ---
 
-## 9. 🔹 Margin Tricks & Hacks
-
-### 🔸 Center without Flex/Grid
-
-```css
-.parent {
-  position: relative;
-}
-.child {
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-  margin: auto; /* perfectly centers element */
-}
-```
-
-### 🔸 Remove Last Item’s Margin
-
-Common for menus or lists:
-
-```css
-ul li:last-child {
-  margin-right: 0;
-}
-```
-
-### 🔸 Equal Spacing with Gap
-
-Instead of margins between flex/grid items, use:
-
-```css
-display: flex;
-gap: 1rem;
-```
-
-✅ Avoids double margins at edges.
-
-### 🔸 Negative Margin Fix
-
-For grid/gutter hacks:
-
-```css
-.container {
-  margin: -10px;
-}
-.item {
-  margin: 10px;
-}
-```
-
-✅ Ensures equal spacing inside without extra edge padding.
-
----
-
-## 10. 🔹 Best Practices & Gotchas
+## 8. 🔹 Best Practices & Gotchas
 
 ✔️ Use **`gap`** (Flex/Grid) instead of margins for internal spacing.  
 ✔️ Use **margins for outside spacing** (between components).  
@@ -257,7 +178,7 @@ For grid/gutter hacks:
 
 ---
 
-## 11. 🔹 Quick Reference
+## 9. 🔹 Quick Reference
 
 |Property|Effect|
 |---|---|
