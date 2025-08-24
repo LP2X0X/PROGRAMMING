@@ -14,6 +14,6 @@ type: folder_brief_live
 - [[React 3rd-party Library Ecosystem]]
 - [[State updates are batched]]
 - [[Summary]]
-- **[[Terms]]**
+- **[[Web Dev/React/4 - How React Works/Terms/Terms]]**
 
 %% End Waypoint %%

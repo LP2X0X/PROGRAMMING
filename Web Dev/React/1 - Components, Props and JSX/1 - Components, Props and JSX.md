@@ -10,6 +10,6 @@ type: folder_brief_live
 - **[[JSX]]**
 - **[[Props]]**
 - **[[Web Dev/React/1 - Components, Props and JSX/Techniques/Techniques]]**
-- **[[Terms]]**
+- **[[Web Dev/React/1 - Components, Props and JSX/Terms/Terms]]**
 
 %% End Waypoint %%

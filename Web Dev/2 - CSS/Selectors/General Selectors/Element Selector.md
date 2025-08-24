@@ -5,43 +5,58 @@ tags:
   - fundamental
 ---
 
-### 📖 Definition
+## **📖 Definition**
 
-The **ID selector** in CSS targets a single HTML element with a specific `id` attribute value. Since IDs must be unique within a page, an ID selector is used when you want to apply styles to exactly one element.
+The **element selector** in CSS targets all instances of a given HTML tag. It applies styles directly to every occurrence of that tag within the page.
 
-### 🖋️ Syntax
+---
+
+## **🖋️ Syntax**
 
 ```css
-#idName {
+element {
   /* styles */
 }
 ```
 
-- `#` is the prefix for IDs in CSS.
-- `idName` is the exact value of the element’s `id` attribute (case-sensitive in XML, but not in HTML).
+- element is the HTML tag name (e.g., p, h1, ul, a).
+    
+- No prefix is needed — just the tag name.
+    
 
-### 💡 Example
+---
+
+## **💡 Example**
 
 HTML:
 
 ```html
-<p id="intro">This is an introduction paragraph.</p>
+<p>This is a paragraph.</p>
+<p>Another paragraph.</p>
 ```
 
 CSS:
 
 ```css
-#intro {
-  color: blue;
-  font-weight: bold;
+p {
+  color: gray;
+  line-height: 1.6;
 }
 ```
 
-This will make the paragraph with `id="intro"` blue and bold.
+This will style **all \<p> elements** to be gray with increased line spacing.
 
-### 🛠️ Tips & Best Practices
+---
 
-- **Uniqueness**: Ensure the `id` value is unique across the HTML document.
-- **Specificity**: ID selectors have **high specificity** in CSS, which can override many other styles. Use sparingly to avoid difficulty in maintenance.
-- **Not reusable**: Unlike class selectors, you can’t reuse IDs for multiple elements if you follow best practices.
-- **Avoid overusing IDs for styling**: Consider using classes for repeated styles and reserve IDs for unique, specific cases.
+## **🛠️ Tips & Best Practices**
+
+- **Global styles**: Best for base styling (e.g., body font, link colors, reset margins).
+    
+- **Don’t overuse**: Avoid styling broad tags like div or span directly — use classes for reusable styles.
+    
+- **Inheritance awareness**: Styles cascade down, so applying color or font on an element may affect children.
+    
+- **Keep it simple**: Avoid overly specific nested selectors (div ul li span) — use classes instead.
+    
+- **Combine with resets/normalizers** to remove inconsistent browser defaults (e.g., margins on h1, bullet points on ul).
+    

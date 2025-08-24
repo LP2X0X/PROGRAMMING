@@ -2,12 +2,15 @@
 tags:
   - css
   - term
+  - layout
   - fundamental
 ---
 
 ### **🧱 CSS Grid Overview**
 
 **CSS Grid** is a powerful layout system that lets you design two-dimensional layouts — controlling both **rows** and **columns** with precision.
+
+![[Pasted image 20250824203940.png|center|500]]
 
 ---
 
@@ -38,9 +41,6 @@ tags:
 ---
 
 ## **📐 Common Properties**
-
-  
-
 ### **🔹 On the Grid Container:**
 
 |**Property**|**Description**|
@@ -65,8 +65,6 @@ tags:
 |justify-self|Horizontal alignment inside the cell|
 |align-self|Vertical alignment inside the cell|
 |place-self|Shorthand for the above two|
-
-  
 
 ---
 

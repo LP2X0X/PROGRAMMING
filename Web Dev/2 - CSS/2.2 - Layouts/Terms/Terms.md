@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Formatting Context]]
-- [[Psuedo Class]]
+- [[Flexbox]]
+- [[Grid]]
 
 %% End Waypoint %%

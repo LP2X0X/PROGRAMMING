@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[char]]
 - [[fast integral types]]
 - [[Fixed-width integer]]
-- [[float]]
+- [[C++/2 - Fundamental Data Types/Data Types/float]]
 - [[least inegral type]]
 - [[Other char type]]
 - [[signed integers]]

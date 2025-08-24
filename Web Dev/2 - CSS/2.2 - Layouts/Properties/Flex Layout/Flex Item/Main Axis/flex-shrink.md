@@ -2,12 +2,18 @@
 tags:
   - css
   - property
+  - flex
+  - item
   - fundamental
 ---
 
 ### **🔧 What is flex-shrink?**
 
 flex-shrink defines how much a **flex item** is allowed to **shrink** when there isn’t enough space in the container.
+
+```ad-important
+The effected size here are the size corresponding to the main axis.
+```
 
 ---
 

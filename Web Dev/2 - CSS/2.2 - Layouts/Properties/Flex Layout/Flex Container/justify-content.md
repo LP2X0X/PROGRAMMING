@@ -2,6 +2,8 @@
 tags:
   - css
   - property
+  - flex
+  - container
   - fundamental
 ---
 
@@ -14,14 +16,12 @@ The justify-content property controls **how flex items are aligned along the **m
 
 ### **📐 Syntax:**
 
-```
+```css
 .container {
   display: flex;
   justify-content: <value>;
 }
 ```
-
-  
 
 ---
 
@@ -36,13 +36,11 @@ The justify-content property controls **how flex items are aligned along the **m
 |space-around|Equal space **around** items (half at ends)|
 |space-evenly|Equal space **between all** items including ends|
 
-  
-
 ---
 
 ### **💡 Example:**
 
-```
+```html
 <div class="container">
   <div class="item">A</div>
   <div class="item">B</div>
@@ -50,7 +48,7 @@ The justify-content property controls **how flex items are aligned along the **m
 </div>
 ```
 
-```
+```css
 .container {
   display: flex;
   justify-content: space-between;

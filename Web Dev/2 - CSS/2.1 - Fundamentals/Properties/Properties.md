@@ -13,6 +13,7 @@ type: folder_brief_live
 - **[[List]]**
 - [[margin]]
 - [[position]]
+- [[Text's Element]]
 - [[width]]
 
 %% End Waypoint %%

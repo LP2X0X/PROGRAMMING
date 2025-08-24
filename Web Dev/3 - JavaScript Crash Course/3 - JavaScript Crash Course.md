@@ -13,7 +13,7 @@ type: folder_brief_live
 - **[[Keywords]]**
 - **[[Methods]]**
 - **[[Web Dev/3 - JavaScript Crash Course/Notes/Notes]]**
-- **[[Properties]]**
+- **[[Web Dev/3 - JavaScript Crash Course/Properties/Properties]]**
 - **[[Web Dev/3 - JavaScript Crash Course/Terms/Terms]]**
 
 %% End Waypoint %%

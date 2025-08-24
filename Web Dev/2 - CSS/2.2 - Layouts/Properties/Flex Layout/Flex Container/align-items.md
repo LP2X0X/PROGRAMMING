@@ -2,6 +2,8 @@
 tags:
   - css
   - property
+  - flex
+  - container
   - fundamental
 ---
 
@@ -11,11 +13,15 @@ The align-items property controls how **flex items are aligned on the cross axis
 
 ### **📐 Syntax:**
 
-```
+```css
 .container {
   display: flex;
   align-items: <value>;
 }
+```
+
+```ad-note
+The default value of this property is **stretch** which make all flex items stretched with the direction of cross axis. This also explain why changing it stop the flex item from expanding.
 ```
 
 ---
@@ -33,26 +39,24 @@ The align-items property controls how **flex items are aligned on the cross axis
 
 |**Value**|**Description**|
 |---|---|
-|stretch|(default) Items stretch to fill container’s cross axis|
+|stretch|(default) Items stretch to fill container’s **cross axis**|
 |flex-start|Items align to **start** of the cross axis|
 |flex-end|Items align to **end** of the cross axis|
 |center|Items align to **center** of the cross axis|
 |baseline|Items align based on their **text baseline**|
 
-  
-
 ---
 
 ### **💡 Example:**
 
-```
+```css
 <div class="container">
   <div class="item">One</div>
   <div class="item">Two</div>
 </div>
 ```
 
-```
+```css
 .container {
   display: flex;
   height: 100px;

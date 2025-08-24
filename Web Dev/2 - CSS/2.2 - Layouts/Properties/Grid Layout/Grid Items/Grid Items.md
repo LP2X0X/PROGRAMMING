@@ -1,4 +1,4 @@
-# Terms Overview
+# Grid Items Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Formatting Context]]
-- [[Psuedo Class]]
+- [[grid-column and grid-row]]
 
 %% End Waypoint %%

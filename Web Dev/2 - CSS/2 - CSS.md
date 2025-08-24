@@ -7,7 +7,18 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Fundamentals]]**
+- **2.1 - Fundamentals**
+	- [[Fundamentals]]
+	- **[[Properties]]**
+	- **[[Pseudo Classes]]**
+	- **[[Pseudo Elements]]**
+	- **[[Terms]]**
+	- **[[Values]]**
+- **[[2.2 - Layouts]]**
+	- [[Layout Overview]]
+	- **[[Properties]]**
+	- **[[Techniques]]**
+	- **[[Terms]]**
 - **[[Keywords]]**
 	- [[!important]]
 - **[[Notes]]**

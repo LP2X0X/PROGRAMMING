@@ -1,4 +1,4 @@
-# Terms Overview
+# Float Layout Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Formatting Context]]
-- [[Psuedo Class]]
+- [[clear]]
+- [[float]]
 
 %% End Waypoint %%

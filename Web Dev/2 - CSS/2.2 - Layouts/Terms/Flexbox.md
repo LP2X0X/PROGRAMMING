@@ -2,14 +2,14 @@
 tags:
   - css
   - term
+  - layout
   - fundamental
 ---
 
 ## **🧱 What is Flexbox?**
-
   
 
-**Flexbox** (Flexible Box Layout) is a CSS layout model that arranges items in a **row or column** and makes it easy to:
+**Flexbox** (Flexible Box Layout) is a CSS *layout model* that arranges items in a **row or column** and makes it easy to:
 
 - Align items
     
@@ -17,8 +17,6 @@ tags:
     
 - Handle dynamic sizing and spacing
     
-
-  
 
 Apply it by setting:
 
@@ -32,8 +30,6 @@ on a container.
 
 ## **🔑 Main Concepts**
 
-  
-
 ### **1. Flex Container**
 
 ```css
@@ -42,6 +38,9 @@ on a container.
 }
 ```
 
+### **2. Flex Items**
+- Children elements inside the flex container element.
+
 ### **2. Main Axis vs Cross Axis**
 
 - **Main Axis**: Direction items are laid out (row or column)
@@ -49,21 +48,17 @@ on a container.
 - **Cross Axis**: Perpendicular to the main axis
     
 
-  
-
 Set direction with:
 
 ```css 
 flex-direction: row | row-reverse | column | column-reverse;
 ```
 
-  
+  ![[Pasted image 20250824185355.png|center|600]]
 
 ---
 
 ## **📦 Flex Properties**
-
-  
 
 ### **On the Container (.container)**
 
@@ -79,7 +74,6 @@ flex-direction: row | row-reverse | column | column-reverse;
 
 ### **On the Items (.item)**
 
-
 |**Property**|**What it does**|
 |---|---|
 |flex|Shorthand for flex-grow, flex-shrink, flex-basis|
@@ -88,7 +82,7 @@ flex-direction: row | row-reverse | column | column-reverse;
 
 Example:
 
-```
+```css
 .item {
   flex: 1; /* grows to fill available space */
 }
@@ -99,12 +93,9 @@ Example:
 ---
 
 ## **🎨 Common Layout Patterns**
-
-  
-
 ### **Centering:**
 
-```
+```css
 .container {
   display: flex;
   justify-content: center;
@@ -114,7 +105,7 @@ Example:
 
 ### **Responsive Columns:**
 
-```
+```css
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -123,3 +114,18 @@ Example:
   flex: 1 1 200px; /* grow, shrink, base width */
 }
 ```
+
+---
+
+## **🛠️ Tips & Best Practices**
+
+- Prefer **Flexbox for one-dimensional layouts**, Grid for two-dimensional (rows + columns).
+    
+- Use gap instead of margin for consistent spacing between flex items.
+    
+- Avoid relying heavily on order → can confuse screen readers and tab navigation.
+    
+- Combine flex-wrap: wrap; + flex-basis for responsive grids.
+    
+- Use min-width on items to prevent shrinking too small.
+    

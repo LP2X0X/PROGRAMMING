@@ -1,4 +1,4 @@
-# Terms Overview
+# Cross Axis Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Formatting Context]]
-- [[Psuedo Class]]
+- [[align-self]]
 
 %% End Waypoint %%

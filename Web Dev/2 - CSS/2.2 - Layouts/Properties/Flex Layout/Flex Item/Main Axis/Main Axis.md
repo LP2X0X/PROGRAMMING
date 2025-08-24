@@ -1,4 +1,4 @@
-# Terms Overview
+# Main Axis Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,9 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Formatting Context]]
-- [[Psuedo Class]]
+- [[flex-basis]]
+- [[flex-grow]]
+- [[flex-shrink]]
+- [[flex]]
 
 %% End Waypoint %%

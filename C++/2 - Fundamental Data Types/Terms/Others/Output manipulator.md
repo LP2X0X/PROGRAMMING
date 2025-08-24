@@ -5,7 +5,7 @@ tags:
   - fundamental
 ---
 
-- We can override [[float#Outputting|the default precision of float]] by using an `output manipulator` function named `std::setprecision()`.
+- We can override [[C++/2 - Fundamental Data Types/Data Types/float#Outputting|the default precision of float]] by using an `output manipulator` function named `std::setprecision()`.
 - **Output manipulators** alter how data is output, and are defined in the _iomanip_ header.
 
 ---

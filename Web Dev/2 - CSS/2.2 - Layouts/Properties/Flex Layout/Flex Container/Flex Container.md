@@ -1,4 +1,4 @@
-# Terms Overview
+# Flex Container Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Formatting Context]]
-- [[Psuedo Class]]
+- [[align-items]]
+- [[gap]]
+- [[justify-content]]
 
 %% End Waypoint %%
