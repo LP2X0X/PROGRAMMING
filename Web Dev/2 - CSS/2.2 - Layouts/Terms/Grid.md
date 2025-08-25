@@ -11,6 +11,8 @@ tags:
 **CSS Grid** is a powerful layout system that lets you design two-dimensional layouts — controlling both **rows** and **columns** with precision.
 
 ![[Pasted image 20250824203940.png|center|500]]
+![[Pasted image 20250825090609.png|center|500]]
+
 
 ---
 
