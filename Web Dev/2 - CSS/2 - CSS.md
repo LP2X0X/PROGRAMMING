@@ -19,8 +19,10 @@ type: folder_brief_live
 	- **[[Properties]]**
 	- **[[Techniques]]**
 	- **[[Terms]]**
+- **[[2.3 - Functions]]**
 - **[[Keywords]]**
 	- [[!important]]
+	- [[auto]]
 - **[[Notes]]**
 - **[[Properties]]**
 - **[[Questions]]**

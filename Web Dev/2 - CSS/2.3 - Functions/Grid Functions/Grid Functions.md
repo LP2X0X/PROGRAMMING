@@ -1,4 +1,4 @@
-# 3.1.4 - Promises, Async and Await Overview
+# Grid Functions Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Techniques]]**
-- **[[Terms]]**
+- [[repeat]]
 
 %% End Waypoint %%
