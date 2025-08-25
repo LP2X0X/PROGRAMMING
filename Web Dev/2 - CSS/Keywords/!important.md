@@ -2,6 +2,7 @@
 tags:
   - css
   - keyword
+  - universal
   - fundamental
 ---
 

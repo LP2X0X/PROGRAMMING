@@ -13,7 +13,6 @@ tags:
 ![[Pasted image 20250824203940.png|center|500]]
 ![[Pasted image 20250825090609.png|center|500]]
 
-
 ---
 
 ## **🔧 Basic Setup**
