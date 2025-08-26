@@ -1,4 +1,4 @@
-# Function's Methods Overview
+# Techniques Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[bind()]]
-- [[call() and apply()]]
+- [[“flags-aware” way of cloning an object]]
 
 %% End Waypoint %%

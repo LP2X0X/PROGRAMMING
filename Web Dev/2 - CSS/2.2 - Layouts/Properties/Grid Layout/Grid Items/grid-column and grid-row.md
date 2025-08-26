@@ -7,7 +7,6 @@ tags:
  - fundamental
 ---
 
-
 ## **🔹 The Basics**
 
 Every Grid has **lines**:
@@ -20,6 +19,8 @@ Every Grid has **lines**:
     
 
 👉 grid-column and grid-row let you tell an item where to start and end.
+
+![[debugging-css-grid-3-08a.png|center|500]]
 
 ---
 

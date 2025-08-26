@@ -15,12 +15,8 @@ type: folder_brief_live
 	- **[[Terms]]**
 	- **[[Values]]**
 - **[[2.2 - Layouts]]**
-	- [[Layout Overview]]
-	- **[[Properties]]**
-	- **[[Techniques]]**
-	- **[[Terms]]**
+- **[[2.3 - Functions]]**
 - **[[Keywords]]**
-	- [[!important]]
 - **[[Notes]]**
 - **[[Properties]]**
 - **[[Questions]]**

@@ -10,6 +10,7 @@ type: folder_brief_live
 - [[Borrowing Methods]]
 - [[Function Binding]]
 - [[Function]]
+- [[Higher-Order Function]]
 - [[The `arguments` variable]]
 - [[Transparent Caching]]
 

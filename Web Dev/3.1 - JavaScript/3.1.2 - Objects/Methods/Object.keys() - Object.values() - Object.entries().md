@@ -5,10 +5,6 @@ tags:
   - method
 ---
 
-Here's a complete breakdown of the `Object` methods for accessing **keys**, **values**, and **entries** in JavaScript:
-
----
-
 ## 🧩 1. `Object.keys(obj)`
 
 ### 🔹 Returns:
