@@ -1,6 +1,8 @@
 ---
 tags: 
- - web dev
+ - css
+ - property
+ - list
 ---
 
 - Shorthand: `list-style: type position image;`

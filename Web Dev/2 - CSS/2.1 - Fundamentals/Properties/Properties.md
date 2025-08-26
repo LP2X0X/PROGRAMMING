@@ -10,6 +10,7 @@ type: folder_brief_live
 - [[Absolute Position Properties]]
 - [[box-sizing]]
 - [[height]]
+- [[line-height]]
 - **[[List]]**
 - [[margin]]
 - [[position]]

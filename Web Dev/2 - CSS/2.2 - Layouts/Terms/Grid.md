@@ -13,6 +13,9 @@ tags:
 ![[Pasted image 20250824203940.png|center|500]]
 ![[Pasted image 20250825090609.png|center|500]]
 
+```ad-note
+Grid cell can act like a parent container in case you want to size the child using percentage unit.
+```
 
 ---
 
