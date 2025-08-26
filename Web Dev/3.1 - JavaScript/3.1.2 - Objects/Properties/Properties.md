@@ -1,4 +1,4 @@
-# Function's Methods Overview
+# Properties Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[bind()]]
-- [[call() and apply()]]
+- [[Property Flags]]
 
 %% End Waypoint %%

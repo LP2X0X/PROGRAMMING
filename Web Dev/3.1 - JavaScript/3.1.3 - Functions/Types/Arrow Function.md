@@ -12,6 +12,7 @@ tags:
 	2. **Implicit return**: If the function body has only one expression, the value is automatically returned (no `return` keyword needed).
 	3. **No `this` binding**: Arrow functions do not have their own `this` context. They inherit `this` from the surrounding scope.
 	4. **Always anonymous**: They don’t have a name by default.
+	5. Arrow functions also have no [[The `arguments` variable|arguments]] variable.
 
 ---
 

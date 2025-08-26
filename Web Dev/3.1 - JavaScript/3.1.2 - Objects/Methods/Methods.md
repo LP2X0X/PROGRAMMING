@@ -7,8 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Method]]
 - [[Object Method Overview]]
+- **[[Object Property]]**
 - [[Object.assign()]]
 - [[Object.keys() - Object.values() - Object.entries()]]
 
