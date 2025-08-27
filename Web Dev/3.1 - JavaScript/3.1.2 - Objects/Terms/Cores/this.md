@@ -316,3 +316,185 @@ function throttle(fn, ms) {
 ```
 
 (Notice how we **store** `this`/`args` because a later call would otherwise run with the **old** ones.)
+
+
+----
+
+## Other explanation
+
+- Here is the way to think of it:
+	1. It works like a function parameter
+	2. Instead of being between the parentheses like other parameters, **it is the the thing to the left of the dot**
+	3. Except when it is not
+
+- It is #3 that really throws people, but that is best understood as short list of exceptions, not some fundamental property of `this`, and we'll get to it in a minute. Let's start with #1 and #2 which encompass 90% of the instances you will encounter `this`.
+
+### A function parameter to the left of the dot
+
+- So normally you put function parameters between the parentheses when you call it.
+```js
+function greet(user) {
+  console.log('Hello,', user.name);
+}
+
+const sue = {
+  name: 'Sue'
+};
+
+greet(sue);  // Hello, Sue
+```
+
+- We can easily rewrite this function to instead use `this`:
+```js
+function greetThis() {
+  console.log('Hello,', this.name);
+}
+
+const bob = {
+  name: 'Bob',
+  greet: greetThis
+};
+
+bob.greet();  // Hello, Bob
+```
+
+- Simple enough, right? You can think of it as a way to identify the object that "owns" the function. That is the "context" part of "execution context". The "execution" part means "when the function is called or "executed". For example, we could define the function right inside the object:
+```js
+const ann = {
+  name: 'Ann',
+  greet() {
+    console.log('Hello,', this.name);
+  }
+};
+
+ann.greet();  // Hello, Ann
+```
+
+- But remember, `this` is a function parameter. It only has meaning _when the function is called_. If we move Ann's greet, `this` won't point to Ann anymore.
+```js
+const charles = {
+  name: 'Charles',
+  greet: ann.greet
+};
+
+charles.greet();  // Hello, Charles
+```
+
+- Okay. That is the basic behavior. If you understand that, you understand most of it. Let's talk about the weirdness and exceptions.
+
+### When there is nothing to the left of the dot
+
+- Okay, so what happens when there is nothing to the left of the dot? Well, the unfortunate answer is _it depends_.
+</br>
+- If you are in "strict mode" (which includes ES modules), then `this` will very sensibly be `undefined`.
+```js
+'strict mode';
+
+greetThis();  // TypeError: Cannot read properties of undefined (reading 'name')
+```
+
+- This works exactly like regular function parameters when you don't pass them in between the parentheses. Unfortunately, if you are _not_ in strict mode `this` very weirdly defaults to the "global context", i.e. `window` in the browser and `global` in Node. We could talk more about this, but all you really need to understand is that it is silly and weird and if it happens, you screwed something up.
+
+- This most often comes up when passing an object method as a callback.
+```js
+'strict mode';
+
+setTimeout(ann.greet, 1000);
+
+// TypeError: Cannot read properties of undefined (reading 'name')
+```
+- Here we passed our function to `setTimeout`, but we did not pass Ann. So when the greet method gets called by `setTimeout`, there will not be anything to the left of the dot. This is often solved by wrapping everything in another function.
+```js
+setTimeout(function() {
+  ann.greet();
+}, 1000);
+
+// Hello, Ann
+```
+- Now when greet is called, Ann will be to the left of the dot.
+
+### In a class constructor
+
+```js
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const theresa = new User('Theresa');
+```
+
+- Okay. So what gives here? We used `this`, but there was no dot when we called User.
+- So the `new` keyword causes functions to be called in "constructor mode". You can think of this as secretly re-assigning `this` to a new object and then returning it at the end.
+
+```js
+class User {
+  constructor(name) {
+    // this = {}
+    this.name = name;
+    // return this
+  }
+}
+```
+
+### Call, apply, and bind
+
+- Functions in JavaScript have three methods which let you mess with how they are called. They all take a value for `this` as their first argument, which means they are often associated with `this`, but people often forget that the later arguments are all values for the _other_ function parameters.
+
+```js
+function greetCustom(greeting) {
+  console.log(greeting, this.name);
+}
+
+// Normal parameters
+ann.greet = greetCustom;
+ann.greet('Hey');  // Hey Ann
+
+// Call
+greetCustom.call(bob, 'Ciao');  // Ciao Bob
+
+// Apply
+greetCustom.apply(sue, ['Yo']);  // Yo Sue
+
+// Bind
+const greetCharles = greetCustom.bind(charles, 'Salutations');
+greetCharles();  // Salutations Charles
+```
+
+- You can look up these three methods if you want, but for the most part you won't need them in modern JavaScript. Nonetheless, it is worth mentioning that if you use them, they change the normal rules for function parameters (including `this`).
+
+### Arrow functions
+
+- Finally, it is worth mentioning that arrows functions do not have a `this`. If you use `this` inside an arrow function, it will not take any value related to how you called the arrow function. Instead it will behave like any variable which is not defined in a nested scope. Variable lookup will fallback to the wrapping scope and use the one defined there.
+
+```js
+'use strict';
+
+function greetNested() {
+   // this is defined in this function scope
+   // but has no value when called
+   function greet() {
+     console.log('Hello,', this.name);
+   }
+
+   greet();
+}
+
+ann.greet = greetNested;
+ann.greet();  // TypeError: Cannot read properties of undefined (reading 'name')
+
+function greetNestedArrow() {
+   // this does not exist in this arrow scope
+   // and so falls back to the wrapping function
+   const greet = () => console.log('Hello,', this.name);
+   greet();
+}
+
+ann.greet = greetNestedArrow;
+ann.greet();  // Hello, Ann
+```
+
+- And that's it. Just remember:
+
+> `this` is the thing to the left of the dot when a function is called... except when its not

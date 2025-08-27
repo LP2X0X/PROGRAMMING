@@ -3,6 +3,7 @@ tags:
   - js
   - object
   - method
+  - static
 ---
 
 ## 🧩 1. `Object.keys(obj)`

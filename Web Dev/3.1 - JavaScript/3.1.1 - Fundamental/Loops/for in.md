@@ -5,7 +5,7 @@ tags:
   - fundamental
 ---
 
-The for...in loop is used to **iterate over the enumerable *property keys*** of an [[Web Dev/3.1 - JavaScript/3.1.2 - Objects/Terms/Cores/Object|object]].
+The for...in loop is used to **iterate over the [[Property Flags#3. \*\*\`enumerable\`\*\*|enumerable]] property keys** of an [[Web Dev/3.1 - JavaScript/3.1.2 - Objects/Terms/Cores/Object|object]].
 
 ---
 
@@ -41,7 +41,7 @@ for (let key in person) {
 
 ### **⚠️ Behavior with Arrays**
 
-```
+```js
 const fruits = ["apple", "banana", "cherry"];
 
 for (let index in fruits) {

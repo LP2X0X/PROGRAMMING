@@ -10,5 +10,6 @@ type: folder_brief_live
 - [[Debounce decorator]]
 - [[Partial without context]]
 - [[Throttle decorator]]
+- [[Transparent Caching]]
 
 %% End Waypoint %%

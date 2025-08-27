@@ -9,7 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Array-like Objects]]
 - [[Global Object]]
-- [[Method]]
 - [[Object Literal]]
 - [[Object]]
 - [[Optional Chaining]]

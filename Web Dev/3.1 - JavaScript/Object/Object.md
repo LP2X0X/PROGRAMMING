@@ -10,6 +10,5 @@ type: folder_brief_live
 - [[null-prototype Object]]
 - [[Object coercion]]
 - [[Object overview]]
-- [[Object prototype]]
 
 %% End Waypoint %%

@@ -1,8 +1,10 @@
 ---
 tags:
   - js
+  - object
   - method
   - fundamental
+  - static
 ---
 
 ## **🧾 Object.assign() - What it does **

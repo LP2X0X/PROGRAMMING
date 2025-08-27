@@ -4,6 +4,7 @@ tags:
  - object
  - property
  - method
+ - static
 ---
 
 - The method [`Object.defineProperty`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) allows you to **create or change** a property and control its behavior with flags (`writable`, `enumerable`, `configurable`).
@@ -43,6 +44,22 @@ console.log(user.name); // John
 
 user.name = "Pete";     // ❌ ignored (or error in strict mode)
 console.log(user.name); // John
+```
+
+```js
+const account = { balance: 100 };
+
+Object.defineProperty(account, "deposit", {
+  value: function (amount) {
+    this.balance += amount;
+  },
+  writable: true,
+  enumerable: true
+});
+
+account.deposit(50);
+console.log(account.balance); // 150
+
 ```
 
 ---

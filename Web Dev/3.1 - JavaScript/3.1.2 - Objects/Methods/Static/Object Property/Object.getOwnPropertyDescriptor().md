@@ -4,6 +4,7 @@ tags:
  - object
  - property
  - method
+ - static
 ---
 
 - The method [Object.getOwnPropertyDescriptor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) allows to query the _full_ information about a property.

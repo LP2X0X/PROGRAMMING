@@ -5,7 +5,7 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
-- [[Constructor]]
+- [[CSharp/OOP/Class/Constructor]]
 - [[Default Access Modifier]]
 - [[Partial Classes]]
 

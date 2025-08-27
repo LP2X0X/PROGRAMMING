@@ -1,4 +1,17 @@
+---
+tags: 
+ - js
+ - object
+ - property
+ - advance
+---
+
 In **JavaScript**, every object is linked to a prototype from which it can inherit properties and methods. This mechanism is known as **prototypal inheritance**.
+![[Pasted image 20250826145342.png|center|200]]
+
+```ad-note
+The only usage of `__proto__`, that’s not frowned upon, is as a property when creating a new object: `{ __proto__: ... }`.
+```
 
 ---
 
@@ -7,7 +20,13 @@ In **JavaScript**, every object is linked to a prototype from which it can inher
 1. Every object in JavaScript has an internal property called `[[Prototype]]` which points to another object (its **prototype**).
 2. You can access this prototype using:
     - **`Object.getPrototypeOf(obj)`** (recommended)
-    - **`__proto__`** (deprecated but still works)
+    - `__proto__` (deprecated but still works) is a way to access `[[Prototype]]`, it is not `[[Prototype]]` itself.
+		```js
+		let rabbit = {
+		  jumps: true,
+		  __proto__: animal
+		};
+		```
 3. **`Object.prototype`** is the top-level prototype, from which all other objects inherit.
 
 ---
@@ -20,6 +39,44 @@ console.log(Object.getPrototypeOf(obj)); // Outputs: [Object: null prototype] {}
 ```
 
 Here, the object `obj` inherits from `Object.prototype`.
+
+---
+
+### **🔍 Writting does not use prototype**
+
+1. **Reading (lookup) → checks prototype chain**
+```js
+const animal = { eats: true };
+const rabbit = Object.create(animal);
+
+console.log(rabbit.eats); // true  <-- found in prototype (animal)
+```
+- JS didn’t find eats directly on rabbit.
+- It looked in rabbit.__proto__ (animal), found it, and returned it.
+
+2. **Writing (assignment and only assignment, not modifying) → always goes to the object itself**
+```js
+rabbit.eats = false; 
+console.log(rabbit.eats); // false (own property now)
+console.log(animal.eats); // true  (unchanged)
+```
+- Even though eats exists in the prototype (animal),
+- assigning creates/updates a **new property on rabbit**, not the prototype.
+
+3. **Deleting**
+```js
+delete rabbit.eats;
+console.log(rabbit.eats); // true (back to reading from prototype)
+```
+
+#### **🛠️ Summary**
+
+- ✅ **Read** → JS looks at the object, and if not found, continues up the prototype chain.
+    
+- ✅ **Write** → JS never writes to the prototype; it creates/updates the property on the object itself.
+    
+- ✅ **Delete** → removes only from the object’s own properties, not from the prototype.
+    
 
 ---
 
@@ -123,3 +180,44 @@ obj.sayHi(); // Outputs: Hi from prototype!
 ```
 
 Would you like more examples or details on extending or manipulating prototypes?
+
+---
+
+### ❓The value of `this`
+
+An interesting question may arise in the example above: what’s the value of `this` inside `set fullName(value)`? Where are the properties `this.name` and `this.surname` written: into `user` or `admin`?
+
+The answer is simple: `this` is not affected by prototypes at all.
+
+**No matter where the method is found: in an object or its prototype. In a method call, `this` is always the object before the dot.**
+
+---
+
+### **📌 Objects and their prototype**
+
+```js
+const animal = { eats: true };
+const rabbit = Object.create(animal);
+
+console.log(rabbit.eats); // true
+```
+
+If you **modify** the prototype object (animal):
+
+```js
+animal.walks = true;
+console.log(rabbit.walks); // ✅ true
+```
+
+But if you **reassign** the prototype variable:
+
+```Js
+const newAnimal = { sleeps: true };
+rabbit.__proto__ = animal; // was set at creation
+
+// Changing "animal" variable reference does nothing
+animal = newAnimal; // ❌ doesn't affect rabbit
+console.log(rabbit.sleeps); // undefined
+```
+
+Because rabbit.[[__proto__]] was already pointing to the old object (animal), not to the variable.

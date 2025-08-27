@@ -10,8 +10,10 @@ type: folder_brief_live
 - **[[Cores]]**
 - **[[Garbage Collection]]**
 - **Others**
+	- [[Accessor]]
 	- [[Computed Property]]
 	- [[integer Property]]
+	- [[Method]]
 	- [[Valid Identifier]]
 
 %% End Waypoint %%

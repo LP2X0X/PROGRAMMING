@@ -12,6 +12,5 @@ type: folder_brief_live
 - [[Function]]
 - [[Higher-Order Function]]
 - [[The `arguments` variable]]
-- [[Transparent Caching]]
 
 %% End Waypoint %%
