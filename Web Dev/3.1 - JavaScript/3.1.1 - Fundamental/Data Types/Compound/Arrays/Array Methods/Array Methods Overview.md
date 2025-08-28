@@ -12,6 +12,14 @@ In JavaScript, arrays come with many powerful and frequently used methods.
 ```js
 function callback(item, index, array) { ... }
 ```
+
+The exception are:
+```js
+sort(compareFn) → callback is (a, b) (two elements, not index/array).
+reduce(callback, initial) → callback is (accumulator, item, index, array).
+reduceRight(callback, initial) → same as reduce.
+Array.from(arrayLike, mapFn) → callback is (item, index).
+```
 ````
 
 ## 📢 **Most Common Use Cases**

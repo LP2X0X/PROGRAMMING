@@ -11,6 +11,7 @@ type: folder_brief_live
 - **[[1 - HTML]]**
 - **[[2 - CSS]]**
 - **[[3 - JavaScript Crash Course]]**
+- **[[3 - Web Design]]**
 - **3.1 - JavaScript**
 	- **[[3.1.0 - General]]**
 	- **[[3.1.1 - Fundamental]]**
