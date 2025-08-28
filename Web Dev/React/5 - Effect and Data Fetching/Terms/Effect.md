@@ -2,6 +2,7 @@
 tags:
   - react
   - term
+  - effect
   - fundamental
 ---
 
@@ -11,6 +12,11 @@ The **`useEffect` hook** in React lets you run **side effects** in function comp
 - Directly manipulating the DOM
 - Setting up subscriptions or event listeners
 - Starting/stopping timers
+
+```ad-note
+Effect are used to keep a component synchronised with some external system.
+```
+![[Pasted image 20250827174352.png|center|500]]
 
 ---
 
@@ -71,7 +77,8 @@ function Example() {
       return () => clearInterval(id); // cleanup
     }, []);
     ```
-    
+
+![[Pasted image 20250827174253.png|center|500]]
 
 ---
 
@@ -117,4 +124,60 @@ function Example() {
 
 ---
 
-![[Pasted image 20250818194802.png|center]]
+### useEffect run asynchronously after component render
+
+#### 🔄 Render + Commit Phases in React
+
+1. **Render phase**
+    
+    - React calls your component function(s).
+        
+    - It calculates what the DOM _should_ look like.
+        
+    - No DOM updates happen yet.
+        
+    - This is **pure and synchronous**.
+        
+2. **Commit phase**
+    
+    - React updates the actual DOM.
+        
+    - Browser paints the UI on the screen.
+        
+    - User sees the update.
+        
+3. **Effects phase** (`useEffect`)
+    
+    - After the browser has painted, React runs your side effects asynchronously (queued in the task/microtask queue).
+        
+    - That way, your UI is visible immediately, _before_ slow or blocking side effects run.
+        
+
+#### ⚡ Key Point:
+
+- `useEffect` always runs **after paint** (asynchronously, in the background).
+    
+- `useLayoutEffect`, in contrast, runs **synchronously after DOM mutations but before paint**.
+    
+    - That’s why `useLayoutEffect` can block the paint if it’s heavy.
+        
+
+#### Example:
+
+```jsx
+useEffect(() => {
+  console.log("✅ Runs AFTER paint");
+});
+
+useLayoutEffect(() => {
+  console.log("⏱ Runs BEFORE paint (blocks UI)");
+});
+```
+
+Order if you update state:
+
+```
+Render → Commit DOM → Browser paints → useEffect
+                          ↑
+                        useLayoutEffect runs here
+```

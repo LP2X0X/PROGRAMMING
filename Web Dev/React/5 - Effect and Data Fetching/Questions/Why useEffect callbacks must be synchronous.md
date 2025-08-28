@@ -4,10 +4,6 @@ tags:
  - question
 ---
 
-Nice one 🚀 you’re asking about **why React makes `useEffect` callbacks synchronous** and why we often wrap async code _inside_ rather than making the effect itself async.
-
----
-
 ## 🔹 First: Why `useEffect` callbacks must be synchronous
 
 React’s design expects the effect function to:
