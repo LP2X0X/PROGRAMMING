@@ -12,7 +12,7 @@ type: folder_brief_live
 - [[null vs undefined]]
 - **[[Numbers]]**
 - [[Primitive]]
-- **[[Web Dev/4 - JavaScript/3.1.1 - Fundamental/Data Types/Primitives/Strings/Strings]]**
+- **[[Strings]]**
 - [[Symbol]]
 - [[Template Literal]]
 
