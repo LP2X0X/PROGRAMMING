@@ -9,20 +9,20 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **2.1 - Fundamentals**
 	- [[Fundamentals]]
-	- **[[Properties]]**
+	- **[[Web Dev/2 - CSS/Properties/Properties]]**
 	- **[[Pseudo Classes]]**
 	- **[[Pseudo Elements]]**
-	- **[[Terms]]**
+	- **[[Web Dev/2 - CSS/Terms/Terms]]**
 	- **[[Values]]**
 - **[[2.2 - Layouts]]**
 - **[[2.3 - Functions]]**
-- **[[Keywords]]**
-- **[[Notes]]**
-- **[[Properties]]**
-- **[[Questions]]**
+- **[[Web Dev/2 - CSS/Keywords/Keywords]]**
+- **[[Web Dev/2 - CSS/Notes/Notes]]**
+- **[[Web Dev/2 - CSS/Properties/Properties]]**
+- **[[Web Dev/2 - CSS/Questions/Questions]]**
 - **[[Responsive Design]]**
 - **[[Selectors]]**
-- **[[Techniques]]**
-- **[[Terms]]**
+- **[[Web Dev/2 - CSS/Techniques/Techniques]]**
+- **[[Web Dev/2 - CSS/Terms/Terms]]**
 
 %% End Waypoint %%

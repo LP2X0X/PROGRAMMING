@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Questions]]**
-- **[[Terms]]**
+- **[[Web Dev/React/5 - Effect and Data Fetching/Questions/Questions]]**
+- **[[Web Dev/React/5 - Effect and Data Fetching/Terms/Terms]]**
 
 %% End Waypoint %%

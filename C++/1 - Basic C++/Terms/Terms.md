@@ -13,7 +13,7 @@ type: folder_brief_live
 - **[[Expressions]]**
 - **[[C++/1 - Basic C++/Terms/Functions/Functions]]**
 - **[[Initialization Types]]**
-- **[[Operators]]**
+- **[[C++/1 - Basic C++/Terms/Operators/Operators]]**
 - **[[Others]]**
 - **[[C++/1 - Basic C++/Terms/Scopes/Scopes]]**
 

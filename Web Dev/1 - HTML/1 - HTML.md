@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Attributes]]**
 - **[[Elements]]**
-- **[[Notes]]**
+- **[[Web Dev/1 - HTML/Notes/Notes]]**
 - [[Semantic HTML]]
 - **[[Web Dev/1 - HTML/Terms/Terms]]**
 

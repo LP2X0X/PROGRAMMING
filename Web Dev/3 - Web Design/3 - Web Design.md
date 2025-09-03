@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **Ingredients**
 	- [[Typography Rules]]
-- **[[Notes]]**
+- **[[Web Dev/3 - Web Design/Notes/Notes]]**
 - [[Web Design vs Web Development]]
 - **[[Website Personalities]]**
 

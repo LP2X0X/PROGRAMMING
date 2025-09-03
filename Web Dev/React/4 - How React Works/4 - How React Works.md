@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[Component vs Instance vs Element]]
 - [[How components are displayed on the screen Overview]]
 - [[How React handle events]]
-- **[[Questions]]**
+- **[[Web Dev/React/4 - How React Works/Questions/Questions]]**
 - [[React 3rd-party Library Ecosystem]]
 - [[State updates are batched]]
 - [[Summary]]
