@@ -9,9 +9,9 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Arithmetic operators]]
 - [[Increment, decrement operators, and side effects]]
-- [[Logical operators]]
+- [[C++/4 - Operators/Terms/Logical operators]]
 - [[Operator Associativity]]
-- [[Operator Precedence]]
+- [[C++/4 - Operators/Terms/Operator precedence]]
 - [[Relational operators and floating point comparisons]]
 - [[Remainder and Exponentiation]]
 - [[The comma operator]]

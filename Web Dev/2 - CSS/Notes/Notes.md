@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Conventions]]**
 - **[[Differences]]**
-- [[Miscellaneous]]
+- [[Web Dev/2 - CSS/Notes/Miscellaneous]]
 - [[Multiple Classes on a Single HTML Element]]
 - **[[Overviews]]**
 - [[The purpose of CSS]]

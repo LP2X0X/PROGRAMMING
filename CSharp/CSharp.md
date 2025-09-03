@@ -15,7 +15,7 @@ type: folder_brief_live
 - **[[File I.O and Object Serialization]]**
 - **[[Interfaces]]**
 - **[[LINQ to Objects]]**
-- **[[Miscellaneous]]**
+- **[[CSharp/Miscellaneous/Miscellaneous]]**
 - **[[Multithreaded, Parallel and Async Programming]]**
 - **[[Object Lifetime]]**
 - **[[OOP]]**

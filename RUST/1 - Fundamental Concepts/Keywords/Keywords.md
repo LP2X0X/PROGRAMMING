@@ -7,8 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[const]]
-- [[let]]
+- [[RUST/1 - Fundamental Concepts/Keywords/const]]
+- [[RUST/1 - Fundamental Concepts/Keywords/let]]
 - [[mut]]
 
 %% End Waypoint %%
