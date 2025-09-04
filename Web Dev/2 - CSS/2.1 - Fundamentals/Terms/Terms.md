@@ -10,6 +10,6 @@ type: folder_brief_live
 - **[[Advance]]**
 - **[[CSS Rules]]**
 - **[[Display-based Elements]]**
-- **[[Web Dev/2 - CSS/2.1 - Fundamentals/Terms/Important/Important]]**
+- **[[Important]]**
 
 %% End Waypoint %%
