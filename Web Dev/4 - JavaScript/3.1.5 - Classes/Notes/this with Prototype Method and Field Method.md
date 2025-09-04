@@ -120,7 +120,7 @@ f(); // still prints "hello"
 
 ```ad-note
 **Here's my own explanation:**
-Prototype methods are stored on the class’s prototype, so all instances share them. The trade-off is that when you pass a prototype method around, it doesn’t automatically know which instance it came from — the `this` context can be lost.
+Prototype methods are stored on the class’s prototype, so all instances "have" them. The trade-off is that when you pass a prototype method around, it doesn’t automatically know which instance it came from — the `this` context can be lost.
 
 By contrast, methods defined as class fields are created directly on each instance. Since they capture the instance’s `this` at creation time, they always know which object they belong to and never lose their context.
 ```
