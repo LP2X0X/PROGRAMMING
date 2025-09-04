@@ -9,5 +9,6 @@ type: folder_brief_live
 - [[Class Field]]
 - [[Class]]
 - [[Named Class Expression]]
+- [[Static Property and Method]]
 
 %% End Waypoint %%
