@@ -10,7 +10,6 @@ type: folder_brief_live
 - **[[Cores]]**
 - **[[Garbage Collection]]**
 - **[[Miscellaneous]]**
-	- [[Accessor]]
 	- [[Computed Property]]
 	- [[integer Property]]
 	- [[Method]]

@@ -64,6 +64,10 @@ for (let index in fruits) {
 - You want both the **key** and the **value**
     
 
+```ad-note
+The `for..in` loop iterates over inherited properties too.
+```
+
 ---
 
 ### **❌ Avoid for...in with:**

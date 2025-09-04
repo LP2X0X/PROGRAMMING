@@ -60,8 +60,30 @@ rabbit.eats = false;
 console.log(rabbit.eats); // false (own property now)
 console.log(animal.eats); // true  (unchanged)
 ```
+
+```js
+let animal = {
+  eats: true,
+  walk() {
+	/* this method won't be used by rabbit */
+  }
+};
+
+let rabbit = {
+  __proto__: animal
+};
+
+rabbit.walk = function() {
+  alert("Rabbit! Bounce-bounce!");
+};
+
+rabbit.walk(); // Rabbit! Bounce-bounce!
+```
+
 - Even though eats exists in the prototype (animal),
 - assigning creates/updates a **new property on rabbit**, not the prototype.
+
+
 
 3. **Deleting**
 ```js
