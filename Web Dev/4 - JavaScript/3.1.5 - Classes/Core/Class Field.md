@@ -10,7 +10,7 @@ tags:
 
 A **class field** is a property that belongs to each instance of a class, defined **directly inside the class body**, not in the constructor.
 
-They make it easier to declare and initialize properties without boilerplate code.
+It is just another way of declaring an **instance property**, without putting it in the constructor.
 
 ---
 
