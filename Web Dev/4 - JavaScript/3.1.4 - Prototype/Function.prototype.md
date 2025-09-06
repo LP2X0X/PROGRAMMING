@@ -15,8 +15,8 @@ tags:
 - This is the key mechanism that powers **prototypal inheritance** in JS.
     
 
-```ad-note
-If prototype is modified and point to something else it does not affect the prototype of existing ones.
+```ad-important
+`F.prototype` property is only used when `new F` is called, it assigns `[[Prototype]]` of *the new object*.
 ```
 
 ---

@@ -7,7 +7,7 @@ tags:
 ---
 
 In **JavaScript**, every object is linked to a prototype from which it can inherit properties and methods. This mechanism is known as **prototypal inheritance**.
-![[Pasted image 20250826145342.png|center|200]]
+![[Pasted image 20250826145342.png|center|200]] ^e54aa0
 
 ```ad-note
 The only usage of `__proto__`, that’s not frowned upon, is as a property when creating a new object: `{ __proto__: ... }`.
@@ -33,12 +33,38 @@ The only usage of `__proto__`, that’s not frowned upon, is as a property when 
 
 ### ✅ **Example of Object Prototype**
 
-```javascript
-const obj = {}; // Creates an empty object
-console.log(Object.getPrototypeOf(obj)); // Outputs: [Object: null prototype] {}
+```js
+let animal = {
+  eats: true,
+  walk() {
+    alert("Animal walk");
+  }
+};
+
+let rabbit = {
+  jumps: true,
+  __proto__: animal
+};
+
+let longEar = {
+  earLength: 10,
+  __proto__: rabbit
+};
+
+// walk is taken from the prototype chain
+longEar.walk(); // Animal walk
+alert(longEar.jumps); // true (from rabbit)
 ```
 
-Here, the object `obj` inherits from `Object.prototype`.
+![[Pasted image 20250906111051.png|center|300]]
+
+- Now if we read something from `longEar`, and it’s missing, JavaScript will look for it in `rabbit`, and then in `animal`.
+
+```ad-note
+This is an indication that when an object is inherited from another object, it gets all the parent's property.
+```
+
+^57e3c2
 
 ---
 

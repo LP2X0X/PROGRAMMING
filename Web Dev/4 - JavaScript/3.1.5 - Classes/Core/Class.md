@@ -138,6 +138,9 @@ console.log(MathUtils.add(5, 3)); // 8
 3. Classes always `use strict`.  
     - All code inside the class construct is automatically in strict mode.
 
+4. Classes are not hoisted
+	- You can use a function declaration before it’s defined, but not a class.
+
 ---
 
 ### Computed name

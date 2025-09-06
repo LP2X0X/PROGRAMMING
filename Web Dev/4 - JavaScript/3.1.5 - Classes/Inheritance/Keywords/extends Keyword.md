@@ -53,6 +53,8 @@ The syntax to extend another class is: `class Child extends Parent`.
 - Internally, `extends` keyword works using the good old prototype mechanics. It sets `Rabbit.prototype.[[Prototype]]` to `Animal.prototype`. So, if a method is not found in `Rabbit.prototype`, JavaScript takes it from `Animal.prototype`.
 ![[Pasted image 20250904074913.png|center|400]]
 
+- Remember that prototype is an object, therefore it also has the \_\_proto\_\_ property. Also, from [[__proto__#^57e3c2|this note]], we can understand how the use of the above method work.
+
 
 ````ad-note
 Any expression is allowed after `extends`
@@ -78,3 +80,58 @@ Here `class User` inherits from the result of `f("Hello")`.
 
 That may be useful for advanced programming patterns when we use functions to generate classes depending on many conditions and can inherit from them.
 ````
+
+----
+
+## 📌 Inheritance of Static Properties in JavaScript
+
+- **Static methods/properties** are defined on the **constructor (class itself)**, not on its `prototype`.
+    
+    ```js
+    class Parent {
+      static role = "Base";
+      static sayHi() {
+        return "Hello from Parent";
+      }
+    }
+    ```
+    
+- **Child classes inherit static members** via the prototype chain of constructors:
+    
+    ```js
+    class Child extends Parent {}
+    
+    console.log(Child.role);        // "Base"
+    console.log(Child.sayHi());     // "Hello from Parent"
+    ```
+    
+- Under the hood:
+    
+    - `Child.__proto__ === Parent`
+        
+    - `Child.prototype.__proto__ === Parent.prototype`
+        
+    - So `Child` can access static members through its `__proto__`.
+        
+- **Overriding**:
+    
+    ```js
+    class Child extends Parent {
+      static role = "Child";
+    }
+    
+    console.log(Child.role);  // "Child"
+    console.log(Parent.role); // "Base"
+    ```
+    
+
+---
+
+### ✅ Tips & Best Practices
+
+- Use static methods for **utility functions** related to the class, not individual instances.
+    
+- Be cautious when **overriding static properties**: it shadows the parent’s value, doesn’t replace it globally.
+    
+- Remember: instances (`new Child()`) **cannot access static members** directly.
+    
