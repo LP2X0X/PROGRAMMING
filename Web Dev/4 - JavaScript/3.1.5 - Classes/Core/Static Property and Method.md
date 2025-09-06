@@ -111,6 +111,10 @@ alert(Rabbit.planet); // Earth
 
 ![[Pasted image 20250904171859.png|center|400]]
 
+```ad-note
+Detail explanation can be read [[extends Keyword#📌 Inheritance of Static Properties in JavaScript|here]].
+```
+
 ---
 
 ### 4. Key difference from instance members
