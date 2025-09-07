@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[audio context]]
 - [[Audio Processing Graph]]
 - [[Node]]
-- **[[Properties]]**
+- **[[Web Dev/JavaScript Crash Course/Terms/Web Audio APIs/Properties/Properties]]**
 - [[Web Audio API]]
 
 %% End Waypoint %%

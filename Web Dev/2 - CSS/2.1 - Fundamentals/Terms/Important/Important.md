@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[Box Model]]
 - [[Browser Style]]
 - [[CSS Specificity]]
-- [[Inheritance]]
+- [[Web Dev/2 - CSS/2.1 - Fundamentals/Terms/Important/Inheritance]]
 - [[Viewport]]
 
 %% End Waypoint %%

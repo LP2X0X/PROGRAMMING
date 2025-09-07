@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Core]]**
+- **[[Web Dev/JavaScript Crash Course/Terms/Core/Core]]**
 - **[[Events]]**
 - **[[Others]]**
 - **[[Web Audio APIs]]**
