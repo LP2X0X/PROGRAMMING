@@ -8,7 +8,9 @@ type: folder_brief_live
 - [[Class Expression]]
 - [[Class Field]]
 - [[Class]]
+- [[mixin]]
 - [[Named Class Expression]]
+- [[Protected Property]]
 - [[Static Property and Method]]
 
 %% End Waypoint %%

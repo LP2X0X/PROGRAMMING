@@ -10,8 +10,8 @@ type: folder_brief_live
 - **[[Object Property]]**
 - [[Object.assign()]]
 - [[Object.create()]]
-- [[Object.getPrototypeOf()]]
 - [[Object.getPrototypeOf(obj)]]
 - [[Object.keys() - Object.values() - Object.entries()]]
+- [[Object.setPrototypeOf()]]
 
 %% End Waypoint %%

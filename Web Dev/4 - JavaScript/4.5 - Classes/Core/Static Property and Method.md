@@ -137,13 +137,31 @@ console.log(dog.greet());      // ❌ Error
 
 ---
 
+### 5. No static inheritance in built-ins
+
+- Built-in objects have their own static methods, for instance `Object.keys`, `Array.isArray` etc.
+
+- As we already know, native classes extend each other. For instance, `Array` extends `Object`.
+
+- Normally, when one class extends another, both static and non-static methods are inherited.
+
+- But built-in classes are an exception. They don’t inherit statics from each other.
+
+</br>
+
+- For example, both `Array` and `Date` inherit from `Object`, so their instances have methods from `Object.prototype`. But `Array.[[Prototype]]` does not reference `Object`, so there’s no, for instance, `Array.keys()` (or `Date.keys()`) static method.
+![[Pasted image 20250907184715.png|center|500]]
+
+
+- As you can see, there’s no link between `Date` and `Object`. They are independent, only `Date.prototype` inherits from `Object.prototype`.
+
+- That’s an important difference of inheritance between built-in objects compared to what we get with `extends`.
+
+---
+
 ✅ **In short**:
 
 - `static` makes methods/properties live on the **class**, not its instances.
     
 - Good for utilities, counters, registries, or anything “class-wide.”
     
-
----
-
-Do you want me to also show how `static` interacts with **`super`** in inheritance (since static methods can also use `super` differently from instance methods)?

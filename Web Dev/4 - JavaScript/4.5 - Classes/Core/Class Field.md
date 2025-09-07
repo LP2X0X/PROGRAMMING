@@ -86,6 +86,10 @@ console.log(u.checkPassword("secret")); // true
 console.log(u.#password); // ❌ SyntaxError
 ```
 
+```ad-note
+Private fields do not conflict with public ones. We can have both private `#smt` and public `smt` fields at the same time.
+```
+
 ---
 
 ### 3. **Static Fields**
@@ -130,6 +134,31 @@ console.log("method" in t); // true (but on prototype)
 console.log(Object.hasOwn(t, "field"));   // true
 console.log(Object.hasOwn(t, "method"));  // false
 ```
+
+---
+
+### Relation with prototype
+
+```js
+class Parent {
+  _field = 123;           // instance field
+  static staticField = 99; // static field
+
+  method() { return "hi"; }
+}
+
+const p = new Parent();
+
+console.log(Object.keys(p));       // ["_field"]
+console.log(p._field);             // 123
+
+console.log(Parent.prototype);     // { constructor: ..., method: [Function] }
+console.log("_field" in Parent.prototype); // false ❌
+console.log("method" in Parent.prototype); // true ✅
+```
+
+- **Instance fields** (`_field = ...`) → stored directly **on the object instance**, not on the prototype.
+    
 
 ---
 

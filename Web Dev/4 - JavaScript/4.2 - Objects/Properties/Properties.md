@@ -9,7 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Accessor Properties]]
 - [[Descriptor]]
-- [[Getter and Setter]]
 - [[Property Flags]]
 
 %% End Waypoint %%

@@ -127,6 +127,95 @@ That may be useful for advanced programming patterns when we use functions to ge
 
 ---
 
+### 💪 Extending build-in classes
+
+You can extend built-ins like `Array`, `Error`, `Map`, etc.
+
+#### Example: Extending `Array`
+
+```js
+class MyArray extends Array {
+  first() {
+    return this[0];
+  }
+}
+
+const arr = new MyArray(1, 2, 3);
+console.log(arr.first());  // 1
+console.log(arr instanceof Array);    // true
+console.log(arr instanceof MyArray);  // true
+```
+
+- `MyArray` inherits everything from `Array`.
+    
+- Prototype chain:  
+    `arr → MyArray.prototype → Array.prototype → Object.prototype`
+    
+
+#### 🚨 Very Interesting Thing: Methods Like `map`, `filter`, etc.
+
+When you extend `Array`, built-in methods (`map`, `filter`, `slice`, etc.) **return new objects of the inherited type**, not plain `Array`.
+
+```js
+const doubled = arr.map(x => x * 2);
+
+console.log(doubled instanceof MyArray); // ✅ true
+console.log(doubled.first());            // works!
+```
+
+This is because many built-in classes in JS use an internal mechanism called **`Symbol.species`** to decide the constructor of derived objects.
+
+- By default, `MyArray[Symbol.species]` is `MyArray`.
+    
+- You can override it if you want `map`, `filter`, etc. to return plain `Array` instead:
+    
+
+```js
+class MyArray extends Array {
+  static get [Symbol.species]() {
+    return Array; // now derived methods return Array, not MyArray
+  }
+}
+
+const arr = new MyArray(1, 2, 3);
+const mapped = arr.map(x => x * 2);
+
+console.log(mapped instanceof MyArray); // false
+console.log(mapped instanceof Array);   // true
+```
+
+#### Example: Extending `Error`
+
+```js
+class MyError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "MyError";
+  }
+}
+
+try {
+  throw new MyError("Something went wrong!");
+} catch (e) {
+  console.log(e.name);    // "MyError"
+  console.log(e.message); // "Something went wrong!"
+  console.log(e.stack);   // stack trace
+}
+```
+
+#### ⚠️ Gotchas
+
+1. `Array` and some other built-ins are **exotic objects** with special behavior (like length auto-tracking).
+    
+2. Always call `super(...)` in your constructor if you override it.
+    
+3. Private fields (`#field`) still work, but subclasses can’t directly access a parent’s private field.
+    
+4. Built-in methods on subclasses often respect the **`Symbol.species`** property.
+    
+
+---
+
 ### ✅ Tips & Best Practices
 
 - Use static methods for **utility functions** related to the class, not individual instances.
