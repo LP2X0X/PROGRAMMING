@@ -6,7 +6,7 @@ tags:
 
 ### 🔒 What is a **Closure** in JavaScript?
 
-- A [closure](https://en.wikipedia.org/wiki/Closure_\(computer_programming\)) is a **function that “remembers” the variables** from its **lexical scope**, even **after the outer function has finished execution**. In some languages, that’s not possible, or a function should be written in a special way to make it happen. But as explained above, in JavaScript, all functions are naturally closures.
+- A [closure](https://en.wikipedia.org/wiki/Closure_\(computer_programming\)) is a **function that “remembers” the variables** from its **[[Lexical Environment|lexical scope]]**, even **after the outer function has finished execution**. In some languages, that’s not possible, or a function should be written in a special way to make it happen. But as explained above, in JavaScript, all functions are naturally closures.
 
 - That is: they automatically remember where they were created using a hidden `[[Environment]]` property, and then their code can access outer variables.
   
@@ -15,7 +15,7 @@ tags:
 
 ### ✅ Key Concepts
 
-- **Lexical scope** = the scope created during function definition, not execution.
+- **Lexical scope** = the scope created during ***function definition***, not execution.
 - **Closures allow functions to retain access to outer variables.**
 - This is possible **even when the outer function has returned**.
 

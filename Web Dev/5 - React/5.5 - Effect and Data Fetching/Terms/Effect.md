@@ -114,6 +114,10 @@ function Example() {
     ```
     
 
+```ad-important
+Each effect should do **only one thing**! Use **one useEffect hook for each side effect**. This makes effects easier to [[Cleanup Function|cleanup]].
+```
+
 ---
 
 👉 Think of `useEffect` as:

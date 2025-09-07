@@ -63,7 +63,7 @@ useEffect(() => {
 }, [count]);
 ```
 
-➡️ Runs **only when `count` changes**.
+➡️ Runs **only when `count` changes** and **on mount**.
 
 ---
 
