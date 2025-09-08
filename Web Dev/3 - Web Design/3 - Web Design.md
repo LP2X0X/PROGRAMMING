@@ -10,7 +10,7 @@ type: folder_brief_live
 - **Ingredients**
 	- [[Colors Rules]]
 	- [[Typography Rules]]
-- **[[Web Dev/3 - Web Design/Notes/Notes]]**
+- **[[Notes]]**
 - [[Web Design vs Web Development]]
 - **[[Website Personalities]]**
 

@@ -37,6 +37,7 @@ type: folder_brief_live
 	- [[3.1.3 - Functions]]
 	- **[[Function's Methods]]**
 	- **[[Global Methods]]**
+	- **[[Instance Properties]]**
 	- **[[Interaction Functions]]**
 	- **[[Notes]]**
 	- **[[Questions]]**

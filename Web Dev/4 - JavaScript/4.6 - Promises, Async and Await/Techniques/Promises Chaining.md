@@ -35,10 +35,10 @@ new Promise(function(resolve, reject) {
 	4. …and so on.
 
 - As the result is passed along the chain of handlers, we can see a sequence of `alert` calls: `1` → `2` → `4`.
-![[Pasted image 20250819102159.png|center|300]]
+![[Pasted image 20250819102159.png|center|200]]
 
 ```ad-note
-The whole thing works, because every call to a `.then` returns a new promise, so that we can call the next `.then` on it.
+The whole thing works, **because every call to a `.then` returns a new promise**, so that we can call the next `.then` on it.
 When a handler returns a value, it becomes the result of that promise, so the next `.then` is called with it.
 ```
 

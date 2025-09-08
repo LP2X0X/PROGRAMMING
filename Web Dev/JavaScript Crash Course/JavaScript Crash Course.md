@@ -8,11 +8,11 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[Compound Data Type]]**
-- **[[Web Dev/JavaScript Crash Course/Functions/Functions]]**
-- **[[Web Dev/JavaScript Crash Course/Keywords/Keywords]]**
-- **[[Web Dev/JavaScript Crash Course/Methods/Methods]]**
-- **[[Web Dev/JavaScript Crash Course/Notes/Notes]]**
+- **[[Functions]]**
+- **[[Keywords]]**
+- **[[Methods]]**
+- **[[Notes]]**
 - **[[Web Dev/JavaScript Crash Course/Properties/Properties]]**
-- **[[Web Dev/JavaScript Crash Course/Terms/Terms]]**
+- **[[Terms]]**
 
 %% End Waypoint %%

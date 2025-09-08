@@ -12,7 +12,7 @@ type: folder_brief_live
 - [[download]]
 - [[Web Dev/1 - HTML/Attributes/Notable/for]]
 - [[id]]
-- [[name]]
+- [[Web Dev/1 - HTML/Attributes/Notable/name]]
 - [[role]]
 - [[style]]
 - [[tabindex]]

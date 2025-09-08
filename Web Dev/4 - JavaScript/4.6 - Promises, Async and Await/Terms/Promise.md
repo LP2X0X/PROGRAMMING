@@ -36,7 +36,7 @@ tags:
 
 ---
 
-### Notes
+### ☝️ Notes
 #### There can be only a single result or an error
 - The executor should call only one `resolve` or one `reject`. Any state change is final.
 - All further calls of `resolve` and `reject` are ignored:
@@ -52,7 +52,7 @@ tags:
 - Also, `resolve`/`reject` expect only one argument (or none) and will ignore additional arguments.
 
 #### Reject with `Error` objects 
-- In case something goes wrong, the executor should call `reject`. That can be done with any type of argument (just like `resolve`). But it is recommended to use `Error` objects (or objects that inherit from `Error`).
+- In case something goes wrong, the executor should call `reject`. That can be done with any type of argument (just like `resolve`). But it is recommended to use [[Error object]] (or objects that inherit from `Error`).
 
 #### The `state` and `result` are internal
 - The properties `state` and `result` of the Promise object are internal. We can’t directly access them. We can use the methods `.then`/`.catch`/`.finally` for that.

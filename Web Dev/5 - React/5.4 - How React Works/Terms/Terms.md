@@ -14,7 +14,7 @@ type: folder_brief_live
 - [[Render Logic]]
 - [[Render]]
 - [[Renderer]]
-- [[Web Dev/5 - React/5.4 - How React Works/Terms/Side Effect]]
+- [[Side Effect]]
 - [[Synthetic Event]]
 - [[Virtual Dom]]
 

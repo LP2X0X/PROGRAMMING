@@ -1,4 +1,4 @@
-# Functions Overview
+# Instance Properties Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Constructor Function]]
-- [[structuredClone()]]
+- [[length]]
+- [[name]]
+- [[prototype]]
 
 %% End Waypoint %%
