@@ -75,6 +75,10 @@ Please note that the order of the resulting array members is the same as in its 
 	]).catch(alert); // Error: Whoops!
 	```
 
+```ad-note
+This means that you **cannot get the rest of the results** when one fails.
+```
+
 - Here the second promise rejects in two seconds. That leads to an immediate rejection of `Promise.all`, so `.catch` executes: the rejection error becomes the outcome of the entire `Promise.all`.
 
 ```ad-note

@@ -64,6 +64,10 @@ type: folder_brief_live
 - **4.6 - Promises, Async and Await**
 	- [[3.1.6 - Promises, Async and Await]]
 	- **[[APIs]]**
+	- **[[Notes]]**
+		- [[Promise handlers then, catch, finally are always asynchronous]]
+		- [[Promise wraps async work]]
+		- [[then, catch vs await]]
 	- **[[Techniques]]**
 	- **[[Terms]]**
 - **4.X - Network Request**

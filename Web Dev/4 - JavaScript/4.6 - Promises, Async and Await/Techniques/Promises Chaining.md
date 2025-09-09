@@ -42,6 +42,10 @@ The whole thing works, **because every call to a `.then` returns a new promise**
 When a handler returns a value, it becomes the result of that promise, so the next `.then` is called with it.
 ```
 
+```ad-tip
+To be precise, a handler may return not exactly a promise, but a so-called [[Thenable]] object – an arbitrary object that has a method `.then`. It will be treated the same way as a promise.
+```
+
 ---
 
 ### **A classic newbie error**
