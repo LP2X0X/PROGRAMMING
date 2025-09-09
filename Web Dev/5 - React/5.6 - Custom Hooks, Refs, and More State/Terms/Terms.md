@@ -7,9 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Async Await]]
-- [[Microtasks]]
-- [[Promise]]
-- [[Thenable]]
+- [[Hooks]]
 
 %% End Waypoint %%

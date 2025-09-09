@@ -57,6 +57,8 @@ function Example() {
 }
 ```
 
+- The reason is [[State updates are batched|state updates are batched]].
+
 ---
 
 ### 📦 `useState()` Hook

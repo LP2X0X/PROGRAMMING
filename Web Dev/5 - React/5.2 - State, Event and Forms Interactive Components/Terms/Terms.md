@@ -10,7 +10,6 @@ type: folder_brief_live
 - [[Component Composition]]
 - [[Component View]]
 - [[Derived State]]
-- [[Hooks]]
 - [[Prop Drilling]]
 - [[State]]
 

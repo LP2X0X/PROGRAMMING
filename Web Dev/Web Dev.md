@@ -50,6 +50,9 @@ type: folder_brief_live
 		- [[5 - Effect and Data Fetching]]
 		- **[[Questions]]**
 		- **[[Terms]]**
+	- **5.6 - Custom Hooks, Refs, and More State**
+		- **[[Notes]]**
+		- **[[Terms]]**
 	- [[React Summary]]
 	- [[React]]
 - **[[JavaScript Crash Course]]**

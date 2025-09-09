@@ -7,7 +7,7 @@ tags:
 
 # **⚛️ React Hooks Overview**
 
-React **hooks** are special functions that let you use **React features** (like state and lifecycle) in **functional components**.
+React **hooks** are special functions that let you use **React features** (like state and lifecycle) in **functional components** (or "hook" into React internals).
 
 > Hooks were introduced in React 16.8 to avoid needing class components for advanced features.
 
@@ -84,6 +84,11 @@ const handleClick = useCallback(() => {
   doSomething();
 }, []);
 ```
+
+---
+
+## **☝️ Rules of hooks**
+![[Pasted image 20250909185258.png|center|500]]
 
 ---
 

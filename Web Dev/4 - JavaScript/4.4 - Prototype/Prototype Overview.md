@@ -8,6 +8,8 @@ tags:
 
 # 🏗️ Prototypes in JavaScript — Complete Overview
 
+![[Pasted image 20250909201514.png|center]]
+
 ---
 
 ## 1. 🔹 Every Object Has a Prototype (`__proto__`)

@@ -7,6 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- [[AggregateError]]
 - [[Extending Error]]
 - [[Global catch]]
 - [[Rethrowing]]
