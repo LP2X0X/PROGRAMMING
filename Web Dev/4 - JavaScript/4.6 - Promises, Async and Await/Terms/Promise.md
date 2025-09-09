@@ -105,6 +105,8 @@ tags:
 If we’re interested only in successful completions, then we can provide only one function argument to `.then`:
 ```
 
+![[Pasted image 20250908185524.png|center|500]]
+
 #### catch
 
 - If we’re interested only in errors, then we can use `null` as the first argument: `.then(null, errorHandlingFunction)`. Or we can use `.catch(errorHandlingFunction)`, which is exactly the same:
