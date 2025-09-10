@@ -193,3 +193,6 @@ for (let val of myIterable) {
 	const arr = Array.from({ length: 5 }, () => 0); 
 	console.log(arr); // [ 0, 0, 0, 0, 0]
 	```
+
+---
+

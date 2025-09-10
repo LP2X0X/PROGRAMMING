@@ -44,6 +44,7 @@ type: folder_brief_live
 		- **[[Questions]]**
 		- [[React 3rd-party Library Ecosystem]]
 		- [[React Internal Summary]]
+		- [[State updates are asynchronous]]
 		- [[State updates are batched]]
 		- **[[Terms]]**
 	- **5.5 - Effect and Data Fetching**

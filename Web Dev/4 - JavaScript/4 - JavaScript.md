@@ -15,6 +15,7 @@ type: folder_brief_live
 	- **[[Debugging]]**
 	- **[[Destructuring]]**
 	- **[[Error Handling]]**
+	- **[[Generators]]**
 	- **[[Keywords]]**
 	- **[[Loops]]**
 	- **[[Methods]]**

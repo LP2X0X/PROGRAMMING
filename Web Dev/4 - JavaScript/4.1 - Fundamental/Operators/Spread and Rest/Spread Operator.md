@@ -7,7 +7,7 @@ tags:
 
 ### ✨ Spread Syntax in JavaScript (`...`)
 
-The **spread operator (`...`)** in JavaScript lets you **expand elements of an iterable** (like arrays, objects, or strings) into individual elements.
+The **spread operator (`...`)** in JavaScript lets you **expand elements of an *iterable*** (like arrays, objects, or strings) into individual elements.
 
 ---
 
