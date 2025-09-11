@@ -7,6 +7,10 @@ tags:
 
 In React (and many other UI frameworks), **derived state** refers to **state that can be calculated from other state or props**, rather than being stored directly.
 
+```ad-note
+Derived state is updated on each re-render.
+```
+
 ---
 
 ## **🧠 What Is Derived State?**

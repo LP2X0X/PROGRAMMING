@@ -2,6 +2,7 @@
 tags:
   - react
   - term
+  - hook
   - fundamental
 ---
 
@@ -216,3 +217,9 @@ const [name, setName] = useState('');
 const [age, setAge] = useState(0);
 // These are two separate pieces of state
 ```
+
+----
+
+# ∑ Summary
+
+![[Pasted image 20250910194002.png|center]]
