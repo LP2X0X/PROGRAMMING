@@ -31,7 +31,7 @@ Inside the effect, the `callback` function **closes over** whatever `onCloseMovi
 ### 2. Why dependency is needed
 
 - If `onCloseMovie` ever **changes identity** (for example, parent component re-creates it with new state inside), your callback would still hold on to the _old_ function if you don’t include it in dependencies.
-    
+- It is a prop so it can be changed.
 - By listing `[onCloseMovie]`, you tell React:
     
 
