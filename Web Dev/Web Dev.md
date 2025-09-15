@@ -54,6 +54,7 @@ type: folder_brief_live
 	- **5.6 - Custom Hooks, Refs, and More State**
 		- **[[Notes]]**
 		- **[[Terms]]**
+	- **[[5.7 - The Advanced useReducer Hook]]**
 	- [[React Summary]]
 	- [[React]]
 - **[[JavaScript Crash Course]]**

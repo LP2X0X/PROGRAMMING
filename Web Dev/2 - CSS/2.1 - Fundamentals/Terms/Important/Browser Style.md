@@ -67,3 +67,91 @@ It will already look styled — thanks to browser styles.
 ```
 
 This removes the browser’s default margins/paddings and makes styles consistent across elements.
+
+---
+
+## ☝️ Here are the **most common browser styles to watch out for**:
+
+## 🔹 Text & Headings
+
+- **`<p>`** → `margin-top: 1em; margin-bottom: 1em;`
+    
+- **`<h1>–<h6>`** → Large `font-size`, with `margin-block-start` / `margin-block-end` in `em`.
+    
+- **`<blockquote>`** → Extra left/right margins.
+    
+- **`<pre>`** → `font-family: monospace; white-space: pre;`
+    
+
+---
+
+## 🔹 Lists
+
+- **`<ul>, <ol>`** → `margin-block-start: 1em; margin-block-end: 1em; padding-left: 40px;`
+    
+- **`<li>`** → `display: list-item;` with default bullets/numbers.
+    
+
+---
+
+## 🔹 Forms
+
+- **`<button>, <input>, <select>, <textarea>`**
+    
+    - Have **padding, border, and font styles** applied differently per browser.
+        
+    - Example: Chrome adds `padding: 1px 6px` and `border: 2px outset`.
+        
+- **`<label>`** → `cursor: default;`
+    
+
+---
+
+## 🔹 Links
+
+- **`<a>`** → blue text + `text-decoration: underline;`
+    
+- **`:visited`** → purple, `:active` → red by default.
+    
+
+---
+
+## 🔹 Body & Document
+
+- **`<body>`** → `margin: 8px;` (that’s why elements aren’t flush with the viewport edge).
+    
+- **`<html>`** → `display: block;`
+    
+
+---
+
+## 🔹 Tables
+
+- **`<table>`** → `display: table; border-collapse: separate; border-spacing: 2px;`
+    
+- **`<th>, <td>`** → `padding: 1px;`
+    
+
+---
+
+## 🔹 Media
+
+- **`<img>`** → `display: inline;` (causes baseline gap under images).
+    
+- **`<video>, <audio>`** → default UI controls.
+    
+
+---
+
+## ✅ Common Practice
+
+Developers often “reset” or “normalize” these styles to avoid surprises:
+
+- **CSS Reset** (e.g. Eric Meyer Reset, Josh Comeau’s Modern Reset).
+    
+- **Normalize.css** → keeps useful defaults but makes them consistent across browsers.
+    
+
+---
+
+👉 Do you want me to create a **modern minimal reset CSS** for you that neutralizes these quirks but keeps accessibility?

@@ -1,4 +1,4 @@
-# Terms Overview
+# Get and Set Stuff Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Custom Properties]]
-- [[Formatting Context]]
+- [[Access Components]]
+- [[Set Components]]
 
 %% End Waypoint %%

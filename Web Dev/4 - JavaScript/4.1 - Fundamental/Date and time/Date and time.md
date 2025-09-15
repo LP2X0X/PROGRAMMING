@@ -7,11 +7,10 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Access Components]]
 - [[Autocorrection]]
-- [[Creation]]
+- [[Date Creation]]
 - [[Date object Overview]]
 - [[Date to number, date diff]]
-- [[Set Components]]
+- **[[Get and Set Stuff]]**
 
 %% End Waypoint %%

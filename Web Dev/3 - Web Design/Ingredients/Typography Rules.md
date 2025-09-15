@@ -24,3 +24,13 @@ tags:
 
 ![[Pasted image 20250829092932.png]]
 ![[Pasted image 20250829093006.png]]
+
+---
+
+# Reference
+- For font:
+	https://fonts.google.com/
+	https://www.fontsquirrel.com/
+- For font size and space system:
+	- https://typescale.com/
+	- https://utopia.fyi/

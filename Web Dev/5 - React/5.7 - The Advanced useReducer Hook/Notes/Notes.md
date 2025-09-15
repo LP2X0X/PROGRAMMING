@@ -1,4 +1,4 @@
-# Terms Overview
+# Notes Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Custom Properties]]
-- [[Formatting Context]]
+- [[Why we should use useReducer for complex state]]
 
 %% End Waypoint %%
