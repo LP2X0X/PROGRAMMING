@@ -12,6 +12,7 @@ type: folder_brief_live
 	- [[3.1.1 - Fundamental]]
 	- **[[Comparisons]]**
 	- **[[Data Types]]**
+	- **[[Date and time]]**
 	- **[[Debugging]]**
 	- **[[Destructuring]]**
 	- **[[Error Handling]]**
@@ -25,7 +26,6 @@ type: folder_brief_live
 	- **[[Type Conversions]]**
 - **4.2 - Objects**
 	- [[3.1.2 - Objects]]
-	- **[[Date and time]]**
 	- **[[Functions]]**
 	- **[[Methods]]**
 	- **[[Notes]]**

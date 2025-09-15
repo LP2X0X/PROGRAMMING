@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Custom Properties]]
-- [[Formatting Context]]
+- [[useReducer]]
 
 %% End Waypoint %%

@@ -22,3 +22,17 @@ tags:
 
 ![[Pasted image 20250903200702.png|center|500]]
 ![[Pasted image 20250903200948.png|center|300]]
+
+---
+
+# Reference
+- To pick color tone:
+	- https://yeun.github.io/open-color/
+	- https://flatuicolors.com/
+- To create tints and shades:
+	- https://maketintsandshades.com/
+- To create color palette or choose accent colors:
+	- https://coolors.co/
+	- https://paletton.com/
+- For contrast ratio:
+	- https://coolors.co/

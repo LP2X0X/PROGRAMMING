@@ -21,6 +21,29 @@ It’s not a new feature — just a convention + function composition.
 
 ![[Pasted image 20250911194456.png|center|500]]
 
+```ad-note
+What is “non-visual” logic?
+
+That’s logic that controls **behavior or state**, but doesn’t itself render anything. For example:
+
+- Data fetching (e.g., `fetch` or `axios`)
+    
+- Subscribing to a service (e.g., WebSocket, geolocation, timer)
+    
+- State machines, reducers, or business logic
+    
+- Form validation rules
+    
+- Caching, debouncing, throttling
+    
+- Reading/writing to `localStorage`
+    
+- Sharing reusable state across components
+    
+
+These things affect _what_ you render, not _how_ you render it.
+```
+
 ---
 
 ## 🔹 Why use them?
