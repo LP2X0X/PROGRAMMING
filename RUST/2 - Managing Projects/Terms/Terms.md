@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[Crate Root]]
 - [[Crate]]
 - [[Module Tree]]
-- [[Module]]
+- [[RUST/2 - Managing Projects/Terms/Module]]
 - [[Package]]
 
 %% End Waypoint %%
