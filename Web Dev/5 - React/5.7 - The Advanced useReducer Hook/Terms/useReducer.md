@@ -19,7 +19,6 @@ It’s especially useful when:
 
 It follows the **reducer pattern** (same idea as Redux).
 
-![[Pasted image 20250914145553.png|center]]
 
 ---
 
@@ -94,6 +93,8 @@ function Counter() {
     const [state, dispatch] = useReducer(reducer, { name: "", age: 0 });
     ```
     
+
+![[Pasted image 20250914145553.png|center|700]]
 
 ---
 
