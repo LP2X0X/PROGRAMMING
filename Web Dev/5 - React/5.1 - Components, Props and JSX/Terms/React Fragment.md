@@ -9,6 +9,10 @@ tags:
 
 A **React Fragment** lets you group **multiple JSX elements** without adding an extra DOM node (like a `<div>`). It helps keep the HTML structure clean.
 
+```ad-note
+JSX is **syntactic sugar** for `React.createElement` calls where each `React.createElement` call can create **one** element. So if we return more than one element the transpiler would need to return **two `React.createElement` calls side by side**, but **a function/component in JavaScript can only return _one value_**.
+```
+
 ---
 
 ### ✅ Basic Syntax
