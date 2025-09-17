@@ -15,6 +15,10 @@ The flex property is shorthand for **three properties**:
 flex: <flex-grow> <flex-shrink> <flex-basis>;
 ```
 
+```ad-note
+The children of a main-axis-flexbox container automatically fill the container's cross axis space.
+```
+
 ---
 
 ## **🔹 The three parts**

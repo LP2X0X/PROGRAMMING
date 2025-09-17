@@ -25,7 +25,7 @@ selector {
         
     - `<length>` → Fixed height (e.g., `200px`, `20em`).
         
-    - `<percentage>` → Percentage of containing block’s height.
+    - `<percentage>` → Percentage of containing block’s **content** height.
         
     - `max-content`, `min-content`, `fit-content` (more advanced cases).
         

@@ -5,8 +5,6 @@ tags:
  - margin
 ---
 
-## 5. 🔹 Auto Margins (Magic Centering)
-
 ### Horizontal Centering
 
 ```css

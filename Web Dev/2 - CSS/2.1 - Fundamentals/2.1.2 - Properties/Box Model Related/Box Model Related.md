@@ -1,4 +1,4 @@
-# Properties Overview
+# Box Model Related Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,14 +7,10 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Absolute Position Properties]]
 - [[box-sizing]]
 - [[height]]
-- [[line-height]]
-- **[[List]]**
 - [[margin]]
-- [[position]]
-- [[Text's Element]]
+- [[min-height and min-width]]
 - [[width]]
 
 %% End Waypoint %%

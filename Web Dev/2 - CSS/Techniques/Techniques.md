@@ -7,6 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
+- **[[Centering]]**
 - [[Fallback Font]]
 - [[Magic Centering]]
 - [[Margin Tricks]]

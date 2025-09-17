@@ -13,6 +13,6 @@ type: folder_brief_live
 - **[[Methods]]**
 - **[[Notes]]**
 - **[[Web Dev/JavaScript Crash Course/Properties/Properties]]**
-- **[[Terms]]**
+- **[[Web Dev/JavaScript Crash Course/Terms/Terms]]**
 
 %% End Waypoint %%

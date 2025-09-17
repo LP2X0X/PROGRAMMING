@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Important]]**
+- **[[Web Dev/4 - JavaScript/4.1 - Fundamental/Terms/Important/Important]]**
 - **[[Miscellaneous]]**
 
 %% End Waypoint %%

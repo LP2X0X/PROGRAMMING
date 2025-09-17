@@ -17,6 +17,10 @@ If no extra space exists, it has no effect.
 The effected size here are the size corresponding to the main axis.
 ```
 
+```ad-note
+The children of a row-flexbox container automatically fill the container's vertical space.
+```
+
 ---
 
 # **🖋️ Syntax**

@@ -22,7 +22,7 @@ The `width` property in CSS defines the horizontal size of an element’s conten
         div { width: 300px; }
         ```
         
-2. **Percentage (%)** — relative to the parent element’s content width
+1. **Percentage (%)** — relative to the parent element’s **content** (not the rendered box) width
     
     - Example:
         
@@ -30,7 +30,7 @@ The `width` property in CSS defines the horizontal size of an element’s conten
         div { width: 50%; }
         ```
         
-3. **Viewport units** — relative to viewport size
+2. **Viewport units** — relative to viewport size
     
     - `vw` (viewport width) → 1vw = 1% of viewport width
         
@@ -40,7 +40,7 @@ The `width` property in CSS defines the horizontal size of an element’s conten
         div { width: 80vw; }
         ```
         
-4. **Keywords** — special behaviors
+3. **Keywords** — special behaviors
     
     - `auto` → default; lets the browser decide based on content or layout rules
         
