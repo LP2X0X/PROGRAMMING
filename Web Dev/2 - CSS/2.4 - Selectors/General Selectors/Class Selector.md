@@ -22,6 +22,15 @@ The **class selector** in CSS targets one or more HTML elements that share the s
 - `className` is the value of the element’s `class` attribute (case-sensitive in XML, but not in HTML).
     
 
+````ad-tip
+To select element with both classes, do it like this:
+```css
+.class1.class2 {
+/*Your rules here...*/
+}
+```
+````
+
 ### 💡 Example
 
 HTML:

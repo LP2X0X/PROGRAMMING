@@ -11,6 +11,6 @@ type: folder_brief_live
 - **[[Elements]]**
 - **[[Notes]]**
 - [[Semantic HTML]]
-- **[[Web Dev/1 - HTML/Terms/Terms]]**
+- **[[Terms]]**
 
 %% End Waypoint %%

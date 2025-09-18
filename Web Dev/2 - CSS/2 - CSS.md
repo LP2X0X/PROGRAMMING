@@ -33,12 +33,24 @@ type: folder_brief_live
 	- **[[Values]]**
 - **[[2.2 - Layouts]]**
 - **[[2.3 - Functions]]**
+- **2.4 - Selectors**
+	- **[[Combinators]]**
+		- [[Adjacent Sibling Combinator]]
+		- [[Child Combinator]]
+		- [[Combinator Overview]]
+		- [[Descendant Combinator]]
+		- [[General Sibling Combinator]]
+	- **Complex Selectors**
+		- [[Compound Selector]]
+		- [[Listing Selector]]
+		- [[Nesting Selector]]
+	- **[[General Selectors]]**
+	- [[Selectors]]
 - **[[Keywords]]**
 - **[[Notes]]**
 - **[[Properties]]**
 - **[[Questions]]**
 - **[[Responsive Design]]**
-- **[[Selectors]]**
 - **[[Techniques]]**
 - **[[Terms]]**
 

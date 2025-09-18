@@ -17,7 +17,7 @@ type: folder_brief_live
 - [[Paging Data]]
 - [[Projecting]]
 - [[Removing Duplicates]]
-- **[[Selectors]]**
+- **[[CSharp/LINQ to Objects/Features/Selectors/Selectors]]**
 - [[Set Default for First-Last-Single_OrDefault Methods]]
 - [[Sorting Expressions]]
 
