@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Attribute Overview]]
+- [[Web Dev/1 - HTML/1.2 - Attributes/Attribute Overview]]
 - [[Custom Attribute]]
 - **[[Notable]]**
 

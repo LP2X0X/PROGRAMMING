@@ -35,6 +35,7 @@ type: folder_brief_live
 		- [[3 - Thinking in React]]
 		- [[Component Categories]]
 		- [[Components, Composition and Reusability]]
+		- [[Reusable Component Guideline]]
 		- [[Thinking in React]]
 	- **5.4 - How React Works**
 		- [[4 - How React Works]]

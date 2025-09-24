@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[do while]]
 - [[for in]]
 - [[for of]]
-- [[for]]
+- [[Web Dev/4 - JavaScript/4.1 - Fundamental/Loops/for]]
 - [[while]]
 
 %% End Waypoint %%

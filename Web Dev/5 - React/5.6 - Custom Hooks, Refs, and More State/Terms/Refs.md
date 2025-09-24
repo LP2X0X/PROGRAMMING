@@ -152,7 +152,3 @@ Think of `useRef` as a **sticky note** you can attach to your component:
 
 ✅ In short:  
 `useRef` gives you a **persistent, mutable container** that doesn’t trigger renders. Perfect for DOM access, keeping values across renders, and storing things React shouldn’t re-render for.
-
----
-
-Do you want me to also add a **comparison with class components’ `createRef` vs `useRef`** (they behave slightly differently)?

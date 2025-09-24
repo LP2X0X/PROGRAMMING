@@ -7,12 +7,12 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Web Dev/1 - HTML/Attributes/Notable/class]]
+- [[class]]
 - [[contenteditable]]
 - [[download]]
-- [[Web Dev/1 - HTML/Attributes/Notable/for]]
+- [[for]]
 - [[id]]
-- [[Web Dev/1 - HTML/Attributes/Notable/name]]
+- [[name]]
 - [[role]]
 - [[style]]
 - [[tabindex]]
