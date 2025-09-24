@@ -13,11 +13,11 @@ type: folder_brief_live
 - [[head]]
 - [[img]]
 - [[input]]
-- [[label]]
-- **[[Overviews]]**
+- [[Web Dev/1 - HTML/1.1 - Elements/label]]
+- **[[Web Dev/1 - HTML/1.1 - Elements/Overviews/Overviews]]**
 - [[script]]
 - **[[SVG XMLs]]**
-- [[svg]]
+- [[Web Dev/1 - HTML/1.1 - Elements/svg]]
 - [[Text's Element]]
 
 %% End Waypoint %%

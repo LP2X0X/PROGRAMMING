@@ -73,8 +73,6 @@ type: folder_brief_live
 	- **[[Terms]]**
 - **[[4.7 - Module]]**
 - **[[4.8 - Browser Document, Events, InterfacesDocument]]**
-- **4.X - Network Request**
-	- [[3.1.X - Network Request]]
-	- **[[Methods]]**
+- **[[4.9 - Network Request]]**
 
 %% End Waypoint %%

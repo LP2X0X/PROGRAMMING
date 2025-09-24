@@ -10,7 +10,7 @@ type: folder_brief_live
 - **[[Compound Data Type]]**
 - **[[Functions]]**
 - **[[Keywords]]**
-- **[[Methods]]**
+- **[[Web Dev/JavaScript Crash Course/Methods/Methods]]**
 - **[[Notes]]**
 - **[[Web Dev/JavaScript Crash Course/Properties/Properties]]**
 - **[[Web Dev/JavaScript Crash Course/Terms/Terms]]**
