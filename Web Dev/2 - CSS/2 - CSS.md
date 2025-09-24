@@ -13,7 +13,7 @@ type: folder_brief_live
 		- **[[CSS Rules]]**
 		- **[[Display-based Elements]]**
 		- **[[Important]]**
-		- [[Web Dev/2 - CSS/Terms/Terms]]
+		- [[Terms]]
 	- **2.1.2 - Properties**
 		- [[Absolute Position Properties]]
 		- **[[Box Model Related]]**
