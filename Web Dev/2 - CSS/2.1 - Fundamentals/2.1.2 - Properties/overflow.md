@@ -9,6 +9,10 @@ tags:
 
 The overflow property in CSS controls **what happens when content overflows** the dimensions (usually width or height) of its container.
 
+```ad-important
+The element which this rule applied to much has a specify height!
+```
+
 ---
 
 ### **📌 Syntax**
@@ -36,8 +40,6 @@ The overflow property in CSS controls **what happens when content overflows** th
 ---
 
 ### **🔁 Axis Control**
-
-  
 
 You can target **specific axes**:
 
