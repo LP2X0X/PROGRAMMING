@@ -27,7 +27,7 @@ type: folder_brief_live
 	- [[Attributes]]
 	- [[Custom Attribute]]
 	- **[[Notable]]**
-- **[[Notes]]**
+- **[[Web Dev/1 - HTML/Notes/Notes]]**
 - [[Semantic HTML]]
 
 %% End Waypoint %%

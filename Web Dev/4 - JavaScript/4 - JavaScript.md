@@ -20,32 +20,32 @@ type: folder_brief_live
 	- **[[Keywords]]**
 	- **[[Loops]]**
 	- **[[Methods]]**
-	- **[[Notes]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
 	- **[[Operators]]**
-	- **[[Terms]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Terms/Terms]]**
 	- **[[Type Conversions]]**
 - **4.2 - Objects**
 	- [[3.1.2 - Objects]]
 	- **[[Functions]]**
 	- **[[Methods]]**
-	- **[[Notes]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
 	- [[Object overview]]
 	- **[[Operators]]**
 	- **[[Properties]]**
-	- **[[Techniques]]**
-	- **[[Terms]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Techniques/Techniques]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Terms/Terms]]**
 - **4.3 - Functions**
 	- [[3.1.3 - Functions]]
 	- **[[Function's Methods]]**
 	- **[[Global Methods]]**
 	- **[[Instance Properties]]**
 	- **[[Interaction Functions]]**
-	- **[[Notes]]**
-	- **[[Questions]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
+	- **[[Web Dev/4 - JavaScript/4.3 - Functions/Questions/Questions]]**
 	- **[[Scopes]]**
 	- **[[Syntaxes]]**
-	- **[[Techniques]]**
-	- **[[Terms]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Techniques/Techniques]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Terms/Terms]]**
 	- **[[Types]]**
 - **4.4 - Prototype**
 	- [[__proto__]]
@@ -61,16 +61,16 @@ type: folder_brief_live
 	- [[3.1.5 - Classes]]
 	- **[[Core]]**
 	- **[[Inheritance]]**
-	- **[[Notes]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
 - **4.6 - Promises, Async and Await**
 	- [[3.1.6 - Promises, Async and Await]]
 	- **[[APIs]]**
-	- **[[Notes]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
 		- [[Promise handlers then, catch, finally are always asynchronous]]
 		- [[Promise wraps async work]]
 		- [[then, catch vs await]]
-	- **[[Techniques]]**
-	- **[[Terms]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Techniques/Techniques]]**
+	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Terms/Terms]]**
 - **[[4.7 - Module]]**
 - **[[4.8 - Browser Document, Events, InterfacesDocument]]**
 - **[[4.9 - Network Request]]**

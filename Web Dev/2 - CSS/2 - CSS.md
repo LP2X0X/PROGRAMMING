@@ -49,9 +49,9 @@ type: folder_brief_live
 	- **[[General Selectors]]**
 	- [[Selectors]]
 - **[[Keywords]]**
-- **[[Notes]]**
+- **[[Web Dev/2 - CSS/Notes/Notes]]**
 - **[[Properties]]**
-- **[[Questions]]**
+- **[[Web Dev/2 - CSS/Questions/Questions]]**
 - **[[Responsive Design]]**
 - **[[Techniques]]**
 - **[[Terms]]**
