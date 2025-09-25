@@ -11,7 +11,7 @@ type: folder_brief_live
 - **[[Functions]]**
 - **[[Keywords]]**
 - **[[Web Dev/JavaScript Crash Course/Methods/Methods]]**
-- **[[Notes]]**
+- **[[Web Dev/JavaScript Crash Course/Notes/Notes]]**
 - **[[Web Dev/JavaScript Crash Course/Properties/Properties]]**
 - **[[Web Dev/JavaScript Crash Course/Terms/Terms]]**
 

@@ -14,7 +14,7 @@ tags:
 ---
 
 ### Rule
-- Render logic should not contain code which has [[Web Dev/5 - React/5.4 - How React Works/Terms/Side Effect|side effect]] since it could contain logic which re-render itself which cause infinite loop.
+- Render logic should not contain code which has [[Web Dev/5 - React/5.4 - How React Works/5.4.1 - Terms/Side Effect|side effect]] since it could contain logic which re-render itself which cause infinite loop.
   
 ```ad-important
 - Components (function) must not have any [[Web Dev/React/4 - How React Works/Terms/Side Effect|side effect]] (impure). Given the same props, a component instance should always return the same JSX.

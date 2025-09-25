@@ -20,42 +20,22 @@ type: folder_brief_live
 		- [[3 - Why we need front-end frameworks]]
 		- [[4 - Create-react-app vs Vite]]
 		- **[[Terms]]**
-	- **5.1 - Components, Props and JSX**
-		- [[1 - Components, Props and JSX]]
-		- **[[JSX]]**
-		- **[[Props]]**
-		- **[[Techniques]]**
-		- **[[Terms]]**
-	- **5.2 - State, Event and Forms Interactive Components**
-		- [[2 - State, Event and Forms Interactive Components]]
-		- **[[Notes]]**
-		- **[[Techniques]]**
-		- **[[Terms]]**
-	- **5.3 - Thinking in React**
-		- [[3 - Thinking in React]]
-		- [[Component Categories]]
-		- [[Components, Composition and Reusability]]
-		- [[Reusable Component Guideline]]
-		- [[Thinking in React]]
-	- **5.4 - How React Works**
-		- [[4 - How React Works]]
-		- [[Component vs Instance vs Element]]
-		- [[How components are displayed on the screen Overview]]
-		- [[How React handle events]]
-		- **[[Questions]]**
-		- [[React 3rd-party Library Ecosystem]]
-		- [[React Internal Summary]]
-		- [[State updates are asynchronous]]
-		- [[State updates are batched]]
-		- **[[Terms]]**
+	- **[[5.1 - Components, Props and JSX]]**
+	- **[[5.2 - State, Event and Forms Interactive Components]]**
+	- **[[5.3 - Thinking in React]]**
+	- **[[5.4 - How React Works]]**
 	- **5.5 - Effect and Data Fetching**
 		- [[5 - Effect and Data Fetching]]
-		- **[[Questions]]**
-		- **[[Terms]]**
+		- **[[5.5.1 - Terms]]**
+		- **[[5.5.2 - Questions]]**
 	- **5.6 - Custom Hooks, Refs, and More State**
-		- **[[Notes]]**
-		- **[[Terms]]**
+		- **[[5.6.1 - Terms]]**
+		- **[[5.6.2 - Notes]]**
 	- **[[5.7 - The Advanced useReducer Hook]]**
+	- **5.8 - React Router and CSS Modules**
+		- **[[5.8.1 - Terms]]**
+		- **[[5.8.2 - Notes]]**
+		- [[React Router Overview]]
 	- [[React Summary]]
 	- [[React]]
 - **[[JavaScript Crash Course]]**
