@@ -1,4 +1,4 @@
-# Pseudo Classes Overview
+# Notes Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,9 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[active]]
-- [[link]]
-- **[[Notes]]**
-- [[visited]]
+- [[Pseudo Classes as condition]]
 
 %% End Waypoint %%

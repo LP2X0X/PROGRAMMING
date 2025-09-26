@@ -13,15 +13,17 @@ type: folder_brief_live
 		- **[[CSS Rules]]**
 		- **[[Display-based Elements]]**
 		- **[[Important]]**
-		- [[Web Dev/2 - CSS/Terms/Terms]]
+		- [[Terms]]
 	- **2.1.2 - Properties**
 		- [[Absolute Position Properties]]
 		- **[[Box Model Related]]**
-		- **[[List]]**
+		- **[[List Related]]**
+		- **[[Media Related]]**
+			- [[object-fit]]
 		- [[overflow]]
 		- [[position]]
 		- [[Properties]]
-		- **[[Text]]**
+		- **[[Text Related]]**
 	- **[[2.1.3 - Pseudo Classes]]**
 	- **2.1.4 - Pseudo Elements**
 		- [[after]]
@@ -51,7 +53,7 @@ type: folder_brief_live
 - **[[Properties]]**
 - **[[Web Dev/2 - CSS/Questions/Questions]]**
 - **[[Responsive Design]]**
-- **[[Web Dev/2 - CSS/Techniques/Techniques]]**
-- **[[Web Dev/2 - CSS/Terms/Terms]]**
+- **[[Techniques]]**
+- **[[Terms]]**
 
 %% End Waypoint %%
