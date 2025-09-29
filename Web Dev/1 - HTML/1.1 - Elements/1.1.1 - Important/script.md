@@ -4,6 +4,7 @@ tags:
   - element
   - fundamental
 ---
+
 The **script** element in HTML is used to embed or reference executable JavaScript code. It plays a key role in making your web pages interactive, dynamic, and responsive to user input.
 
 ---

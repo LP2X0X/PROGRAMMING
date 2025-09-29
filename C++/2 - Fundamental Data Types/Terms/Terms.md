@@ -6,7 +6,7 @@ type: folder_brief_live
  
 %% Begin Waypoint %%
 - **[[C++/2 - Fundamental Data Types/Terms/Core/Core]]**
-- **[[Others]]**
+- **[[C++/2 - Fundamental Data Types/Terms/Others/Others]]**
 	- [[Input manipulator]]
 	- [[Modulo Wrap]]
 	- [[Multi-character literal]]

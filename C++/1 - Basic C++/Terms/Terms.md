@@ -14,7 +14,7 @@ type: folder_brief_live
 - **[[C++/1 - Basic C++/Terms/Functions/Functions]]**
 - **[[Initialization Types]]**
 - **[[C++/1 - Basic C++/Terms/Operators/Operators]]**
-- **[[Others]]**
+- **[[C++/1 - Basic C++/Terms/Others/Others]]**
 - **[[C++/1 - Basic C++/Terms/Scopes/Scopes]]**
 
 %% End Waypoint %%

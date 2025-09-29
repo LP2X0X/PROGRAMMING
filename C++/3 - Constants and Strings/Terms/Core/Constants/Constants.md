@@ -14,6 +14,6 @@ type: folder_brief_live
 - [[Constexpr variable]]
 - [[Literals]]
 - [[Named constants]]
-- **[[Others]]**
+- **[[C++/3 - Constants and Strings/Terms/Core/Constants/Others/Others]]**
 
 %% End Waypoint %%

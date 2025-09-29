@@ -10,6 +10,6 @@ type: folder_brief_live
 - [[Consteval]]
 - **[[C++/3 - Constants and Strings/Terms/Core/Core]]**
 - [[Inline function and variable]]
-- **[[Others]]**
+- **[[C++/3 - Constants and Strings/Terms/Others/Others]]**
 
 %% End Waypoint %%

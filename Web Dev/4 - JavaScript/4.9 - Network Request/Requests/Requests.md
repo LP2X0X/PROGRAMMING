@@ -1,0 +1,15 @@
+# Requests Overview
+ 
+```ccard
+type: folder_brief_live
+```
+ 
+---
+
+%% Begin Waypoint %%
+- [[Cross-Origin Requests]]
+- [[Origin]]
+- [[Request Overview]]
+- [[Safe Request]]
+
+%% End Waypoint %%

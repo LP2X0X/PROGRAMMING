@@ -13,13 +13,7 @@ type: folder_brief_live
 - **[[3 - Web Design]]**
 - **[[4 - JavaScript]]**
 - **[[5 - React]]**
-	- **5.0 - React First Look**
-		- [[0 - React First Look]]
-		- [[1 - The rise of Single-Page Applications]]
-		- [[2 - Why write Single-Page Application with Vanilla JS so hard]]
-		- [[3 - Why we need front-end frameworks]]
-		- [[4 - Create-react-app vs Vite]]
-		- **[[Terms]]**
+	- **[[5.0.0 - React First Look]]**
 	- **[[5.1 - Components, Props and JSX]]**
 	- **[[5.2 - State, Event and Forms Interactive Components]]**
 	- **[[5.3 - Thinking in React]]**
@@ -35,7 +29,9 @@ type: folder_brief_live
 	- **5.8 - React Router and CSS Modules**
 		- **[[5.8.1 - Terms]]**
 		- **[[5.8.2 - Notes]]**
+		- **[[5.8.3 - Questions]]**
 		- [[React Router Overview]]
+	- **[[Others]]**
 	- [[React Summary]]
 	- [[React]]
 - **[[JavaScript Crash Course]]**

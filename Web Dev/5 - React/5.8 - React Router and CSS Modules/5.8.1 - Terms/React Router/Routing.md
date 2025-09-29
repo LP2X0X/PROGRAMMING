@@ -5,7 +5,7 @@ tags:
  - advance
 ---
 
-In **React**, the term **routing** usually refers to handling navigation between different "pages" or "views" in a [[Single vs First]]single-page application (SPA). Since React itself does not include routing by default, developers commonly use a library like **React Router** to implement it.
+In **React**, the term **routing** usually refers to handling navigation between different "pages" or "views" in a [[Single Page Application]] (SPA). Since React itself does not include routing by default, developers commonly use a library like **React Router** to implement it.
 
 - 👉 With routing, we match **different URLs to different UI views** (React components): **routes**
     
@@ -142,7 +142,3 @@ function User() {
   return <h2>User ID: {id}</h2>;
 }
 ```
-
----
-
-👉 Do you want me to go deeper into **React Router v6 concepts**, or would you like a **simple analogy** of how routing works in React?

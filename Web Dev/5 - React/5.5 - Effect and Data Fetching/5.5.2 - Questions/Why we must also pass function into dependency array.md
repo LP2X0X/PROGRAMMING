@@ -5,7 +5,7 @@ tags:
 ---
 
 ```ad-note
-Need to check back if the function in this case mean the prop function (which get passed from parent component), not the set function inside the component which used useEffect itself.
+The function which we talked about in this case mean the prop function (which get passed from parent component), not the set function inside the component which used useEffect itself.
 ```
 
 ### 1. What happens inside your effect

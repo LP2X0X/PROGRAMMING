@@ -12,7 +12,7 @@ type: folder_brief_live
 		- **[[Advance]]**
 		- **[[CSS Rules]]**
 		- **[[Display-based Elements]]**
-		- **[[Important]]**
+		- **[[Web Dev/2 - CSS/2.1 - Fundamentals/2.1.1 - Terms/Important/Important]]**
 		- [[Terms]]
 	- **2.1.2 - Properties**
 		- [[Absolute Position Properties]]
@@ -51,7 +51,7 @@ type: folder_brief_live
 - **[[Keywords]]**
 - **[[Web Dev/2 - CSS/Notes/Notes]]**
 - **[[Properties]]**
-- **[[Web Dev/2 - CSS/Questions/Questions]]**
+- **[[Questions]]**
 - **[[Responsive Design]]**
 - **[[Techniques]]**
 - **[[Terms]]**

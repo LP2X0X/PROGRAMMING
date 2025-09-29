@@ -55,3 +55,32 @@ tags:
 - Works the same as object destructuring in JS.
     
 - ✅ Useful for avoiding long `styles.className` references when using many classes.
+
+---
+
+### Naming Conventions
+
+- Common convention: use **camelCase** or **kebab-case** for class names.
+    
+- Example:
+    
+    ```css
+    /* Button.module.css */
+    .primaryButton { ... }   /* camelCase */
+    .primary-button { ... }  /* kebab-case */
+    ```
+    
+- When imported, camelCase class names can be used directly:
+    
+    ```jsx
+    import styles from "./Button.module.css";
+    <button className={styles.primaryButton}>Click</button>
+    ```
+    
+- With kebab-case, you must use bracket notation:
+    
+    ```jsx
+    <button className={styles["primary-button"]}>Click</button>
+    ```
+    
+- ✅ **Best practice:** use **camelCase** for easier access with dot notation.
