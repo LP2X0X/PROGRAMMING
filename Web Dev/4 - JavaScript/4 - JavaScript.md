@@ -10,20 +10,27 @@ type: folder_brief_live
 - **[[4.0 - General]]**
 - **4.1 - Fundamental**
 	- [[3.1.1 - Fundamental]]
-	- **[[Comparisons]]**
-	- **[[Data Types]]**
-	- **[[Date and time]]**
-	- **[[Debugging]]**
-	- **[[Destructuring]]**
-	- **[[Error Handling]]**
-	- **[[Generators]]**
-	- **[[Keywords]]**
-	- **[[Loops]]**
+	- **[[4.1.1 - Terms]]**
+	- **[[4.1.2 - Data Types]]**
+	- **[[4.1.3 - Operators]]**
+	- **[[4.1.4 - Type Conversions]]**
+	- **[[4.1.5 - Comparisons]]**
+	- **[[4.1.6 - Destructuring]]**
+	- **[[4.1.7 - Loops]]**
+	- **[[4.1.8 - Debugging]]**
+	- **[[4.1.9 - Error Handling]]**
+	- **4.1.10 - Date and Time**
+		- [[4.1.7 - Date and Time]]
+		- [[Autocorrection]]
+		- [[Date Creation]]
+		- [[Date object Overview]]
+		- [[Date to number, date diff]]
+		- **[[Get and Set Stuff]]**
+	- **[[4.1.11 - Generators]]**
+	- **[[4.1.12 - Keywords]]**
 	- **[[Methods]]**
 	- **[[Notes]]**
-	- **[[Operators]]**
 	- **[[Terms]]**
-	- **[[Type Conversions]]**
 - **4.2 - Objects**
 	- [[3.1.2 - Objects]]
 	- **[[Functions]]**
@@ -64,15 +71,16 @@ type: folder_brief_live
 	- **[[Notes]]**
 - **4.6 - Promises, Async and Await**
 	- [[3.1.6 - Promises, Async and Await]]
-	- **[[APIs]]**
+	- **[[4.6.1 - Terms]]**
+	- **[[4.6.2 - APIs]]**
+	- **[[4.6.3 - Techniques]]**
 	- **[[Notes]]**
 		- [[Promise handlers then, catch, finally are always asynchronous]]
 		- [[Promise wraps async work]]
 		- [[then, catch vs await]]
-	- **[[Techniques]]**
-	- **[[Terms]]**
 - **[[4.7 - Module]]**
 - **[[4.8 - Browser Document, Events, InterfacesDocument]]**
 - **[[4.9 - Network Request]]**
+- **[[X - Techniques]]**
 
 %% End Waypoint %%

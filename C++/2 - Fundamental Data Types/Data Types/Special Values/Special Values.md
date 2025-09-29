@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Inf]]
-- [[NaN]]
+- [[C++/2 - Fundamental Data Types/Data Types/Special Values/NaN]]
 - [[Signed zero]]
 
 %% End Waypoint %%
