@@ -1,4 +1,4 @@
-# 4.0 - General Overview
+# Special Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Coding style]]
-- [[The JavaScript Engine]]
+- [[NaN]]
 
 %% End Waypoint %%

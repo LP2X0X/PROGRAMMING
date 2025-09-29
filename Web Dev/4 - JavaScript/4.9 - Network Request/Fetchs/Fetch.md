@@ -7,7 +7,7 @@ tags:
 
 ### ✅ Definition
 
-`fetch()` is a **built-in JavaScript function** used to make HTTP requests (GET, POST, PUT, DELETE, etc.). It returns a [[Web Dev/4 - JavaScript/4.6 - Promises, Async and Await/Terms/Promise]] that resolves to a `Response` object.
+`fetch()` is a **built-in JavaScript function** used to make HTTP requests (GET, POST, PUT, DELETE, etc.). It returns a [[Promise]] that resolves to a `Response` object.
 
 ---
 

@@ -16,7 +16,7 @@ type: folder_brief_live
 	- [[head]]
 	- [[img]]
 	- [[input]]
-	- [[label]]
+	- [[Web Dev/1 - HTML/1.1 - Elements/label]]
 	- **[[Overviews]]**
 	- [[script]]
 	- **[[SVG XMLs]]**

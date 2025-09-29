@@ -6,7 +6,7 @@ type: folder_brief_live
  
 %% Begin Waypoint %%
 - **[[Advanced CSharp Language Features]]**
-- **[[Basic]]**
+- **[[CSharp/Basic/Basic]]**
 - **[[Building and Configuring Class Libraries]]**
 - **[[Collections and Generics]]**
 - [[Core Concepts]]
