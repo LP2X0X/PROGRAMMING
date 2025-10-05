@@ -47,7 +47,7 @@ console.log(total); // 60
     - Immediately return the initial value.
         
     
-- Therefore, your callback is **never called**.
+- Therefore, your callback is **never called** in this case.
 ```
 
 ### ➗ **`reduceRight()`** – Reduce to a **single value** but from right to left.
