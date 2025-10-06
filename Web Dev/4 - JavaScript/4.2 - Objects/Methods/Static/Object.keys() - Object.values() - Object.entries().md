@@ -48,6 +48,12 @@ An array of `[key, value]` pairs.
 const person = { name: "Alice", age: 30 };
 console.log(Object.entries(person));
 // [ ["name", "Alice"], ["age", 30] ]
+
+const arr = ["a", "b", "c"];
+
+for (let [index, item] of arr.entries()) {
+  console.log(index, item);
+}
 ```
 
 ---

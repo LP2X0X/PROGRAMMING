@@ -9,10 +9,10 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **2.1 - Fundamentals**
 	- **2.1.1 - Terms**
-		- **[[Web Dev/2 - CSS/2.1 - Fundamentals/2.1.1 - Terms/Advance/Advance]]**
+		- **[[2.1.1.1 - Important]]**
+		- **[[2.1.1.2 - Advance]]**
 		- **[[CSS Rules]]**
 		- **[[Display-based Elements]]**
-		- **[[Web Dev/2 - CSS/2.1 - Fundamentals/2.1.1 - Terms/Important/Important]]**
 		- [[Terms]]
 	- **2.1.2 - Properties**
 		- [[Absolute Position Properties]]
@@ -48,12 +48,12 @@ type: folder_brief_live
 		- [[Nesting Selector]]
 	- **[[General Selectors]]**
 	- [[Selectors]]
-- **[[Web Dev/2 - CSS/Keywords/Keywords]]**
-- **[[Web Dev/2 - CSS/Notes/Notes]]**
+- **[[Keywords]]**
+- **[[Notes]]**
 - **[[Properties]]**
 - **[[Questions]]**
 - **[[Responsive Design]]**
-- **[[Web Dev/2 - CSS/Techniques/Techniques]]**
-- **[[Web Dev/2 - CSS/Terms/Terms]]**
+- **[[Techniques]]**
+- **[[Terms]]**
 
 %% End Waypoint %%
