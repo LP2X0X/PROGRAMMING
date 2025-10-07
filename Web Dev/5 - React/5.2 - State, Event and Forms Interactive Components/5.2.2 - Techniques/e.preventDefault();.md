@@ -6,6 +6,7 @@ tags:
 
 e.preventDefault() in React works the same way it does in plain DOM: it stops the browser’s **default action** for that event so you can substitute your own logic.
 
+---
 
 ## **Common uses**
   
@@ -49,6 +50,8 @@ function MyForm() {
   Click me
 </a>
 ```
+
+---
 
 ### **Notes**
 

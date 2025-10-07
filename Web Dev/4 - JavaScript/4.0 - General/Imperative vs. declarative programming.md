@@ -1,4 +1,8 @@
-### 🧑‍💻 **Imperative vs. Declarative Programming**
+---
+tags:
+  - js
+  - general
+---
 
 Both **imperative** and **declarative** programming are two core paradigms in software development, but they approach problem-solving in fundamentally different ways. Here’s a breakdown of their differences:
 

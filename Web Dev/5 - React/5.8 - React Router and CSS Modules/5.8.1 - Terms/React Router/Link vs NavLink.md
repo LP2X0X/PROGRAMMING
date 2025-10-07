@@ -1,6 +1,8 @@
 ---
 tags: 
- - web dev
+ - react
+ - route
+ - term
 ---
 
 ## 🔹 `Link`

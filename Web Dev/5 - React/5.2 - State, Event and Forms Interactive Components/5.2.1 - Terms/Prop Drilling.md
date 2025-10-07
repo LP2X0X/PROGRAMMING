@@ -13,4 +13,4 @@ tags:
 
 </br>
 
-- It’s not _bad_ for small component trees, but in larger apps it makes components harder to maintain and refactor. That’s when developers use solutions like **React Context**, **state management libraries** (Redux, Zustand, Jotai), or component composition patterns to avoid it.
+- It’s not _bad_ for small component trees, but in larger apps it makes components harder to maintain and refactor. That’s when developers use solutions like [[The Context API|React Context]], **state management libraries** (Redux, Zustand, Jotai), or [[Component Composition|component composition]] patterns to avoid it.
