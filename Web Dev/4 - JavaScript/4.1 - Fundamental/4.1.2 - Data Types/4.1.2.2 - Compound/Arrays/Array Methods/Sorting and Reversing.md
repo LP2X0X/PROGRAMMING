@@ -18,7 +18,7 @@ console.log(names); // ['Alice', 'Bob', 'John']
 ### To use our own sorting order, we need to supply a function as the argument of `arr.sort()`.
 
 - The function should compare two arbitrary values and return:
-	```javascript
+	```js
 	function compare(a, b) {
 	  if (a > b) return 1; // if the first value is greater than the second
 	  if (a == b) return 0; // if values are equal
@@ -27,7 +27,7 @@ console.log(names); // ['Alice', 'Bob', 'John']
 	```
 
 - For instance, to sort as numbers:
-	```javascript
+	```js
 	function compareNumeric(a, b) {
 	  if (a > b) return 1;
 	  if (a == b) return 0;

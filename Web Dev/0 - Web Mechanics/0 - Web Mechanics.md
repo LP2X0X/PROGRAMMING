@@ -1,16 +1,13 @@
-# Keywords Overview
+# Web Mechanics Overview
  
 ```ccard
 type: folder_brief_live
 ```
  
+
 ---
 
 %% Begin Waypoint %%
-- [[const]]
-- [[let]]
-- [[new]]
-- [[switch]]
-- [[use strict]]
+- [[URL]]
 
 %% End Waypoint %%

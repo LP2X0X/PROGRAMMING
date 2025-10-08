@@ -30,7 +30,6 @@ type: folder_brief_live
 	- **[[4.1.12 - Keywords]]**
 	- **[[Methods]]**
 	- **[[Notes]]**
-	- **[[Terms]]**
 - **4.2 - Objects**
 	- [[3.1.2 - Objects]]
 	- **[[Functions]]**

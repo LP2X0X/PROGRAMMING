@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[0 - General]]**
+- **[[RUST/0 - General/0 - General]]**
 - **[[1 - Fundamental Concepts]]**
 - **[[2 - Managing Projects]]**
 

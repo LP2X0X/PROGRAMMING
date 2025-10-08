@@ -165,7 +165,3 @@ export default function App() {
     
 - Centralized styling
     
-
----
-
-👉 Do you want me to also show you how to make a **reusable layout component** (like a `Card` that wraps content), not just small UI elements?
