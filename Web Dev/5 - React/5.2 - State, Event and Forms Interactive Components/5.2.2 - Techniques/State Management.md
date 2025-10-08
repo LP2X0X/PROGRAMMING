@@ -3,6 +3,8 @@ tags:
   - react
   - note
   - fundamental
+  - state
+  - management
 ---
 
 - State management includes:
