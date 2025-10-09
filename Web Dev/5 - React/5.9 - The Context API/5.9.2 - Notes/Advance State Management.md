@@ -262,11 +262,16 @@ useEffect(() => {
 
 ## ✅ Summary Table
 
-|State Location|Tool|When to Use|Example|
-|---|---|---|---|
-|**Local Component**|`useState`, `useReducer`, `useRef`|For internal component logic|Counter, modal open/close|
-|**Parent Component**|`useState`, `useReducer`|When multiple children share state|Search bar + results|
-|**Context**|Context API + Hook|Global UI state|Theme, auth, language|
-|**3rd-Party Library**|Redux, Zustand, React Query|Complex or remote data|API caching, large apps|
-|**URL**|React Router|Navigation or shareable state|`?page=2`, `/user/5`|
-|**Browser**|`localStorage`, `sessionStorage`|Persist across reloads|Theme, cart, token|
+| State Location        | Tool                               | When to Use                        | Example                   |
+| --------------------- | ---------------------------------- | ---------------------------------- | ------------------------- |
+| **Local Component**   | `useState`, `useReducer`, `useRef` | For internal component logic       | Counter, modal open/close |
+| **Parent Component**  | `useState`, `useReducer`           | When multiple children share state | Search bar + results      |
+| **Context**           | Context API + Hook                 | Global UI state                    | Theme, auth, language     |
+| **3rd-Party Library** | Redux, Zustand, React Query        | Complex or remote data             | API caching, large apps   |
+| **URL**               | React Router                       | Navigation or shareable state      | `?page=2`, `/user/5`      |
+| **Browser**           | `localStorage`, `sessionStorage`   | Persist across reloads             | Theme, cart, token        |
+
+----
+
+### State Placement Tool Option
+![[Pasted image 20251009094511.png|center|600]]
