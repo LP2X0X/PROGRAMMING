@@ -11,6 +11,5 @@ type: folder_brief_live
 - [[Event Delegation]]
 - [[Event Handler]]
 - [[Event Type]]
-- [[Event]]
 
 %% End Waypoint %%
