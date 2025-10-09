@@ -8,8 +8,8 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[Core]]**
-- **[[Events]]**
-- **[[Web Dev/JavaScript Crash Course/Terms/Others/Others]]**
+- **[[Web Dev/JavaScript Crash Course/Terms/Events/Events]]**
+- **[[Others]]**
 - **[[Web Audio APIs]]**
 
 %% End Waypoint %%

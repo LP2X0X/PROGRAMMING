@@ -79,7 +79,13 @@ type: folder_brief_live
 		- [[then, catch vs await]]
 - **[[4.7 - Module]]**
 - **[[4.8 - Browser Document, Events, InterfacesDocument]]**
-- **[[4.9 - Network Request]]**
+- **[[4.9 - Events]]**
+- **4.10 - Network Request**
+	- [[4.9 - Network Request]]
+	- **[[4.10.1 - Fetches]]**
+	- **[[4.10.2 - Requests]]**
+	- **[[4.10.3 - Responses]]**
+	- **[[Notes]]**
 - **[[X - Techniques]]**
 
 %% End Waypoint %%

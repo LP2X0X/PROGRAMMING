@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Custom Event Arguments]]
-- [[Event]]
+- [[CSharp/Delegates, Events and Lambda Expressions/Events/Event]]
 - [[What is the benefit of using the event keyword]]
 
 %% End Waypoint %%
