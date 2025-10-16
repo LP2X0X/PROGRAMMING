@@ -18,6 +18,10 @@ Effect are used to keep a component synchronised with some external system.
 ```
 ![[Pasted image 20250827174352.png|center|500]]
 
+```ad-tip
+It can also helps synchronize states.
+```
+
 ---
 
 ### Basic Syntax
