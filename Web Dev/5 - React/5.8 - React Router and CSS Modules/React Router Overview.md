@@ -6,139 +6,243 @@ tags:
  - overview
 ---
 
-## 🚦 React Router Overview
-
-### 🔑 What It Is
-
-React Router is a **library for routing in React applications**.  
-It enables **client-side routing**, meaning the UI updates when the URL changes **without refreshing the page**.
+**React Router** is a powerful library for handling **routing** in React applications — i.e., deciding **which component** to render based on the **URL**.
 
 ---
 
-### ⚡ Core Concepts
+## 🚀 1️⃣ What React Router Does
 
-1. **Router**
+React Router lets you:
+
+- Create **multiple pages** in a single-page app (SPA)
     
-    - The wrapper that enables routing in the app.
-        
-    - Commonly used:
-        
-        - `<BrowserRouter>` → uses the browser’s history API (most common).
-            
-        - `<HashRouter>` → uses URL hashes (`/#/about`) for older setups.
-            
-2. **Routes & Route**
+- Navigate between pages **without full page reload**
     
-    - Define URL → Component mappings.
-        
-    - Example:
-        
-        ```jsx
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-        ```
-        
-3. **Link / NavLink**
+- Manage **URLs**, **parameters**, and **query strings**
     
-    - Used for navigation without reloading.
-        
-    - `NavLink` can apply active styling.
-        
-    - Example:
-        
-        ```jsx
-        <Link to="/about">About</Link>
-        <NavLink to="/about" className="active">About</NavLink>
-        ```
-        
-4. **useNavigate (previously useHistory)**
+- Handle **protected routes**, **nested routes**, and **redirects**
     
-    - Navigate programmatically in code.
-        
-    - Example:
-        
-        ```jsx
-        const navigate = useNavigate();
-        navigate("/login");
-        ```
-        
-5. **useParams**
-    
-    - Access route parameters (dynamic routes).
-        
-    - Example: `/user/:id` → `useParams().id`.
-        
-6. **Nested Routes**
-    
-    - Define routes inside other routes, useful for layouts or dashboards.
-        
-    - Example:
-        
-        ```jsx
-        <Route path="dashboard" element={<Dashboard />}>
-          <Route path="stats" element={<Stats />} />
-        </Route>
-        ```
-        
-7. **Outlet**
-    
-    - A placeholder component for rendering child routes in nested routing.
-        
-8. **Protected / Private Routes**
-    
-    - Custom logic to allow or block access (e.g., only logged-in users can see certain pages).
-        
+
+It keeps your UI in sync with the browser’s URL.
 
 ---
 
-### 🖼️ Example
+## 🧩 2️⃣ Core Concepts
+
+### 🧭 Routes
+
+Each route defines a **path** and the **component** to render:
 
 ```jsx
-import { BrowserRouter, Routes, Route, Link, useParams, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
 
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/user/42">User 42</Link>
-      </nav>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/user/:id" element={<User />} />
       </Routes>
     </BrowserRouter>
   );
 }
+```
+
+- `BrowserRouter`: wraps your entire app and manages navigation using the browser’s history API.
+    
+- `Routes`: groups your routes.
+    
+- `Route`: maps a URL path → component.
+    
+
+---
+
+### 🧭 3️⃣ Navigation ([[Link vs NavLink]])
+
+There are two main ways to navigate between routes:
+
+#### 🖱️ 1. Declarative navigation (with `<Link>`):
+
+```jsx
+import { Link } from "react-router-dom";
+
+<Link to="/about">Go to About</Link>
+```
+
+✅ Does **not reload** the page.
+
+#### ⚙️ 2. Programmatic navigation (with `useNavigate()`):
+
+```jsx
+import { useNavigate } from "react-router-dom";
 
 function Home() {
-  return <h2>Home Page</h2>;
+  const navigate = useNavigate();
+  return <button onClick={() => navigate("/about")}>Go</button>;
 }
+```
 
-function About() {
-  return <h2>About Page</h2>;
+✅ Useful when navigation depends on logic (e.g., form submission or API result).
+
+---
+
+## 🧱 4️⃣ Dynamic Routing ([[Dynamic Route]]) 
+
+You can define **route parameters** using `:paramName`:
+
+```jsx
+<Route path="/users/:userId" element={<UserProfile />} />
+```
+
+Access it inside your component:
+
+```jsx
+import { useParams } from "react-router-dom";
+
+function UserProfile() {
+  const { userId } = useParams();
+  return <h2>User ID: {userId}</h2>;
 }
+```
 
-function User() {
-  const { id } = useParams();
-  return <h2>User ID: {id}</h2>;
+If you visit `/users/42`, it renders `User ID: 42`.
+
+---
+
+## 🔍 5️⃣ Query Strings ([[Manipulating Query String]])
+
+React Router doesn’t parse query strings automatically,  
+but you can use `useSearchParams`:
+
+```jsx
+import { useSearchParams } from "react-router-dom";
+
+function SearchPage() {
+  const [params, setParams] = useSearchParams();
+  const term = params.get("q"); // ?q=keyword
+
+  return <p>Search for: {term}</p>;
 }
 ```
 
 ---
 
-### 🚀 Why Use React Router?
+## 🧩 6️⃣ Nested Routes ([[Nested Route]])
 
-- SPA navigation without reload.
-    
-- Handles nested routes and layouts.
-    
-- Works with browser history (back/forward buttons).
-    
-- Easy to protect routes (authentication).
-    
-- Syncs UI with URL for deep linking & bookmarks.
-    
+You can nest routes inside each other to represent hierarchy.
+
+```jsx
+<Route path="/dashboard" element={<Dashboard />}>
+  <Route path="stats" element={<Stats />} />
+  <Route path="settings" element={<Settings />} />
+</Route>
+```
+
+Inside `Dashboard.jsx`:
+
+```jsx
+import { Outlet } from "react-router-dom";
+
+function Dashboard() {
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <Outlet /> {/* Nested route content renders here */}
+    </div>
+  );
+}
+```
+
+---
+
+## 🔒 7️⃣ Protected Routes
+
+You can guard certain routes (e.g., only logged-in users):
+
+```jsx
+function ProtectedRoute({ children }) {
+  const isLoggedIn = localStorage.getItem("token");
+  return isLoggedIn ? children : <Navigate to="/login" />;
+}
+```
+
+Usage:
+
+```jsx
+<Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+```
+
+---
+
+## ⏩ 8️⃣ Redirecting
+
+You can redirect users using `<Navigate>`:
+
+```jsx
+<Route path="/" element={<Navigate to="/home" replace />} />
+```
+
+---
+
+## 🧰 9️⃣ Useful Hooks Summary
+
+|Hook|Purpose|
+|---|---|
+|`useNavigate()`|Navigate programmatically|
+|`useParams()`|Read dynamic route params|
+|`useLocation()`|Access the current URL (pathname, search, etc.)|
+|`useSearchParams()`|Read and write query string parameters|
+|`useRoutes()`|Define routes as objects instead of JSX|
+|`useOutletContext()`|Pass data between parent and nested routes|
+
+---
+
+## 🧱 1️⃣0️⃣ Route Layouts
+
+You can use nested routes to create **layouts** (shared header/sidebar):
+
+```jsx
+<Route path="/" element={<Layout />}>
+  <Route index element={<Home />} />
+  <Route path="about" element={<About />} />
+</Route>
+```
+
+Where `Layout` includes:
+
+```jsx
+function Layout() {
+  return (
+    <div>
+      <Header />
+      <Outlet /> {/* Where the nested page appears */}
+    </div>
+  );
+}
+```
+
+---
+
+## ⚙️ 1️⃣1️⃣ HashRouter vs BrowserRouter
+
+|Type|URL Format|Use Case|
+|---|---|---|
+|`BrowserRouter`|`/about`|Default, uses HTML5 history API|
+|`HashRouter`|`#/about`|For static file servers without proper backend routing support|
+
+---
+
+## ✅ Summary
+
+|Concept|Description|
+|---|---|
+|Router|Wraps app and manages navigation|
+|Route|Maps a URL path to a component|
+|Link|Navigates declaratively|
+|useNavigate|Navigate imperatively (programmatically)|
+|useParams|Access dynamic URL params|
+|useSearchParams|Handle query strings|
+|Outlet|Render nested routes|
+|Navigate|Redirect user|
