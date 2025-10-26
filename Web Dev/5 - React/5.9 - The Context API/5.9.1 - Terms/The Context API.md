@@ -94,6 +94,10 @@ function App() {
 🟢 Everything inside `<ThemeContext.Provider>`  
 can now access `{ theme, setTheme }`.
 
+```ad-tip
+We can wrap the App component in index.js.
+```
+
 ---
 
 ### 3️⃣ Consume the Context
