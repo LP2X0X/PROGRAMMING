@@ -9,6 +9,10 @@ tags:
 
 The **spread operator (`...`)** in JavaScript lets you **expand elements of an *iterable*** (like arrays, objects, or strings) into individual elements.
 
+```ad-note
+Anything that has a `[Symbol.iterator]` method ( or in other word, [[Iterables|iterables]]) can be spread.
+```
+
 ---
 
 ## 🔹 1. **Spread in Arrays**

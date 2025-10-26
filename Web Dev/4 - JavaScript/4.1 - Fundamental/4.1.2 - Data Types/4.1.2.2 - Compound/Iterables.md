@@ -40,8 +40,8 @@ const obj = {
 
 - **Array**
 - **[[Web Dev/4 - JavaScript/4.1 - Fundamental/4.1.2 - Data Types/4.1.2.1 - Primitives/Strings/String|String]]**
-- **Map**
-- **Set**
+- [[Map]]
+- [[Set]]
 - **TypedArray** (e.g. `Uint8Array`)
 - **arguments** object
 - **DOM collections** (like `NodeList`)

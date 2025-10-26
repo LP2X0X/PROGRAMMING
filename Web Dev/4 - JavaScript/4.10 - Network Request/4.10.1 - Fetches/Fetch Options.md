@@ -231,3 +231,8 @@ fetch("https://api.example.com/data", {
   .then(data => console.log(data))
   .catch(err => console.error("Fetch error:", err));
 ```
+
+---
+
+### Reference
+https://javascript.info/fetch-api
