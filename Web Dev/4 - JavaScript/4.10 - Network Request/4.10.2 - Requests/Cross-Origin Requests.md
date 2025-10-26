@@ -46,42 +46,67 @@ Without restrictions, any site could load your `https://bank.com/account` page a
 
 ## 4. CORS (Cross-Origin Resource Sharing)
 
-To explicitly allow cross-origin requests, the server must respond with special headers:
+If a request is cross-origin, the browser always adds the `Origin` header to it.
 
-Example server response:
+For instance, if we request `https://anywhere.com/request` from `https://javascript.info/page`, the headers will look like:
 
+```http
+GET /request
+Host: anywhere.com
+Origin: https://javascript.info
+...
 ```
-Access-Control-Allow-Origin: https://myapp.com
-Access-Control-Allow-Methods: GET, POST
-Access-Control-Allow-Headers: Content-Type
-```
 
-- `Access-Control-Allow-Origin` tells the browser which origins can read the response.
-    
-- If it’s `*`, any origin can.
-    
+As you can see, the `Origin` header contains exactly the origin (domain/protocol/port), without a path.
+
+The server can inspect the `Origin` and, if it agrees to accept such a request, add a special header `Access-Control-Allow-Origin` to the response. That header should contain the allowed origin (in our case `https://javascript.info`), or a star `*`. Then the response is successful, otherwise it’s an error.
+
+The browser plays the role of a trusted mediator here:
+
+1. It ensures that the correct `Origin` is sent with a cross-origin request.
+2. It checks for permitting `Access-Control-Allow-Origin` in the response, if it exists, then JavaScript is allowed to access the response, otherwise it fails with an error.
+
+![[Pasted image 20251016152525.png|center|600]]
+
+Here’s an example of a permissive server response:
+
+```http
+200 OK
+Content-Type:text/html; charset=UTF-8
+Access-Control-Allow-Origin: https://javascript.info
+```
 
 ---
 
-## 5. Example Flow
+## 5. Response headers
 
-1. Your frontend:
-    
-    ```js
-    fetch("https://api.othersite.com/data")
-    ```
-    
-2. Browser sees it’s cross-origin → may send preflight (`OPTIONS`).
-    
-3. Server replies:
-    
-    ```
-    Access-Control-Allow-Origin: https://myapp.com
-    ```
-    
-4. If allowed → browser lets your JS code read the response.  
-    If not → your JS gets a **CORS error**.
-    
+For cross-origin request, by default JavaScript may only access so-called “safe” response headers:
+
+- `Cache-Control`
+- `Content-Language`
+- `Content-Length`
+- `Content-Type`
+- `Expires`
+- `Last-Modified`
+- `Pragma`
+
+Accessing any other response header causes an error.
+
+To grant JavaScript access to any other response header, the server must send the `Access-Control-Expose-Headers` header. It contains a comma-separated list of unsafe header names that should be made accessible.
+
+For example:
+
+```http
+200 OK
+Content-Type:text/html; charset=UTF-8
+Content-Length: 12345
+Content-Encoding: gzip
+API-Key: 2c9de507f2c54aa1
+Access-Control-Allow-Origin: https://javascript.info
+Access-Control-Expose-Headers: Content-Encoding,API-Key
+```
+
+With such an `Access-Control-Expose-Headers` header, the script is allowed to read the `Content-Encoding` and `API-Key` headers of the response.
 
 ---
 

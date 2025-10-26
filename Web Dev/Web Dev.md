@@ -13,7 +13,7 @@ type: folder_brief_live
 - **[[3 - Web Design]]**
 - **[[4 - JavaScript]]**
 - **[[5 - React]]**
-	- **[[5.0.0 - React First Look]]**
+	- **[[5.0 - React First Look]]**
 	- **[[5.1 - Components, Props and JSX]]**
 	- **[[5.2 - State, Event and Forms Interactive Components]]**
 	- **[[5.3 - Thinking in React]]**

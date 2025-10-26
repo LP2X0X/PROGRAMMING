@@ -8,34 +8,13 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[4.0 - General]]**
-- **4.1 - Fundamental**
-	- [[3.1.1 - Fundamental]]
-	- **[[4.1.1 - Terms]]**
-	- **[[4.1.2 - Data Types]]**
-	- **[[4.1.3 - Operators]]**
-	- **[[4.1.4 - Type Conversions]]**
-	- **[[4.1.5 - Comparisons]]**
-	- **[[4.1.6 - Destructuring]]**
-	- **[[4.1.7 - Loops]]**
-	- **[[4.1.8 - Debugging]]**
-	- **[[4.1.9 - Error Handling]]**
-	- **4.1.10 - Date and Time**
-		- [[4.1.7 - Date and Time]]
-		- [[Autocorrection]]
-		- [[Date Creation]]
-		- [[Date object Overview]]
-		- [[Date to number, date diff]]
-		- **[[Get and Set Stuff]]**
-	- **[[4.1.11 - Generators]]**
-	- **[[4.1.12 - Keywords]]**
-	- **[[Methods]]**
-	- **[[Notes]]**
+- **[[4.1 - Fundamental]]**
 - **4.2 - Objects**
 	- [[3.1.2 - Objects]]
 	- **[[Functions]]**
 	- **[[Methods]]**
 	- **[[Notes]]**
-	- [[Object overview]]
+	- [[Object Overview]]
 	- **[[Operators]]**
 	- **[[Properties]]**
 	- **[[Techniques]]**
@@ -73,6 +52,7 @@ type: folder_brief_live
 	- **[[4.10.1 - Fetches]]**
 	- **[[4.10.2 - Requests]]**
 	- **[[4.10.3 - Responses]]**
+	- **[[4.10.4 - URL Object]]**
 	- **[[Notes]]**
 - **[[X - Techniques]]**
 

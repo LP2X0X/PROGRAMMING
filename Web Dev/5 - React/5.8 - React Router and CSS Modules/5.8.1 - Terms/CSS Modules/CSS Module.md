@@ -14,6 +14,11 @@ tags:
     
 - This prevents **class name conflicts** across components.
     
+- They’re a **built-in feature** of most modern React build tools, such as:
+	- **Create React App (CRA)**
+	- **Next.js**
+	- **Vite**
+	- **Parcel**
 
 ---
 

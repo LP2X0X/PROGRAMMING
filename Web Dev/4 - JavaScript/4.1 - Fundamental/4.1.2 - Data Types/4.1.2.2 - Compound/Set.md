@@ -104,3 +104,9 @@ const arr = [...mySet];
 // Array → Set
 const newSet = new Set(arr);
 ```
+
+✅ What happens here:
+
+- The `Set` constructor automatically removes duplicates.
+    
+- The order of elements is preserved (in insertion order).
