@@ -14,7 +14,7 @@ type: folder_brief_live
 	- **[[Functions]]**
 	- **[[Methods]]**
 	- **[[Notes]]**
-	- [[Object Overview]]
+	- [[Object overview]]
 	- **[[Operators]]**
 	- **[[Properties]]**
 	- **[[Techniques]]**
