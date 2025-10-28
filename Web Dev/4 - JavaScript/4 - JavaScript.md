@@ -45,7 +45,12 @@ type: folder_brief_live
 		- [[Promise wraps async work]]
 		- [[then, catch vs await]]
 - **[[4.7 - Module]]**
-- **[[4.8 - Browser Document, Events, InterfacesDocument]]**
+- **4.8 - Browser Document, Events, Interfaces**
+	- [[4.8 - Browser Document, Events, InterfacesDocument]]
+	- **4.8.1 - DOM**
+		- **[[4.8.1.1 - Terms]]**
+		- **[[4.8.1.2 - Techniques]]**
+		- **[[4.8.1.3 - Node Properties]]**
 - **[[4.9 - Events]]**
 - **4.10 - Network Request**
 	- [[4.9 - Network Request]]

@@ -5,10 +5,6 @@ tags:
  - fundamental
 ---
 
-Here’s a structured summary of _“Searching Elements in the DOM”_ (from the [javascript.info article](https://javascript.info/searching-elements-dom)), with key methods, what they do, and when to use them.
-
----
-
 ## Searching Elements: Methods & Tools
 
 These are the main ways to find elements in the DOM.
