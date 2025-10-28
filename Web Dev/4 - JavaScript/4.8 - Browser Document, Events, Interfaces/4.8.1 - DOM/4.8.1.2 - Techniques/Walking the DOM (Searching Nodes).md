@@ -88,6 +88,9 @@ Whitespace between elements = text nodes
 - **Text nodes & whitespace count**  
     Whitespace (new lines, spaces between elements) and text are counted as nodes in `childNodes`. So you might see “Text” nodes when iterating.
     
+- **`childNodes` looks like an array**. 
+    But actually it’s not an array, but rather a _ [[DOM Collections|DOM collection]]_ – a special array-like iterable object.
+    
 - **Script timing matters**  
     If you try to access children before they are parsed, you may get incomplete collections. For example, a `<script>` inside `<head>` might see `document.body` as `null` because `<body>` hasn’t been parsed yet.
     
