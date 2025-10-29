@@ -14,6 +14,15 @@ In **React**, the term **routing** usually refers to handling navigation between
 - 👉 Keeps the **UI in sync** with the current browser URL
     
 
+````ad-note
+**`react-router-dom` is _not included by default_** when you create a new React app — **neither with Create React App nor with Vite**.
+
+To install it, use:
+```bash
+npm install react-router-dom
+```
+````
+
 ---
 
 ### 📝 Detailed Notes

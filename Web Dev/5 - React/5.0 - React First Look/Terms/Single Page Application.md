@@ -49,6 +49,8 @@ tags:
         - Rendering the correct view
             
 
+![[Pasted image 20251028200320.png|center|700]]
+
 ---
 
 ⚡ In short:  

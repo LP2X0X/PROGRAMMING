@@ -51,7 +51,8 @@ type: folder_brief_live
 		- **[[4.8.1.1 - Terms]]**
 		- **[[4.8.1.2 - Techniques]]**
 		- **[[4.8.1.3 - Node Properties]]**
-- **[[4.9 - Events]]**
+	- **[[4.8.2 - Events]]**
+		- **[[4.8.2.1 -  Terms]]**
 - **4.10 - Network Request**
 	- [[4.9 - Network Request]]
 	- **[[4.10.1 - Fetches]]**
