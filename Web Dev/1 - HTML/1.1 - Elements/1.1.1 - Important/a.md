@@ -8,11 +8,15 @@ tags:
 The **anchor element** in HTML is written with the `<a>` tag.  
 It is used to create hyperlinks that link to another page, a section within the same page, an email, or even a file.
 
+---
+
 ### Syntax
 
 ```html
 <a href="URL">Link text</a>
 ```
+
+---
 
 ### Common Attributes
 
@@ -34,6 +38,8 @@ It is used to create hyperlinks that link to another page, a section within the 
     
 - **`rel`** – Specifies the relationship between the current document and the linked document (e.g., `nofollow`, `noopener`).
     
+
+---
 
 ### Examples
 

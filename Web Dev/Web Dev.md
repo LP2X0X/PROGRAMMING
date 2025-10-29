@@ -29,15 +29,15 @@ type: folder_brief_live
 	- **[[5.7 - The Advanced useReducer Hook]]**
 	- **5.8 - React Router and CSS Modules**
 		- **[[5.8.1 - Terms]]**
-		- **[[5.8.2 - Techniques]]**
-		- **[[5.8.3 - Notes]]**
-		- **[[5.8.4 - Questions]]**
+		- **[[5.8.2 - Components]]**
+		- **[[5.8.3 - Techniques]]**
+		- **[[5.8.4 - Notes]]**
+		- **[[5.8.5 - Questions]]**
 		- [[React Router Overview]]
 	- **[[5.9 - The Context API]]**
 	- **[[Others]]**
 	- [[React Summary]]
 	- [[React]]
-- **[[JavaScript Crash Course]]**
 - **[[Next.js]]**
 - [[Study Tips]]
 

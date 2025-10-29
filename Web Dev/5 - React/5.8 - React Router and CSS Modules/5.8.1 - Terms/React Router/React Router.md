@@ -9,7 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Dynamic Route]]
 - [[Index Route]]
-- [[Link vs NavLink]]
 - [[Nested Route]]
 - [[Routing]]
 
