@@ -22,6 +22,7 @@ type: folder_brief_live
 		- [[5 - Effect and Data Fetching]]
 		- **[[5.5.1 - Terms]]**
 		- **[[5.5.2 - Questions]]**
+		- **[[5.5.3 - Notes]]**
 	- **5.6 - Custom Hooks, Refs, and More State**
 		- **[[5.6.1 - Terms]]**
 		- **[[5.6.2 - Notes]]**

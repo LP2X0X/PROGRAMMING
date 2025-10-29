@@ -60,6 +60,11 @@ arr.at(-1);   // 30 (last item)
 
 ✅ Safer than `arr[index]` when working with negative numbers.
 
+```ad-important
+`.at()` returns **a value**, not a reference.  
+Only bracket notation `[]` can return a _reference_ to a position in an array.
+```
+
 ---
 
 ## 🛠 Common Array Methods

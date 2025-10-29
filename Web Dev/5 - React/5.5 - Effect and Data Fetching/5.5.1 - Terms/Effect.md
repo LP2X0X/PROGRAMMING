@@ -16,7 +16,7 @@ The **`useEffect` hook** in React lets you run **side effects** in function comp
 ```ad-note
 Effect are used to keep a component synchronised with some external system.
 ```
-![[Pasted image 20250827174352.png|center|500]]
+![[Pasted image 20250827174352.png|center|600]]
 
 ```ad-tip
 It can also helps synchronize states.
@@ -82,7 +82,7 @@ function Example() {
     }, []);
     ```
 
-![[Pasted image 20250827174253.png|center|500]]
+![[Pasted image 20250827174253.png|center|600]]
 
 ---
 
@@ -119,7 +119,7 @@ function Example() {
     
 
 ```ad-important
-Each effect should do **only one thing**! Use **one useEffect hook for each side effect**. This makes effects easier to [[Cleanup Function|cleanup]].
+Each effect should do **only one thing**! Use **one useEffect hook for each side effect**. This makes effects easier to [[Cleanup Function|clean up]].
 ```
 
 ---
