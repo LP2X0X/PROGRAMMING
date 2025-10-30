@@ -63,6 +63,16 @@ tags:
 
 - A Promise object serves as a link between the executor and the consuming functions, which will receive the result or error. Consuming functions can be registered (subscribed) using the methods `.then` and `.catch`.
 
+```ad-tip
+You cannot "get data out of a Promise". Once you're in Promise-land, or async land, you're stuck there, because there is code that runs synchronously, and code that runs asynchronously, and never the twain shall meet.
+
+If you're inside a `then`, it happens _later_ (there are rules around this timing too but the shorthand is enough to understand the concept). Later is an ambiguous concept, but just know that you can't use something that happens _later_ inside a function happening **now** (synchronously).
+
+Think of it like trying to make a coffee with no milk. Your brother _promises_ to go get milk. It doesn't matter where the milk comes from (the cache or a fetch) - right now, at that moment, your milk is `pending`. You can only make coffee when he's back (inside the `.then` block).
+
+You need to do the work you want to perform on the data inside the .then.
+```
+
 #### then
 
 - The most important, fundamental one is `.then`. 
