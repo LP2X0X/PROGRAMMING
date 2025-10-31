@@ -13,6 +13,33 @@ It’s like saying:
 
 ---
 
+### 🧭 How React Router interprets `/`
+
+When you write:
+
+```jsx
+<Route index element={<Homepage />} />
+```
+
+It’s **shorthand** for:
+
+```jsx
+<Route path="/" element={<Homepage />} />
+```
+
+That’s because the **`index` route** inside your `<Routes>` acts as the “default” or “home” route of that router context.
+
+So when your `<Link to="/" />` runs, React Router:
+
+1. Looks at your routes.
+    
+2. Sees that the **index route** (`<Route index ... />`) matches `/`.
+    
+3. Renders the `<Homepage />` component.
+    
+
+---
+
 ### 🔹 Example
 
 ```jsx

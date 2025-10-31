@@ -5,7 +5,7 @@ tags:
  - term
 ---
 
-Dynamic routing in **React** (using **React Router v6+**) lets you create routes that change **based on data or user interaction**, such as viewing a specific user, product, or post.
+Dynamic routing in **React** (using **React Router v6+**) lets you create routes that change **based on data or user interaction**, such as viewing a specific user, product, or post. Its a great way to [[Storing state in the URL|storing state in the URL]].
 
 Here’s a complete breakdown 👇
 
@@ -13,8 +13,7 @@ Here’s a complete breakdown 👇
 
 ## 🧠 What is Dynamic Routing?
 
-Dynamic routing means your **URL paths contain variables** (called _route params_) that can change depending on what you’re showing.  
-For example:
+Dynamic routing means your **URL paths contain variables** (called _route params_) that can change depending on what you’re showing. For example:
 
 ```
 /users/alice
@@ -23,6 +22,83 @@ For example:
 ```
 
 All can be handled by a **single route definition** using a placeholder (e.g. `:userId`, `:postId`).
+
+---
+
+## ☝️ How to use?
+
+Here’s a **simple 3-step guide** to using **dynamic routes** in React Router (v6+).
+
+#### 🧩 1. **Define the dynamic route**
+
+In your router setup (like `App.jsx` or `Routes.jsx`):
+
+```jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import City from "./pages/City";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="city/:id" element={<City />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+```
+
+✅ The `:id` part is a **route parameter** — it makes the URL dynamic, e.g.  
+`/city/1`, `/city/london`, `/city/abc123`
+
+#### 🧩 2. **Create the link with a dynamic value**
+
+Use `<Link>` or `<NavLink>` to navigate with an actual parameter value:
+
+```ad-tip
+You can add [[URL#Parameters|query string]] here also. And [[Manipulating Query String|here]] is how to use it.
+```
+
+```jsx
+import { Link } from "react-router-dom";
+
+<Link to={`/city/${city.id}?lat=${lat}&lng=${lng}`}>{city.name}</Link>
+```
+
+```ad-note
+Imagine we are passing the data as a state to the globally accessable URL params.
+```
+
+✅ When clicked, this goes to `/city/1` (for example).
+
+#### 🧩 3. **Access the dynamic value**
+
+In your target component (`City.jsx`):
+
+```jsx
+import { useParams } from "react-router-dom";
+
+function City() {
+  // Use params return an object with the property name we use in the route
+  const { id } = useParams(); // ✅ read URL parameter
+  const [ searchParams, setSearchParams ] = useSearchParams(); // ✅ read query string
+  const lat = searchParams.get("lat");
+  const lng = searchParams.get("lng");
+  return <h2>City ID: {id}</h2>;
+}
+
+export default City;
+```
+
+✅ `useParams()` gives you an object like `{ id: "1" }`.
+
+#### 🧠 TL;DR
+
+|Step|What you do|Example|
+|---|---|---|
+|1|Define route with `:param`|`<Route path="city/:id" />`|
+|2|Link to it dynamically|`<Link to={`/city/${city.id}`} />`|
+|3|Read it in component|`const { id } = useParams();`|
 
 ---
 

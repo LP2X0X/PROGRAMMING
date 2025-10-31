@@ -5,11 +5,80 @@ tags:
  - route
 ---
 
-In **React Router (v6+)**, nested routes let you build hierarchical layouts where a parent route renders some layout, and child routes get rendered inside it.
+A **nested route** means:
+
+> One route (child) lives **inside another route (parent)** —  
+> both share part of the same layout or page structure.
+
+So instead of having each page be completely separate, you can **reuse layout components** like navbars, sidebars, etc.
 
 ```ad-note
 We need this when we want a part of the user interface to be controlled by a part of the URL. This is what defined a nested route, not because it is made up of multiple parts in the URL.
 ```
+
+---
+
+## 🏗 Example: Without Nested Routes
+
+You might write this:
+
+```jsx
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/dashboard/settings" element={<Settings />} />
+</Routes>
+```
+
+This works — but `Dashboard` and `Settings` don’t share layout or state.  
+They render separately.
+
+---
+
+## 🌿 With Nested Routes
+
+You can group related routes like this:
+
+```jsx
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/dashboard" element={<DashboardLayout />}>
+    <Route index element={<DashboardHome />} />
+    <Route path="settings" element={<Settings />} />
+  </Route>
+</Routes>
+```
+
+Now:
+
+- `/dashboard` → renders `DashboardLayout` + `DashboardHome`
+    
+- `/dashboard/settings` → renders `DashboardLayout` + `Settings`
+    
+
+Both share the same **layout component**!
+
+---
+
+## 🧭 How It Works Internally
+
+1. React Router matches `/dashboard/settings`
+    
+2. It renders `<DashboardLayout>` first
+    
+3. Then it renders the matching **child** route (`<Settings />`) **inside** the `<Outlet />`
+    
+
+---
+
+## ✅ Benefits
+
+|Benefit|Description|
+|---|---|
+|**Shared layout**|Keep navbars, sidebars, or headers across multiple pages|
+|**Cleaner structure**|Group related routes logically|
+|**Scoped URLs**|`/dashboard/*` clearly defines a section of your app|
+|**Reusability**|Layouts can wrap multiple pages without duplication|
 
 ---
 
