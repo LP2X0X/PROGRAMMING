@@ -5,7 +5,7 @@ tags:
   - methods
 ---
 
-### 🔤 **`sort()`** – Sort alphabetically by default (The items are sorted as strings by default.)
+### 🔤 **`sort()`** – Sort alphabetically by default and **in place** (The items are sorted as strings by default.)
 
 ```javascript
 const names = ['John', 'Alice', 'Bob'];
