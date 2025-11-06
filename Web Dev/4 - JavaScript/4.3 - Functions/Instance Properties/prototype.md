@@ -6,4 +6,4 @@ tags:
  - fundamental
 ---
 
-- Refer to [[Function.prototype]].
+- Refer to [[4.4.3 - Function.prototype]].

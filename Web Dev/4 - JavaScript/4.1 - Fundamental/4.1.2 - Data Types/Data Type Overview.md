@@ -14,4 +14,4 @@ tags:
 	    - [[null vs undefined#**undefined**]] for unassigned values – a standalone type that has a single value `undefined`.
 	    - [[Symbol]] for unique identifiers.
 	- And one non-primitive data type:
-	    -  [[Web Dev/4 - JavaScript/4.2 - Objects/Terms/Cores/Object|Object]] for more complex data structures.
+	    -  [[Web Dev/4 - JavaScript/4.2 - Objects/4.2.1 - Terms/Cores/Object|Object]] for more complex data structures.

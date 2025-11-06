@@ -9,38 +9,29 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[4.0 - General]]**
 - **[[4.1 - Fundamental]]**
-- **4.2 - Objects**
-	- [[3.1.2 - Objects]]
-	- **[[Functions]]**
-	- **[[Methods]]**
-	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
-	- [[Object overview]]
-	- **[[Operators]]**
-	- **[[Properties]]**
-	- **[[Techniques]]**
-	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Terms/Terms]]**
+- **[[4.2 - Objects]]**
 - **[[4.3 - Functions]]**
 - **4.4 - Prototype**
-	- [[__proto__]]
-	- [[constructor]]
-	- [[Function.prototype]]
-	- [[null-prototype Object]]
-	- [[Object.prototype]]
-	- [[Prototype Chain]]
-	- [[Prototype Overview]]
-	- [[prototype vs __proto__]]
-	- [[The Two Chain]]
+	- [[4.4.1 - Prototype Overview]]
+	- [[4.4.2 - Object.prototype]]
+	- [[4.4.3 - Function.prototype]]
+	- [[4.4.4 - constructor]]
+	- [[4.4.5 - __proto__]]
+	- [[4.4.6 - prototype vs __proto__]]
+	- [[4.4.7 - Prototype Chain]]
+	- [[4.4.8 - The Two Chain]]
+	- [[4.4.9 - null-prototype Object]]
 - **4.5 - Classes**
 	- [[3.1.5 - Classes]]
 	- **[[Core]]**
 	- **[[Inheritance]]**
-	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
+	- **[[Notes]]**
 - **4.6 - Promises, Async and Await**
 	- [[3.1.6 - Promises, Async and Await]]
 	- **[[4.6.1 - Terms]]**
 	- **[[4.6.2 - APIs]]**
 	- **[[4.6.3 - Techniques]]**
-	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
+	- **[[Notes]]**
 		- [[Promise handlers then, catch, finally are always asynchronous]]
 		- [[Promise wraps async work]]
 		- [[then, catch vs await]]
@@ -59,7 +50,7 @@ type: folder_brief_live
 	- **[[4.10.2 - Requests]]**
 	- **[[4.10.3 - Responses]]**
 	- **[[4.10.4 - URL Object]]**
-	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
+	- **[[Notes]]**
 - **[[X - Techniques]]**
 
 %% End Waypoint %%

@@ -5,7 +5,7 @@ tags:
   - fundamental
 ---
 
-The for...in loop is used to **iterate over the [[Property Flags#3. \*\*\`enumerable\`\*\*|enumerable]] property keys** of an [[Web Dev/4 - JavaScript/4.2 - Objects/Terms/Cores/Object|object]].
+The for...in loop is used to **iterate over the [[Property Flags#3. \*\*\`enumerable\`\*\*|enumerable]] property keys** of an [[Web Dev/4 - JavaScript/4.2 - Objects/4.2.1 - Terms/Cores/Object|object]].
 
 ---
 

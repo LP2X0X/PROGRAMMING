@@ -22,7 +22,7 @@ type: folder_brief_live
 			- [[object-fit]]
 		- [[overflow]]
 		- [[position]]
-		- [[Properties]]
+		- [[Web Dev/2 - CSS/Properties/Properties]]
 		- **[[Text Related]]**
 	- **[[2.1.3 - Pseudo Classes]]**
 	- **2.1.4 - Pseudo Elements**
@@ -52,7 +52,7 @@ type: folder_brief_live
 	- **[[2.5.1 - CSS Transitions]]**
 - **[[Keywords]]**
 - **[[Web Dev/2 - CSS/Notes/Notes]]**
-- **[[Properties]]**
+- **[[Web Dev/2 - CSS/Properties/Properties]]**
 - **[[Questions]]**
 - **[[Responsive Design]]**
 - **[[Techniques]]**
