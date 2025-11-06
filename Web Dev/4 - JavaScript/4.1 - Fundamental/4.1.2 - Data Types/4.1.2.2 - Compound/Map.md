@@ -5,7 +5,7 @@ tags:
   - fundamental
 ---
 
-- [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) is a collection of keyed data items, just like an `Object`. But the main difference is that `Map` allows keys of any type.
+- [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) is a collection of keyed data items, just like an `Object`. But the main difference is that `Map` *allows keys of any type*.
 - Methods and properties are:
 	- [`new Map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Map) – creates the map.
 	- [`map.set(key, value)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set) – stores the value by the key.
@@ -178,3 +178,87 @@ let obj = Object.fromEntries(map); // omit .entries()
 ```
 
 That’s the same, because `Object.fromEntries` expects an iterable object as the argument. Not necessarily an array. And the standard iteration for `map` returns same key/value pairs as `map.entries()`. So we get a plain object with same key/values as the `map`.
+
+---
+
+## Convert from array of array to Map
+### ✅ **1. The Built-in Constructor (Fastest and Cleanest)**
+
+If you already have an array of `[key, value]` pairs:
+
+```js
+const arr = [[1, 'a'], [2, 'b'], [3, 'c']];
+const map = new Map(arr);
+```
+
+✅ **Advantages:**
+
+- Very fast (implemented natively in C++)
+    
+- Clean and concise
+    
+- No manual loops
+    
+- Ideal if the array is already in the correct `[key, value]` shape
+    
+
+💡 **Use this if you’re creating the map from scratch.**
+
+### ✅ **2. Using a `for` loop (Efficient for updates)**
+
+If you need to **add or merge** entries into an existing map:
+
+```js
+const arr = [[1, 'a'], [2, 'b'], [3, 'c']];
+const map = new Map();
+
+for (let i = 0; i < arr.length; i++) {
+  const [key, value] = arr[i];
+  map.set(key, value);
+}
+```
+
+✅ **Advantages:**
+
+- Fastest manual approach (beats `.forEach()` in benchmarks)
+    
+- Explicit control
+    
+- Allows conditionals or merging logic
+    
+
+💡 **Use this if you’re adding to an existing map.**
+
+### ⚙️ **3. Using `.forEach()` (Readable but slightly slower)**
+
+```js
+arr.forEach(([key, value]) => map.set(key, value));
+```
+
+✅ More readable  
+⚠️ Slightly slower due to callback overhead
+
+### ⚡ **Benchmark Summary**
+
+|Method|Use Case|Speed|
+|---|---|---|
+|`new Map(arr)`|Initialize from pairs|🔥 Fastest|
+|`for (let …)` loop|Add/update incrementally|⚡ Very Fast|
+|`.forEach()`|Readable but slower|🐢 Slowest|
+
+### 🚀 **Best Practice**
+
+If you can, always prefer:
+
+```js
+const map = new Map(arrayOfPairs);
+```
+
+But if you’re **updating an existing map** in a hot loop:
+
+```js
+for (let i = 0; i < pairs.length; i++) {
+  const [k, v] = pairs[i];
+  map.set(k, v);
+}
+```

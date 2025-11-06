@@ -18,7 +18,6 @@ console.log(letters.slice(1, 3)); // ['b', 'c']
 ```
 
 ### ✍️ **`splice()`** – Add, remove, or replace **in place**.
-
 ```javascript
 const fruits = ['apple', 'banana', 'cherry'];
 fruits.splice(1, 1, 'orange'); // Remove 1 item at index 1, add 'orange'
