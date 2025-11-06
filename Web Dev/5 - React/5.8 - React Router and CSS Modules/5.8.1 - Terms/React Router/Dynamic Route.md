@@ -227,9 +227,9 @@ const { userId, postId } = useParams();
 
 ## 🧭 Summary
 
-|Concept|Description|
-|---|---|
-|`:paramName`|Declares a dynamic segment in a route path|
-|`useParams()`|Access the current URL parameters|
-|`Link`|Navigate dynamically by building URLs with params|
-|`useEffect`|Often used to fetch data when a param changes|
+| Concept       | Description                                       |
+| ------------- | ------------------------------------------------- |
+| `:paramName`  | Declares a dynamic segment in a route path        |
+| `useParams()` | Access the current URL parameters                 |
+| `Link`        | Navigate dynamically by building URLs with params |
+| `useEffect`   | Often used to fetch data when a param changes     |

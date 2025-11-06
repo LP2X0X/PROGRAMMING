@@ -39,6 +39,52 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
 ![[Pasted image 20250914145858.png|center]]
 
+````ad-tip
+It's always a good idea to model the action type as event. Here's an example:
+```jsx
+function reducer(state, action) {
+  switch (action.type) {
+    case "city/loaded": // In past tense
+      return {
+        ...state,
+        isLoading: false,
+        currentCity: action.payload,
+      };
+
+    case "cities/loaded":
+      return {
+        ...state,
+        isLoading: false,
+        cities: action.payload,
+      };
+
+    case "cities/created":
+      return {
+        ...state,
+        isLoading: false,
+        cities: [...state.cities, action.payload],
+      };
+
+    case "cities/deleted":
+      return {
+        ...state,
+        isLoading: false,
+        cities: state.cities.filter((city) => city.id !== action.payload),
+      };
+
+    case "loading":
+      return { ...state, isLoading: true };
+
+    case "doneLoading":
+      return { ...state, isLoading: false };
+
+    case "rejected":
+      return { ...state, isLoad
+
+```
+````
+
+
 ---
 
 ## 3. How reducer update state

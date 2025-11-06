@@ -84,7 +84,7 @@ function App() {
   const [theme, setTheme] = useState("light");
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}> // Notice the double bracket (object as prop)
       <Toolbar />
     </ThemeContext.Provider>
   );

@@ -35,9 +35,11 @@ type: folder_brief_live
 		- **[[5.8.5 - Questions]]**
 		- [[React Router Overview]]
 	- **[[5.9 - The Context API]]**
+	- **[[5.10 - Performance Optimization and Advanced useEffect]]**
 	- **[[Others]]**
 	- [[React Summary]]
 	- [[React]]
+- **[[6 - TypeScript]]**
 - **[[Next.js]]**
 - [[Study Tips]]
 
