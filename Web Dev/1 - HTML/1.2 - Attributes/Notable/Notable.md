@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[class]]
 - [[contenteditable]]
 - [[download]]
-- [[Web Dev/1 - HTML/1.2 - Attributes/Notable/for]]
+- [[for]]
 - [[id]]
 - [[name]]
 - [[role]]

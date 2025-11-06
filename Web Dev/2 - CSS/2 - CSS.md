@@ -13,7 +13,7 @@ type: folder_brief_live
 		- **[[2.1.1.2 - Advance]]**
 		- **[[CSS Rules]]**
 		- **[[Display-based Elements]]**
-		- [[Terms]]
+		- [[Web Dev/2 - CSS/Terms/Terms]]
 	- **2.1.2 - Properties**
 		- [[Absolute Position Properties]]
 		- **[[Box Model Related]]**
@@ -51,11 +51,11 @@ type: folder_brief_live
 - **[[2.5 - Animations]]**
 	- **[[2.5.1 - CSS Transitions]]**
 - **[[Keywords]]**
-- **[[Notes]]**
+- **[[Web Dev/2 - CSS/Notes/Notes]]**
 - **[[Properties]]**
 - **[[Questions]]**
 - **[[Responsive Design]]**
 - **[[Techniques]]**
-- **[[Terms]]**
+- **[[Web Dev/2 - CSS/Terms/Terms]]**
 
 %% End Waypoint %%

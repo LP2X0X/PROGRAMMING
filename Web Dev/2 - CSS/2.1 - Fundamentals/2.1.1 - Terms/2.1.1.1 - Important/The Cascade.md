@@ -7,7 +7,15 @@ tags:
 
 When multiple CSS declarations could apply to the same element, the browser needs a way to **decide which one wins**. This decision-making process is the **cascade**, and it evaluates six criteria in a specific order:
 
+1. **Stylesheet origin**—Where the styles come from. Your styles are applied in conjunction with the browser’s default styles.
+2. **Inline styles**—Whether a declaration is applied to an element via the HTML style attribute or a CSS selector.
+3. **Layer**—Styles can be defined in layers, each with a different priority.
+4. **Selector specificity**—Which selectors take precedence over which.
+5. **Scope proximity**—Whether the styles are scoped to a portion of the DOM.
+6. **Source order**—Order in which styles are declared in the stylesheet.
+
 ![[Pasted image 20251002213329.png|center|600]]
+ <figcaption align="center"><strong>Figure:</strong> High-level flowchart of the cascade showing declaration precedence</figcaption>
 
 ---
 
