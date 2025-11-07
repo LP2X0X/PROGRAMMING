@@ -7,14 +7,14 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Adding and Remove Element]]
-- [[Array Methods Overview]]
+- [[0 - Finding and Searching]]
+- [[1 - Checking and Testing]]
+- [[2 - Adding and Remove Element]]
+- [[3 - Iterating, Filtering and Transforming]]
+- [[4 - Sorting and Reversing]]
+- [[5 - Modifying in place and Extract]]
+- [[6 - Joining and Splitting]]
 - [[Array.from]]
-- [[Checking and Testing]]
-- [[Finding and Searching]]
-- [[Iterating, Filtering and Transforming]]
-- [[Joining and Splitting]]
-- [[Modifying in place and Extract]]
-- [[Sorting and Reversing]]
+- [[X - Array Methods Overview]]
 
 %% End Waypoint %%

@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[Array-like Objects]]
 - [[Global Object]]
 - [[Object Literal]]
-- [[Object]]
+- [[Web Dev/4 - JavaScript/4.2 - Objects/4.2.1 - Terms/Cores/Object]]
 - [[Optional Chaining]]
 - [[this]]
 

@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[Reference]]
 - [[Shadowing]]
 - [[RUST/1 - Fundamental Concepts/Terms/Statement]]
-- [[Type Annotation]]
+- [[RUST/1 - Fundamental Concepts/Terms/Type Annotation]]
 - [[Variable Scope]]
 
 %% End Waypoint %%

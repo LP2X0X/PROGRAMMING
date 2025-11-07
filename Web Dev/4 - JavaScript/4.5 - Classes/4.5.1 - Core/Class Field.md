@@ -66,8 +66,6 @@ let e = new Example();
 console.log(e.count); // 0
 ```
 
----
-
 ### 2. **Private Fields** (`#name`)
 
 Start with `#`. They are **truly private** (not accessible outside the class).
@@ -89,8 +87,6 @@ console.log(u.#password); // ❌ SyntaxError
 ```ad-note
 Private fields do not conflict with public ones. We can have both private `#smt` and public `smt` fields at the same time.
 ```
-
----
 
 ### 3. **Static Fields**
 

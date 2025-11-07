@@ -12,12 +12,16 @@ const ages = [25, 30, 35];
 console.log(ages.every(age => age >= 18)); // true
 ```
 
+----
+
 ### 🔴 **`some()`** – Check if **at least one** matches.
 
 ```javascript
 const scores = [45, 60, 80];
 console.log(scores.some(score => score > 75)); // true
 ```
+
+----
 
 ### **Array.isArray()**
 

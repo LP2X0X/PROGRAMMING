@@ -1,4 +1,4 @@
-# 6 - TypeScript Overview
+# Operators Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,10 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[6.0 - Generals]]**
-- **[[6.1 - Types]]**
+- [[AND]]
+- [[DISTINCT]]
+- [[LIKE]]
+- [[NOT]]
+- [[OR]]
 
 %% End Waypoint %%

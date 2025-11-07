@@ -13,9 +13,7 @@ names.sort();
 console.log(names); // ['Alice', 'Bob', 'John']
 ```
 
----
-
-### To use our own sorting order, we need to supply a function as the argument of `arr.sort()`.
+#### To use our own sorting order, we need to supply a function as the argument of `arr.sort()`.
 
 - The function should compare two arbitrary values and return:
 	```js
@@ -67,7 +65,7 @@ alert( countries.sort( (a, b) => a.localeCompare(b) ) ); // Andorra,Österreich,
 ```
 ````
 
----
+----
 
 ### 🔁 **`reverse()`** – Reverse the order **in place**.
 

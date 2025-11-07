@@ -14,6 +14,8 @@ users.forEach(user => console.log(user));
 // Bob
 ```
 
+----
+
 ### 📊 **`map()`** – Transform **each** element (returns a new array).
 
 ```javascript
@@ -22,6 +24,8 @@ const squared = nums.map(n => n * n);
 console.log(squared); // [1, 4, 9]
 ```
 
+----
+
 ### 🧹 **`filter()`** – Create a **new** array with matching elements.
 
 ```javascript
@@ -29,6 +33,8 @@ const ages = [18, 25, 16, 30];
 const adults = ages.filter(age => age >= 18);
 console.log(adults); // [18, 25, 30]
 ```
+
+----
 
 ### ➗ **`reduce()`** – Reduce to a **single value** (e.g., sum).
 - The reduce() method of Array instances executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
@@ -49,6 +55,8 @@ console.log(total); // 60
     
 - Therefore, your callback is **never called** in this case.
 ```
+
+----
 
 ### ➗ **`reduceRight()`** – Reduce to a **single value** but from right to left.
 

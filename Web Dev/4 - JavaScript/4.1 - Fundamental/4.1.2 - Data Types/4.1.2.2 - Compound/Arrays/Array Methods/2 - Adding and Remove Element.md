@@ -13,6 +13,8 @@ fruits.push('cherry');
 console.log(fruits); // ['apple', 'banana', 'cherry']
 ```
 
+----
+
 ### ➖ **`pop()`** – Remove the **last** element.
 
 ```javascript
@@ -22,6 +24,8 @@ console.log(last); // 3
 console.log(nums); // [1, 2]
 ```
 
+----
+
 ### ➕ **`unshift()`** – Add to the **beginning** of an array.
 
 ```javascript
@@ -29,6 +33,8 @@ const colors = ['blue', 'green'];
 colors.unshift('red');
 console.log(colors); // ['red', 'blue', 'green']
 ```
+
+----
 
 ### ➖ **`shift()`** – Remove the **first** element.
 

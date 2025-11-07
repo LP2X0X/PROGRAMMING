@@ -17,6 +17,8 @@ const letters = ['a', 'b', 'c', 'd'];
 console.log(letters.slice(1, 3)); // ['b', 'c']
 ```
 
+----
+
 ### ✍️ **`splice()`** – Add, remove, or replace **in place**.
 ```javascript
 const fruits = ['apple', 'banana', 'cherry'];

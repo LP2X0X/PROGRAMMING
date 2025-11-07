@@ -12,6 +12,8 @@ const words = ['Hello', 'World'];
 console.log(words.join(' ')); // 'Hello World'
 ```
 
+----
+
 ### 📚 **`split()`** – Create an array from a **string**.
 
 ```javascript
@@ -19,6 +21,8 @@ const message = 'one,two,three';
 const parts = message.split(',');
 console.log(parts); // ['one', 'two', 'three']
 ```
+
+----
 
 ### ➕ **`concat()`** – Combine arrays or values into a **new array**.
 ```javascript

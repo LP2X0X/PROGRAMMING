@@ -1,4 +1,4 @@
-# 6 - TypeScript Overview
+# Fundamental Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[6.0 - Generals]]**
-- **[[6.1 - Types]]**
+- **[[Operators]]**
+- **[[Others]]**
+- **[[Statements]]**
 
 %% End Waypoint %%
