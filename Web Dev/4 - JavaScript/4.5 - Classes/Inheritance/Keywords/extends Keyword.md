@@ -53,7 +53,7 @@ The syntax to extend another class is: `class Child extends Parent`.
 - Internally, `extends` keyword works using the good old prototype mechanics. It sets `Rabbit.prototype.[[Prototype]]` to `Animal.prototype`. So, if a method is not found in `Rabbit.prototype`, JavaScript takes it from `Animal.prototype`.
 ![[Pasted image 20250904074913.png|center|400]]
 
-- Remember that prototype is an object, therefore it also has the \_\_proto\_\_ property. Also, from [[4.4.5 - __proto__#^57e3c2|this note]], we can understand how the use of the above method work.
+- Remember that prototype is an object, therefore it also has the \_\_proto\_\_ property. Also, from [[4.4.1 - __proto__#^57e3c2|this note]], we can understand how the use of the above method work.
 
 
 ````ad-note

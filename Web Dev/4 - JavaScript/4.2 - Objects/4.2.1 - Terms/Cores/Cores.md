@@ -10,9 +10,9 @@ type: folder_brief_live
 - [[Array-like Objects]]
 - [[Global Object]]
 - [[Object Literal]]
-- [[Web Dev/4 - JavaScript/4.2 - Objects/4.2.1 - Terms/Cores/Object]]
+- [[Object]]
 - [[Optional Chaining]]
-- [[Web Dev/4 - JavaScript/4.2 - Objects/4.2.1 - Terms/Cores/this]]
+- [[this]]
 
 %% End Waypoint %%
 - [[Array-like Objects]]
