@@ -51,7 +51,7 @@ person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
    - The `constructor()` method is automatically called when a new instance of the class is created using `new`.
 
 2. **Methods**
-   - You can define methods directly inside the class body. They become part of the prototype of the class (in other words, the methods of a class get stored inside the  [[4.4.3 - Function.prototype|class prototype property]]).
+   - You can define methods directly inside the class body. They become part of the prototype of the class (in other words, the methods of a class get stored inside the  [[4.4.2 - Function.prototype (F.prototype)|class prototype property]]).
 
 3. **Inheritance**
    - A class can extend another class using the `extends` keyword and can use the `super` function to call the parent’s constructor or methods.
