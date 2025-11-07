@@ -23,7 +23,7 @@ type: folder_brief_live
 	- [[4.4.9 - null-prototype Object]]
 - **4.5 - Classes**
 	- [[3.1.5 - Classes]]
-	- **[[Core]]**
+	- **[[4.5.1 - Core]]**
 	- **[[Inheritance]]**
 	- **[[Notes]]**
 - **4.6 - Promises, Async and Await**

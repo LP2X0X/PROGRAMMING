@@ -8,9 +8,18 @@ tags:
 
 In JavaScript, a class is a blueprint for creating objects with pre-defined properties and methods. Classes were introduced in ECMAScript 2015 (also known as ES6) and provide a cleaner and more intuitive syntax for creating constructor functions and inheritance compared to the older prototype-based approach.
 
-```ad-note
+````ad-note
 In JavaScript, a class is a kind of function (...or, more precisely, the [[Web Dev/4 - JavaScript/3.1.4 - Prototype/constructor|constructor]] method).
+```js
+class User {
+  constructor(name) { this.name = name; }
+  sayHi() { alert(this.name); }
+}
+
+// proof: User is a function
+alert(typeof User); // function
 ```
+````
 
 ---
 
