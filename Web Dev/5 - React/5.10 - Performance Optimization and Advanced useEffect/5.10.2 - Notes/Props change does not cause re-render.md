@@ -9,12 +9,11 @@ tags:
 
 ### 💡 What really happens
 
-1. **Props themselves don’t trigger re-render.**  
-    React components re-render when **their parent re-renders**.
+1. **Props only changes when the parent component re-renders.**  
     
-2. When the parent re-renders, React **re-evaluates the JSX** and passes **new props** to its children.
+2. When the parent re-renders, **the children who receives the prop will re-render anyway!**
     
-3. If a child receives **new prop values** (based on reference or primitive comparison), React will **re-render that child** to reflect the changes.
+3. Therefore, the real reason why a component re-renders when props change is **because the parent re-renders**.
     
 
 ### 🧩 Summary

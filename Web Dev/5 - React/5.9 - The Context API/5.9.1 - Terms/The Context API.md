@@ -7,8 +7,7 @@ tags:
 
 ## 🧭 What is the Context API?
 
-The **Context API** in React lets you **share data across your component tree**  
-**without having to pass props manually** at every level.
+The **Context API** in React lets you **share data across your component tree without having to pass props manually** at every level.
 
 In short:  
 👉 It’s a **way to manage global data** in React.
@@ -169,6 +168,12 @@ const { theme } = useContext(ThemeContext);
     
 - They re-run their render function with the updated value
     
+
+```ad-important
+React Context is smart:
+- When a context value changes, React **only re-renders the components that read (consume)** that specific context.
+- Components that don’t use `useContext(PostContext)` **won’t re-render**, even if they’re descendants of the provider.
+```
 
 #### 🔁 Why This Happens
 
