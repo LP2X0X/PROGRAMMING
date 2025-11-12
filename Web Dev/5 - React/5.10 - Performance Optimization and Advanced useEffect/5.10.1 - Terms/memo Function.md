@@ -32,6 +32,9 @@ const MyComponent = React.memo(function MyComponent(props) {
   console.log("Render: MyComponent");
   return <div>{props.value}</div>;
 });
+
+// Or we could do this...
+export default memo(MyComponent);
 ```
 
 ✅ React will skip re-rendering `MyComponent` **if**

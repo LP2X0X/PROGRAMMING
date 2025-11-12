@@ -36,10 +36,9 @@ async function getCity(id) {
 ```js
 const { getCity, currentCity, isLoading } = useCities();
 
-useEffect(
-	function () {
-	  getCity(id);
-	}, [id, getCity]);
+useEffect(function () {
+  getCity(id);
+}, [id, getCity]);
 ```
 
 - Now, here's the problem: getCity update the state inside the context each time that it is executed which in turn cause the context provider to re-render. Therefore, a new getCity function is created. Since a new getCity is created and also it is in the dependency array of the above useEffect, getCity will be called again. In conclusion, it will cause an **infinite loop**.

@@ -113,6 +113,25 @@ function App({ list }) {
 - With `useMemo`, React re-filters **only when `list` or `filter` changes**
     
 
+```js
+const archiveOptions = useMemo(() => {
+  return {
+    show: false,
+    title: `Post archive in addition to ${posts.length} main posts`,
+  };
+}, [posts.length]);
+```
+
+🧩 **What happens:**
+
+- On every render → component **normally recreates** a new `archiveOptions` object
+    
+- Without `useMemo`, a **new object reference** is created each time, even if `posts.length` didn’t change
+    
+- With `useMemo`, React **recomputes the object only when** `posts.length` changes
+    
+- This keeps `archiveOptions` **referentially stable**, preventing **unnecessary re-renders** in child components that depend on it
+
 ---
 
 ## 🧩 5. `useMemo` vs `useCallback`

@@ -17,6 +17,7 @@ The **`useEffect` hook** in React lets you run **side effects** in function comp
 ```ad-note
 Effect are used to keep a component synchronised with some external system.
 ```
+
 ![[Pasted image 20250827174352.png|center|600]]
 
 ```ad-tip
@@ -25,7 +26,7 @@ It can also helps synchronize states.
 
 ---
 
-### Basic Syntax
+## Basic Syntax
 
 ```jsx
 import { useEffect, useState } from "react";
@@ -45,7 +46,9 @@ function Example() {
 
 ---
 
-### Key Concepts
+## Key Concepts
+
+[[Dependency Array]]
 
 1. **No dependency array (`[]` missing)**
     
@@ -87,7 +90,7 @@ function Example() {
 
 ---
 
-### Common Use Cases
+## Common Use Cases
 
 - **Fetching Data**
     
@@ -133,9 +136,9 @@ Each effect should do **only one thing**! Use **one useEffect hook for each side
 
 ---
 
-### useEffect run asynchronously after component render
+## useEffect run asynchronously **after component render**
 
-#### 🔄 Render + Commit Phases in React
+### 🔄 Render + Commit Phases in React
 
 1. **Render phase**
     
@@ -162,7 +165,7 @@ Each effect should do **only one thing**! Use **one useEffect hook for each side
     - That way, your UI is visible immediately, _before_ slow or blocking side effects run.
         
 
-#### ⚡ Key Point:
+### ⚡ Key Point:
 
 - `useEffect` always runs **after paint** (asynchronously, in the background).
     
@@ -171,7 +174,7 @@ Each effect should do **only one thing**! Use **one useEffect hook for each side
     - That’s why `useLayoutEffect` can block the paint if it’s heavy.
         
 
-#### Example:
+### Example:
 
 ```jsx
 useEffect(() => {
