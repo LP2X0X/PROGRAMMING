@@ -17,7 +17,10 @@ tags:
 
 ### 1. **How closure affects `useEffect`**
 
-- The function below, when it was first created it close over the states and props at the time it was created. That was in the initial render  
+- When this function was first created, it _closed over_ the state and props that existed during the initial render — the same moment the function itself was defined — and never re-created in subsequent renders. In other words, it captured a snapshot of the state and props at their initial values.
+- But, any function that was created at the initial render and then not recreated still has access to that initial snapshot of states and props.
+
+> Therefore, it will never have access to the latest state or props — it will always reference the initial snapshot (*stale closure*) captured when the function was first created.
 
 ```jsx
 useEffect(function () {
@@ -25,10 +28,6 @@ useEffect(function () {
 }, []);
 ```
 
-- The closure inside `setInterval` captured `count = 0` from the first render.
-    
-- So every second, it keeps adding `1` to `0`, never seeing updated values.
-    
 
 ---
 
@@ -37,20 +36,13 @@ useEffect(function () {
 To make sure your effect always uses the latest value, you must **include dependencies**:
 
 ```jsx
-useEffect(() => {
-  const id = setInterval(() => {
-    setCount(c => c + 1); // ✅ use functional update form
-  }, 1000);
-  return () => clearInterval(id);
-}, []); // ✅ safe, because functional update doesn’t depend on closure
+useEffect(function () {
+  document.title = `Your ${number}-exercise workout`;
+}, [number]);
 ```
 
-or if you actually need the current `count` in the effect logic:
-
-```jsx
-useEffect(() => {
-  console.log("count changed:", count);
-}, [count]); // ✅ re-run effect whenever count changes
+```ad-note
+Specifying the dependency array is like telling React, “I know you can’t automatically see the latest values during each render, but you only need to re-run this effect when these specific values change.”
 ```
 
 ---
