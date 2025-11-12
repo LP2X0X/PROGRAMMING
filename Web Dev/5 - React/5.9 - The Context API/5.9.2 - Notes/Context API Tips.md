@@ -230,9 +230,18 @@ Each Provider manages its own domain (auth, theme, settings), making the app eas
 
 ### 🧭 **Summary**
 
-|Concept|Purpose|
-|---|---|
-|**Context Provider**|Supplies shared state or actions to descendant components|
-|**`useContext()`**|Retrieves the nearest context value|
-|**Custom Hook**|Wraps `useContext` for clean, consistent, and safe usage|
-|**Result**|Cleaner code, better modularity, easier testing, and no prop drilling|
+| Concept              | Purpose                                                               |
+| -------------------- | --------------------------------------------------------------------- |
+| **Context Provider** | Supplies shared state or actions to descendant components             |
+| **`useContext()`**   | Retrieves the nearest context value                                   |
+| **Custom Hook**      | Wraps `useContext` for clean, consistent, and safe usage              |
+| **Result**           | Cleaner code, better modularity, easier testing, and no prop drilling |
+
+</br>
+
+----
+
+</br>
+
+## Tip 1:
+- You should always use separate contexts for each piece of state so that only the components that actually consume that state will re-render.

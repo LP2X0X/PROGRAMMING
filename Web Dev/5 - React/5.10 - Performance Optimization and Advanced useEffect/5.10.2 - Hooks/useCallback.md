@@ -7,8 +7,7 @@ tags:
 
 ## ⚙️ 1. What `useCallback` Really Does
 
-At its core,  
-👉 **`useCallback(fn, deps)` is just a shorthand for `useMemo(() => fn, deps)`**
+At its core, 👉 **`useCallback(fn, deps)` is just a shorthand for `useMemo(() => fn, deps)`**
 
 So instead of memoizing a **computed value**, you’re memoizing a **function reference**.
 

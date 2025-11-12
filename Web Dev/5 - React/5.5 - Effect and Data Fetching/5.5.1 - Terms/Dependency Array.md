@@ -29,6 +29,12 @@ useEffect(() => {
 
 ---
 
+# ☝️ The rules
+
+![[Pasted image 20251111191133.png|center|700]]
+
+---
+
 # 📦 Common Cases
 
 ### 1. **No dependency array**
@@ -118,7 +124,39 @@ useEffect(() => {
 - Use `[]` only when you are **sure** the effect must run only once (e.g., fetch on mount).
     
 
+![[Pasted image 20251111192624.png|center|700]]
+
+```ad-note
+The reason for the third case is that when the dependency state changes, the component re-renders once. After that, the `useEffect` runs, triggering another change to the dependent state — which causes the component to re-render a second time.
+```
+
+````ad-note
+```js
+  useEffect(
+    function () {
+      function playSound() {
+        if (!allowSound) return;
+        const sound = new Audio(clickSound);
+        sound.play();
+      }
+
+      playSound();
+    },
+    [duration, allowSound]
+  );
+```
+The dependency array in `useEffect` can include values that aren’t directly used inside the effect’s code. 
+This is sometimes necessary for **business logic consistency** — for example, when you want the effect to re-run in response to certain state changes (like `duration` or `allowSound`), even if the effect’s function doesn’t explicitly use them. It ensures the effect stays in sync with the intended behavior of the app.
+````
+
 ---
+
+# Removing unnecessary dependencies
+
+![[Pasted image 20251111192201.png|center|700]]
+
+---
+
 
 ⚡ In short:  
 The dependency array is **how you tell React when an effect or memoized value should update**. Think of it as a "watch list" — React keeps track of the variables, and re-runs the effect if they change.

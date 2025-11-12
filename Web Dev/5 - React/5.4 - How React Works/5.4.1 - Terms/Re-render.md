@@ -21,3 +21,7 @@ A key detail is that whenever React renders a component, it will also render all
 ![[Pasted image 20250811194523.png|center|500]]
 
 - Since the virtual DOM is just a set of lightweight JavaScript objects, recreating it is generally not a problem for small to medium applications.
+
+---
+
+![[Pasted image 20251110190121.png|center|700]]

@@ -8,7 +8,7 @@ tags:
 
 - A [closure](https://en.wikipedia.org/wiki/Closure_\(computer_programming\)) is a **function that “remembers” the variables** from its **[[Lexical Environment|lexical scope]]**, even **after the outer function has finished execution**. In some languages, that’s not possible, or a function should be written in a special way to make it happen. But as explained above, in JavaScript, all functions are naturally closures.
 
-- That is: they automatically remember where they were created using a hidden `[[Environment]]` property, and then their code can access outer variables.
+- That is: they automatically remember where they were created using a hidden `[[Environment]]` property, and then their code can access outer variables at the time they were created.
   
 
 ---
