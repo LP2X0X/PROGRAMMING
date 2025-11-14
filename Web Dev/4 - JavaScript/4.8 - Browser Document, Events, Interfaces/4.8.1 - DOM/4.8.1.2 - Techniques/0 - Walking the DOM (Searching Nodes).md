@@ -180,7 +180,7 @@ For navigating to siblings and parent in the DOM, there are built-in properties:
 
 ## Element-only Navigation in the DOM
 
-When navigating the DOM, sometimes we only care about **element nodes**—the tags—not text nodes, whitespace, or comments. The DOM provides special properties for that.
+When navigating the DOM, sometimes we only care about **[[Element Node|element nodes]]**—the tags—not text nodes, whitespace, or comments. The DOM provides special properties for that.
 
 ![[Pasted image 20250918144430.png|center|400]]
 
@@ -247,3 +247,14 @@ When navigating the DOM, sometimes we only care about **element nodes**—the ta
 - `someElem.nextElementSibling` / `someElem.previousElementSibling`  
     Moves between siblings that are **elements only**. Non-element siblings are skipped.
     
+
+---
+
+### Summary
+
+Given a DOM node, we can go to its immediate neighbors using navigation properties.
+
+There are two main sets of them:
+
+- For all nodes: `parentNode`, `childNodes`, `firstChild`, `lastChild`, `previousSibling`, `nextSibling`.
+- For element nodes only: `parentElement`, `children`, `firstElementChild`, `lastElementChild`, `previousElementSibling`, `nextElementSibling`.

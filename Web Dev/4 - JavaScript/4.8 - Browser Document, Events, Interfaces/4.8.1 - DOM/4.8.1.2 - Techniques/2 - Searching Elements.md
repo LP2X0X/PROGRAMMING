@@ -5,6 +5,12 @@ tags:
  - fundamental
 ---
 
+DOM navigation properties are great when elements are close to each other. What if they are not? How to get an arbitrary element of the page?
+
+There are additional searching methods for that.
+
+---
+
 ## Searching Elements: Methods & Tools
 
 These are the main ways to find elements in the DOM.
