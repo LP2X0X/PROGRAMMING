@@ -8,7 +8,9 @@ tags:
 ### 🔹 **Definition**  
 **Inheritance** in CSS is the mechanism where certain property values are **passed down** from a parent element to its child elements.
 
-- **Inheritable properties**: Mostly text-related (e.g., `color`, `font-family`, `line-height`).
+- **Inheritable properties**: Mostly text-related (e.g., `color`, `font`, `font-family`, `font-size`, `font-weight`, `font-variant`, `font-style`, `line-height`, `letter-spacing`, `text-align`, `text-indent`, `text-transform`, `white-space`, and `word-spacing`).
+	  - A few others inherit as well, such as the list properties: `list-style`, `list-styletype`, `list-style-position`, and `list-style-image`. 
+	  - The table border properties `border-collapse` and `border-spacing` are also inherited; note that these control the border behavior of tables, not the more commonly used properties for specifying borders for non-table elements.
     
 - **Non-inheritable properties**: Layout and box-model-related (e.g., `margin`, `border`, `padding`, `width`, `height`). Properties with *browser default* value(?).
     

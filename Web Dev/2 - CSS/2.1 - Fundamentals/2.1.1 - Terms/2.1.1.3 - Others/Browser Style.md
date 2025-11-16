@@ -151,7 +151,3 @@ Developers often “reset” or “normalize” these styles to avoid surprises:
     
 - **Normalize.css** → keeps useful defaults but makes them consistent across browsers.
     
-
----
-
-👉 Do you want me to create a **modern minimal reset CSS** for you that neutralizes these quirks but keeps accessibility?

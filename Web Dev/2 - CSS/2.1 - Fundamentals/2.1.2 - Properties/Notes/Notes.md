@@ -1,4 +1,4 @@
-# Keywords Overview
+# Notes Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[auto]]
-- [[span]]
+- [[Initial Values of CSS Properties]]
 
 %% End Waypoint %%

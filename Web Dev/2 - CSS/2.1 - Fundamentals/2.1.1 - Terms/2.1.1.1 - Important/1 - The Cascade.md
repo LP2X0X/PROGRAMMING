@@ -23,23 +23,25 @@ When multiple CSS declarations could apply to the same element, the browser need
 
 - CSS can come from different sources:
     
-    - **User agent styles** (the browser’s default stylesheet). Example: `<p>` is `display: block` by default.
+    - **User agent styles** (the browser’s [[Browser Style|default stylesheet]]). Example: `<p>` is `display: block` by default.
         
     - **User styles** (custom styles a user might define in their browser settings, often for accessibility).
         
     - **Author styles** (the CSS written by the web developer, usually in your stylesheets).
         
-- Priority order:
+- Priority order, in decreasing order, is as follows::
     
-    - User `!important`
+    - Important user-agent
         
-    - Author `!important`
+    - Important user
         
-    - Author normal
+    - Important author
         
-    - User normal
+    - Normal author
         
-    - Browser default
+    - Normal user
+        
+    - Normal user-agent
         
 
 ---
@@ -88,7 +90,7 @@ When multiple CSS declarations could apply to the same element, the browser need
 
 ---
 
-### 4. **Selector Specificity**
+### 4. **Selector [[CSS Specificity|Specificity]]**
 
 - Not all selectors are equal—some are more “specific”:
     

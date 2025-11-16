@@ -1,6 +1,7 @@
 ---
 tags:
   - css
+  - keyword
   - value
   - fundamental
 ---

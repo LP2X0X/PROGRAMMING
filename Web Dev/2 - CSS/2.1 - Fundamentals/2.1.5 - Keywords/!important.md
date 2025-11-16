@@ -12,7 +12,7 @@ tags:
 <p id="my-text">Some text</p>
 ```
 
-```html
+```css
 p {
   color: red !important;
 }
