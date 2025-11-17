@@ -8,31 +8,19 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **2.1 - Fundamentals**
-	- **2.1.1 - Terms**
-		- **[[2.1.1.1 - Important]]**
-		- **[[2.1.1.2 - Advance]]**
-		- **[[CSS Rules]]**
-		- **[[Display-based Elements]]**
-		- [[Web Dev/2 - CSS/Terms/Terms]]
-	- **2.1.2 - Properties**
-		- [[Absolute Position Properties]]
-		- **[[Box Model Related]]**
-		- **[[List Related]]**
-		- **[[Media Related]]**
-			- [[object-fit]]
-		- [[overflow]]
-		- [[position]]
-		- [[Web Dev/2 - CSS/Properties/Properties]]
-		- **[[Text Related]]**
+	- **[[2.1.1 - Terms]]**
+	- **[[2.1.2 - Properties]]**
 	- **[[2.1.3 - Pseudo Classes]]**
 	- **2.1.4 - Pseudo Elements**
 		- [[after]]
 		- [[before]]
 		- **[[List]]**
 		- [[Pseudo Elements]]
+	- **[[2.1.5 - Keywords]]**
+	- **[[2.1.6 - At Rule]]**
+	- **[[2.1.7 - Units]]**
 	- [[Fundamentals]]
 	- **[[Pitfalls]]**
-	- **[[Values]]**
 - **[[2.2 - Layouts]]**
 - **[[2.3 - Functions]]**
 - **2.4 - Selectors**
@@ -51,11 +39,11 @@ type: folder_brief_live
 - **[[2.5 - Animations]]**
 	- **[[2.5.1 - CSS Transitions]]**
 - **[[Keywords]]**
-- **[[Web Dev/2 - CSS/Notes/Notes]]**
-- **[[Web Dev/2 - CSS/Properties/Properties]]**
+- **[[Notes]]**
+- **[[Properties]]**
 - **[[Questions]]**
 - **[[Responsive Design]]**
 - **[[Techniques]]**
-- **[[Web Dev/2 - CSS/Terms/Terms]]**
+- **[[Terms]]**
 
 %% End Waypoint %%

@@ -8,6 +8,10 @@ tags:
 
 ![[Pasted image 20250910200322.png|center|700]]
 
+```ad-note
+For the last point, you should use useEffect.
+```
+
 ## 1. What is `useRef`?
 
 - A React Hook:

@@ -84,6 +84,12 @@ function reducer(state, action) {
 ```
 ````
 
+```ad-tip
+Even if you think you're giving every property a new value when creating the next state in `useReducer`, you should still spread the old state first **because React expects the new state to keep all unchanged properties**, and if you forget one, it gets removed. Spreading the previous state (`{ ...state, ...updates }`) guarantees you don’t accidentally lose fields that you didn’t explicitly overwrite, especially as the state grows or changes over time.
+
+For example, if you add a new property to the state in the future and you didn’t spread the previous state in an earlier action handler, you would then have to manually include that new property in every existing action handler—otherwise it would be lost.
+```
+
 
 ---
 

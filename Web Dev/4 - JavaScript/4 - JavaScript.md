@@ -15,7 +15,7 @@ type: folder_brief_live
 - **4.5 - Classes**
 	- [[3.1.5 - Classes]]
 	- **[[4.5.1 - Core]]**
-	- **[[Inheritance]]**
+	- **[[Web Dev/4 - JavaScript/4.5 - Classes/Inheritance/Inheritance]]**
 	- **[[Notes]]**
 - **4.6 - Promises, Async and Await**
 	- [[3.1.6 - Promises, Async and Await]]

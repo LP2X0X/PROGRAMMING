@@ -57,6 +57,13 @@ function sayBye(user) {
 export {sayHi, sayBye}; // a list of exported variables
 ```
 
+- **Can export using destructuring**:
+    
+
+```js
+export const { createCustomer, updateName } = customerSlice.actions; // const is important here
+```
+
 ```ad-note
 No semicolons after export class/function
 
@@ -85,11 +92,14 @@ log("hello");
 
 - The imported name is **your choice**, not tied to the export name (since the exported entity may have no name).
     
+```js
+import whatever from './logger.js';
+```
+
 - You can also rename with `as`:
     
-
 ```js
-import myLogger from './logger.js';
+import {default as myLogger} from './logger.js';
 ```
 
 ---
