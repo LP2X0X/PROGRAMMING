@@ -9,7 +9,17 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **2.1 - Fundamentals**
 	- **[[2.1.1 - Terms]]**
-	- **[[2.1.2 - Properties]]**
+	- **2.1.2 - Properties**
+		- **[[2.1.2.1 - Shorthand Properties]]**
+		- [[Absolute Position Properties]]
+		- **[[Box Model Related]]**
+		- **[[List Related]]**
+		- **[[Media Related]]**
+			- [[object-fit]]
+		- **[[Notes]]**
+		- [[overflow]]
+		- [[position]]
+		- **[[Text Related]]**
 	- **[[2.1.3 - Pseudo Classes]]**
 	- **2.1.4 - Pseudo Elements**
 		- [[after]]
