@@ -25,15 +25,13 @@ type: folder_brief_live
 		- **[[5.5.3 - Notes]]**
 	- **5.6 - Custom Hooks, Refs, and More State**
 		- **[[5.6.1 - Terms]]**
-		- **[[5.6.2 - Notes]]**
+		- **[[5.6.2 - Hooks]]**
+		- **[[5.6.3 - Notes]]**
+		- **[[5.6.4 - Questions]]**
 	- **[[5.7 - The Advanced useReducer Hook]]**
 	- **5.8 - React Router and CSS Modules**
-		- **[[5.8.1 - Terms]]**
-		- **[[5.8.2 - Components]]**
-		- **[[5.8.3 - Techniques]]**
-		- **[[5.8.4 - Notes]]**
-		- **[[5.8.5 - Questions]]**
-		- [[React Router Overview]]
+		- **[[5.8.1 - CSS Modules]]**
+		- **[[5.8.2 - React Router]]**
 	- **[[5.9 - The Context API]]**
 	- **[[5.10 - Performance Optimization and Advanced useEffect]]**
 	- **[[5.11 - Redux]]**

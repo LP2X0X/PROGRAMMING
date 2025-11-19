@@ -7,6 +7,8 @@ tags:
 
 A **controlled component** in React is a form element (like `<input>`, `<textarea>`, or `<select>`) whose **value is controlled by React state** — not by the DOM.
 
+> This means that the value of the form element is set and updated through React state, making React the "single source of truth" for the form data.
+
 ---
 
 ## 🧠 Think of it like this:

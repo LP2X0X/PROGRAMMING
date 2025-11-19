@@ -12,6 +12,10 @@ React **hooks** are special functions that let you use **React features** (like 
 
 > Hooks were introduced in React 16.8 to avoid needing class components for advanced features.
 
+```ad-note
+Hooks must be used inside component function.
+```
+
 ---
 
 ## **📌 Basic Hooks**

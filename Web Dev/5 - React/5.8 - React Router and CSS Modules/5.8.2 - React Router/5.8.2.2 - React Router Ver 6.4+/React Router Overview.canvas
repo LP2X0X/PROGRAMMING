@@ -1,0 +1,79 @@
+{
+	"nodes":[
+		{"id":"44cf67c319facf82","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/createBrowserRouter.md","x":-380,"y":140,"width":420,"height":280},
+		{"id":"3b8ba4845e394fc6","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/Route Object.md","x":-430,"y":620,"width":520,"height":480},
+		{
+			"id":"dc27e773d00ec095",
+			"type":"text",
+			"text":"# A map from URL to Components",
+			"styleAttributes":{"textAlign":"center"},
+			"x":320,
+			"y":210,
+			"width":620,
+			"height":140
+		},
+		{"id":"672af5cf8e992bc0","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.1 - React Router Ver 6.4-/5.8.2.1.2 - Components/Link vs NavLink.md","x":-425,"y":-1320,"width":510,"height":1320},
+		{"id":"aaaff4b7d0c3852a","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.1 - React Router Ver 6.4-/5.8.2.1.2 - Components/Outlet.md","x":560,"y":710,"width":560,"height":300},
+		{"id":"bf64feb6b06f73e4","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/Loader.md","x":-1060,"y":715,"width":400,"height":290}
+	],
+	"edges":[
+		{
+			"id":"1c9457f953d797aa",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"44cf67c319facf82",
+			"fromSide":"bottom",
+			"toNode":"3b8ba4845e394fc6",
+			"toSide":"top",
+			"label":"contains"
+		},
+		{
+			"id":"af95db083fca9050",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"44cf67c319facf82",
+			"fromSide":"right",
+			"toNode":"dc27e773d00ec095",
+			"toSide":"left",
+			"label":"creates"
+		},
+		{
+			"id":"1f476292f0dd9f91",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"672af5cf8e992bc0",
+			"fromSide":"right",
+			"toNode":"dc27e773d00ec095",
+			"toSide":"top",
+			"label":"used to navigate"
+		},
+		{
+			"id":"3a9f594059e4e3f8",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"3b8ba4845e394fc6",
+			"fromSide":"right",
+			"toNode":"aaaff4b7d0c3852a",
+			"toSide":"left",
+			"label":"render children routes to"
+		},
+		{
+			"id":"e6d3c2f1992f24b7",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"3b8ba4845e394fc6",
+			"fromSide":"left",
+			"toNode":"bf64feb6b06f73e4",
+			"toSide":"right",
+			"label":"contains"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}
