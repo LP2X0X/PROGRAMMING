@@ -1,4 +1,4 @@
-# Instance Properties Overview
+# Function Properties Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Web Dev/4 - JavaScript/4.3 - Functions/Instance Properties/length]]
+- [[Custom Function Property]]
+- [[length]]
 - [[name]]
 - [[prototype]]
 
