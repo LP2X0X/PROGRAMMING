@@ -31,7 +31,7 @@ console.log(PI);          // 3.1415
 console.log(add(2, 3));   // 5
 ```
 
-- **Can rename on import**:
+- **Can rename on import using the as keyword**:
     
 
 ```js

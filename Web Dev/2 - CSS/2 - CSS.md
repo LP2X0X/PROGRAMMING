@@ -54,6 +54,6 @@ type: folder_brief_live
 - **[[Questions]]**
 - **[[Responsive Design]]**
 - **[[Techniques]]**
-- **[[Terms]]**
+- **[[Web Dev/2 - CSS/Terms/Terms]]**
 
 %% End Waypoint %%
