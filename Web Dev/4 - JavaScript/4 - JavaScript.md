@@ -35,13 +35,7 @@ type: folder_brief_live
 		- **[[4.8.1.3 - Node Properties]]**
 	- **[[4.8.2 - Events]]**
 		- **[[4.8.2.1 -  Terms]]**
-- **4.10 - Network Request**
-	- [[4.9 - Network Request]]
-	- **[[4.10.1 - Fetches]]**
-	- **[[4.10.2 - Requests]]**
-	- **[[4.10.3 - Responses]]**
-	- **[[4.10.4 - URL Object]]**
-	- **[[Notes]]**
+- **[[4.10 - Network Request]]**
 - **[[X - Techniques]]**
 
 %% End Waypoint %%

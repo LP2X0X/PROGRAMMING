@@ -1,0 +1,119 @@
+{
+	"nodes":[
+		{
+			"id":"92a47785d99af467",
+			"type":"text",
+			"text":"## Every object",
+			"styleAttributes":{"textAlign":"center"},
+			"x":230,
+			"y":-540,
+			"width":340,
+			"height":160
+		},
+		{"id":"976c2403d58019d7","type":"file","file":"Web Dev/4 - JavaScript/4.4 - Prototype/4.4.2 - Function.prototype (F.prototype).md","x":-1260,"y":230,"width":860,"height":560},
+		{"id":"82862fd29fe56541","type":"file","file":"Web Dev/4 - JavaScript/4.4 - Prototype/4.4.1 - __proto__.md","x":230,"y":60,"width":720,"height":900},
+		{"id":"c9b554cf75cea0a8","type":"file","file":"Web Dev/4 - JavaScript/4.4 - Prototype/4.4.4 - constructor.md","x":-1030,"y":1080,"width":400,"height":320},
+		{
+			"id":"02857a4b7b25d430",
+			"type":"text",
+			"text":"## We can access the constructor function of an object with",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-2200,
+			"y":1180,
+			"width":840,
+			"height":120
+		},
+		{"id":"99153d4c9d0bb05e","type":"file","file":"Web Dev/4 - JavaScript/4.4 - Prototype/4.4.3 - Object.prototype.md","x":1000,"y":-940,"width":400,"height":400},
+		{"id":"386c85a447c8e890","type":"file","file":"Web Dev/4 - JavaScript/4.4 - Prototype/4.4.8 - The Two Chains.md","x":-240,"y":1400,"width":1190,"height":1950}
+	],
+	"edges":[
+		{
+			"id":"00fcf01dc2ca6a7f",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"92a47785d99af467",
+			"fromSide":"bottom",
+			"toNode":"82862fd29fe56541",
+			"toSide":"top",
+			"label":"has"
+		},
+		{
+			"id":"02a3f727b40f2173",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"976c2403d58019d7",
+			"fromSide":"right",
+			"toNode":"82862fd29fe56541",
+			"toSide":"left",
+			"label":"asign"
+		},
+		{
+			"id":"71198c0a4740a8e3",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"82862fd29fe56541",
+			"fromSide":"left",
+			"toNode":"92a47785d99af467",
+			"toSide":"left",
+			"label":"for"
+		},
+		{
+			"id":"c30475cbaa2fcc22",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"976c2403d58019d7",
+			"fromSide":"bottom",
+			"toNode":"c9b554cf75cea0a8",
+			"toSide":"top",
+			"label":"default property"
+		},
+		{
+			"id":"e0e00ab7f98fb7f6",
+			"styleAttributes":{"arrow":"halved-triangle"},
+			"toFloating":false,
+			"fromNode":"02857a4b7b25d430",
+			"fromSide":"right",
+			"toNode":"c9b554cf75cea0a8",
+			"toSide":"left",
+			"toEnd":"none"
+		},
+		{
+			"id":"a1609b23d658199b",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"82862fd29fe56541",
+			"fromSide":"top",
+			"toNode":"99153d4c9d0bb05e",
+			"toSide":"bottom",
+			"label":"highest"
+		},
+		{
+			"id":"1c3affd45ec6ae06",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"976c2403d58019d7",
+			"fromSide":"right",
+			"toNode":"386c85a447c8e890",
+			"toSide":"left",
+			"label":"make up"
+		},
+		{
+			"id":"4c9ca0cb26e2ec1c",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"82862fd29fe56541",
+			"fromSide":"right",
+			"toNode":"386c85a447c8e890",
+			"toSide":"right",
+			"label":"make up"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}
