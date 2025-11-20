@@ -1,4 +1,4 @@
-# 6.3 - Functions Overview
+# 2 - Metacharacters Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Function Type Expressions]]
-- [[Rest Parameter]]
+- [[Dot]]
+- [[Start and End of the Line]]
 
 %% End Waypoint %%

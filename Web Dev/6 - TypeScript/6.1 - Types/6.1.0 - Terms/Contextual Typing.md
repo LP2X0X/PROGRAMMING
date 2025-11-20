@@ -6,7 +6,7 @@ tags:
 
 ## 🧩 1. What is contextual typing?
 
-> **Contextual typing** means TypeScript _infers_ the type of an expression **from its context** — such as the variable it’s assigned to, the function parameter it’s passed into, or the event handler it’s used as.
+> **Contextual typing** (or type inference) means TypeScript _infers_ the type of an expression **from its context** — such as the variable it’s assigned to, the function parameter it’s passed into, or the event handler it’s used as.
 
 In short:
 
@@ -74,6 +74,10 @@ With it, TypeScript keeps your code **cleaner and more ergonomic** — while sta
 |Return position|`function make(): number { return 5; }`|Return type|
 |Object literal|`{ onClick: e => console.log(e.clientX) }`|`e` inferred as MouseEvent|
 |JSX event handler|`<button onClick={e => e.preventDefault()} />`|`e` inferred as React.MouseEvent|
+
+```ad-note
+TypeScript can infer the type of a function parameter if it has a default value.
+```
 
 ---
 

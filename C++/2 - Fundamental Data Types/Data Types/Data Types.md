@@ -18,6 +18,6 @@ type: folder_brief_live
 - [[size_t]]
 - **[[Special Values]]**
 - [[unsigned integer]]
-- [[void]]
+- [[C++/2 - Fundamental Data Types/Data Types/void]]
 
 %% End Waypoint %%

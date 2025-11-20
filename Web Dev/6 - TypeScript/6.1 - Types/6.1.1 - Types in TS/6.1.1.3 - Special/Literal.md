@@ -19,6 +19,10 @@ In other words:
 It’s not much use to have a variable that can only have one value!
 But by _combining_ literals into unions, you can express a much more useful concept!
 
+```ad-note
+When a constant is initialized from a primitive type, TypeScript infers it to be a literal type of the specific value assigned. However, when a constant is initialized from a non-primitive type, TypeScript only infers it to be of the same type as assigned.
+```
+
 ---
 
 ### 🧩 Example

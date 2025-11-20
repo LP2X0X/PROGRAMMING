@@ -11,5 +11,6 @@ type: folder_brief_live
 - **[[6.1 - Types]]**
 - **[[6.2 - Narrowing]]**
 - **[[6.3 - Functions]]**
+- **[[6.4 - Operators]]**
 
 %% End Waypoint %%

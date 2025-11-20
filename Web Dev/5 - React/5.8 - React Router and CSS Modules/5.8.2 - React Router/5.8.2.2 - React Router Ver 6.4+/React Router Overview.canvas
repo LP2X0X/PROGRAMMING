@@ -13,8 +13,10 @@
 			"height":140
 		},
 		{"id":"672af5cf8e992bc0","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.1 - React Router Ver 6.4-/5.8.2.1.2 - Components/Link vs NavLink.md","x":-425,"y":-1320,"width":510,"height":1320},
-		{"id":"aaaff4b7d0c3852a","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.1 - React Router Ver 6.4-/5.8.2.1.2 - Components/Outlet.md","x":560,"y":710,"width":560,"height":300},
-		{"id":"bf64feb6b06f73e4","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/Loader.md","x":-1060,"y":715,"width":400,"height":290}
+		{"id":"aaaff4b7d0c3852a","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.1 - React Router Ver 6.4-/5.8.2.1.2 - Components/Outlet.md","x":880,"y":710,"width":560,"height":300},
+		{"id":"1202feb0768d5ed3","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.4 - Techniques/Error Handling.md","x":-2050,"y":630,"width":500,"height":460},
+		{"id":"003df902a57884aa","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.2 - Hooks and Components/useLoaderData.md","x":856,"y":1720,"width":609,"height":562},
+		{"id":"bf64feb6b06f73e4","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/Loader.md","x":-370,"y":1856,"width":400,"height":290}
 	],
 	"edges":[
 		{
@@ -66,11 +68,14 @@
 			"toFloating":false,
 			"fromFloating":false,
 			"fromNode":"3b8ba4845e394fc6",
-			"fromSide":"left",
+			"fromSide":"bottom",
 			"toNode":"bf64feb6b06f73e4",
-			"toSide":"right",
+			"toSide":"top",
 			"label":"contains"
-		}
+		},
+		{"id":"31a1e8f8fb252c8e","fromNode":"aaaff4b7d0c3852a","fromSide":"bottom","toNode":"003df902a57884aa","toSide":"top","label":"use"},
+		{"id":"d0cd5f34ec04d648","fromNode":"003df902a57884aa","fromSide":"left","toNode":"bf64feb6b06f73e4","toSide":"right","label":"to access data created by"},
+		{"id":"89a9481e2a3041c7","fromNode":"3b8ba4845e394fc6","fromSide":"left","toNode":"1202feb0768d5ed3","toSide":"right","label":"when error happen, render"}
 	],
 	"metadata":{
 		"version":"1.0-1.0",
