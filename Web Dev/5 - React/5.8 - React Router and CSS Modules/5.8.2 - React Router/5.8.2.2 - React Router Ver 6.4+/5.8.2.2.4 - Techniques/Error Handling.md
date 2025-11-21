@@ -22,7 +22,7 @@ React Router 6.4+ introduces **built-in error handling** for:
 Everything is handled via an **`errorElement`**.
 
 ```ad-note
-Error happens in child route will bubble up to parent route.
+Error happens in child route will bubble up to parent route unless it is handled in the route itself.
 ```
 
 ---

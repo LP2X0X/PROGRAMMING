@@ -10,7 +10,8 @@ type: folder_brief_live
 - **[[Object Property]]**
 - [[Object.assign()]]
 - [[Object.create()]]
-- [[Object.getPrototypeOf(obj)]]
+- [[Object.fromEntries()]]
+- [[Object.getPrototypeOf()]]
 - [[Object.keys() - Object.values() - Object.entries()]]
 - [[Object.setPrototypeOf()]]
 

@@ -11,7 +11,7 @@ Not to be confused with [[Programmatic Navigation|useNavigate]].
 
 `useNavigation()` is a React Router hook that lets you **detect and track ongoing navigations**, especially during **loader/actions** in data-router apps.
 
-It is basically **React Router’s built-in "global loading state"**.
+It is basically **React Router’s built-in "global loading state"**, or in other words, it is universal for the entire application.
 
 ---
 
