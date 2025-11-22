@@ -46,6 +46,7 @@ Hidden inputs are perfect when you want to send:
 
 #### **Component**
 
+- Refer to [[POST Request Pitfalls#**2. Not Stringifying the Body**|this]] for why we need to stringify state variable.
 ```jsx
 import { Form } from "react-router-dom";
 
@@ -55,7 +56,7 @@ export default function DeleteUser({ userId }) {
   const [package, setPackage] = useState();
   return (
     <Form method="post">
-      <input type="hidden" name="intent" value={package} />
+      <input type="hidden" name="package" value={JSON.stringify(package)} />
       <button type="submit">Do something</button>
     </Form>
   );

@@ -1,6 +1,5 @@
 {
 	"nodes":[
-		{"id":"44cf67c319facf82","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/createBrowserRouter.md","x":-380,"y":140,"width":420,"height":280},
 		{"id":"3b8ba4845e394fc6","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/Route Object.md","x":-430,"y":620,"width":520,"height":500},
 		{
 			"id":"dc27e773d00ec095",
@@ -18,9 +17,11 @@
 		{"id":"3d3713d22fb650f2","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.2 - Hooks and Components/useRouteError.md","x":2330,"y":960,"width":400,"height":500},
 		{"id":"1202feb0768d5ed3","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.4 - Techniques/Error Handling.md","x":2280,"y":0,"width":500,"height":550},
 		{"id":"aaaff4b7d0c3852a","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.1 - React Router Ver 6.4-/5.8.2.1.2 - Components/Outlet.md","x":881,"y":720,"width":560,"height":300},
-		{"id":"d339e77541639378","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.2 - Hooks and Components/Form.md","x":-1880,"y":710,"width":630,"height":330},
-		{"id":"d586010f05a0277e","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/action.md","x":-1765,"y":1520,"width":400,"height":400},
-		{"id":"4d83fec638734901","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.5 - Notes/Submit form without React Router.md","x":-3000,"y":611,"width":680,"height":527}
+		{"id":"d586010f05a0277e","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/action.md","x":-1760,"y":670,"width":400,"height":390},
+		{"id":"d339e77541639378","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.2 - Hooks and Components/Form.md","x":-1875,"y":-140,"width":630,"height":330},
+		{"id":"4d83fec638734901","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.5 - Notes/Submit form without React Router.md","x":-3020,"y":-220,"width":680,"height":499},
+		{"id":"8860043642eb5431","x":-3020,"y":635,"width":680,"height":460,"type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.2 - Hooks and Components/useActionData.md"},
+		{"id":"44cf67c319facf82","type":"file","file":"Web Dev/5 - React/5.8 - React Router and CSS Modules/5.8.2 - React Router/5.8.2.2 - React Router Ver 6.4+/5.8.2.2.3 - Functions and Objects/createBrowserRouter.md","x":-380,"y":150,"width":420,"height":260}
 	],
 	"edges":[
 		{
@@ -64,7 +65,7 @@
 			"fromSide":"right",
 			"toNode":"aaaff4b7d0c3852a",
 			"toSide":"left",
-			"label":"render children routes to"
+			"label":"specify render children routes to"
 		},
 		{
 			"id":"e6d3c2f1992f24b7",
@@ -89,16 +90,6 @@
 			"toNode":"3d3713d22fb650f2",
 			"toSide":"top",
 			"label":"get error data with"
-		},
-		{
-			"id":"d5a496a2546cf48f",
-			"styleAttributes":{},
-			"toFloating":false,
-			"fromFloating":false,
-			"fromNode":"3b8ba4845e394fc6",
-			"fromSide":"left",
-			"toNode":"d339e77541639378",
-			"toSide":"right"
 		},
 		{
 			"id":"db13495fe3959742",
@@ -132,7 +123,8 @@
 			"toNode":"4d83fec638734901",
 			"toSide":"right",
 			"label":"history"
-		}
+		},
+		{"id":"6720ffa10f1982d4","fromNode":"d586010f05a0277e","fromSide":"left","toNode":"8860043642eb5431","toSide":"right","label":"get return object with"}
 	],
 	"metadata":{
 		"version":"1.0-1.0",

@@ -19,6 +19,10 @@ It runs **on the server or client**, depending on how your app is deployed, when
 
 ## **2. Where to define it**
 
+```ad-tip
+You should define it inside the component file which the route render then pass to the action property of the route object.
+```
+
 ```javascript
 import { createBrowserRouter } from "react-router-dom";
 import MyFormPage from "./MyFormPage";
@@ -34,8 +38,6 @@ const router = createBrowserRouter([
 ]);
 ```
 
-- `action` is defined in the **route object**, not in the component itself.
-    
 - Can be **async** to handle API calls or server processing.
     
 
@@ -104,6 +106,10 @@ export async function action({ request }) {
     - Data (`return { success: true }`) that can be used in `useActionData()` hook.
         
 
+```ad-note
+You could return an object represent error and the form component can access and handle that error through [[useActionData]] hook.
+```
+
 ---
 
 ## **5. Related hooks**
@@ -146,9 +152,3 @@ export async function action({ request }) {
     
 - Use it with `<Form>` or `useSubmit()` to do server-like handling declaratively.
     
-
----
-
-If you want, I can make a **diagram showing the flow of a form submission → action → redirect/data** in React Router. That makes it super visual.
-
-Do you want me to do that?
