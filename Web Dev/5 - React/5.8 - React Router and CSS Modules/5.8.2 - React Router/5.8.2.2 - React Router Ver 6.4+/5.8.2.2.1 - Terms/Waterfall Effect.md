@@ -1,6 +1,8 @@
 ---
 tags: 
- - web dev
+ - react
+ - router
+ - term
 ---
 
 ![[bad.png|center|700]]

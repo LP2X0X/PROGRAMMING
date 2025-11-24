@@ -1,4 +1,4 @@
-# Pseudo Classes Overview
+# X - Styling Options Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,9 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[active]]
-- [[link]]
-- [[root]]
-- [[visited]]
+- **[[X.1 - Tailwind]]**
 
 %% End Waypoint %%

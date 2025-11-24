@@ -9,17 +9,15 @@ The \<img> element in HTML is used to **embed images** into a webpage. It is an 
 
 ---
 
-**📌 Basic Syntax:**
+## **📌 Basic Syntax:**
 
 ```html
 <img src="image.jpg" alt="Description of image">
 ```
 
-  
-
 ---
 
-**🔑 Important Attributes:**
+## **🔑 Important Attributes:**
 
 |**Attribute**|**Description**|
 |---|---|
@@ -31,24 +29,27 @@ The \<img> element in HTML is used to **embed images** into a webpage. It is an 
 |loading|Controls loading behavior. Values: lazy, eager. Lazy loading helps with performance.|
 |srcset and sizes|Used for **responsive images**, allowing the browser to pick the best image source for different screen sizes or resolutions.|
 
-  
-
 ---
 
-**✅ Example:**
+## **✅ Example:**
 
 ```html
 <img src="cat.jpg" alt="A cute cat" width="300" height="200" loading="lazy">
 ```
 
-  
-
 ---
 
-**💡 Tips:**
+## **💡 Tips:**
 
 • Always use the alt attribute for **accessibility and SEO**.
 
 • Use loading="lazy" to improve **page load performance**.
 
 • Use srcset for **high-DPI displays or responsive design**.
+
+---
+
+## **Related CSS Properties**
+
+- [[object-fit]]
+- [[object-position]]

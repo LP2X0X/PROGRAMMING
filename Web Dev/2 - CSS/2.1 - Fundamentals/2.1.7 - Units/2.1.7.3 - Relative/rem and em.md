@@ -159,10 +159,10 @@ p {
 
 ---
 
-**Tip:**
-
+```ad-tip
 - Use `rem` for **global layout and typography**, and `em` for **local/component-based adjustments**.
     
 - Use rems for font sizes, pixels for borders, and ems or rems for most other measures, especially paddings, margins, and border radius.
 	- This way, font sizes are predictable, but you’ll still get the power of ems scaling your padding and margins should other factors alter the font size of an element.
 	- Pixels make sense for borders, particularly when you want a nice fine line.
+```

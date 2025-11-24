@@ -15,6 +15,8 @@ The `box-sizing` property controls **how the size of an element is calculated**:
 box-sizing: content-box | border-box;
 ```
 
+![[Pasted image 20251123212427.png|center|500]]
+
 ---
 
 ## 🧱 Values

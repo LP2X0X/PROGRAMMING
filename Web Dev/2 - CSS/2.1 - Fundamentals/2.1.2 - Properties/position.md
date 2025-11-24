@@ -27,7 +27,7 @@ The element is positioned relative to its closest positioned ancestor (if any) o
 
 ### ❓How it affect the flow?
 
-Normally, elements are laid out one after another, block by block or inline by inline. This is called the **[[Normal Flow]].
+Normally, elements are laid out one after another, block by block or inline by inline. This is called the **[[Normal Document Flow]].
 
 When an element is **taken out of flow**, it no longer affects the positioning of other elements around it (siblings behave as if it isn’t there).
 

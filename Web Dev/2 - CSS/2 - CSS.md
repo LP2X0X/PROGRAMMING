@@ -9,17 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **2.1 - Fundamentals**
 	- **[[2.1.1 - Terms]]**
-	- **2.1.2 - Properties**
-		- **[[2.1.2.1 - Shorthand Properties]]**
-		- [[Absolute Position Properties]]
-		- **[[Box Model Related]]**
-		- **[[List Related]]**
-		- **[[Media Related]]**
-			- [[object-fit]]
-		- **[[Notes]]**
-		- [[overflow]]
-		- [[position]]
-		- **[[Text Related]]**
+	- **[[2.1.2 - Properties]]**
 	- **[[2.1.3 - Pseudo Classes]]**
 	- **2.1.4 - Pseudo Elements**
 		- [[after]]
@@ -48,12 +38,11 @@ type: folder_brief_live
 	- [[Selectors]]
 - **[[2.5 - Animations]]**
 	- **[[2.5.1 - CSS Transitions]]**
-- **[[Keywords]]**
 - **[[Notes]]**
 - **[[Properties]]**
 - **[[Questions]]**
 - **[[Responsive Design]]**
 - **[[Techniques]]**
-- **[[Web Dev/2 - CSS/Terms/Terms]]**
+- **[[X - Styling Options]]**
 
 %% End Waypoint %%

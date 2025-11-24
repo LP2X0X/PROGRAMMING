@@ -61,6 +61,13 @@ type ActionFunction = (args: {
 - **`params`**: Route params, e.g., `/users/:id` → `{ id: "123" }`.
     
 
+````ad-note
+You must return something from the action function or you will encounter this error:
+```ad-error
+You defined an action for route "routes/" but didn't return anything from your action function. Please return a value or null.
+```
+````
+
 ---
 
 ## **4. Example usage**

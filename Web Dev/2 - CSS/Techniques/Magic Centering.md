@@ -7,6 +7,8 @@ tags:
 
 ### Horizontal Centering
 
+By setting a left and right margin of [[auto]], the margins will automatically expand as much as necessary to fill the remaining width available in the outer container.
+
 ```css
 .block {
   width: 200px;

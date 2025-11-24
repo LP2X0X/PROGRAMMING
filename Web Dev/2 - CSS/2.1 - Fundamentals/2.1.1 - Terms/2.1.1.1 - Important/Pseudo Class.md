@@ -1,9 +1,9 @@
 ---
-tags: 
- - css
- - pseudo 
- - class
- - note
+tags:
+  - css
+  - pseudo
+  - class
+  - term
 ---
 
 ### 1. What is a pseudo-class?

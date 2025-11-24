@@ -28,8 +28,6 @@ Apply it like this:
 <img src="image.jpg" style="width: 300px; height: 200px; object-fit: cover;">
 ```
 
-  
-
 ---
 
 **🔑 Values:**
@@ -42,8 +40,6 @@ Apply it like this:
 |none|No resizing — image keeps original size.|
 |scale-down|The image is either none or contain, whichever is smaller.|
 
-  
-
 ---
 
 **✅ Example:**
@@ -52,8 +48,6 @@ Apply it like this:
 <img src="cat.jpg" style="width: 300px; height: 200px; object-fit: contain;">
 <img src="dog.jpg" style="width: 300px; height: 200px; object-fit: cover;">
 ```
-
-  
 
 ---
 
