@@ -5,7 +5,7 @@ tags:
   - feature
 ---
 
-- When a `Date` object is converted to number, it becomes the timestamp same as [[Access Components#^11faa2|date.getTime()]]:
+- When a `Date` object is converted to number, it becomes the timestamp same as [[Get Components#^11faa2|date.getTime()]]:
 	```js
 	let date = new Date();
 	alert(+date); // the number of milliseconds, same as date.getTime()

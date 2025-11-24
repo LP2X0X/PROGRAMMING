@@ -17,6 +17,10 @@ tags:
 - It can show the time in **local time zone** or **UTC**.
     
 
+```ad-note
+`Date` object uses a zero-based index for months.
+```
+
 ---
 
 ## 2. Creating dates

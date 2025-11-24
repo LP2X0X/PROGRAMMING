@@ -1,9 +1,9 @@
 ---
 tags:
   - css
-  - term
   - layout
   - fundamental
+  - type
 ---
 
 ## **🧱 What is Flexbox?**

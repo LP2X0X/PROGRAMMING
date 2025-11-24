@@ -1,4 +1,4 @@
-# Get and Set Stuff Overview
+# Get and Set Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Access Components]]
+- [[Get Components]]
 - [[Set Components]]
 
 %% End Waypoint %%

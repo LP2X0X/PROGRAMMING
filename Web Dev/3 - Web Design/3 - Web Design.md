@@ -7,11 +7,11 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **Ingredients**
-	- [[Colors Rules]]
-	- [[Typography Rules]]
-- **[[Web Dev/3 - Web Design/Notes/Notes]]**
-- [[Web Design vs Web Development]]
+- **[[3.1 - Ingredients]]**
+	- [[3.1.1 - Typography Rules]]
+	- [[3.1.2 - Colors Rules]]
+	- [[3.1.3 - Images and Illustrations]]
+- **[[Notes]]**
 - **[[Website Personalities]]**
 
 %% End Waypoint %%

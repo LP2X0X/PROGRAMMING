@@ -1,4 +1,4 @@
-# Notes Overview
+# Static Methods Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[serif vs sans-serif]]
-- [[Web Design vs Web Development]]
+- [[now]]
 
 %% End Waypoint %%
