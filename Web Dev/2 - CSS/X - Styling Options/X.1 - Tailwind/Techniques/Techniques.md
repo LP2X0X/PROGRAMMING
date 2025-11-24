@@ -1,4 +1,4 @@
-# Notes Overview
+# Techniques Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Pseudo Classes as condition]]
+- [[Devide]]
 
 %% End Waypoint %%

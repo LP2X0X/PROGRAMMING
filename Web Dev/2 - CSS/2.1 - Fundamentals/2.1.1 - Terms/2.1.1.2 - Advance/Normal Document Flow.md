@@ -11,6 +11,36 @@ tags:
 
 It defines how **block-level** and **inline-level** elements are arranged inside their containers.
 
+```ad-note
+The important thing to note is that height and width are fundamentally different. Normal document flow is designed to work with a constrained width and an unlimited height. Contents fill the width of their container and then line wrap as necessary.
+
+This means that the width of a parent element determines the width of its children, but for height, the opposite is true: the heights of child elements determine the height of the parent. As a result, we use different approaches for manipulating each.
+
+### **Width works top-down**
+
+- A container decides how wide it is
+    
+- Its children **fit inside that width**
+    
+- If text is too long, it wraps to the next line
+    
+
+**So: parent → controls child width**
+
+---
+
+### **Height works bottom-up**
+
+- A container does **not** decide its own height
+    
+- Its children stack and grow downward
+    
+- The parent becomes as tall as the children need
+    
+
+**So: child → controls parent height**
+```
+
 ---
 
 ## 1. 🔹 How Elements Flow by Default

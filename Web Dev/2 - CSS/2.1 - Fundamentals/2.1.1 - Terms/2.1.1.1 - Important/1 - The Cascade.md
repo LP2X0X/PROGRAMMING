@@ -23,7 +23,7 @@ When multiple CSS declarations could apply to the same element, the browser need
 
 - CSS can come from different sources:
     
-    - **User agent styles** (the browser’s [[Browser Style|default stylesheet]]). Example: `<p>` is `display: block` by default.
+    - **User agent styles** (the browser’s [[Browser (User Agent) Style|default stylesheet]]). Example: `<p>` is `display: block` by default.
         
     - **User styles** (custom styles a user might define in their browser settings, often for accessibility).
         

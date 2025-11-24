@@ -18,6 +18,10 @@ tags:
 - Works in all four directions: `top`, `right`, `bottom`, `left`.
     
 
+```ad-warning
+This property has default [[Browser Style]].
+```
+
 ---
 
 ## 2. 🔹 Syntax and Shorthand
