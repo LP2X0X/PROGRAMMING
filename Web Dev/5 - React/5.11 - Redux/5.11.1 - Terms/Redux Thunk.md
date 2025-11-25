@@ -72,7 +72,7 @@ dispatch(function (dispatch, getState) {
 });
 ```
 
-This function is called a **thunk**.
+The callback function is called a **thunk**.
 
 ### Why?
 

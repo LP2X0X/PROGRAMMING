@@ -6,7 +6,7 @@ tags:
 ---
 
 - An **element** is a complete structure consisting of an opening tag, content, and a closing tag. You use element to enclose, or wrap, different parts of the content to make it appear or act in a certain way.
-![[Pasted image 20250804200322.png|500|center]]
+![[Pasted image 20250804200322.png|center|700]]
 
 ---
 

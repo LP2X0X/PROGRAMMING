@@ -179,3 +179,5 @@ dispatch(fetchUserById(123));
     
 - Supports `thunkAPI` for `dispatch`, `getState`, and `rejectWithValue`
     
+
+**`createAsyncThunk()` simplifies async logic by automatically creating `pending`, `fulfilled`, and `rejected` actions for you. You write the async function once, and Redux Toolkit handles dispatching lifecycle actions, error handling, and integration with `extraReducers`. This replaces manual thunks and eliminates boilerplate while giving predictable async flow.**
