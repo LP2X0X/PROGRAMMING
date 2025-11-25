@@ -1,7 +1,7 @@
 ---
 tags:
   - html
-  - note
+  - term
   - summary
 ---
 
@@ -10,6 +10,8 @@ tags:
 **Semantic HTML** is the use of HTML markup to reinforce the semantics (meaning) of the information in web pages and web applications.
 
 Rather than focusing purely on how elements look, semantic HTML emphasizes what those elements _mean_ within the structure of the document.
+
+![[AD_4nXdjeTOFnYxw9GmPtt3B8fWE-p98Jx7NbxRxZ4YG-b-nPyygErQp9LB35dMk89JKHUKicou0KE63RHwHJKZxA_8t5sVoRipcEeh_Mf72sB4NU7UMAvSvlZrLTuH16twuYBmEdPjWsw.webp|center|500]]
 
 ---
 
