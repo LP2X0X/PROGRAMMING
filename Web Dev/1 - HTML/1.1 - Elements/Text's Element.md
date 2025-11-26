@@ -1,6 +1,6 @@
 ---
 tags:
-  - css
+  - html
   - term
   - fundamental
 ---
