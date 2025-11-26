@@ -10,6 +10,7 @@ type: folder_brief_live
 - **[[1.0 - Terms]]**
 - **[[1.1 - Elements]]**
 - **1.2 - Attributes**
+	- **[[1.2.1 - Important]]**
 	- [[Attribute Overview]]
 	- [[Attributes]]
 	- [[Custom Attribute]]

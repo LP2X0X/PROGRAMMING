@@ -31,12 +31,12 @@ In HTML, an **attribute** provides **additional information** about an element. 
 
 ### **✅ Attribute Types**
 
-|**Type**|**Example**|**Notes**|
-|---|---|---|
-|**Standard**|href="...", src="...", class="..."|Most attributes are standard|
-|**Boolean**|disabled, checked, readonly|Value is optional (e.g. <input disabled>)|
-|**Global**|id, class, style, title|Can be used on **any** HTML element|
-|**Event**|onclick, onmouseover, onchange|Used to bind JavaScript events|
+| **Type**     | **Example**                            | **Notes**                                  |
+| ------------ | -------------------------------------- | ------------------------------------------ |
+| **Standard** | href="...", src="...", class="..."     | Most attributes are standard               |
+| **Boolean**  | disabled, checked, readonly, draggable | Value is optional (e.g. \<input disabled>) |
+| **Global**   | id, class, style, title                | Can be used on **any** HTML element        |
+| **Event**    | onClick, onMouseOver, onChange         | Used to bind JavaScript events             |
 
 ---
 
