@@ -166,3 +166,8 @@ p {
 	- This way, font sizes are predictable, but you’ll still get the power of ems scaling your padding and margins should other factors alter the font size of an element.
 	- Pixels make sense for borders, particularly when you want a nice fine line.
 ```
+
+---
+
+### References
+https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/

@@ -9,6 +9,8 @@ tags:
 
 Even though classic Redux is rarely used today, you may still want to understand the fundamentals. Below is the complete flow using **actions → reducer → store → provider → useSelector/useDispatch**.
 
+![[Pasted image 20251114195956.png|center|700]]
+
 ---
 
 ## **0️⃣ Installation**

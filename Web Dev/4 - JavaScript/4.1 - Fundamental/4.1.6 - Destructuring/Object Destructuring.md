@@ -35,7 +35,7 @@ let {height, width, title} = { title: "Menu", height: 200, width: 100 }
 
 ---
 
-#### Custom name
+### Custom name
 
 - If we want to assign a property to a variable with another name, for instance, make `options.width` go into the variable named `w`, then we can set the variable name using a colon:
 	```js
@@ -60,7 +60,7 @@ let {height, width, title} = { title: "Menu", height: 200, width: 100 }
 
 ---
 
-#### Default value
+### Default value
 
 - For potentially missing properties we can set default values using `"="`, like this:
 	```js

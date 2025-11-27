@@ -7,6 +7,64 @@ tags:
 
 ![[Pasted image 20251116095724.png|center|700]]
 
+A _side effect_ is **anything that happens outside the pure reducer**, such as:
+
+- fetching data from a server
+    
+- updating localStorage
+    
+- logging
+    
+- timing (setTimeout)
+    
+- reading current state before deciding
+    
+- dispatching multiple actions over time
+    
+
+Reducers must stay pure:
+
+```
+(state, action) → newState  // no async, no fetch, no mutation
+```
+
+So you need **middleware** to handle side effects.
+
+---
+
+# 🎯 Redux Thunk’s job
+
+> **Let you run side effects, then dispatch actions afterward.**
+
+Example side effect: _fetch from API_
+
+```js
+export const loadPosts = () => async (dispatch) => {
+  dispatch(postsLoading());
+  
+  const res = await fetch('/posts');
+  const data = await res.json();
+
+  dispatch(postsLoaded(data));
+};
+```
+
+Everything inside the thunk is a **side effect**:
+
+- network request
+    
+- async/await
+    
+- dispatching multiple actions
+    
+- maybe reading state
+    
+
+
+> **Redux Thunk is for side effects (especially async ones like fetching).**
+
+---
+
 # ⭐ 1. What Problem Redux Thunk Solves
 
 Redux reducers must be:
@@ -229,6 +287,38 @@ We pass `dispatch` into a thunk because the dispatch that handled the original a
 3. That function receives `(dispatch, getState)` (The same outer dispatch function)
     
 4. Inside the thunk, you can perform the async work and then dispatch the appropriate actions only after that work has completed
+
+---
+
+> **Redux dispatch expects a plain object action. But when you dispatch a function (a thunk), the thunk middleware intercepts it and calls that function, passing in `dispatch` and `getState`. The thunk then performs its async logic and manually calls `dispatch` again when it’s ready.**
+
+This clarifies a few important points:
+
+1. Redux itself cannot handle async
+
+Only middleware can understand things that aren’t plain objects.
+
+2. When you dispatch a thunk, Redux never actually sees it
+
+The thunk middleware catches it first.
+
+3. The middleware gives the thunk _its own copy_ of dispatch
+
+This lets the thunk:
+
+- start async work
+    
+- wait
+    
+- then call `dispatch(...)` again whenever it finishes
+    
+
+4. The “real” action is dispatched later
+
+The thunk is not the real action — just a wrapper around async.
+
+> **Thunk = async function that receives dispatch so it can run async stuff and dispatch real actions afterwards.**
+
 ```
 ---
 

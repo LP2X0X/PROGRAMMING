@@ -1,6 +1,219 @@
 {
-	"nodes":[],
-	"edges":[],
+	"nodes":[
+		{"id":"a3cdb3eeba76657f","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.1 - Terms/Store.md","x":1200,"y":-310,"width":540,"height":280},
+		{"id":"1ee5899a72545553","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.3 - Hooks and Functions/configureStore.md","x":1200,"y":-1120,"width":540,"height":400},
+		{"id":"cf12ebf5d8ca8628","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.3 - Hooks and Functions/useDispatch.md","x":-40,"y":-60,"width":700,"height":320},
+		{"id":"acee7e411d7f89d9","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.1 - Terms/Action Creator.md","x":40,"y":-580,"width":540,"height":300},
+		{"id":"6fa10185a008c831","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.3 - Hooks and Functions/prepare.md","x":40,"y":-1260,"width":540,"height":340},
+		{
+			"id":"40fd761a6a040ce7",
+			"type":"text",
+			"text":"### In Redux and useReducer",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1280,
+			"y":-2440,
+			"width":480,
+			"height":270
+		},
+		{
+			"id":"fd110318880b2a8a",
+			"type":"text",
+			"text":"## Component ",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1160,
+			"y":-280,
+			"width":240,
+			"height":220
+		},
+		{"id":"93403a587f1047b8","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.1 - Terms/Slice.md","x":1200,"y":-2020,"width":540,"height":620},
+		{"id":"2a3ebdd9a3bfe780","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.3 - Hooks and Functions/getState.md","x":2160,"y":-1580,"width":500,"height":360},
+		{"id":"f2f485d07fa49a91","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.3 - Hooks and Functions/useSelector.md","x":-40,"y":440,"width":700,"height":340},
+		{"id":"2707bc99e830f271","type":"file","file":"Web Dev/5 - React/5.7 - The Advanced useReducer Hook/Reducer Function.md","x":80,"y":-2600,"width":460,"height":520},
+		{"id":"8f6b3dc4fa9be2fc","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.4 - Objects/caseReducers.md","x":80,"y":-1855,"width":460,"height":290},
+		{
+			"id":"dcffa9c0a0ab5836",
+			"type":"text",
+			"text":"### In RTK",
+			"styleAttributes":{"textAlign":"center"},
+			"x":-1280,
+			"y":-1755,
+			"width":480,
+			"height":90
+		},
+		{"id":"58c5f57ac16d65be","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.1 - Terms/Redux Thunk.md","x":-60,"y":-3440,"width":740,"height":640},
+		{"id":"18e5e6172653ca0a","type":"file","file":"Web Dev/5 - React/5.11 - Redux/5.11.3 - Hooks and Functions/createAsyncThunk.md","x":-520,"y":-1290,"width":400,"height":410}
+	],
+	"edges":[
+		{
+			"id":"86258c507999d535",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"fd110318880b2a8a",
+			"fromSide":"right",
+			"toNode":"cf12ebf5d8ca8628",
+			"toSide":"left",
+			"label":"create dispatch func with"
+		},
+		{
+			"id":"14b48584b2d20f68",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"fd110318880b2a8a",
+			"fromSide":"right",
+			"toNode":"acee7e411d7f89d9",
+			"toSide":"left",
+			"label":"create action with"
+		},
+		{
+			"id":"b575d2c7545e5530",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"1ee5899a72545553",
+			"fromSide":"bottom",
+			"toNode":"a3cdb3eeba76657f",
+			"toSide":"top",
+			"label":"create"
+		},
+		{
+			"id":"d5a12f16f60bdffb",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"8f6b3dc4fa9be2fc",
+			"fromSide":"right",
+			"toNode":"93403a587f1047b8",
+			"toSide":"left",
+			"label":"inside"
+		},
+		{
+			"id":"5fb2ea0202e9669d",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"6fa10185a008c831",
+			"fromSide":"bottom",
+			"toNode":"acee7e411d7f89d9",
+			"toSide":"top",
+			"label":"prepare payload object for"
+		},
+		{
+			"id":"17449a0b878cbae7",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"acee7e411d7f89d9",
+			"fromSide":"bottom",
+			"toNode":"cf12ebf5d8ca8628",
+			"toSide":"top",
+			"label":"create action for"
+		},
+		{
+			"id":"1e47237e18d957c8",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"cf12ebf5d8ca8628",
+			"fromSide":"right",
+			"toNode":"a3cdb3eeba76657f",
+			"toSide":"left",
+			"label":"dispatch to"
+		},
+		{
+			"id":"9a1231a3ef221202",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"40fd761a6a040ce7",
+			"fromSide":"right",
+			"toNode":"2707bc99e830f271",
+			"toSide":"left",
+			"label":"only one reducer which mutate state based on action type"
+		},
+		{
+			"id":"944f6198a4b0b883",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"8f6b3dc4fa9be2fc",
+			"fromSide":"bottom",
+			"toNode":"6fa10185a008c831",
+			"toSide":"top",
+			"label":"can have"
+		},
+		{
+			"id":"cc7090b24339af20",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"8f6b3dc4fa9be2fc",
+			"fromSide":"right",
+			"toNode":"acee7e411d7f89d9",
+			"toSide":"right",
+			"label":"automatically\ncreated"
+		},
+		{
+			"id":"83bc8b57553603aa",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"1ee5899a72545553",
+			"fromSide":"right",
+			"toNode":"2a3ebdd9a3bfe780",
+			"toSide":"left",
+			"label":"access state as readonly"
+		},
+		{
+			"id":"2045bd3b5e5c7ac6",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"fd110318880b2a8a",
+			"fromSide":"right",
+			"toNode":"f2f485d07fa49a91",
+			"toSide":"left",
+			"label":"access state"
+		},
+		{
+			"id":"f283883e84259593",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"8f6b3dc4fa9be2fc",
+			"fromSide":"right",
+			"toNode":"1ee5899a72545553",
+			"toSide":"left",
+			"label":"pass to"
+		},
+		{
+			"id":"37a1a370ebd3c0f1",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"dcffa9c0a0ab5836",
+			"fromSide":"right",
+			"toNode":"8f6b3dc4fa9be2fc",
+			"toSide":"left",
+			"label":"multiple reducers compiled into one actual reducer function"
+		},
+		{
+			"id":"40cfe487146ec827",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"40fd761a6a040ce7",
+			"fromSide":"right",
+			"toNode":"58c5f57ac16d65be",
+			"toSide":"left",
+			"label":"for side effect use"
+		},
+		{
+			"id":"5e7eb7632eb3cc17",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"dcffa9c0a0ab5836",
+			"fromSide":"right",
+			"toNode":"18e5e6172653ca0a",
+			"toSide":"left",
+			"label":"for side effect use"
+		}
+	],
 	"metadata":{
 		"version":"1.0-1.0",
 		"frontmatter":{}
