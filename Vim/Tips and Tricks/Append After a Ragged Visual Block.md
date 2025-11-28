@@ -1,1 +1,1 @@
-![[Pasted image 20240930154730.png|center]]
+![[Pasted image 20240930154730.png|center|800]]

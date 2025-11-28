@@ -17,15 +17,7 @@ type: folder_brief_live
 	- **[[4.5.1 - Core]]**
 	- **[[Inheritance]]**
 	- **[[Notes]]**
-- **4.6 - Promises, Async and Await**
-	- [[3.1.6 - Promises, Async and Await]]
-	- **[[4.6.1 - Terms]]**
-	- **[[4.6.2 - APIs]]**
-	- **[[4.6.3 - Techniques]]**
-	- **[[Notes]]**
-		- [[Promise handlers then, catch, finally are always asynchronous]]
-		- [[Promise wraps async work]]
-		- [[then, catch vs await]]
+- **[[4.6 - Promises, Async and Await]]**
 - **[[4.7 - Module]]**
 - **4.8 - Browser Document, Events, Interfaces**
 	- [[4.8 - Browser Document, Events, InterfacesDocument]]

@@ -1,13 +1,13 @@
 ---
-tags: 
- - react
- - redux
- - term
+tags:
+  - react
+  - redux
+  - object
 ---
 
 In Redux Toolkit, every slice created by `createSlice()` automatically generates an object called **`caseReducers`**.
 
-It is simply an **internal map** that stores all the reducer functions you define inside the `reducers:` field.
+It is simply an **internal map** that stores all the reducer functions you define inside the `reducers` field.
 
 Example slice:
 
@@ -143,13 +143,3 @@ const todosSlice = createSlice({
 **`caseReducers` = the internal object that holds all reducer functions you define inside a slice.**  
 RTK uses it internally to generate actions and build the final reducer.  
 You normally never call or modify it yourself.
-
----
-
-If you want, I can also explain:
-
-- how caseReducers are used to build the slice reducer
-    
-- caseReducers vs extraReducers
-    
-- what a "case reducer" means in Redux terminology

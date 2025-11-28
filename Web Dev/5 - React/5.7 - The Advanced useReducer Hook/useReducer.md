@@ -7,8 +7,7 @@ tags:
 
 ## 1. What is `useReducer`?
 
-`useReducer` is a React Hook that’s an **alternative to `useState`** for managing state.  
-It’s especially useful when:
+`useReducer` is a React Hook that’s an **alternative to `useState`** for managing state. It’s especially useful when:
 
 - State is **complex** (nested objects, multiple related values).
     

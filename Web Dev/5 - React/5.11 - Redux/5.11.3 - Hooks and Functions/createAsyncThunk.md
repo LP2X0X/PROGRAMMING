@@ -19,6 +19,10 @@ tags:
 - It **returns a thunk action creator** that you can dispatch like a normal action.
     
 
+```ad-tip
+Avoid using prefix get for async thunk cause its reserve for selectors.
+```
+
 ---
 
 # ⭐ Syntax
