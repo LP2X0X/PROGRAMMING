@@ -1,4 +1,4 @@
-# Terms Overview
+# DOM Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,11 +7,10 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[BOM]]
-- [[Browser Environment]]
 - [[DOM Collections]]
 - [[Element Node]]
-- [[Live Collections]]
+- [[HTML Collection]]
 - [[Node]]
+- [[NodeList]]
 
 %% End Waypoint %%

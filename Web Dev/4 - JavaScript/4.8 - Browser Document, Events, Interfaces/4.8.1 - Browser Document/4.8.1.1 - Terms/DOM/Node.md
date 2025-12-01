@@ -13,6 +13,11 @@ tags:
 
 ---
 
+### Example Visualize Nodes
+![[Pasted image 20251201102829.png|center|700]]
+
+---
+
 ### Common Node Types
 
 #### 🧱 1. **Element Nodes**

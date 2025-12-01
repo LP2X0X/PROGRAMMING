@@ -12,7 +12,7 @@ tags:
 - Think of it as a live representation of your webpage.
 - It lets programming languages like JavaScript interact with and manipulate the document’s content, structure, and styling.
 </br>
-- As the browser parses HTML, it creates a JavaScript object for every element and section of text encountered. These objects are called nodes—element nodes and text nodes, respectively.
+- As the browser parses HTML, it creates a JavaScript object for every element and section of text encountered. These objects are called [[Node|nodes]]—element nodes and text nodes, respectively.
 
 ---
 

@@ -6,6 +6,10 @@ tags:
  - overview
 ---
 
+- **DOM node classes** are the **JavaScript constructor functions (interfaces)** that define the _type_ and _behavior_ of DOM objects — but you **cannot directly instantiate them**.
+
+> They describe **what a DOM node _is_**, not **how to create it**.
+
 - Different DOM nodes may have different properties.
 - Each DOM node belongs to the corresponding built-in class.
 </br>
@@ -50,6 +54,36 @@ The classes are:
 There are many other tags with their own classes that may have specific properties and methods, while some elements, such as `<span>`, `<section>`, `<article>` do not have any specific properties, so they are instances of `HTMLElement` class.
 
 So, the full set of properties and methods of a given node comes as the result of the chain of inheritance.
+
+---
+
+````ad-note
+DOM elements also have additional properties, in particular those that depend on the class:
+
+- `value` – the value for `<input>`, `<select>` and `<textarea>` (`HTMLInputElement`, `HTMLSelectElement`…).
+- `href` – the “href” for `<a href="...">` (`HTMLAnchorElement`).
+- `id` – the value of “id” attribute, for all elements (`HTMLElement`).
+- …and much more…
+
+For instance:
+```markup
+<input type="text" id="elem" value="value">
+
+<script>
+  alert(elem.type); // "text"
+  alert(elem.id); // "elem"
+  alert(elem.value); // value
+</script>
+```
+
+Most standard HTML attributes have the corresponding DOM property, and we can access it like that.
+
+If we want to know the full list of supported properties for a given class, we can find them in the specification. For instance, `HTMLInputElement` is documented at [https://html.spec.whatwg.org/#htmlinputelement](https://html.spec.whatwg.org/#htmlinputelement).
+
+Or if we’d like to get them fast or are interested in a concrete browser specification – we can always output the element using `console.dir(elem)` and read the properties. Or explore “DOM properties” in the Elements tab of the browser developer tools.
+````
+
+---
 
 ```ad-example
 Let’s consider the DOM object for an `<input>` element. It belongs to [HTMLInputElement](https://html.spec.whatwg.org/multipage/forms.html#htmlinputelement) class.
