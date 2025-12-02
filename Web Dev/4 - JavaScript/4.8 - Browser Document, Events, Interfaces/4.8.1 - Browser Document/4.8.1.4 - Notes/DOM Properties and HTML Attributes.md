@@ -26,6 +26,53 @@ tags:
 | Values are always **strings**                                    | Values can be **any type** (string, boolean, object, etc.)                                  |
 | Represents the original or default configuration written in HTML | Represents the *current* state of the element (which can change via JS or user interaction) |
 
+````ad-note
+DOM properties are not always strings. For instance, the `input.checked` property (for checkboxes) is a boolean:
+
+```html
+<input id="input" type="checkbox" checked> checkbox
+
+<script>
+  alert(input.getAttribute('checked')); // the attribute value is: empty string
+  alert(input.checked); // the property value is: true
+</script>
+```
+
+There are other examples. The `style` attribute is a string, but the `style` property is an object:
+
+```html
+<div id="div" style="color:red;font-size:120%">Hello</div>
+
+<script>
+  // string
+  alert(div.getAttribute('style')); // color:red;font-size:120%
+
+  // object
+  alert(div.style); // [object CSSStyleDeclaration]
+  alert(div.style.color); // red
+</script>
+```
+
+Most properties are strings though.
+
+Quite rarely, even if a DOM property type is a string, it may differ from the attribute. For instance, the `href` DOM property is always a _full_ URL, even if the attribute contains a relative URL or just a `#hash`.
+
+Here’s an example:
+
+```html
+<a id="a" href="#hello">link</a>
+<script>
+  // attribute
+  alert(a.getAttribute('href')); // #hello
+
+  // property
+  alert(a.href ); // full URL in the form http://site.com/page#hello
+</script>
+```
+
+If we need the value of `href` or any other attribute exactly as written in the HTML, we can use `getAttribute`.
+````
+
 ---
 
 ## 🔄 Synchronization Between Attributes and Properties
@@ -36,17 +83,32 @@ tags:
 
   * Example: setting `input.value = "new"` changes the property, but `getAttribute('value')` might still return the original string. 
 
+```html
+<input>
+
+<script>
+  let input = document.querySelector('input');
+
+  // attribute => property
+  input.setAttribute('value', 'text');
+  alert(input.value); // text
+
+  // NOT property => attribute
+  input.value = 'newValue';
+  alert(input.getAttribute('value')); // text (not updated!)
+</script>
+```
+
 ---
 
 ## 🛠️ How to Work with Attributes and Properties
 
 * Use **properties** (dot-notation) when dealing with standard behaviors/state in JS. E.g. `element.id`, `input.checked`, `div.style.color`. 
 * Use **attribute methods** when you need to access or manipulate exactly what’s in HTML (especially non-standard attributes):
-
-  * `elem.getAttribute(name)`
-  * `elem.setAttribute(name, value)`
-  * `elem.hasAttribute(name)`
-  * `elem.removeAttribute(name)` 
+	- `elem.hasAttribute(name)` – checks for existence.
+	- `elem.getAttribute(name)` – gets the value.
+	- `elem.setAttribute(name, value)` – sets the value.
+	- `elem.removeAttribute(name)` – removes the attribute.
 * For custom data attributes (e.g. `data-…`), use `elem.dataset`, which is the JS interface to those attributes. 
 
 ---

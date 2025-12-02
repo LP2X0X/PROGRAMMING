@@ -285,7 +285,3 @@ element.shadowRoot.querySelectorAll()
 | `element.children`       | HTMLCollection | ✔️    | ❌                 | elements only       |
 | `childNodes`             | NodeList       | ❌    | ❌                 | includes text nodes |
 | `closest`                | Element        | ❌    | ✔️                 | searches upward     |
-
----
-
-If you want, I can also turn this into a **mind-map style cheat sheet**, React-focused version, or a compact flashcard version.
