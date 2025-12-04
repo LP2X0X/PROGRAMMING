@@ -76,17 +76,17 @@ border-left-width => elem.style.borderLeftWidth
     elem.style.display = "";
     ```
     
-    Or use `elem.style.removeProperty(...)`. ([JavaScript.info](https://javascript.info/styles-and-classes?utm_source=chatgpt.com "Styles and classes"))
+    Or use `elem.style.removeProperty(...)`. 
     
 
 ### Setting many styles at once
 
-- Instead of setting each property individually, you can set the full style string via `style.cssText`. This overwrites all previous inline styles. Use cautiously (may remove styles you wanted to keep). ([JavaScript.info](https://javascript.info/styles-and-classes?utm_source=chatgpt.com "Styles and classes"))
+- Instead of setting each property individually, you can set the full style string via `style.cssText`. This overwrites all previous inline styles. Use cautiously (may remove styles you wanted to keep). 
     
 
 ### Units matter
 
-- When setting properties that require units (e.g. width, margin, top, left, etc.), you must provide units — e.g. `"20px"`, not just `20`. Otherwise browsers ignore the assignment. ([JavaScript.info](https://javascript.info/styles-and-classes?utm_source=chatgpt.com "Styles and classes"))
+- When setting properties that require units (e.g. width, margin, top, left, etc.), you must provide units — e.g. `"20px"`, not just `20`. Otherwise browsers ignore the assignment. 
     
 
 ---
@@ -101,9 +101,9 @@ border-left-width => elem.style.borderLeftWidth
     const cs = getComputedStyle(elem);
     ```
     
-    `cs` gives you all resolved style values (e.g. actual width, margin, padding) — readonly. ([JavaScript.info](https://javascript.info/styles-and-classes?utm_source=chatgpt.com "Styles and classes"))
+    `cs` gives you all resolved style values (e.g. actual width, margin, padding) — readonly. 
     
-- Use the exact property names (like `paddingLeft`, `marginTop`, etc.) when accessing computed values. ([JavaScript.info](https://javascript.info/styles-and-classes?utm_source=chatgpt.com "Styles and classes"))
+- Use the exact property names (like `paddingLeft`, `marginTop`, etc.) when accessing computed values. 
     
 
 ---
@@ -118,7 +118,3 @@ border-left-width => elem.style.borderLeftWidth
     
 - ✅ If you must override many inline styles at once and you’re sure you don’t need previous inline styles — `style.cssText` is an option (but be careful).
     
-
----
-
-If you like — since you use **React**, I can **map all these DOM style/class methods to React-style patterns** (how you’d do the same things in React).
