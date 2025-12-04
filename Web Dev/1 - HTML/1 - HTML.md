@@ -11,6 +11,7 @@ type: folder_brief_live
 - **[[1.1 - Elements]]**
 - **1.2 - Attributes**
 	- **[[1.2.1 - Important]]**
+	- **[[1.2.2 - Aria]]**
 	- [[Attribute Overview]]
 	- [[Attributes]]
 	- [[Custom Attribute]]

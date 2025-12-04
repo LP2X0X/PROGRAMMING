@@ -5,10 +5,6 @@ tags:
   - fundamental
 ---
 
-Absolutely! Let's explore **`WeakMap`** and **`WeakSet`** in **more technical depth**, including internal mechanics, use cases, and how they differ from their non-weak counterparts (`Map` and `Set`).
-
----
-
 ## 🔶 1. `WeakMap` — Deep Dive
 
 ### 🧠 Concept
