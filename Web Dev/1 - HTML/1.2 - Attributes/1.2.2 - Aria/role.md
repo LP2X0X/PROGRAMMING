@@ -3,6 +3,7 @@ tags:
   - html
   - attribute
   - global
+  - aria
 ---
 
 The `role` attribute is used to define the **purpose** or **semantic meaning** of an HTML element, especially for **assistive technologies** like screen readers.
