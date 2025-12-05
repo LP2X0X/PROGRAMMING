@@ -233,3 +233,9 @@ const { userId, postId } = useParams();
 | `useParams()` | Access the current URL parameters                 |
 | `Link`        | Navigate dynamically by building URLs with params |
 | `useEffect`   | Often used to fetch data when a param changes     |
+
+---
+
+## References
+
+[[useParams]]
