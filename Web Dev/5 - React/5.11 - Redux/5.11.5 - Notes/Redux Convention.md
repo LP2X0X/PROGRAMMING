@@ -10,7 +10,7 @@ tags:
   
   ---
 
-- Create the selector function with the "get" prefix inside the file contain the slice as well:
+- Create the [[Selector Function|selector function]] with the "get" prefix inside the file contain the slice as well:
 ```js
 // Instead of getting the needed property from state like this inside the component function...
 const totalCartQuantity = useSelector((state) =>

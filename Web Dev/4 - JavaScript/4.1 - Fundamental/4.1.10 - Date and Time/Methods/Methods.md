@@ -1,4 +1,4 @@
-# 5.11.4 - Objects Overview
+# Methods Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[caseReducers]]
-- [[createSlice Option Object]]
+- [[Date Output Conversion Methods]]
 
 %% End Waypoint %%

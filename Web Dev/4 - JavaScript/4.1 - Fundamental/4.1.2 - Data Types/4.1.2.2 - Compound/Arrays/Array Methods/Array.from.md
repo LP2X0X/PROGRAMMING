@@ -7,10 +7,50 @@ tags:
 
 `Array.from()` is a **built-in static method** that creates a new array from:
 
-1. **Array-like objects** (e.g. `arguments`, `NodeList`, `Set`, `Map.keys()`)
+1. **[[Array-like Objects|Array-like objects]]** (e.g. `arguments`, `NodeList`, `Set`, `Map.keys()`)
     
-2. **Iterable objects** (e.g. strings, generator results, etc.)
+2. **[[Iterables|Iterable objects]]** (e.g. strings, generator results, etc.)
     
+
+- Here's an example:
+
+	```javascript
+	let arrayLike = {
+	  0: "Hello",
+	  1: "World",
+	  length: 2
+	};
+	
+	let arr = Array.from(arrayLike); // (*)
+	alert(arr.pop()); // World (method works)
+	```
+
+- The full syntax for `Array.from` also allows us to provide an optional “mapping” function:
+	```javascript
+	Array.from(obj[, mapFn, thisArg])
+	```
+
+- The optional second argument `mapFn` can be a function that will be applied to each element before adding it to the array, and [[thisArg]] allows us to set `this` for it.
+	```js
+	let range = {
+	  from: 1,
+	  to: 5
+	};
+	
+	// square each number
+	let arr = Array.from(range, num => num * num);
+	
+	alert(arr); // 1,4,9,16,25
+	```
+
+- This is a great way to create array with a specific number of items:
+	```js
+	const arr = Array.from({ length: 5 }); 
+	console.log(arr); // [ undefined, undefined, undefined, undefined, undefined ]
+	
+	const arr = Array.from({ length: 5 }, () => 0); 
+	console.log(arr); // [ 0, 0, 0, 0, 0]
+	```
 
 ---
 

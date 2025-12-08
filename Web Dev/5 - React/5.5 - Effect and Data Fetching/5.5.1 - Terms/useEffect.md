@@ -44,6 +44,10 @@ function Example() {
 }
 ```
 
+```ad-warning
+You must return a callback function, not call it.
+```
+
 ---
 
 ## Key Concepts

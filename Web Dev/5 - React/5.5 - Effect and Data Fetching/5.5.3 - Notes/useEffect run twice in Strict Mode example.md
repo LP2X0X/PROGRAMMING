@@ -122,7 +122,3 @@ But relying on that is bad practice, because:
 |Timer decreases too fast|Multiple intervals created by Strict Mode|
 |Why multiple intervals?|You didn’t clear the old one (`clearInterval`)|
 |Fix|Always return a cleanup function from your `useEffect`|
-
----
-
-Would you like me to show a simple **console log timeline** example that visually shows how multiple intervals overlap without cleanup?
