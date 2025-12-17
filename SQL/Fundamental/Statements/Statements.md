@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[FROM]]
 - [[IN]]
-- [[SELECT]]
+- [[SQL/Fundamental/Statements/SELECT]]
 - [[WHERE]]
 
 %% End Waypoint %%

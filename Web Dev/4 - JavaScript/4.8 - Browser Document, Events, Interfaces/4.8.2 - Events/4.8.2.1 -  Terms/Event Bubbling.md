@@ -28,6 +28,8 @@ If a click happens on the button:
 2. Then it bubbles up to the parent (#parent)
 3. Then up to \<body>, \<html>, and document
 
+![[Pasted image 20251209150150.png|center|300]]
+
 ---
 
 ## **📌 Example: Event Bubbling in Action**

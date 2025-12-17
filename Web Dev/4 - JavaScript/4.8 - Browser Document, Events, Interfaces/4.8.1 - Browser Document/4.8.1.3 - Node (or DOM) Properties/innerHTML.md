@@ -30,3 +30,7 @@ It does this:
 **As the content is “zeroed-out” and rewritten from the scratch, all images and other resources will be reloaded**.
 
 - There are other side-effects as well. For instance, if the existing text was selected with the mouse, then most browsers will remove the selection upon rewriting `innerHTML`. And if there was an `<input>` with a text entered by the visitor, then the text will be removed. And so on.
+
+```ad-note
+We should not use this often, instead use [[textContent]].
+```
