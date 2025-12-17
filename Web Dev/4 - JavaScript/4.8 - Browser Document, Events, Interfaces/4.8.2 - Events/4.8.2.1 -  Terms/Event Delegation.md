@@ -85,9 +85,9 @@ This is safer if there are nested elements inside \<li>.
 
 ## **🔸 Summary**
 
-|**Concept**|**Description**|
-|---|---|
-|event.target|Actual clicked element|
-|event.currentTarget|Element the event listener is attached to|
-|matches(selector)|Checks if element matches CSS selector|
-|closest(selector)|Finds closest ancestor matching selector|
+| **Concept**         | **Description**                           |
+| ------------------- | ----------------------------------------- |
+| event.target        | Actual clicked element                    |
+| event.currentTarget | Element the event listener is attached to |
+| matches(selector)   | Checks if element matches CSS selector    |
+| closest(selector)   | Finds closest ancestor matching selector  |

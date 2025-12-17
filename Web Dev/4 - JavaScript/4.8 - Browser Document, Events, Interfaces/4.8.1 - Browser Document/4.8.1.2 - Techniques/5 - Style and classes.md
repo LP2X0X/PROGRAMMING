@@ -93,7 +93,7 @@ border-left-width => elem.style.borderLeftWidth
 
 ## 🔍 Reading “Computed” Styles: `getComputedStyle`
 
-- `elem.style` only reflects inline styles. It does _not_ show styles coming from external CSS or CSS classes. ([JavaScript.info](https://javascript.info/styles-and-classes?utm_source=chatgpt.com "Styles and classes"))
+- `elem.style` only reflects inline styles. It does _not_ show styles coming from external CSS or CSS classes. 
     
 - To get the actual final styles applied to an element (after CSS cascade, inheritance, external stylesheets, etc.), use:
     
@@ -101,7 +101,7 @@ border-left-width => elem.style.borderLeftWidth
     const cs = getComputedStyle(elem);
     ```
     
-    `cs` gives you all resolved style values (e.g. actual width, margin, padding) — readonly. 
+    `cs` gives you all resolved style values (e.g. actual width, margin, padding) — readonly.
     
 - Use the exact property names (like `paddingLeft`, `marginTop`, etc.) when accessing computed values. 
     
@@ -118,3 +118,23 @@ border-left-width => elem.style.borderLeftWidth
     
 - ✅ If you must override many inline styles at once and you’re sure you don’t need previous inline styles — `style.cssText` is an option (but be careful).
     
+
+---
+
+## Summary
+
+To manage classes, there are two DOM properties:
+
+- `className` – the string value, good to manage the whole set of classes.
+- `classList` – the object with methods `add/remove/toggle/contains`, good for individual classes.
+
+To change the styles:
+
+- The `style` property is an object with camelCased styles. Reading and writing to it has the same meaning as modifying individual properties in the `"style"` attribute. To see how to apply `important` and other rare stuff – there’s a list of methods at [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration).
+    
+- The `style.cssText` property corresponds to the whole `"style"` attribute, the full string of styles.
+    
+
+To read the resolved styles (with respect to all classes, after all CSS is applied and final values are calculated):
+
+- The `getComputedStyle(elem, [pseudo])` returns the style-like object with them. Read-only.

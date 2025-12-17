@@ -24,6 +24,7 @@ type: folder_brief_live
 	- **[[4.8.1 - Browser Document]]**
 	- **[[4.8.2 - Events]]**
 		- **[[4.8.2.1 -  Terms]]**
+		- **[[4.8.2.2 - Methods]]**
 		- [[preventDefault Function]]
 - **[[4.10 - Network Request]]**
 - **[[X - Techniques]]**
