@@ -6,9 +6,14 @@ tags:
 
 CSS **custom properties** (aka CSS variables) let you define reusable values directly in CSS. They are powerful for theming, consistency, and dynamic updates.
 
+Custom properties let you define a value in one place, as a “single source of truth,” and reuse that value throughout the stylesheet. This is particularly useful for recurring values like colors. The next listing adds a brand-color custom property. You can use this variable dozens of times throughout your stylesheet, but if you want to change it, you only have to edit it in one place.
+
 ---
 
 ## 🔹 Syntax
+
+The name must begin with two hyphens (--) to distinguish it from other CSS properties, followed by whatever name you’d like to use. 
+Variables must be declared inside a declaration block. I’ve used the :root selector here, which sets the variable for the whole page.
 
 **Define:**
 
@@ -38,6 +43,10 @@ button {
         
     - Declared in an element → scoped to that element and its children.
         
+
+```ad-note
+Custom properties work similarly to variables but can be manipulated (override) dynamically via cascade and inheritance.
+```
 
 ```css
 .card {

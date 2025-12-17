@@ -81,12 +81,34 @@ A **variation** or **state** of a block or element.
 
 Here’s what each part means:
 
-|Class|Meaning|
-|---|---|
-|`product-card`|Block: the main container|
-|`product-card--featured`|Modifier: a special version of the card|
-|`product-card__title`|Element: the title inside the card|
-|`product-card__button--primary`|Modifier: a variation of the button|
+| Class                           | Meaning                                 |
+| ------------------------------- | --------------------------------------- |
+| `product-card`                  | Block: the main container               |
+| `product-card--featured`        | Modifier: a special version of the card |
+| `product-card__title`           | Element: the title inside the card      |
+| `product-card__button--primary` | Modifier: a variation of the button     |
+
+```html
+<div class="card card--highlight">
+  <div class="card__header">
+    <h2 class="card__title">Product Title</h2>
+    <button class="card__action-btn card__action-btn--primary">Buy</button>
+  </div>
+
+  <div class="card__body">
+    <p class="card__description">This is a description.</p>
+
+    <div class="card__price-info">
+      <span class="card__price">$29.99</span>
+      <span class="card__discount card__discount--active">20% Off</span>
+    </div>
+  </div>
+
+  <div class="card__footer">
+    <button class="card__footer-btn">More Info</button>
+  </div>
+</div>
+```
 
 ---
 
@@ -105,8 +127,8 @@ Here’s what each part means:
 
 ### ✅ Summary:
 
-|Part|Syntax|Example|
-|---|---|---|
-|Block|`block`|`card`, `menu`|
-|Element|`block__element`|`card__title`|
-|Modifier|`block--modifier` or `block__element--modifier`|`card--featured`, `card__title--large`|
+| Part     | Syntax                                          | Example                                |
+| -------- | ----------------------------------------------- | -------------------------------------- |
+| Block    | `block`                                         | `card`, `menu`                         |
+| Element  | `block__element`                                | `card__title`                          |
+| Modifier | `block--modifier` or `block__element--modifier` | `card--featured`, `card__title--large` |

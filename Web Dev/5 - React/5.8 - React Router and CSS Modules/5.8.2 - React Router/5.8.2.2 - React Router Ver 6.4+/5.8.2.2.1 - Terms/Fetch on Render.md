@@ -5,9 +5,7 @@ tags:
  - strategy
 ---
 
-### 1️⃣ Fetch-on-Render
-
-Definition: In this strategy, the component is rendered first, and the data fetching happens after the component has mounted. Typically, this is done using the useEffect hook in React.
+**Definition**: In this strategy, the component is rendered first, and the data fetching happens after the component has mounted. Typically, this is done using the useEffect hook in React.
 
 #### How it Works:
 
