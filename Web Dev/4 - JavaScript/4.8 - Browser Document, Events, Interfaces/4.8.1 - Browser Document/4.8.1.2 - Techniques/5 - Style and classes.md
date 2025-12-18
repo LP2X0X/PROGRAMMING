@@ -81,7 +81,7 @@ border-left-width => elem.style.borderLeftWidth
 
 ### Setting many styles at once
 
-- Instead of setting each property individually, you can set the full style string via `style.cssText`. This overwrites all previous inline styles. Use cautiously (may remove styles you wanted to keep).
+- Instead of setting each property individually, you can set the full style string via `style.cssText`. This overwrites all previous inline styles. Use cautiously (may remove styles you wanted to keep). 
     
 
 ### Units matter

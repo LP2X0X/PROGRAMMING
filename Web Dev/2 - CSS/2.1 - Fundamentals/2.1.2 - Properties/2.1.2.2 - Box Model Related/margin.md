@@ -5,8 +5,6 @@ tags:
  - fundamental
 ---
 
-# 📘 Complete Guide to `margin` in CSS
-
 ## 1. 🔹 What `margin` Does
 
 - Adds **space outside** an element’s border box.
@@ -50,6 +48,10 @@ margin: 10px 15px 20px 25px; /* top | right | bottom | left */
     
 - `inherit`, `initial`, `unset` → take from parent / reset.
     
+
+```ad-note
+Its initial value is 0.
+```
 
 ---
 
@@ -184,12 +186,12 @@ margin-inline-end: 1em;    /* opposite */
 
 ## 9. 🔹 Quick Reference
 
-|Property|Effect|
-|---|---|
-|`margin`|shorthand for all sides|
-|`margin-top` / `margin-right` / `margin-bottom` / `margin-left`|individual sides|
-|`margin-block-start/end`|top/bottom in logical flow|
-|`margin-inline-start/end`|left/right in logical flow|
-|`margin: auto`|centers or absorbs free space|
-|Negative margin|pulls element inward/overlaps|
-|Collapsing|vertical margins combine into one|
+| Property                                                        | Effect                            |
+| --------------------------------------------------------------- | --------------------------------- |
+| `margin`                                                        | shorthand for all sides           | 
+| `margin-top` / `margin-right` / `margin-bottom` / `margin-left` | individual sides                  |
+| `margin-block-start/end`                                        | top/bottom in logical flow        |
+| `margin-inline-start/end`                                       | left/right in logical flow        |
+| `margin: auto`                                                  | centers or absorbs free space     |
+| Negative margin                                                 | pulls element inward/overlaps     |
+| Collapsing                                                      | vertical margins combine into one |

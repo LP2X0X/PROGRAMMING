@@ -5,9 +5,7 @@ tags:
  - strategy
 ---
 
-### 2️⃣ Render-as-You-Fetch
-
-Definition: In this strategy, data is fetched in parallel with rendering the component, ensuring the data is available before the component is rendered. React Router's loader function is an example of this approach.
+**Definition**: In this strategy, data is fetched in parallel with rendering the component, ensuring the data is available before the component is rendered. React Router's loader function is an example of this approach.
 
 #### How it Works:
 

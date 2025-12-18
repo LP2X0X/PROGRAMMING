@@ -9,6 +9,10 @@ A **controlled component** in React is a form element (like `<input>`, `<textare
 
 > This means that the value of the form element is set and updated through React state, making React the "single source of truth" for the form data.
 
+```ad-warning
+If the input's value is undefined on the initial render `<input value={undefined} />`, React will treats the element as an **uncontrolled** input.
+```
+
 ---
 
 ## 🧠 Think of it like this:

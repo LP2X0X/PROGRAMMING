@@ -17,5 +17,6 @@ type: folder_brief_live
 	- [[Custom Attribute]]
 	- **[[Notable]]**
 - **[[1.3 - Notes]]**
+- **[[1.4 - Techniques]]**
 
 %% End Waypoint %%

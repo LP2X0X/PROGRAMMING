@@ -47,5 +47,65 @@ the input will be controlled from the start, fixing the issue. See [React Contro
 
 ---
 
+### Example pitfalls
+
+```jsx
+<input
+  type="hidden"
+  name="position"
+  value={
+    position.latitude &&
+    position.longitude &&
+    `${position.latitude}, ${position.longitude}`
+  }
+/>
+```
+
+At first glance this looks harmless, but it triggers React’s  
+**“A component is changing an uncontrolled input to be controlled”** warning.
+
+Here is what happens:
+
+1. On the first render, `position.latitude` or `position.longitude` may be `undefined`.
+    
+2. Because the `&&` expression fails, the whole expression evaluates to **`undefined`**.
+    
+3. That means the `<input>` initially has **no value attribute** → it is **uncontrolled**.
+    
+4. Later, when `position` becomes available, the expression returns a **string**, so the input **now has a value** → it becomes **controlled**.
+    
+5. Switching from uncontrolled → controlled triggers the React warning.
+    
+
+#### **How to Fix It**
+
+To avoid the warning, React requires that the input’s `value` **always** be a string from the start.
+
+So instead of letting the value become `undefined`, return an empty string as the default:
+
+```jsx
+<input
+  type="hidden"
+  name="position"
+  value={
+    position.latitude && position.longitude
+      ? `${position.latitude}, ${position.longitude}`
+      : ""
+  }
+/>
+```
+
+This guarantees:
+
+- On the initial render → `value=""` (controlled by the `position` state because its value is derived directly from that state)
+    
+- Once coordinates exist → `value="lat, lng"` (still controlled)
+    
+
+React is satisfied because the input is **consistently controlled**.
+
+---
+
 ### Reference
+[[Controlled Components]]
 https://stackoverflow.com/questions/37427508/react-changing-an-uncontrolled-input
