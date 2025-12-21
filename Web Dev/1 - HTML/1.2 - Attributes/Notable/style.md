@@ -1,3 +1,10 @@
+---
+tags: 
+  - html
+  - attribute
+  - fundamental
+---
+
 ### style
 
 The `style` attribute lets you apply **inline CSS styles** directly to an HTML element.

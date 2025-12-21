@@ -48,6 +48,8 @@ on a container.
 - **Cross Axis**: Perpendicular to the main axis
     
 
+![[Pasted image 20251218145917.png|center|500]]
+
 Set direction with:
 
 ```css 

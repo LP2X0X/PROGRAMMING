@@ -22,14 +22,14 @@ They define the **content hierarchy**, not appearance.
 
 # 🔹 **1. What Headings Actually Mean**
 
-|Tag|Meaning|
-|---|---|
-|**`<h1>`**|Page’s main title. Highest importance.|
-|**`<h2>`**|Major section heading.|
-|**`<h3>`**|Subsection of `<h2>`.|
-|**`<h4>`**|Subsection of `<h3>`.|
-|**`<h5>`**|Usually not needed; deeper nested content.|
-|**`<h6>`**|Extremely rare; almost always too deep.|
+| Tag        | Meaning                                    |
+| ---------- | ------------------------------------------ |
+| **`<h1>`** | Page’s main title. Highest importance.     |
+| **`<h2>`** | Major section heading.                     |
+| **`<h3>`** | Subsection of `<h2>`.                      |
+| **`<h4>`** | Subsection of `<h3>`.                      |
+| **`<h5>`** | Usually not needed; deeper nested content. |
+| **`<h6>`** | Extremely rare; almost always too deep.    |
 
 ---
 

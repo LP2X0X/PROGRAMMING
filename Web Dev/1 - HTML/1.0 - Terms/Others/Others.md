@@ -1,4 +1,4 @@
-# 1.1.1 - Fundamentals Overview
+# Others Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,9 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[a]]
-- [[button]]
-- [[heading]]
-- [[p]]
+- [[HTML's Entity]]
+- [[XHTML]]
 
 %% End Waypoint %%

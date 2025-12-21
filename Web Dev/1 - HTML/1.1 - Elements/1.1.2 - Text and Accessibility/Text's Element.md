@@ -147,9 +147,9 @@ tags:
 
 **9. \<sup> (Superscript) & \<sub> (Subscript)**
 
-• <sup> raises text (e.g., exponents, footnotes).
+• \<sup> raises text (e.g., exponents, footnotes).
 
-• <sub> lowers text (e.g., chemical formulas).
+• \<sub> lowers text (e.g., chemical formulas).
 
   
 
@@ -182,17 +182,17 @@ tags:
 ---
 **Summary Table**
 
-|**Element**|**Default Style**|**Meaning**|
-|---|---|---|
-|\<strong>|Bold|Important text|
-|\<b>|Bold|Visual emphasis (no meaning)|
-|\<em>|Italic|Emphasized text|
-|\<i>|Italic|Foreign words, terms, or thoughts|
-|\<mark>|Highlight|Highlighted text|
-|\<u>|Underline|Annotated text (not for links)|
-|\<small>|Smaller text|Legal notes, fine print|
-|\<del>|Strikethrough|Deleted text|
-|\<ins>|Underlined|Inserted text|
-|\<sup>|Raised|Superscript (e.g., exponents)|
-|\<sub>|Lowered|Subscript (e.g., chemical formulas)|
-|\<span>|Generic|Generic style|
+| **Element** | **Default Style** | **Meaning**                         |
+| ----------- | ----------------- | ----------------------------------- |
+| \<strong>   | Bold              | Important text                      |
+| \<b>        | Bold              | Visual emphasis (no meaning)        |
+| \<em>       | Italic            | Emphasized text                     |
+| \<i>        | Italic            | Foreign words, terms, or thoughts   |
+| \<mark>     | Highlight         | Highlighted text                    |
+| \<u>        | Underline         | Annotated text (not for links)      |
+| \<small>    | Smaller text      | Legal notes, fine print             |
+| \<del>      | Strikethrough     | Deleted text                        |
+| \<ins>      | Underlined        | Inserted text                       |
+| \<sup>      | Raised            | Superscript (e.g., exponents)       |
+| \<sub>      | Lowered           | Subscript (e.g., chemical formulas) |
+| \<span>     | Generic           | Generic style                       |

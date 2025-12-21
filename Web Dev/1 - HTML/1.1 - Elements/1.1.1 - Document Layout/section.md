@@ -7,8 +7,7 @@ tags:
 ## HTML `<section>` — compact overview
 
 #### **What it is**  
-`<section>` is a semantic element used to group **thematically related content** within a page or article.  
-It represents a distinct part of the document, typically with its **own heading**.
+The \<section> HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.
 
 ---
 
