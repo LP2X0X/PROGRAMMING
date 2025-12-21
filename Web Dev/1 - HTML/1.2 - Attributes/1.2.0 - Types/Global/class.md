@@ -1,3 +1,11 @@
+---
+tags: 
+ - html
+ - attribute
+ - global
+ - type
+---
+
 ### class
 
 The `class` attribute assigns **one or more names** to an HTML element for **styling** or **scripting purposes**.

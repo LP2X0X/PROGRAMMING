@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[display]]
-- **[[Flex Layout]]**
+- **[[Flexbox Layout]]**
 - **[[Float Layout]]**
 - **[[Grid Layout]]**
 

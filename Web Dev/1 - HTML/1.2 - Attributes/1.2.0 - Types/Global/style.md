@@ -2,6 +2,7 @@
 tags: 
   - html
   - attribute
+  - global
   - fundamental
 ---
 

@@ -30,6 +30,16 @@ The children of a main-axis-flexbox container automatically fill the container's
 3. **flex-basis** → the starting size before growing/shrinking
     
 
+```ad-note
+If you omit the `flex` property (and longhand properties), the initial values are as follows:
+
+- `flex-grow: 0`
+- `flex-shrink: 1`
+- `flex-basis: auto`
+
+This is known as `flex: initial`.
+```
+
 ---
 
 ## **🔹 Common values**

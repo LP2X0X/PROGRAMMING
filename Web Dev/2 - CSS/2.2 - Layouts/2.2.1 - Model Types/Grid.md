@@ -48,28 +48,28 @@ Grid cell can act like a parent container in case you want to size the child usi
 ## **📐 Common Properties**
 ### **🔹 On the Grid Container:**
 
-|**Property**|**Description**|
-|---|---|
-|display: grid|Enables grid layout|
-|grid-template-columns|Defines column sizes (e.g., 1fr, 200px, auto)|
-|grid-template-rows|Defines row sizes|
-|gap|Sets spacing between rows and columns|
-|grid-row-gap|Set spacing between rows|
-|grid-column-gap|Set spacing between columns|
-|justify-items|Aligns content horizontally in cells|
-|align-items|Aligns content vertically in cells|
-|place-items|Shorthand for align-items + justify-items|
+| **Property**          | **Description**                               |
+| --------------------- | --------------------------------------------- |
+| display: grid         | Enables grid layout                           |
+| grid-template-columns | Defines column sizes (e.g., 1fr, 200px, auto) |
+| grid-template-rows    | Defines row sizes                             |
+| gap                   | Sets spacing between rows and columns         |
+| grid-row-gap          | Set spacing between rows                      |
+| grid-column-gap       | Set spacing between columns                   |
+| justify-items         | Aligns content horizontally in cells          |
+| align-items           | Aligns content vertically in cells            |
+| place-items           | Shorthand for align-items + justify-items     |
 
 ### **🔹 On the Grid Items:**
 
-|**Property**|**Description**|
-|---|---|
-|grid-column|Start/end column lines (e.g., 1 / 3)|
-|grid-row|Start/end row lines|
-|grid-area|Name or placement of item|
-|justify-self|Horizontal alignment inside the cell|
-|align-self|Vertical alignment inside the cell|
-|place-self|Shorthand for the above two|
+| **Property** | **Description**                      |
+| ------------ | ------------------------------------ |
+| grid-column  | Start/end column lines (e.g., 1 / 3) |
+| grid-row     | Start/end row lines                  |
+| grid-area    | Name or placement of item            |
+| justify-self | Horizontal alignment inside the cell |
+| align-self   | Vertical alignment inside the cell   |
+| place-self   | Shorthand for the above two          |
 
 ---
 
@@ -109,3 +109,8 @@ Grid cell can act like a parent container in case you want to size the child usi
   <div style="grid-area: content;">Main</div>
 </div>
 ```
+
+---
+
+### References
+https://stackoverflow.com/questions/45536537/centering-in-css-grid
