@@ -7,14 +7,11 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[class]]
+- [[autocomplete]]
 - [[contenteditable]]
 - [[download]]
 - [[for]]
-- [[id]]
 - [[name]]
-- [[style]]
-- [[tabindex]]
 - [[target]]
 
 %% End Waypoint %%

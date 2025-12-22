@@ -9,6 +9,8 @@ tags:
 
 The align-items property controls how **flex items are aligned on the cross axis** (perpendicular to the flex-direction).
 
+![[Pasted image 20251221203802.png|center]]
+
 ---
 
 ### **📐 Syntax:**
@@ -69,3 +71,8 @@ align-items: center makes **all children of this flex container shrink to their 
 ```
 
 Result: All .items are vertically centered in the 100px tall container (assuming flex-direction: row).
+
+---
+
+### References
+https://stackoverflow.com/questions/45536537/centering-in-css-grid

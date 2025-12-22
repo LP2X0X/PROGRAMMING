@@ -1,4 +1,4 @@
-# 2.1.2.1 Shorthand Overview
+# Flex Container Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[font]]
+- [[flex-direction]]
+- [[flex-wrap]]
+- [[gap]]
 
 %% End Waypoint %%

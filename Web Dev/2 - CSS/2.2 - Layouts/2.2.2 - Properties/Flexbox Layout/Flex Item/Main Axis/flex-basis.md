@@ -78,7 +78,9 @@ If the item require more space than the flex-basis then it will be override.
 flex: 1 1 200px; /* grow, shrink, basis */
 ```
 
-  
+```ad-note
+**flex-basis defines the initial main-size of a flex item, which the flex layout algorithm uses as the starting point when distributing available space according to the defined flex rules.**
+```  
 
 ---
 
@@ -109,7 +111,7 @@ A good way to understand flex is that it's a three steps process:
     
 2. When that's done, we take the total space all those items take and we compare that to the space actually available (the size of the flex container). We then know the amount of free space for items to grow or the space we need to gain by shrinking the items.
     
-3. we can them shrink/grow the items as needed.
+3. We can them shrink/grow the items as needed.
     
 
 So why flex-basis instead of width? Because with flexbox and contrary to all the other scenarios, width does not actually sets the width of an item. flex-basis is introduced instead of using width "against its nature".  

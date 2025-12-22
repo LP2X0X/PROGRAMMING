@@ -11,13 +11,13 @@ In CSS, the position property defines how an element is positioned in the docume
 
 ### **🔧 position Values**
 
-|**Value**|**Description**|
-|---|---|
-|static|Default. Element is in the normal document flow.|
-|relative|Offsets the element relative to its **normal position**.|
-|absolute|Removes the element from flow, no space is created for the element in the page layout and positions it **relative to the nearest positioned ancestor** (not static).|
-|fixed|Positions element relative to the **viewport**; stays fixed during scroll.|
-|sticky|Scrolls normally until it reaches a threshold, then sticks in place.|
+| **Value** | **Description**                                                                                                                                                      |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| static    | Default. Element is in the normal document flow.                                                                                                                     |
+| relative  | Offsets the element relative to its **normal position**.                                                                                                             |
+| absolute  | Removes the element from flow, no space is created for the element in the page layout and positions it **relative to the nearest positioned ancestor** (not static). |
+| fixed     | Positions element relative to the **viewport**; stays fixed during scroll.                                                                                           |
+| sticky    | Scrolls normally until it reaches a threshold, then sticks in place.                                                                                                 |
 
 ```ad-note
 The element is positioned relative to its closest positioned ancestor (if any) or to the initial [[The Containing Block|containing block]].

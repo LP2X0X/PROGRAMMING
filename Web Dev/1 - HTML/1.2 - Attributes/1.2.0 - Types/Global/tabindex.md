@@ -1,3 +1,11 @@
+---
+tags: 
+ - html
+ - attribute
+ - type
+ - global
+---
+
 ### tabindex
 
 The `tabindex` attribute controls the **keyboard navigation order** (tabbing order) of HTML elements.

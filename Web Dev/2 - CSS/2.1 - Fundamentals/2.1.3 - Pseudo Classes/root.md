@@ -18,6 +18,10 @@ It behaves like selecting `html`, but with **higher specificity**, making it use
 - Styles defined in `:root` override the same properties written on `html`.
     
 
+```ad-note
+You can override root font size in DevTools to test the accessibility of your web page.
+```
+
 ### **2. Best place to define CSS variables**
 
 ```css

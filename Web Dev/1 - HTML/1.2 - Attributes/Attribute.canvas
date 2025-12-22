@@ -1,20 +1,24 @@
 {
 	"nodes":[
 		{"id":"c8fd7d75649c409e","type":"text","text":"# Attributes","x":-180,"y":25,"width":240,"height":95},
-		{"id":"c3538e1f1f3aad5c","type":"text","text":"### Boolean Attributes\n\nA **boolean attribute** is an attribute that is either **true by being present**, or **false by being absent**.\n\n---\n\n### 📌 Examples:\n\n```html\n<input type=\"checkbox\" checked />\n<input type=\"text\" disabled />\n<option selected>Option 1</option>\n```\n\nIn these cases:\n\n* `checked`, `disabled`, and `selected` are **boolean attributes**.\n* You don't need to write `checked=\"checked\"` — just having it is enough.\n\n---\n\n### 🧠 How It Works:\n\n| Attribute Present | Value is... |\n| ----------------- | ----------- |\n| ✅ Present         | `true`      |\n| ❌ Absent          | `false`     |\n\n- When toggling between true and false, add and remove the attribute altogether with JavaScript rather than toggling the value.\n\t```js\n\tconst myMedia = document.getElementById(\"mediaFile\");\n\tmyMedia.removeAttribute(\"muted\");\n\tmyMedia.setAttribute(\"muted\");\n\t```\n\n---\n\n### 🔍 Common Boolean Attributes:\n\n* `checked`\n* `disabled`\n* `readonly`\n* `required`\n* `autofocus`\n* `multiple`\n* `hidden`\n* `selected`\n* `controls`\n\n---\n\n### ✅ Tip:\n\nFor boolean attributes, **just include the attribute name** — no value needed.\n\n```html\n<input type=\"text\" readonly> <!-- Correct -->\n<input type=\"text\" readonly=\"readonly\"> <!-- Also valid -->\n```\n","x":-1200,"y":-1480,"width":634,"height":1316},
-		{"id":"87ef26a5ceab5b7f","type":"text","text":"### Enumerated Attributes\n\nAn **enumerated attribute** is an HTML attribute that accepts a **limited set of predefined values** (called an **enumeration**).\n\n---\n\n### ✅ Examples:\n\n#### 🔘 `contenteditable`\n\n```html\n<div contenteditable=\"true\">You can edit this text</div>\n<div contenteditable=\"false\">This is not editable</div>\n```\n\n* Allowed values: `\"true\"`, `\"false\"`\n* Missing or invalid value → **browser default**\n\n---\n\n#### 🗣️ `translate`\n\n```html\n<p translate=\"yes\">This should be translated.</p>\n<p translate=\"no\">Do not translate this.</p>\n```\n\n* Allowed values: `\"yes\"`, `\"no\"`\n\n---\n\n#### 🎨 `draggable`\n\n```html\n<div draggable=\"true\">Drag me</div>\n```\n\n* Allowed values: `\"true\"`, `\"false\"`, `\"auto\"`\n\n---\n\n### 🧠 Notes:\n\n* Values are often **strings**, not booleans.\n* **Invalid values** may be ignored or fallback to default.\n\n---\n\n### 📌 Common Enumerated Attributes:\n\n| Attribute         | Common Values                         |\n| ----------------- | ------------------------------------- |\n| `contenteditable` | `\"true\"`, `\"false\"`                   |\n| `draggable`       | `\"true\"`, `\"false\"`, `\"auto\"`         |\n| `translate`       | `\"yes\"`, `\"no\"`                       |\n| `dir`             | `\"ltr\"`, `\"rtl\"`, `\"auto\"`            |\n| `input type`      | `\"text\"`, `\"email\"`, `\"number\"`, etc. |\n\n---\n\nUse enumerated attributes when the attribute expects one **specific value from a fixed list**.\n","x":-1200,"y":280,"width":634,"height":1300},
 		{"id":"8c27b69059af2a9f","type":"text","text":"# Global Attributes\n\n- Global attributes are attributes that can be set on any HTML element, including elements in the `<head>`.","x":220,"y":-5,"width":520,"height":155},
-		{"id":"a84f746530374476","type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/Notable/id.md","x":960,"y":-542,"width":660,"height":342},
-		{"id":"271bb5c79a2a5b87","x":960,"y":-74,"width":660,"height":447,"type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/Notable/class.md"},
-		{"id":"17d15571e383d182","x":960,"y":480,"width":660,"height":300,"type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/Notable/style.md"},
-		{"id":"09ddc5c88082c7c1","x":960,"y":880,"width":660,"height":380,"type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/Notable/tabindex.md"}
+		{"id":"a84f746530374476","type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/1.2.0 - Types/Global/id.md","x":960,"y":-542,"width":660,"height":342},
+		{"id":"271bb5c79a2a5b87","type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/1.2.0 - Types/Global/class.md","x":960,"y":-74,"width":660,"height":447},
+		{"id":"17d15571e383d182","type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/1.2.0 - Types/Global/style.md","x":960,"y":480,"width":660,"height":300},
+		{"id":"09ddc5c88082c7c1","type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/1.2.0 - Types/Global/tabindex.md","x":960,"y":880,"width":660,"height":380},
+		{"id":"6a2434da6bb809d0","type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/1.2.0 - Types/Boolean Attribute.md","x":-1200,"y":-1480,"width":634,"height":1316},
+		{"id":"88e9dadefee31efa","type":"file","file":"Web Dev/1 - HTML/1.2 - Attributes/1.2.0 - Types/Enumerated Attribute.md","x":-1200,"y":280,"width":634,"height":1300}
 	],
 	"edges":[
-		{"id":"66600b523192ec2d","fromNode":"c8fd7d75649c409e","fromSide":"left","toNode":"c3538e1f1f3aad5c","toSide":"right"},
-		{"id":"3035d119de40fb6e","fromNode":"c8fd7d75649c409e","fromSide":"left","toNode":"87ef26a5ceab5b7f","toSide":"right"},
+		{"id":"66600b523192ec2d","fromNode":"c8fd7d75649c409e","fromSide":"left","toNode":"6a2434da6bb809d0","toSide":"right"},
+		{"id":"3035d119de40fb6e","fromNode":"c8fd7d75649c409e","fromSide":"left","toNode":"88e9dadefee31efa","toSide":"right"},
 		{"id":"2532671450254d0e","fromNode":"c8fd7d75649c409e","fromSide":"right","toNode":"8c27b69059af2a9f","toSide":"left"},
 		{"id":"ef3188d92004369e","fromNode":"8c27b69059af2a9f","fromSide":"right","toNode":"a84f746530374476","toSide":"left"},
 		{"id":"8b077c461621bccc","fromNode":"8c27b69059af2a9f","fromSide":"right","toNode":"271bb5c79a2a5b87","toSide":"left"},
 		{"id":"b52163ee5aec5c94","fromNode":"8c27b69059af2a9f","fromSide":"right","toNode":"17d15571e383d182","toSide":"left"}
-	]
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
 }
