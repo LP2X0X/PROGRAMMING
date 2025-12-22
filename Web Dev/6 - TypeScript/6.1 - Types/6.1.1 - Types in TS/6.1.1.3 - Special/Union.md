@@ -7,7 +7,7 @@ tags:
 
 ### 🔹 Definition
 
-A **union type** lets a variable hold **more than one possible type**.  
+A **union type** is a type formed from two or more other types, representing values that may be _any one_ of those types. We refer to each of these types as the union’s _members_.
 You define it using the `|` (pipe) operator.
 
 ```ts
@@ -25,25 +25,33 @@ It means:
 
 ### 🔹 Why Union Types Exist
 
-They give **flexibility** while maintaining **type safety** —  
-instead of using `any`, which disables type checking, you tell TypeScript the _limited_ set of allowed types.
+They give **flexibility** while maintaining **type safety** — instead of using `any`, which disables type checking, you tell TypeScript the _limited_ set of allowed types.
 
 ---
 
 ### 🔹 Common Use Cases
 
-|Use case|Example|
-|---|---|
-|Handling multiple input types|`string|
-|APIs returning different formats|`User|
-|Optional values before initialization|`T|
-|Narrowing types with conditions|`string|
+| Use case                              | Example |
+| ------------------------------------- | ------- |
+| Handling multiple input types         | `string |
+| APIs returning different formats      | `User   |
+| Optional values before initialization | `T      |
+| Narrowing types with conditions       | `string |
 
 ---
 
-### 🧠 Example: Type Narrowing
+### 🔹 Working with Union Types
 
-TypeScript will only allow an operation if it is valid for _every_ member of the union.
+TypeScript will only allow an operation if it is valid for _every_ member of the union. For example, if you have the union `string | number`, you can’t use methods that are only available on `string`:
+
+```ts
+function printId(id: number | string) {    
+	console.log(id.toUpperCase());  
+// Property 'toUpperCase' does not exist on type 'string | number'.  
+// Property 'toUpperCase' does not exist on type 'number'.`
+}
+```
+
 The solution is to _narrow_ the union with code, TypeScript requires **narrowing** before using members of a specific type.
 
 ```ts
@@ -115,13 +123,13 @@ if (name !== null) {
 
 ### 💡 Tips & Pitfalls
 
-|Tip|Explanation|
-|---|---|
-|🔸 Use union instead of `any`|Keeps type safety|
-|🔸 Always narrow before using|TS won’t allow mixed member access|
-|🔸 Prefer literal unions for fixed choices|Easier validation and autocompletion|
-|⚠️ Avoid overly broad unions|e.g. `string|
-|⚠️ Watch for implicit unions|e.g. `let x; x = 1; x = "a";` infers `string|
+| Tip                                        | Explanation                                  |
+| ------------------------------------------ | -------------------------------------------- |
+| 🔸 Use union instead of `any`              | Keeps type safety                            |
+| 🔸 Always narrow before using              | TS won’t allow mixed member access           |
+| 🔸 Prefer literal unions for fixed choices | Easier validation and autocompletion         |
+| ⚠️ Avoid overly broad unions               | e.g. `string                                 |
+| ⚠️ Watch for implicit unions               | e.g. `let x; x = 1; x = "a";` infers `string |
 
 ---
 
@@ -141,21 +149,21 @@ You can reuse unions across your code easily with type aliases.
 
 ### 🔹 Union vs Intersection
 
-|Concept|Operator|Meaning|Example|
-|---|---|---|---|
-|**Union**|`|`|Can be one of multiple types|
-|**Intersection**|`&`|Must satisfy all types|`{ a: number } & { b: string }`|
+| Concept          | Operator | Meaning                      | Example                         |
+| ---------------- | -------- | ---------------------------- | ------------------------------- |
+| **Union**        | `|`      | Can be one of multiple types |                                 |
+| **Intersection** | `&`      | Must satisfy all types       | `{ a: number } & { b: string }` |
 
 ---
 
 ### 🧾 Summary
 
-|Concept|Description|Example|
-|---|---|---|
-|Union|Value can be one of several types|`string \| number`|
-|Type narrowing|TS checks actual type at runtime branch|`if (typeof x === "string")`|
-|Literal union|Restrict value to fixed set|`"on" \| "off"`|
-|Object union|Combine possible shapes|`{a:number} \| {b:string}`|
+| Concept        | Description                             | Example                      |
+| -------------- | --------------------------------------- | ---------------------------- |
+| Union          | Value can be one of several types       | `string \| number`           |
+| Type narrowing | TS checks actual type at runtime branch | `if (typeof x === "string")` |
+| Literal union  | Restrict value to fixed set             | `"on" \| "off"`              |
+| Object union   | Combine possible shapes                 | `{a:number} \| {b:string}`   |
 
 ---
 
@@ -170,7 +178,3 @@ function handle(input: Input) {
   else console.log(input ? "TRUE" : "FALSE");
 }
 ```
-
----
-
-Would you like me to follow up with a **separate note for intersection types (`&`)** next — same format, so you can keep them side-by-side in Obsidian?

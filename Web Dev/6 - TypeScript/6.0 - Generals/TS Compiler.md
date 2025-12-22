@@ -91,7 +91,7 @@ The options are many; I’ll group them and highlight the ones you’ll likely c
     
 - `--skipLibCheck`, `--skipDefaultLibCheck` : skip type-checking of `.d.ts` libraries (can speed things up). ([TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html?utm_source=chatgpt.com "TypeScript: Documentation - tsc CLI Options"))
     
-- `--noEmitOnError` : don’t produce output files if there are type errors. Good for CI. (you asked about this earlier) ([TypeScript Docs](https://typescriptdocs.com/project-config/compiler-options.html?utm_source=chatgpt.com "tsc CLI Options | Typescript Docs"))
+- `--noEmitOnError` : don’t produce output files if there are type errors. Good for CI. ([TypeScript Docs](https://typescriptdocs.com/project-config/compiler-options.html?utm_source=chatgpt.com "tsc CLI Options | Typescript Docs"))
     
 
 ---

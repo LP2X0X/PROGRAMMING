@@ -14,15 +14,15 @@ They are **not objects** — they have no methods or properties by themselves (t
 
 ## 🧱 2. List of primitive types
 
-|Type|Example|Notes|
-|---|---|---|
-|`string`|`"Hello"`|Text data|
-|`number`|`42`, `3.14`, `NaN`|All numbers are floating-point|
-|`boolean`|`true` / `false`|Logical values|
-|`bigint`|`123n`|For very large integers|
-|`symbol`|`Symbol('id')`|Unique identifiers|
-|`null`|`null`|Intentional absence of any value|
-|`undefined`|`undefined`|Uninitialized or missing value|
+| Type        | Example             | Notes                            |
+| ----------- | ------------------- | -------------------------------- |
+| `string`    | `"Hello"`           | Text data                        |
+| `number`    | `42`, `3.14`, `NaN` | All numbers are floating-point   |
+| `boolean`   | `true` / `false`    | Logical values                   |
+| `bigint`    | `123n`              | For very large integers          |
+| `symbol`    | `Symbol('id')`      | Unique identifiers               |
+| `null`      | `null`              | Intentional absence of any value |
+| `undefined` | `undefined`         | Uninitialized or missing value   |
 
 > ⚠️ Primitives are **passed by value**, not by reference.
 

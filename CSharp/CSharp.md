@@ -13,7 +13,7 @@ type: folder_brief_live
 - **[[CSharp to C++]]**
 - **[[Delegates, Events and Lambda Expressions]]**
 - **[[File I.O and Object Serialization]]**
-- **[[Interfaces]]**
+- **[[CSharp/Interfaces/Interfaces]]**
 - **[[LINQ to Objects]]**
 - **[[CSharp/Miscellaneous/Miscellaneous]]**
 - **[[Multithreaded, Parallel and Async Programming]]**

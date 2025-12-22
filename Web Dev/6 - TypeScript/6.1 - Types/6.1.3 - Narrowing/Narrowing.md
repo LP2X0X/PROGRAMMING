@@ -76,6 +76,20 @@ function printMessage(msg?: string) {
 }
 ```
 
+It’s fairly popular to leverage this behavior, especially for guarding against values like `null` or `undefined` (since null is also an object). 
+
+```ts
+function printAll(strs: string | string[] | null) {
+	if (strs && typeof strs === "object") { 
+	     for (const s of strs) {  
+	         console.log(s);    
+		}  
+	} else if (typeof strs === "string") {
+	    console.log(strs);  
+	}
+}
+```
+
 ⚠️ Be aware that empty strings, `0`, and `false` are falsy — sometimes that matters.
 
 ---

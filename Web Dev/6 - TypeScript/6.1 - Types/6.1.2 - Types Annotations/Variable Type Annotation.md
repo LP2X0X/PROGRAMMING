@@ -12,7 +12,7 @@ tags:
 let myName: string = "Alice";
 ```
 
-- In most cases, though, this isn’t needed. Wherever possible, TypeScript tries to automatically _infer_ the types in your code. For example, the type of a variable is inferred based on the type of its initializer:
+- In most cases, though, this isn’t needed. Wherever possible, TypeScript tries to automatically _[[Type Inference|infer]]_ the types in your code. For example, the type of a variable is inferred based on the type of its initializer:
 
 ```ts
 // No type annotation needed -- 'myName' inferred as type 'string'  

@@ -26,7 +26,7 @@ The compiler just says:
 ```ad-tip
 When you don’t specify a type, and TypeScript can’t infer it from context, the compiler will typically default to `any`.
 
-You usually want to avoid this, though, because `any` isn’t type-checked. Use the compiler flag [`noImplicitAny`](https://www.typescriptlang.org/tsconfig#noImplicitAny) to flag any implicit `any` as an error.
+You usually want to avoid this, though, because `any` isn’t type-checked. Use the compiler flag [[noImplicitAny]] to flag any implicit `any` as an error.
 ```
 
 ---

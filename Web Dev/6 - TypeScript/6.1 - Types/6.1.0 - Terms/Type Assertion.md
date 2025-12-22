@@ -62,11 +62,11 @@ Here:
 
 ## 🚨 Type Assertion vs Type Casting
 
-|Feature|Type Assertion|Type Casting|
-|---|---|---|
-|Language Level|TypeScript only|Runtime languages (C++, Java, etc.)|
-|Effect at Runtime|**No effect**|Changes actual data type|
-|Purpose|Hint TypeScript for type checking|Convert value at runtime|
+| Feature           | Type Assertion                    | Type Casting                        |
+| ----------------- | --------------------------------- | ----------------------------------- |
+| Language Level    | TypeScript only                   | Runtime languages (C++, Java, etc.) |
+| Effect at Runtime | **No effect**                     | Changes actual data type            |
+| Purpose           | Hint TypeScript for type checking | Convert value at runtime            |
 
 ```ts
 let num = "123" as unknown as number; // ✅ valid TS
@@ -107,11 +107,11 @@ let num = (str as unknown) as number;
 
 ## 🧠 Assertion vs Type Guards
 
-|Feature|Type Assertion|Type Guard|
-|---|---|---|
-|Type safety|Manual override|Checked at runtime|
-|Example|`(val as string).length`|`if (typeof val === "string")`|
-|Use case|You know the type ahead of time|You need to verify type dynamically|
+| Feature     | Type Assertion                  | Type Guard                          |
+| ----------- | ------------------------------- | ----------------------------------- |
+| Type safety | Manual override                 | Checked at runtime                  |
+| Example     | `(val as string).length`        | `if (typeof val === "string")`      |
+| Use case    | You know the type ahead of time | You need to verify type dynamically |
 
 💡 **Tip:** Prefer _type guards_ when possible — they’re safer.
 
@@ -156,24 +156,24 @@ The `!` (non-null assertion) is like saying:
 
 ## 🧩 Common Pitfalls
 
-|Pitfall|Example|Why it’s risky|
-|---|---|---|
-|Overriding wrong type|`("123" as number) + 1`|No runtime conversion — still string!|
-|Ignoring `null` checks|`(document.getElementById("id") as HTMLDivElement).innerText`|Crashes if `null`|
-|Overusing assertions|`(val as any).foo.bar.baz()`|Loses all type safety|
-|Using instead of type guards||Type guards are safer, assertions just _assume_|
+| Pitfall                      | Example                                                       | Why it’s risky                                  |
+| ---------------------------- | ------------------------------------------------------------- | ----------------------------------------------- |
+| Overriding wrong type        | `("123" as number) + 1`                                       | No runtime conversion — still string!           |
+| Ignoring `null` checks       | `(document.getElementById("id") as HTMLDivElement).innerText` | Crashes if `null`                               |
+| Overusing assertions         | `(val as any).foo.bar.baz()`                                  | Loses all type safety                           |
+| Using instead of type guards |                                                               | Type guards are safer, assertions just _assume_ |
 
 ---
 
 ## 🧭 Summary
 
-|Concept|Description|
-|---|---|
-|**Purpose**|Tell TypeScript to treat a value as a specific type|
-|**Runtime effect**|None — compile-time only|
-|**Syntax**|`value as Type` (recommended)|
-|**Good for**|DOM access, unknown/any, interop with JS|
-|**Avoid**|Double assertion, unsafe overrides|
+| Concept            | Description                                         |
+| ------------------ | --------------------------------------------------- |
+| **Purpose**        | Tell TypeScript to treat a value as a specific type |
+| **Runtime effect** | None — compile-time only                            |
+| **Syntax**         | `value as Type` (recommended)                       |
+| **Good for**       | DOM access, unknown/any, interop with JS            |
+| **Avoid**          | Double assertion, unsafe overrides                  |
 
 ---
 

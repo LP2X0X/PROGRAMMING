@@ -207,12 +207,12 @@ const { password, ...safeUser } = user;
 
 # 📌 Summary (Quick Notes)
 
-|Concept|Description|
-|---|---|
-|Rest Operator|collects remaining items|
-|Syntax|`...name`|
-|Works In|function params, array destructuring, object destructuring|
-|Rule|must be last item|
-|Returns|array or object|
-|Opposite of|spread operator|
-|TS Support|typed with array types: `...nums: number[]`|
+| Concept       | Description                                                |
+| ------------- | ---------------------------------------------------------- |
+| Rest Operator | collects remaining items                                   |
+| Syntax        | `...name`                                                  |
+| Works In      | function params, array destructuring, object destructuring |
+| Rule          | must be last item                                          |
+| Returns       | array or object                                            |
+| Opposite of   | spread operator                                            |
+| TS Support    | typed with array types: `...nums: number[]`                |

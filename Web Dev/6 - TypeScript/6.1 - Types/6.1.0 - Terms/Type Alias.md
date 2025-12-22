@@ -7,8 +7,7 @@ tags:
 
 ### 🔹 Definition
 
-A **type alias** gives a **custom name** to a type —  
-it can represent a **primitive**, **union**, **object**, **function**, or **complex** type.
+A **type alias** gives a **custom name** to a type — it can represent a **primitive**, **union**, **object**, **function**, or **complex** type.
 
 ```ts
 type MyString = string;
@@ -39,12 +38,12 @@ type Callback = (msg: string) => void;
 
 ### 🔹 Why Use Type Aliases
 
-|Benefit|Description|
-|---|---|
-|✅ Readability|Complex types become easy to understand|
-|✅ Reusability|Reuse across multiple variables or functions|
-|✅ Simplifies unions/intersections|Name large combined types|
-|✅ Consistent updates|Change the alias once → updates everywhere|
+| Benefit                            | Description                                  |
+| ---------------------------------- | -------------------------------------------- |
+| ✅ Readability                     | Complex types become easy to understand      |
+| ✅ Reusability                     | Reuse across multiple variables or functions |
+| ✅ Simplifies unions/intersections | Name large combined types                    |
+| ✅ Consistent updates              | Change the alias once → updates everywhere   |
 
 ---
 
@@ -110,13 +109,13 @@ type TreeNode = {
 
 ### 🔹 Type Aliases vs Interfaces
 
-|Feature|Type Alias|Interface|
-|---|---|---|
-|Can describe primitives, unions, functions|✅ Yes|❌ No|
-|Can be extended/merged|⚠️ No (but can combine with `&`)|✅ Yes|
-|Can describe objects|✅ Yes|✅ Yes|
-|Duplicate declarations merge|❌ No|✅ Yes|
-|Preferred for|Complex, union, or function types|Object shapes, API contracts|
+| Feature                                    | Type Alias                        | Interface                    |
+| ------------------------------------------ | --------------------------------- | ---------------------------- |
+| Can describe primitives, unions, functions | ✅ Yes                            | ❌ No                        |
+| Can be extended/merged                     | ⚠️ No (but can combine with `&`)  | ✅ Yes                       |
+| Can describe objects                       | ✅ Yes                            | ✅ Yes                       |
+| Duplicate declarations merge               | ❌ No                             | ✅ Yes                       |
+| Preferred for                              | Complex, union, or function types | Object shapes, API contracts |
 
 ---
 
@@ -133,11 +132,11 @@ const b: Bear = { name: "Pooh", honey: true };
 
 ### 🧠 Pitfalls
 
-|Pitfall|Description|Fix|
-|---|---|---|
-|❌ Overusing for simple cases|Adds unnecessary abstraction|Use inline types if short|
-|❌ Confusing alias with value|Type aliases only exist at compile time|Can't use at runtime|
-|❌ Expecting interface merging|Aliases can’t merge declarations|Use interface if merging is needed|
+| Pitfall                        | Description                             | Fix                                |
+| ------------------------------ | --------------------------------------- | ---------------------------------- |
+| ❌ Overusing for simple cases  | Adds unnecessary abstraction            | Use inline types if short          |
+| ❌ Confusing alias with value  | Type aliases only exist at compile time | Can't use at runtime               |
+| ❌ Expecting interface merging | Aliases can’t merge declarations        | Use interface if merging is needed |
 
 ---
 
@@ -177,9 +176,9 @@ const user: User = {
 
 ### ✅ Quick Recap
 
-|Concept|Description|Example|
-|---|---|---|
-|**Definition**|Alias a type with a new name|`type ID = string|
-|**Use for**|Complex, reusable, or combined types|`type Pet = Dog|
-|**Extend with**|`&` (intersection)|`type Full = Base & Extra`|
-|**Not for**|Runtime values|`type` disappears after compile|
+| Concept         | Description                          | Example                         |
+| --------------- | ------------------------------------ | ------------------------------- |
+| **Definition**  | Alias a type with a new name         | `type ID = string               |
+| **Use for**     | Complex, reusable, or combined types | `type Pet = Dog                 |
+| **Extend with** | `&` (intersection)                   | `type Full = Base & Extra`      |
+| **Not for**     | Runtime values                       | `type` disappears after compile |

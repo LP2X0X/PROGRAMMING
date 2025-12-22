@@ -26,6 +26,10 @@ typeof null; // "object"
 - `null` is **not actually an object**, but `typeof` reports `"object"` for historical reasons.
     
 
+```ad-note
+You can read more about this here: https://2ality.com/2013/10/typeof-null.html
+```
+
 ---
 
 ### 🔹 When is `null` used?
