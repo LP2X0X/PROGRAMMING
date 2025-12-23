@@ -12,7 +12,7 @@ The `never` type represents values which are _never_ observed. In a return type,
 #### Example
 Use case: Exhaustive Checks
 
-```javascript
+```ts
 function foo(x: string | number): boolean {
   if (typeof x === "string") {
     return true;
@@ -29,6 +29,22 @@ function foo(x: string | number): boolean {
 }
 
 function fail(message: string): never { throw new Error(message); }
+```
+
+```ts
+type Shape = Circle | Square;
+
+function getArea(shape: Shape) {
+  switch (shape.kind) {
+    case "circle":
+      return Math.PI * shape.radius ** 2;
+    case "square":
+      return shape.sideLength ** 2;
+    default:
+      const _exhaustiveCheck: never = shape;
+      return _exhaustiveCheck;
+  }
+}
 ```
 
 #### Main situations where `never` appears automatically

@@ -6,6 +6,11 @@ tags:
 
 A **type guard** is a runtime check that tells TypeScript **which specific type a value has**, allowing safe access to properties or methods of that type.
 
+```ad-note
+The special checks are called _type guards_ and the process of refining types to more specific types than declared is called _narrowing_.
+```
+
+
 ### Example
 
 ```ts

@@ -218,12 +218,12 @@ function sample(...args: (string | number)[]) {} // ✔
 
 # 📌 **Summary (Quick Notes)**
 
-|Concept|Explanation|
-|---|---|
-|Rest parameter|Collects remaining arguments into an array|
-|Syntax|`(...args: Type[])`|
-|Must be last|Yes|
-|Can only be one|Yes|
-|Accepts unions|Yes|
-|Works with tuples|Yes (`...args: [string, number]`)|
-|Useful in|Logging, wrappers, React handlers, spreading args|
+| Concept           | Explanation                                       |
+| ----------------- | ------------------------------------------------- |
+| Rest parameter    | Collects remaining arguments into an array        |
+| Syntax            | `(...args: Type[])`                               |
+| Must be last      | Yes                                               |
+| Can only be one   | Yes                                               |
+| Accepts unions    | Yes                                               |
+| Works with tuples | Yes (`...args: [string, number]`)                 |
+| Useful in         | Logging, wrappers, React handlers, spreading args |

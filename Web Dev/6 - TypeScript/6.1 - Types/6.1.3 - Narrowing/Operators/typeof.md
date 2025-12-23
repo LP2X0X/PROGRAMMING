@@ -1,7 +1,7 @@
 ---
 tags: 
- - ts
- - syntax
+ - typescript
+ - operator
  - type
  - guard
 ---

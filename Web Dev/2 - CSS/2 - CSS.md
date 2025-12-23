@@ -29,7 +29,7 @@ type: folder_brief_live
 - **[[Properties]]**
 - **[[Questions]]**
 - **[[Responsive Design]]**
-- **[[Techniques]]**
+- **[[Web Dev/2 - CSS/Techniques/Techniques]]**
 - **[[X - Styling Options]]**
 
 %% End Waypoint %%
