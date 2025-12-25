@@ -61,14 +61,14 @@ tags:
 
 ### **🧱 Comparison with Create React App (CRA)**
 
-|**Feature**|**Vite**|**CRA (Create React App)**|
-|---|---|---|
-|Dev Server Start|Almost instant|Can be slow|
-|HMR Speed|Extremely fast|Slower|
-|Build Tool|Uses Rollup|Uses Webpack|
-|Configuration|Very flexible|Limited unless ejected|
-|Modern Features|ES modules, tree-shaking|Supports but older structure|
-|Community Support|Growing rapidly|Large but stable|
+| **Feature**       | **Vite**                 | **CRA (Create React App)**   |
+| ----------------- | ------------------------ | ---------------------------- |
+| Dev Server Start  | Almost instant           | Can be slow                  |
+| HMR Speed         | Extremely fast           | Slower                       |
+| Build Tool        | Uses Rollup              | Uses Webpack                 |
+| Configuration     | Very flexible            | Limited unless ejected       |
+| Modern Features   | ES modules, tree-shaking | Supports but older structure |
+| Community Support | Growing rapidly          | Large but stable             |
 
 ---
 

@@ -9,5 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[align-items]]
 - [[justify-content]]
+- [[place-items]]
 
 %% End Waypoint %%

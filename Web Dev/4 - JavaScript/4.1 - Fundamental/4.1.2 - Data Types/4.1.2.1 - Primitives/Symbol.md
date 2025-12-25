@@ -172,11 +172,113 @@ console.log(sym.toString()); // "Symbol(test)"
 
 ### ✅ Summary
 
-|Feature|Symbol|
-|---|---|
-|Type|Primitive|
-|Use case|Unique property keys|
-|Visibility|Hidden from most enumerations|
-|Equality|Each symbol is unique|
-|`Symbol.for()`|Creates/reuses global symbols|
-|Well-known symbols|Customize language behavior|
+| Feature            | Symbol                        |
+| ------------------ | ----------------------------- |
+| Type               | Primitive                     |
+| Use case           | Unique property keys          |
+| Visibility         | Hidden from most enumerations |
+| Equality           | Each symbol is unique         |
+| `Symbol.for()`     | Creates/reuses global symbols | 
+| Well-known symbols | Customize language behavior   |
+
+----
+
+There are three ways to access a Symbol created by a third-party library, depending on how the library author intended it to be used.
+
+### 1. The Standard Way: The Library Exports the Symbol
+
+If the library expects you to read or write to that specific Symbol property, they **must export the Symbol variable** so you can import it.
+
+You cannot "recreate" the symbol; you must use the **exact same reference**.
+
+**Library Code (`library.js`):**
+
+```js
+// The library creates the symbol
+export const LIB_metadata = Symbol('metadata');
+
+export const myObject = {
+  [LIB_metadata]: "Secret Info",
+  data: "Public Info"
+};
+```
+
+**Your Code (`app.js`):**
+
+```js
+import { myObject, LIB_metadata } from './library.js';
+
+// ❌ WRONG: Creating a new symbol won't work
+const myGuess = Symbol('metadata');
+console.log(myObject[myGuess]); // undefined
+
+// ✅ CORRECT: Use the exported reference
+console.log(myObject[LIB_metadata]); // "Secret Info"
+```
+
+---
+
+### 2. The Global Registry: `Symbol.for()`
+
+Sometimes, different libraries (or different parts of a huge app) need to agree on a specific Symbol without importing it from a single file. For this, JavaScript provides a **Global Symbol Registry**.
+
+Instead of `Symbol()`, you use `Symbol.for('key')`.
+
+- If a symbol with that key exists in the registry, it returns it.
+    
+- If not, it creates it globally.
+    
+
+**Library Code:**
+
+```js
+// Creates a global symbol keyed by 'app.user.id'
+const userIdSym = Symbol.for('app.user.id');
+const user = {
+    [userIdSym]: 42
+};
+```
+
+**Your Code:**
+
+```js
+// You don't need to import the variable!
+// You just need to know the string key used in the registry.
+const sameSym = Symbol.for('app.user.id');
+
+console.log(user[sameSym]); // 42
+console.log(sameSym === Symbol.for('app.user.id')); // true
+```
+
+> **Analogy:** `Symbol('foo')` is like a private key to a house (only the holder has it). `Symbol.for('foo')` is like a P.O. Box (anyone who knows the number can access it).
+
+---
+
+### 3. The "Hacker" Way: Reflection
+
+If the library used a standard `Symbol()` (not global) and **did not export it**, they likely intended for that property to be private or internal.
+
+However, if you _really_ need to access it (for debugging or patching), you can use `Object.getOwnPropertySymbols()`. This returns an array of all symbol keys on an object.
+
+JavaScript
+
+```js
+import { hiddenObject } from './library.js';
+
+// 1. Get all symbols on the object
+const symbols = Object.getOwnPropertySymbols(hiddenObject);
+
+// 2. Find the one you want (e.g., the first one)
+const secretKey = symbols[0];
+
+// 3. Access the data
+console.log(hiddenObject[secretKey]); 
+```
+
+### Summary of Access Methods
+
+| **Method**         | **Use Case**       | **Requirement**                                            |
+| ------------------ | ------------------ | ---------------------------------------------------------- |
+| **Export/Import**  | Standard API usage | You must import the variable from the library.             |
+| **`Symbol.for()`** | Shared/Global keys | You must know the exact string key string.                 |
+| **Reflection**     | Debugging/Hacking  | You retrieve the symbol from the object itself at runtime. | 

@@ -63,10 +63,10 @@ const greet: Greeter = (n) => `Hello, ${n}`;
 
 # Function Type Expression vs. Function Declaration
 
-|Concept|Example|Meaning|
-|---|---|---|
-|**Function Type Expression**|`(x: number) => number`|_Describes_ a function’s shape|
-|**Function Definition**|`function add(x: number) { return x + 1; }`|_Implements_ the function|
+| Concept                      | Example                                     | Meaning                        |
+| ---------------------------- | ------------------------------------------- | ------------------------------ |
+| **Function Type Expression** | `(x: number) => number`                     | _Describes_ a function’s shape |
+| **Function Definition**      | `function add(x: number) { return x + 1; }` | _Implements_ the function      |
 
 ---
 

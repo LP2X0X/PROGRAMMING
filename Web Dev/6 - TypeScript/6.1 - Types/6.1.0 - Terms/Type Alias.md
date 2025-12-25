@@ -7,7 +7,7 @@ tags:
 
 ### 🔹 Definition
 
-A **type alias** gives a **custom name** to a type — it can represent a **primitive**, **union**, **object**, **function**, or **complex** type.
+A **type alias** gives a **custom name** to a type using the **_type_** keyword — it can represent a **primitive**, **union**, **object**, **function**, or **complex** type.
 
 ```ts
 type MyString = string;
@@ -32,6 +32,10 @@ type Point = { x: number; y: number };
 type Status = "loading" | "success" | "error";
 type Response = string | null;
 type Callback = (msg: string) => void;
+```
+
+```ad-tip
+Use PascalCase for alias names (`UserInfo`, not `userInfoType`).
 ```
 
 ---

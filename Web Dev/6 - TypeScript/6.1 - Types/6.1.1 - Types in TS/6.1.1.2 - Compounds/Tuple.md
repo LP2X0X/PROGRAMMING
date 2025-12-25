@@ -16,7 +16,7 @@ It lets you model an array **with a precise structure**, similar to a small reco
 
 ---
 
-# ✅ Basic Example
+## ✅ Basic Example
 
 ```ts
 let person: [string, number] = ["Bob", 25];
@@ -33,7 +33,7 @@ Meaning:
 
 ---
 
-# ✅ Why use tuples?
+## ✅ Why use tuples?
 
 ### ✔ To represent structured, fixed-size data:
 
@@ -50,7 +50,7 @@ let point: [number, number] = [10, 20];
 
 ---
 
-# ✅ Optional tuple elements
+## ✅ Optional tuple elements
 
 ```ts
 let user: [string, number?];
@@ -60,7 +60,7 @@ user = ["Alice", 30];
 
 ---
 
-# ✅ Labels for readability (TS 4.0+)
+## ✅ Labels for readability (TS 4.0+)
 
 ```ts
 let user: [name: string, age: number] = ["Bob", 25];
@@ -70,7 +70,7 @@ Labels don’t affect behavior—only readability.
 
 ---
 
-# ✅ Rest elements in tuples (variadic tuples)
+## ✅ Rest elements in tuples (variadic tuples)
 
 An open-ended tuple is where its items have some structure, but the number of elements isn't fixed.
 
@@ -82,7 +82,7 @@ const a: StringList = ["first", "second", "third"];
 
 ---
 
-# ✅ Readonly tuples
+## ✅ Readonly tuples
 
 ```ts
 const point: readonly [number, number] = [1, 2];
@@ -91,7 +91,7 @@ const point: readonly [number, number] = [1, 2];
 
 ---
 
-# ✅ Using tuples with functions
+## ✅ Using tuples with functions
 
 ### **Return multiple values**
 
@@ -111,7 +111,7 @@ const [count, setCount] = useState(0);
 
 ---
 
-# Summary
+## Summary
 
 Tuples in TypeScript have:
 
