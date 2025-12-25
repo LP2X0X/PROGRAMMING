@@ -153,6 +153,15 @@ Bad:
 
 ---
 
+## **✔ 9. Don’t overuse `<h4>`, `<h5>`, `<h6>`**
+
+- Be aware that using h1-h6 tags to mark up groups of headings and their associated sub-headings/taglines is discouraged.
+    
+- Instead, try and reserve h1-h6 elements for when sections of content require a distinct heading. So, how should we author such content? It is recommended to group it in an [[hgroup]] element.
+    
+
+---
+
 # 🔹 **3. Quick Cheatsheet**
 
 **Use this mental model:**

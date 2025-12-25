@@ -6,7 +6,16 @@ tags:
 ---
 
 ### 🔹 **Definition**  
-The `width` property in CSS defines the horizontal size of an element’s content area. It controls how wide the element appears in the layout, without including padding, borders, or margins (unless `box-sizing` changes that behavior).
+The `width` property in CSS defines the horizontal size of an element’s **content** area. It controls how wide the element appears in the layout, without including padding, borders, or margins (unless `box-sizing` changes that behavior).
+
+---
+
+### 🔹 **Default Behavior**
+
+- Block-level elements (e.g., `<div>`) default to `width: auto` and expand to fill the container.
+    
+- Inline elements (e.g., `<span>`) ignore `width` unless changed to `display: inline-block`, `block`, or `flex`.
+    
 
 ---
 
@@ -82,13 +91,4 @@ div {
 ```
 
 - Useful for making layouts responsive but preventing elements from becoming too small or too large.
-    
-
----
-
-### 🔹 **Default Behavior**
-
-- Block-level elements (e.g., `<div>`) default to `width: auto` and expand to fill the container.
-    
-- Inline elements (e.g., `<span>`) ignore `width` unless changed to `display: inline-block`, `block`, or `flex`.
     

@@ -214,12 +214,12 @@ Grid items don’t collapse margins — spacing is explicit.
 
 ## 5. 🔹 Quick Reference Table
 
-|Context|Trigger|Key Features|
-|---|---|---|
-|BFC|float, overflow≠visible, inline-block, absolute, fixed, table-cell, flow-root|Margins collapse, contains floats|
-|IFC|inline content in block box|Line boxes, vertical-align|
-|FFC|display: flex/inline-flex|No margin collapse, flex alignment|
-|GFC|display: grid/inline-grid|No margin collapse, grid tracks|
-|Table FC|display: table*|Table layout rules|
-|AbsPos FC|position: absolute/fixed|Out of normal flow|
-|Multicolumn FC|columns set|Flow split into columns|
+| Context        | Trigger                                                                       | Key Features                       |
+| -------------- | ----------------------------------------------------------------------------- | ---------------------------------- |
+| BFC            | float, overflow≠visible, inline-block, absolute, fixed, table-cell, flow-root | Margins collapse, contains floats  |
+| IFC            | inline content in block box                                                   | Line boxes, vertical-align         |
+| FFC            | display: flex/inline-flex                                                     | No margin collapse, flex alignment |
+| GFC            | display: grid/inline-grid                                                     | No margin collapse, grid tracks    |
+| Table FC       | display: table*                                                               | Table layout rules                 |
+| AbsPos FC      | position: absolute/fixed                                                      | Out of normal flow                 |
+| Multicolumn FC | columns set                                                                   | Flow split into columns            |

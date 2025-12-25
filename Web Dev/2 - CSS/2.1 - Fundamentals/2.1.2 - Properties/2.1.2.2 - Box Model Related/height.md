@@ -9,6 +9,10 @@ tags:
 The `height` property in CSS specifies the height of an element’s **content box**.  
 It does **not** include padding, border, or margin unless `box-sizing: border-box` is applied.
 
+```ad-important
+- Use `min-height` instead of a fixed `height` for content that might grow, to avoid overflow.
+```
+
 ---
 
 ### 🔹 **Syntax**
@@ -65,10 +69,6 @@ selector {
 
 ### 💡 **Tips**
 
-```ad-important
-- Use `min-height` instead of a fixed `height` for content that might grow, to avoid overflow.
-```
-    
 - When using percentage heights, ensure the parent has a defined height.
     
 - Use `box-sizing: border-box` so that padding and border are included in the height calculation.

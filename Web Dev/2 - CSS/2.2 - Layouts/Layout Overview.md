@@ -5,6 +5,10 @@ tags:
  - overview
 ---
 
+```ad-important
+Layouts are all about relationships between elements.
+```
+
 ![[Pasted image 20250824140231.png|center]]
 ![[Pasted image 20250824140247.png|center]]
 
