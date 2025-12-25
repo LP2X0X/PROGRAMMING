@@ -11,7 +11,7 @@ type: folder_brief_live
 - [[contenteditable]]
 - [[download]]
 - [[for]]
-- [[name]]
+- [[Web Dev/1 - HTML/1.2 - Attributes/Notable/name]]
 - [[target]]
 
 %% End Waypoint %%

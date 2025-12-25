@@ -35,13 +35,13 @@ null === undefined  // ❌ false (different types)
 
 ### 🔹 3. **Default/Unset Use Cases**
 
-|When it appears|`null`|`undefined`|
-|---|---|---|
-|Manually set value|✅ Yes|🟡 Rarely (usually avoided)|
-|Uninitialized variable|❌ No|✅ Yes|
-|Missing function arg|❌ No|✅ Yes|
-|Missing object prop|❌ No|✅ Yes|
-|JSON|✅ Included as `null`|❌ Omitted if undefined|
+| When it appears        | `null`                | `undefined`                 |
+| ---------------------- | --------------------- | --------------------------- |
+| Manually set value     | ✅ Yes                | 🟡 Rarely (usually avoided) |
+| Uninitialized variable | ❌ No                 | ✅ Yes                      |
+| Missing function arg   | ❌ No                 | ✅ Yes                      |
+| Missing object prop    | ❌ No                 | ✅ Yes                      |
+| JSON                   | ✅ Included as `null` | ❌ Omitted if undefined     |
 
 ---
 

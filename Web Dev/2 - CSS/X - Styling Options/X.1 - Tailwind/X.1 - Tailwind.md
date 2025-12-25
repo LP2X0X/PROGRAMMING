@@ -19,6 +19,6 @@ type: folder_brief_live
 - [[Tailwind Config Ver 4. -]]
 - [[Tailwind Config Ver 4. +]]
 - [[Tailwind Overview]]
-- **[[Techniques]]**
+- **[[Web Dev/2 - CSS/X - Styling Options/X.1 - Tailwind/Techniques/Techniques]]**
 
 %% End Waypoint %%

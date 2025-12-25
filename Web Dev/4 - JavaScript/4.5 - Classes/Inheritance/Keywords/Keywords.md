@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[extends Keyword]]
-- [[instanceof]]
+- [[Web Dev/4 - JavaScript/4.5 - Classes/Inheritance/Keywords/instanceof]]
 - [[super Keyword]]
 
 %% End Waypoint %%

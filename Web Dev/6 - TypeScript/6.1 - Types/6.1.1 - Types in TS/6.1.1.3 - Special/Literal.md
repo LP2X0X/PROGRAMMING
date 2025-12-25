@@ -72,6 +72,65 @@ This is not common, but it’s useful for functions that always return a fixed b
 
 ---
 
+### 4️⃣ **Object Literal Types**
+
+```ts
+let user: { name: string; role: "admin" | "user" };
+
+user = { name: "Alice", role: "admin" }; // ✅
+user = { name: "Bob", role: "guest" };   // ❌ (invalid role)
+```
+
+---
+
+### 5️⃣ Enum-like Literal Unions (recommended pattern)
+
+```ts
+type Status = "idle" | "loading" | "success" | "error";
+```
+
+✔ Tree-shakeable  
+✔ Zero runtime output  
+✔ More flexible than `enum`
+
+---
+
+### 6️⃣ Tuple Literal Types
+
+```ts
+type Point = [x: number, y: number];
+```
+
+More specific than `number[]`:
+
+- Fixed length
+    
+- Fixed order
+    
+- Can include literals
+    
+
+`type HttpResponse = [200, "OK"];`
+
+---
+
+### 7️⃣ Template Literal Types (powerful)
+
+```ts
+type EventName = `on${Capitalize<string>}`;
+```
+
+Or constrained forms:
+
+```ts
+type Route = `/api/${"users" | "posts"}/${number}`;
+```
+
+✔ Compile-time string construction  
+✔ No runtime cost
+
+---
+
 ## 🧩 Why Use Literal Types?
 
 They make your code:
@@ -217,23 +276,23 @@ function handleResponse(r: Response) {
 
 ## ⚠️ Common Pitfalls
 
-|Pitfall|Example|Fix|
-|---|---|---|
-|Type widening with `let`|`let mode = "dark"; // type: string`|Use `const` or `as const`|
-|Overly narrow literal|`let val: 10 = 20;`|Assign same literal value|
-|Forgetting union|`let type: "car";` (only "car")|Use `"car"|
+| Pitfall                  | Example                              | Fix                       |
+| ------------------------ | ------------------------------------ | ------------------------- |
+| Type widening with `let` | `let mode = "dark"; // type: string` | Use `const` or `as const` |
+| Overly narrow literal    | `let val: 10 = 20;`                  | Assign same literal value |
+| Forgetting union         | `let type: "car";` (only "car")      | Use `"car"                |
 
 ---
 
 ## 🧭 Summary
 
-|Concept|Explanation|Example|
-|---|---|---|
-|Literal Type|Restricts variable to a specific value|`let x: "yes"|
-|Inferred Literal|`const name = "TS";` ⇒ `"TS"`||
-|Widened Type|`let name = "TS";` ⇒ `string`||
-|`as const`|Makes all fields literal and readonly|`{ role: "user" } as const`|
-|Typical Use|Config values, modes, statuses|`"light"|
+| Concept          | Explanation                            | Example                     |
+| ---------------- | -------------------------------------- | --------------------------- |
+| Literal Type     | Restricts variable to a specific value | `let x: "yes"               |
+| Inferred Literal | `const name = "TS";` ⇒ `"TS"`          |                             |
+| Widened Type     | `let name = "TS";` ⇒ `string`          |                             |
+| `as const`       | Makes all fields literal and readonly  | `{ role: "user" } as const` |
+| Typical Use      | Config values, modes, statuses         | `"light"                    |
 
 ---
 
@@ -254,7 +313,3 @@ function log(status: "success" | "error") {
   if (status === "success") console.log("Yay!");
 }
 ```
-
----
-
-Would you like me to make a **follow-up note on “Literal Inference and `as const` Deep Dive”**, explaining how TS decides whether to widen or preserve literals (with diagrams)? It’s one of the trickiest but most powerful parts of mastering TS types.

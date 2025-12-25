@@ -48,20 +48,20 @@ The most important section — defines how TypeScript compiles your code.
 
 ### 🧱 **Core Options**
 
-|Option|Description|Example / Tip|
-|---|---|---|
-|`target`|ECMAScript version output|`"ES5"`, `"ES6"`, `"ESNext"`|
-|`module`|Module system to use|`"commonjs"`, `"esnext"`, `"amd"`|
-|`lib`|Built-in type definitions to include|`["ES2020", "DOM"]`|
-|`allowJs`|Allow JS files to be compiled|`true` for migration projects|
-|`checkJs`|Type-check JS files|Works only if `allowJs` is true|
-|`jsx`|JSX support mode|`"react"`, `"react-jsx"`, `"preserve"`|
-|`outDir`|Output directory for compiled JS|`"./dist"`|
-|`rootDir`|Base directory for input files|`"./src"`|
-|`removeComments`|Strip comments from output|`"true"`|
-|`noEmit`|Compile type-check only (no output)|`"true"`|
-|`noEmitOnError`|Prevent emitting if there are errors|`"true"`|
-|`sourceMap`|Generate `.map` files for debugging|`"true"`|
+| Option           | Description                          | Example / Tip                          |
+| ---------------- | ------------------------------------ | -------------------------------------- |
+| `target`         | ECMAScript version output            | `"ES5"`, `"ES6"`, `"ESNext"`           |
+| `module`         | Module system to use                 | `"commonjs"`, `"esnext"`, `"amd"`      |
+| `lib`            | Built-in type definitions to include | `["ES2020", "DOM"]`                    |
+| `allowJs`        | Allow JS files to be compiled        | `true` for migration projects          |
+| `checkJs`        | Type-check JS files                  | Works only if `allowJs` is true        |
+| `jsx`            | JSX support mode                     | `"react"`, `"react-jsx"`, `"preserve"` |
+| `outDir`         | Output directory for compiled JS     | `"./dist"`                             |
+| `rootDir`        | Base directory for input files       | `"./src"`                              |
+| `removeComments` | Strip comments from output           | `"true"`                               |
+| `noEmit`         | Compile type-check only (no output)  | `"true"`                               |
+| `noEmitOnError`  | Prevent emitting if there are errors | `"true"`                               |
+| `sourceMap`      | Generate `.map` files for debugging  | `"true"`                               |
 
 ---
 
@@ -69,29 +69,29 @@ The most important section — defines how TypeScript compiles your code.
 
 These improve type safety and catch bugs early.
 
-|Option|Description|Tip|
-|---|---|---|
-|`strict`|Enables all strict mode checks|Best to keep `true`|
-|`noImplicitAny`|Error when type inferred as `any`|Forces explicit typing|
-|`strictNullChecks`|Disallows assigning `null`/`undefined`|Prevents “billion dollar mistake”|
-|`strictFunctionTypes`|Ensures function parameter types are compatible|Useful for callbacks|
-|`strictBindCallApply`|Checks arguments for `.bind`, `.call`, `.apply`|Helps avoid silent errors|
-|`alwaysStrict`|Emit JS with `"use strict"`|Recommended|
+| Option                | Description                                     | Tip                               |
+| --------------------- | ----------------------------------------------- | --------------------------------- |
+| `strict`              | Enables all strict mode checks                  | Best to keep `true`               |
+| `noImplicitAny`       | Error when type inferred as `any`               | Forces explicit typing            |
+| `strictNullChecks`    | Disallows assigning `null`/`undefined`          | Prevents “billion dollar mistake” |
+| `strictFunctionTypes` | Ensures function parameter types are compatible | Useful for callbacks              |
+| `strictBindCallApply` | Checks arguments for `.bind`, `.call`, `.apply` | Helps avoid silent errors         |
+| `alwaysStrict`        | Emit JS with `"use strict"`                     | Recommended                       |
 
 ---
 
 ### 🧩 **Module Resolution Options**
 
-|Option|Description|Example|
-|---|---|---|
-|`moduleResolution`|How TS looks for modules|`"node"`, `"classic"`|
-|`baseUrl`|Base folder for module imports|`"./src"`|
-|`paths`|Map import paths to specific folders|`{ "@utils/*": ["utils/*"] }`|
-|`rootDirs`|Virtual directories for resolution|`["src", "generated"]`|
-|`typeRoots`|Directories to look for `@types`|`["./types", "./node_modules/@types"]`|
-|`types`|Limit included type definitions|`["node", "jest"]`|
-|`resolveJsonModule`|Allow importing `.json`|`"true"`|
-
+| Option              | Description                          | Example                                |
+| ------------------- | ------------------------------------ | -------------------------------------- |
+| `moduleResolution`  | How TS looks for modules             | `"node"`, `"classic"`                  |
+| `baseUrl`           | Base folder for module imports       | `"./src"`                              |
+| `paths`             | Map import paths to specific folders | `{ "@utils/*": ["utils/*"] }`          |
+| `rootDirs`          | Virtual directories for resolution   | `["src", "generated"]`                 |
+| `typeRoots`         | Directories to look for `@types`     | `["./types", "./node_modules/@types"]` |
+| `types`             | Limit included type definitions      | `["node", "jest"]`                     |
+| `resolveJsonModule` | Allow importing `.json`              | `"true"`                               |
+	
 💡 **Tip:**  
 Use `baseUrl` + `paths` to clean up ugly relative imports like `../../../utils`.
 
@@ -99,16 +99,16 @@ Use `baseUrl` + `paths` to clean up ugly relative imports like `../../../utils`.
 
 ### 📦 **Emit / Output Control**
 
-|Option|Description|
-|---|---|
-|`declaration`|Generate `.d.ts` files for libs|
-|`declarationMap`|Generate source maps for declarations|
-|`emitDeclarationOnly`|Only emit `.d.ts` files|
-|`downlevelIteration`|Support for `for...of` and spread in ES5|
-|`importHelpers`|Use `tslib` for helpers (reduces size)|
-|`isolatedModules`|Ensures each file can be compiled alone (for Babel, etc.)|
-|`esModuleInterop`|Fixes `import` issues with CommonJS|
-|`allowSyntheticDefaultImports`|Allows `import React from "react"` even without default export|
+| Option                         | Description                                                    |
+| ------------------------------ | -------------------------------------------------------------- |
+| `declaration`                  | Generate `.d.ts` files for libs                                |
+| `declarationMap`               | Generate source maps for declarations                          |
+| `emitDeclarationOnly`          | Only emit `.d.ts` files                                        |
+| `downlevelIteration`           | Support for `for...of` and spread in ES5                       | 
+| `importHelpers`                | Use `tslib` for helpers (reduces size)                         |
+| `isolatedModules`              | Ensures each file can be compiled alone (for Babel, etc.)      |
+| `esModuleInterop`              | Fixes `import` issues with CommonJS                            |
+| `allowSyntheticDefaultImports` | Allows `import React from "react"` even without default export |
 
 💡 **Tip:**  
 If you use Babel or bundlers (like Vite, Webpack, Next.js), enable `isolatedModules` and `esModuleInterop`.
@@ -117,23 +117,23 @@ If you use Babel or bundlers (like Vite, Webpack, Next.js), enable `isolatedModu
 
 ### 🧪 **Experimental Options**
 
-|Option|Description|Example|
-|---|---|---|
-|`experimentalDecorators`|Enable decorators syntax|`"true"`|
-|`emitDecoratorMetadata`|Emit metadata for decorators|`"true"`|
-|`useDefineForClassFields`|Change how class fields are emitted|`"true"` (aligns with ES spec)|
+| Option                    | Description                         | Example                        |
+| ------------------------- | ----------------------------------- | ------------------------------ |
+| `experimentalDecorators`  | Enable decorators syntax            | `"true"`                       |
+| `emitDecoratorMetadata`   | Emit metadata for decorators        | `"true"`                       |
+| `useDefineForClassFields` | Change how class fields are emitted | `"true"` (aligns with ES spec) |
 
 ---
 
 ### 🧹 **Code Quality / Error Options**
 
-|Option|Description|
-|---|---|
-|`noUnusedLocals`|Error on unused local variables|
-|`noUnusedParameters`|Error on unused parameters|
-|`noImplicitReturns`|Error if not all code paths return|
-|`noFallthroughCasesInSwitch`|Warn on missing `break` in switch|
-|`forceConsistentCasingInFileNames`|Enforce consistent file name casing|
+| Option                             | Description                         |
+| ---------------------------------- | ----------------------------------- |
+| `noUnusedLocals`                   | Error on unused local variables     |
+| `noUnusedParameters`               | Error on unused parameters          | 
+| `noImplicitReturns`                | Error if not all code paths return  |
+| `noFallthroughCasesInSwitch`       | Warn on missing `break` in switch   |
+| `forceConsistentCasingInFileNames` | Enforce consistent file name casing |
 
 ---
 
@@ -280,24 +280,24 @@ This allows incremental compilation across multiple projects.
 
 ## 🪄 Quick Tips
 
-|Situation|Recommended Option|
-|---|---|
-|You use React|`"jsx": "react-jsx"`|
-|You use Node.js|`"module": "commonjs"`|
-|You use modern bundlers (Vite, Webpack 5+)|`"module": "esnext"`|
-|You import JSON|`"resolveJsonModule": true`|
-|You have slow builds|`"skipLibCheck": true"`|
-|You want only type-checking|`"noEmit": true"`|
-|You need safety|`"strict": true"`|
+| Situation                                  | Recommended Option          |
+| ------------------------------------------ | --------------------------- |
+| You use React                              | `"jsx": "react-jsx"`        |
+| You use Node.js                            | `"module": "commonjs"`      |
+| You use modern bundlers (Vite, Webpack 5+) | `"module": "esnext"`        |
+| You import JSON                            | `"resolveJsonModule": true` |
+| You have slow builds                       | `"skipLibCheck": true"`     | 
+| You want only type-checking                | `"noEmit": true"`           |
+| You need safety                            | `"strict": true"`           |
 
 ---
 
 ## ✅ Summary
 
-|Category|Key Options|
-|---|---|
-|Target & Output|`target`, `module`, `outDir`, `rootDir`|
-|Type Checking|`strict`, `noImplicitAny`, `strictNullChecks`|
-|Module Resolution|`baseUrl`, `paths`, `moduleResolution`|
-|Code Quality|`noUnusedLocals`, `noImplicitReturns`|
-|Project Setup|`include`, `exclude`, `extends`, `references`|
+| Category          | Key Options                                   |
+| ----------------- | --------------------------------------------- |
+| Target & Output   | `target`, `module`, `outDir`, `rootDir`       |
+| Type Checking     | `strict`, `noImplicitAny`, `strictNullChecks` |
+| Module Resolution | `baseUrl`, `paths`, `moduleResolution`        | 
+| Code Quality      | `noUnusedLocals`, `noImplicitReturns`         |
+| Project Setup     | `include`, `exclude`, `extends`, `references` |

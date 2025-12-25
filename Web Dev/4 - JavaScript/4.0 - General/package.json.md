@@ -5,8 +5,7 @@ tags:
  - other
 ---
 
-It’s the **manifest file** for a Node.js / JavaScript project.  
-It tells Node (and npm/yarn/pnpm) things like:
+It’s the **manifest file** for a Node.js / JavaScript project. It tells Node (and npm/yarn/pnpm) things like:
 
 - What your project is called
     
