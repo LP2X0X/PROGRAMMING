@@ -22,6 +22,23 @@ const processUserMap = (eventMap: Map<string, Event>) => {
 ```
 ````
 
+````ad-Answer
+```ts
+type Event = {
+  message: string;
+};
+
+const processUserMap = (eventMap: Map<string, Event>) => {
+  const event = eventMap.get("error");
+  if (event) {
+    const message = event.message;
+
+    throw new Error(message);
+  }
+};
+```
+````
+
 This is a classic "TypeScript doesn't know what you know" situation.
 
 The reason it fails is that TypeScript treats `has()` and `get()` as **two completely independent method calls**.
