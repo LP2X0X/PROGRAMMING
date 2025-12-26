@@ -6,8 +6,8 @@ tags:
 
 ## What “Control Flow Analysis” means
 
-Control flow analysis is TS’s process of looking at how your code **executes at runtime in terms of branching, return/throw, loops, assignments**, etc., and using that execution-structure _and_ your type annotations to infer more specific (narrowed) types than just the declared ones.  
-In other words: TS doesn't only look at type‑guards like `if (typeof x === "string")`, it also watches which code paths are reachable, which assignments happen, whether the function returns early, and so on. The combination of “guards + flow” lets TS narrow.
+- Control flow analysis is TS’s process of looking at how your code **executes at runtime in terms of branching, return/throw, loops, assignments**, etc., and using that execution-structure _and_ your type annotations to infer more specific (narrowed) types than just the declared ones.  
+- In other words: TS doesn't only look at type‑guards like `if (typeof x === "string")`, it also watches which code paths are reachable, which assignments happen, whether the function returns early, and so on. The combination of “guards + flow” lets TS narrow.
 
 From the docs:
 

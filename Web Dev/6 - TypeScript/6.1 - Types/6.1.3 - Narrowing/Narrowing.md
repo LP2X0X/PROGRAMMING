@@ -9,7 +9,7 @@ tags:
 **Narrowing** is the process TypeScript uses to **refine a variable’s type** from a broad type (like `string | number`) to a **more specific** one (like just `string`) based on logic in your code.
 
 > 💬 Think of it like TypeScript saying:  
-> “After this check, I can be more confident about what this value actually is.”
+> 		“After this check, I can be more confident about what this value actually is.”
 
 ---
 
@@ -231,11 +231,11 @@ TS keeps track of reassignment and scopes to maintain accurate narrowing.
 
 ## ⚠️ Common Pitfalls
 
-|Pitfall|Example|Fix|
-|---|---|---|
-|Forgetting `strictNullChecks`|TS won’t narrow `string|null` properly|
-|Using unsafe assertions|`(x as number).toFixed()`|Use `typeof` guard instead|
-|Missing `default` in switch|TS can’t detect exhaustive checks|Add `default` or `never` case|
+| Pitfall                       | Example                                | Fix                           |
+| ----------------------------- | -------------------------------------- | ----------------------------- |
+| Forgetting `strictNullChecks` | TS won’t narrow `string|null` properly |                               |
+| Using unsafe assertions       | `(x as number).toFixed()`              | Use `typeof` guard instead    |
+| Missing `default` in switch   | TS can’t detect exhaustive checks      | Add `default` or `never` case |
 
 ---
 

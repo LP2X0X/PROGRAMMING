@@ -1,8 +1,8 @@
 ---
 tags: 
- - react
- - app
- - other
+ - js
+ - term
+ - general
 ---
 
 It’s the **manifest file** for a Node.js / JavaScript project. It tells Node (and npm/yarn/pnpm) things like:

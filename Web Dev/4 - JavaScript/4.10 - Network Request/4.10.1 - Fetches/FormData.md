@@ -92,6 +92,9 @@ This will automatically capture all form inputs (including files).
     
 - `forEach(callback)` → Iterate over entries.
     
+- `formData.append(name, blob, fileName)` → add a field as if it were `<input type="file">`, the third argument `fileName` sets file name (not form field name), as it were a name of the file in user’s filesystem,
+    
+
 
 Example:
 

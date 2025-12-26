@@ -10,17 +10,13 @@ When you initialize a variable with an object, TypeScript infers the types of th
 
 For example, if you write:
 
-TypeScript
-
-```
+```ts
 const req = { url: "https://example.com", method: "GET" };
 ```
 
 TypeScript infers `req` to be:
 
-TypeScript
-
-```
+```ts
 {
   url: string;
   method: string;
@@ -35,9 +31,7 @@ This becomes a problem if you try to pass that property to a function that expec
 
 Imagine you have a function like this:
 
-TypeScript
-
-```
+```ts
 function handleRequest(url: string, method: "GET" | "POST") {
   // ...
 }
@@ -64,18 +58,14 @@ You can force the type to be a literal when you create the object or when you us
 
 **Option A (At creation):**
 
-TypeScript
-
-```
+```ts
 // "I specifically want method to be the literal type 'GET'"
 const req = { url: "https://example.com", method: "GET" as "GET" };
 ```
 
 **Option B (At call site):**
 
-TypeScript
-
-```
+```ts
 // "I know req.method is actually 'GET' right now"
 handleRequest(req.url, req.method as "GET");
 ```
@@ -84,9 +74,7 @@ handleRequest(req.url, req.method as "GET");
 
 This is the most powerful solution. You can convert the entire object to be purely literals by using `as const`.
 
-TypeScript
-
-```
+```ts
 const req = { url: "https://example.com", method: "GET" } as const;
 ```
 
@@ -99,9 +87,7 @@ When you use `as const`:
 
 Now `req` is inferred as:
 
-TypeScript
-
-```
+```ts
 {
   readonly url: "https://example.com";
   readonly method: "GET";

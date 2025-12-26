@@ -57,10 +57,10 @@ greet.apply(person, ["Hi", "."]); // Hi, Alice.
 
 ## ✅ Best Use Cases
 
-|Use Case|Use|
-|---|---|
-|Known number of arguments|`call()`|
-|Arguments are already in an array or array-like object|`apply()`|
+| Use Case                                               | Use       |
+| ------------------------------------------------------ | --------- |
+| Known number of arguments                              | `call()`  |
+| Arguments are already in an array or array-like object | `apply()` |
 
 ---
 
@@ -119,9 +119,9 @@ function wrapper(func) {
 
 ## 🔐 Summary Table
 
-|Feature|`call()`|`apply()`|
-|---|---|---|
-|Use|Manual function invocation|Same|
-|`this` control|Yes|Yes|
-|Arguments|List (comma-separated)|Array|
-|Modern alt|`Function(...args)` + spread|Yes (`...args`)|
+| Feature        | `call()`                     | `apply()`       |
+| -------------- | ---------------------------- | --------------- |
+| Use            | Manual function invocation   | Same            |
+| `this` control | Yes                          | Yes             |
+| Arguments      | List (comma-separated)       | Array           |
+| Modern alt     | `Function(...args)` + spread | Yes (`...args`) |

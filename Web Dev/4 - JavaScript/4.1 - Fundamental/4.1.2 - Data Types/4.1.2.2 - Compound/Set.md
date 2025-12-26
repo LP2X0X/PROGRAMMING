@@ -15,12 +15,12 @@ A value cannot be added to a set if it is [[Strict Equality Operator|strictly eq
 
 ### 🔹 Key Features of `Set`
 
-|Feature|Description|
-|---|---|
-|**Uniqueness**|Automatically removes duplicate values|
-|**Insertion Order**|Maintains the order of elements as they are inserted|
-|**Iterable**|Can be used with `for...of`, spread syntax, etc.|
-|**Size**|Has a `.size` property instead of `.length`|
+| Feature             | Description                                          |
+| ------------------- | ---------------------------------------------------- |
+| **Uniqueness**      | Automatically removes duplicate values               |
+| **Insertion Order** | Maintains the order of elements as they are inserted | 
+| **Iterable**        | Can be used with `for...of`, spread syntax, etc.     |
+| **Size**            | Has a `.size` property instead of `.length`          |
 
 ---
 
@@ -51,13 +51,13 @@ console.log(uniqueNumbers);  // Set { 1, 2, 3, 4 }
 
 ### 🔹 Common Methods
 
-|Method|Description|
-|---|---|
-|`add(value)`|Adds a new element to the set|
-|`delete(value)`|Removes an element|
-|`has(value)`|Returns `true` if the value exists|
-|`clear()`|Removes all elements|
-|`forEach(callback)`|Executes a callback for each element|
+| Method              | Description                          |
+| ------------------- | ------------------------------------ |
+| `add(value)`        | Adds a new element to the set        |
+| `delete(value)`     | Removes an element                   |
+| `has(value)`        | Returns `true` if the value exists   |
+| `clear()`           | Removes all elements                 | 
+| `forEach(callback)` | Executes a callback for each element |
 
 ```js
 const s = new Set([1, 2, 3]);

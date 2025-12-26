@@ -17,6 +17,10 @@ tags:
 obj instanceof ClassName
 ```
 
+```ad-note
+In JavaScript and TypeScript `x instanceof Foo` checks whether the _prototype chain_ of `x` contains `Foo.prototype`
+```
+
 ---
 
 ### Primary use case 🎯

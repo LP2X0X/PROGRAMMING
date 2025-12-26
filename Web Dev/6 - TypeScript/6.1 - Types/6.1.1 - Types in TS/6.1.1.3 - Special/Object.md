@@ -23,11 +23,11 @@ obj = 42;                // ❌ (primitive)
 
 ### 🔹 Key characteristics
 
-|Feature|Explanation|
-|---|---|
-|`object` is broad|It only ensures the value is _not primitive_|
-|Can’t access properties|TS doesn’t know what’s inside|
-|Used for generic “object-like” types|e.g. `{}`, arrays, class instances, functions|
+| Feature                              | Explanation                                   |
+| ------------------------------------ | --------------------------------------------- |
+| `object` is broad                    | It only ensures the value is _not primitive_  | 
+| Can’t access properties              | TS doesn’t know what’s inside                 |
+| Used for generic “object-like” types | e.g. `{}`, arrays, class instances, functions |
 
 ---
 
@@ -58,10 +58,10 @@ console.log(person.name); // ✅
 - Never confuse with `{}` — `{}` means _any non-nullish value_, including primitives.
     
 
-|Type|Allows|Example|
-|---|---|---|
-|`object`|Any non-primitive|`{}`, `[]`, `() => {}`|
-|`{}`|Anything but `null`/`undefined`|`42`, `"hi"`, `{}`|
+| Type     | Allows                          | Example                |
+| -------- | ------------------------------- | ---------------------- |
+| `object` | Any non-primitive               | `{}`, `[]`, `() => {}` |
+| `{}`     | Anything but `null`/`undefined` | `42`, `"hi"`, `{}`     |
 
 ---
 

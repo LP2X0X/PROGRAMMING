@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[base]]
 - [[Blackbox programming]]
 - [[Contextual keywords]]
-- [[is]]
+- [[CSharp/OOP/Keyword/is]]
 - [[CSharp/OOP/Keyword/new]]
 - [[Object Identity vs Object Equality]]
 - [[protected]]

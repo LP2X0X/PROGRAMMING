@@ -143,11 +143,11 @@ console.log(result);
 
 ## ⚡ Cheatsheet
 
-|Operation|Method|
-|---|---|
-|object → entries|`Object.entries(obj)`|
-|entries → object|`Object.fromEntries(entries)`|
-|transform values|use `.map()` inside|
-|filter properties|use `.filter()` inside|
-|data from form|`Object.fromEntries(new FormData(form))`|
-|map → object|`Object.fromEntries(map)`|
+| Operation         | Method                                   |
+| ----------------- | ---------------------------------------- |
+| object → entries  | `Object.entries(obj)`                    |
+| entries → object  | `Object.fromEntries(entries)`            |
+| transform values  | use `.map()` inside                      |
+| filter properties | use `.filter()` inside                   |
+| data from form    | `Object.fromEntries(new FormData(form))` |
+| map → object      | `Object.fromEntries(map)`                |

@@ -162,7 +162,3 @@ function isUser(x: any): value is User {} // invalid
     
 - Bridges runtime checks with static typing
     
-
----
-
-If you want next, I can explain **how TypeScript “trusts” predicates** and what happens when they lie, or compare predicates with **`as` type assertions**.

@@ -96,7 +96,7 @@ const myIterator = {
 
 JavaScript has many native objects that implement `Symbol.iterator` by default:
 
-- **Arrays & TypedArrays:** `[1, 2, 3]`
+- **[[Web Dev/4 - JavaScript/4.1 - Fundamental/4.1.2 - Data Types/4.1.2.2 - Compound/Arrays/Array|Arrays & TypedArrays]]:** `[1, 2, 3]`
     
 - **[[Web Dev/4 - JavaScript/4.1 - Fundamental/4.1.2 - Data Types/4.1.2.1 - Primitives/Strings/String|Strings]]:** `"hello"` (Iterates over Unicode code points)
     
