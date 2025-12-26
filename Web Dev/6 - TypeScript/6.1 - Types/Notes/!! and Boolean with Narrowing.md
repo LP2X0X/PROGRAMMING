@@ -1,6 +1,7 @@
 ---
 tags: 
  - typescript
+ - narrowing
  - note
 ---
 

@@ -10,5 +10,6 @@ type: folder_brief_live
 - [[!! and Boolean with Narrowing]]
 - [[Interfaces vs Type Alias]]
 - [[Literal Inference]]
+- [[Narrowing Map]]
 
 %% End Waypoint %%
