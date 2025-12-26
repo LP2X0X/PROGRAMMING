@@ -24,8 +24,9 @@ tags:
 
 - If content is **smaller** than the min size → element still takes the min size.
     
-- If content is **larger** → element expands beyond min size (unless constrained by `max-width`/`max-height`).
+- If content is **larger** and need more space → element expands beyond min size (unless constrained by `max-width`/`max-height`).
     
+> The latter is a behavior that we want.
 
 ---
 

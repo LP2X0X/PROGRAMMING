@@ -5,6 +5,11 @@ tags:
   - fundamental
 ---
 
+```ad-important
+**Inheritance has no “level” in the cascade.**  
+It is a **post-cascade fallback**, applied only when the cascade produces no specified value.
+```
+
 ### 🔹 **Definition**  
 **Inheritance** in CSS is the mechanism where certain property values are **passed down** from a parent element to its child elements.
 
@@ -96,9 +101,20 @@ a {
     
 - Use `unset` when you want an element to either inherit or revert to its default depending on the property.
 
-```ad-important
+````ad-important
 Some elements like **form controls** (`input`, `textarea`, `select`, `button`, `optgroup`) don’t always inherit styles like fonts or colors the same way as normal text elements because browsers apply their own default user-agent styles.
+
+Here's a tip to work around this:
+```css
+button,
+input,
+optgroup,
+select,
+textarea {
+font-family: inherit;
+}
 ```
+````
 
 ---
 

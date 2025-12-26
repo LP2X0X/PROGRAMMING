@@ -2,6 +2,7 @@
 tags:
   - css
   - property
+  - text
   - fundamental
 ---
 
@@ -28,13 +29,13 @@ white-space: normal | nowrap | pre | pre-wrap | pre-line;
 
 ### **📚 Common Values**
 
-|**Value**|**Behavior**|
-|---|---|
-|normal|Collapses whitespace. Lines break as needed. (default)|
-|nowrap|Collapses whitespace. **Prevents line breaks** (text stays on one line).|
-|pre|Preserves whitespace. **No line wrapping**, line breaks follow \n.|
-|pre-wrap|Preserves whitespace **and** wraps text to next line if needed.|
-|pre-line|Collapses whitespace, but **respects line breaks** (\n).|
+| **Value** | **Behavior**                                                             |
+| --------- | ------------------------------------------------------------------------ |
+| normal    | Collapses whitespace. Lines break as needed. (default)                   | 
+| nowrap    | Collapses whitespace. **Prevents line breaks** (text stays on one line). |
+| pre       | Preserves whitespace. **No line wrapping**, line breaks follow \n.       |
+| pre-wrap  | Preserves whitespace **and** wraps text to next line if needed.          |
+| pre-line  | Collapses whitespace, but **respects line breaks** (\n).                 |
 
 ---
 

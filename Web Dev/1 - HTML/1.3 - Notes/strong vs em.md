@@ -16,6 +16,10 @@ tags:
 
 They communicate **different intent**, even though browsers style them similarly by default.
 
+```ad-note
+While `<em>` is used to change the meaning of a sentence as spoken emphasis does ("I _love_ carrots" vs. "I love _carrots_"), `<strong>` is used to give portions of a sentence added importance (e.g., "**Warning!** This is **very dangerous.**") Both `<strong>` and `<em>` can be nested to increase the relative degree of importance or stress emphasis, respectively.
+```
+
 ---
 
 ## 🔴 `<strong>` — Strong Importance
@@ -133,4 +137,9 @@ This is the primary reason semantics matter.
 - If removing it changes **importance** → use `<strong>`
     
 - If removing it changes **meaning or tone** → use `<em>`
-    
+	
+
+---
+
+### Reference
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/strong

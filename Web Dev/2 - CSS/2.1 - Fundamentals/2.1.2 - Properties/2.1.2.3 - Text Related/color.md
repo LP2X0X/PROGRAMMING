@@ -2,6 +2,7 @@
 tags: 
  - css
  - property
+ - text
  - fundamental
 ---
 
