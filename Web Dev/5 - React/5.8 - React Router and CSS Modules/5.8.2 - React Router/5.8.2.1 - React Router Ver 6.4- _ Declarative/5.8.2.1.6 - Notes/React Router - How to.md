@@ -224,13 +224,13 @@ export default function App() {
 
 ## ✅ 10. Summary Table
 
-|Feature|Hook / Component|Example|
-|---|---|---|
-|Basic route setup|`<BrowserRouter>`|Wrap app|
-|Define routes|`<Routes>`, `<Route>`|`<Route path="/" element={<Home />} />`|
-|Navigation (links)|`<Link>` / `<NavLink>`|`<Link to="/about">About</Link>`|
-|Dynamic route params|`useParams()`|`/users/:id`|
-|Navigate in code|`useNavigate()`|`navigate("/home")`|
-|Nested routes|`<Outlet>`|Layout pages|
-|Query params|`useSearchParams()`|`/movies?filter=top`|
-|Lazy loading|`React.lazy()` + `Suspense`|Async route components|
+| Feature              | Hook / Component            | Example                                 |
+| -------------------- | --------------------------- | --------------------------------------- |
+| Basic route setup    | `<BrowserRouter>`           | Wrap app                                |
+| Define routes        | `<Routes>`, `<Route>`       | `<Route path="/" element={<Home />} />` |
+| Navigation (links)   | `<Link>` / `<NavLink>`      | `<Link to="/about">About</Link>`        |
+| Dynamic route params | `useParams()`               | `/users/:id`                            |
+| Navigate in code     | `useNavigate()`             | `navigate("/home")`                     |
+| Nested routes        | `<Outlet>`                  | Layout pages                            |
+| Query params         | `useSearchParams()`         | `/movies?filter=top`                    |
+| Lazy loading         | `React.lazy()` + `Suspense` | Async route components                  |

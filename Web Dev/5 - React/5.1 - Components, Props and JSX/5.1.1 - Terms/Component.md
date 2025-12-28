@@ -7,7 +7,7 @@ tags:
 
 - React application are entirely made out of **components**. It is the building block of user interface.
 	![[Pasted image 20250703191853.png|center|500]]
-- Component has its own data (which made out of [[Prop|props]] and state), logic and appearance. It can then be reused, nested inside each other, and pass data between them.
+- Component has its own data (which made out of [[Web Dev/5 - React/5.1 - Components, Props and JSX/5.1.2 - Props/Prop|props]] and state), logic and appearance. It can then be reused, nested inside each other, and pass data between them.
 	![[Pasted image 20250704205115.png|center|500]]
 - React component names must always start with a capital letter, while HTML tags must be lowercase.
 

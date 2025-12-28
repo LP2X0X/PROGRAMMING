@@ -1,4 +1,4 @@
-# Responsive Design Overview
+# Miscellaneous Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[max-width and min-width]]
-- [[Size Units]]
+- [[CSR or SSR]]
+- [[The React Developer Tools]]
 
 %% End Waypoint %%

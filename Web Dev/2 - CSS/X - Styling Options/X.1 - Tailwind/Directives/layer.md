@@ -157,9 +157,9 @@ Don't rush to put everything in `@layer components`.
 
 ## 5. Summary Table
 
-|**Feature**|**@layer base**|**@layer components**|**@layer utilities**|
-|---|---|---|---|
-|**Target**|HTML Tags (`h1`, `body`)|Classes (`.card`, `.btn`)|Classes (`.text-shadow`)|
-|**Priority**|Lowest|Medium|Highest|
-|**Overrides**|Overridden by everything|Overrides Base, overridden by Utilities|Overrides everything|
-|**Use Case**|Global defaults|Reusable UI widgets|Atomic, low-level helpers|
+| **Feature**   | **@layer base**          | **@layer components**                   | **@layer utilities**      |
+| ------------- | ------------------------ | --------------------------------------- | ------------------------- |
+| **Target**    | HTML Tags (`h1`, `body`) | Classes (`.card`, `.btn`)               | Classes (`.text-shadow`)  |
+| **Priority**  | Lowest                   | Medium                                  | Highest                   |
+| **Overrides** | Overridden by everything | Overrides Base, overridden by Utilities | Overrides everything      |
+| **Use Case**  | Global defaults          | Reusable UI widgets                     | Atomic, low-level helpers |

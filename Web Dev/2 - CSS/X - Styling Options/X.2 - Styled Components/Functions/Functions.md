@@ -1,4 +1,4 @@
-# Notes Overview
+# Functions Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[About useParams and useSearchParams]]
-- [[React Router Notes]]
+- [[css]]
 
 %% End Waypoint %%

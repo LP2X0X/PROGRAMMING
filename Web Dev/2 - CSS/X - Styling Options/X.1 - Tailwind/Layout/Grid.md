@@ -16,13 +16,13 @@ While **Flexbox** is for 1-dimensional layouts (a row of buttons, a navbar), **G
 
 Define the grid wrapper and how many columns it usually has.
 
-|**Class**|**Meaning**|**Use Case**|
-|---|---|---|
-|**`grid`**|`display: grid`|**Required.** Turns the div into a grid container.|
-|**`grid-cols-1`**|1 Column|Good mobile default. Items stack vertically.|
-|**`grid-cols-3`**|3 Equal Columns|Creates a standard 3-column layout. Supports up to 12.|
-|**`grid-cols-12`**|12 Equal Columns|Use this for complex, bootstrap-style layouts where items span different widths.|
-|**`gap-4`**|`gap: 1rem`|Creates space between _both_ rows and columns.|
+| **Class**          | **Meaning**      | **Use Case**                                                                     |
+| ------------------ | ---------------- | -------------------------------------------------------------------------------- |
+| **`grid`**         | `display: grid`  | **Required.** Turns the div into a grid container.                               |
+| **`grid-cols-1`**  | 1 Column         | Good mobile default. Items stack vertically.                                     |
+| **`grid-cols-3`**  | 3 Equal Columns  | Creates a standard 3-column layout. Supports up to 12.                           |
+| **`grid-cols-12`** | 12 Equal Columns | Use this for complex, bootstrap-style layouts where items span different widths. |
+| **`gap-4`**        | `gap: 1rem`      | Creates space between _both_ rows and columns.                                   |
 
 ### The "Arbitrary Value" (Power Move)
 
@@ -39,12 +39,12 @@ Sometimes you don't want equal columns. Use brackets `[]` to define specific wid
 
 By default, every child takes up **1 cell**. You use these classes to make them bigger.
 
-|**Class**|**Meaning**|**Use Case**|
-|---|---|---|
-|**`col-span-2`**|Span 2 columns|Make an item wide (e.g., a featured blog post).|
-|**`col-span-full`**|Span _all_ columns|Great for headers or footers inside a grid.|
-|**`row-span-2`**|Span 2 rows|Make an item tall (vertical).|
-|**`col-start-2`**|Start at line 2|Force an item to skip the first column and start in the second.|
+| **Class**           | **Meaning**        | **Use Case**                                                    |
+| ------------------- | ------------------ | --------------------------------------------------------------- |
+| **`col-span-2`**    | Span 2 columns     | Make an item wide (e.g., a featured blog post).                 |
+| **`col-span-full`** | Span _all_ columns | Great for headers or footers inside a grid.                     |
+| **`row-span-2`**    | Span 2 rows        | Make an item tall (vertical).                                   |
+| **`col-start-2`**   | Start at line 2    | Force an item to skip the first column and start in the second. |
 
 ---
 

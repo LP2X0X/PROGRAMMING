@@ -28,7 +28,6 @@ type: folder_brief_live
 - **[[Notes]]**
 - **[[Properties]]**
 - **[[Questions]]**
-- **[[Responsive Design]]**
 - **[[Techniques]]**
 - **[[X - Styling Options]]**
 
