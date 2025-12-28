@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Operators]]**
+- **[[SQL/Fundamental/Operators/Operators]]**
 - **[[SQL/Fundamental/Others/Others]]**
 - **[[Statements]]**
 

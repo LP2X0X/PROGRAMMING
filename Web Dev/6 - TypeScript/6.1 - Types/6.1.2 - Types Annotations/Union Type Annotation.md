@@ -26,6 +26,13 @@ This tells TypeScript:
 let variableName: Type1 | Type2 | Type3;
 ```
 
+````ad-note
+The or | symbol can be at the beginning also:
+```ts
+let variableName: | Type1 | Type2 | Type3;
+```
+````
+
 ✅ Examples:
 
 ```ts

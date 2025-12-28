@@ -200,6 +200,24 @@ function area(shape: Shape) {
 
 ---
 
+### **8️⃣ Error-throwing  Narrowing**
+
+TypeScript can narrow types when a code path **throws an error**.  
+Once an error is thrown, execution **cannot continue**, so TypeScript safely narrows the remaining code.
+
+```ts
+function printLength(value: string | null) {
+  if (value === null) {
+    throw new Error("Value is null");
+  }
+
+  // value is guaranteed to be string here
+  console.log(value.length);
+}
+```
+
+---
+
 ## 🧩 Control Flow Narrowing
 
 TypeScript also tracks variable changes through the control flow of your code — it’s **flow-sensitive typing**.
@@ -219,13 +237,13 @@ TS keeps track of reassignment and scopes to maintain accurate narrowing.
 
 ## 🪄 Tips & Good Practices
 
-|Tip|Description|
-|---|---|
-|✅ Prefer `as` little as possible|Let TypeScript infer with narrowing instead of forcing with assertions|
-|🧭 Use discriminated unions|For complex branching logic (like Redux actions, shape variants)|
-|🔒 Always enable `strictNullChecks`|Makes truthiness narrowing more predictable|
-|💡 Use type predicates for reusable checks|e.g., `isString(value): value is string`|
-|🧱 Combine narrowing techniques|TypeScript can chain them (e.g., `typeof` + `in`)|
+| Tip                                        | Description                                                            |
+| ------------------------------------------ | ---------------------------------------------------------------------- |
+| ✅ Prefer `as` little as possible          | Let TypeScript infer with narrowing instead of forcing with assertions |
+| 🧭 Use discriminated unions                | For complex branching logic (like Redux actions, shape variants)       |
+| 🔒 Always enable `strictNullChecks`        | Makes truthiness narrowing more predictable                            |
+| 💡 Use type predicates for reusable checks | e.g., `isString(value): value is string`                               |
+| 🧱 Combine narrowing techniques            | TypeScript can chain them (e.g., `typeof` + `in`)                      |
 
 ---
 
@@ -241,13 +259,13 @@ TS keeps track of reassignment and scopes to maintain accurate narrowing.
 
 ## 🧠 Summary
 
-|Concept|Description|Example|
-|---|---|---|
-|**Narrowing**|Refine union or broad type into a specific one|`if (typeof x === "string")`|
-|**Type Guards**|Logical checks that narrow types|`typeof`, `instanceof`, `in`|
-|**Discriminated Union**|Union with a shared tag field|`{ kind: "circle" }`|
-|**Type Predicate**|Custom narrowing function|`animal is Cat`|
-|**Control Flow Analysis**|Tracks type changes across code|`if (value) { ... }`|
+| Concept                   | Description                                    | Example                      |
+| ------------------------- | ---------------------------------------------- | ---------------------------- |
+| **Narrowing**             | Refine union or broad type into a specific one | `if (typeof x === "string")` |
+| **Type Guards**           | Logical checks that narrow types               | `typeof`, `instanceof`, `in` |
+| **Discriminated Union**   | Union with a shared tag field                  | `{ kind: "circle" }`         |
+| **Type Predicate**        | Custom narrowing function                      | `animal is Cat`              |
+| **Control Flow Analysis** | Tracks type changes across code                | `if (value) { ... }`         |
 
 ---
 
