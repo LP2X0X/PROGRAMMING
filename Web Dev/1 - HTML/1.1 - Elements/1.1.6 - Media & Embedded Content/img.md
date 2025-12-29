@@ -53,3 +53,4 @@ The \<img> element in HTML is used to **embed images** into a webpage. It is an 
 
 - [[object-fit]]
 - [[object-position]]
+- [[max-height and max-width]]

@@ -7,9 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[!! and Boolean with Narrowing]]
+- **[[Gotchas]]**
 - [[Interfaces vs Type Alias]]
 - [[Literal Inference]]
-- [[Narrowing Map]]
 
 %% End Waypoint %%

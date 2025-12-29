@@ -29,7 +29,7 @@ type: folder_brief_live
 - **[[5.9 - The Context API]]**
 - **[[5.10 - Performance Optimization and Advanced useEffect]]**
 - **[[5.11 - Redux]]**
-- **[[Others]]**
+- **[[Miscellaneous]]**
 - [[React Summary]]
 - [[React]]
 

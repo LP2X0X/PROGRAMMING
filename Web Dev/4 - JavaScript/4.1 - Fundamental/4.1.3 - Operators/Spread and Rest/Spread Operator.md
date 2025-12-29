@@ -84,11 +84,11 @@ const chars = [..."hi"]; // ['h', 'i']
 
 ## ✅ Summary
 
-|Use Case|Example|
-|---|---|
-|Clone array|`[...arr]`|
-|Merge arrays|`[...a, ...b]`|
-|Clone object|`{...obj}`|
-|Merge objects|`{...a, ...b}`|
-|Expand in args|`fn(...arr)`|
-|Split string|`[..."text"]`|
+| Use Case       | Example        |
+| -------------- | -------------- |
+| Clone array    | `[...arr]`     |
+| Merge arrays   | `[...a, ...b]` |
+| Clone object   | `{...obj}`     |
+| Merge objects  | `{...a, ...b}` |
+| Expand in args | `fn(...arr)`   |
+| Split string   | `[..."text"]`  |

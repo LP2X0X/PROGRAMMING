@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[as]]
+- [[RUST/2 - Managing Projects/Keywords/as]]
 - [[pub use]]
 - [[pub]]
 - [[super]]

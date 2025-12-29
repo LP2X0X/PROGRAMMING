@@ -10,23 +10,23 @@ Both **imperative** and **declarative** programming are two core paradigms in so
 
 ### 📌 **1. Definition**
 
-|Paradigm|Definition|
-|---|---|
-|**Imperative**|Describes **how** to do something, step by step.|
-|**Declarative**|Describes **what** you want to achieve, not how.|
+| Paradigm        | Definition                                       |
+| --------------- | ------------------------------------------------ |
+| **Imperative**  | Describes **how** to do something, step by step. |
+| **Declarative** | Describes **what** you want to achieve, not how. |
 
 ---
 
 ### 🧱 **2. Key Differences**
 
-|Feature|**Imperative**|**Declarative**|
-|---|---|---|
-|**Focus**|**Process (How)** – step-by-step instructions|**Outcome (What)** – describe the goal|
-|**Control**|Explicit control over program flow|Abstracts away program flow|
-|**State Management**|Requires manual state handling|State is often managed automatically|
-|**Complexity**|Can be more complex for larger systems|Often simpler and easier to read|
-|**Examples**|Loops, conditionals, mutable state|Functional transformations, queries|
-|**Languages**|C, C++, Java (procedural/OOP)|SQL, HTML, React (JSX), Haskell|
+| Feature              | **Imperative**                                | **Declarative**                        |
+| -------------------- | --------------------------------------------- | -------------------------------------- |
+| **Focus**            | **Process (How)** – step-by-step instructions | **Outcome (What)** – describe the goal |
+| **Control**          | Explicit control over program flow            | Abstracts away program flow            |
+| **State Management** | Requires manual state handling                | State is often managed automatically   |
+| **Complexity**       | Can be more complex for larger systems        | Often simpler and easier to read       |
+| **Examples**         | Loops, conditionals, mutable state            | Functional transformations, queries    |
+| **Languages**        | C, C++, Java (procedural/OOP)                 | SQL, HTML, React (JSX), Haskell        |
 
 ---
 
@@ -63,11 +63,11 @@ int main() {
 
 ### 🔍 **4. When to Use Which?**
 
-|**Use Imperative**|**Use Declarative**|
-|---|---|
-|When you need **fine-grained control**|For **simpler and more readable** code|
-|In **performance-critical** applications|When working with **data transformations**|
-|**Low-level operations** (e.g., memory)|When using **frameworks/libraries** (e.g., React)|
+| **Use Imperative**                       | **Use Declarative**                               |
+| ---------------------------------------- | ------------------------------------------------- |
+| When you need **fine-grained control**   | For **simpler and more readable** code            |
+| In **performance-critical** applications | When working with **data transformations**        |
+| **Low-level operations** (e.g., memory)  | When using **frameworks/libraries** (e.g., React) |
 
 ---
 
@@ -77,5 +77,3 @@ Modern programming often **mixes** both paradigms:
 
 - **React (Declarative UI)** + **JavaScript (Imperative Logic)**
 - **SQL Queries (Declarative)** inside **Python (Imperative)**
-
-Would you like examples from other languages or a deeper dive into one paradigm? 🚀

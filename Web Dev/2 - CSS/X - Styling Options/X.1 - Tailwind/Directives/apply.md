@@ -135,10 +135,10 @@ input:checked + label span {
 
 ## 5. Summary Table
 
-|**Feature**|**Description**|
-|---|---|
-|**Main Purpose**|Copy utility styles into a custom CSS class.|
-|**Best Location**|Inside `globals.css` (or equivalent), wrapped in `@layer components`.|
-|**Variant Support**|Yes (`@apply hover:bg-red-500` works).|
-|**Biggest Pitfall**|Overusing it to "clean up HTML," resulting in bloated CSS and naming headaches.|
-|**Ideal Usage**|Reusable atoms (Buttons/Inputs) and 3rd-party library overrides.|
+| **Feature**         | **Description**                                                                 |
+| ------------------- | ------------------------------------------------------------------------------- |
+| **Main Purpose**    | Copy utility styles into a custom CSS class.                                    | 
+| **Best Location**   | Inside `globals.css` (or equivalent), wrapped in `@layer components`.           |
+| **Variant Support** | Yes (`@apply hover:bg-red-500` works).                                          |
+| **Biggest Pitfall** | Overusing it to "clean up HTML," resulting in bloated CSS and naming headaches. |
+| **Ideal Usage**     | Reusable atoms (Buttons/Inputs) and 3rd-party library overrides.                |

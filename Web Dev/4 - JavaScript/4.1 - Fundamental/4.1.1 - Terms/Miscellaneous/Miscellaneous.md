@@ -9,7 +9,7 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Minifier]]
 - [[Polyfills]]
-- [[Statement]]
+- [[Statement and Expression]]
 - [[The script tag]]
 - [[Transpilers]]
 - [[Variable]]

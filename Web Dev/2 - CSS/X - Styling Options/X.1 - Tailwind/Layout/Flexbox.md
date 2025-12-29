@@ -14,20 +14,20 @@ Here is the "80/20" rule overview of Flexbox in Tailwind—the 20% of classes yo
 
 First, you must turn it on.
 
-|**Class**|**CSS Property**|**Use Case**|
-|---|---|---|
-|**`flex`**|`display: flex`|**Required.** Turns the `div` into a flex container.|
-|**`inline-flex`**|`display: inline-flex`|Like `flex`, but the container itself sits inline with text.|
+| **Class**         | **CSS Property**       | **Use Case**                                                 |
+| ----------------- | ---------------------- | ------------------------------------------------------------ |
+| **`flex`**        | `display: flex`        | **Required.** Turns the `div` into a flex container.         |
+| **`inline-flex`** | `display: inline-flex` | Like `flex`, but the container itself sits inline with text. |
 
 ### Direction (The Axis)
 
 This defines your "Main Axis".
 
-|**Class**|**CSS Equivalent**|**Visual Result**|
-|---|---|---|
-|**`flex-row`**|`row`|➡️ Left to Right (Default).|
-|**`flex-col`**|`column`|⬇️ Top to Bottom (Stacking).|
-|**`flex-wrap`**|`wrap`|Allow items to break onto a new line if they run out of space.|
+| **Class**       | **CSS Equivalent** | **Visual Result**                                              |
+| --------------- | ------------------ | -------------------------------------------------------------- |
+| **`flex-row`**  | `row`              | ➡️ Left to Right (Default).                                    | 
+| **`flex-col`**  | `column`           | ⬇️ Top to Bottom (Stacking).                                   |
+| **`flex-wrap`** | `wrap`             | Allow items to break onto a new line if they run out of space. |
 
 ---
 
@@ -85,12 +85,12 @@ Stop using margins (`mr-4`) between items. Use gap.
 
 Control how individual children behave inside the parent.
 
-|**Class**|**Meaning**|**Use Case**|
-|---|---|---|
-|**`flex-1`**|"Take up all remaining space"|Great for the middle content of a navbar or the main body of a page layout.|
-|**`flex-none`**|"Don't grow, don't shrink"|Keeps an item strictly at its defined size (e.g., a fixed-width sidebar).|
-|**`grow`**|`flex-grow: 1`|Allows item to expand to fill space.|
-|**`shrink-0`**|`flex-shrink: 0`|**Crucial.** Prevents an item (like an icon or image) from getting squashed when space is tight.|
+| **Class**       | **Meaning**                   | **Use Case**                                                                                     |
+| --------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ |
+| **`flex-1`**    | "Take up all remaining space" | Great for the middle content of a navbar or the main body of a page layout.                      |
+| **`flex-none`** | "Don't grow, don't shrink"    | Keeps an item strictly at its defined size (e.g., a fixed-width sidebar).                        |
+| **`grow`**      | `flex-grow: 1`                | Allows item to expand to fill space.                                                             |
+| **`shrink-0`**  | `flex-shrink: 0`              | **Crucial.** Prevents an item (like an icon or image) from getting squashed when space is tight. |
 
 ---
 
