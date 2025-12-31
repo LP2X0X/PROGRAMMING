@@ -9,6 +9,13 @@ The `never` type represents values which are _never_ observed. In a return type,
 
 `never` also appears when TypeScript determines there’s nothing left in a union.
 
+```ad-note
+never sits at the bottom of the types hierarchy in TypeScript.
+```
+
+![[067-introduction-to-never.explainer.svg|center|700]]
+ <figcaption align="center"><strong>Figure:</strong> Assignability chart where never can be assign to all types but not vice versa. </figcaption>
+
 #### Example
 Use case: Exhaustive Checks
 
@@ -45,6 +52,28 @@ function getArea(shape: Shape) {
       return _exhaustiveCheck;
   }
 }
+```
+
+```ts
+import { Equal, Expect } from "@total-typescript/helpers";
+
+// If we return undefined, id will have type string | undefined
+// const throwError = (message: string): undefined => {
+//   throw new Error(message);
+// };
+
+// Now, id will can only be of type string
+const throwError = (message: string): never => {
+  throw new Error(message);
+};
+
+const handleSearchParams = (params: { id?: string }) => {
+  const id = params.id || throwError("No id provided"); 
+
+  type test = Expect<Equal<typeof id, string>>;
+
+  return id;
+};
 ```
 
 #### Main situations where `never` appears automatically

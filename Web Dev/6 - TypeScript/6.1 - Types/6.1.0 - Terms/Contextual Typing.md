@@ -67,13 +67,13 @@ With it, TypeScript keeps your code **cleaner and more ergonomic** — while sta
 
 ## ⚙️ 3. Common contextual typing contexts
 
-|Context|Example|What TS infers|
-|---|---|---|
-|Variable assignment|`const f: (x: number) => void = x => {}`|`x: number`|
-|Function argument|`array.map(x => x * 2)`|`x` inferred from array element|
-|Return position|`function make(): number { return 5; }`|Return type|
-|Object literal|`{ onClick: e => console.log(e.clientX) }`|`e` inferred as MouseEvent|
-|JSX event handler|`<button onClick={e => e.preventDefault()} />`|`e` inferred as React.MouseEvent|
+| Context             | Example                                        | What TS infers                   |
+| ------------------- | ---------------------------------------------- | -------------------------------- |
+| Variable assignment | `const f: (x: number) => void = x => {}`       | `x: number`                      |
+| Function argument   | `array.map(x => x * 2)`                        | `x` inferred from array element  |
+| Return position     | `function make(): number { return 5; }`        | Return type                      |
+| Object literal      | `{ onClick: e => console.log(e.clientX) }`     | `e` inferred as MouseEvent       |
+| JSX event handler   | `<button onClick={e => e.preventDefault()} />` | `e` inferred as React.MouseEvent |
 
 ```ad-note
 TypeScript can infer the type of a function parameter if it has a default value.
@@ -171,13 +171,13 @@ const Input = (props: Props) => <input onChange={e => props.onChange(e.target.va
 
 ## 🧭 7. TL;DR Cheatsheet
 
-|Concept|Description|Example|
-|---|---|---|
-|Contextual typing|Type inferred from usage context|`const f: (n:number)=>void = n=>{}`|
-|Works with|Function params, callbacks, event handlers, object literals|`array.map(x=>x*2)`|
-|Context lost when detached|Assign to variable → no inference|`const f=(e)=>...` then use later|
-|Fix|Add explicit type or inline expression|`const f=(e:MouseEvent)=>...`|
-|Benefit|Cleaner, safer code|Avoid repetitive type annotations|
+| Concept                    | Description                                                 | Example                             |
+| -------------------------- | ----------------------------------------------------------- | ----------------------------------- |
+| Contextual typing          | Type inferred from usage context                            | `const f: (n:number)=>void = n=>{}` |
+| Works with                 | Function params, callbacks, event handlers, object literals | `array.map(x=>x*2)`                 |
+| Context lost when detached | Assign to variable → no inference                           | `const f=(e)=>...` then use later   |
+| Fix                        | Add explicit type or inline expression                      | `const f=(e:MouseEvent)=>...`       |
+| Benefit                    | Cleaner, safer code                                         | Avoid repetitive type annotations   | 
 
 ---
 

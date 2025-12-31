@@ -1,4 +1,4 @@
-# 6.1.1.2 - Compounds Overview
+# Fundamental Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Array]]
-- [[Tuple]]
+- [[Type Alias]]
+- [[Type Interface]]
+- [[Type Intersection]]
 
 %% End Waypoint %%

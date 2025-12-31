@@ -21,6 +21,10 @@ If you try:
 numbers.push("hello"); // ❌ error
 ```
 
+```ad-warning
+An array contains nothing in TypeScript is considered by default a [[never]] array.
+```
+
 ---
 
 # 🧩 2. Ways to Declare Arrays
@@ -220,11 +224,11 @@ type Response = [data: string, error: string | null];
 
 # 📌 Summary (Quick Notes)
 
-|Concept|Example|
-|---|---|
-|Standard array|`number[]`|
-|Generic array|`Array<number>`|
-|Union array|`(string|
-|Readonly|`readonly number[]`|
-|Nested array|`number[][]`|
-|Tuple (fixed)|`[string, number]`|
+| Concept        | Example             |
+| -------------- | ------------------- |
+| Standard array | `number[]`          |
+| Generic array  | `Array<number>`     |
+| Union array    | `(string            |
+| Readonly       | `readonly number[]` |
+| Nested array   | `number[][]`        |
+| Tuple (fixed)  | `[string, number]`  |

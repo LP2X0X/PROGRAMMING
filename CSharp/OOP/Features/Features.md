@@ -9,7 +9,7 @@ type: folder_brief_live
 - [[Init-only Properties]]
 - [[Object Initialization Syntax]]
 - [[Read-Only Fields]]
-- [[Record]]
+- [[CSharp/OOP/Features/Record]]
 - [[Static Read-Only Fields]]
 
 %% End Waypoint %%

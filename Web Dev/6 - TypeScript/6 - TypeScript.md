@@ -11,5 +11,7 @@ type: folder_brief_live
 - **[[6.1 - Types]]**
 - **[[6.3 - Functions]]**
 - **[[6.4 - Operators]]**
+- **[[6.5 - Directives]]**
+- **[[Miscellaneous]]**
 
 %% End Waypoint %%

@@ -3,6 +3,7 @@ tags:
  - typescript
  - type
  - alias
+ - fundamental
 ---
 
 ### 🔹 Definition

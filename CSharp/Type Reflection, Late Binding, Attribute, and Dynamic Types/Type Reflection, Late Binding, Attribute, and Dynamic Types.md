@@ -23,7 +23,7 @@ type: folder_brief_live
 - **The Necessity of Type Metadata**
 	- [[Assembly]]
 	- [[AssemblyRef]]
-	- [[Extends]]
+	- [[CSharp/Type Reflection, Late Binding, Attribute, and Dynamic Types/The Necessity of Type Metadata/Extends]]
 	- [[Field]]
 	- [[TypeDef and TypeRef]]
 	- [[User Strings]]

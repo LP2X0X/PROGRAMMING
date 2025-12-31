@@ -1,4 +1,4 @@
-# 6.1.1.3 - Special Overview
+# Miscellaneous Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Important]]**
-- [[PropertyType]]
+- [[Twoslash Queries]]
 
 %% End Waypoint %%

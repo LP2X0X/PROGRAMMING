@@ -1,7 +1,7 @@
 ---
 tags: 
  - typescript
- - narrowing
+ - type
 ---
 
 A **discriminated union** is:
@@ -19,7 +19,7 @@ type Shape =
   | { kind: "square"; size: number };
 ```
 
-🧠 `kind` is the **discriminant property**.
+🧠 `kind` is the **discriminant property** (or *discriminator*).
 
 ---
 
@@ -62,6 +62,17 @@ function area(shape: Shape) {
     case "circle":
       return Math.PI * shape.radius ** 2;
     case "square":
+      return shape.size ** 2;
+  }
+}
+```
+
+```ts
+function area(shape: Shape) {
+  switch (true) {
+    case shape.kind === "circle":
+      return Math.PI * shape.radius ** 2;
+    case shape.kind === "square":
       return shape.size ** 2;
   }
 }
@@ -116,6 +127,40 @@ function area(shape: Shape) {
 ```
 
 ✔ Compiler error if a new variant is added and not handled.
+
+---
+
+## Default Discriminated Union
+
+Imagine a UI Component that can either be a regular `Link` or a `Button`.
+
+```ts
+interface Button {
+  type: 'button'; // The discriminator
+  onClick: () => void;
+}
+
+interface Link {
+  type?: "link"; // Effectively act as a "default" type
+  href: string;
+}
+
+type ComponentProps = Button | Link;
+```
+
+When you check for the presence of the property, TypeScript will filter the possibilities.
+
+```ts
+function RenderComponent(props: ComponentProps) {
+  if (props.type === 'button') {
+    // Narrowed to Button
+    return <button onClick={props.onClick}>Click Me</button>;
+  } else {
+	// Narrowed to Link (because if it's not a button, it's the other one)
+	return <a href={props.href}>Go Here</a>;
+  }
+}
+```
 
 ---
 
