@@ -140,7 +140,7 @@ for (let key in person) {
 
 ### **🧬 Nested Objects**
 
-```
+```js
 const user = {
   name: "Jane",
   address: {

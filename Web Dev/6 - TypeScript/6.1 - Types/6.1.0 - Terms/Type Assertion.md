@@ -36,8 +36,7 @@ let value: unknown = "hello";
 let strLength = (value as string).length;
 ```
 
-✅ `as` syntax is recommended —  
-it works in `.tsx` (React) files where angle brackets conflict with JSX.
+✅ `as` syntax is recommended — it works in `.tsx` (React) files where angle brackets conflict with JSX.
 
 ---
 

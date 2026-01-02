@@ -5,11 +5,11 @@ tags:
  - compound
 ---
 
-At its core, a **Mapped Type** in TypeScript is a way to create a new type by transforming the properties of an existing type.1
+At its core, a **Mapped Type** in TypeScript is a way to create a new type by transforming the properties of an existing type.
 
 Think of it exactly like using `Array.map()` in JavaScript, but instead of iterating over data to create a new array, you are **iterating over keys (properties)** to create a new type.
 
-This is a powerful feature for keeping your code "DRY" (Don't Repeat Yourself).2 Instead of manually rewriting similar interfaces, you define a rule to generate them automatically.
+This is a powerful feature for keeping your code "DRY" (Don't Repeat Yourself). Instead of manually rewriting similar interfaces, you define a rule to generate them automatically.
 
 ---
 

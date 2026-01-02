@@ -22,7 +22,7 @@ tags:
 
 The most common confusion is how they "combine" things.
 
-Interface (using extends)
+- Interface (using extends)
 
 Interfaces are hierarchical. You strictly define that one interface inherits from another.
 
@@ -38,7 +38,7 @@ interface Dog extends Animal {
 // Dog is { name: string; breed: string }
 ```
 
-Intersection (using &)
+- Intersection (using &)
 
 Intersections are mathematical. You take two existing sets of data and "add" them together.
 

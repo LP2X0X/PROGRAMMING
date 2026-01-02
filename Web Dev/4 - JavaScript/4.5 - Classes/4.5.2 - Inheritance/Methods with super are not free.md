@@ -5,7 +5,6 @@ tags:
  - advance
 ---
 
-
 - In JavaScript, **functions are typically “free”**—they aren’t permanently tied to any particular object. You can copy a plain function around and execute it with different `this` contexts.
     
 - **But methods defined with `super` are not free.** When you define a method using syntax like `eat() { ... }`, the method gets a hidden internal binding called **`[[HomeObject]]`**, which permanently anchors it to the object where it was originally defined.

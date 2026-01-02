@@ -84,6 +84,10 @@ const a: StringList = ["first", "second", "third"];
 
 ## ✅ Readonly tuples
 
+```ad-note
+This is the prefered way of using tuple in TypeScript.
+```
+
 ```ts
 const point: readonly [number, number] = [1, 2];
 // point[0] = 3; // ❌ Error

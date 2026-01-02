@@ -57,7 +57,7 @@ const returnsStringOrNumber = (): string | number => {
 - Much like variable type annotations, you usually don’t need a return type annotation because TypeScript will infer the function’s return type based on its return statements.
 
 ````ad-note
-PRO: Function return types can help enforce the type of the function:
+Function return types can help enforce the type of the function:
 ```ts
 type UserRole = "admin" | "editor" | "viewer";
 
@@ -73,6 +73,32 @@ function getPermissions(role: UserRole): string[] {
 }
 ```
 ````
+
+Arrow function can also have annotated return type:
+```ts
+import { Equal, Expect } from "@total-typescript/helpers";
+
+const fetchData = async (): Promise<[Error | undefined, any?]> => {
+  const result = await fetch("/");
+
+  if (!result.ok) {
+    return [new Error("Could not fetch data.")];
+  }
+
+  const data = await result.json();
+
+  return [undefined, data];
+};
+
+const example = async () => {
+  const [error, data] = await fetchData();
+
+  type Tests = [
+    Expect<Equal<typeof error, Error | undefined>>,
+    Expect<Equal<typeof data, any>>
+  ];
+};
+```
 
 ---
 
@@ -106,11 +132,11 @@ names.forEach((s) => {
 });
 ```
 
-Even though the parameter s didn’t have a type annotation, TypeScript used the types of the forEach function, along with the inferred type of the array, to determine the type s will have.
+Even though the parameters didn’t have a type annotation, TypeScript used the types of the forEach function, along with the inferred type of the array, to determine the type s will have.
 
-This process is called contextual typing because the context that the function occurred within informs what type it should have.
+This process is called **[[Contextual Typing|contextual typing]]** because the context that the function occurred within informs what type it should have.
 
-Similar to the inference rules, you don’t need to explicitly learn how this happens, but understanding that it does happen can help you notice when type annotations aren’t needed. Later, we’ll see more examples of how the context that a value occurs in can affect its type.
+Similar to the inference rules, you don’t need to explicitly learn how this happens, but understanding that it does happen can help you notice when type annotations aren’t needed. 
 
 ---
 
@@ -166,8 +192,8 @@ const add = (a: number, b: number) => a + b;
 
 ### Comparison: Inference vs. Annotation
 
-|**Feature**|**Inference (No Annotation)**|**Explicit Annotation**|
-|---|---|---|
+| **Feature**     | **Inference (No Annotation)**                  | **Explicit Annotation**                               |
+| --------------- | ---------------------------------------------- | ----------------------------------------------------- |
 | **Speed**       | Faster to write.                               | Slower to write.                                      |
 | --------------- | ---------------------------------------------- | ----------------------------------------------------- |
 | **Readability** | Clean for simple logic.                        | Clear for complex logic.                              |

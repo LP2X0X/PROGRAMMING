@@ -7,10 +7,11 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Object Property]]**
+- **[[Object Property Related]]**
 - [[Object.assign()]]
 - [[Object.create()]]
 - [[Object.entries()]]
+- [[Object.freeze()]]
 - [[Object.fromEntries()]]
 - [[Object.getPrototypeOf()]]
 - [[Object.keys() - Object.values() - Object.entries()]]

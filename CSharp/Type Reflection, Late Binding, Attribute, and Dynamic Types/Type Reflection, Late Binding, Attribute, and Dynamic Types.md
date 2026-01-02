@@ -24,7 +24,7 @@ type: folder_brief_live
 	- [[Assembly]]
 	- [[AssemblyRef]]
 	- [[CSharp/Type Reflection, Late Binding, Attribute, and Dynamic Types/The Necessity of Type Metadata/Extends]]
-	- [[Field]]
+	- [[CSharp/Type Reflection, Late Binding, Attribute, and Dynamic Types/The Necessity of Type Metadata/Field]]
 	- [[TypeDef and TypeRef]]
 	- [[User Strings]]
 - [[The System.Type Class]]

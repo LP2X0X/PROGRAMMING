@@ -147,6 +147,43 @@ const role = "admin" as const;
 
 ---
 
+## Object Property Inference
+
+Although an object binding can be declared with `const`, its properties are still mutable. Because of this, TypeScript often widens the types of object properties and may have difficulty inferring their exact literal types.
+To address this, we can either pass the property value inline or explicitly specify the object’s type as required by the function.
+
+```ts
+type ButtonAttributes = {
+  type: "button" | "submit" | "reset";
+};
+
+const modifyButton = (attributes: ButtonAttributes) => {};
+
+// Specify the type
+const buttonAttributes: ButtonAttributes = {
+  type: "button",
+};
+
+modifyButton({type: "button"}); // Pass it inline
+
+// Example 2
+
+const modifyButtons = (attributes: ButtonAttributes[]) => {};
+
+const buttonsToChange: ButtonAttributes[] = [
+  {
+    type: "button",
+  },
+  {
+    type: "submit",
+  },
+];
+
+modifyButtons(buttonsToChange);
+```
+
+---
+
 ## Union Type Inference
 
 ```ts

@@ -1,7 +1,7 @@
 ---
 tags: 
  - typescript
- - operator
+ - keyword
 ---
 
 ## `extends` in TypeScript 

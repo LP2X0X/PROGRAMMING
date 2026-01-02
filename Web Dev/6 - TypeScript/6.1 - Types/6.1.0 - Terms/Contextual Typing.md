@@ -14,6 +14,23 @@ In short:
 
 ---
 
+## ⚠️ Important Clarification
+
+Contextual typing:
+
+- Does **not** infer variable types directly
+    
+- Applies mainly to **function parameters and object members**
+    
+- Requires an **expected type**
+    
+
+```ts
+const fn = (x) => x.toFixed(); // x is `any` → no context
+```
+
+---
+
 ### 🔹 Example 1: Function assigned to a typed variable
 
 ```ts

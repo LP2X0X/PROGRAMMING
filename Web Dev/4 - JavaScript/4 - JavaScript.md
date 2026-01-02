@@ -15,7 +15,7 @@ type: folder_brief_live
 - **4.5 - Classes**
 	- [[3.1.5 - Classes]]
 	- **[[4.5.1 - Core]]**
-	- **[[Inheritance]]**
+	- **[[4.5.2 - Inheritance]]**
 	- **[[Notes]]**
 - **[[4.6 - Promises, Async and Await]]**
 - **[[4.7 - Module]]**

@@ -69,6 +69,14 @@ Or:
 let data: ReadonlyArray<string> = ["a", "b"];
 ```
 
+````ad-note
+With readonly arrays, includes and indexOf methods will throw error if get passed value which is not included in the array itself.
+We can assert its type to fix, here's an example:
+```ts
+(CAPITAL_LETTERS as ReadonlyArray<string>).includes(str); // okay
+```
+````
+
 ---
 
 # 🧩 5. Type Inference Works Automatically
@@ -232,3 +240,8 @@ type Response = [data: string, error: string | null];
 | Readonly       | `readonly number[]` |
 | Nested array   | `number[][]`        |
 | Tuple (fixed)  | `[string, number]`  |
+
+---
+
+### References
+https://stackoverflow.com/questions/56565528/typescript-const-assertions-how-to-use-array-prototype-includes
