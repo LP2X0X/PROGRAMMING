@@ -30,14 +30,14 @@ Or to include external JavaScript:
 
 ##  **Tag**
 
-|**Attribute**|**Description**|
-|---|---|
-|src|Path to an external JS file. If present, the contents inside the  block are ignored.|
-|type|Specifies the script type. Usually type=“text/javascript”, but it’s optional in modern browsers.|
-|async|Loads the script asynchronously (doesn’t block parsing the rest of HTML).|
-|defer|Defers execution until after the document has been parsed.|
-|nomodule|Prevents modern browsers from executing script if they support JavaScript modules.|
-|crossorigin|Handles CORS settings for external scripts.|
+| **Attribute** | **Description**                                                                                  |
+| ------------- | ------------------------------------------------------------------------------------------------ |
+| src           | Path to an external JS file. If present, the contents inside the  block are ignored.             |
+| type          | Specifies the script type. Usually type=“text/javascript”, but it’s optional in modern browsers. | 
+| async         | Loads the script asynchronously (doesn’t block parsing the rest of HTML).                        |
+| defer         | Defers execution until after the document has been parsed.                                       |
+| nomodule      | Prevents modern browsers from executing script if they support JavaScript modules.               |
+| crossorigin   | Handles CORS settings for external scripts.                                                      |
 
 ---
 
@@ -84,11 +84,11 @@ Or:
 
 🧠 Difference:
 
-|**Attribute**|**When it runs**|**Blocks HTML parsing?**|
-|---|---|---|
-|None|As soon as fetched|Yes|
-|defer|After DOM is parsed|No|
-|async|As soon as fetched|Yes, but unpredictable|
+| **Attribute** | **When it runs**    | **Blocks HTML parsing?** |
+| ------------- | ------------------- | ------------------------ |
+| None          | As soon as fetched  | Yes                      |
+| defer         | After DOM is parsed | No                       |
+| async         | As soon as fetched  | Yes, but unpredictable   |
 
 ---
 

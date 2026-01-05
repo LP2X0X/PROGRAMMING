@@ -15,6 +15,7 @@ type: folder_brief_live
 - **[[5 - React]]**
 - **[[6 - TypeScript]]**
 - **[[Next.js]]**
+- **[[Node.js]]**
 - [[Study Tips]]
 
 %% End Waypoint %%

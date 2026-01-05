@@ -8,10 +8,17 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[autocomplete]]
+- [[autoplay]]
 - [[contenteditable]]
+- [[controls]]
 - [[download]]
 - [[for]]
-- [[Web Dev/1 - HTML/1.2 - Attributes/Notable/name]]
+- [[loading]]
+- [[loop]]
+- [[muted]]
+- [[name]]
+- [[poster]]
+- [[preload]]
 - [[target]]
 
 %% End Waypoint %%
