@@ -31,7 +31,7 @@ Set accessor must have exactly one parameter and its type can be infer from the 
 ```
 
 - TypeScript has some special inference rules for accessors:
-	- If get exists but no set, the property is automatically [[Web Dev/6 - TypeScript/6.5 - Type Modifiers/readonly|readonly]]
+	- If get exists but no set, the property is automatically [[Web Dev/6 - TypeScript/6.6 - Keywords/6.5 - Type Modifiers/readonly|readonly]]
 	- If the type of the setter parameter is not specified, it is inferred from the return type of the getter
 
 Since TypeScript 4.3, it is possible to have accessors with different types for getting and setting.

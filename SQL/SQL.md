@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Fundamental]]**
+- **[[SQL/Fundamental/Fundamental]]**
 - [[Learn]]
 - [[LINQPad]]
 - [[Practice]]

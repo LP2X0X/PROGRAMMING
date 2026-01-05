@@ -5,7 +5,12 @@ tags:
   - fundamental
 ---
 
-- In JavaScript, the **global object** is a special object that is automatically created by the environment and serves as the top-level container for all global variables, functions, and built-in objects.
+- In JavaScript, the **global object** is a special object that is automatically created by the environment (JavaScript Engine) and serves as the top-level container for all global variables, functions, and built-in objects.
+
+```ad-note
+When we say global, it means `not inside a function`.
+![[Pasted image 20260105103325.png|center|500]]
+```
 
 - It has two roles:
 	1. First, it is a global object for JavaScript code.
@@ -17,6 +22,8 @@ tags:
 	
 	alert(window.gVar); // 5 (became a property of the global object)
 	```
+
+
 - If a value is so important that you’d like to make it available globally, write it directly as a property:
 	```js
 	// make current user information global, to let all scripts access it

@@ -4,7 +4,6 @@ tags:
  - static
 ---
 
-
 - A **`static` method or property** belongs to the **class itself**, **not** to the instances created from that class.
     
 - You call it on the class, not on `new` objects.

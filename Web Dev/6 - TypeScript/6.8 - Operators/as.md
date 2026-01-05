@@ -154,7 +154,7 @@ const buttonAttributes = {
 };
 
 const buttonAttributes = {
-  type: "button" as const, // in this case type of type property is modified as readonly
+  type: "button", // in this case type of type property is modified as readonly
 } as const;
 ```
 
