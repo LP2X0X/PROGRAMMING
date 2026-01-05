@@ -6,7 +6,7 @@ tags:
 ---
 
 ```ad-important
-**Inheritance has no “level” in the cascade.**  
+**Inheritance has no “level” in [[1 - The Cascade|the cascade]]**.
 It is a **post-cascade fallback**, applied only when the cascade produces no specified value.
 ```
 

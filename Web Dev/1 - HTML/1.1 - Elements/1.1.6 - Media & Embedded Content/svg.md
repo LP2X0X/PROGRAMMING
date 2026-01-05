@@ -15,30 +15,30 @@ An `<svg>` element defines an **SVG container**, inside which you can draw shape
 
 ## 🔹 Common Attributes of `<svg>`
 
-|Attribute|Purpose|Example|
-|---|---|---|
-|`xmlns`|XML namespace, required when embedding inline SVGs.|`xmlns="http://www.w3.org/2000/svg"`|
-|`width` / `height`|Sets the size of the SVG on the page.|`width="100" height="100"`|
-|`viewBox`|Defines the internal coordinate system: `min-x min-y width height`.|`viewBox="0 0 24 24"`|
-|`fill`|Default **fill color** for child shapes.|`fill="red"`|
-|`stroke`|Default **stroke color** (outline).|`stroke="black"`|
-|`stroke-width`|Width of the stroke.|`stroke-width="2"`|
-|`class`|Lets you style via CSS.|`class="icon"`|
-|`style`|Inline CSS styles.|`style="display:block;"`|
+| Attribute          | Purpose                                                             | Example                              |
+| ------------------ | ------------------------------------------------------------------- | ------------------------------------ |
+| `xmlns`            | XML namespace, required when embedding inline SVGs.                 | `xmlns="http://www.w3.org/2000/svg"` |
+| `width` / `height` | Sets the size of the SVG on the page.                               | `width="100" height="100"`           |
+| `viewBox`          | Defines the internal coordinate system: `min-x min-y width height`. | `viewBox="0 0 24 24"`                |
+| `fill`             | Default **fill color** for child shapes.                            | `fill="red"`                         |
+| `stroke`           | Default **stroke color** (outline).                                 | `stroke="black"`                     |
+| `stroke-width`     | Width of the stroke.                                                | `stroke-width="2"`                   |
+| `class`            | Lets you style via CSS.                                             | `class="icon"`                       |
+| `style`            | Inline CSS styles.                                                  | `style="display:block;"`             |
 
 ---
 
 ## 🔹 Common Child Elements Inside `<svg>`
 
-|Element|Purpose|
-|---|---|
-|`<path>`|Defines a shape using a `d` attribute (move, line, curve commands).|
-|`<circle>`|Draws a circle (`cx`, `cy`, `r`).|
-|`<rect>`|Draws a rectangle (`x`, `y`, `width`, `height`, `rx`, `ry` for rounded corners).|
-|`<line>`|Draws a straight line (`x1`, `y1`, `x2`, `y2`).|
-|`<polygon>`|Draws a closed shape with multiple points.|
-|`<polyline>`|Similar to polygon but open-ended.|
-|`<text>`|Renders text.|
+| Element      | Purpose                                                                          |
+| ------------ | -------------------------------------------------------------------------------- |
+| `<path>`     | Defines a shape using a `d` attribute (move, line, curve commands).              | 
+| `<circle>`   | Draws a circle (`cx`, `cy`, `r`).                                                |
+| `<rect>`     | Draws a rectangle (`x`, `y`, `width`, `height`, `rx`, `ry` for rounded corners). |
+| `<line>`     | Draws a straight line (`x1`, `y1`, `x2`, `y2`).                                  |
+| `<polygon>`  | Draws a closed shape with multiple points.                                       |
+| `<polyline>` | Similar to polygon but open-ended.                                               |
+| `<text>`     | Renders text.                                                                    |
 
 ---
 
@@ -172,9 +172,9 @@ div {
 
 ## **✅ Best Use Cases**
 
-|**Goal**|**Best Method**|
-|---|---|
-|Interactive graphics|Inline SVG|
-|Icons/logos|\<img src="...">|
-|Data visualizations|Inline + JS (or D3.js)|
-|Reusable UI assets|\<symbol> + \<use>|
+| **Goal**             | **Best Method**        |
+| -------------------- | ---------------------- |
+| Interactive graphics | Inline SVG             |
+| Icons/logos          | \<img src="...">       | 
+| Data visualizations  | Inline + JS (or D3.js) |
+| Reusable UI assets   | \<symbol> + \<use>     |
