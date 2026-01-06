@@ -91,6 +91,45 @@ Because of this:
 - Simple, fast type discrimination
     
 
+````ad-note
+typeof can also be use to "extract" the type from an object:
+```ts
+const configurations = {
+  development: {
+    apiBaseUrl: "http://localhost:8080",
+    timeout: 5000,
+  },
+  production: {
+    apiBaseUrl: "https://api.example.com",
+    timeout: 10000,
+  },
+  staging: {
+    apiBaseUrl: "https://staging.example.com",
+    timeout: 8000,
+  },
+};
+
+type Configurations = typeof configurations;
+
+/*
+type Configurations = {
+    development: {
+        apiBaseUrl: string;
+        timeout: number;
+    };
+    production: {
+        apiBaseUrl: string;
+        timeout: number;
+    };
+    staging: {
+        apiBaseUrl: string;
+        timeout: number;
+    };
+}
+*/
+```
+````
+
 ---
 
 ### Rule of Thumb

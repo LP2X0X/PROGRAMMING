@@ -8,6 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[entries function]]
+- [[Execution Context vs Lexical Environment]]
 - [[Function Property vs Closure]]
 - [[Garbage Collection and setInterval, setTimeout]]
 - [[Nested setTimeout allows to set the delay between the executions more precisely than setInterval]]

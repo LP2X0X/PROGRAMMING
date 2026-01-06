@@ -12,10 +12,10 @@ type: folder_brief_live
 - **[[6.2 - Types]]**
 - **[[6.3 - Functions]]**
 - **[[6.4 - Classes]]**
-- **[[6.6 - Keywords]]**
-- **[[6.7 - Directives]]**
-- **[[6.8 - Operators]]**
-- **[[6.9 - TypeScript-only Features]]**
+- **[[6.6 - Keywords and Operators]]**
+- **[[6.8 - TypeScript-only Features]]**
+- **6.9 - TypeScript-only Features**
+	- **[[Notes]]**
 - **[[Miscellaneous]]**
 
 %% End Waypoint %%

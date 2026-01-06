@@ -10,7 +10,6 @@ tags:
 
 - That is: they automatically remember where they were created using a hidden `[[Environment]]` property, and then their code can access outer variables at the time they were created.
   
-
 ---
 
 ### ✅ Key Concepts

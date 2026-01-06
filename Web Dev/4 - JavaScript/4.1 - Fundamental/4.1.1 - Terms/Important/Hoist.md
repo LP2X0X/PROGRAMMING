@@ -13,6 +13,14 @@ tags:
 
 > You can use some variables/functions **before they appear** in the code — because JavaScript “hoists” their declarations to the top when compiling.
 
+```ad-note
+It does **not** literally move your code to the top of the file. Instead, **before execution begins**, [[The JavaScript Engine|the JavaScript engine]] **allocates memory for variables and functions** declared in the code.
+
+As a result, those functions and variables **already exist in memory** when execution starts, allowing the running code to access them immediately.
+
+![[Pasted image 20260106092601.png|center|500]]
+```
+
 ---
 
 ### **✅ Function Hoisting Example**

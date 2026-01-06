@@ -42,7 +42,7 @@ There is **only one** global execution context.
 
 ### 2. Function Execution Context (FEC)
 
-Created **every time a function is invoked**.
+Created **every time a [[Web Dev/4 - JavaScript/4.3 - Functions/4.3.1 - Terms/Function|function]] is invoked**.
 
 Each function call gets its **own** execution context.
 

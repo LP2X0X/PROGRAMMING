@@ -9,6 +9,7 @@ tags:
 
 ```ad-note
 When we say global, it means `not inside a function`.
+The global object is created when the global [[Web Dev/4 - JavaScript/4.3 - Functions/4.3.5 - Scopes/Execution Context|execution context]] is created.
 ![[Pasted image 20260105103325.png|center|500]]
 ```
 
@@ -43,12 +44,12 @@ When we say global, it means `not inside a function`.
 
 ### 🧠 Key Points About the Global Object:
 
-|Environment|Global Object Name|
-|---|---|
-|Browser|`window`|
-|Web Workers|`self`|
-|Node.js|`global`|
-|Universal (ES2020+)|`globalThis`|
+| Environment         | Global Object Name |
+| ------------------- | ------------------ |
+| Browser             | `window`           |
+| Web Workers         | `self`             |
+| Node.js             | `global`           |
+| Universal (ES2020+) | `globalThis`       |
 
 ---
 
