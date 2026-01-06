@@ -157,25 +157,25 @@ img {
 
 ## 6️⃣ Key CSS keywords
 
-|Keyword|Meaning|
-|---|---|
-|`auto`|Depends on layout mode|
-|`min-content`|Smallest intrinsic size|
-|`max-content`|Largest intrinsic size|
-|`fit-content`|Clamp(min, ideal, max)|
-|`stretch`|Fill available space|
+| Keyword       | Meaning                 |
+| ------------- | ----------------------- |
+| `auto`        | Depends on layout mode  |
+| `min-content` | Smallest intrinsic size |
+| `max-content` | Largest intrinsic size  |
+| `fit-content` | Clamp(min, ideal, max)  |
+| `stretch`     | Fill available space    |
 
 ---
 
 ## 7️⃣ Intrinsic vs Extrinsic cheat sheet
 
-|Aspect|Intrinsic|Extrinsic|
-|---|---|---|
-|Driven by|Content|Container|
-|Depends on text length|Yes|No|
-|Depends on viewport|No|Yes|
-|Used by|Inline, shrink-wrap|Block, grid, flex|
-|Examples|`max-content`|`%`, `fr`, `vw`|
+| Aspect                 | Intrinsic           | Extrinsic         |
+| ---------------------- | ------------------- | ----------------- |
+| Driven by              | Content             | Container         | 
+| Depends on text length | Yes                 | No                |
+| Depends on viewport    | No                  | Yes               |
+| Used by                | Inline, shrink-wrap | Block, grid, flex |
+| Examples               | `max-content`       | `%`, `fr`, `vw`   |
 
 ---
 

@@ -56,7 +56,7 @@ Common `sandbox` values:
 
 ---
 
-## 3. Best Practices for 2026
+## 3. Best Practices 
 
 ### A. Security First (X-Frame-Options)
 
