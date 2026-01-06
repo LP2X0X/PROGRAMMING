@@ -16,6 +16,10 @@ Enums allow you to define a set of named constants. They make code more readable
 **Enums break TypeScript’s [[Structural Typing|structural typing]] rule** because they introduce **nominal identity**: even if two enums have identical members and values, they are treated as **distinct, non-assignable types**, unlike structurally identical object or union types.
 ```
 
+```ad-warning
+Avoid using enum if you can.
+```
+
 ---
 
 ### 2. Numeric Enums
@@ -67,7 +71,31 @@ console.log(Size.Small);    // Output: 1
 console.log(Size[1]);       // Output: "Small" (Reverse Mapping)
 ```
 
+````ad-note
 _Note: This works because TS generates an object that looks like `{ Small: 1, 1: "Small" }`._
+
+```ts
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+```
+
+```js
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Direction;
+(function (Direction) {
+    Direction[Direction["Up"] = 0] = "Up";
+    Direction[Direction["Down"] = 1] = "Down";
+    Direction[Direction["Left"] = 2] = "Left";
+    Direction[Direction["Right"] = 3] = "Right";
+})(Direction || (Direction = {}));
+```
+
+````
 
 ---
 
@@ -192,3 +220,8 @@ This keeps the JavaScript object (so you can iterate) but provides strict typing
     
 - [ ] **Union Types:** Use for simple state management (e.g., `status: 'loading' | 'success'`) to avoid runtime bloat.
     
+
+---
+
+### Reference
+https://stackoverflow.com/questions/40227401/const-enum-in-typescript
