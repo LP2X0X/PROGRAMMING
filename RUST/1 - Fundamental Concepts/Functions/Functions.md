@@ -10,6 +10,6 @@ type: folder_brief_live
 - [[Associated Function]]
 - [[RUST/1 - Fundamental Concepts/Functions/Function]]
 - [[RUST/1 - Fundamental Concepts/Functions/Method]]
-- [[Parameter]]
+- [[RUST/1 - Fundamental Concepts/Functions/Parameter]]
 
 %% End Waypoint %%

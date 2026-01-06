@@ -13,7 +13,7 @@ type: folder_brief_live
 - [[3 - Transition]]
 - [[4 - Position]]
 - [[5 - Image]]
-- **[[Directives]]**
+- **[[Web Dev/2 - CSS/X - Styling Options/X.1 - Tailwind/Directives/Directives]]**
 - **[[Layout]]**
 - [[Tailwind Class]]
 - [[Tailwind Config Ver 4. -]]

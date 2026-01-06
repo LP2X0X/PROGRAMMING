@@ -28,7 +28,7 @@ type: folder_brief_live
 - **[[Web Dev/2 - CSS/Notes/Notes]]**
 - **[[Properties]]**
 - **[[Questions]]**
-- **[[Techniques]]**
+- **[[Web Dev/2 - CSS/Techniques/Techniques]]**
 - **[[X - Styling Options]]**
 
 %% End Waypoint %%

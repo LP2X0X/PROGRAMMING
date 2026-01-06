@@ -1,4 +1,4 @@
-# Miscellaneous Overview
+# Directives Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Directives]]**
-- [[Twoslash Queries]]
+- [[ts-expect-error]]
 
 %% End Waypoint %%

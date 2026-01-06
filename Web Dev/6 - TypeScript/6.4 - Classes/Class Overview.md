@@ -33,6 +33,30 @@ class User {
 }
 ```
 
+````ad-note
+Even though class is a value (function), it can still act like a type:
+```ts
+import { describe, expect, it } from "vitest";
+
+class CanvasNode {
+  x = 0;
+  y = 0;
+
+  move(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+const positionFromCanvasNode = (node: CanvasNode) => {
+  return {
+    x: node.x,
+    y: node.y,
+  };
+};
+```
+````
+
 ### 2. Access Modifiers (Visibility)
 
 This is one of the most useful features TS adds. It controls who can see or use a property.

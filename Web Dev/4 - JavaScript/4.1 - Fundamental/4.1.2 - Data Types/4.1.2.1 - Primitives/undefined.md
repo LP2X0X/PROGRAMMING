@@ -1,6 +1,7 @@
 ---
 tags: 
- - web dev
+ - js
+ - datatype
 ---
 
 - `undefined` is a **primitive value**.

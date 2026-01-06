@@ -1,7 +1,8 @@
 ---
 tags: 
  - typescript
- - note
+ - type
+ - technique
 ---
 
 When you use `as const` on the returned value of a function without explicitly defining the function's return type, TypeScript **infers the most specific (narrowest) possible type** for that return value.

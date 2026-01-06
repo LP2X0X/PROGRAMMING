@@ -1,7 +1,8 @@
 ---
 tags: 
  - typescript
- - note
+ - type
+ - technique
 ---
 
 ### The Problem

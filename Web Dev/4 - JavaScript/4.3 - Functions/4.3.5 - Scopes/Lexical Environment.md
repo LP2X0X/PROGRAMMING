@@ -5,6 +5,10 @@ tags:
   - advanced
 ---
 
+```ad-tip
+Where something is written physically in your code is important. It determines certain things as far as how the JavaScript engine will decide and interpret where things live and where things will sit in memory and how they'll connect to each other.
+```
+
 ### Step 1. Variables
 
 - In JavaScript, every running function, code block `{...}`, and the script as a whole have an internal (hidden) associated object known as the _Lexical Environment_.

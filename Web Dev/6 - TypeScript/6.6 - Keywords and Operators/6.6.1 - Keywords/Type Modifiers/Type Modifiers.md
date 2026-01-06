@@ -1,4 +1,4 @@
-# 6.7 - Directives Overview
+# Type Modifiers Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[ts-expect-error]]
+- [[readonly]]
 
 %% End Waypoint %%
