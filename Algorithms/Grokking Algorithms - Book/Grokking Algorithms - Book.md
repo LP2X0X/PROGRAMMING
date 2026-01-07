@@ -9,6 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Algo]]**
 - **[[Data Structures]]**
-- **[[Terms]]**
+- **[[Algorithms/Grokking Algorithms - Book/Terms/Terms]]**
 
 %% End Waypoint %%

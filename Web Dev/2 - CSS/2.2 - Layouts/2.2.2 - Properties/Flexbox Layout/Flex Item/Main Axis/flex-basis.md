@@ -7,7 +7,7 @@ tags:
   - fundamental
 ---
 
-📖 **Definition**
+### 📖 **Definition**
 
 flex-basis sets the **initial main size** (the size corresponding to the main axis) of a flex item before extra space is distributed (via flex-grow) or items shrink (via flex-shrink).
 
@@ -18,9 +18,13 @@ flex-basis sets the **initial main size** (the size corresponding to the main ax
 If the item require more space than the flex-basis then it will be override.
 ```
 
+```ad-important
+When `flex-basis` is set to `auto` (default), the browser looks for the item's **[[Intrinsic and Extrinsic#2️⃣ Intrinsic sizing (content-based)|intrinsic size]]** (the size of the content inside) or a defined `width`/`height` property to determine the starting point of the element before distributing extra space.
+```
+
 ---
 
-🖋️ **Syntax**
+### 🖋️ **Syntax**
 
 ```css
 .item {
@@ -35,7 +39,7 @@ If the item require more space than the flex-basis then it will be override.
 
 ---
 
-💡 **Examples**
+### 💡 **Examples**
 
 1. **Fixed initial size**
     
@@ -62,7 +66,7 @@ If the item require more space than the flex-basis then it will be override.
 
 ---
 
-🛠️ **Tips & Best Practices**
+### 🛠️ **Tips & Best Practices**
 
 - 🔄 **Main axis aware**: If flex-direction: row, flex-basis controls **width**. If flex-direction: column, it controls **height**.
     

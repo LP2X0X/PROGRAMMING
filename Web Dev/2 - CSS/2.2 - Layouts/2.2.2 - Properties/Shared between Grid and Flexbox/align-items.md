@@ -23,7 +23,7 @@ The align-items property controls how **flex items are aligned on the cross axis
 ```
 
 ```ad-note
-The default value of this property is **stretch** which make all flex items stretched with the direction of cross axis. This also explain why changing it stop the flex item from expanding.
+The default value of this property is **stretch** which make all flex items stretched with the direction of the **cross axis**. This also explain why changing it stop the flex item from expanding.
 ```
 
 ---
@@ -39,13 +39,13 @@ The default value of this property is **stretch** which make all flex items stre
 
 ### **🔑 Common Values:**
 
-|**Value**|**Description**|
-|---|---|
-|stretch|(default) Items stretch to fill container’s **cross axis**|
-|flex-start|Items align to **start** of the cross axis|
-|flex-end|Items align to **end** of the cross axis|
-|center|Items align to **center** of the cross axis|
-|baseline|Items align based on their **text baseline**|
+| **Value**  | **Description**                                            |
+| ---------- | ---------------------------------------------------------- |
+| stretch    | (default) Items stretch to fill container’s **cross axis** |
+| flex-start | Items align to **start** of the cross axis                 | 
+| flex-end   | Items align to **end** of the cross axis                   |
+| center     | Items align to **center** of the cross axis                |
+| baseline   | Items align based on their **text baseline**               |
 
 ```ad-note
 align-items: center makes **all children of this flex container shrink to their content width and then get centered horizontally**.

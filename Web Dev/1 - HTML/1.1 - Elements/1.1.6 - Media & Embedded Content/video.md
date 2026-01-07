@@ -48,7 +48,7 @@ Beyond the basics shared with audio, the video element has specific behaviors:
 
 ---
 
-## 3. Best Practices for 2026
+## 3. Best Practices 
 
 ### A. Prioritize Efficiency with WebM and AV1
 

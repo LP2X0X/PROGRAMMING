@@ -100,11 +100,11 @@ Useful for debugging and assertions.
 
 ## 🧪 Relationship to Other Object Locks
 
-|Method|Can Add|Can Delete|Can Modify|
-|---|---|---|---|
-|`Object.preventExtensions()`|❌|✅|✅|
-|`Object.seal()`|❌|❌|✅|
-|`Object.freeze()`|❌|❌|❌|
+| Method                       | Can Add | Can Delete | Can Modify |
+| ---------------------------- | ------- | ---------- | ---------- |
+| `Object.preventExtensions()` | ❌      | ✅         | ✅         |
+| `Object.seal()`              | ❌      | ❌         | ✅         |
+| `Object.freeze()`            | ❌      | ❌         | ❌         |
 
 `Object.freeze()` is the **strongest** form of object locking.
 

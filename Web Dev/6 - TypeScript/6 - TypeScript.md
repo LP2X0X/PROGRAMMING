@@ -14,6 +14,8 @@ type: folder_brief_live
 - **[[6.4 - Classes]]**
 - **[[6.6 - Keywords and Operators]]**
 - **[[6.8 - TypeScript-only Features]]**
+- **6.9 - TypeScript-only Features**
+	- **[[Notes]]**
 - **[[Miscellaneous]]**
 
 %% End Waypoint %%
