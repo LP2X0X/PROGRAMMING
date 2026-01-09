@@ -234,14 +234,14 @@ font-body
 
 # 🧠 10. Key Differences From Tailwind v3
 
-|Tailwind v3|Tailwind v4|
-|---|---|
-|`tailwind.config.js`|**no config file**|
-|JS-based theme extend|`@theme` with CSS variables|
-|content[] scanning|automatic + simplified|
-|JS plugins|CSS plugins (`@plugin`)|
-|named color scales (`blue-500`)|create anything via tokens (`--color-brand`)|
-|breakpoints in theme|breakpoints via CSS variables|
+| Tailwind v3                     | Tailwind v4                                  |
+| ------------------------------- | -------------------------------------------- |
+| `tailwind.config.js`            | **no config file**                           |
+| JS-based theme extend           | `@theme` with CSS variables                  |
+| content[] scanning              | automatic + simplified                       |
+| JS plugins                      | CSS plugins (`@plugin`)                      |
+| named color scales (`blue-500`) | create anything via tokens (`--color-brand`) |
+| breakpoints in theme            | breakpoints via CSS variables                |
 
 ---
 

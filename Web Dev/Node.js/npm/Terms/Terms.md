@@ -1,4 +1,4 @@
-# npm Overview
+# Terms Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,8 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[Commands]]**
-- [[package.json]]
-- **[[Terms]]**
+- [[Prerelease Version]]
+- [[Semantic Version]]
+- [[Version Range]]
 
 %% End Waypoint %%

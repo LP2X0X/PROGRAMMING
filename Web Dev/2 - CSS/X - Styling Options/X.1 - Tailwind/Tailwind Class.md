@@ -186,9 +186,9 @@ md:focus:ring-4
 
 # 🎉 Summary Cheat Format
 
-|Part|What it does|Example|
-|---|---|---|
-|**Prefix**|When/where it applies|`hover:`, `md:`, `dark:`|
-|**Utility Name**|What property you want to change|`bg`, `text`, `p`, `ring`|
-|**Value**|Specific value from Tailwind scale|`4`, `red-500`, `xl`|
-|**Modifier**|Fine control / opacity / direction|`/50`, `-reverse`, `[20px]`|
+| Part             | What it does                       | Example                     |
+| ---------------- | ---------------------------------- | --------------------------- |
+| **Prefix**       | When/where it applies              | `hover:`, `md:`, `dark:`    |
+| **Utility Name** | What property you want to change   | `bg`, `text`, `p`, `ring`   |
+| **Value**        | Specific value from Tailwind scale | `4`, `red-500`, `xl`        |
+| **Modifier**     | Fine control / opacity / direction | `/50`, `-reverse`, `[20px]` |

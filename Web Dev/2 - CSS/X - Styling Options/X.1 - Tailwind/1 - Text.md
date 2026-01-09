@@ -15,17 +15,17 @@ One big "Gotcha" to remember: **Tailwind removes all default styling.** An `<h1>
 
 Control how big and how thick the text is.
 
-|**Class**|**CSS Property**|**Use Case**|
-|---|---|---|
-|**`text-xs`**|`0.75rem`|Legal text, tiny labels.|
-|**`text-sm`**|`0.875rem`|Subtitles, meta-data, secondary text.|
-|**`text-base`**|`1rem`|**Default.** Standard body text.|
-|**`text-lg`**|`1.125rem`|Intro paragraphs, large buttons.|
-|**`text-xl`** to **`9xl`**|`1.25rem`+|Headings.|
-|**`font-normal`**|`400`|Default weight.|
-|**`font-medium`**|`500`|Subtle emphasis (great for UI labels).|
-|**`font-semibold`**|`600`|Section headers.|
-|**`font-bold`**|`700`|Main titles.|
+| **Class**                  | **CSS Property** | **Use Case**                           |
+| -------------------------- | ---------------- | -------------------------------------- |
+| **`text-xs`**              | `0.75rem`        | Legal text, tiny labels.               |
+| **`text-sm`**              | `0.875rem`       | Subtitles, meta-data, secondary text.  |
+| **`text-base`**            | `1rem`           | **Default.** Standard body text.       |
+| **`text-lg`**              | `1.125rem`       | Intro paragraphs, large buttons.       |
+| **`text-xl`** to **`9xl`** | `1.25rem`+       | Headings.                              |
+| **`font-normal`**          | `400`            | Default weight.                        |
+| **`font-medium`**          | `500`            | Subtle emphasis (great for UI labels). |
+| **`font-semibold`**        | `600`            | Section headers.                       |
+| **`font-bold`**            | `700`            | Main titles.                           |
 
 ### The "Arbitrary Value"
 

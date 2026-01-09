@@ -1,6 +1,6 @@
 ---
 tags: 
- - js
+ - npm
  - term
  - general
 ---
