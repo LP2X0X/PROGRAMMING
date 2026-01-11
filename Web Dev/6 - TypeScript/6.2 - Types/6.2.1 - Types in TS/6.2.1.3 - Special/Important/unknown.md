@@ -9,6 +9,7 @@ In TypeScript, **`unknown`** is a **type-safe alternative to `any`**. It represe
 
 ![[065-introduction-to-unknown.explainer.svg|center|700]]
  <figcaption align="center"><strong>Figure:</strong> Assignability chart where all types can be assign to unknown but not vice versa. </figcaption>
+
 ---
 
 ## What `unknown` means

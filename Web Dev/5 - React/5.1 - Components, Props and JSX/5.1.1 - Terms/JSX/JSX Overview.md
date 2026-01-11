@@ -50,14 +50,14 @@ Used like this:
 
 ### **✅ Key Features of JSX**
 
-|**Feature**|**Example**|
-|---|---|
-|Embed JavaScript|{} inside JSX|
-|Self-closing Tags|\<img />, \<input />|
-|Props|\<Component name="value" />|
-|Children|\<Component>Some content\</Component>|
-|Conditional Render|{isLoggedIn ? <User /> : <Guest />}|
-|Lists|{items.map(item => \<li>{item}\</li>)}|
+| **Feature**        | **Example**                            |
+| ------------------ | -------------------------------------- |
+| Embed JavaScript   | {} inside JSX                          |
+| Self-closing Tags  | \<img />, \<input />                   |
+| Props              | \<Component name="value" />            |
+| Children           | \<Component>Some content\</Component>  |
+| Conditional Render | {isLoggedIn ? <User /> : <Guest />}    |
+| Lists              | {items.map(item => \<li>{item}\</li>)} | 
 
 ---
 

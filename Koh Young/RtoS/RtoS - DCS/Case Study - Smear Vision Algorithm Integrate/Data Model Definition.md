@@ -7,52 +7,17 @@ tags: [excalidraw]
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 
-# Text Elements
+# Excalidraw Data
+## Text Elements
 %%
-# Drawing
-```json
-{
-	"type": "excalidraw",
-	"version": 2,
-	"source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.1.7",
-	"elements": [],
-	"appState": {
-		"theme": "dark",
-		"viewBackgroundColor": "#ffffff",
-		"currentItemStrokeColor": "#1e1e1e",
-		"currentItemBackgroundColor": "transparent",
-		"currentItemFillStyle": "solid",
-		"currentItemStrokeWidth": 2,
-		"currentItemStrokeStyle": "solid",
-		"currentItemRoughness": 1,
-		"currentItemOpacity": 100,
-		"currentItemFontFamily": 1,
-		"currentItemFontSize": 20,
-		"currentItemTextAlign": "left",
-		"currentItemStartArrowhead": null,
-		"currentItemEndArrowhead": "arrow",
-		"scrollX": 615.76171875,
-		"scrollY": 410.0390625,
-		"zoom": {
-			"value": 1
-		},
-		"currentItemRoundness": "round",
-		"gridSize": null,
-		"gridColor": {
-			"Bold": "#C9C9C9FF",
-			"Regular": "#EDEDEDFF"
-		},
-		"currentStrokeOptions": null,
-		"previousGridSize": null,
-		"frameRendering": {
-			"enabled": true,
-			"clip": true,
-			"name": true,
-			"outline": true
-		},
-		"objectsSnapModeEnabled": false
-	},
-	"files": {}
-}
+## Drawing
+```compressed-json
+N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATLZMzYBXUtiRoIACyhQ4zZAHoFAc0JRJQgEYA6bGwC2CgF7N6hbEcK4OCtptbErHALRY8RMpWdx8Q1TdIEfARcZgRmBShcZQUebQBWbQAGGjoghH0EDihmbgBtAF1+CFw4OABlKKhxVFAwSHUMmohiXFIAa1T6hkIECgAhXGx25VJhDmIAYTZ8NlJuCABiADNV
+
+ta7IbBFA7IBJav1KsfaEadn5iUWARgQbm42ILdIdqH2MweHR8amZuYWocgcZhwNpZKAPJ4vN76ABihHw+EqMGCC0EHgh2zB0KObBOAHUSOpuHxwJtMXsDjiTkiURI0SQMc8sQcAErCZSSDjhXJoK78MlMikZADyIOwahg3CuSSS/Me5NeBxhnCgMNw+nhkt5cshzIyyuy5UIRhqPFlpPlgsVGQAKlgoABBIjKLgSYLLcE6hXYqKkR3PNgUSQhYjc
+
+DhCBFeq3QgCiEwdAaDIYWbTGVCjUIOCbTNvgzTGQgmD2Y2DGCIAGtwAMwAdiu2gAnFcAGwAFlbPAAHHWkg3a/E5SWy/gAJrcZtJZvaVvNms8Hitq48aV9ztyoxsAzcOrdegEIQ1K6kgC+Gb1+jZheIXOYPPQBaLctGJCNJuJ5u6z+IlQQcG4A4tL8AFk2GIBA41wTRglDNBlgIMIn1IEgzj+NAd0gfoZhg+9lE0XAAAplxraheCuYjSPIpIEgASg
+
+2SAWQQZQIzaBZSFwgieCrWVeC4kjOO4qj4lok8z0NAFcQQUUoHYIEwwjfA5WWchMgYiYmEIDhlG3UlICySDoO4AED35TYiD/NAjIQEyIA4dUaks6zhCgIguUM0gDxEi07AAKwQbAcnKWy4BAsCIKghBsLg/AEItIZpMYG1N3wbT6gaPNUXSfyZLo+VmCgAxc0QOTIx0iBZmGCLuCimLUrK0JHSyhKkuK/AT3AU86GWeFwm3Y8QGPIA==
 ```
 %%

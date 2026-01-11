@@ -91,10 +91,10 @@ const u: User = { id: "U123", status: "active" };
 
 Be careful with parentheses!
 
-|Syntax|Meaning|
-|---|---|
-|`string|number[]`|
-|`(string|number)[]`|
+| Syntax              | Meaning |
+| ------------------- | ------- |
+| `string|number[]`   |         |
+| `(string|number)[]` |         |
 
 Example:
 
@@ -154,11 +154,11 @@ Without narrowing, TypeScript will report errors like:
 
 ### ⚠️ Common Pitfalls
 
-|Pitfall|Description|Fix|
-|---|---|---|
-|Accessing members without narrowing|TS doesn’t know which type is active|Use `typeof`, `instanceof`, or `"prop" in obj`|
-|Ambiguous unions|e.g. `string|number|
-|Forgetting parentheses in arrays|`string|number[]`≠`(string|
+| Pitfall                             | Description                          | Fix                                            |
+| ----------------------------------- | ------------------------------------ | ---------------------------------------------- |
+| Accessing members without narrowing | TS doesn’t know which type is active | Use `typeof`, `instanceof`, or `"prop" in obj` |
+| Ambiguous unions                    | e.g. `string                         | number                                         |
+| Forgetting parentheses in arrays    | `string|number[]`≠`(string           |                                                |
 
 ---
 
@@ -193,9 +193,9 @@ handleInput(3.14, "auto");
 
 ### ✅ Quick Recap
 
-|Concept|Description|Example|
-|---|---|---|
-|**Definition**|Type that can be one of several options|`string \| number`|
-|**Used for**|Parameters, properties, return types, arrays|`let x: A \| B`|
-|**Needs narrowing?**|Yes, before type-specific access|`typeof x === "string"`|
-|**Best with**|Literal types, type aliases, narrowing checks|`"up" \| "down"`|
+| Concept              | Description                                   | Example                 |
+| -------------------- | --------------------------------------------- | ----------------------- |
+| **Definition**       | Type that can be one of several options       | `string \| number`      |
+| **Used for**         | Parameters, properties, return types, arrays  | `let x: A \| B`         |
+| **Needs narrowing?** | Yes, before type-specific access              | `typeof x === "string"` |
+| **Best with**        | Literal types, type aliases, narrowing checks | `"up" \| "down"`        |
