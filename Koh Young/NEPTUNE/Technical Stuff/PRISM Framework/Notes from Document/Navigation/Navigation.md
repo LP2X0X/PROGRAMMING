@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Definition]]
+- [[Koh Young/NEPTUNE/Technical Stuff/PRISM Framework/Notes from Document/Navigation/Definition]]
 - [[IConfirmNavigationRequest]]
 - [[INavigationAware]]
 - [[IRegionMemberLifetime]]

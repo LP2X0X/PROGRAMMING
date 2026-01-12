@@ -62,6 +62,10 @@ function add(a, b) {
 add(2, 3); // 2, 3 = arguments
 ```
 
+```ad-note
+In JavaScript, providing a function with fewer arguments than expected is perfectly valid and is a core feature of the language. The function will execute without error, and the missing arguments will be automatically assigned the value of `undefined`.
+```
+
 ---
 
 ### **🛑 Default Parameters**

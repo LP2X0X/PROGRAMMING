@@ -12,7 +12,7 @@ type: folder_brief_live
 	- [[3.1.1 - Typography Rules]]
 	- [[3.1.2 - Colors Rules]]
 	- [[3.1.3 - Images and Illustrations]]
-- **[[Notes]]**
+- **[[Web Dev/3 - Web Design/Notes/Notes]]**
 - **[[Website Personalities]]**
 
 %% End Waypoint %%
