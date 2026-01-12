@@ -15,6 +15,7 @@ type: folder_brief_live
 - **[[6.5 - Keywords and Operators]]**
 - **[[6.6 - TypeScript-only Features]]**
 - **[[6.7 - Scopes]]**
+- [[GOLDEN RULES]]
 - **[[Miscellaneous]]**
 - **[[Notes]]**
 - **[[Techniques]]**
