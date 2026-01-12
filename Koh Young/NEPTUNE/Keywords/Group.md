@@ -1,1 +1,0 @@
-- A group is a setting to define which inspection items are the one we want to define.

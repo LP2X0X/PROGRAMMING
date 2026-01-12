@@ -1,1 +1,0 @@
-- The [[EventAggregator Class|EventAggregator]] class is offered as a service in the container and can be retrieved through the IEventAggregator interface. The event aggregator is responsible for locating or building events and for keeping a collection of the events in the system.

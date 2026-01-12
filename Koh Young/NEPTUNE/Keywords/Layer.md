@@ -1,1 +1,0 @@
-- A group of multiple ROI which have the same inspect conditions and parameters.

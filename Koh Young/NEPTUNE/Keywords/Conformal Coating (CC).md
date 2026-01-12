@@ -1,3 +1,0 @@
-- Specially engineered polymeric film-forming product that protects electronic device.
-- Coating is sprayed or injected in liquid form.
-- After 10~30 min or under the UV light, it turns into solid film.

@@ -1,1 +1,0 @@
-- The top surface of the coating which we can touch.
