@@ -197,3 +197,9 @@ Render → Commit DOM → Browser paints → useEffect
                           ↑
                         useLayoutEffect runs here
 ```
+
+---
+
+### Reference
+
+https://react.dev/learn/you-might-not-need-an-effect
