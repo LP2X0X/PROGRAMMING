@@ -11,7 +11,6 @@ Redux is a **state management library** that helps you manage **global applicati
 
 ![[Pasted image 20251114195056.png|center|700]]
 
-
 ---
 
 # 1️⃣ The Core Idea of Redux

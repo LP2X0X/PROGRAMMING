@@ -1,4 +1,4 @@
-# Basic C++ Overview
+# Notes Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,8 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- **[[1.1 - Terms]]**
-- **[[Attributes]]**
-- **[[Notes]]**
+- [[Evolving any]]
 
 %% End Waypoint %%

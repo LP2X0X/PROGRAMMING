@@ -10,7 +10,6 @@ type: folder_brief_live
 - [[any]]
 - [[Date]]
 - [[Discriminated Union]]
-- [[Evolving any]]
 - [[Literal]]
 - [[never]]
 - [[Object]]

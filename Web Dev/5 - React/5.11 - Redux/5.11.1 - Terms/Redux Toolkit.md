@@ -33,13 +33,13 @@ That’s all — no extra packages like redux-thunk (already included) and no ne
 
 Traditional Redux had problems:
 
-|Old Redux Problem|RTK Fix|
-|---|---|
-|Too much boilerplate (action types, creators, switch-case)|`createSlice` auto-generates actions + reducer|
-|Hard immutable updates (deep spread copies)|**Immer** included → write “mutating” code safely|
-|Hard to set up store (middleware, DevTools)|`configureStore` sets all defaults correctly|
-|Async logic complicated|`createAsyncThunk` simplifies async flows|
-|Common mistakes (mutating state, forgetting DevTools)|RTK defaults prevent mistakes|
+| Old Redux Problem                                          | RTK Fix                                           |
+| ---------------------------------------------------------- | ------------------------------------------------- |
+| Too much boilerplate (action types, creators, switch-case) | `createSlice` auto-generates actions + reducer    |
+| Hard immutable updates (deep spread copies)                | **Immer** included → write “mutating” code safely |
+| Hard to set up store (middleware, DevTools)                | `configureStore` sets all defaults correctly      |
+| Async logic complicated                                    | `createAsyncThunk` simplifies async flows         |
+| Common mistakes (mutating state, forgetting DevTools)      | RTK defaults prevent mistakes                     |
 
 RTK’s job = **make Redux simpler, safer, and shorter**.
 
