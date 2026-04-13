@@ -9,6 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - **[[Commands]]**
 - [[package.json]]
-- **[[Terms]]**
+- **[[Web Dev/Node.js/npm/Terms/Terms]]**
 
 %% End Waypoint %%

@@ -13,6 +13,7 @@ type: folder_brief_live
 - [[OR vs null coalescing operators]]
 - [[Reference Type]]
 - [[String concatenation]]
+- [[Transpiler vs Polyfill]]
 - [[Unary plus operator]]
 
 %% End Waypoint %%

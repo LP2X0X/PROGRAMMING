@@ -15,3 +15,10 @@ Layouts are all about relationships between elements.
 ```ad-tip
 To begin laying out a page, it is best to do so from the outside in. Get the larger container elements where you want them before moving on to the smaller ones inside them.
 ```
+
+```ad-note
+## Correct mental model
+
+> **Grid is layout-first (`fr`)**  
+> **Flex is content-first (`flex-grow`)**
+```

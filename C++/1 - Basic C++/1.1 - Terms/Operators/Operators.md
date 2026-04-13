@@ -10,7 +10,7 @@ type: folder_brief_live
 - [[Arity]]
 - [[Operator]]
 - [[Scope resolution operator]]
-- [[C++/1 - Basic C++/Terms/Operators/Side Effect]]
+- [[Side Effect]]
 - [[sizeof]]
 
 %% End Waypoint %%

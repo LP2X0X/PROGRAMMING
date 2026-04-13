@@ -20,14 +20,14 @@ type: folder_brief_live
 - [[Initializer]]
 - [[Lifetime]]
 - [[Macro]]
-- [[C++/1 - Basic C++/Terms/Core/Object]]
+- [[Object]]
 - [[Pass by value]]
 - [[Preprocessor Directive]]
 - [[Preprocessor]]
-- [[C++/1 - Basic C++/Terms/Core/Statement]]
+- [[Statement]]
 - [[Status code]]
 - [[Temporary Object]]
 - [[Transitive includes]]
-- [[C++/1 - Basic C++/Terms/Core/Variable]]
+- [[Variable]]
 
 %% End Waypoint %%

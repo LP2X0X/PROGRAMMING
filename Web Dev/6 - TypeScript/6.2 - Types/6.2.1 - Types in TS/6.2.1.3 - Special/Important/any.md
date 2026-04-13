@@ -197,16 +197,31 @@ const safeUser = fetchUserData() as Promise<{ name: string }>;
 ```
 
 ---
+## 🧠 10. Evolving any
 
-## 🧾 10. TL;DR Cheatsheet
+Variables that can’t have their initial type inferred go through what’s called an evolving any: rather than enforce any particular type, TypeScript will evolve its understanding of the variable’s type each time a new value is assigned.
 
-|Concept|Summary|
-|---|---|
-|`any` disables type checking|Use only when necessary|
-|Avoid implicit `any`|Set `noImplicitAny: true`|
-|`any` spreads easily|Be careful with assignments|
-|Prefer `unknown`|Safer, requires checks|
-|Use `any` only for interop / quick fixes|Replace later with proper types|
+```ts
+let rocker; // Type: any
+
+rocker = "Joan Jett"; // Type: string
+rocker.toUpperCase(); // Ok
+
+rocker = 19.58; // Type: number
+rocker.toPrecision(1); // Ok
+```
+
+---
+
+## 🧾 11. TL;DR Cheatsheet
+
+| Concept                                  | Summary                         |
+| ---------------------------------------- | ------------------------------- |
+| `any` disables type checking             | Use only when necessary         |
+| Avoid implicit `any`                     | Set `noImplicitAny: true`       |
+| `any` spreads easily                     | Be careful with assignments     |
+| Prefer `unknown`                         | Safer, requires checks          |
+| Use `any` only for interop / quick fixes | Replace later with proper types |
 
 ---
 
