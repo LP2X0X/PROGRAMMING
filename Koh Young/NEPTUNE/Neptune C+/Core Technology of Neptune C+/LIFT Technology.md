@@ -1,1 +1,0 @@
-- Laser Interferometry for Fluid Tomography (LIFT) based on low-coherence interferometry, employing near infrared light (NIR)

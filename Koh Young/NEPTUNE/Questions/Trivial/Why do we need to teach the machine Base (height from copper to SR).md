@@ -1,1 +1,0 @@
-- For 3D inspection of IC Component only.

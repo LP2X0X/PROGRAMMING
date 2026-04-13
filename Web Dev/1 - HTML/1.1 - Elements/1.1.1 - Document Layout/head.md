@@ -149,7 +149,3 @@ Provides metadata in name–content pairs.
     
 - It **does not render visible content** (that goes in `<body>`).
     
-
----
-
-👉 Do you want me to also make a **diagram (visual map) of the head section** showing which tags affect SEO, browser behavior, and styling?

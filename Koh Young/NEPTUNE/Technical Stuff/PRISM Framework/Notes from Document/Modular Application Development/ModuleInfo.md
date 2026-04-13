@@ -1,2 +1,0 @@
-## Definition
-- Each module is described in a `ModuleInfo` class that records the name, type, and location, among other attributes of the [[Koh Young/NEPTUNE/Technical Stuff/PRISM Framework/Notes from Document/Modular Application Development/Module|module]].

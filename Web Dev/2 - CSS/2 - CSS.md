@@ -25,10 +25,10 @@ type: folder_brief_live
 	- [[Selectors]]
 - **[[2.5 - Animations]]**
 	- **[[2.5.1 - CSS Transitions]]**
-- **[[Web Dev/2 - CSS/Notes/Notes]]**
+- **[[Notes]]**
 - **[[Properties]]**
 - **[[Questions]]**
-- **[[Web Dev/2 - CSS/Techniques/Techniques]]**
+- **[[Techniques]]**
 - **[[X - Styling Options]]**
 
 %% End Waypoint %%

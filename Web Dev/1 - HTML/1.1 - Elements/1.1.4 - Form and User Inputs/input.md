@@ -13,7 +13,7 @@ The \<input> element in HTML is used to **create interactive form controls** tha
 
 ---
 
-**📌 Basic Syntax:**
+### **📌 Basic Syntax:**
 
 ```html
 <input type="text" name="username" placeholder="Enter your username">
@@ -21,7 +21,7 @@ The \<input> element in HTML is used to **create interactive form controls** tha
 
 ---
 
-**🔑 Common Attributes:**
+### **🔑 Common Attributes:**
 
 | **Attribute**         | **Description**                                                                                     |
 | --------------------- | --------------------------------------------------------------------------------------------------- |
@@ -39,7 +39,7 @@ The \<input> element in HTML is used to **create interactive form controls** tha
 
 ---
 
-**✅ Example Types:**
+### **✅ Example Types:**
 
 ```html
 <input type="text" placeholder="Text field"><br>
@@ -53,8 +53,14 @@ The \<input> element in HTML is used to **create interactive form controls** tha
 
 ---
 
-**💡 Tips:**
+### **💡 Tips:**
 
 • Always use label elements for accessibility.
 • Use name attributes when inputs are inside a \<form> to make sure data gets submitted.
 • Combine with pattern attribute for custom validation (e.g., regex).
+
+---
+
+### Related CSS Properties
+
+[[outline]]

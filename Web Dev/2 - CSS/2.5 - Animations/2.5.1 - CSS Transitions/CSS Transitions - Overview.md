@@ -38,12 +38,12 @@ When you hover over the button, its background color changes smoothly over **0.3
 
 ## ⚙️ Transition Properties
 
-|Property|Description|Example|
-|---|---|---|
-|`transition-property`|Which CSS property to animate|`background-color`, `width`, `transform`, `all`|
-|`transition-duration`|How long the transition lasts|`0.5s`, `200ms`|
-|`transition-timing-function`|The animation’s speed curve|`ease`, `linear`, `ease-in-out`, `cubic-bezier(...)`|
-|`transition-delay`|Wait time before starting|`0s`, `1s`|
+| Property                     | Description                   | Example                                              |
+| ---------------------------- | ----------------------------- | ---------------------------------------------------- |
+| `transition-property`        | Which CSS property to animate | `background-color`, `width`, `transform`, `all`      |
+| `transition-duration`        | How long the transition lasts | `0.5s`, `200ms`                                      |
+| `transition-timing-function` | The animation’s speed curve   | `ease`, `linear`, `ease-in-out`, `cubic-bezier(...)` |
+| `transition-delay`           | Wait time before starting     | `0s`, `1s`                                           |
 
 You can also combine them in one shorthand:
 

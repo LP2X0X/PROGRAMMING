@@ -1,1 +1,0 @@
-- It is a dimensionless number that describes how much the path of light is bent or refracted when entering a material.

@@ -1,1 +1,0 @@
-- Region which the machine will inspect.
