@@ -9,10 +9,10 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Argument]]
 - [[Function Prototype]]
-- [[C++/1 - Basic C++/Terms/Functions/Function]]
+- [[Function]]
 - [[Local variable]]
 - [[main Function]]
-- [[C++/1 - Basic C++/Terms/Functions/Parameter]]
+- [[Parameter]]
 - [[return statement]]
 - [[Unnamed parameter]]
 - [[Value Parameter]]

@@ -16,7 +16,7 @@ type: folder_brief_live
 	- [[3.1.5 - Classes]]
 	- **[[4.5.1 - Core]]**
 	- **[[4.5.2 - Inheritance]]**
-	- **[[Web Dev/4 - JavaScript/4.2 - Objects/Notes/Notes]]**
+	- **[[Notes]]**
 - **[[4.6 - Promises, Async and Await]]**
 - **[[4.7 - Module]]**
 - **4.8 - Browser Document, Events, Interfaces**
@@ -26,6 +26,7 @@ type: folder_brief_live
 		- **[[4.8.2.1 -  Terms]]**
 		- **[[4.8.2.2 - Methods]]**
 		- [[preventDefault Function]]
+	- **[[4.8.3 - Miscellaneous]]**
 - **[[4.10 - Network Request]]**
 - **[[X - Techniques]]**
 

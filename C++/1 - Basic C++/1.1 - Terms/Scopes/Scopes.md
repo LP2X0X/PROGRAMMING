@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - [[Global namespace]]
-- [[C++/1 - Basic C++/Terms/Scopes/Namespace]]
+- [[Namespace]]
 - [[Naming collision]]
 - [[Qualified name]]
 - [[Scope region]]
