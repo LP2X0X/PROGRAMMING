@@ -4,6 +4,7 @@
 .obsidian/app.json
 .obsidian/plugins/various-complements/histories.json
 .obsidian/hotkeys.json
+.smart-env
 .DS_Store
 *.swp
 *.un~
