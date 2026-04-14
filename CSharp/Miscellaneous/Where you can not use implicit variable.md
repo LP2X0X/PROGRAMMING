@@ -1,3 +1,9 @@
+---
+tags:
+ - csharp
+ - miscellaneous
+---
+
 In C#, implicit variables (`var` keyword) can be incredibly convenient for reducing verbosity and enhancing readability of code. However, there are specific scenarios where you cannot use implicit variables:
 
 1. **Member Variables**: You cannot use `var` for member variables (fields) at the class level because C# requires explicit type declarations for fields.

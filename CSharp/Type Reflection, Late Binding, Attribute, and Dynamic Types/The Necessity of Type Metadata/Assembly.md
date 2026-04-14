@@ -1,1 +1,0 @@
-- The .il file also allows you to view the .NET metadata that describes the assembly itself using the Assembly token.

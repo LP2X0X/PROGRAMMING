@@ -1,1 +1,0 @@
-Programming in a black-box paradigm mainly consists of _having functions or methods that hides the inner workings from the user_ (programmer).

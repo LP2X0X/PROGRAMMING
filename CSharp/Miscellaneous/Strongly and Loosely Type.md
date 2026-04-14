@@ -1,3 +1,9 @@
+---
+tags:
+ - csharp
+ - miscellaneous
+---
+
 In C# (and in programming languages in general), the terms "strongly typed" and "loosely typed" refer to how strictly the types of variables and expressions are enforced by the compiler or runtime environment.
 
 ### Strongly Typed

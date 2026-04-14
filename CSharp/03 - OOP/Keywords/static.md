@@ -1,0 +1,8 @@
+---
+tags:
+ - csharp
+ - oop
+ - keyword
+---
+
+A C# class may define any number of static members, which are declared using the static keyword. When you do so, the member in question must be invoked directly from the class level, rather than from an object reference variable.

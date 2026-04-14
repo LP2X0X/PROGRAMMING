@@ -1,0 +1,7 @@
+---
+tags:
+ - csharp
+ - processes
+---
+
+https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.processstartinfo.verb?view=net-8.0

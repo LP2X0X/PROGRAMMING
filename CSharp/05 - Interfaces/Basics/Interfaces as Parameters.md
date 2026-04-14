@@ -1,0 +1,8 @@
+---
+tags:
+ - csharp
+ - interfaces
+---
+
+- Given that interfaces are valid types, you may construct methods that take interfaces as parameters.
+- If you now define a method taking an interface as a parameter, you can effectively send in any object implementing that interface.

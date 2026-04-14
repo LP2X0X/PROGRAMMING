@@ -1,1 +1,0 @@
-- Reference: https://stackoverflow.com/questions/267724/why-xml-serializable-class-need-a-parameterless-constructor

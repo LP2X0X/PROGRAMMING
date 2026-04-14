@@ -1,0 +1,7 @@
+---
+tags:
+ - csharp
+ - interfaces
+---
+
+- When you have an array of a given interface, the array can contain any class or structure that implements that interface.

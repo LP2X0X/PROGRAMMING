@@ -1,0 +1,8 @@
+---
+tags:
+ - csharp
+ - oop
+ - keyword
+---
+
+One possible use of the this keyword is to resolve scope ambiguity, which can arise when an incoming parameter is named identically to a data field of the class.

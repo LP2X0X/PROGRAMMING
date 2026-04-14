@@ -1,3 +1,8 @@
+---
+tags:
+ - csharp
+---
+
 # CSharp Overview
  
 ```ccard
@@ -5,23 +10,406 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
-- **[[0 - Fundamental]]**
-- **[[Advanced CSharp Language Features]]**
-- **[[Basic]]**
-- **[[Building and Configuring Class Libraries]]**
-- **[[Collections and Generics]]**
-- [[Core Concepts]]
-- **[[CSharp to C++]]**
-- **[[Delegates, Events and Lambda Expressions]]**
-- **[[File I.O and Object Serialization]]**
+- **01 - Fundamentals**
+	- **Definitions**
+		- [[CTS (Common Type System)]]
+		- [[dotNET Runtime (CLR)]]
+		- [[IL (Intermediate Language)]]
+		- [[JIT (Just In Time) Compiler]]
+	- [[Overview of .NET Assemblies]]
+- **02 - Syntax and Basics**
+	- **Keywords**
+		- [[Application Object]]
+		- [[Syntactic Sugar]]
+	- **Methods**
+		- [[Local Functions]]
+		- [[Method Overloading]]
+		- [[Method Parameter Modifiers]]
+		- [[Method]]
+		- [[Named Arguments]]
+		- [[Static Local Functions]]
+	- **Miscellaneous**
+		- [[Casting]]
+		- [[checked Keyword]]
+		- [[Conditional Operator]]
+		- [[Default Constructor]]
+		- [[Difference between error and exception]]
+		- [[Difference between ref and out]]
+		- [[Difference between Statement and Expression]]
+		- [[Discard]]
+		- [[ERRORLEVEL Variable]]
+		- [[Format String]]
+		- [[global Keyword]]
+		- [[Indices and Ranges]]
+		- [[Managed and Unmanaged Code]]
+		- [[Pattern Matching]]
+		- [[Post-build event]]
+		- [[switch Expressions]]
+		- [[System.Text.StringBuilder]]
+		- [[Top-Level Statements]]
+		- [[Value Types Containing Reference Types]]
+		- [[What happen when you pass a reference object by value]]
+	- **Operators**
+		- [[Null Conditional Operator]]
+		- [[Null-Coalescing Assignment Operator]]
+		- [[Null-Coalescing Operator]]
+	- **Types**
+		- [[array]]
+		- [[enum]]
+		- [[null]]
+		- [[Nullable Reference type]]
+		- [[Nullable Value type]]
+		- [[struct]]
+		- [[Tuple vs System.Tuple]]
+		- [[tuple]]
+		- [[Value Type vs Reference Type]]
+- **03 - OOP**
+	- **Classes**
+		- [[Constructor]]
+		- [[Default Access Modifier]]
+		- [[Partial Classes]]
+	- **Encapsulation**
+		- [[Automatic Properties]]
+		- [[Encapsulation Using Properties]]
+		- [[Mixing Private and Public Get-Set Methods on Properties]]
+		- [[Pattern Matching with Property Patterns]]
+		- [[Read-Only Properties]]
+		- [[Role of Encapsulation]]
+		- [[Write-only Properties]]
+	- **Features**
+		- [[Constant Data]]
+		- [[Init-only Properties]]
+		- [[Object Initialization Syntax]]
+		- [[Read-Only Fields]]
+		- [[Record]]
+		- [[Static Read-Only Fields]]
+	- **Inheritance**
+		- [[Calling Base Class Constructors with the base keyword]]
+		- [[has-a Relationship]]
+		- [[is-a Relationship]]
+		- [[Nested Type (or Class)]]
+		- [[Role of Inheritance]]
+		- [[The protected Keyword]]
+	- **Keywords**
+		- [[Access Modifier]]
+		- [[as]]
+		- [[base]]
+		- [[Blackbox programming]]
+		- [[Contextual keywords]]
+		- [[is]]
+		- [[new]]
+		- [[Object Identity vs Object Equality]]
+		- [[protected]]
+		- [[root Namespace]]
+		- [[sealed]]
+		- [[static]]
+		- [[System.Object]]
+		- [[this]]
+		- [[when]]
+		- [[with]]
+	- **Polymorphism**
+		- [[Abstract Classes]]
+		- [[as Keyword]]
+		- [[Class casting operations]]
+		- [[is Keyword]]
+		- [[Member Shadowing]]
+		- [[Role of Polymorphism]]
+		- [[Using the virtual and override Keywords]]
+	- **Static Members**
+		- [[Static Class]]
+		- [[Static Constructor]]
+		- [[Static Field Data]]
+		- [[Static Method]]
+		- [[Static with using keyword]]
+- **04 - Exception Handling**
+	- [[Exception Filters]]
+	- **Exception Properties**
+		- [[Data]]
+		- [[HelpLink]]
+		- [[StackTrace]]
+		- [[TargetSite]]
+	- [[Inner Exceptions]]
+	- **Keywords**
+		- [[Bugs]]
+		- [[Exceptions]]
+		- [[finally]]
+		- [[throw]]
+		- [[try-catch]]
+		- [[User Errors]]
+	- [[Processing Multiple Exceptions]]
+	- [[Rethrowing Exceptions]]
+	- [[System.ApplicationException]]
+	- [[System.Exception Base Class]]
+	- [[System.SystemException]]
+- **05 - Interfaces**
+	- **Basics**
+		- [[Arrays of Interface Types]]
+		- [[Default Implementations]]
+		- [[Defining Custom Interfaces]]
+		- [[Designing Interface Hierarchies]]
+		- [[Explicit Interface Implementation]]
+		- [[Implement Interface]]
+		- [[Interface Types]]
+		- [[Interface vs Abstract]]
+		- [[Interfaces as Parameters]]
+		- [[Interfaces as Return Values]]
+		- [[Multiple Inheritance with Interface Types]]
+		- [[Static Constructors and Members]]
+	- **Common Interfaces**
+		- [[Guard Clause]]
+		- [[ICloneable]]
+		- [[IComparable]]
+		- [[IComparer]]
+		- [[IEnumerable and IEnumerator Interfaces]]
+		- [[Iterator]]
+		- [[Named Iterator]]
+		- [[yield]]
+	- **Notes**
+		- [[Difference between IComparer and IComparable]]
+		- [[Example of IComparer and IComparable]]
+- **06 - Collections and Generics**
+	- [[Default Value Expressions with Generics]]
+	- **Features**
+		- [[Collection Initialization Syntax]]
+		- [[Constraining Type Parameters]]
+		- [[Default Literal Expressions]]
+		- [[Dictionary Initialization Syntax]]
+		- [[Pattern Matching with Generics]]
+	- **Generic Collections**
+		- [[Generic PriorityQueue]]
+		- [[Generic Queue]]
+		- [[Generic SortedSet]]
+		- [[Generic Stack]]
+	- [[Generic Collections T]]
+	- **ObjectModel**
+		- [[Generic ObservableCollection]]
+	- [[System.Collections.ObjectModel]]
+	- [[The Problems of Nongeneric Collections]]
+	- [[The System.Collections Namespace]]
+	- [[The System.Collections.Generic Namespace]]
+- **07 - Delegates Events and Lambdas**
+	- **Anonymous Methods**
+		- [[Accessing Local Variables]]
+		- [[Anonymous Method Overview]]
+		- [[Discards with Anonymous Methods]]
+		- [[Using static with Anonymous Methods]]
+	- **Delegates**
+		- [[Action Delegate]]
+		- [[Callback]]
+		- [[Delegate Type]]
+		- [[Func Delegate]]
+		- [[Generic Delegates]]
+		- [[Method Group Conversion Syntax]]
+		- [[The System.MulticastDelegate and System.Delegate Base Classes]]
+	- **Events**
+		- [[Custom Event Arguments]]
+		- [[Event]]
+		- [[What is the benefit of using the event keyword]]
+	- **Lambda Expressions**
+		- [[Lambda Expression Overview]]
+		- [[Using static and discard with Lambda Expressions]]
+	- [[Summarize]]
+- **08 - LINQ**
+	- **Execution Types**
+		- [[Deferred Execution in LINQ]]
+		- [[Immediate Execution in LINQ]]
+	- **Features**
+		- [[Aggregation Operations]]
+		- [[Applying LINQ Queries to Nongeneric Collections]]
+		- [[DefaultIfEmpty]]
+		- [[LINQ As a Better Venn Diagramming Tool]]
+		- [[Obtaining Nonenumerated Counts]]
+		- [[Paging Data with Chunks]]
+		- [[Paging Data with Ranges]]
+		- [[Paging Data]]
+		- [[Projecting]]
+		- [[Removing Duplicates]]
+		- [[Set Default for First-Last-Single_OrDefault Methods]]
+		- [[Sorting Expressions]]
+	- [[LINQ Introduction]]
+	- [[LINQ Query Operators]]
+	- **Selectors**
+		- [[Aggregation with Selectors]]
+		- [[Removing Duplicates with Selectors]]
+		- [[Venn Diagramming with Selectors]]
+	- [[Single vs First]]
+	- [[Terms of LINQ]]
+- **09 - Advanced Features**
+	- [[Anonymous Types]]
+	- [[Custom Type Conversions]]
+	- [[Equality for Anonymous Types]]
+	- [[Extension Methods]]
+	- [[Indexer Methods]]
+	- [[Operator Overloading]]
+	- **Pointer Types**
+		- [[Pinning a Type via the fixed Keyword]]
+		- [[Prerequisites for unmanaged code]]
+		- [[The sizeof Keyword]]
+		- [[The stackalloc Keyword]]
+		- [[The unsafe Keyword]]
+		- [[Working with Pointer Types]]
+- **10 - File IO and Serialization**
+	- **Serialization**
+		- [[Controlling the Generated JSON Data]]
+		- [[Controlling the Generated XML Data]]
+		- [[DTD]]
+		- [[JSON Structure]]
+		- [[JsonSerializerOptions]]
+		- [[Object Graphs]]
+		- [[Serialization in .NET]]
+		- [[Using JsonSerializer]]
+		- [[Using XmlSerializer]]
+		- [[Why XML-Serializable class need a parameterless constructor]]
+		- [[XML Structure]]
+	- **System.IO**
+		- [[Backing Store]]
+		- [[BinaryReader]]
+		- [[BinaryWriter]]
+		- [[Difference between StreamReader and FileStream]]
+		- [[Directory Type]]
+		- [[DirectoryInfo Type]]
+		- [[DriveInfo Class Type]]
+		- [[Encoding Class]]
+		- [[File Type]]
+		- [[FileInfo Type]]
+		- [[FileInfo.Open Method]]
+		- [[FileStream]]
+		- [[FileSystemWatcher]]
+		- [[Key Members]]
+		- [[Seeking]]
+		- [[Stream]]
+		- [[StreamReader]]
+		- [[StreamWriter]]
+		- [[StringBuilder]]
+		- [[StringReader]]
+		- [[StringWriter]]
+		- [[TextReader]]
+		- [[TextWriter]]
+		- [[The Abstract FileSystemInfo Base Class]]
+		- [[The Directory(Info) and File(Info) Types]]
+- **11 - Object Lifetime**
+	- [[Are both dispose and finalization wait for the garbage collector]]
+	- [[Can you still access member of an object after it has been dispose]]
+	- **Disposable Pattern**
+		- [[Building Finalizable and Disposable Types]]
+		- [[Example of implementing IDisposable]]
+		- [[Lazy Object Instantiation]]
+		- [[Order of Actions when Dispose is called]]
+		- [[Reusing the using Keyword]]
+		- [[Using Declarations]]
+	- **Garbage Collection**
+		- [[Compact Memory Feature of GC]]
+		- [[Determining if an Object is Live]]
+		- [[Forcing a Garbage Collection]]
+		- [[Garbage Collection Types]]
+		- [[Object Generations]]
+		- [[System.GC]]
+	- **Keywords**
+		- [[CPU Cache]]
+		- [[Disposable Object]]
+		- [[Ephemeral Generations]]
+		- [[Ephemeral Segment]]
+		- [[Finalizable Objects]]
+		- [[Large Object Heap (LOH)]]
+		- [[Stack Root]]
+		- [[Unmanaged Resource]]
+	- [[Marshal class]]
+	- [[Rules]]
+	- [[The Basics of Object Lifetime]]
+	- [[Why Compacting]]
+	- [[Why is it perfectly safe to communicate with other managed objects within a Dispose() method]]
+- **12 - Processes and Threading**
+	- **AppDomains**
+		- [[AppDomain Overview]]
+	- **[[Async Programming]]**
+	- **Load Contexts**
+		- [[Assembly Isolation with Application Load Contexts]]
+	- **Processes**
+		- [[Controlling Process Startup Using the ProcessStartInfo]]
+		- [[Interacting with Processes Using .NET Core]]
+		- [[Process's Module Set]]
+		- [[ProcessThread]]
+		- [[The Role of a Windows Process]]
+		- [[The Role of Threads]]
+		- [[Verb]]
+	- **Task Parallel Library**
+		- [[Data Parallelism with the Parallel Class]]
+		- [[Parallel Class]]
+		- [[The System.Threading.Tasks Namespace]]
+	- [[The System.Threading Namespace]]
+	- [[The System.Threading.Thread class]]
+- **13 - Assemblies and Libraries**
+	- **Assembly Elements**
+		- [[CIL Code, Type Metadata, and the Assembly Manifest]]
+		- [[Format of a .NET Assembly]]
+		- [[The CLR File Header]]
+		- [[The Operating System (Windows) File Header]]
+	- **Configuration**
+		- [[Bind and Get Methods]]
+		- [[Configuring Applications with Configuration Files]]
+		- [[Multiple Configuration Files]]
+		- [[Working with Objects in Configuration Files]]
+	- **Keywords**
+		- [[Aliases]]
+		- [[Fully Qualified Name]]
+		- [[Satellite Assemblies]]
+	- [[Nested Namespace]]
+	- [[PDB Files - What Every Developer Must Know]]
+	- [[Runtime Identifier]]
+	- [[The Role of .NET Assemblies]]
+- **[[14 - Reflection and Dynamic Types]]**
+	- [[(Global Assembly Cache) GAC]]
+	- **Attributes**
+		- [[AllowMultiple]]
+		- [[Assembly-Level Attributes Overview]]
+		- [[Attribute Overview]]
+		- [[AttributeUsage]]
+		- [[Built-in Attributes]]
+		- [[Custom Attributes]]
+		- [[Named Property Syntax]]
+	- [[Building extendable application]]
+	- [[Display Name]]
+	- **Dynamic Keyword**
+		- [[Difference between var, object and dynamic keywords]]
+		- [[Dynamic Language Runtime]]
+		- [[Expression Trees]]
+		- [[Limitation]]
+		- [[Overview]]
+		- [[Simplifying Late-Bound Calls Using Dynamic Types]]
+	- [[How to generate the IL file of an assembly]]
+	- **Late Binding**
+		- [[Activator Class]]
+		- [[Detail Usage]]
+		- [[Early Binding and Late Binding]]
+		- [[Understanding Late Binding]]
+		- [[Usage]]
+	- [[Obtaining a Type Reference]]
+	- [[Private Key]]
+	- [[PublicKeyToken]]
+	- **Reflection**
+		- [[Dynamically Loading Assemblies]]
+		- [[Reflecting on Attributes Using Late Binding and Early Binding]]
+		- [[Reflecting on Generic Types]]
+		- [[Reflecting on Static Types]]
+		- [[Reflection Overview]]
+		- [[Usage]]
+	- [[Signing an Assembly]]
+	- [[Strongly and Nonstrongly named Assembly]]
+	- [[The System.Type Class]]
+	- **Type Metadata**
+		- [[Assembly]]
+		- [[AssemblyRef]]
+		- [[Extends]]
+		- [[Field]]
+		- [[TypeDef and TypeRef]]
+		- [[User Strings]]
+- **15 - Interop**
+	- [[Mapping Type]]
+	- [[MSBuild set up for both DLL and PBD]]
+	- [[MSBuild set up for SharedProject]]
 - **[[Interfaces]]**
 - **[[LINQ to Objects]]**
 - **[[Miscellaneous]]**
 - **[[Multithreaded, Parallel and Async Programming]]**
-- **[[Object Lifetime]]**
-- **[[OOP]]**
-- **[[Processes, AppDomains and Load Contexts]]**
-- **[[Structured Exception Handling]]**
-- **[[Type Reflection, Late Binding, Attribute, and Dynamic Types]]**
 
 %% End Waypoint %%

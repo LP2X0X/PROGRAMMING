@@ -1,0 +1,8 @@
+---
+tags:
+ - csharp
+ - reflection
+ - metadata
+---
+
+- The Extends metadata token is used to document the base type of a given .NET type.

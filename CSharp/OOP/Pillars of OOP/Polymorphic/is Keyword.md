@@ -1,1 +1,0 @@
-[[CSharp/OOP/Keyword/is]]

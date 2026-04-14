@@ -1,0 +1,9 @@
+---
+tags:
+ - csharp
+ - oop
+ - keyword
+---
+
+- Identity determines whether two objects share the same memory address.
+- Equality determines if two object contain the same state.

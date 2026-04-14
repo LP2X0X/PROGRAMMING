@@ -1,0 +1,8 @@
+---
+tags:
+ - csharp
+ - oop
+ - keyword
+---
+
+- C# supplies another keyword, sealed, that prevents inheritance from occurring. When you mark a class as sealed, the compiler will not allow you to derive from this type.

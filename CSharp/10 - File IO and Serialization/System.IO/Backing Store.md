@@ -1,0 +1,7 @@
+---
+tags:
+ - csharp
+ - file-io
+---
+
+A ‘backing store’ is simply the technical term for a source from which bytes can be sequentially read or a destination to which bytes can be sequentially written, or both.*
