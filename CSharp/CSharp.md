@@ -5,17 +5,18 @@ type: folder_brief_live
 ```
  
 %% Begin Waypoint %%
+- **[[0 - Fundamental]]**
 - **[[Advanced CSharp Language Features]]**
-- **[[CSharp/Basic/Basic]]**
+- **[[Basic]]**
 - **[[Building and Configuring Class Libraries]]**
 - **[[Collections and Generics]]**
 - [[Core Concepts]]
 - **[[CSharp to C++]]**
 - **[[Delegates, Events and Lambda Expressions]]**
 - **[[File I.O and Object Serialization]]**
-- **[[CSharp/Interfaces/Interfaces]]**
+- **[[Interfaces]]**
 - **[[LINQ to Objects]]**
-- **[[CSharp/Miscellaneous/Miscellaneous]]**
+- **[[Miscellaneous]]**
 - **[[Multithreaded, Parallel and Async Programming]]**
 - **[[Object Lifetime]]**
 - **[[OOP]]**
