@@ -4,36 +4,67 @@ tags:
  - basics
 ---
 
-In C#, the underscore symbol `_` can be used as a discard symbol in several contexts to indicate that a value is being intentionally ignored or discarded.
-Here are some common use cases for the discard symbol `_`:
+In C#, the underscore `_` serves two different roles depending on context: a **real language discard** (compiler feature, C# 7+) and a **naming convention** (just a variable named `_`).
 
-1. **Unused Variables**: When you declare variables that you don't intend to use, you can use `_` to indicate that the value is being ignored.
+## Real Discard — Language Feature (C# 7+)
 
-    ```csharp
-    var _ = SomeMethodThatReturnsValue();
-    ```
+When `_` appears in `out` parameters, deconstruction, or pattern matching, it is a **true discard**. The compiler does not allocate storage for the value — it is genuinely thrown away.
 
-2. **Unused Parameters**: In method signatures or lambda expressions, you can use `_` to represent parameters that are not used within the method body.
+### Out Parameters
 
-    ```csharp
-    void SomeMethod(int x, int _)
-    {
-        // Use only 'x', discard '_'
-    }
+```csharp
+// only care about whether the parse succeeded, not the result
+if (int.TryParse(input, out _))
+{
+    Console.WriteLine("Valid number");
+}
+```
 
-    _ = SomeMethodThatReturnsValue();
-    ```
+### Tuple Deconstruction
 
-3. **Discarding Tuple Elements**: When deconstructing tuples or other types that support deconstruction, you can use `_` to discard elements that you don't need.
+```csharp
+(int x, _, int z) = GetCoordinates();
+// only x and z are captured — the middle value is discarded
+```
 
-    ```csharp
-    (int x, _, int z) = GetCoordinates();
-    ```
+### Pattern Matching
 
-4. **Ignored Out Parameters**: When calling methods with `out` parameters but you don't need to use all of them, you can use `_` to indicate that the value is being discarded.
+```csharp
+switch (shape)
+{
+    case Circle c: HandleCircle(c); break;
+    case Rectangle r: HandleRect(r); break;
+    case _: HandleUnknown(); break;  // catches everything else
+}
+```
 
-    ```csharp
-    SomeMethodWithOutParameter(out _, out var y);
-    ```
+### Lambda / Anonymous Method Parameters
 
-Using `_` as a discard symbol can improve code readability and clearly communicate the intention to ignore certain values.
+```csharp
+button.Click += (_, _) => Console.WriteLine("Clicked");
+// both sender and EventArgs are discarded
+```
+
+## Convention Only — Variable Named `_`
+
+When you write `var _` or assign to `_` as a standalone variable, it is **not** a discard. It is a regular variable that happens to be named underscore. The value **is** allocated and stored.
+
+```csharp
+var _ = SomeMethod();   // a real variable named '_' — value is stored
+_ = SomeMethod();       // reassignment to that variable
+```
+
+This is just a naming convention to signal "I don't care about this value."
+
+## How to Tell the Difference
+
+| Context | Real discard? | Storage allocated? |
+|---|:-:|:-:|
+| `out _` | Yes | No |
+| `(x, _) = tuple` | Yes | No |
+| `case _:` in pattern matching | Yes | No |
+| `(_, _) =>` in lambda params | Yes | No |
+| `var _ = Method()` | No — just a variable named `_` | Yes |
+| `_ = Method()` (standalone) | No — assignment to a variable | Yes |
+
+**Rule of thumb:** if `_` appears where a declaration would normally go (`out _`, tuple `_`, pattern `_`, lambda parameter `_`), it is the real discard. If you write `var _` or use it as a standalone identifier, it is just a variable name.

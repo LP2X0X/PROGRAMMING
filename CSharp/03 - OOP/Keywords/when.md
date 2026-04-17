@@ -1,8 +1,0 @@
----
-tags:
- - csharp
- - oop
- - keyword
----
-
-https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/when
