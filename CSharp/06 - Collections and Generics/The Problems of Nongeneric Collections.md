@@ -41,9 +41,48 @@ Non-generic collections require type casting when retrieving items, which adds o
   - Casting from `object` back to the specific type involves additional processing, including type checking.
   - Incorrect casts can lead to `InvalidCastException`, which must be handled appropriately, adding complexity and potential performance costs due to exception handling.
 
-### Example Comparison
+### Mixing Types — The Silent Danger
 
-Here’s a comparison between using non-generic and generic collections in terms of performance and type safety:
+Because everything is `object`, the compiler lets you put completely unrelated types in the same collection. The bug only surfaces at runtime:
+
+```csharp
+ArrayList list = new ArrayList();
+list.Add(1);
+list.Add("hello");
+list.Add(true);     // no complaint from compiler
+
+// Later when you retrieve...
+int num = (int)list[1]; // InvalidCastException at RUNTIME — "hello" is not int
+```
+
+With generics, the compiler catches it immediately:
+
+```csharp
+List<int> list = new List<int>();
+list.Add(1);
+list.Add("hello");  // Compile error — caught before you even run the app
+```
+
+### Memory Layout — What Boxing Actually Looks Like
+
+```
+Without boxing (List<int>):
+  Stack: [ 1 | 2 | 3 ]  — contiguous, fast, cache-friendly
+
+With boxing (ArrayList):
+  Stack: [ ref | ref | ref ]
+           ↓     ↓     ↓
+  Heap:  [obj 1] [obj 2] [obj 3]  — 3 extra heap allocations
+```
+
+Each boxed value means:
+- **Extra heap allocation** per item
+- **Extra GC pressure** — more objects for the garbage collector to track and clean up
+- **Slower access** — pointer indirection instead of reading the value directly
+
+With thousands of items, the cost adds up significantly.
+
+### Example Comparison
 
 #### Non-generic Collection Example
 ```csharp
@@ -59,16 +98,15 @@ genericList.Add(10); // No boxing
 int value = genericList[0]; // No unboxing or casting
 ```
 
-### Summary of Performance Issues
+### Summary — All Problems at a Glance
 
-1. **Boxing/Unboxing Overhead:**
-   - Non-generic collections induce boxing/unboxing for value types, which impacts performance.
-
-2. **Runtime Type Checking:**
-   - Type mismatches and type checking are deferred until runtime, leading to potential runtime errors and additional performance costs.
-
-3. **Casting Overhead:**
-   - Type casting from `object` adds overhead and potential for exceptions, which can degrade performance.
+| Problem | Non-generic | Generic |
+|---|---|---|
+| Wrong type in collection | Runtime crash (`InvalidCastException`) | Compile error |
+| Value type storage | Boxing (heap alloc per item) | Stored directly, no boxing |
+| Casting needed on retrieval | Yes, every time | No |
+| GC pressure | Higher (boxed objects) | Lower |
+| Type mixing | Allowed silently | Prevented by compiler |
 
 ### Why .NET Didn't Use Generics Initially
 

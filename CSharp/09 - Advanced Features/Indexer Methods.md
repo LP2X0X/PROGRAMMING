@@ -4,11 +4,89 @@ tags:
  - advanced
 ---
 
-In C#, an indexer allows an object to be indexed in the same way as an array. Indexers are defined with the `this` keyword and can be used to provide array-like syntax for accessing elements in a class or struct. This is particularly useful for creating classes that represent collections or containers of data.
+## What Is an Indexer?
 
-Here’s a simple example of a class with an indexer:
+An indexer lets you define **what `[]` means on your own class**. Without it, `[]` only works on arrays and built-in collections — your custom class wouldn’t support it.
 
-### Example: Simple Indexer
+Indexers are defined with the `this` keyword and can be used to provide array-like syntax for accessing elements in a class or struct.
+
+---
+
+## Why Use Indexers?
+
+An indexer is essentially **syntactic sugar** — you could always achieve the same thing with regular `Get`/`Set` methods. But `[]` feels more natural for classes that conceptually represent a container:
+
+```csharp
+// Without indexer — works but awkward
+string p = roster.GetPlayer(0);
+roster.SetPlayer(0, "Alice");
+
+// With indexer — clean and natural
+string p = roster[0];
+roster[0] = "Alice";
+
+// Some things just feel right with []
+var cell = spreadsheet["A1"];
+var pixel = image[x, y];
+var config = settings["theme"];
+```
+
+This is also why `Dictionary<TKey, TValue>`, `List<T>`, and arrays all use indexers — they’re containers, and `[]` is the natural way to access items in a container.
+
+> [!note]
+> Indexers are about **readability**, not capability. No one is forced to use them — you can always use methods instead.
+
+---
+
+## The Power — Custom Logic and Validation
+
+An indexer doesn’t have to be a simple pass-through. You can add **your own logic** inside:
+
+```csharp
+class SafeList<T>
+{
+    private List<T> _items = new List<T>();
+
+    public T this[int index]
+    {
+        get
+        {
+            if (index < 0 || index >= _items.Count)
+                return default;  // return default instead of throwing
+            return _items[index];
+        }
+        set
+        {
+            if (index < 0 || index >= _items.Count)
+                throw new ArgumentOutOfRangeException();
+            _items[index] = value;
+        }
+    }
+}
+```
+
+You can also index by **non-integer types** like strings:
+
+```csharp
+class Team
+{
+    private Dictionary<string, Player> _players = new();
+
+    public Player this[string name]
+    {
+        get => _players[name];
+        set => _players[name] = value;
+    }
+}
+
+var team = new Team();
+team["Alice"] = new Player();
+Player p = team["Alice"];
+```
+
+---
+
+## Example: Simple Indexer
 ```csharp
 using System;
 

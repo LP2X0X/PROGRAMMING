@@ -9,7 +9,7 @@ tags:
 
 - Inheritance is one of the three pillars of OOP (alongside encapsulation and polymorphism). It lets you define a new class based on an existing one, **reusing and extending** its behavior without rewriting it.
 - The existing class is the **base class** (also called superclass or parent class). The new class is the **derived class** (also called subclass or child class).
-- Inheritance models an [[is-a Relationship|"is-a" relationship]] — an `Employee` **is a** `Person`, a `Dog` **is an** `Animal`. The other core relationship is [[has-a Relationship|"has-a" (composition)]], where a class *contains* another object.
+- Inheritance models an is-a Relationship — an `Employee` **is a** `Person`, a `Dog` **is an** `Animal`. The other core relationship is has-a Relationship, where a class *contains* another object.
 
 ---
 
@@ -288,6 +288,97 @@ Prefer `is` with pattern matching (the first form above). It combines the type c
 
 - Inheritance is not always the right tool. The other way to reuse behavior is [[has-a Relationship|composition ("has-a")]].
 
+### Is-a Relationship (Inheritance)
+
+- The derived type **is** the base type. It shares identity, state, and behavior.
+
+```csharp
+class Animal
+{
+    public void Eat() => Console.WriteLine("Eating");
+}
+
+class Dog : Animal
+{
+    public void Bark() => Console.WriteLine("Barking");
+}
+
+Animal a = new Dog();  // a Dog IS an Animal
+```
+
+### Is-a with Interfaces ("Can-Do" Relationship)
+
+- Implementing an interface is also is-a from the type system's perspective — a `Bird` *is* an `IFlyable`. But the flavor is different: it means the type **has a capability**, not that it **is a kind of** something.
+
+```csharp
+interface IFlyable
+{
+    void Fly();
+}
+
+class Bird : IFlyable
+{
+    public void Fly() => Console.WriteLine("Flapping wings");
+}
+
+class Airplane : IFlyable
+{
+    public void Fly() => Console.WriteLine("Using jet engines");
+}
+
+IFlyable f = new Bird();      // Bird IS IFlyable
+IFlyable g = new Airplane();  // Airplane IS IFlyable
+```
+
+| | Class Inheritance | Interface Implementation |
+|---|---|---|
+| Meaning | "Dog is an Animal" — shares identity and behavior | "Bird is flyable" — shares a capability |
+| What you get | Fields, methods, state | Nothing — just a contract to fulfill |
+| How many | Single base class only | Multiple interfaces |
+
+### Has-a Relationship (Composition)
+
+- The type **contains** another type as a field. It delegates work to the contained object instead of inheriting behavior.
+
+```csharp
+class Engine
+{
+    public void Start() => Console.WriteLine("Engine started");
+}
+
+class Car
+{
+    private Engine _engine = new();  // Car HAS an Engine
+
+    public void Start() => _engine.Start();
+}
+```
+
+### Has-a with Dependency Injection
+
+- DI is composition where **someone else provides the dependency** instead of the class creating it. The relationship is still has-a — the class *has* the dependency — but it doesn't control which implementation it gets.
+
+```csharp
+// Regular has-a — class creates its own dependency (tightly coupled)
+class OrderService
+{
+    private ILogger _logger = new FileLogger();
+}
+
+// Has-a with DI — dependency injected from outside (loosely coupled)
+class OrderService
+{
+    private ILogger _logger;
+
+    public OrderService(ILogger logger)
+    {
+        _logger = logger;
+    }
+}
+```
+
+### Comparison
+
 |             | Inheritance ("Is-A")                                | Composition ("Has-A")                                                |
 | ----------- | --------------------------------------------------- | -------------------------------------------------------------------- |
 | Coupling    | Tight — subclass depends on base class internals    | Loose — only depends on the contained object's public API            |
@@ -297,4 +388,6 @@ Prefer `is` with pattern matching (the first form above). It combines the type c
 
 ```ad-important
 **"Favor composition over inheritance"** is a well-known design guideline. Inheritance creates rigid coupling — changes to the base class ripple into all subclasses. Use inheritance for genuine "is-a" relationships. Use composition for everything else.
+
+A common mistake is using inheritance when composition fits better. `Car : Engine` would mean "a car is an engine" — that doesn't make sense. If the relationship is "uses" or "contains", use has-a.
 ```

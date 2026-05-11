@@ -146,10 +146,6 @@ class Program
 }
 ```
 
-### Summary
-
-Constructor chaining in C# using the `this` keyword is a powerful technique to improve code reuse and maintainability. By delegating initialization logic to a primary constructor, you can ensure that all constructors in your class share common logic, making your code cleaner and more consistent.
-
 ---
 
 ## Private Constructors
@@ -231,14 +227,250 @@ public class Utility
 In modern C#, prefer `static class` over a private constructor for pure utility classes. A `static class` makes the intent explicit and also prevents instantiation.
 ```
 
-### Summary
+---
+
+## Static Constructors
+
+- A **static constructor** (also called a type initializer) is a special constructor that initializes the **class itself**, not an instance. It runs exactly **once**, automatically, before the type is first used.
+- It is used to initialize `static` fields, set up caches, load configuration, or perform any one-time class-level setup.
+
+### Syntax
+
+```csharp
+class DatabaseManager
+{
+    private static string _connectionString;
+
+    // Static constructor — no access modifier, no parameters
+    static DatabaseManager()
+    {
+        _connectionString = LoadFromConfig();
+        Console.WriteLine("Static constructor called — class initialized.");
+    }
+
+    private static string LoadFromConfig() => "Server=localhost;Database=mydb;";
+
+    public void Connect()
+        => Console.WriteLine($"Connecting with: {_connectionString}");
+}
+```
+
+### Rules
+
+| Rule | Detail |
+|---|---|
+| No access modifier | You cannot write `public static DatabaseManager()` — it is always implicitly `private` |
+| No parameters | A static constructor takes zero arguments — there is no way to call it manually |
+| Runs exactly once | The CLR guarantees it runs only once per type, per application domain |
+| Cannot be called directly | The runtime calls it automatically — you never write `ClassName.StaticConstructor()` |
+| Runs before first use | Triggered before the first instance is created OR before any static member is accessed |
+| Thread-safe by default | The CLR ensures only one thread executes the static constructor, even in multithreaded scenarios |
+
+### When Does It Run?
+
+- The CLR calls the static constructor at some point **before** the type is first accessed. The exact timing is:
+  1. Before the first instance of the class is created, OR
+  2. Before any static member (field, property, method) is referenced
+
+```csharp
+class Example
+{
+    public static int Counter;
+
+    static Example()
+    {
+        Counter = 42;
+        Console.WriteLine("Static ctor ran");
+    }
+
+    public Example()
+    {
+        Console.WriteLine("Instance ctor ran");
+    }
+}
+
+// Accessing a static member triggers the static constructor:
+Console.WriteLine(Example.Counter);
+// Output:
+//   Static ctor ran
+//   42
+
+// Creating an instance — static ctor already ran, so only instance ctor fires:
+var e = new Example();
+// Output:
+//   Instance ctor ran
+```
+
+### Static Constructor vs Static Field Initializer
+
+- You can initialize static fields inline without a static constructor. The compiler generates a static constructor behind the scenes.
+
+```csharp
+// These two are functionally equivalent:
+
+// Option 1: Inline initializer (compiler generates static ctor)
+class Config
+{
+    private static readonly string _env = Environment.GetEnvironmentVariable("ENV") ?? "dev";
+}
+
+// Option 2: Explicit static constructor
+class Config
+{
+    private static readonly string _env;
+
+    static Config()
+    {
+        _env = Environment.GetEnvironmentVariable("ENV") ?? "dev";
+    }
+}
+```
+
+- Use an explicit static constructor when initialization involves **multiple steps**, **error handling**, or **logic that can't fit in a single expression**.
+
+### Error Handling
+
+```ad-warning
+If a static constructor throws an exception, the type becomes **permanently unusable** for the rest of the application's lifetime. Any subsequent attempt to use the type will throw a `TypeInitializationException`. There is no retry mechanism — the static constructor will NOT run again.
+```
+
+```csharp
+class Fragile
+{
+    static Fragile()
+    {
+        throw new Exception("Init failed");
+    }
+}
+
+try { var f = new Fragile(); }
+catch (TypeInitializationException ex)
+{
+    // ex.InnerException is the original "Init failed" exception
+    Console.WriteLine(ex.InnerException.Message);
+}
+
+// Every future attempt also throws TypeInitializationException — the type is dead
+```
+
+Because of this, keep static constructors **simple and unlikely to fail**. Avoid network calls, file I/O, or anything that could throw intermittently.
+
+### Practical Example: Singleton Pattern
+
+- Static constructors are commonly used to implement a thread-safe singleton without explicit locking:
+
+```csharp
+class Singleton
+{
+    private static readonly Singleton _instance;
+
+    static Singleton()
+    {
+        _instance = new Singleton();
+    }
+
+    private Singleton() { }
+
+    public static Singleton Instance => _instance;
+}
+
+// Thread-safe: the CLR guarantees the static constructor runs
+// exactly once, even if multiple threads access Instance simultaneously
+```
+
+### Static Constructor + Instance Constructor
+
+- A class can have **both**. They serve different purposes and run at different times.
+
+```csharp
+class Logger
+{
+    private static readonly string _logPath;
+    private readonly string _source;
+
+    // Runs once — initializes class-level state
+    static Logger()
+    {
+        _logPath = Path.Combine(AppContext.BaseDirectory, "app.log");
+    }
+
+    // Runs every time — initializes instance-level state
+    public Logger(string source)
+    {
+        _source = source;
+    }
+
+    public void Log(string message)
+        => File.AppendAllText(_logPath, $"[{_source}] {message}\n");
+}
+```
+
+---
+
+## Default Constructor and Object Initializers
+
+When you define **any** custom constructor, the compiler removes the implicit parameterless constructor. This affects object initializer syntax (`new MyClass { ... }`), which requires a parameterless constructor (or an explicit constructor call).
+
+```csharp
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public Person(string name)
+    {
+        Name = name;
+    }
+}
+
+// Error — no parameterless constructor exists anymore
+var p = new Person { Name = "Long", Age = 25 };
+```
+
+### Fixes
+
+```csharp
+// Option 1: Add back the parameterless constructor explicitly
+public Person() { }
+public Person(string name) { Name = name; }
+
+var p = new Person { Name = "Long", Age = 25 };
+
+// Option 2: Use the parameterized constructor together with the initializer
+var p = new Person("Long") { Age = 25 };
+```
+
+```ad-note
+Object initializer syntax (`{ Property = value }`) is syntactic sugar — the compiler calls the constructor first, then sets each property. So a parameterless constructor (or an explicit constructor call) is always required.
+```
+
+---
+
+## Summary
+
+### Constructor Chaining
+
+Constructor chaining in C# using the `this` keyword is a powerful technique to improve code reuse and maintainability. By delegating initialization logic to a primary constructor, you can ensure that all constructors in your class share common logic, making your code cleaner and more consistent.
+
+### Private Constructors
 
 | Use Case            | Why Private Constructor                                            |
 | ------------------- | ------------------------------------------------------------------ |
 | Singleton           | Exactly one instance, globally accessible                          |
-| Factory pattern     | Full control over creation: caching, subtypes, null returns, async | 
+| Factory pattern     | Full control over creation: caching, subtypes, null returns, async |
 | Builder pattern     | Only the inner `Builder` class creates instances                   |
 | Prevent inheritance | No external class can derive from it                               |
 | Static-only class   | Prevent meaningless instantiation (prefer `static class`)          |
 
 The private constructor is the lock on the door — the factory method is the key you hand out on your terms.
+
+### Static vs Instance Constructors
+
+| | Instance Constructor | Static Constructor |
+|---|---|---|
+| Initializes | instance fields | static fields / class-level state |
+| Runs | every time `new` is called | exactly once, before first use |
+| Parameters | yes | no |
+| Access modifier | any (`public`, `private`, etc.) | none (implicitly private) |
+| Can be overloaded | yes | no (only one allowed) |
+| Called by | your code via `new` | the CLR automatically |

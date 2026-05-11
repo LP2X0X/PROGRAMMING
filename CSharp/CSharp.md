@@ -14,7 +14,6 @@ type: folder_brief_live
 - **[[02 - Syntax and Basics]]**
 - **[[03 - OOP]]**
 - **04 - Exception Handling**
-	- [[Exception Filters]]
 	- **Exception Properties**
 		- [[Data]]
 		- [[HelpLink]]
@@ -28,25 +27,9 @@ type: folder_brief_live
 		- [[throw]]
 		- [[try-catch]]
 		- [[User Errors]]
-	- [[Processing Multiple Exceptions]]
-	- [[Rethrowing Exceptions]]
-	- [[System.ApplicationException]]
-	- [[System.Exception Base Class]]
-	- [[System.SystemException]]
 - **05 - Interfaces**
 	- **Basics**
-		- [[Arrays of Interface Types]]
-		- [[Default Implementations]]
-		- [[Defining Custom Interfaces]]
-		- [[Designing Interface Hierarchies]]
-		- [[Explicit Interface Implementation]]
-		- [[Implement Interface]]
 		- [[Interface Types]]
-		- [[Interface vs Abstract]]
-		- [[Interfaces as Parameters]]
-		- [[Interfaces as Return Values]]
-		- [[Multiple Inheritance with Interface Types]]
-		- [[Static Constructors and Members]]
 	- **Common Interfaces**
 		- [[Guard Clause]]
 		- [[ICloneable]]
@@ -55,27 +38,20 @@ type: folder_brief_live
 		- [[IEnumerable and IEnumerator Interfaces]]
 		- [[Iterator]]
 		- [[Named Iterator]]
-		- [[yield]]
-	- **Notes**
-		- [[Difference between IComparer and IComparable]]
-		- [[Example of IComparer and IComparable]]
 - **06 - Collections and Generics**
-	- [[Default Value Expressions with Generics]]
+	- [[Array vs Collection]]
+	- [[Boxing]]
 	- **Features**
 		- [[Collection Initialization Syntax]]
 		- [[Constraining Type Parameters]]
-		- [[Default Literal Expressions]]
-		- [[Dictionary Initialization Syntax]]
-		- [[Pattern Matching with Generics]]
 	- **Generic Collections**
 		- [[Generic PriorityQueue]]
 		- [[Generic Queue]]
 		- [[Generic SortedSet]]
 		- [[Generic Stack]]
-	- [[Generic Collections T]]
 	- **ObjectModel**
 		- [[Generic ObservableCollection]]
-	- [[System.Collections.ObjectModel]]
+	- [[System.Collections.ObjectModel Namespace]]
 	- [[The Problems of Nongeneric Collections]]
 	- [[The System.Collections Namespace]]
 	- [[The System.Collections.Generic Namespace]]
@@ -183,8 +159,9 @@ type: folder_brief_live
 	- [[Are both dispose and finalization wait for the garbage collector]]
 	- [[Can you still access member of an object after it has been dispose]]
 	- **Disposable Pattern**
-		- [[Building Finalizable and Disposable Types]]
-		- [[Example of implementing IDisposable]]
+		- [[Finalizable Objects]]
+		- [[Finalizer and Dispose]]
+		- [[IDisposable]]
 		- [[Lazy Object Instantiation]]
 		- [[Order of Actions when Dispose is called]]
 		- [[Reusing the using Keyword]]
@@ -192,21 +169,16 @@ type: folder_brief_live
 	- **Garbage Collection**
 		- [[Compact Memory Feature of GC]]
 		- [[Determining if an Object is Live]]
-		- [[Forcing a Garbage Collection]]
-		- [[Garbage Collection Types]]
+		- [[Ephemeral Generations and Segments]]
 		- [[Object Generations]]
 		- [[System.GC]]
 	- **Keywords**
 		- [[CPU Cache]]
 		- [[Disposable Object]]
-		- [[Ephemeral Generations]]
-		- [[Ephemeral Segment]]
 		- [[Finalizable Objects]]
 		- [[Large Object Heap (LOH)]]
 		- [[Stack Root]]
-		- [[Unmanaged Resource]]
 	- [[Marshal class]]
-	- [[Rules]]
 	- [[The Basics of Object Lifetime]]
 	- [[Why Compacting]]
 	- [[Why is it perfectly safe to communicate with other managed objects within a Dispose() method]]

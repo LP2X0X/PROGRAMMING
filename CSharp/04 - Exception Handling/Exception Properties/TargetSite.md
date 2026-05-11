@@ -4,19 +4,66 @@ tags:
  - exception-handling
 ---
 
-- The System.Exception.TargetSite property allows you to determine various details about the method that threw a given exception. Printing the value of TargetSite will display the return type, name, and parameter types of the method that threw the exception. However, TargetSite does not return just a vanilla-flavored string but rather a strongly typed System.Reflection. MethodBase object. This type can be used to gather numerous details regarding the offending method, as well as the class that defines the offending method.
+## `Exception.TargetSite`
+
+The `TargetSite` property returns a `System.Reflection.MethodBase` object describing the method that threw the exception. It gives you structured, programmatic access to the method's name, return type, parameters, and declaring class -- far richer than parsing the `StackTrace` string.
+
+### Basic Usage
+
 ```csharp
-// TargetSite actually returns a MethodBase object.  
-catch(Exception e)  
-{  
-	Console.WriteLine("\n*** Error! ***");  
-	Console.WriteLine("Member name: {0}", e.TargetSite);  
-	Console.WriteLine("Class defining member: {0}", e.TargetSite.DeclaringType);  
-	Console.WriteLine("Member type: {0}", e.TargetSite.MemberType);  
-	Console.WriteLine("Message: {0}", e.Message);  
-	Console.WriteLine("Source: {0}", e.Source);  
-}  
-Console.WriteLine("\n***** Out of exception logic *****");  
-Console.ReadLine();
+try
+{
+    car.Accelerate(100);
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Method:    {ex.TargetSite}");
+    Console.WriteLine($"Class:     {ex.TargetSite.DeclaringType}");
+    Console.WriteLine($"Member:    {ex.TargetSite.MemberType}");
+    Console.WriteLine($"Message:   {ex.Message}");
+    Console.WriteLine($"Source:    {ex.Source}");
+}
+
+// Output:
+//   Method:    Void Accelerate(Int32)
+//   Class:     MyApp.Car
+//   Member:    Method
+//   Message:   Car has overheated!
+//   Source:    MyApp
 ```
-- This time, you use the MethodBase.DeclaringType property to determine the fully qualified name of the class that threw the error (SimpleException.Car, in this case) as well as the MemberType property of the MethodBase object to identify the type of member (such as a property versus a method) where this exception originated.
+
+### Exploring the `MethodBase` Object
+
+`TargetSite` returns a `MethodBase`, which opens up the full Reflection API:
+
+```csharp
+catch (Exception ex)
+{
+    MethodBase? method = ex.TargetSite;
+
+    if (method is not null)
+    {
+        Console.WriteLine($"Method name:    {method.Name}");
+        Console.WriteLine($"Declaring type: {method.DeclaringType?.FullName}");
+        Console.WriteLine($"Is public:      {method.IsPublic}");
+        Console.WriteLine($"Is static:      {method.IsStatic}");
+        Console.WriteLine($"Return type:    {(method as MethodInfo)?.ReturnType.Name}");
+
+        Console.WriteLine("Parameters:");
+        foreach (var param in method.GetParameters())
+        {
+            Console.WriteLine($"  {param.ParameterType.Name} {param.Name}");
+        }
+    }
+}
+```
+
+### Tips & Best Practices
+
+- **`TargetSite` can be `null`.** This happens when the runtime doesn't have metadata available (e.g., in certain partial-trust or dynamically generated code scenarios). Always null-check before accessing its members.
+- **Printing `TargetSite` directly gives a method signature string** like `Void Accelerate(Int32)`. This is the `ToString()` of `MethodBase`, which includes return type, method name, and parameter types.
+- **Use `DeclaringType` to identify the class.** `ex.TargetSite.DeclaringType.FullName` gives the fully qualified class name (namespace + class), which is especially helpful when multiple classes have methods with the same name.
+- **`MemberType` tells you what kind of member threw.** It returns a `MemberTypes` enum value (`Method`, `Constructor`, `Property`, etc.), which helps distinguish between exceptions thrown from getters/setters vs regular methods.
+- **Use for diagnostics, not control flow.** Inspecting `TargetSite` via reflection is useful for logging and debugging, but branching logic based on it creates fragile code that breaks when methods are renamed.
+- **`Source` is a related property worth pairing.** `ex.Source` returns the assembly name where the exception originated. Together with `TargetSite`, you get assembly + class + method without parsing strings.
+- **Prefer structured logging over manual inspection.** Most logging frameworks (Serilog, NLog) automatically capture `TargetSite` details when you log an exception object. Use `logger.Error(ex, "...")` rather than manually extracting these fields.
