@@ -15,14 +15,14 @@ Think of a collection as a **smarter, more flexible container** than an array.
 
 ## Collections vs Arrays
 
-| Feature | Array | Collection |
-|---|---|---|
-| **Size** | Fixed at creation (`new int[5]`) | Grows and shrinks dynamically |
-| **Type safety** | Strongly typed (`int[]`, `string[]`) | Non-generic collections store `object` (boxing/unboxing); generic collections are type-safe |
-| **Built-in methods** | Minimal — `Array.Sort()`, `Array.IndexOf()` | Rich API — `Add`, `Remove`, `Contains`, `Find`, `Sort`, etc. |
-| **Performance** | Fastest for indexed access (`O(1)`) | Varies by type (list `O(1)` index, dictionary `O(1)` lookup, linked list `O(n)` index) |
-| **Memory** | Contiguous block, no overhead | Extra overhead for internal bookkeeping (pointers, hash buckets, etc.) |
-| **Flexibility** | Single dimension or multi-dimensional, one type | Many data structures: lists, queues, stacks, dictionaries, sets, etc. |
+| Feature              | Array                                           | Collection                                                                                  |
+| -------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Size**             | Fixed at creation (`new int[5]`)                | Grows and shrinks dynamically                                                               |
+| **Type safety**      | Strongly typed (`int[]`, `string[]`)            | Non-generic collections store `object` (boxing/unboxing); generic collections are type-safe |
+| **Built-in methods** | Minimal — `Array.Sort()`, `Array.IndexOf()`     | Rich API — `Add`, `Remove`, `Contains`, `Find`, `Sort`, etc.                                |
+| **Performance**      | Fastest for indexed access (`O(1)`)             | Varies by type (list `O(1)` index, dictionary `O(1)` lookup, linked list `O(n)` index)      |
+| **Memory**           | Contiguous block, no overhead                   | Extra overhead for internal bookkeeping (pointers, hash buckets, etc.)                      |
+| **Flexibility**      | Single dimension or multi-dimensional, one type | Many data structures: lists, queues, stacks, dictionaries, sets, etc.                       | 
 
 **When to use an array:** you know the exact size ahead of time and need raw speed for indexed access.
 **When to use a collection:** you need dynamic sizing, frequent insertions/removals, or a richer data structure (key-value pairs, FIFO queue, etc.).

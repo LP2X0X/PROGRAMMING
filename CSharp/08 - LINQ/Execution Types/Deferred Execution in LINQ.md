@@ -6,6 +6,14 @@ tags:
 
 Deferred execution is a key concept in LINQ (Language-Integrated Query) that refers to the delayed execution of query operations until the results are actually needed. This concept allows LINQ queries to be more efficient and responsive, especially when working with large datasets or complex queries.
 
+### Why `IEnumerable<T>` Enables Deferred Execution
+
+Deferred execution is possible because LINQ is built on `IEnumerable<T>`. This interface exposes a single method — `GetEnumerator()` — which returns an enumerator that produces elements **one at a time, on demand** (pull-based). The query is just an object that *describes* what to do; no work happens until something calls `MoveNext()` on the enumerator (e.g., a `foreach` loop or a method like `ToList()`).
+
+Each LINQ operator (`Where`, `Select`, `OrderBy`, etc.) is an extension method that takes an `IEnumerable<T>` and returns a new `IEnumerable<T>`. Rather than processing the entire sequence immediately, it wraps the source in a lightweight iterator that applies its logic only when enumerated. This means chaining multiple operators builds a pipeline of iterators — no intermediate collections are allocated, and nothing executes until you pull the first element.
+
+If LINQ were built on a concrete type like `List<T>`, every operator would need to materialize a full list before the next operator could run, eliminating the possibility of deferred execution.
+
 ```csharp
 static void QueryOverInts()  
 {  
@@ -63,6 +71,8 @@ The execution of the query is deferred until one of the following actions occurs
 2. **Efficiency**: Queries are executed only when the results are needed, reducing unnecessary computations and improving performance, especially when working with large datasets.
 
 3. **Flexibility**: Deferred execution enables composing complex queries dynamically, where additional conditions or transformations can be added before execution.
+
+4. **Fresh Results**: Because the query is re-evaluated each time it is enumerated, you can apply the same LINQ query multiple times to the same container and be assured you are obtaining the latest results. If the underlying data changes between enumerations, the next iteration automatically reflects those changes (as shown in the `QueryOverInts` example above).
 
 ### Examples of Deferred Execution
 

@@ -4,7 +4,29 @@ tags:
  - events
 ---
 
-In C#, when you define custom events, you often want to pass additional information about the event to the event handlers. This is where custom event arguments come into play. Custom event arguments allow you to create a class that inherits from `EventArgs` (or `EventArgs<T>` for generic scenarios) to encapsulate any necessary data related to the event. Let's walk through how to define and use custom event arguments:
+In C#, when you define custom events, you often want to pass additional information about the event to the event handlers. This is where custom event arguments come into play. Custom event arguments allow you to create a class that inherits from `EventArgs` to encapsulate any necessary data related to the event.
+
+### Why Use the `EventHandler`/`EventArgs` Pattern at All?
+
+The standard .NET event pattern `(object sender, EventArgs e)` is a **convention, not a language requirement**. You can use any delegate for events — for example, a simple `Action<string>` or a custom delegate like `delegate void MyHandler(string message)` would compile and work fine.
+
+However, the standard pattern exists for good reasons:
+
+- **Consistency** — every event across .NET libraries follows the same shape: `(object sender, EventArgs e)`. Consumers always know what to expect.
+- **Extensibility** — if you later need to pass more data, you subclass `EventArgs` and add properties, instead of changing the delegate signature which would **break all existing subscribers**.
+
+For example, with a custom delegate `CarEngineHandler(string message)`, if you later want to also pass `Speed`, you'd have to change the signature to `CarEngineHandler(string message, int speed)` and update every subscriber. With the standard pattern, you just add a property to your `EventArgs` subclass — existing subscribers still compile and just ignore the new field.
+
+### `EventArgs.Empty`
+
+When raising an event that carries **no extra data**, use `EventArgs.Empty` instead of `new EventArgs()`:
+
+```csharp
+SomeEvent?.Invoke(this, EventArgs.Empty);  // reuses a single pre-allocated instance
+SomeEvent?.Invoke(this, new EventArgs());  // allocates a new object each time (unnecessary)
+```
+
+`EventArgs.Empty` is a static, pre-allocated instance. Since `EventArgs` has no mutable state, all instances are identical — there's no reason to create a new one each time. Same idea as `string.Empty`. It is **not** implicitly called anywhere; you must always pass it explicitly.
 
 ### Steps to Implement Custom Event Arguments
 

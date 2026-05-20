@@ -56,14 +56,14 @@ bool any = nums.Exists(n => n > 10);    // false
 nums.ForEach(n => Console.Write(n + " "));
 ```
 
-| Operation | Time Complexity |
-|---|---|
-| Index access `list[i]` | O(1) |
-| Add (at end) | O(1) amortized |
-| Insert (at index) | O(n) — shifts elements |
-| Remove (by value) | O(n) — search + shift |
-| Contains / IndexOf | O(n) |
-| Sort | O(n log n) |
+| Operation              | Time Complexity        |
+| ---------------------- | ---------------------- |
+| Index access `list[i]` | O(1)                   |
+| Add (at end)           | O(1) amortized         |
+| Insert (at index)      | O(n) — shifts elements |
+| Remove (by value)      | O(n) — search + shift  |
+| Contains / IndexOf     | O(n)                   |
+| Sort                   | O(n log n)             |
 
 ---
 

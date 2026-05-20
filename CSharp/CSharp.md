@@ -20,17 +20,11 @@ type: folder_brief_live
 		- [[StackTrace]]
 		- [[TargetSite]]
 	- [[Inner Exceptions]]
-	- **Keywords**
-		- [[Bugs]]
-		- [[Exceptions]]
-		- [[finally]]
-		- [[throw]]
-		- [[try-catch]]
-		- [[User Errors]]
+	- [[Keywords]]
 - **05 - Interfaces**
 	- **Basics**
 		- [[Interface Types]]
-	- **Common Interfaces**
+	- **[[Common Interfaces]]**
 		- [[Guard Clause]]
 		- [[ICloneable]]
 		- [[IComparable]]
@@ -38,6 +32,7 @@ type: folder_brief_live
 		- [[IEnumerable and IEnumerator Interfaces]]
 		- [[Iterator]]
 		- [[Named Iterator]]
+	- **[[Notes]]**
 - **06 - Collections and Generics**
 	- [[Array vs Collection]]
 	- [[Boxing]]
@@ -51,32 +46,19 @@ type: folder_brief_live
 		- [[Generic Stack]]
 	- **ObjectModel**
 		- [[Generic ObservableCollection]]
-	- [[System.Collections.ObjectModel Namespace]]
+		- [[System.Collections.ObjectModel Namespace]]
 	- [[The Problems of Nongeneric Collections]]
 	- [[The System.Collections Namespace]]
 	- [[The System.Collections.Generic Namespace]]
+	- [[What Is a Generic]]
 - **07 - Delegates Events and Lambdas**
-	- **Anonymous Methods**
-		- [[Accessing Local Variables]]
-		- [[Anonymous Method Overview]]
-		- [[Discards with Anonymous Methods]]
-		- [[Using static with Anonymous Methods]]
-	- **Delegates**
-		- [[Action Delegate]]
-		- [[Callback]]
-		- [[Delegate Type]]
-		- [[Func Delegate]]
-		- [[Generic Delegates]]
-		- [[Method Group Conversion Syntax]]
-		- [[The System.MulticastDelegate and System.Delegate Base Classes]]
-	- **Events**
-		- [[Custom Event Arguments]]
-		- [[Event]]
-		- [[What is the benefit of using the event keyword]]
+	- **[[07.01 - Delegates]]**
+	- **[[07.02 - Events]]**
+	- **[[07.03 - Anonymous Methods]]**
+	- [[Delegates Events and Lambdas Overview]]
 	- **Lambda Expressions**
 		- [[Lambda Expression Overview]]
 		- [[Using static and discard with Lambda Expressions]]
-	- [[Summarize]]
 - **08 - LINQ**
 	- **Execution Types**
 		- [[Deferred Execution in LINQ]]
@@ -95,13 +77,13 @@ type: folder_brief_live
 		- [[Set Default for First-Last-Single_OrDefault Methods]]
 		- [[Sorting Expressions]]
 	- [[LINQ Introduction]]
+	- [[LINQ Prerequisite]]
 	- [[LINQ Query Operators]]
 	- **Selectors**
 		- [[Aggregation with Selectors]]
 		- [[Removing Duplicates with Selectors]]
 		- [[Venn Diagramming with Selectors]]
 	- [[Single vs First]]
-	- [[Terms of LINQ]]
 - **09 - Advanced Features**
 	- [[Anonymous Types]]
 	- [[Custom Type Conversions]]
@@ -109,13 +91,7 @@ type: folder_brief_live
 	- [[Extension Methods]]
 	- [[Indexer Methods]]
 	- [[Operator Overloading]]
-	- **Pointer Types**
-		- [[Pinning a Type via the fixed Keyword]]
-		- [[Prerequisites for unmanaged code]]
-		- [[The sizeof Keyword]]
-		- [[The stackalloc Keyword]]
-		- [[The unsafe Keyword]]
-		- [[Working with Pointer Types]]
+	- [[Pointer Types]]
 - **10 - File IO and Serialization**
 	- **Serialization**
 		- [[Controlling the Generated JSON Data]]

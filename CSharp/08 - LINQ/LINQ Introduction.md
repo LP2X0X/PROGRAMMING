@@ -4,6 +4,8 @@ tags:
  - linq
 ---
 
+**Prerequisite**: [[LINQ Prerequisite]] — the five C# 3.0 features LINQ is built on.
+
 LINQ (Language-Integrated Query) is a powerful feature introduced in C# and .NET Framework that allows you to query and manipulate data in a unified way. LINQ provides a natural syntax for querying data sources such as collections, databases, XML documents, and more. It combines the power of SQL-like queries with the expressiveness of C# language constructs.
 
 ### Key Concepts of LINQ

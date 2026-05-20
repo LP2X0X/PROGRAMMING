@@ -67,15 +67,168 @@ In this usage:
 - A LINQ query (`Where`) filters employees based on a condition (`Age > 28`).
 - The filtered results (`filteredEmployees`) are iterated over to print the names and ages of employees who meet the condition.
 
-### Characteristics
+---
 
-- **Read-only Properties:** Properties of anonymous types are read-only, meaning you can't modify them after they are initialized.
-- **Compiler Generated:** The compiler generates a new type for each unique anonymous type declaration. Therefore, each anonymous type instance is its own type.
-- **Limited Scope:** Anonymous types are typically used locally within a method or a LINQ query where their simplicity and lack of explicit definition are advantageous.
+## What the Compiler Actually Generates
 
-### Limitations
+Anonymous types are syntactic sugar. The compiler generates a real class behind the scenes:
 
-- **No Explicit Typing:** Since anonymous types don't have a name, you can't declare methods or create instances explicitly using the type name.
-- **Limited Usability:** They are primarily suited for short-lived data structures and are not suitable for scenarios requiring wider accessibility or more complex behaviors.
+```csharp
+// What you write:
+var p = new { Name = "Long", Age = 25 };
 
-Anonymous types are handy for temporary data structures where you need to aggregate data or perform quick transformations without defining formal classes. Their simplicity and ease of use make them a convenient tool in C# programming, especially in scenarios involving data projection and transformation.
+// What the compiler generates (simplified):
+internal sealed class <>f__AnonymousType0<T1, T2>
+{
+    private readonly T1 _name;
+    private readonly T2 _age;
+
+    public T1 Name => _name;
+    public T2 Age => _age;
+
+    public <>f__AnonymousType0(T1 name, T2 age)
+    {
+        _name = name;
+        _age = age;
+    }
+
+    // Also generates: Equals(), GetHashCode(), ToString()
+}
+```
+
+The generated class is `sealed` (can't inherit from it) and all properties are **read-only** backed by `readonly` fields. You cannot mutate an anonymous type after creation.
+
+---
+
+## Type Identity — Same Shape = Same Type
+
+The compiler reuses the same generated class if two anonymous types have the **same property names, types, and order**:
+
+```csharp
+var a = new { Name = "Long", Age = 25 };
+var b = new { Name = "Huy", Age = 30 };
+
+a.GetType() == b.GetType();  // true — same shape, same generated class
+```
+
+But change the order or name:
+
+```csharp
+var c = new { Age = 25, Name = "Long" };  // different order → different type
+var d = new { FullName = "Long", Age = 25 };  // different name → different type
+
+a.GetType() == c.GetType();  // false
+a.GetType() == d.GetType();  // false
+```
+
+---
+
+## Equality Is by Value, Not by Reference
+
+The compiler overrides `Equals()` and `GetHashCode()` to compare **all property values**:
+
+```csharp
+var a = new { Name = "Long", Age = 25 };
+var b = new { Name = "Long", Age = 25 };
+
+a == b;       // false — == is still reference equality
+a.Equals(b);  // true — Equals compares property values
+```
+
+This makes anonymous types usable as dictionary keys or in `Distinct()` LINQ calls.
+
+---
+
+## ToString() Is Auto-Generated
+
+```csharp
+var p = new { Name = "Long", Age = 25 };
+Console.WriteLine(p.ToString());
+// Output: { Name = Long, Age = 25 }
+```
+
+Useful for debugging — you get a readable representation without writing anything.
+
+---
+
+## Projection Initializer — Inferring Property Names
+
+When you pass a variable or property, the compiler infers the property name from the source:
+
+```csharp
+string name = "Long";
+int age = 25;
+
+var p = new { name, age };
+// Equivalent to: new { name = name, age = age }
+
+Console.WriteLine(p.name);  // "Long"
+```
+
+Same works with member access:
+
+```csharp
+var emp = new Employee { FirstName = "Long", Department = "IT" };
+
+var projected = new { emp.FirstName, emp.Department };
+// Properties are named FirstName and Department automatically
+```
+
+This is how LINQ `select` projections typically work:
+
+```csharp
+var result = employees.Select(e => new { e.FirstName, e.Department });
+```
+
+---
+
+## Cannot Be Used as Return Types or Parameters
+
+Anonymous types have no name, so you can't write them in a method signature:
+
+```csharp
+// Compile error — what type would you write here?
+public ??? GetPerson()
+{
+    return new { Name = "Long", Age = 25 };
+}
+```
+
+They're confined to **local scope**. If you need to pass them across method boundaries, use:
+- A named class or struct
+- A `record` (modern C#)
+- A tuple: `(string Name, int Age)`
+
+---
+
+## Nested Anonymous Types
+
+You can compose anonymous types inside each other:
+
+```csharp
+var order = new
+{
+    Id = 1,
+    Customer = new { Name = "Long", Email = "long@test.com" },
+    Total = 99.99
+};
+
+Console.WriteLine(order.Customer.Name);  // "Long"
+```
+
+---
+
+## Anonymous Types vs Tuples vs Records
+
+| | Anonymous Type | Tuple | Record |
+|---|---|---|---|
+| Named properties | Yes | Optional (`ValueTuple`) | Yes |
+| Read-only | Always | No | `record` yes, `record struct` optional |
+| Usable as return type | No | Yes | Yes |
+| Value equality | `Equals()` only | Yes (for `ValueTuple`) | Yes (including `==`) |
+| Scope | Local only | Anywhere | Anywhere |
+| When to use | Quick LINQ projections | Lightweight return values | Proper data types across boundaries |
+
+```ad-tip
+In modern C#, **records** cover most of what anonymous types do but without the local-scope limitation. Use anonymous types mainly inside LINQ queries where you need a quick throwaway shape.
+```
