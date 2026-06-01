@@ -22,6 +22,19 @@ var grouped = employees.GroupBy(e => e.Department);
 
 LINQ projections with `select new { ... }` **require** `var` because anonymous types have no writable name.
 
+### Why LINQ Doesn't Just Return `IEnumerable<T>`
+
+Most LINQ operators do return `IEnumerable<T>`, but some return a more specific type because that type **unlocks behavior** that `IEnumerable<T>` cannot express:
+
+| Return type | Returned by | Why it exists |
+|---|---|---|
+| `IOrderedEnumerable<T>` | `OrderBy()`, `OrderByDescending()` | Enables `ThenBy()` / `ThenByDescending()` for secondary sorting — these methods are only defined on `IOrderedEnumerable<T>` |
+| `IQueryable<T>` | EF / LINQ to SQL providers | Stores **expression trees** instead of delegates so the provider can translate C# into SQL. Falling back to `IEnumerable<T>` would pull the entire table into memory |
+| `IGrouping<TKey, TElement>` | `GroupBy()` | Each group must expose its `.Key` — plain `IEnumerable<T>` has no concept of a key |
+| Scalar types (`int`, `bool`, `T`) | `Count()`, `Any()`, `First()`, etc. | These compute a single value, not a sequence |
+
+This variety of return types is another reason `var` is practical — you don't need to track whether the current chain returns `IEnumerable<T>`, `IOrderedEnumerable<T>`, or something else.
+
 See also: [[Where you can not use implicit variable]]
 
 ---

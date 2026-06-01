@@ -55,34 +55,22 @@ type: folder_brief_live
 	- **[[07.01 - Delegates]]**
 	- **[[07.02 - Events]]**
 	- **[[07.03 - Anonymous Methods]]**
+	- **[[07.04 - Lambda Expressions]]**
 	- [[Delegates Events and Lambdas Overview]]
-	- **Lambda Expressions**
-		- [[Lambda Expression Overview]]
-		- [[Using static and discard with Lambda Expressions]]
 - **08 - LINQ**
 	- **Execution Types**
 		- [[Deferred Execution in LINQ]]
 		- [[Immediate Execution in LINQ]]
 	- **Features**
 		- [[Aggregation Operations]]
-		- [[Applying LINQ Queries to Nongeneric Collections]]
 		- [[DefaultIfEmpty]]
 		- [[LINQ As a Better Venn Diagramming Tool]]
 		- [[Obtaining Nonenumerated Counts]]
-		- [[Paging Data with Chunks]]
-		- [[Paging Data with Ranges]]
 		- [[Paging Data]]
 		- [[Projecting]]
-		- [[Removing Duplicates]]
-		- [[Set Default for First-Last-Single_OrDefault Methods]]
-		- [[Sorting Expressions]]
 	- [[LINQ Introduction]]
 	- [[LINQ Prerequisite]]
 	- [[LINQ Query Operators]]
-	- **Selectors**
-		- [[Aggregation with Selectors]]
-		- [[Removing Duplicates with Selectors]]
-		- [[Venn Diagramming with Selectors]]
 	- [[Single vs First]]
 - **09 - Advanced Features**
 	- [[Anonymous Types]]
@@ -159,25 +147,11 @@ type: folder_brief_live
 	- [[Why Compacting]]
 	- [[Why is it perfectly safe to communicate with other managed objects within a Dispose() method]]
 - **12 - Processes and Threading**
-	- **AppDomains**
-		- [[AppDomain Overview]]
+	- **[[12.01 - Processes]]**
+	- **[[12.02 - AppDomains]]**
+	- **[[12.03 - Threads]]**
+	- **[[12.04 - Task Parallel Library]]**
 	- **[[Async Programming]]**
-	- **Load Contexts**
-		- [[Assembly Isolation with Application Load Contexts]]
-	- **Processes**
-		- [[Controlling Process Startup Using the ProcessStartInfo]]
-		- [[Interacting with Processes Using .NET Core]]
-		- [[Process's Module Set]]
-		- [[ProcessThread]]
-		- [[The Role of a Windows Process]]
-		- [[The Role of Threads]]
-		- [[Verb]]
-	- **Task Parallel Library**
-		- [[Data Parallelism with the Parallel Class]]
-		- [[Parallel Class]]
-		- [[The System.Threading.Tasks Namespace]]
-	- [[The System.Threading Namespace]]
-	- [[The System.Threading.Thread class]]
 - **13 - Assemblies and Libraries**
 	- **Assembly Elements**
 		- [[CIL Code, Type Metadata, and the Assembly Manifest]]

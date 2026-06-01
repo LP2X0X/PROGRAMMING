@@ -5,78 +5,167 @@ tags:
  - anonymous-methods
 ---
 
-In C#, an anonymous method allows you to define a method inline without explicitly declaring a separate named method. It's a powerful feature that provides flexibility and conciseness, especially in scenarios where you need to pass a method as an argument to another method, such as event handling or asynchronous callbacks. Here’s an explanation and example of how anonymous methods work in C#:
+# Anonymous Methods
+
+## What Is an Anonymous Method?
+
+An anonymous method is an **inline, unnamed method** defined using the `delegate` keyword. Instead of declaring a separate named method and assigning it to a delegate, you write the method body right where you need it.
 
 ```ad-attention
-Anonymous methods are shorthand notations for allocating a raw delegate and manually building a delegate target method.
+Anonymous methods are shorthand for allocating a raw delegate and manually building a delegate target method. The compiler generates a hidden method behind the scenes.
 ```
 
-### Syntax and Usage
 
-#### Basic Syntax
+---
+
+## Syntax
 
 ```csharp
 delegate (parameters) {
-    // Method body
+    // method body
 };
 ```
 
 - `delegate` keyword introduces the anonymous method.
-- `(parameters)` specifies the parameters (if any) that the method takes.
-- `{ }` encloses the method body.
+- `(parameters)` — the parameters it accepts (must match the delegate signature).
+- `{ }` — the method body.
 
 ```ad-danger
-The final curly bracket of an anonymous method must be terminated by a semicolon. If you fail to do so, you are issued a compilation error.
+The closing brace must be followed by a semicolon. Forgetting it causes a compilation error.
 ```
 
-#### Example
+
+---
+
+## Basic Example
 
 ```csharp
-using System;
+// Named method approach
+static void Greet(string name) => Console.WriteLine($"Hello, {name}!");
 
-public class Program
-{
-    public static void Main()
-    {
-        // Anonymous method assigned to a delegate variable
-        Action<string> greet = delegate (string name) {
-            Console.WriteLine($"Hello, {name}!");
-        };
+Action<string> greetDel = Greet;
+greetDel("Alice"); // Hello, Alice!
 
-        greet("Alice"); // Output: Hello, Alice!
-    }
-}
+// Anonymous method approach — no separate method needed
+Action<string> greetAnon = delegate (string name) {
+    Console.WriteLine($"Hello, {name}!");
+};
+
+greetAnon("Alice"); // Hello, Alice!
 ```
 
-### Explanation
+Both do the same thing. The anonymous method eliminates the need for a standalone `Greet` method when it's only used in one place.
 
-1. **Delegate Assignment**: 
-   - `Action<string> greet = delegate (string name) { ... };`
-   - Here, `Action<string>` is a delegate that represents a method taking a `string` parameter and returning `void`.
-   - `delegate (string name) { ... }` defines the anonymous method that takes `name` as a parameter and writes a greeting message to the console.
 
-2. **Invocation**:
-   - `greet("Alice");` invokes the anonymous method stored in `greet`, passing `"Alice"` as the argument.
-   - This results in printing `"Hello, Alice!"` to the console.
+---
 
-### Advantages of Anonymous Methods
+## Parameterless Anonymous Methods
 
-- **Conciseness**: Eliminates the need for declaring a separate named method for simple operations.
-- **Closures**: Can capture variables from the outer scope, providing a way to access and modify local variables within the anonymous method.
-- **Inline Definition**: Allows defining a method exactly where it's needed, enhancing code readability and maintainability by keeping related logic together.
+If the delegate takes no parameters, you can omit the parameter list entirely:
 
-### Use Cases
+```csharp
+Action sayHello = delegate {
+    Console.WriteLine("Hello!");
+};
 
-- **Event Handlers**: Registering event handlers without needing separate methods.
-- **Asynchronous Programming**: Defining callbacks for asynchronous operations like `Task.Run`.
-- **LINQ Queries**: Inline transformations or filters using `Enumerable.Where`, `Select`, etc.
-- **Anonymous Types**: Used in conjunction with anonymous types to create and initialize objects inline.
+sayHello(); // Hello!
+```
 
-### Limitations
+You can also omit the parameter list even when the delegate **does** have parameters — if you don't need them:
 
-- **Cannot Use `async` and `await`**: Anonymous methods cannot be `async`, meaning they cannot use `await` to asynchronously wait for operations to complete.
-- **Complex Logic**: While useful for simple operations, complex logic inside anonymous methods can reduce readability and maintainability.
+```csharp
+// Button.Click expects (object sender, EventArgs e) but we don't care
+button.Click += delegate {
+    Console.WriteLine("Clicked!");
+};
+```
 
-### Conclusion
+This is only possible with anonymous methods, not with lambda expressions (lambdas require you to declare the parameters).
 
-Anonymous methods in C# are a versatile feature that allows you to define inline methods without explicitly naming them. They are particularly useful in scenarios where you need to provide quick, disposable method implementations or when passing methods as parameters to other methods. Understanding how to use and when to employ anonymous methods can significantly enhance the flexibility and readability of your C# codebase.
+
+---
+
+## Anonymous Methods vs. Lambda Expressions
+
+Anonymous methods came first (C# 2.0). Lambda expressions (C# 3.0) largely replaced them with cleaner syntax:
+
+```csharp
+// Anonymous method
+Func<int, int, int> add1 = delegate (int a, int b) { return a + b; };
+
+// Lambda expression — same thing, less noise
+Func<int, int, int> add2 = (a, b) => a + b;
+```
+
+| Feature                      | Anonymous Method             | Lambda Expression  |
+| ---------------------------- | ---------------------------- | ------------------ |
+| Syntax                       | `delegate (params) { body }` | `(params) => body` |
+| Omit parameter list entirely | Yes                          | No                 |
+| Expression body (no braces)  | No                           | Yes                |
+| Used in expression trees     | No                           | Yes                |
+| Introduced in                | C# 2.0                       | C# 3.0             |
+
+```ad-note
+Lambda expressions are the preferred syntax in modern C#. Anonymous methods still appear in legacy code and in the rare case where you want to omit the parameter list entirely (the one thing lambdas can't do).
+```
+
+
+---
+
+## Common Use Cases
+
+**Event handlers** — quick inline handlers without a separate method:
+
+```csharp
+button.Click += delegate (object sender, EventArgs e) {
+    Console.WriteLine("Button clicked!");
+};
+```
+
+**Passing callbacks** — passing behavior to a method:
+
+```csharp
+List<int> numbers = [1, 2, 3, 4, 5];
+
+List<int> evens = numbers.FindAll(delegate (int n) {
+    return n % 2 == 0;
+});
+// evens: [2, 4]
+```
+
+**Thread/Task work** — inline work items:
+
+```csharp
+Thread t = new Thread(delegate () {
+    Console.WriteLine("Running on a separate thread");
+});
+t.Start();
+```
+
+
+---
+
+## What the Compiler Generates
+
+When you write an anonymous method, the compiler generates a **hidden private method** inside the class. For example:
+
+```csharp
+Action<string> greet = delegate (string name) {
+    Console.WriteLine($"Hello, {name}!");
+};
+```
+
+Becomes roughly:
+
+```csharp
+// Compiler-generated (you never see this)
+private void <>AnonymousMethod_0(string name)
+{
+    Console.WriteLine($"Hello, {name}!");
+}
+
+// Your delegate now points to this generated method
+Action<string> greet = new Action<string>(<>AnonymousMethod_0);
+```
+
+If the anonymous method captures local variables (see [[Accessing Local Variables]]), the compiler generates a **hidden class** to hold those variables instead.
