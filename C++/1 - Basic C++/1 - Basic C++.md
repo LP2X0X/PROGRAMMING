@@ -8,7 +8,7 @@ type: folder_brief_live
 
 %% Begin Waypoint %%
 - **[[1.1 - Terms]]**
-- **[[Attributes]]**
+- **[[C++/1 - Basic C++/Attributes/Attributes]]**
 - **[[Notes]]**
 
 %% End Waypoint %%

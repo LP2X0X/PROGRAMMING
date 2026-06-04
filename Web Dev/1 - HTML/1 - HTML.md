@@ -14,7 +14,7 @@ type: folder_brief_live
 	- **[[1.2.1 - Important]]**
 	- **[[1.2.2 - Aria]]**
 	- [[Attribute Overview]]
-	- [[Attributes]]
+	- [[Web Dev/1 - HTML/1.2 - Attributes/Attributes]]
 	- [[Custom Attribute]]
 	- **[[Notable]]**
 - **[[1.3 - Notes]]**

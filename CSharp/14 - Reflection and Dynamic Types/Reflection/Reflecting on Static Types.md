@@ -1,7 +1,0 @@
----
-tags:
- - csharp
- - reflection
----
-
-- Static types cannot be loaded using the Type.GetType(typeName) method. Instead, you must use another mechanism, the typeof function from System.Type.

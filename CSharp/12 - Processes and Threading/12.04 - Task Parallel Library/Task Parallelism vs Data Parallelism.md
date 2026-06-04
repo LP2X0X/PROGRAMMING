@@ -45,10 +45,10 @@ The defining characteristic: **every thread runs the same code**, just on differ
 
 ### APIs
 
-| API | Use When |
-|---|---|
-| `Parallel.For` | Index-based iteration over a range |
-| `Parallel.ForEach` | Iterating an `IEnumerable<T>` |
+| API                     | Use When                                                   |
+| ----------------------- | ---------------------------------------------------------- |
+| `Parallel.For`          | Index-based iteration over a range                         |
+| `Parallel.ForEach`      | Iterating an `IEnumerable<T>`                              | 
 | PLINQ (`.AsParallel()`) | Querying with LINQ — the runtime parallelizes the pipeline |
 
 ```csharp
@@ -96,11 +96,11 @@ The defining characteristic: **each thread runs different code**, potentially on
 
 ### APIs
 
-| API | Use When |
-|---|---|
-| `Parallel.Invoke` | Fixed set of independent actions, all must complete |
-| `Task.Run` + `Task.WhenAll` | Need return values, cancellation, or async composition |
-| Manual `Task` / `Task<T>` creation | Complex dependency graphs between tasks |
+| API                                | Use When                                               |
+| ---------------------------------- | ------------------------------------------------------ |
+| `Parallel.Invoke`                  | Fixed set of independent actions, all must complete    |
+| `Task.Run` + `Task.WhenAll`        | Need return values, cancellation, or async composition | 
+| Manual `Task` / `Task<T>` creation | Complex dependency graphs between tasks                |
 
 ```csharp
 // Task parallelism: three completely different jobs running concurrently
@@ -139,16 +139,16 @@ For more on `Task.Run`, `Task<T>`, continuations, `WhenAll`/`WhenAny`, and excep
 
 ## Side-by-Side Comparison
 
-| | Data Parallelism | Task Parallelism |
-|---|---|---|
-| **What's parallel** | Same operation, many items | Different operations, same time |
-| **Typical API** | `Parallel.For`, `Parallel.ForEach`, PLINQ | `Parallel.Invoke`, `Task.Run` + `WhenAll` |
-| **Scales with** | Size of the data | Number of independent tasks |
-| **Partitioning** | Runtime splits collection into chunks | You define the tasks (one delegate per job) |
-| **Mental model** | "Divide the data" | "Divide the work" |
-| **Thread utilization** | Many threads doing the same thing | Each thread does something unique |
-| **Typical bottleneck** | Work-per-item too small (overhead dominates) | Too few independent tasks to fill all cores |
-| **Example** | Apply a filter to every pixel in an image | Compress, encrypt, and upload simultaneously |
+|                        | Data Parallelism                             | Task Parallelism                             |
+| ---------------------- | -------------------------------------------- | -------------------------------------------- |
+| **What's parallel**    | Same operation, many items                   | Different operations, same time              |
+| **Typical API**        | `Parallel.For`, `Parallel.ForEach`, PLINQ    | `Parallel.Invoke`, `Task.Run` + `WhenAll`    |
+| **Scales with**        | Size of the data                             | Number of independent tasks                  |
+| **Partitioning**       | Runtime splits collection into chunks        | You define the tasks (one delegate per job)  |
+| **Mental model**       | "Divide the data"                            | "Divide the work"                            |
+| **Thread utilization** | Many threads doing the same thing            | Each thread does something unique            |
+| **Typical bottleneck** | Work-per-item too small (overhead dominates) | Too few independent tasks to fill all cores  |
+| **Example**            | Apply a filter to every pixel in an image    | Compress, encrypt, and upload simultaneously |
 
 
 ---

@@ -1,144 +1,134 @@
----
+﻿---
 tags:
- - csharp
- - assemblies
+  - csharp
+  - configuration
 ---
 
-- While it is possible to keep all the information needed by your .NET application in the source code, being able to change certain values at runtime is vitally important in most applications of significance. One of the more common options is to use one or more configuration files shipped (or deployed) along with your application’s executable.
-- The .NET Framework relied mostly on XML files named app.config (or web.config for ASP.NET applications) for configuration. While XML-based configuration files can still be used, the most common method for configuring .NET applications is with JavaScript Object Notation (JSON) files.
+## Why Configuration Files?
+
+Values that change between environments — connection strings, API keys, feature flags, timeouts — should not be hardcoded. Configuration files let you change application behavior **without recompiling**.
+
+```ad-info
+title: Key Principle
+Separate *what can change* from *what is compiled*. Configuration is data, not code.
+```
 
 ---
 
-Configuring applications with configuration files in .NET typically involves using configuration files such as `appsettings.json`, `web.config`, or `app.config`. Here’s a guide on how to use these files for configuring a .NET application:
+## Configuration File Types
 
-### Using `appsettings.json`
+| Format | File | Used By |
+|---|---|---|
+| JSON | `appsettings.json` | .NET Core / .NET 5+ (primary) |
+| XML | `app.config` / `web.config` | .NET Framework (legacy) |
+| Environment Variables | OS-level | Both |
+| User Secrets | `secrets.json` | Development only |
+| Command-line args | CLI flags | Both |
 
-`appsettings.json` is commonly used in .NET Core and .NET 5+ applications for configuration. Here’s how to use it:
+---
 
-1. **Create `appsettings.json` File**
+## Modern .NET (6+): appsettings.json
 
-   Create a file named `appsettings.json` in the root of your project.
+The **minimal hosting model** in .NET 6+ loads configuration automatically with zero boilerplate:
 
-   ```json
-   {
-     "Logging": {
-       "LogLevel": {
-         "Default": "Information",
-         "Microsoft": "Warning",
-         "Microsoft.Hosting.Lifetime": "Information"
-       }
-     },
-     "ConnectionStrings": {
-       "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=aspnet-YourApp;Trusted_Connection=True;MultipleActiveResultSets=true"
-     }
-   }
-   ```
+```csharp
+var builder = WebApplication.CreateBuilder(args);
 
-2. **Load Configuration in `Program.cs` or `Startup.cs`**
+// Configuration is automatically loaded from (in order):
+// 1. appsettings.json
+// 2. appsettings.{Environment}.json
+// 3. User secrets (Development only)
+// 4. Environment variables
+// 5. Command-line arguments
 
-   Load the configuration in your application startup code.
+var connString = builder.Configuration.GetConnectionString("Default");
+```
 
-   ```csharp
-   public class Program
-   {
-       public static void Main(string[] args)
-       {
-           CreateHostBuilder(args).Build().Run();
-       }
+A typical `appsettings.json`:
 
-       public static IHostBuilder CreateHostBuilder(string[] args) =>
-           Host.CreateDefaultBuilder(args)
-               .ConfigureWebHostDefaults(webBuilder =>
-               {
-                   webBuilder.UseStartup<Startup>();
-               });
-   }
-   ```
+```json
+{
+  "ConnectionStrings": {
+    "Default": "Server=myserver;Database=mydb;Trusted_Connection=True;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "MaxRetryCount": 3
+}
+```
 
-   ```csharp
-   public class Startup
-   {
-       public IConfiguration Configuration { get; }
+```ad-note
+title: Build Action
+Set the file's **Copy to Output Directory** to *Copy if newer* so it ships alongside your executable.
+```
 
-       public Startup(IConfiguration configuration)
-       {
-           Configuration = configuration;
-       }
+---
 
-       public void ConfigureServices(IServiceCollection services)
-       {
-           services.AddControllersWithViews();
+## .NET Framework (Legacy): app.config / web.config
 
-           // Access configuration values
-           var connectionString = Configuration.GetConnectionString("DefaultConnection");
-       }
+```ad-warning
+title: Legacy Pattern
+This section covers .NET Framework only. For new projects, use `appsettings.json` with `IConfiguration`.
+```
 
-       public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-       {
-           if (env.IsDevelopment())
-           {
-               app.UseDeveloperExceptionPage();
-           }
-           else
-           {
-               app.UseExceptionHandler("/Home/Error");
-               app.UseHsts();
-           }
+Desktop apps use `app.config`, web apps use `web.config` — both are XML:
 
-           app.UseHttpsRedirection();
-           app.UseStaticFiles();
-           app.UseRouting();
-           app.UseAuthorization();
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+    <add name="Default"
+         connectionString="Server=myserver;Database=mydb;Trusted_Connection=True;"
+         providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <appSettings>
+    <add key="MaxRetryCount" value="3" />
+  </appSettings>
+</configuration>
+```
 
-           app.UseEndpoints(endpoints =>
-           {
-               endpoints.MapControllerRoute(
-                   name: "default",
-                   pattern: "{controller=Home}/{action=Index}/{id?}");
-           });
-       }
-   }
-   ```
+Access values with `ConfigurationManager` (requires `System.Configuration` NuGet package):
 
-### Using `web.config` or `app.config`
+```csharp
+using System.Configuration;
 
-For .NET Framework applications, you typically use `web.config` (for web applications) or `app.config` (for desktop applications).
+var connString = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+var retries = ConfigurationManager.AppSettings["MaxRetryCount"]; // returns string
+```
 
-1. **Create `web.config` or `app.config`**
+---
 
-   Example `web.config`:
+## Accessing Configuration Values (.NET 6+)
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <configuration>
-     <connectionStrings>
-       <add name="DefaultConnection" connectionString="Server=(localdb)\mssqllocaldb;Database=aspnet-YourApp;Trusted_Connection=True;MultipleActiveResultSets=true" providerName="System.Data.SqlClient" />
-     </connectionStrings>
-     <appSettings>
-       <add key="Setting1" value="Value1" />
-     </appSettings>
-   </configuration>
-   ```
+`IConfiguration` provides several ways to read values:
 
-2. **Access Configuration in Code**
+```csharp
+// Indexer — returns string or null
+string value = builder.Configuration["MaxRetryCount"];
 
-   ```csharp
-   using System.Configuration;
+// GetSection — returns an IConfigurationSection for nested objects
+var loggingSection = builder.Configuration.GetSection("Logging");
 
-   public class MyApp
-   {
-       public void MyMethod()
-       {
-           var connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-           var setting1 = ConfigurationManager.AppSettings["Setting1"];
-       }
-   }
-   ```
+// GetConnectionString — shortcut for ConnectionStrings:{name}
+var conn = builder.Configuration.GetConnectionString("Default");
 
-### Summary
+// GetValue<T> — reads and converts a single key
+int retries = builder.Configuration.GetValue<int>("MaxRetryCount");
+```
 
-- Use `appsettings.json` for .NET Core and .NET 5+ applications.
-- Use `web.config` or `app.config` for .NET Framework applications.
-- Load the configuration in the startup code and access it via the `IConfiguration` interface in .NET Core/5+ or via `ConfigurationManager` in .NET Framework.
+```ad-warning
+title: All Values Are Strings Internally
+Configuration values are stored as `string`. `GetValue<T>` handles conversion, but the raw indexer always returns `string?`. Forgetting this causes subtle bugs with booleans and numbers.
+```
 
-This approach helps in managing configurations in a centralized manner, making it easier to maintain and update configuration settings.
+---
+
+## See Also
+
+- [[Multiple Configuration Files]]
+- [[Working with Objects in Configuration Files]]
+- [[Bind and Get Methods]]

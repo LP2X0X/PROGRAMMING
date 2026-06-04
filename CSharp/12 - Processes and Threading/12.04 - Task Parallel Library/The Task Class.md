@@ -17,17 +17,145 @@ using System.Threading.Tasks;
 
 ### Task vs Thread
 
-| | `Thread` | `Task` |
-|---|---|---|
-| Abstraction level | Low — wraps an OS thread directly | High — represents work, not a thread |
-| Return value | None (`ThreadStart` is `void`) | `Task<T>` returns a value |
-| Exception handling | Unhandled = process crash | Captured and re-thrown on `await`/`.Result` |
-| Scheduling | You manage the thread | Runtime schedules on the thread pool |
-| Composition | `Join()` only | `WhenAll`, `WhenAny`, `ContinueWith`, `await` |
-| Cancellation | `Abort()` (removed in .NET 5+) | Cooperative via `CancellationToken` |
-| Cost | ~1 MB stack + OS kernel object | Lightweight object on the managed heap |
+|                    | `Thread`                          | `Task`                                        |
+| ------------------ | --------------------------------- | --------------------------------------------- |
+| Abstraction level  | Low — wraps an OS thread directly | High — represents work, not a thread          |
+| Return value       | None (`ThreadStart` is `void`)    | `Task<T>` returns a value                     |
+| Exception handling | Unhandled = process crash         | Captured and re-thrown on `await`/`.Result`   |
+| Scheduling         | You manage the thread             | Runtime schedules on the thread pool          |
+| Composition        | `Join()` only                     | `WhenAll`, `WhenAny`, `ContinueWith`, `await` |
+| Cancellation       | `Abort()` (removed in .NET 5+)    | Cooperative via `CancellationToken`           | 
+| Cost               | ~1 MB stack + OS kernel object    | Lightweight object on the managed heap        |
 
-A `Task` doesn't necessarily create a new thread. It **schedules work** on the thread pool. Multiple tasks share a small pool of threads.
+A `Task` doesn't necessarily create a new thread. It **schedules work** on [[The CLR Thread Pool|the thread pool]]. Multiple tasks share a small pool of threads.
+
+
+---
+
+## I/O-Bound vs CPU-Bound — How to Choose Your Pattern
+
+What makes work I/O-bound or CPU-bound is **what the body of the method actually does**, not any keyword or return type. The `Task` and `async` signatures look identical in both cases — the difference is entirely in the work:
+
+| The body does... | Type | Thread involved? | Example |
+|---|---|---|---|
+| Math, loops, parsing, image processing | CPU-bound | Yes — needs a thread to crunch numbers | sorting, compression, encryption |
+| Network call, file read, DB query | I/O-bound | No — hardware does the waiting | HTTP requests, file I/O, SQL queries |
+
+This distinction determines which pattern you use:
+
+```csharp
+// CPU-bound — wrap in Task.Run to offload to a ThreadPool thread
+async Task<int> CpuWorkAsync()
+{
+    return await Task.Run(() =>
+    {
+        // The body is computation — this NEEDS a thread
+        int sum = 0;
+        for (int i = 0; i < 1_000_000; i++)
+            sum += i;
+        return sum;
+    });
+}
+
+// I/O-bound — just await the async API directly, no Task.Run needed
+async Task<string> IoWorkAsync()
+{
+    // The body is a network call — no thread is waiting, the OS handles it
+    return await httpClient.GetStringAsync("https://example.com");
+}
+```
+
+**You** decide whether to use `Task.Run()` based on what the code does:
+
+- Body is CPU work → wrap in `Task.Run()` to offload to ThreadPool
+- Body is I/O → `await` the async API directly — `Task.Run()` would waste a thread that just sits there waiting
+
+```
+CPU-bound:   Your code ──Task.Run()──▶ ThreadPool thread does the work
+I/O-bound:   Your code ──await──▶ OS/hardware does the work, no thread needed
+```
+
+The framework doesn't figure this out for you. You know what your code does, so you pick the right pattern.
+
+```ad-warning
+Wrapping I/O-bound work in `Task.Run()` is a common mistake — it schedules a thread pool thread just to sit and wait for I/O. That thread is wasted. Use `await` on the async API directly instead.
+```
+
+### Mixing I/O-Bound and CPU-Bound in One Method
+
+A single method can freely mix both — use the right tool for each step:
+
+```csharp
+async Task<byte[]> DownloadAndCompressAsync(string url)
+{
+    // I/O-bound — no thread, network card does the work
+    byte[] raw = await httpClient.GetByteArrayAsync(url);
+
+    // CPU-bound — needs a thread pool thread to crunch
+    byte[] compressed = await Task.Run(() => Compress(raw));
+
+    // I/O-bound — no thread, disk controller does the work
+    await File.WriteAllBytesAsync("output.gz", compressed);
+
+    return compressed;
+}
+```
+
+```
+Thread usage through the method:
+
+GetByteArrayAsync    → no thread (hardware)
+Compress via Task.Run → thread pool thread (CPU work)
+WriteAllBytesAsync   → no thread (hardware)
+```
+
+
+---
+
+## The Two-Task Pattern in async Methods
+
+When an `async` method contains `await Task.Run(...)`, **two** Task objects are created:
+
+```csharp
+public static async Task<string> DoWorkAsync()
+{
+    //         ┌── Inner Task: created by Task.Run()
+    //         │   Runs the lambda on a ThreadPool thread
+    //         │   Result = "Hi" when lambda finishes
+    return await Task.Run(() => {
+        Console.WriteLine("Hi");
+        return "Hi";
+    });
+    //  │
+    //  └── await unwraps "Hi" from the inner Task
+    //      return puts "Hi" into the outer Task
+}
+// └── Outer Task: created by the async state machine
+//     This is what the caller receives
+```
+
+- **Inner Task** — does the actual work (created by `Task.Run`)
+- **Outer Task** — wraps the method for the caller (created by `async` state machine)
+- **`await`** — unwraps the inner Task's result
+- **`return`** — stuffs it into the outer Task
+
+To avoid the extra Task allocation, drop `async`/`await` and return the inner Task directly:
+
+```csharp
+// Two Tasks:
+public static async Task<string> DoWorkAsync()
+{
+    return await Task.Run(() => "Hi");  // inner Task + outer Task
+}
+
+// One Task — just pass it through:
+public static Task<string> DoWorkAsync()
+{
+    return Task.Run(() => "Hi");  // inner Task returned directly to caller
+}
+```
+
+Only elide `async`/`await` when you're just forwarding a single Task with no code before or after. If you need `try`/`catch`, `using`, or post-processing after `await`, you must keep `async`/`await`. See [[Common Async Pitfalls]] for the elision pitfall with `using` blocks.
 
 
 ---
