@@ -102,6 +102,38 @@ A typical version number assignment follows this convention:
 | **Build** | Build iteration or patch | `1.0.0.0` to `1.0.1.0` |
 | **Revision** | Hotfix or incremental revision | `1.0.0.0` to `1.0.0.1` |
 
+### NuGet Package and Target Framework Mismatches
+
+A common build error occurs when you install a NuGet package that **requires a newer .NET version** than your project targets. For example, installing a package built for `net8.0` into a project targeting `net6.0`:
+
+```
+error NU1202: Package 'SomeLibrary 5.0.0' is not compatible with 'net6.0'.
+Package 'SomeLibrary 5.0.0' supports: net8.0
+```
+
+This happens because NuGet packages are compiled against a specific **Target Framework Moniker (TFM)**. If your project's TFM is older, the package's APIs may depend on runtime features that don't exist in your version.
+
+```xml
+<!-- Your .csproj -->
+<TargetFramework>net6.0</TargetFramework>
+
+<!-- But the package requires net8.0 — build fails -->
+```
+
+```ad-warning
+**How to fix:**
+
+1. **Upgrade your project's target framework** — update `<TargetFramework>` in your `.csproj` to match or exceed what the package requires. This is the cleanest solution.
+2. **Use an older version of the package** — find a version that still supports your TFM. In NuGet Package Manager, uncheck "Latest stable" and browse older versions.
+3. **Multi-target your project** — if you need to support multiple frameworks, use `<TargetFrameworks>net6.0;net8.0</TargetFrameworks>` (plural). The package will be used only for the compatible target.
+
+Before installing a package, check its **Dependencies** tab on nuget.org — it lists which TFMs are supported.
+```
+
+```ad-note
+This is different from **assembly version mismatches** (where the version number doesn't match what was expected at compile time). A TFM mismatch means the package was built for a fundamentally different runtime, not just a different version of the same library.
+```
+
 ---
 
 ## Assemblies Are Self-Describing
