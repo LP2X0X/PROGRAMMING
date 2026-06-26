@@ -92,7 +92,9 @@ type: folder_brief_live
 	- **[[14.05 - Late Binding]]**
 	- **[[14.06 - Assembly Signing and Naming]]**
 - **[[15 - Data Access with ADO.NET]]**
-- **15 - Interop**
+- **[[16 - Entity Framework Core]]**
+- **[[17 - ASP.NET]]**
+- **Interop**
 	- [[Mapping Type]]
 	- [[MSBuild set up for both DLL and PBD]]
 	- [[MSBuild set up for SharedProject]]

@@ -124,7 +124,82 @@ while (reader.Read())
 | `GetFieldType(ordinal)` | `Type` | Returns the .NET `Type` of the column. |
 | `FieldCount` | `int` | The number of columns in the current result set. |
 | `IsDBNull(ordinal)` | `bool` | `true` if the column value is SQL `NULL`. |
-| `GetSchemaTable()` | `DataTable?` | Returns detailed schema information for the result set columns. |
+| `GetSchemaTable()` | `DataTable?` | Returns a `DataTable` where **each row describes a column** in the result set (see below). |
+
+---
+
+## GetSchemaTable() — Column Metadata as Rows
+
+`GetSchemaTable()` returns a special `DataTable` that describes the **structure** of your query result. Instead of containing your data, each row in the schema table represents one **column** from your query.
+
+```
+Your query result:                   GetSchemaTable() result:
+┌────┬───────┬───────┐               ┌────────────┬──────────┬──────┬───────┬──────────┐
+│ Id │ Make  │ Color │               │ ColumnName │ DataType │ Size │ IsKey │ AllowNull│
+├────┼───────┼───────┤               ├────────────┼──────────┼──────┼───────┼──────────┤
+│ 1  │ BMW   │ Red   │               │ "Id"       │ Int32    │ 4    │ true  │ false    │
+│ 2  │ Ford  │ Blue  │               │ "Make"     │ String   │ 50   │ false │ false    │
+└────┴───────┴───────┘               │ "Color"    │ String   │ 20   │ false │ true     │
+                                     └────────────┴──────────┴──────┴───────┴──────────┘
+                                     Row 0 = info about column "Id"
+                                     Row 1 = info about column "Make"
+                                     Row 2 = info about column "Color"
+```
+
+### Common Schema Columns
+
+| Schema column | Type | Description |
+|---|---|---|
+| `ColumnName` | `string` | Name of the column |
+| `ColumnOrdinal` | `int` | Zero-based position of the column |
+| `ColumnSize` | `int` | Maximum length (for strings/binary) |
+| `DataType` | `Type` | The .NET `Type` (e.g., `typeof(int)`, `typeof(string)`) |
+| `DataTypeName` | `string` | The database type name (e.g., `"nvarchar"`, `"int"`) |
+| `AllowDBNull` | `bool` | Whether the column allows `NULL` |
+| `IsKey` | `bool` | Whether the column is part of the primary key |
+| `IsAutoIncrement` | `bool` | Whether the column is an identity/auto-increment |
+| `IsUnique` | `bool` | Whether the column has a unique constraint |
+| `IsReadOnly` | `bool` | Whether the column is read-only (computed) |
+| `NumericPrecision` | `short` | Precision for numeric types |
+| `NumericScale` | `short` | Scale for numeric types |
+
+### Usage Example — Building a Column Name Dictionary
+
+```csharp
+using var reader = cmd.ExecuteReader();
+DataTable schemaTable = reader.GetSchemaTable();
+
+var nameDictionary = new Dictionary<int, string>();
+for (int x = 0; x < schemaTable.Rows.Count; x++)
+{
+    DataRow col = schemaTable.Rows[x];                  // row 0 = column "Id"
+    var columnName = col.Field<string>("ColumnName");   // get its name
+    nameDictionary.Add(x, columnName);                  // 0 → "Id", 1 → "Make", ...
+}
+```
+
+### Usage Example — Discovering Column Types at Runtime
+
+```csharp
+DataTable schema = reader.GetSchemaTable();
+foreach (DataRow col in schema.Rows)
+{
+    string name     = col.Field<string>("ColumnName");
+    Type dotnetType = (Type)col["DataType"];
+    string dbType   = col.Field<string>("DataTypeName");
+    bool nullable   = col.Field<bool>("AllowDBNull");
+
+    Console.WriteLine($"{name}: {dbType} → {dotnetType.Name}, nullable={nullable}");
+}
+// Output:
+// Id: int → Int32, nullable=False
+// Make: nvarchar → String, nullable=False
+// Color: nvarchar → String, nullable=True
+```
+
+```ad-note
+This is useful when building dynamic tools (query browsers, code generators, ORM-like mappers) where you don't know the table structure at compile time. For normal data access where you know your columns, use `GetOrdinal()` and typed accessors instead.
+```
 
 ---
 
@@ -364,6 +439,50 @@ public static List<User> GetAllUsers(SqlConnection conn)
 ```
 
 This is essentially what ORMs like [[Entity Framework]] and micro-ORMs like Dapper do behind the scenes -- Dapper in particular generates optimized IL code for this mapping at runtime.
+
+---
+
+## DataReader as a General-Purpose Row Stream
+
+A `DataReader` is not just "a way to read from a database." It's a **standardized forward-only stream of rows**. The reader itself doesn't care where the rows come from or where they're going — it's just a pipe.
+
+```
+Producer              DataReader              Consumer
+────────              ──────────              ────────
+SQL Server      →     rows streaming    →     your while (Read()) loop
+DataTable       →     rows streaming    →     SqlBulkCopy
+Another DB      →     rows streaming    →     SqlBulkCopy
+CSV / file      →     rows streaming    →     SqlBulkCopy
+```
+
+This is why `SqlBulkCopy.WriteToServer()` accepts both a `DataTable` and a `DataReader`:
+
+```csharp
+// Option 1: DataTable — loads ALL rows into memory first
+DataTable table = LoadMillionRows();            // 1M rows in memory
+bulkCopy.WriteToServer(table);                  // then sends to DB
+
+// Option 2: DataReader — streams rows through, never all in memory
+using var reader = cmd.ExecuteReader();          // rows stream one at a time
+bulkCopy.WriteToServer(reader);                 // sends each row as it arrives
+```
+
+The `DataReader` version is critical for large datasets — streaming a million rows through a reader uses O(1) memory, while loading them into a `DataTable` first uses O(n) memory.
+
+### Database-to-Database Migration Example
+
+```csharp
+// Source: read from old database (streams rows — not loaded into memory)
+var srcCmd = new SqlCommand("SELECT * FROM OldInventory", sourceConnection);
+using var reader = srcCmd.ExecuteReader();
+
+// Destination: bulk insert into new database
+using var bulkCopy = new SqlBulkCopy(destConnection);
+bulkCopy.DestinationTableName = "Inventory";
+bulkCopy.WriteToServer(reader);   // rows flow: old DB → reader → bulk copy → new DB
+```
+
+The reader acts as a bridge — rows stream from the source database directly into the destination without ever being held in memory all at once.
 
 ---
 

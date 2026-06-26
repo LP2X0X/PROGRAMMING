@@ -16,12 +16,7 @@ type: folder_brief_live
 	- [[Lazy Object Instantiation]]
 	- [[Order of Actions when Dispose is called]]
 	- [[Reusing the using Keyword]]
-- **Garbage Collection**
-	- [[Compact Memory Feature of GC]]
-	- [[Determining if an Object is Live]]
-	- [[Ephemeral Generations and Segments]]
-	- [[Object Generations]]
-	- [[System.GC]]
+- **[[Garbage Collection]]**
 - **Keywords**
 	- [[CPU Cache]]
 	- [[Disposable Object]]
@@ -30,6 +25,8 @@ type: folder_brief_live
 	- [[Stack Root]]
 - [[Marshal class]]
 - [[Marshalling in C#]]
+- [[CSharp/11 - Object Lifetime - GC - Dispose - Finalize/Mental Model]]
+- [[What Happens If You Forget to Call Dispose on Managed Resources]]
 - [[Why is it perfectly safe to communicate with other managed objects within a Dispose() method]]
 
 %% End Waypoint %%

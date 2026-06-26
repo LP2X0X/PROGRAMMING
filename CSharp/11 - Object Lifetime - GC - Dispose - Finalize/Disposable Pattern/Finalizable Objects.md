@@ -26,7 +26,7 @@ public class UnmanagedWrapper
 ```
 
 ```ad-note
-The only compelling reason to override Finalize() is if your C# class is using unmanaged resources via PI nvoke or complex COM interoperability tasks (typically via various members defined by the System.Runtime.InteropServices.Marshal type). The reason is that under these scenarios you are manipulating memory that the runtime cannot manage.
+The only compelling reason to override Finalize() is if your C# class is using unmanaged resources via PInvoke or complex COM interoperability tasks (typically via various members defined by the System.Runtime.InteropServices.Marshal type). The reason is that under these scenarios you are manipulating memory that the runtime cannot manage.
 ```
 
 ---

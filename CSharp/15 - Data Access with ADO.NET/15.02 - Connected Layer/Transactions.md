@@ -15,12 +15,12 @@ A **database transaction** is a sequence of operations that are treated as a sin
 
 Every database transaction guarantees the **ACID** properties:
 
-| Property | Meaning | Example |
-|---|---|---|
-| **Atomicity** | All operations succeed or all are rolled back -- no partial state | A bank transfer debits one account and credits another; if the credit fails, the debit is reversed |
-| **Consistency** | The database moves from one valid state to another; constraints are never violated | Foreign keys, unique constraints, and check constraints are enforced at commit |
-| **Isolation** | Concurrent transactions do not see each other's uncommitted changes (degree depends on isolation level) | Two users updating the same row don't see each other's intermediate state |
-| **Durability** | Once committed, the changes survive system crashes, power failures, etc. | Committed data is written to the transaction log on disk before acknowledgment |
+| Property        | Meaning                                                                                                 | Example                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **Atomicity**   | All operations succeed or all are rolled back -- no partial state                                       | A bank transfer debits one account and credits another; if the credit fails, the debit is reversed |
+| **Consistency** | The database moves from one valid state to another; constraints are never violated                      | Foreign keys, unique constraints, and check constraints are enforced at commit                     |
+| **Isolation**   | Concurrent transactions do not see each other's uncommitted changes (degree depends on isolation level) | Two users updating the same row don't see each other's intermediate state                          |
+| **Durability**  | Once committed, the changes survive system crashes, power failures, etc.                                | Committed data is written to the transaction log on disk before acknowledgment                     |
 
 ---
 
@@ -62,6 +62,25 @@ Every `DbCommand` executed within a transaction ==must have its `Transaction` pr
 
 Forgetting this throws: `"Execute requires the command to have a transaction when the connection assigned to the command is in a pending local transaction."`
 ```
+
+### Why the Command Holds the Transaction (Not the Other Way Around)
+
+A transaction can span **multiple commands**, and you often need the **result of one command to build the next**:
+
+```csharp
+cmd1.Transaction = tx;
+cmd1.CommandText = "INSERT INTO Orders (...) VALUES (...); SELECT SCOPE_IDENTITY()";
+int orderId = (int)(decimal)cmd1.ExecuteScalar();  // need this value NOW
+
+cmd2.Transaction = tx;
+cmd2.CommandText = "INSERT INTO OrderItems (...) VALUES (@OrderId, ...)";
+cmd2.Parameters.AddWithValue("@OrderId", orderId);  // use it here
+cmd2.ExecuteNonQuery();
+
+tx.Commit();
+```
+
+If the transaction held the commands and executed them all at once, you'd have no way to get `orderId` before building `cmd2`. The current design lets you execute commands **one by one** within the transaction, use results as you go, and commit or rollback at the end.
 
 ---
 
@@ -156,7 +175,6 @@ Snapshot isolation uses **row versioning** in `tempdb` -- the database stores pr
 ALTER DATABASE MyDatabase SET ALLOW_SNAPSHOT_ISOLATION ON;
 ```
 This incurs additional `tempdb` overhead because every modified row has its previous version stored there.
-```
 
 ---
 

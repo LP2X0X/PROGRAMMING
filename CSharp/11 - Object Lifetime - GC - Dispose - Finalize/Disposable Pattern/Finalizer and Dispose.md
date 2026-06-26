@@ -42,14 +42,68 @@ GC handles memory. Dispose handles resources. A managed resource is just a manag
 
 ## Why the Finalizer Can't Touch Managed Objects
 
-Finalization order is **not guaranteed**. When your finalizer runs, any managed object your class references might already be finalized, collected, or in a corrupt state. Unmanaged resources (raw handles, `IntPtr`) are just numbers — they don't depend on the GC and are always safe to release.
+The GC **does not guarantee finalization order**. When the GC discovers that multiple objects are unreachable, it puts all of them on the finalization queue and processes them in **arbitrary order**. Your finalizer has no way to know whether the managed objects it references have already been finalized or not.
+
+### The Problem — Step by Step
+
+```csharp
+class MyClass : IDisposable
+{
+    private FileStream _stream;     // managed object (wraps an OS file handle)
+    private IntPtr _nativeHandle;   // unmanaged resource (just a number)
+
+    ~MyClass()
+    {
+        _stream.Dispose();                   // DANGEROUS
+        NativeMethods.Close(_nativeHandle);  // SAFE
+    }
+}
+```
+
+Here's what can happen at runtime:
+
+```
+1. GC finds both MyClass and FileStream are unreachable
+2. GC puts BOTH on the finalization queue
+3. GC finalizes FileStream FIRST (random order)
+   → FileStream's finalizer closes its internal OS handle
+   → FileStream's internal state is now invalid (handle = 0, buffer = null)
+4. GC finalizes MyClass
+   → _stream.Dispose() — calling a method on a zombie object
+   → ObjectDisposedException or NullReferenceException or corrupted state
+```
+
+### Why Unmanaged Resources Are Safe
+
+The GC is in charge of **three things**: managed memory, managed objects, and **finalization scheduling**. It discovers unreachable finalizable objects, puts them on the finalization queue, and runs the finalizer thread. But there's a critical gap — the GC doesn't know **what** an unmanaged resource is or **how** to release it. An `IntPtr` is just a number to the GC. It can't finalize a file handle. It can't close a socket. Your finalizer code is the only thing that knows how.
+
+That's exactly why unmanaged resources are safe to touch in a finalizer — the GC never touches them, so they're always in the same state you left them:
+
+```
+GC controls:                         GC does NOT control:
+──────────────────────               ───────────────────────────
+FileStream object (memory)           The OS file handle inside it
+FileStream finalization (scheduling) How to release that handle
+SqlConnection object (memory)        The native socket inside it
+```
+
+The GC can finalize the **managed wrapper** (the `FileStream` object) in any order. But the **raw handle** (`IntPtr`) inside it is just a number sitting in memory — the GC doesn't destroy it, move it, or zero it out. It stays valid until **your code** calls the OS to release it.
+
+### The Rule
+
+- **Managed objects** → the GC controls their lifetime AND finalization order → another object's finalizer may have already corrupted them → **don't touch** in your finalizer
+- **Unmanaged resources** → the GC controls **nothing** about them → they stay exactly as you left them → the finalizer is your **last chance** to release them
 
 ```csharp
 ~MyClass()
 {
-    _connection.Dispose();               // DANGEROUS — might already be finalized
-    NativeMethods.Close(_nativeHandle);  // SAFE — just a raw handle, always valid
+    // _stream?.Dispose();              // NO — managed, might be dead
+    NativeMethods.Close(_nativeHandle); // YES — unmanaged, always valid
 }
+```
+
+```ad-note
+"Cleaning managed resources" in `Dispose()` means calling `.Dispose()` on other `IDisposable` objects you hold. It's a chain: your `Dispose()` calls their `Dispose()`, which eventually reaches the object that holds the raw handle and releases it. The finalizer skips this chain because the intermediate objects may be dead.
 ```
 
 ## The Combined Pattern
