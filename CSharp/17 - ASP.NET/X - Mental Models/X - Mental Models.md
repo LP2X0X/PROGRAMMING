@@ -1,9 +1,11 @@
 # X - Mental Models Overview
- 
+
 ```ccard
 type: folder_brief_live
 ```
- 
+
 ---
 
-%% Wawypoint %%
+%% Begin Waypoint %%
+
+%% End Waypoint %%
