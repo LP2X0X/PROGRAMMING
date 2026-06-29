@@ -139,6 +139,9 @@ Understanding the internal mechanism is essential for debugging. Here is what ha
 7. The re-executed pipeline hits the error controller/endpoint, which renders the error page
 8. If the error handler itself throws, the middleware catches that too and returns a plain-text response
 
+> [!ad-note] Why Re-Execute Instead of Writing the Error Directly?
+> When your code throws, the response may already be ==partially written== — some headers may have been sent, some data may have been flushed to the response body. At that point, the response is in a ==corrupted state== and you cannot reliably write a clean JSON or HTML error body on top of it. By **clearing the response** (step 3) and **re-executing the pipeline with a new path** (step 6), the exception handler creates a ==clean slate==. The second pass goes through the full pipeline — DI, serialization, content negotiation — and produces a proper, well-formatted error response as if it were a normal request.
+
 ```csharp
 // The error controller that handles re-executed requests
 public class HomeController : Controller

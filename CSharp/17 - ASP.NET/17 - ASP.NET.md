@@ -17,5 +17,7 @@ type: folder_brief_live
 - **[[17.08 - Web APIs]]**
 - **[[17.09 - Authentication and Authorization]]**
 - **[[17.10 - Error Handling and Logging]]**
+- **[[X - Mental Models]]**
+	- [[Minimal API]]
 
 %% End Waypoint %%

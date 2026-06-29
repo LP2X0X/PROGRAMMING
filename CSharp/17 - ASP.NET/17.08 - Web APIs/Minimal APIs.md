@@ -899,6 +899,28 @@ app.MapCategoryEndpoints();
 
 **Endpoint filters** (.NET 7+) are the minimal API equivalent of MVC action filters. They run before and after the endpoint handler, allowing you to add cross-cutting concerns like logging, validation, authorization, and transformation.
 
+### Similarities with Middleware
+
+Endpoint filters and [[Middleware Overview|middleware]] share the same core pattern:
+
+- Both use a ==before/after== model around a `next()` call — code above `next()` runs before, code below runs after
+- Both can ==short-circuit== by returning a response without calling `next()`, skipping everything downstream
+- Both are suited for ==cross-cutting concerns== like logging, validation, and error handling
+
+### Key Differences from Middleware
+
+Despite the similarities, endpoint filters and middleware operate at different levels:
+
+| | Middleware | Endpoint Filters |
+|---|---|---|
+| **Scope** | Runs for ==all requests== (static files, non-endpoint requests, everything) | Runs ==only for requests that reach the endpoint== |
+| **Access to endpoint details** | Sees only the final HTTP response (status code, headers, body) | Has access to the ==endpoint's return value== (e.g. the `IResult` object) before it becomes an HTTP response |
+| **Targeting** | Applies globally to the entire pipeline by default | Can easily target a ==single endpoint or route group== |
+
+> [!ad-tip] When to Use Which
+> - Use **middleware** for concerns that apply to ==every request==: logging, CORS, exception handling, HTTPS redirection
+> - Use **endpoint filters** for concerns specific to ==your API endpoints==: input validation, request/response transformation, per-endpoint authorization checks
+
 ### Basic Endpoint Filter
 
 ```csharp

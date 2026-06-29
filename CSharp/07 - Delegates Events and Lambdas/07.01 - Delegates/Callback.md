@@ -69,7 +69,39 @@ public class Program
 
 ### Considerations
 
-- **Callback Hell**: Too many nested callbacks can lead to complex and hard-to-maintain code. Techniques like promises (in JavaScript) or async/await (in C#) can mitigate this issue.
+- **Callback Hell**: Too many nested callbacks create a ==pyramid of deeply indented code== that is hard to read, maintain, and debug:
+
+```csharp
+// Callback hell — each async step nests inside the previous one
+GetUser(userId, user =>
+{
+    GetOrders(user.Id, orders =>
+    {
+        GetOrderDetails(orders[0].Id, details =>
+        {
+            GetShippingInfo(details.ShippingId, shipping =>
+            {
+                // 4 levels deep just to get shipping info
+                Console.WriteLine(shipping.TrackingNumber);
+            });
+        });
+    });
+});
+```
+
+`async/await` solves this by letting asynchronous code read ==flat and sequential==, even though it's still non-blocking underneath:
+
+```csharp
+// Same logic, flattened with async/await
+var user = await GetUserAsync(userId);
+var orders = await GetOrdersAsync(user.Id);
+var details = await GetOrderDetailsAsync(orders[0].Id);
+var shipping = await GetShippingInfoAsync(details.ShippingId);
+Console.WriteLine(shipping.TrackingNumber);
+```
+
+Error handling also improves — instead of passing error callbacks at every level, you use a normal `try/catch` around the entire chain. See [[A First Look at the C# async and await Keywords]] for the full async/await pattern.
+
 - **Error Handling**: Ensure proper error handling mechanisms are in place, as errors in callbacks can propagate unexpectedly.
 
 ### Conclusion
