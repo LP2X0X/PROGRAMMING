@@ -7,8 +7,8 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[align-items]]
-- [[justify-content]]
+- **[[Cross Axis]]**
+- **[[Main Axis]]**
 - [[place-items]]
 
 %% End Waypoint %%

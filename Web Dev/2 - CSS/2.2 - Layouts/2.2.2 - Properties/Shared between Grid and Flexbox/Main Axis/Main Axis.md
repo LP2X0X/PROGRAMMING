@@ -1,4 +1,4 @@
-# Cross Axis Overview
+# Main Axis Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,6 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[align-self]]
+- [[justify-content]]
 
 %% End Waypoint %%

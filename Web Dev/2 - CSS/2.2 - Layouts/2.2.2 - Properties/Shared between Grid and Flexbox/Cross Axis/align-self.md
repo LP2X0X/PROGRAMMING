@@ -2,7 +2,6 @@
 tags: 
   - css
   - property
-  - flex
   - item
   - fundamental
 ---
@@ -72,10 +71,10 @@ align-self: auto | flex-start | flex-end | center | baseline | stretch;
 
 # **📊 Quick Comparison: align-items vs align-self**
 
-|**Property**|**Scope**|**Affects**|
-|---|---|---|
-|align-items|Container-level|All flex/grid items (unless overridden)|
-|align-self|Item-level|One specific flex/grid item|
+| **Property** | **Scope**       | **Affects**                             |
+| ------------ | --------------- | --------------------------------------- |
+| align-items  | Container-level | All flex/grid items (unless overridden) |
+| align-self   | Item-level      | One specific flex/grid item             |
 
 ---
 

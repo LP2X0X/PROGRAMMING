@@ -71,13 +71,13 @@ Index | Dependencies | Cached Function
 
 ## ⚡ 4. Analogy with useMemo
 
-|Concept|`useMemo`|`useCallback`|
-|---|---|---|
-|Purpose|Cache a computed **value**|Cache a **function**|
-|Returns|The result of a function|The function itself|
-|Prevents|Recomputing expensive values|Re-creating function references|
-|Syntax|`useMemo(() => compute(), [deps])`|`useCallback(() => fn(), [deps])`|
-|Internally same as|✅|`useMemo(() => fn, [deps])`|
+| Concept            | `useMemo`                          | `useCallback`                     |
+| ------------------ | ---------------------------------- | --------------------------------- |
+| Purpose            | Cache a computed **value**         | Cache a **function**              |
+| Returns            | The result of a function           | The function itself               |
+| Prevents           | Recomputing expensive values       | Re-creating function references   |
+| Syntax             | `useMemo(() => compute(), [deps])` | `useCallback(() => fn(), [deps])` |
+| Internally same as | ✅                                 | `useMemo(() => fn, [deps])`       |
 
 ---
 
@@ -113,12 +113,12 @@ Index | Dependencies | Cached Function
 
 ## 🚫 6. Common Misunderstandings
 
-|Misconception|Reality|
-|---|---|
-|“`useCallback` improves performance automatically.”|❌ It prevents re-renders _only if_ the callback is passed to a memoized component.|
-|“It freezes the function.”|❌ It only reuses the same reference when deps don’t change.|
-|“It’s like `bind`.”|⚠️ No, `bind` permanently ties a function’s `this`. `useCallback` just memoizes a reference.|
-|“It caches the _result_ of the function.”|❌ It caches the _function itself_. Use `useMemo` for results.|
+| Misconception                                       | Reality                                                                                      |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| “`useCallback` improves performance automatically.” | ❌ It prevents re-renders _only if_ the callback is passed to a memoized component.          |
+| “It freezes the function.”                          | ❌ It only reuses the same reference when deps don’t change.                                 |
+| “It’s like `bind`.”                                 | ⚠️ No, `bind` permanently ties a function’s `this`. `useCallback` just memoizes a reference. | 
+| “It caches the _result_ of the function.”           | ❌ It caches the _function itself_. Use `useMemo` for results.                               |
 
 ---
 
@@ -183,11 +183,11 @@ and prevents **new function reference creation**.
 
 ## ⚡ TL;DR Summary Table
 
-|Concept|Description|
-|---|---|
-|Hook type|Referential memoization|
-|Stores|Function reference|
-|Dependency check|Shallow equality|
-|Trigger for new function|Any dependency change|
-|Prevents|Useless child re-renders, effect re-triggers|
-|Implementation shortcut|`useCallback(fn, deps)` ≡ `useMemo(() => fn, deps)`|
+| Concept                  | Description                                         |
+| ------------------------ | --------------------------------------------------- |
+| Hook type                | Referential memoization                             |
+| Stores                   | Function reference                                  |
+| Dependency check         | Shallow equality                                    |
+| Trigger for new function | Any dependency change                               |
+| Prevents                 | Useless child re-renders, effect re-triggers        | 
+| Implementation shortcut  | `useCallback(fn, deps)` ≡ `useMemo(() => fn, deps)` |
