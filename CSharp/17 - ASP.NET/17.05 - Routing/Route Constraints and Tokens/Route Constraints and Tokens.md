@@ -7,14 +7,14 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Built-In Constraints Reference]]
-- [[Combining Constraints]]
-- [[Constraints vs Model Validation]]
-- [[Custom Route Constraints]]
-- [[Optional Parameters with Constraints]]
-- [[Parameter Transformers]]
-- [[Route Constraints and Tokens - Summary and Related Topics]]
-- [[Token Replacement]]
-- [[What Are Route Constraints]]
+- [[01 - What Are Route Constraints]]
+- [[02 - Built-In Constraints Reference]]
+- [[03 - Combining Constraints]]
+- [[04 - Optional Parameters with Constraints]]
+- [[05 - Custom Route Constraints]]
+- [[06 - Constraints vs Model Validation]]
+- [[07 - Token Replacement]]
+- [[08 - Parameter Transformers]]
+- [[09 - Route Constraints and Tokens - Summary and Related Topics]]
 
 %% End Waypoint %%

@@ -61,16 +61,18 @@ graph LR
     F -- No --> H[401/403 Response]
 ```
 
+![[Pasted image 20260630083243.png|center]]
+
 ### Why This Ordering Matters
 
-| Middleware | Must Be | Reason |
-|---|---|---|
-| `UseExceptionHandler` | Before `UseRouting` | Catches exceptions from the entire pipeline |
-| `UseStaticFiles` | Before `UseRouting` | Serves static files without routing overhead |
-| `UseAuthentication` | After `UseRouting`, before `UseAuthorization` | Establishes identity; needs no endpoint info |
-| `UseAuthorization` | After `UseRouting` and `UseAuthentication` | Inspects endpoint's `[Authorize]` metadata |
-| `UseCors` | After `UseRouting` | Inspects endpoint's CORS policy |
-| `UseRateLimiter` | After `UseRouting` | Inspects endpoint's rate limit policy |
+| Middleware            | Must Be                                       | Reason                                       |
+| --------------------- | --------------------------------------------- | -------------------------------------------- |
+| `UseExceptionHandler` | Before `UseRouting`                           | Catches exceptions from the entire pipeline  |
+| `UseStaticFiles`      | Before `UseRouting`                           | Serves static files without routing overhead |
+| `UseAuthentication`   | After `UseRouting`, before `UseAuthorization` | Establishes identity; needs no endpoint info |
+| `UseAuthorization`    | After `UseRouting` and `UseAuthentication`    | Inspects endpoint's `[Authorize]` metadata   |
+| `UseCors`             | After `UseRouting`                            | Inspects endpoint's CORS policy              |
+| `UseRateLimiter`      | After `UseRouting`                            | Inspects endpoint's rate limit policy        |
 
 > [!danger] Critical Warning
 > If `UseAuthorization()` is placed **before** `UseRouting()`, it cannot see the endpoint's authorization metadata. Authorization will either fail silently or apply global-only policies, missing endpoint-specific `[Authorize]` attributes. Always place it after `UseRouting()`.

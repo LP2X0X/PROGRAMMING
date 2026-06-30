@@ -10,6 +10,24 @@ tags:
 
 **`UseRouting`** is responsible for matching incoming HTTP requests to **endpoints** defined in your application (controllers, minimal APIs, Razor Pages, SignalR hubs, gRPC services, etc.). It works in tandem with the **endpoint middleware** that actually executes the matched endpoint.
 
+````ad-note
+By default, `WebApplication` **automatically adds `RoutingMiddleware` at the start** of your pipeline — you don't see it, but it's there.
+
+The problem: if you want something to run **before** routing, you can't, because routing is already first.
+
+```
+Default (implicit):
+  [RoutingMiddleware] → [YourMiddleware] → [EndpointMiddleware]
+                         ↑ too late — routing already happened
+```
+
+The fix: call `UseRouting()` yourself to **take control** of where it sits.
+```csharp
+app.UseStaticFiles();   // runs BEFORE routing
+app.UseRouting();       // now YOU decide where routing goes
+```
+````
+
 ### How Routing Works
 
 The routing system operates in two phases:

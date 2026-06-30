@@ -7,16 +7,16 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Accessing Endpoint Info in Middleware]]
-- [[Endpoint Groups]]
-- [[Endpoint Metadata]]
-- [[Endpoint Routing - Summary and Related Topics]]
-- [[Fallback Endpoints]]
-- [[Health Check Endpoints]]
-- [[Mapping Endpoints]]
-- [[Minimal API Endpoints]]
-- [[Real-World Program.cs Example]]
-- [[The Two-Phase Model]]
-- [[What Is Endpoint Routing]]
+- [[01 - What Is Endpoint Routing]]
+- [[02 - The Two-Phase Model]]
+- [[03 - Mapping Endpoints]]
+- [[04 - Endpoint Metadata]]
+- [[05 - Endpoint Groups]]
+- [[06 - Accessing Endpoint Info in Middleware]]
+- [[07 - Minimal API Endpoints]]
+- [[08 - Fallback Endpoints]]
+- [[09 - Health Check Endpoints]]
+- [[10 - Real-World Program.cs Example]]
+- [[11 - Endpoint Routing - Summary and Related Topics]]
 
 %% End Waypoint %%

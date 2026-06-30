@@ -7,7 +7,7 @@ tags:
 ---
 
 
-**Route constraints** are rules applied to route parameters that determine whether a URL segment is a valid match. They act as a **filter during route matching** -- if a constraint fails, the route is skipped and the routing system tries the next candidate route.
+**Route constraints** are rules applied to [[Route Parameters|route parameters]] that determine whether a URL segment is a valid match. They act as a **filter during route matching** -- if a constraint fails, the route is skipped and the routing system tries the next candidate route.
 
 ### Basic Syntax
 

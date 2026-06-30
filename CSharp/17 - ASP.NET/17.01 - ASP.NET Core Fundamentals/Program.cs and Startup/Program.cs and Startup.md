@@ -7,18 +7,18 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[app.Run — Starting the Application]]
-- [[Common Pitfalls and Debugging]]
-- [[Comprehensive Summary]]
-- [[Historical Context — The Two-File Model]]
-- [[Mapping Endpoints]]
-- [[Real-World Program.cs for an MVC Application]]
-- [[Related Topics]]
-- [[Side-by-Side Comparison — Old vs New]]
-- [[The App Phase — Configuring the Middleware Pipeline]]
-- [[The Builder Phase — Configuring Services]]
-- [[The Modern Minimal Hosting Model (.NET 6+)]]
-- [[Top-Level Statements Explained]]
-- [[WebApplication.CreateBuilder Explained]]
+- [[01 - Historical Context — The Two-File Model]]
+- [[02 - The Modern Minimal Hosting Model (.NET 6+)]]
+- [[03 - Top-Level Statements Explained]]
+- [[04 - Side-by-Side Comparison — Old vs New]]
+- [[05 - WebApplication.CreateBuilder Explained]]
+- [[06 - The Builder Phase — Configuring Services]]
+- [[07 - The App Phase — Configuring the Middleware Pipeline]]
+- [[08 - Mapping Endpoints]]
+- [[09 - app.Run — Starting the Application]]
+- [[10 - Real-World Program.cs for an MVC Application]]
+- [[11 - Common Pitfalls and Debugging]]
+- [[12 - Comprehensive Summary]]
+- [[13 - Related Topics]]
 
 %% End Waypoint %%

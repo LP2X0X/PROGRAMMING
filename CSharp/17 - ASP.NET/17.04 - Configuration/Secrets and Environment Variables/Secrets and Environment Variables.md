@@ -7,14 +7,14 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Cloud Secret Stores (Production)]]
-- [[Environment Variables]]
-- [[Launch Settings and Local Environment]]
-- [[Real-World Workflow]]
-- [[Secrets and Environment Variables - Related Topics]]
-- [[Secrets and Environment Variables - Summary]]
-- [[The Problem -- Secrets in Source Control]]
-- [[User Secrets (Development Only)]]
-- [[What NEVER to Do]]
+- [[01 - The Problem -- Secrets in Source Control]]
+- [[02 - Environment Variables]]
+- [[03 - User Secrets (Development Only)]]
+- [[04 - Launch Settings and Local Environment]]
+- [[05 - Cloud Secret Stores (Production)]]
+- [[06 - What NEVER to Do]]
+- [[07 - Real-World Workflow]]
+- [[08 - Secrets and Environment Variables - Summary]]
+- [[09 - Secrets and Environment Variables - Related Topics]]
 
 %% End Waypoint %%

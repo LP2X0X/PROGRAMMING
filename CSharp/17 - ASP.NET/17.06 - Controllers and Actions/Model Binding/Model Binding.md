@@ -7,18 +7,18 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[ApiController Changes to Default Behavior]]
-- [[Bind and BindNever]]
-- [[Binding Sources (Default Priority Order)]]
-- [[BindProperty and BindProperties]]
-- [[Collection Binding]]
-- [[Complex Type Binding]]
-- [[Custom Model Binders]]
-- [[Explicit Binding Source Attributes]]
-- [[File Upload Binding]]
-- [[Model Binding Real-World Example]]
-- [[Model Binding Summary]]
-- [[Simple Type Binding]]
-- [[What Model Binding Is]]
+- [[01 - What Model Binding Is]]
+- [[02 - Binding Sources (Default Priority Order)]]
+- [[03 - Simple Type Binding]]
+- [[04 - Complex Type Binding]]
+- [[05 - Collection Binding]]
+- [[06 - File Upload Binding]]
+- [[07 - Explicit Binding Source Attributes]]
+- [[08 - Bind and BindNever]]
+- [[09 - BindProperty and BindProperties]]
+- [[10 - Custom Model Binders]]
+- [[11 - ApiController Changes to Default Behavior]]
+- [[12 - Model Binding Real-World Example]]
+- [[13 - Model Binding Summary]]
 
 %% End Waypoint %%

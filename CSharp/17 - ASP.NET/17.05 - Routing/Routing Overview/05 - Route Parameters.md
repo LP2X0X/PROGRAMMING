@@ -9,6 +9,8 @@ tags:
 
 Route parameters work the same way as in controller-based routing, but the binding happens via the handler's method parameters.
 
+![[Pasted image 20260630085302.png|center]]
+
 ### Basic Route Parameters
 
 ```csharp
