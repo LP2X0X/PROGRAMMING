@@ -1,4 +1,4 @@
-# Grid Items Overview
+# Cross Axis Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,7 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[grid-column and grid-row]]
-- [[justify-self]]
+- [[align-items]]
+- [[align-self]]
 
 %% End Waypoint %%

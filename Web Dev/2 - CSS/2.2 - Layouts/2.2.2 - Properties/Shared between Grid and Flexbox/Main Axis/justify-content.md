@@ -2,7 +2,6 @@
 tags:
   - css
   - property
-  - flex
   - container
   - fundamental
 ---

@@ -81,6 +81,11 @@ Every Grid has **lines**:
 grid-column: span 2; /* spans 2 columns from wherever it lands */
 ```
 
+```ad-warning
+**`row-span-*` only works if the grid has _explicit rows_.**  
+Auto-created rows cannot be spanned in the way you expect.
+```
+
 - -1 → last line.
     
 
