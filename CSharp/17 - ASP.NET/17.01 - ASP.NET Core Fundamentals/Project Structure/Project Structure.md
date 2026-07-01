@@ -19,7 +19,7 @@ type: folder_brief_live
 - [[10 - Models Folder]]
 - [[11 - Views Folder (MVC)]]
 - [[12 - Pages Folder (Razor Pages)]]
-- [[Comprehensive Summary]]
-- [[Related Topics]]
+- [[13 - Comprehensive Summary]]
+- [[14 - Related Topics]]
 
 %% End Waypoint %%

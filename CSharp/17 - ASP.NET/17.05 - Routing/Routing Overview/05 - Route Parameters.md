@@ -72,11 +72,17 @@ app.MapGet("/products/{code:length(5)}", (string code) =>
 
 ### Catch-All Parameters
 
+These parameters match the remaining unmatched portion of a URL, including any slashes or other characters that aren’t part of earlier parameters.
+
 ```csharp
 // Catch-all: matches any remaining path segments
 app.MapGet("/files/{*filePath}", (string filePath) =>
     Results.Ok($"File path: {filePath}"));
 // GET /files/images/photo.jpg -> filePath = "images/photo.jpg"
+```
+
+```ad-note
+The one- and two-asterisk versions of the catch-all parameter behave identically when routing an incoming request to an endpoint. The difference occurs only when you’re generating URLs: the one-asterisk version URL encodes forward slashes, and the two-asterisk version doesn’t. Typically, the round-trip behavior of the two-asterisk version is what you want.
 ```
 
 ### Optional Parameters

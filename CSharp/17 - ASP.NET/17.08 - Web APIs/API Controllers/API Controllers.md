@@ -14,6 +14,7 @@ type: folder_brief_live
 - [[05 - RESTful Design and HTTP Verbs]]
 - [[06 - ActionResult and Return Types]]
 - [[07 - Data Transfer Objects (DTOs)]]
+- [[07b - Data Access Objects (DAOs)]]
 - [[08 - Pagination]]
 - [[09 - Filtering and Sorting]]
 - [[10 - API Versioning]]

@@ -89,6 +89,12 @@ curl -X POST https://localhost:5001/products \
   -F "image=@photo.jpg"
 ```
 
+> [!danger] Never Trust the Uploaded Filename
+> `IFormFile` exposes a `FileName` property containing the original filename from the client. **Never use this directly** in your code -- attackers can craft filenames to access files they shouldn't (e.g., path traversal attacks like `../../etc/passwd`). Always generate a new name for the file before saving it anywhere.
+>
+> For more on file upload security threats, see the [Microsoft documentation on file uploads](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-9.0#security-considerations).
+> https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload
+
 > [!warning]
 > Always call `.DisableAntiforgery()` on file upload endpoints intended for API consumers. Without it, the endpoint expects an antiforgery token, which API clients do not provide.
 
