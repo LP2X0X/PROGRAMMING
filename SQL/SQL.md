@@ -20,5 +20,6 @@ type: folder_brief_live
 - [[Learn]]
 - [[LINQPad]]
 - [[Practice]]
+- [[References]]
 
 %% End Waypoint %%

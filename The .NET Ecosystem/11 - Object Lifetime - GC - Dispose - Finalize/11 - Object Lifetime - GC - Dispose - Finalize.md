@@ -25,7 +25,7 @@ type: folder_brief_live
 	- [[Stack Root]]
 - [[Marshal class]]
 - [[Marshalling in C#]]
-- [[CSharp/11 - Object Lifetime - GC - Dispose - Finalize/Mental Model]]
+- [[Mental Model]]
 - [[What Happens If You Forget to Call Dispose on Managed Resources]]
 - [[Why is it perfectly safe to communicate with other managed objects within a Dispose() method]]
 

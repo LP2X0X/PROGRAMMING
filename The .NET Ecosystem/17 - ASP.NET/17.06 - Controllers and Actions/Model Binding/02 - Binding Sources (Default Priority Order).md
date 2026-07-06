@@ -7,6 +7,24 @@ tags:
 ---
 
 
+### Minimal API Binding Order
+
+When the Minimal API infrastructure tries to bind a parameter, it checks the following binding sources in order. The first source that matches is the one it uses:
+
+1. **Explicit attribute** -- if the parameter defines an explicit binding source using attributes such as `[FromRoute]`, `[FromQuery]`, or `[FromBody]`, the parameter binds to that part of the request.
+2. **Well-known types** -- if the parameter is a well-known type such as `HttpContext`, `HttpRequest`, `Stream`, or `IFormFile`, the parameter is bound to the corresponding value.
+3. **`BindAsync()` method** -- if the parameter type has a `BindAsync()` method, that method is used for binding.
+4. **Simple types (string or TryParse-able)**:
+   - If the parameter name matches a route parameter name, bind to the **route value**.
+   - Otherwise, bind to the **query string**.
+5. **Arrays of simple types** -- if the parameter is an array of simple types, a `string[]`, or `StringValues`, and the request is a GET or similar HTTP verb that normally doesn't have a request body, bind to the **query string**.
+6. **DI services** -- if the parameter is a known service type from the dependency injection container, bind by **injecting the service** from the container.
+7. **Body (JSON)** -- finally, bind to the **body** by deserializing from JSON.
+
+---
+
+### MVC Controller Binding Order
+
 Model binding searches for values in a specific order. When a parameter name matches a value in multiple sources, the **first source that produces a match wins**.
 
 The default priority order for non-`[ApiController]` controllers is:

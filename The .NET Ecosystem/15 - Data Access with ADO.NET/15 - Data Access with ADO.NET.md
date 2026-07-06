@@ -11,6 +11,6 @@ type: folder_brief_live
 - **[[15.02 - Connected Layer]]**
 - **[[15.03 - Disconnected Layer]]**
 - [[Database and Server Mental Model]]
-- [[CSharp/15 - Data Access with ADO.NET/Mental Model]]
+- [[Mental Model]]
 
 %% End Waypoint %%
