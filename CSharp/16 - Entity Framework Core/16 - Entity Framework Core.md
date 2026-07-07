@@ -13,6 +13,5 @@ type: folder_brief_live
 - **[[16.04 - Conventions]]**
 - **[[16.05 - Data Annotations]]**
 - **[[16.06 - Fluent API]]**
-- [[Mental Model]]
 
 %% End Waypoint %%
