@@ -32,7 +32,7 @@ tags:
 - [[Request Pipeline]] -- middleware ordering, branching with `Map`, and terminal middleware
 - [[Built-in Middleware]] -- authentication, CORS, static files, response compression
 - [[Service Lifetimes]] -- singleton, scoped, transient and how they interact with middleware
-- [[DI Overview]] -- the ASP.NET Core dependency injection container
+- [[The .NET Ecosystem/17 - ASP.NET/17.03 - Dependency Injection/DI Overview/DI Overview]] -- the ASP.NET Core dependency injection container
 - [[Error Handling and Logging]] -- structured logging, exception pages, ProblemDetails
 
 ## Further Reading

@@ -13,7 +13,7 @@ tags:
 > ASP.NET Core provides a **built-in logging abstraction** (`ILogger<T>`) that decouples your application code from any specific logging framework. You write log statements against the abstraction, and the actual destination (console, file, Elasticsearch, Application Insights) is determined by configuration -- not by changing your code.
 
 
-ASP.NET Core includes a logging system in the `Microsoft.Extensions.Logging` namespace. The central interface is **`ILogger<T>`**, which you inject via [[DI Overview|dependency injection]] everywhere you need to log.
+ASP.NET Core includes a logging system in the `Microsoft.Extensions.Logging` namespace. The central interface is **`ILogger<T>`**, which you inject via [[The .NET Ecosystem/17 - ASP.NET/17.03 - Dependency Injection/DI Overview/DI Overview|dependency injection]] everywhere you need to log.
 
 ```csharp
 public class OrderService

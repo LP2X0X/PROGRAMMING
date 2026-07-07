@@ -35,7 +35,7 @@ tags:
 
 ## Related Topics
 
-- [[DI Overview]] -- Fundamentals of dependency injection in ASP.NET Core
+- [[The .NET Ecosystem/17 - ASP.NET/17.03 - Dependency Injection/DI Overview/DI Overview]] -- Fundamentals of dependency injection in ASP.NET Core
 - [[Service Lifetimes]] -- Transient, Scoped, and Singleton lifetime behavior in detail
 - [[Registration Patterns]] -- How to register services (AddTransient, AddScoped, AddSingleton, factory delegates, assembly scanning)
 - [[IHostedService and Background Services]] -- Background services where captive dependency and scoping pitfalls are most common

@@ -86,7 +86,7 @@ public class DailyReportMiddleware
 ```
 
 > [!ad-note]
-> Convention-based middleware classes have their **constructor** called once (like a Singleton), but their `InvokeAsync` method is called per request. ASP.NET Core resolves the method parameters from the request scope, making it safe to accept Scoped services as method parameters but NOT as constructor parameters. See [[DI Overview]] for more on middleware DI.
+> Convention-based middleware classes have their **constructor** called once (like a Singleton), but their `InvokeAsync` method is called per request. ASP.NET Core resolves the method parameters from the request scope, making it safe to accept Scoped services as method parameters but NOT as constructor parameters. See [[The .NET Ecosystem/17 - ASP.NET/17.03 - Dependency Injection/DI Overview/DI Overview]] for more on middleware DI.
 
 > [!summary] Section Summary
 > - `app.Services` is the root `IServiceProvider` -- resolving Scoped services from it creates a root-scoped instance that never disposes

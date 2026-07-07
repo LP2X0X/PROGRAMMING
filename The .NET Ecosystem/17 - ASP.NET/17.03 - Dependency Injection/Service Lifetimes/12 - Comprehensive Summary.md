@@ -31,7 +31,7 @@ tags:
 
 ## Related Topics
 
-- [[DI Overview]] -- fundamentals of dependency injection in ASP.NET Core
+- [[The .NET Ecosystem/17 - ASP.NET/17.03 - Dependency Injection/DI Overview/DI Overview]] -- fundamentals of dependency injection in ASP.NET Core
 - [[Registration Patterns]] -- `Add*` methods, factory registrations, keyed services, open generics
 - [[Common DI Pitfalls]] -- anti-patterns including service locator, captive dependencies, and disposal mistakes
 - [[Entity Framework Core]] -- DbContext configuration and lifetime management

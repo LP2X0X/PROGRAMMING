@@ -35,7 +35,7 @@ tags:
 
 ## Related Topics
 
-- [[DI Overview]] -- foundational concepts of dependency injection in ASP.NET Core
+- [[The .NET Ecosystem/17 - ASP.NET/17.03 - Dependency Injection/DI Overview/DI Overview]] -- foundational concepts of dependency injection in ASP.NET Core
 - [[Service Lifetimes]] -- transient vs scoped vs singleton in depth
 - [[Common DI Pitfalls]] -- captive dependencies, scope validation, and other traps
 - [[Options Pattern]] -- deeper dive into `IOptions<T>` and related interfaces
