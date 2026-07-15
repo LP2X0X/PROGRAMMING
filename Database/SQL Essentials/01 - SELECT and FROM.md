@@ -40,6 +40,10 @@ SELECT * FROM employees;
   - The query optimizer can't take advantage of covering indexes.
   - It makes the query harder to read — the reader has to check the schema to know what columns come back.
 
+```ad-note
+The from clause defines the tables used by a query, along with the means of linking the tables together.
+```
+
 ```ad-important
 Use `SELECT *` in ad-hoc exploration. In application code, stored procedures, or views, **always list the columns explicitly**.
 ```
