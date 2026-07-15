@@ -16,7 +16,7 @@ SELECT column1, column2 FROM table_name;
 
 ---
 
-### Column Aliases
+### [[Column Alias|Column Aliases]]
 
 - Use `AS` to rename a column in the result:
 ```sql
@@ -34,6 +34,10 @@ FROM employees;
 SELECT DISTINCT department FROM employees;
 ```
 - `DISTINCT` applies to the **entire row**, not just one column. `SELECT DISTINCT a, b` returns unique combinations of `a` and `b`.
+
+```ad-warning
+Generating a distinct set of results requires the data to be sorted, which can be time consuming for large [[Result Set|result sets]]. Don't use `DISTINCT` just to be safe — take the time to understand your data so you know whether duplicates are actually possible.
+```
 
 ---
 

@@ -8,7 +8,7 @@ tags: [sql, set-operations, advanced]
 
 ### INTERSECT
 
-- Returns only rows that appear in **both** result sets:
+- Returns only rows that appear in **both** [[Result Set|result sets]]:
 ```sql
 SELECT customer_id FROM orders_2023
 INTERSECT

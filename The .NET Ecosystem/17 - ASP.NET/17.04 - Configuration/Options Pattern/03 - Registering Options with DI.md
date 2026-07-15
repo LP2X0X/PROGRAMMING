@@ -27,6 +27,15 @@ When you call `services.Configure<SmtpSettings>(section)`:
 2. When these interfaces are resolved, the framework reads the configuration section and binds it to a new `SmtpSettings` instance
 3. All three interfaces are available from a single `Configure<T>` call
 
+Each call to `Configure<T>` sets up the following series of actions internally:
+
+1. Creates an instance of `ConfigureOptions<T>`, which indicates that `IOptions<T>` should be configured based on configuration. If `Configure<T>` is called multiple times, multiple `ConfigureOptions<T>` objects will be used, all of which can be applied to create the final object — in much the same way that `IConfiguration` is built from multiple layers.
+2. Each `ConfigureOptions<T>` instance binds a section of `IConfiguration` to an instance of the `T` POCO class, setting any public properties on the options class based on the keys in the provided `ConfigurationSection`.
+3. The `IOptions<T>` interface is registered in the DI container as a **singleton**, with the final bound POCO object in the `Value` property.
+
+> [!note]
+> The section name can have any value — it does not have to match the name of your options class. The binding is based on the key-property name matching within the section, not the section name itself.
+
 ### Alternative: Bind and Get Immediately
 
 Sometimes you need the options value in `Program.cs` itself (before the DI container is built):

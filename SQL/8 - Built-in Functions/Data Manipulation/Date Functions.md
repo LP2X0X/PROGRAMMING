@@ -89,6 +89,29 @@ SELECT CONVERT(VARCHAR, hire_date, 23) FROM employees;  -- ISO format
 
 ---
 
+### MySQL Format Specifiers
+
+| Specifier | Description                          | Example Output     |
+| --------- | ------------------------------------ | ------------------ |
+| `%a`      | Short weekday name                   | Sun, Mon           |
+| `%W`      | Full weekday name                    | Sunday, Monday     |
+| `%w`      | Numeric day of week (0=Sun..6=Sat)   | 0, 1, 6            |
+| `%b`      | Short month name                     | Jan, Feb           |
+| `%M`      | Full month name                      | January, February  |
+| `%m`      | Numeric month (00..12)               | 01, 12             |
+| `%c`      | Numeric month, no padding (0..12)    | 1, 12              |
+| `%d`      | Day of month (00..31)                | 01, 15             |
+| `%j`      | Day of year (001..366)               | 042, 365           |
+| `%Y`      | Four-digit year                      | 2024               |
+| `%H`      | Hour, 24-hour format (00..23)        | 00, 14             |
+| `%h`      | Hour, 12-hour format (01..12)        | 01, 12             |
+| `%i`      | Minutes (00..59)                     | 05, 45             |
+| `%s`      | Seconds (00..59)                     | 08, 59             |
+| `%f`      | Microseconds (000000..999999)        | 000000, 123456     |
+| `%p`      | AM or PM                             | AM, PM             |
+
+---
+
 ### String to Date
 
 ```sql

@@ -82,5 +82,5 @@ WHERE active = TRUE         -- boolean
 ```
 
 ```ad-note
-`WHERE` is evaluated **before** `SELECT`, which means you cannot filter on a column alias defined in `SELECT`. Use [[HAVING]] for filtering after aggregation, or wrap in a subquery. See [[SQL Syntax Basics]] for the full execution order.
+`WHERE` is evaluated **before** `SELECT`, which means you cannot filter on a [[Column Alias|column alias]] defined in `SELECT`. Use [[HAVING]] for filtering after aggregation, or wrap in a subquery. See [[SQL Syntax Basics]] for the full execution order.
 ```

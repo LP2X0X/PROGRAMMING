@@ -55,6 +55,9 @@ public class OrderSummaryViewModel
 }
 ```
 
+> [!ad-note] Way to Think About It
+> A view model is to the domain model what a database view is to the underlying tables — a **projection** shaped for a specific screen. It filters, flattens, and reshapes the source data without changing it.
+
 > [!tip] Models vs ViewModels vs DTOs
 > - **Model / Entity** -- represents a database table or domain concept (e.g., `Order`, `Product`)
 > - **ViewModel** -- shaped specifically for a view; may combine data from multiple entities

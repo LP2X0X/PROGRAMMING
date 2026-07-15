@@ -58,5 +58,5 @@ SELECT first_name, last_name FROM employees WHERE age > 30;
   8. `LIMIT` / `OFFSET`
 
 ```ad-note
-This is why you cannot use a column alias defined in `SELECT` inside a `WHERE` clause — `WHERE` is evaluated before `SELECT`.
+This is why you cannot use a [[Column Alias|column alias]] defined in `SELECT` inside a `WHERE` clause — `WHERE` is evaluated before `SELECT`.
 ```

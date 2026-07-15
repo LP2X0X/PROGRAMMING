@@ -80,7 +80,7 @@ SELECT
 FROM employees;
 ```
 
-- `OVER ()` (empty) = entire result set as one partition.
+- `OVER ()` (empty) = entire [[Result Set|result set]] as one partition.
 - `OVER (PARTITION BY department)` = within each department.
 
 ---

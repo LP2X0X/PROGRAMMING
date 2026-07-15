@@ -2,7 +2,7 @@
 tags: [sql, subqueries, advanced]
 ---
 
-- A **Common Table Expression (CTE)** is a named temporary result set defined with the `WITH` keyword. It exists only for the duration of the query.
+- A **Common Table Expression (CTE)** is a named temporary [[Result Set|result set]] defined with the `WITH` keyword. It exists only for the duration of the query.
 
 ---
 

@@ -35,6 +35,9 @@ The two files together form a self-contained unit that handles requests and rend
 
 Razor Pages was introduced in ASP.NET Core 2.0. It is not a replacement for MVC -- both coexist in the same application. In fact, Razor Pages runs on top of the MVC infrastructure (routing, model binding, filters, etc.).
 
+> [!ad-note] Razor Pages Through the MVC Lens
+> A Razor Page is loosely the **view**, the page handler is the **controller**, and what the handler builds and passes to the page is the **view model**. Razor Pages just collapses the MVC triad into two files instead of three separate folders.
+
 > [!ad-note] Not Razor Components
 > Do not confuse **Razor Pages** (server-rendered, page-focused MVC) with **Razor Components** (Blazor's interactive component model). They share [[Razor Syntax]] but serve very different purposes.
 

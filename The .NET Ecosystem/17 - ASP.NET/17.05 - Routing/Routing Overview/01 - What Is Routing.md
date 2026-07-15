@@ -31,6 +31,14 @@ Without routing, you would have to write manual URL parsing logic in every appli
 - **Centralized configuration** -- all URL-to-handler mappings are visible in one place
 - **Middleware integration** -- authorization, CORS, and rate limiting can inspect the selected endpoint before it executes
 
+### Routing Styles Comparison
+
+| Routing Style | Typical Use | Advantages | Disadvantages |
+|---|---|---|---|
+| **Convention-based routes** | HTML-generating MVC controllers | Terse definition in one location. Forces a consistent layout of MVC controllers. | Routes are defined in a different place from your controllers. Overriding conventions can be tricky and error-prone. Adds an extra layer of indirection when routing a request. |
+| **Explicit routes** (attribute/minimal API) | Minimal API endpoints, Web API MVC controllers | Gives complete control of route templates for every endpoint. Routes are defined next to the endpoint they execute. | Verbose compared with convention-based routing. Can be easy to overcustomize route templates. Route templates may be scattered throughout your application. |
+| **Convention-based generation of explicit routes** | Razor Pages | Encourages consistent set of exposed URLs. Terse when you stick to conventions. Easily override the route template for a single page. Customize conventions globally to change exposed URLs. | Possible to overcustomize route templates. You must calculate what the route template for a page is, rather than its being explicitly defined in your app. |
+
 > [!summary] Section Summary
 > - Routing matches HTTP requests to endpoint handlers based on URL patterns.
 > - Endpoints include controller actions, Razor Pages, minimal APIs, gRPC, SignalR, and more.

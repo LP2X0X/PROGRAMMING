@@ -82,7 +82,7 @@ DELIMITER ;
 
 | Feature                | Stored Procedure              | Function                        |
 | ---------------------- | ----------------------------- | ------------------------------- |
-| Returns                | Results via OUT params or result sets | A single value              |
+| Returns                | Results via OUT params or [[Result Set|result sets]] | A single value              |
 | Usable in SELECT       | No                            | Yes (`SELECT my_func(col)`)     |
 | Can modify data        | Yes                           | Depends on RDBMS (MySQL: yes, PostgreSQL: no for SQL functions) |
 | Called with             | `CALL proc_name()`            | Used in expressions             |

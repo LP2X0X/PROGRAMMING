@@ -2,7 +2,7 @@
 tags: [sql, dml, reading-data]
 ---
 
-- `ORDER BY` sorts the result set. Without it, the order of rows is **not guaranteed** — the database can return rows in any order.
+- `ORDER BY` sorts the [[Result Set|result set]]. Without it, the order of rows is **not guaranteed** — the database can return rows in any order.
 
 ---
 
@@ -54,7 +54,7 @@ ORDER BY annual_salary DESC;
 ORDER BY salary * 12 DESC;
 ```
 
-- `ORDER BY` is evaluated **after** `SELECT`, so it can reference column aliases. See [[SQL Syntax Basics]] for execution order.
+- `ORDER BY` is evaluated **after** `SELECT`, so it can reference [[Column Alias|column aliases]]. See [[SQL Syntax Basics]] for execution order.
 
 ---
 

@@ -55,5 +55,5 @@ CROSS JOIN products p;
 ```
 
 ```ad-warning
-Cross joins can produce **very large result sets**. A cross join of two 1,000-row tables produces 1,000,000 rows. Always be aware of the table sizes before using `CROSS JOIN`.
+Cross joins can produce **very large [[Result Set|result sets]]**. A cross join of two 1,000-row tables produces 1,000,000 rows. Always be aware of the table sizes before using `CROSS JOIN`.
 ```
