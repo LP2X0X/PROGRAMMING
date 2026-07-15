@@ -69,7 +69,7 @@ FROM employees e;
 ```
 
 ```ad-warning
-Scalar subqueries in `SELECT` run once per row of the outer query. For large result sets this can be very slow. Consider using [[Common Table Expressions]] or [[INNER JOIN]] instead.
+Scalar subqueries in `SELECT` run once per row of the outer query. For large [[Result Set|result sets]] this can be very slow. Consider using [[Common Table Expressions]] or [[INNER JOIN]] instead.
 ```
 
 ---

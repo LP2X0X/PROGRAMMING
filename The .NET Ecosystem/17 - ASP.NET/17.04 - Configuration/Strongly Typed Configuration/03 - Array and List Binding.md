@@ -98,5 +98,31 @@ public class FeatureFlagSettings
 }
 ```
 
+### Binder Collection Auto-Creation
+
+If a collection property is already initialized, the binder uses the initialized value. Otherwise, the binder can create the collection instance automatically. For properties implementing any of the following interfaces, the binder creates a `List<>` of the appropriate type as the backing object:
+
+- `IReadOnlyList<>`
+- `IReadOnlyCollection<>`
+- `ICollection<>`
+- `IEnumerable<>`
+
+> [!warning]
+> You cannot bind to an `IEnumerable<>` property that has already been initialized, because this interface does not expose an `Add` method and the binder will not replace the backing value. You can bind to `IEnumerable<>` only if you leave its initial value `null`.
+
+Similarly, the binder creates a `Dictionary<,>` as the backing field for properties with dictionary interfaces, as long as they use `string`, `enum`, or integer (`int`, `short`, `byte`, etc.) keys:
+
+- `IDictionary<,>`
+- `IReadOnlyDictionary<,>`
+
+### Properties the Binder Cannot Bind
+
+The binder cannot bind:
+
+- **Nonpublic properties** — only public properties are discovered
+- **Set-only properties** — must have a getter
+- **Read-only properties with null values** — needs a setter or a pre-initialized value
+- **Indexer properties** — `this[int index]` style properties are ignored
+
 > [!summary] Section Summary
-> JSON arrays bind to `List<T>`, `T[]`, or any `IEnumerable<T>` implementation. Dictionaries bind to `Dictionary<string, T>`. Initialize collections to avoid null references.
+> JSON arrays bind to `List<T>`, `T[]`, or any `IEnumerable<T>` implementation. Dictionaries bind to `Dictionary<string, T>`. The binder auto-creates `List<>` or `Dictionary<,>` for interface-typed properties. It cannot bind nonpublic, set-only, null-read-only, or indexer properties. Leave `IEnumerable<>` properties as `null` for binding to work.

@@ -31,7 +31,7 @@ function_name() OVER (
 )
 ```
 
-- **PARTITION BY**: divides rows into groups (like GROUP BY, but without collapsing). If omitted, the entire result set is one partition.
+- **PARTITION BY**: divides rows into groups (like GROUP BY, but without collapsing). If omitted, the entire [[Result Set|result set]] is one partition.
 - **ORDER BY**: defines the order of rows within each partition. Required for ranking and cumulative functions.
 - **Frame clause**: defines the "window" of rows relative to the current row (e.g., `ROWS BETWEEN 3 PRECEDING AND CURRENT ROW`).
 

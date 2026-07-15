@@ -2,7 +2,7 @@
 tags: [sql, set-operations, advanced]
 ---
 
-- `UNION` combines the results of two or more `SELECT` statements into a single result set.
+- `UNION` combines the results of two or more `SELECT` statements into a single [[Result Set|result set]].
 
 ---
 
@@ -29,7 +29,7 @@ SELECT city FROM suppliers;
 - Returns all cities, including duplicates. **Faster** than `UNION` because it skips the deduplication step.
 
 ```ad-tip
-Prefer `UNION ALL` unless you specifically need deduplication. `UNION` has to sort and compare all rows to remove duplicates, which is expensive on large result sets.
+Prefer `UNION ALL` unless you specifically need deduplication. `UNION` has to sort and compare all rows to remove duplicates, which is expensive on large [[Result Set|result sets]].
 ```
 
 ---

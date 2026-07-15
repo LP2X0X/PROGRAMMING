@@ -19,6 +19,7 @@ type: folder_brief_live
 - **[[Fundamental]]**
 - [[Learn]]
 - [[LINQPad]]
+- **[[Miscellaneous]]**
 - [[Practice]]
 - [[References]]
 

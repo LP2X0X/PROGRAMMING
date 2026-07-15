@@ -6,6 +6,18 @@ tags: [sql, performance, query-analysis]
 
 ---
 
+### Query Execution Pipeline
+
+Before a query is executed, the server runs three checks in order:
+
+1. **Permission check** — do you have permission to execute this type of statement?
+2. **Data access check** — do you have permission to access the target tables/columns?
+3. **Syntax check** — is the statement syntactically correct?
+
+If all three pass, the query is handed to the **query optimizer**, which determines the most efficient execution strategy — considering table join order, available indexes, etc. — and produces an **execution plan** the server follows to run the query.
+
+---
+
 ### Basic Usage
 
 ```sql

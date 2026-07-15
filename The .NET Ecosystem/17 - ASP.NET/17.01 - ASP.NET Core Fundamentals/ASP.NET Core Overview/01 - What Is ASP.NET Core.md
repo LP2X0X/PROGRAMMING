@@ -3,7 +3,7 @@ tags: [csharp, asp-net-core, fundamentals, web]
 ---
 
 
-ASP.NET Core is a **cross-platform, high-performance, open-source framework** for building modern, cloud-enabled web applications and services. It runs on .NET (formerly .NET Core) and is designed from the ground up to be modular, testable, and lightweight.
+ASP.NET Core is a **cross-platform, high-performance, open-source framework** for building modern, cloud-enabled web applications and services. You can use ASP.NET Core to build server-rendered web applications (Razor), backend server applications, HTTP APIs (Minimal API) that can be consumed by mobile applications, and much more. It runs on .NET (formerly .NET Core) and is designed from the ground up to be modular, testable, and lightweight.
 
 Unlike its predecessor (ASP.NET on .NET Framework), ASP.NET Core is not tied to Windows or IIS. You can run it on Windows, Linux, and macOS, deploy it to Docker containers, and host it behind any reverse proxy -- not just IIS.
 
