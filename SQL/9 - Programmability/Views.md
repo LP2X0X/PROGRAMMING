@@ -2,7 +2,20 @@
 tags: [sql, programmability]
 ---
 
-- A **view** is a named, saved query that acts like a virtual table. It doesn't store data itself — it runs the underlying query every time you access it.
+- A **view** is a query stored in the **data dictionary** (where the server keeps all metadata about your database). It acts like a virtual table — you can `SELECT` from it like any table — but there is no data associated with it.
+- When you query a view, the server **merges** your query with the view's definition to produce a single final query that runs against the real tables:
+
+```sql
+-- View definition:
+CREATE VIEW active_employees AS
+SELECT id, name, email FROM employees WHERE active = TRUE;
+
+-- Your query:
+SELECT name FROM active_employees WHERE name LIKE 'A%';
+
+-- What actually executes (merged):
+SELECT name FROM employees WHERE active = TRUE AND name LIKE 'A%';
+```
 
 ---
 
