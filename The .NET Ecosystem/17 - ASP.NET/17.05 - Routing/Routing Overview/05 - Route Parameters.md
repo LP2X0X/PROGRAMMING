@@ -6,8 +6,7 @@ tags:
   - web-api
 ---
 
-
-Route parameters work the same way as in controller-based routing, but the binding happens via the handler's method parameters.
+A route parameter is a placeholder in the URL path that captures a value from the request URL. It works the same way as in controller-based routing, but the binding happens via the handler's method parameters.
 
 ![[Pasted image 20260630085302.png|center]]
 
