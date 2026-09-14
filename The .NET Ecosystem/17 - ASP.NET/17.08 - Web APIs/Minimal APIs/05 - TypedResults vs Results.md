@@ -7,7 +7,7 @@ tags:
 ---
 
 
-==.NET 7 introduced `TypedResults`==, which returns concrete types instead of `IResult`. This seemingly small difference has a major impact on OpenAPI documentation and testability.
+.NET 7 introduced `TypedResults`, which returns concrete types instead of `IResult`. This seemingly small difference has a major impact on OpenAPI documentation and testability.
 
 ### The Problem with `Results`
 

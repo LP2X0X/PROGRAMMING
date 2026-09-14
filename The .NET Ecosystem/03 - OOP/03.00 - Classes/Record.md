@@ -8,6 +8,9 @@ tags:
 # Records
 
 - A **record** is a special kind of type designed for **holding data**. When you declare a record, the compiler automatically generates all the boilerplate you would normally write by hand — `Equals()`, `GetHashCode()`, `ToString()`, deconstruction, copy logic, and the `==` / `!=` operators — all with **value-based semantics**.
+```ad-note
+Records are syntactical sugar over normal class and struct declarations, which make declaring new types more succinct and provide convenience methods for working with immutable types.
+```
 - Records were introduced in **C# 9** (`record` / `record class`) and extended in **C# 10** (`record struct`).
 
 ---
