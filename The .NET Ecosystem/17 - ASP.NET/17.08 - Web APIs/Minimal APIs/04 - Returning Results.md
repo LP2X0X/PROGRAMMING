@@ -78,7 +78,7 @@ app.MapDelete("/products/{id}", async (int id, IProductService service) =>
 | `Results.Json(val)`          | 200         | JSON with custom options          |
 | `Results.Text(content)`      | 200         | Plain text                        |
 
-### Returning ProblemDetails
+### Returning [[Problem Details|ProblemDetails]]
 
 ASP.NET Core uses **ProblemDetails** (RFC 7807) for standardized error responses. See [[Content Negotiation]] for how response formats are determined.
 

@@ -49,6 +49,23 @@ app.MapPut("/products/{id}", (
 | `[FromServices]` | DI container   | Types registered in DI                   |
 | `[FromForm]`     | Form data      | When `[FromForm]` is specified (.NET 8+) |
 
+### Binding Source Priority Order
+
+When the framework tries to bind a parameter, it checks these sources **in order**. The first match wins:
+
+1. **Explicit attribute** — if the parameter has `[FromRoute]`, `[FromQuery]`, `[FromBody]`, etc., use that. No further checks.
+2. **Well-known type** — if the parameter is `HttpContext`, `HttpRequest`, `HttpResponse`, `Stream`, `CancellationToken`, `ClaimsPrincipal`, or `IFormFile`, bind to the corresponding framework value.
+3. **`BindAsync()` method** — if the parameter type has a static `BindAsync()` method, use that for binding.
+4. **Simple type (`string` or has `TryParse()`):**
+   - If the parameter name matches a route parameter name → bind from route value.
+   - Otherwise → bind from query string.
+5. **Array of simple types** — if the parameter is `string[]`, `StringValues`, or an array of simple types, and the request uses a verb that normally has no body (like `GET`) → bind from query string.
+6. **DI service** — if the parameter type is registered in the dependency injection container → inject the service.
+7. **Body (JSON)** — as a last resort, deserialize from the JSON request body.
+
+> [!tip]
+> Being explicit with `[From*]` attributes is a good practice — it makes the binding source clear at a glance and avoids surprises from the inference rules.
+
 ### Implicit Binding Rules
 
 The framework follows these rules when no explicit attribute is used:
