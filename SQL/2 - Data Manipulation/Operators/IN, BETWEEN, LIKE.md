@@ -1,4 +1,4 @@
-﻿---
+---
 tags: [sql, dml, operators]
 ---
 
@@ -53,6 +53,10 @@ WHERE order_date BETWEEN '2024-01-01' AND '2024-12-31';
 ```
 
 - `NOT BETWEEN`: values outside the range.
+
+```ad-warning
+BETWEEN is inclusive. Which mean both is lower an upper range limits will be included in the filter itself.  
+```
 
 ---
 

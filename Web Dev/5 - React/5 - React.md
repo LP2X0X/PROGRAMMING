@@ -21,6 +21,7 @@ type: folder_brief_live
 - **[[5.11 - Redux]]**
 - **[[5.12 - Supabase]]**
 - **[[5.13 - TanStack Query]]**
+- **[[Mental Models]]**
 - **[[Miscellaneous]]**
 - [[React Summary]]
 - [[React]]
