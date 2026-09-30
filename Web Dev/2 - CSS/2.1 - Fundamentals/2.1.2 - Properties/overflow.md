@@ -339,26 +339,16 @@ body {
 
 ## 13. One-page cheat sheet
 
-|Problem|Fix|
-|---|---|
-|Sticky not working|Remove ancestor overflow|
-|Flex scroll not working|`min-height: 0`|
-|Tooltip clipped|Remove overflow / use portal|
-|Focus ring cut|Use outline-offset or box-shadow|
-|Ellipsis not showing|Add `white-space: nowrap`|
+| Problem                 | Fix                              |
+| ----------------------- | -------------------------------- |
+| Sticky not working      | Remove ancestor overflow         |
+| Flex scroll not working | `min-height: 0`                  |
+| Tooltip clipped         | Remove overflow / use portal     | 
+| Focus ring cut          | Use outline-offset or box-shadow |
+| Ellipsis not showing    | Add `white-space: nowrap`        |
 
 ---
 
 ## 14. One sentence to remember
 
 > **`overflow` is not just clipping — it changes layout, scrolling, and positioning behavior.**
-
----
-
-If you want, I can:
-
-- Analyze your layout and point out hidden overflow bugs
-    
-- Explain scrolling contexts visually
-    
-- Compare `overflow` vs `clip-path` vs `contain`

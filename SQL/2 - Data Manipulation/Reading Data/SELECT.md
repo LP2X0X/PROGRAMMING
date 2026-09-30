@@ -1,8 +1,12 @@
-﻿---
+---
 tags: [sql, dml, reading-data]
 ---
 
 - `SELECT` is the most frequently used SQL statement. It retrieves data from one or more tables.
+
+```ad-note
+The select clause determines which of all possible columns should be included in the query’s result set.
+```
 
 ---
 

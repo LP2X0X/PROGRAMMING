@@ -1,4 +1,4 @@
-# Grid Items Overview
+# Mental Models Overview
  
 ```ccard
 type: folder_brief_live
@@ -7,7 +7,6 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[grid-column and grid-row]]
-- [[justify-self]]
+- [[Drawing 2026-08-25 19.58.53.excalidraw]]
 
 %% End Waypoint %%

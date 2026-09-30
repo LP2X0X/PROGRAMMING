@@ -1,6 +1,0 @@
----
-tags: 
- - sql
- - statement
- - fundamental
----

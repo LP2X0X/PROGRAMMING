@@ -16,7 +16,6 @@ type: folder_brief_live
 - **[[7 - Transactions]]**
 - **[[8 - Built-in Functions]]**
 - **[[9 - Programmability]]**
-- **[[Fundamental]]**
 - [[Learn]]
 - [[LINQPad]]
 - **[[Miscellaneous]]**
