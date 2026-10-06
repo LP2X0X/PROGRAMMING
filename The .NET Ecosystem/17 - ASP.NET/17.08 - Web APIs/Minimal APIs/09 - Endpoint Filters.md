@@ -151,5 +151,61 @@ app.MapPost("/products", CreateProduct)
 // ValidationFilter (after) -> AuthorizationFilter (after) -> LoggingFilter (after)
 ```
 
+### Endpoint Filter Factory (`IEndpointFilterFactory`)
+
+A regular `IEndpointFilter` runs the same logic for every endpoint. A **filter factory** can inspect the endpoint's metadata and parameters at startup, then emit a ==filter tailored to that specific endpoint== — or skip filtering entirely.
+
+The factory's `Create` method runs **once at startup** (not per-request), so you can do expensive reflection or parameter inspection there:
+
+```csharp
+public class IdValidationFilterFactory : IEndpointFilterFactory
+{
+    public ValueTask<EndpointFilterDelegate> Create(
+        EndpointFilterFactoryContext factoryContext,
+        EndpointFilterDelegate next)
+    {
+        // Runs once at startup — inspect the endpoint's parameters
+        var hasIdParam = factoryContext.MethodInfo
+            .GetParameters()
+            .Any(p => p.Name == "id" && p.ParameterType == typeof(int));
+
+        // No id parameter? Skip filtering entirely — just pass through
+        if (!hasIdParam)
+            return ValueTask.FromResult(next);
+
+        // Has id parameter — return a filter that validates it
+        return ValueTask.FromResult<EndpointFilterDelegate>(async context =>
+        {
+            var id = context.GetArgument<int>(
+                Array.FindIndex(
+                    factoryContext.MethodInfo.GetParameters(),
+                    p => p.Name == "id"));
+
+            if (id <= 0)
+                return Results.BadRequest("ID must be positive");
+
+            return await next(context);
+        });
+    }
+}
+
+// Apply to a group — factory decides per-endpoint whether to filter
+app.MapGroup("/api/products")
+    .AddEndpointFilter<IdValidationFilterFactory>()
+    .MapProductEndpoints();
+```
+
+#### When to Use Factory vs Regular Filter
+
+| | `IEndpointFilter` | `IEndpointFilterFactory` |
+|---|---|---|
+| **Runs** | Per request | `Create` runs once at startup, returned delegate runs per request |
+| **Knows about endpoint** | Only sees `EndpointFilterInvocationContext` at runtime | Sees `EndpointFilterFactoryContext` with `MethodInfo`, parameter types, metadata |
+| **Can skip filtering** | No — always runs | Yes — return `next` directly to skip |
+| **Use when** | Same logic for every endpoint | Logic depends on the endpoint's signature or metadata |
+
+> [!ad-tip] Key Insight
+> Think of the factory as a **compiler** — it inspects the endpoint once, then produces an optimized filter (or no filter) for that endpoint. Regular `IEndpointFilter` is an **interpreter** — it runs the same logic every time without knowing what endpoint it's attached to.
+
 > [!summary] Section Summary
-> Endpoint filters are the minimal API equivalent of action filters. They execute before and after the handler, forming a pipeline. Implement `IEndpointFilter` for reusable filters. Filters can be applied to individual endpoints or entire route groups and execute in the order they are registered.
+> Endpoint filters are the minimal API equivalent of action filters. They execute before and after the handler, forming a pipeline. Implement `IEndpointFilter` for reusable filters, or `IEndpointFilterFactory` when the filter logic depends on the endpoint's parameters or metadata. Filters can be applied to individual endpoints or entire route groups and execute in the order they are registered.

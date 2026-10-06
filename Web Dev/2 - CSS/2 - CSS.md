@@ -26,6 +26,7 @@ type: folder_brief_live
 - **[[2.5 - Animations]]**
 	- **[[2.5.1 - CSS Transitions]]**
 	- [[CSS vs JS Animations]]
+- [[CSS Learning Roadmap]]
 - **[[Notes]]**
 - **[[Pitfalls]]**
 - **[[Properties]]**
