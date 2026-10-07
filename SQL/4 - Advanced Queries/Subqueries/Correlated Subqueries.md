@@ -4,6 +4,10 @@ tags: [sql, subqueries, advanced]
 
 - A **correlated subquery** references columns from the **outer query**. Unlike a regular subquery (which runs once), a correlated subquery is re-evaluated for **each row** of the outer query.
 
+```ad-note
+If the subquery references a column from the outer query → **correlated**. If it doesn't → **non-correlated**.
+```
+
 ---
 
 ### Basic Example

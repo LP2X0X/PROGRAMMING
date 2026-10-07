@@ -30,7 +30,33 @@ WHERE department_id IN (
 - `NOT IN`: matches values NOT in the list.
 
 ```ad-warning
-`NOT IN` behaves unexpectedly with `NULL` values. If the subquery returns any `NULL`, `NOT IN` returns no rows at all. Use `NOT EXISTS` instead when NULLs are possible. See [[IS NULL]].
+title: NOT IN + NULL = Silent Empty Result
+`NOT IN` behaves unexpectedly with `NULL` values. If the set contains any `NULL`, `NOT IN` returns **no rows at all**.
+
+**Why:** `IN` and `NOT IN` work by comparing the left side to each member using `=`. But `= NULL` always evaluates to **UNKNOWN** (not FALSE), because NULL means "I don't know this value."
+
+​```sql
+-- Set: (1, 3, NULL)
+WHERE 2 NOT IN (1, 3, NULL)
+
+-- SQL evaluates:
+-- 2 = 1    → FALSE
+-- 2 = 3    → FALSE
+-- 2 = NULL → UNKNOWN
+​```
+
+`NOT IN` needs **every** comparison to be FALSE to return TRUE. One UNKNOWN poisons the whole result → the row is excluded.
+
+`IN` is less dangerous — it only needs **one** TRUE to include the row, so the UNKNOWN from NULL is harmless as long as another value matches. But `NOT IN` requires certainty about every member, and NULL makes that impossible.
+
+**Fix:** filter out NULLs or use `NOT EXISTS`:
+​```sql
+-- Option 1: exclude NULLs
+WHERE id NOT IN (SELECT val FROM t WHERE val IS NOT NULL)
+
+-- Option 2: use NOT EXISTS (NULL-safe)
+WHERE NOT EXISTS (SELECT 1 FROM t WHERE t.val = outer.id)
+​```
 ```
 
 ---

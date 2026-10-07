@@ -9,5 +9,6 @@ type: folder_brief_live
 %% Begin Waypoint %%
 - [[Collision Handling]]
 - [[Hash Map and Hash Set]]
+- [[Hashmap introduction]]
 
 %% End Waypoint %%

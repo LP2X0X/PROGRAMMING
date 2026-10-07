@@ -19,7 +19,31 @@ INNER JOIN departments d ON e.department_id = d.id;
 
 ---
 
-### How It Works
+### How Joins Actually Work
+
+At its core, every join is a [[CROSS JOIN|Cartesian product]] with a filter:
+
+```
+for each row in table_A:
+    for each row in table_B:
+        if ON condition is TRUE:
+            include this pair in result
+```
+
+The database takes every possible combination of rows from both tables, and keeps only the pairs where `ON` returns TRUE. The `ON` clause is just a boolean expression — it doesn't know or care what kind of comparison you use:
+
+```sql
+ON a.id = b.id                          -- equality (most common)
+ON a.total BETWEEN b.low AND b.high     -- range
+ON a.name LIKE b.pattern                -- pattern
+ON a.score > b.threshold                -- inequality
+```
+
+All valid. We usually join on `=` because the most common relationship is "this ID matches that ID" — but equality is just the most frequent condition, not the only option.
+
+---
+
+### Example
 
 Given:
 

@@ -4,6 +4,56 @@ tags: [sql, subqueries, advanced]
 
 - A **subquery** (also called an inner query or nested query) is a query embedded inside another query. The outer query uses the subquery's result.
 
+```ad-note
+Like any query, a subquery returns a result set that may consist of:
+- A single row with a single column 
+- Multiple rows with a single column 
+- Multiple rows having multiple columns 
+  
+The type of result set returned by the subquery determines how it may be used and which operators the containing statement may use to interact with the data the subquery returns.
+```
+
+### Subquery Result Types
+
+Like any query, a subquery returns a result set. The **shape** of that result determines where you can use it and which operators work with it:
+
+| Result Type | Shape | Where You Can Use It | Operators |
+|---|---|---|---|
+| **Scalar** | 1 row, 1 column | `SELECT`, `WHERE`, anywhere a single value is expected | `=`, `<>`, `<`, `>`, `<=`, `>=` |
+| **Column** | Multiple rows, 1 column | `WHERE` — compare against a list of values | `IN`, `NOT IN`, `ANY`, `ALL`, `EXISTS` |
+| **Table** | Multiple rows, multiple columns | `FROM` — use as a derived table | Treated as a table, so you query it with `SELECT` |
+
+**Scalar** — returns one value, acts like a literal:
+```sql
+-- "What is the average salary?" → one number
+WHERE salary > (SELECT AVG(salary) FROM employees)
+--              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ returns e.g. 65000
+```
+
+**Column** — returns a list of values, acts like a set:
+```sql
+-- "Which departments are in New York?" → a list of IDs
+WHERE department_id IN (SELECT id FROM departments WHERE location = 'NY')
+--                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ returns e.g. (1, 4, 7)
+```
+
+**Table** — returns rows and columns, acts like a temporary table:
+```sql
+-- "What are the stats per department?" → a full result set
+FROM (SELECT department, AVG(salary) AS avg_sal FROM employees GROUP BY department) AS stats
+--   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ returns rows with dept + avg_sal columns
+```
+
+```ad-warning
+If a subquery returns **multiple rows** but you use it with a scalar operator like `=`, you get an error. The operator must match the shape of the result.
+
+```sql
+-- ERROR: subquery returns more than one row
+WHERE salary = (SELECT salary FROM employees WHERE department = 'Sales')
+-- Use IN instead:
+WHERE salary IN (SELECT salary FROM employees WHERE department = 'Sales')
+```
+
 ---
 
 ### Subquery in WHERE
