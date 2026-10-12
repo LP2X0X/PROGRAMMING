@@ -15,5 +15,6 @@ type: folder_brief_live
 - [[06 - ProblemDetails]]
 - [[07 - Action Results Real-World Example]]
 - [[08 - Action Results See Also]]
+- [[09 - Result Type Hierarchies - IActionResult vs IResult]]
 
 %% End Waypoint %%

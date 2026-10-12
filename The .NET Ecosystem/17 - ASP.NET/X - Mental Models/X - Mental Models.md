@@ -12,5 +12,6 @@ type: folder_brief_live
 - [[MVC]]
 - [[Razor]]
 - [[Web API Controller]]
+- [[Web API]]
 
 %% End Waypoint %%

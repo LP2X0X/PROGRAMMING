@@ -88,3 +88,32 @@ FROM employees
 GROUP BY department
 ORDER BY cnt DESC;  -- largest departments first
 ```
+
+---
+
+### WITH ROLLUP
+
+Adds **subtotal and grand total rows** automatically to a `GROUP BY` result:
+
+```sql
+SELECT department, job_title, SUM(salary)
+FROM employees
+GROUP BY department, job_title WITH ROLLUP;
+```
+
+| department  | job_title | SUM    |
+| ----------- | --------- | ------ |
+| Engineering | Junior    | 60000  |
+| Engineering | Senior    | 90000  |
+| Engineering | NULL      | 150000 |
+| Sales       | Junior    | 40000  |
+| Sales       | Senior    | 70000  |
+| Sales       | NULL      | 110000 |
+| NULL        | NULL      | 260000 |
+
+- `NULL` in the rollup rows means "all values" for that column
+- Rolls up **right to left** through `GROUP BY` columns:
+	1. Groups by `department + job_title` (normal detail rows)
+	2. Groups by `department` only (subtotal per department)
+	3. Groups by nothing (grand total)
+- Think of it like Excel pivot table subtotals — detail + summary in one query

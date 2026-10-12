@@ -70,5 +70,16 @@ app.Run();
 > [!example]
 > A common pattern: use minimal APIs for simple health checks, configuration endpoints, and lightweight microservice routes, while using controllers for the main business API that benefits from filters and conventions.
 
+### Decision Guide
+
+| Question | Minimal APIs | Web API Controllers |
+|---|---|---|
+| Do you need conneg? | Not built-in out of the box | Built-in and extensible |
+| How critical is performance? | More performant | Less performant |
+| Complex filtering? | Simple, extensible filter pipeline (endpoint filters) | Complex, nonlinear filter pipeline (5 types) |
+| Is this a new project? | Getting many new features; a focus of the ASP.NET Core team | Receiving smaller updates; less of a focus |
+| Experience with web API controllers? | Shares many concepts but has subtle differences in model binding | Familiar to users of legacy ASP.NET or older ASP.NET Core |
+| Convention over configuration? | Requires explicit configuration | Convention- and discovery-based |
+
 > [!summary] Section Summary
 > Minimal APIs excel at small, focused APIs, microservices, prototyping, and serverless scenarios. Controllers are better for large APIs needing the full filter pipeline, OData, or complex content negotiation. Both can coexist in the same application. Choose based on the project's complexity and team familiarity.
