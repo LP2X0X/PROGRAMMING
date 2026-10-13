@@ -69,6 +69,42 @@ SELECT 'hello' AS greet; -- Returns a string
 ```
 - In Oracle, you must use `FROM dual` for this pattern.
 
+---
+
+### Building a Table On the Fly
+
+- A `SELECT` without `FROM` produces **one row**. Stack multiple rows with `UNION ALL` to create a table without any real table existing:
+
+```sql
+SELECT 'Small Fry' AS name, 0 AS low, 74.99 AS high
+UNION ALL
+SELECT 'Average Joes', 75, 149.99
+UNION ALL
+SELECT 'Heavy Hitters', 150, 9999999.99;
+```
+
+| name          | low | high       |
+| ------------- | --- | ---------- |
+| Small Fry     |   0 |      74.99 |
+| Average Joes  |  75 |     149.99 |
+| Heavy Hitters | 150 | 9999999.99 |
+
+- Column names come from the **first** `SELECT` only — the rest just provide values in the same column order
+- Useful inside CTEs or subqueries when you need lookup data that doesn't live in a table (e.g. custom grouping buckets, threshold ranges, label mappings):
+
+```sql
+WITH levels AS (
+    SELECT 'Junior' AS level, 0 AS min_exp, 2 AS max_exp
+    UNION ALL
+    SELECT 'Mid', 3, 5
+    UNION ALL
+    SELECT 'Senior', 6, 99
+)
+SELECT e.name, levels.level
+FROM employees e
+INNER JOIN levels ON e.years_exp BETWEEN levels.min_exp AND levels.max_exp;
+```
+
 ```ad-note
 `SELECT` does not modify any data — it is a purely read-only operation. See [[INSERT]], [[UPDATE]], and [[DELETE]] for data modification.
 ```
