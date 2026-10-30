@@ -11,5 +11,6 @@ type: folder_brief_live
 - [[02 - Transactions and Concurrency]]
 - [[03 - Backup and Recovery]]
 - [[04 - Security Basics]]
+- [[Sharding]]
 
 %% End Waypoint %%

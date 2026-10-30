@@ -40,7 +40,24 @@ If step 2 fails, step 1 is also undone. You never end up with money deducted but
 ### Durability
 
 - Once a transaction is **committed**, the changes are permanent — they survive power failures, crashes, and restarts.
-- Databases achieve this through write-ahead logging (WAL) — changes are written to a log on disk before being applied.
+- Databases achieve this through **write-ahead logging (WAL)** — every change is written to a log file on disk **before** being applied to the actual data files.
+
+#### Crash Recovery
+
+The WAL is what makes crash recovery possible. When a server crashes and restarts, it has two jobs:
+
+1. **Roll forward committed transactions** — if a transaction was committed but the data hadn't been flushed from memory to disk yet, the server **replays the WAL** to reapply those changes. The commit was recorded in the log, so the data is recoverable.
+
+2. **Roll back incomplete transactions** — if a transaction was in progress (no `COMMIT` issued) when the crash happened, the server **undoes all its changes**. The transaction never committed, so its modifications are discarded.
+
+```
+Server crashes mid-operation:
+
+Transaction A: COMMIT issued, data in memory only → REDO from WAL (changes restored)
+Transaction B: Still in progress, no COMMIT       → UNDO (changes discarded)
+```
+
+This is why the WAL is written **before** the actual data changes — if the server crashes after writing the log but before updating the data files, the log has everything needed to recover. If the log entry was never written, the transaction is treated as never having happened.
 
 ---
 

@@ -7,9 +7,10 @@ type: folder_brief_live
 ---
 
 %% Begin Waypoint %%
-- [[Design Patterns - Overview]]
 - **[[Behavioral Patterns]]**
 - **[[Creational Patterns]]**
+- [[Design Patterns - Overview]]
+- [[Foundational Principles]]
 - **[[Structural Patterns]]**
 - **[[The Factory Pattern]]**
 

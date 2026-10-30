@@ -226,7 +226,7 @@ A common anti-pattern is "index everything." New developers sometimes create an 
 
 ### Finding the Balance
 
-- The general guideline: **start with indexes on primary keys (automatic), foreign keys, and the most frequently queried columns**. Monitor query performance, and add indexes when you identify slow queries that would benefit from them.
+- The general guideline: **start with indexes on primary keys (automatic), foreign keys, and the most frequently queried columns**. Good default candidates include **date columns** (frequently used in range filters and sorting) and **short string columns** (2-50 characters, like status codes, country codes, usernames). Monitor query performance, and add indexes when you identify slow queries that would benefit from them.
 - Most OLTP (Online Transaction Processing) tables perform well with **3-8 indexes**. Reporting/analytical tables may have more.
 
 ---
@@ -323,7 +323,16 @@ When deciding whether to add an index, ask these questions:
 5. **Is there an existing composite index that already covers this column?** Don't create a redundant index.
 
 ```ad-important
-The most common real-world index mistake is not having an index on **foreign key columns**. When you `JOIN Orders ON Customers.Id = Orders.CustomerId`, the database needs to look up matching rows in `Orders` by `CustomerId`. If `CustomerId` is not indexed, this is a full table scan on `Orders` for *every row* in `Customers`. Always index your foreign keys.
+The most common real-world index mistake is not having an index on **foreign key columns**. Foreign keys need indexes for two reasons:
+
+1. **JOINs** — when you `JOIN Orders ON Customers.Id = Orders.CustomerId`, the database looks up matching rows in `Orders` by `CustomerId`. Without an index, this is a full table scan on `Orders` for *every row* in `Customers`.
+2. **Parent DELETEs** — when you `DELETE FROM Customers WHERE Id = 5`, the engine must verify no child rows reference that parent (referential integrity). It runs a query like `SELECT 1 FROM Orders WHERE CustomerId = 5`. Without an index on `CustomerId`, that check is a **full table scan on the child table for every parent delete**.
+
+Always index your foreign keys.
+```
+
+```ad-tip
+**Multicolumn primary keys** — if your PK is `(region, customer_id, order_id)`, the clustered index only helps queries that filter starting from `region` (leftmost prefix rule). If you frequently query by `customer_id` alone or by `(customer_id, order_id)`, consider adding separate indexes on those subsets or reordering. The PK index won't cover those patterns.
 ```
 
 ---

@@ -11,6 +11,6 @@ type: folder_brief_live
 - **[[Subqueries]]**
 	- [[Common Table Expressions]]
 	- [[Correlated Subqueries]]
-- **[[Window Functions]]**
+- **[[Window Functions (Analytic Functions)]]**
 
 %% End Waypoint %%

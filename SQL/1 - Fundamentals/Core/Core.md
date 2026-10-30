@@ -10,6 +10,7 @@ type: folder_brief_live
 - [[Data Types]]
 - [[Relational Databases]]
 - [[SQL Syntax Basics]]
+- [[Storage Engines]]
 - [[Types of Tables]]
 
 %% End Waypoint %%

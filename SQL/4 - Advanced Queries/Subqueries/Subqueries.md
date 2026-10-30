@@ -122,6 +122,10 @@ FROM employees e;
 Scalar subqueries in `SELECT` run once per row of the outer query. For large [[Result Set|result sets]] this can be very slow. Consider using [[Common Table Expressions]] or [[INNER JOIN]] instead.
 ```
 
+```ad-tip
+**Optimization: unreferenced SELECT subqueries are skipped.** If a query (or a [[Views|view]]) defines multiple subquery columns in the SELECT list, the engine only executes the subqueries for columns that are actually referenced. Columns nobody asked for are never computed. This is especially useful with views — a view can define many subquery columns, but a specific query only pays the cost for the ones it selects.
+```
+
 ---
 
 ### Subqueries vs JOINs
