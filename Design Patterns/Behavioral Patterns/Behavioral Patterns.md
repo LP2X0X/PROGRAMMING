@@ -17,5 +17,6 @@ type: folder_brief_live
 - [[08 - Mediator]]
 - [[09 - Memento]]
 - [[10 - Visitor]]
+- [[Observer Pattern - Visualize]]
 
 %% End Waypoint %%
